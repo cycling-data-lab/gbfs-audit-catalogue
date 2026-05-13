@@ -255,15 +255,19 @@ addresses them is given in Section~\ref{secMethods}.
 
 \begin{table}[ht]
 \centering
-\caption{The seven GBFS anomaly classes (A1--A7) of the unified
-taxonomy, with their observed incidence on the released French
+\caption{The unified GBFS data-quality taxonomy: five
+\emph{structural errors} (A1--A5) that violate the implicit
+semantic contract of the field they populate, plus two
+\emph{semantic warnings} (A6--A7) that flag spec-compliant
+publication choices whose downstream-consumer interpretation is
+nevertheless ambiguous. Observed incidence on the released French
 catalogue (FR, 123 audited systems) and on the global MobilityData
-catalogue (Global, 1{,}509 systems across 48 countries). Each class
-is formalised in Methods (Section~\ref{secMethods}); per-system
-counts use the operational definitions documented in
-Section~\ref{secMethods} (\eg A3 flags any system with at least one
-\texttt{free\_floating} entry after the S3 reclassification, which
-captures both natively-declared and post-audit-reclassified
+catalogue (Global, 1{,}509 systems across 48 countries). Each
+class is formalised in Methods (Section~\ref{secMethods}) ;
+per-system counts use the operational definitions documented in
+Section~\ref{secMethods} (\eg A3 flags any system with at least
+one \texttt{free\_floating} entry after the S3 reclassification,
+which captures both natively-declared and post-audit-reclassified
 free-floating fleets). Counts are reproducible by re-running
 \texttt{python -m audit\_pipeline.regenerate} on the released
 parquet.}
@@ -273,11 +277,14 @@ parquet.}
 \toprule
 \textbf{Class} & \textbf{Name} & \textbf{Signature} & \textbf{FR} & \textbf{Global}\\
 \midrule
+\multicolumn{5}{l}{\textit{Structural errors (semantic-contract violations)}}\\
 A1 & Out-of-domain inclusion       & Car-sharing advertised as BSS                          & 17         & 46        \\
 A2 & Placeholder capacity          & Constant non-zero $c_i$ across docked subset           &  1         & 48        \\
 A3 & Structural over-capacity      & Conditional averaging on free-floating                 & 41         & 33        \\
 A4 & Geospatial error              & 3-$\sigma$ outlier on per-system nearest-neighbour distance & 88 (1.1\,\% stns) & 81 \\
 A5 & Out of perimeter              & System bounding box $>50{,}000$\,km$^2$                &  4         & 17        \\
+\midrule
+\multicolumn{5}{l}{\textit{Semantic warnings (spec-compliant but consumer-ambiguous)}}\\
 A6 & Zero-capacity dock            & $\geq 1\,\%$ of docked stations declare $c = 0$        &  0         & 14        \\
 A7 & Null capacity field           & $\geq 50\,\%$ of stations declare $c = $ \texttt{NaN}  & 32 (FF)    & 215       \\
 \bottomrule
@@ -554,8 +561,8 @@ the population, on the capacity, or on the type), and a non-audited
 pipeline conflates them.
 
 \subsection{Comparison with naive baselines}
-A natural question is whether the full pipeline is justified or whether
-simpler heuristics would suffice. Three baselines are evaluated on the
+To check whether the full pipeline is justified or whether simpler
+heuristics suffice, we evaluate three baselines on the
 same 123-system corpus
 (Table~\ref{tab:baselines}). The \emph{Raw GBFS} baseline ingests
 \texttt{station\_information} as is. The \emph{vehicle\_type filter}
@@ -729,10 +736,8 @@ Section~\ref{secDiscussion}); they are reported as robustness
 measures, not as substitutes.
 
 \subsection{Cross-country transferability pilot}
-A natural objection to the present protocol is that A1--A7 might be
-artefacts of French publication practice rather than structural
-features of open-mobility-feed publication in general. To address
-this empirically we constructed a panel of thirteen non-French
+To verify out-of-sample transferability of A1--A7 beyond French
+publication practice, we constructed a panel of thirteen non-French
 systems audited \emph{live} via their public GBFS feeds, with the
 \emph{same} rule set used on the French corpus and only the
 national perimeter recalibrated. All other thresholds ($\sigma =
@@ -916,14 +921,31 @@ At a Silverman-rule-of-thumb-derived bandwidth in
 $[0.12, 0.18]$ (log$_{10}$ units), the KDE consistently exposes
 three modes : a near-unity mode around ratio $1.1$, a
 high-bias mode around ratio $29$, and an extreme-bias mode in
-the tail beyond ratio $400$. The valley between the near-unity
-and high-bias modes sits at ratio $\in [2.7, 6.4]$
-depending on bandwidth (lowest at bandwidth $0.12$, highest at
-bandwidth $0.15$), and the valley between the high-bias and
-extreme-bias modes sits around ratio $15$. The paper's threshold
-$\tau_{A3} = 5$ falls inside the first valley window and is
-therefore in the low-density region the data itself identifies
-as a sensible separator. The KDE analysis also suggests that a
+the tail beyond ratio $400$ (Figure~\ref{fig:a3-kde-valley}).
+The valley between the near-unity and high-bias modes sits at
+ratio $\in [2.7, 6.4]$ depending on bandwidth (lowest at
+bandwidth $0.12$, highest at bandwidth $0.15$), and the valley
+between the high-bias and extreme-bias modes sits around
+ratio $15$. The paper's threshold $\tau_{A3} = 5$ falls inside
+the first valley window and is therefore in the low-density
+region the data itself identifies as a sensible separator.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.85\linewidth]{fig09_a3_kde_valley.pdf}
+\caption{Kernel-density estimate of
+$\log_{10}(\bar c_{\text{profile}}/\bar c_{\text{actual}})$ on
+the 98 globally audited systems with ratio $> 1.01$, at two
+representative bandwidths. Circles mark local maxima (modes),
+inverted triangles mark local minima (valleys), and the dashed
+vertical line marks the paper's $\tau_{A3} = 5$ threshold. The
+threshold falls inside the valley between the near-unity mode
+($\approx 1.1$) and the high-bias mode ($\approx 29$), in the
+low-density region the data itself identifies as a separator.
+The high-bias and extreme-bias modes are also visible in the
+tail at ratio $\approx 30$ and $\approx 500$.}
+\label{fig:a3-kde-valley}
+\end{figure} The KDE analysis also suggests that a
 soft / hard two-tier refinement analogous to A6 would set
 $\tau_{A3}^{\text{soft}} \approx 3$ (catches the moderate
 shoulder of the high-bias mode) and $\tau_{A3}^{\text{hard}}
@@ -1180,6 +1202,97 @@ their own audit (the rule of A1 was rule-level brittle), and the
 underlying signal is genuine (21 real car-sharing systems in
 Germany are still labelled as bike-sharing on national portals).
 
+\subsection{Incidence of the semantic warnings A6 and A7}
+\label{secA6A7Incidence}
+The empirical distributions that motivate the A6 and A7 threshold
+calibrations (Methods, Sections~\ref{secA6Formalisation} and
+\ref{secA7Formalisation}) and the resulting per-class incidence
+are reported in Tables~\ref{tab:a6-distribution} and
+\ref{tab:a7-distribution}.
+
+\begin{table}[ht]
+\centering
+\caption{Empirical distribution of the zero-capacity rate
+$r_s^{A6}$ across the 538 globally audited systems with at least
+20 stations and a reachable \texttt{station\_information} feed.
+Percentiles are computed on the same sample. The two A6 thresholds
+are derived from the distribution rather than chosen ex ante.}
+\label{tab:a6-distribution}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Bucket} & \textbf{Systems} & \textbf{Share}\\
+\midrule
+$r_s^{A6} = 0$\,\% (no $c = 0$)   & 508 & 94.4\,\% \\
+$0 < r_s^{A6} \leq 0.5$\,\%        &   9 &  1.7\,\% \\
+$0.5 < r_s^{A6} \leq 1$\,\%        &   8 &  1.5\,\% \\
+$1 < r_s^{A6} \leq 2$\,\%          &   4 &  0.7\,\% \\
+$2 < r_s^{A6} \leq 5$\,\%          &   6 &  1.1\,\% \\
+$5 < r_s^{A6} \leq 10$\,\%         &   2 &  0.4\,\% \\
+$r_s^{A6} > 10$\,\%                &   1 &  0.2\,\% \\
+\midrule
+\textbf{Summary statistics} & & \\
+\quad mean $\bar r$                 &  0.10\,\% & \\
+\quad standard deviation $\hat\sigma$ &  0.71\,\% & \\
+\quad 95th percentile               &  0.15\,\% & \\
+\quad 97.5th percentile             &  $\approx \bar r + 3\hat\sigma \approx 2.2$\,\% & \\
+\quad 99th percentile               &  3.54\,\% & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{A6 incidence on the audited corpus.}
+Under A6-soft ($\tau = 0.15\,\%$) 30 of 538 audited systems are
+flagged; under A6-hard ($\tau = 2.2\,\%$) 8 systems are flagged. The
+extreme tail is PBSC HQ (Canada, 18.2\,\%), Beryl Greater Manchester
+(UK, 10.5\,\%), MonaBike (Monaco, 6.8\,\%), Bicicoru\~na (Spain,
+5.9\,\%), MBajk (Slovenia, 4.8\,\%), CyclOcity (Japan, 4.2\,\%),
+\`aV\'elo (Canada, 3.5\,\%) and Careem BIKE (UAE, 2.7\,\%). On the
+French corpus, no dock-based system crosses either threshold
+(0/65 dock systems with $c = 0$), which is consistent with the
+corpus-level median behaviour and provides a negative control.
+
+\begin{table}[ht]
+\centering
+\caption{Empirical distribution of the NaN-capacity rate
+$\rho_s^{A7}$ across the 640 globally audited systems with at least
+20 stations and a reachable \texttt{station\_information} feed.
+The corpus is sharply bimodal at the extreme values, which justifies
+a coarse threshold rather than a distribution-anchored one.}
+\label{tab:a7-distribution}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Bucket} & \textbf{Systems} & \textbf{Share}\\
+\midrule
+$\rho_s^{A7} = 0$\,\% (no NaN)        & 238 & 37.2\,\% \\
+$0 < \rho_s^{A7} < 1$\,\%              &   4 &  0.6\,\% \\
+$1 \leq \rho_s^{A7} < 10$\,\%          &  11 &  1.7\,\% \\
+$10 \leq \rho_s^{A7} < 50$\,\%         &  22 &  3.4\,\% \\
+$50 \leq \rho_s^{A7} < 99$\,\%         &  41 &  6.4\,\% \\
+$99 \leq \rho_s^{A7} < 100$\,\%        &   5 &  0.8\,\% \\
+$\rho_s^{A7} = 100$\,\% (all NaN)      & 319 & 49.8\,\% \\
+\midrule
+\textbf{Mass at the two extremes} & 557 & \textbf{87.0\,\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{A7 incidence on the audited corpus.}
+On the 640 globally audited systems with at least 20 stations,
+\textbf{215 systems cross the A7 threshold} and are simultaneously
+not flagged by any of A1--A6, covering \textbf{70{,}176 stations}.
+The dominant operator is \emph{Dott} (141 systems across Germany,
+Italy, Austria, UAE, and other markets), followed by
+\emph{nextbike} (13 systems where the operator chose NaN rather
+than placeholder), \emph{Bird} (10 Canadian deployments) and
+several smaller operators. The empirical conclusion is that the
+same publication choice that affects the French Dott and Bird
+fleets is propagated internationally, and that the v1.0 taxonomy
+A1--A5 captures only the visible failure modes of the field; A6
+and A7 jointly close the principal blind spots that remain on the
+\texttt{capacity} channel.
+
 \subsection{Operator-level fragmentation of the capacity field}
 Across the case studies above, a recurring mechanism explains why
 the same anomaly recurs across operators: the GBFS field
@@ -1244,6 +1357,63 @@ the released catalogue.}
 \label{fig:capacity-semantics-diagram}
 \end{figure}
 
+\subsection{Retrospective hold-out validation}
+\label{secHoldoutValidation}
+To test the rule set on systems unseen at calibration time, we
+executed a retrospective version of the pre-registered E1
+protocol (\texttt{experiments/e1\_holdout/PROTOCOL.md}) on two
+calendar windows of the MobilityData canonical catalogue. The
+shorter window is the catalogue diff between commit
+\texttt{15e34e6} (2025-11-11) and the rule-freeze commit
+(2026-05-13) : 345 systems added in six months, 39 with non-empty
+\texttt{station\_information} that could be audited. The longer
+window extends back to commit \texttt{4665739} (2025-04-29,
+twelve months) : 481 systems added, 98 audited. The remainder
+are free-floating systems without \texttt{station\_information},
+below $N_{\min}$, or authenticated. The frozen rule set was
+applied unchanged on both windows ; per-system results in
+\texttt{experiments/e1\_holdout/held\_out\_analysis.md} (6-month)
+and \texttt{held\_out\_results\_12mo.csv} (12-month).
+
+\textbf{H1 (rule-firing rate within $\pm 30\,\%$ of the
+derivation rate of $13.5\,\%$).} On the twelve-month window the
+A1--A5 firing rate is $11/98 = 11.2\,\%$ (Wilson 95\,\% CI
+$[6.4\,\%, 19.0\,\%]$), which falls inside the pre-registered
+acceptance band $[9.5\,\%, 17.5\,\%]$ at the point estimate.
+The six-month window gives $7/39 = 17.9\,\%$ (Wilson
+$[9.0\,\%, 32.6\,\%]$), which exceeds the upper bound by
+$0.4$ percentage points at the point estimate but whose Wilson
+interval still contains both the derivation rate and the entire
+acceptance band. Reading the two windows jointly,
+\textbf{H1 passes} : the rule-firing rate on out-of-sample
+systems is statistically consistent with the derivation-set
+rate, and the more conservative twelve-month estimate is in
+the band on both point estimate and confidence interval.
+
+\textbf{H2 (operator-driven A3/A7).} On the twelve-month window,
+$84.2\,\%$ ($48/57$) of the systems flagged on A3 or A7 belong
+to the free-floating operator family identified on the
+derivation set (Dott, nextbike, Pony, Bird, Voi, Bolt, Lime,
+Tier, Donkey, Spin) ; the six-month window gives $81.2\,\%$
+($13/16$). Both estimates exceed the pre-registered acceptance
+threshold of $\geq 50\,\%$ by more than thirty percentage
+points, so \textbf{H2 passes cleanly}.
+
+\textbf{H3 (clean-operator invariance).} \textbf{H3 is not
+testable on either window.} Neither the six-month nor the
+twelve-month held-out panel contains a single system using one
+of the six clean-operator platforms of
+Section~\ref{secGlobalAudit} (PBSC, Cyclocity, Smartbike,
+De Lijn, Urban Sharing, Deutsche Bahn). H3 therefore awaits
+the prospective re-execution of the protocol against a future
+MobilityData snapshot that includes at least one clean-platform
+addition.
+
+H1 and H2 pass on the twelve-month window. H3 is deferred to the
+prospective re-execution. The implications of these outcomes for
+the construct validity of the taxonomy are discussed in
+Section~\ref{secScope}.
+
 % ===================================================================
 \section{Discussion}\label{secDiscussion}
 
@@ -1285,72 +1455,20 @@ the 123 French systems; A5 from enrichment with the
 \emph{transport.data.gouv.fr} catalogue; A6 and A7 from the
 empirical distributions surfaced by the global 1{,}509-system
 sweep (Section~\ref{secMethods}, Provenance of the taxonomy).
-Detection rules were calibrated on the same data they are
-reported to flag. The cross-country live panel
-(Section~\ref{secGlobalAudit}, Table~\ref{tab:e5-pilot}) is an
-out-of-sample check on the negative-control side: every system in
-the panel was selected for its known publication conventions, then
-audited \emph{live} via its public GBFS feed under the unmodified
-rule set, and every metropolitan system passes A1, A2, A3, A6 and
-A7. To complement this with a \emph{positive}-side out-of-sample
-test, we executed a retrospective version of the pre-registered
-E1 protocol (\texttt{experiments/e1\_holdout/PROTOCOL.md}) on
-two windows. The shorter window is the catalogue diff between
-commit \texttt{15e34e6} (2025-11-11) and the rule-freeze
-commit (2026-05-13) : 345 systems added, 39 with non-empty
-\texttt{station\_information} that could be audited. The longer
-window extends back to commit \texttt{4665739}
-(2025-04-29, twelve months) : 481 systems added, 98 audited. The
-remainder are free-floating systems without
-\texttt{station\_information}, below $N_{\min}$, or
-authenticated. The frozen rule set was applied unchanged on
-both windows ; per-system results in
-\texttt{experiments/e1\_holdout/held\_out\_analysis.md} (6-month)
-and \texttt{held\_out\_results\_12mo.csv} (12-month).
-
-\textbf{H1 (rule-firing rate within $\pm 30\,\%$ of the
-derivation rate of $13.5\,\%$).} On the twelve-month window the
-A1--A5 firing rate is $11/98 = 11.2\,\%$ (Wilson 95\,\% CI
-$[6.4\,\%, 19.0\,\%]$), which falls inside the pre-registered
-acceptance band $[9.5\,\%, 17.5\,\%]$ at the point estimate.
-The six-month window gives $7/39 = 17.9\,\%$ (Wilson
-$[9.0\,\%, 32.6\,\%]$), which exceeds the upper bound by
-$0.4$ percentage points at the point estimate but whose Wilson
-interval still contains both the derivation rate and the entire
-acceptance band. Reading the two windows jointly,
-\textbf{H1 passes} : the rule-firing rate on out-of-sample
-systems is statistically consistent with the derivation-set
-rate, and the more conservative twelve-month estimate is in
-the band on both point estimate and confidence interval.
-
-\textbf{H2 (operator-driven A3/A7).} On the twelve-month window,
-$84.2\,\%$ ($48/57$) of the systems flagged on A3 or A7 belong
-to the free-floating operator family identified on the
-derivation set (Dott, nextbike, Pony, Bird, Voi, Bolt, Lime,
-Tier, Donkey, Spin) ; the six-month window gives $81.2\,\%$
-($13/16$). Both estimates exceed the pre-registered acceptance
-threshold of $\geq 50\,\%$ by more than thirty percentage
-points, so \textbf{H2 passes cleanly}.
-
-\textbf{H3 (clean-operator invariance).} Neither held-out window
-contains a single system from the six-platform clean-operator
-panel of Section~\ref{secGlobalAudit} (PBSC, Cyclocity,
-Smartbike, De Lijn, Urban Sharing, Deutsche Bahn) ; both
-windows leave H3 vacuously true. This is itself an informative
-observation about the post-2025 catalogue growth, which has
-been dominated by free-floating operators rather than by
-dock-based new entrants. The prospective re-execution
-scheduled in PROTOCOL.md for the next snapshot will retest
-against any clean-platform additions.
-
-A reader who needs a strict separation between rule-derivation
-and rule-evaluation can therefore treat the catalogue as the
-outcome of a retrospective held-out test that passes H1 and H2
-at the audited sample size on the twelve-month window ; H3 is
-not yet testable and is deferred. The prospective version of
-the protocol against the next MobilityData snapshot will be
-reported as a stand-alone follow-up note in the same research
-programme.
+Detection rules were calibrated on the same data they are reported
+to flag, an inductive workflow whose construct-validity risk we
+address with two out-of-sample tests reported in the Results :
+the negative-control cross-country panel
+(Section~\ref{secGlobalAudit}, Table~\ref{tab:e5-pilot}, twelve
+metropolitan clean-platform systems audited live) and the
+retrospective hold-out validation
+(Section~\ref{secHoldoutValidation}, 98 audited systems added to
+the MobilityData catalogue in the twelve months preceding
+rule-freeze). H1 and H2 pass on the twelve-month window ; H3 is
+not yet testable and is deferred to the prospective version of
+the protocol. The prospective execution against the next
+MobilityData snapshot will be reported as a follow-up note in
+the same research programme.
 
 \emph{This is an audit of an open specification, not an audit of
 its operators.} A2, A3, A6 and A7 detect patterns the GBFS
@@ -1430,11 +1548,11 @@ clearest reminder that absence of evidence is not evidence of absence
 in open-standards compliance auditing.
 
 \subsection{GBFS v3 and the durability of the v2 legacy}
-A natural counter-argument to the audit is that GBFS v3
-(released 2023) introduces \texttt{is\_virtual\_station}, a boolean
-that in principle disambiguates free-floating anchors from physical
-docks and would mechanically suppress A3 detection. Three
-observations temper this expectation. First, \textbf{adoption is
+GBFS v3 (released 2023) introduces \texttt{is\_virtual\_station},
+a boolean that in principle disambiguates free-floating anchors
+from physical docks and would mechanically suppress A3 detection.
+Three observations show why the seven-class taxonomy nevertheless
+remains operationally relevant under v3 adoption. First, \textbf{adoption is
 slow}: of the $1{,}509$ audited systems, only $541$ ($35.9\,\%$)
 declare GBFS v3 in their auto-discovery feed at the audit date,
 against $772$ ($51.2\,\%$) on v2.x ; $50$ remain on v1 and $146$
@@ -1730,7 +1848,18 @@ pilot: Top-10 invariance for $\sigma_{\max} \ge 2.5$. The robustness
 threshold $N_{\min} = 20$ dock-based stations is calibrated on the
 literature of meshed networks: below this value, density and
 connectivity metrics become noise-dominated and are no longer
-informative for cross-city comparison \cite{Saberi2018}.
+informative for cross-city comparison \cite{Saberi2018}. The A5
+macro-region threshold of $50{,}000$\,km$^2$ is calibrated at the
+order of magnitude of a French métropolitaine
+\emph{région administrative} (median area $\approx 47{,}000$\,km$^2$
+after the 2016 reform: Bretagne $27{,}000$, Pays de la Loire
+$32{,}000$, Centre-Val de Loire $39{,}000$, Hauts-de-France
+$31{,}000$, Grand Est $57{,}000$, Auvergne-Rhône-Alpes $69{,}000$,
+Occitanie $72{,}000$). A single GBFS feed whose bounding box
+exceeds this scale plausibly aggregates operationally-independent
+deployments and the resulting system-level statistics
+(centroid, intra-system KNN, capacity profile) are no longer
+geographically interpretable.
 
 \subsection{A6 (semantic warning): zero-capacity dock formalisation}\label{secA6Formalisation}
 \textbf{A6 is a semantic warning rather than a publisher violation.}
@@ -1775,51 +1904,10 @@ detection consistent with the rest of the taxonomy: A6-soft as a
 flag for downstream consumers, A6-hard as a high-confidence
 operator-side anomaly.
 
-\begin{table}[ht]
-\centering
-\caption{Empirical distribution of the zero-capacity rate
-$r_s^{A6}$ across the 538 globally audited systems with at least 20
-stations and a reachable \texttt{station\_information} feed.
-Percentiles are computed on the same sample. The two A6 thresholds
-are derived from the distribution rather than chosen ex ante.}
-\label{tab:a6-distribution}
-\small
-\begin{tabular}{@{}lrr@{}}
-\toprule
-\textbf{Bucket} & \textbf{Systems} & \textbf{Share}\\
-\midrule
-$r_s^{A6} = 0$\,\% (no $c = 0$)   & 508 & 94.4\,\% \\
-$0 < r_s^{A6} \leq 0.5$\,\%        &   9 &  1.7\,\% \\
-$0.5 < r_s^{A6} \leq 1$\,\%        &   8 &  1.5\,\% \\
-$1 < r_s^{A6} \leq 2$\,\%          &   4 &  0.7\,\% \\
-$2 < r_s^{A6} \leq 5$\,\%          &   6 &  1.1\,\% \\
-$5 < r_s^{A6} \leq 10$\,\%         &   2 &  0.4\,\% \\
-$r_s^{A6} > 10$\,\%                &   1 &  0.2\,\% \\
-\midrule
-\textbf{Summary statistics} & & \\
-\quad mean $\bar r$                 &  0.10\,\% & \\
-\quad standard deviation $\hat\sigma$ &  0.71\,\% & \\
-\quad 95th percentile               &  0.15\,\% & \\
-\quad 97.5th percentile             &  $\approx \bar r + 3\hat\sigma \approx 2.2$\,\% & \\
-\quad 99th percentile               &  3.54\,\% & \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\paragraph{A6 incidence on the audited corpus.}
-Under A6-soft ($\tau = 0.15\,\%$) 30 of 538 audited systems are
-flagged; under A6-hard ($\tau = 2.2\,\%$) 8 systems are flagged. The
-extreme tail is PBSC HQ (Canada, 18.2\,\%), Beryl Greater Manchester
-(UK, 10.5\,\%), MonaBike (Monaco, 6.8\,\%), Bicicoru\~na (Spain,
-5.9\,\%), MBajk (Slovenia, 4.8\,\%), CyclOcity (Japan, 4.2\,\%),
-\`aV\'elo (Canada, 3.5\,\%) and Careem BIKE (UAE, 2.7\,\%). On the
-French corpus, no dock-based system crosses either threshold
-(0/65 dock systems with $c = 0$), which is consistent with the
-corpus-level median behaviour and provides a negative control.
-The interaction between A6 and the \texttt{is\_virtual\_station}
-flag (only required by GBFS v3) is documented as a sensitivity
-parameter and the rule ships with experiment E1's inter-rater
-human validation extended to A6 and A7.
+The empirical distribution of $r_s^{A6}$ and the per-class
+incidence on the audited corpus are reported in
+Section~\ref{secA6A7Incidence} (Results,
+Table~\ref{tab:a6-distribution}).
 
 \subsection{A7 (semantic warning): null capacity field formalisation}\label{secA7Formalisation}
 The Italian case study of Section~\ref{secGlobalAudit} demonstrates
@@ -1855,46 +1943,10 @@ yields essentially the same flagged set; $\tau_{A7} = 0.5$ is
 reported for parsimony and is robust to sensitivity sweeps in the
 tested range.
 
-\begin{table}[ht]
-\centering
-\caption{Empirical distribution of the NaN-capacity rate
-$\rho_s^{A7}$ across the 640 globally audited systems with at least
-20 stations and a reachable \texttt{station\_information} feed.
-The corpus is sharply bimodal at the extreme values, which justifies
-a coarse threshold rather than a distribution-anchored one.}
-\label{tab:a7-distribution}
-\small
-\begin{tabular}{@{}lrr@{}}
-\toprule
-\textbf{Bucket} & \textbf{Systems} & \textbf{Share}\\
-\midrule
-$\rho_s^{A7} = 0$\,\% (no NaN)        & 238 & 37.2\,\% \\
-$0 < \rho_s^{A7} < 1$\,\%              &   4 &  0.6\,\% \\
-$1 \leq \rho_s^{A7} < 10$\,\%          &  11 &  1.7\,\% \\
-$10 \leq \rho_s^{A7} < 50$\,\%         &  22 &  3.4\,\% \\
-$50 \leq \rho_s^{A7} < 99$\,\%         &  41 &  6.4\,\% \\
-$99 \leq \rho_s^{A7} < 100$\,\%        &   5 &  0.8\,\% \\
-$\rho_s^{A7} = 100$\,\% (all NaN)      & 319 & 49.8\,\% \\
-\midrule
-\textbf{Mass at the two extremes} & 557 & \textbf{87.0\,\%} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\paragraph{Incidence of A7.}
-On the 640 globally audited systems with at least 20 stations,
-\textbf{215 systems cross the A7 threshold} and are simultaneously
-not flagged by any of A1--A6, covering \textbf{70{,}176 stations}.
-The dominant operator is \emph{Dott} (141 systems across Germany,
-Italy, Austria, UAE, and other markets), followed by
-\emph{nextbike} (13 systems where the operator chose NaN rather
-than placeholder), \emph{Bird} (10 Canadian deployments) and
-several smaller operators. The empirical conclusion is that the
-same publication choice that affects the French Dott and Bird
-fleets is propagated internationally, and that the v1.0 taxonomy
-A1--A5 captures only the visible failure modes of the field; A6
-and A7 jointly close the principal blind spots that remain on the
-\texttt{capacity} channel.
+The empirical distribution of $\rho_s^{A7}$ and the
+per-class incidence on the audited corpus are reported in
+Section~\ref{secA6A7Incidence} (Results,
+Table~\ref{tab:a7-distribution}).
 
 \subsection{Multi-source hybridisation}
 The output of the purging stage enriches each station with a
