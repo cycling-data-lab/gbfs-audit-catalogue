@@ -609,8 +609,8 @@ abstract_box(
 )
 
 
-tab1, tab2, tab3, tab4 = st.tabs(
-    ["Overview", "Anomaly browser", "Operator audit", "Schema"]
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
+    ["Overview", "Anomaly browser", "Operator audit", "Schema", "Data explorer"]
 )
 
 
@@ -629,6 +629,24 @@ with tab1:
               help="audit_confidence == 'high'")
 
     section(2, "Anomaly incidence across the French and global corpora")
+    st.markdown(
+        "<p class='muted' style='max-width:820px;'>"
+        "The audit is structured as a sequential six-step purging "
+        "protocol that screens every GBFS feed against the seven "
+        "anomaly classes A1 to A7. The protocol is idempotent (re-running "
+        "it on the certified output is a no-op), reversible (every "
+        "rejected station is preserved in <code>rejected_stations.parquet</code> "
+        "with its exclusion motive) and fully logged. The same rule "
+        "set is applied to the French corpus (123 systems indexed on "
+        "<code>transport.data.gouv.fr</code>) and to the 1,509-system "
+        "MobilityData canonical catalogue covering 48 countries. "
+        "Figure 1 reports the per-class system counts side by side : "
+        "the French and global hotspots are driven by different "
+        "operators but share the same anti-patterns, which is what "
+        "the unified A1 to A7 taxonomy captures."
+        "</p>",
+        unsafe_allow_html=True,
+    )
     st.pyplot(fig_anomaly_incidence(), clear_figure=False, use_container_width=True)
     st.caption(
         "Figure 1. System-level incidence of the seven anomaly classes "
@@ -636,8 +654,20 @@ with tab1:
         "1,509-system MobilityData canonical catalogue. The most "
         "frequent global class is A7 (null capacity field, 215 systems "
         "covering 70,176 stations), led by Dott across Germany, Italy "
-        "and the United Arab Emirates."
+        "and the United Arab Emirates. A4 (geospatial outliers) is the "
+        "largest global class outside A7 because country-perimeter "
+        "calibration only kicks in above 5 % of stations and at least "
+        "5 absolute outside-country stations."
     )
+
+    with st.expander("What does each anomaly class catch?  (A1 to A7)"):
+        for code, info in ANOMALY_CLASSES.items():
+            st.markdown(
+                f"**{code} – {info['name']}**  \n"
+                f"<span class='muted' style='font-size:0.85rem;'>"
+                f"{info['signature']}</span>",
+                unsafe_allow_html=True,
+            )
 
     section(3, "A3: empirical signature of the structural over-capacity bias")
     st.markdown(
@@ -661,13 +691,23 @@ with tab1:
           \frac{1}{N}\sum_{i=1}^{N} c_i"""
     )
     st.markdown(
-        "<p class='muted' style='font-size:0.84rem;'>"
+        "<p class='muted' style='font-size:0.86rem; max-width:820px;'>"
         "The audit detects A3 by computing the ratio "
         "$\\bar{c}_{\\text{profile}} / \\bar{c}_{\\text{actual}}$ per "
-        "system and flagging any value above 5.0 (the empirical "
-        "threshold separating dock-based fleets from free-floating ones; "
-        "Bicing Barcelona and Oslo Bysykkel give ratios essentially "
-        "equal to 1.0)."
+        "system and flagging any value above the empirical threshold "
+        "5.0 that separates dock-based fleets from free-floating ones. "
+        "Negative controls back this calibration : Bicing Barcelona, "
+        "Oslo Bysykkel and Bergen Bysykkel all return a ratio of "
+        "essentially 1.0. The most extreme case in the French corpus "
+        "is <b>Pony Bordeaux</b> : it publishes 2,996 station entries "
+        "with a declared capacity of 12 docks each (nominal total : "
+        "35,952 docks), but its actual mean capacity per entry, computed "
+        "without conditioning on non-zero values, is "
+        "<b>0.03 bike / entry</b>. After A3 reclassification, Bordeaux's "
+        "dock-based station count drops from 9,921 raw GBFS entries to "
+        "<b>225</b> certified dock-based stations &mdash; a 98 % collapse "
+        "of the nominal infrastructure, and a seven-position shift in any "
+        "supply-side ranking built on the unaudited feed."
         "</p>",
         unsafe_allow_html=True,
     )
@@ -740,25 +780,65 @@ with tab1:
 # === Tab 2 -- Anomaly browser ============================================
 
 with tab2:
-    section(1, "Audit-confidence distribution on the certified corpus")
+    section(1, "How the audit's verdict is encoded per row")
+    st.markdown(
+        "<p class='muted' style='max-width:820px;'>"
+        "The release exposes eleven audit-pipeline columns. Reading them "
+        "together gives a complete picture of why a station ended up in "
+        "(or out of) the certified subset :"
+        "</p>"
+        "<ul class='muted' style='max-width:820px; font-size:0.92rem;'>"
+        "<li><b><code>station_type</code></b> &mdash; the audited type, in "
+        "{<code>docked_bike</code>, <code>free_floating</code>, "
+        "<code>carsharing</code>}. <code>docked_bike</code> is the only "
+        "fully-audited tier at the static level.</li>"
+        "<li><b><code>capacity_raw</code> vs <code>capacity_audited</code></b> "
+        "&mdash; the GBFS-declared value before the audit (may be NaN or "
+        "a placeholder) and the post-audit value. They are intentionally "
+        "different : <code>capacity_audited</code> is set to NaN whenever "
+        "the type has been re-labelled away from <code>docked_bike</code>, "
+        "so that downstream consumers cannot accidentally sum free-floating "
+        "anchors as physical docks.</li>"
+        "<li><b><code>flag_A1</code> to <code>flag_A7</code></b> &mdash; "
+        "one boolean per class of the seven-class taxonomy. A station "
+        "carries the flag of every class its parent system triggers ; "
+        "stations are kept in the catalogue with their flag set so that "
+        "researchers can filter explicitly (e.g. only stations with no "
+        "flag, or only stations from operators triggering A3).</li>"
+        "<li><b><code>operator_name</code></b> &mdash; the normalised "
+        "operator label extracted from <code>system_id</code> + "
+        "<code>system_name</code>. Operator-driven hotspots are the "
+        "central empirical finding : the same anti-pattern propagates "
+        "across an operator's entire deployment, not city by city.</li>"
+        "<li><b><code>audit_confidence</code></b> &mdash; an ordinal tag "
+        "in {<i>high</i>, <i>medium</i>, <i>low</i>} that summarises the "
+        "flag combination. <i>high</i> means zero flags triggered ; "
+        "<i>medium</i> means one acceptable flag (A3 or A7 alone, the "
+        "free-floating canonical cases) ; <i>low</i> means anything "
+        "else.</li>"
+        "</ul>",
+        unsafe_allow_html=True,
+    )
+
+    section(2, "Audit-confidence distribution on the certified corpus")
     st.pyplot(fig_confidence_distribution(gs["audit_confidence"]),
               clear_figure=False, use_container_width=True)
     st.caption(
         "Figure 2. Distribution of the per-row audit confidence over "
-        f"the {len(gs):,} certified stations. Only 5,402 stations "
-        "(11.7 %) reach the high-confidence tier ; the bulk of the "
-        "corpus sits at low confidence because the dominant operators "
-        "(Dott, Pony, Bird) propagate the A3 / A7 flags across every "
-        "station they publish."
+        f"the {len(gs):,} certified stations. Only "
+        f"{int((gs.audit_confidence == 'high').sum()):,} stations "
+        f"({100 * (gs.audit_confidence == 'high').mean():.1f} %) "
+        "reach the high-confidence tier ; the bulk of the corpus sits "
+        "at low confidence because the dominant operators (Dott, Pony, "
+        "Bird) propagate the A3 / A7 flags across every station they "
+        "publish."
     )
 
-    section(2, "Filter the catalogue at the row level")
+    section(3, "Filter the catalogue at the row level")
     st.markdown(
-        "<p class='muted'>The 46-column parquet exposes one anomaly flag "
-        "per class (<code>flag_A1</code> to <code>flag_A7</code>) and an "
-        "ordinal <code>audit_confidence</code> tag (<i>high</i>, "
-        "<i>medium</i>, <i>low</i>). Combine the filters below to inspect "
-        "any sub-population.</p>",
+        "<p class='muted'>Combine the four filters below to inspect any "
+        "sub-population. The table refreshes live ; the download button "
+        "exports the current selection as a CSV.</p>",
         unsafe_allow_html=True,
     )
 
@@ -1174,6 +1254,175 @@ with tab4:
             f'</div>'
         )
     st.markdown(classes_html, unsafe_allow_html=True)
+
+
+# === Tab 5 -- Data explorer ==============================================
+
+with tab5:
+    section(1, "Search the 46,307-station catalogue")
+    st.markdown(
+        "<p class='muted' style='max-width:820px;'>"
+        "Free-text search across station, city and operator labels, "
+        "combined with categorical and numerical filters. The map and "
+        "the table refresh live ; the download button at the bottom "
+        "exports the current selection."
+        "</p>",
+        unsafe_allow_html=True,
+    )
+
+    # --- Filters row 1 : text search + station type ---
+    f1a, f1b = st.columns([2, 1])
+    query = f1a.text_input(
+        "Free-text search (matches station_name, city, operator_name)",
+        value="",
+        placeholder="e.g. 'paris', 'pony bordeaux', 'gare', 'velib'",
+    ).strip().lower()
+    type_filter = f1b.multiselect(
+        "Station type",
+        sorted(gs.station_type.dropna().unique()),
+        default=sorted(gs.station_type.dropna().unique()),
+    )
+
+    # --- Filters row 2 : confidence + flags + city + operator ---
+    f2a, f2b, f2c = st.columns(3)
+    conf_filter = f2a.multiselect(
+        "Audit confidence",
+        ["high", "medium", "low"],
+        default=["high", "medium", "low"],
+    )
+    city_options = sorted(gs.city.dropna().unique())
+    city_filter = f2b.multiselect(
+        "City (optional)",
+        city_options,
+        default=[],
+        max_selections=20,
+        help="Leave empty to search all 97 cities",
+    )
+    op_options = sorted(gs.operator_name.dropna().unique())
+    op_filter = f2c.multiselect(
+        "Operator (optional)",
+        op_options,
+        default=[],
+    )
+
+    # --- Filters row 3 : flags + capacity range ---
+    f3a, f3b = st.columns([2, 1])
+    flag_filter = f3a.multiselect(
+        "Require at least one of these anomaly flags",
+        [f"flag_A{i}" for i in range(1, 8)],
+        default=[],
+    )
+    cap_audited = gs["capacity_audited"]
+    cap_min = int(np.nanmin(cap_audited)) if cap_audited.notna().any() else 0
+    cap_max = int(np.nanmax(cap_audited)) if cap_audited.notna().any() else 100
+    cap_range = f3b.slider(
+        "Audited capacity (dock-based only)",
+        min_value=cap_min,
+        max_value=cap_max,
+        value=(cap_min, cap_max),
+        help="NaN-capacity rows (non-dock types) are kept regardless of this slider",
+    )
+
+    # --- Apply filters ---
+    mask = gs.station_type.isin(type_filter) & gs.audit_confidence.isin(conf_filter)
+    if query:
+        haystack = (
+            gs["station_name"].fillna("").str.lower()
+            + " "
+            + gs["city"].fillna("").str.lower()
+            + " "
+            + gs["operator_name"].fillna("").str.lower()
+        )
+        mask &= haystack.str.contains(query, regex=False, na=False)
+    if city_filter:
+        mask &= gs.city.isin(city_filter)
+    if op_filter:
+        mask &= gs.operator_name.isin(op_filter)
+    if flag_filter:
+        any_flag = gs[flag_filter].any(axis=1)
+        mask &= any_flag
+    # Capacity filter only applies to rows with non-NaN capacity_audited
+    cap_mask = (
+        gs["capacity_audited"].isna()
+        | ((gs["capacity_audited"] >= cap_range[0])
+           & (gs["capacity_audited"] <= cap_range[1]))
+    )
+    mask &= cap_mask
+
+    sub = gs[mask]
+    n_sub = len(sub)
+    pct_sub = 100.0 * n_sub / len(gs) if len(gs) else 0.0
+
+    # --- Result summary ---
+    r1, r2, r3, r4 = st.columns(4)
+    r1.metric("Selected stations", f"{n_sub:,}",
+              delta=f"{pct_sub:.2f}% of corpus",
+              delta_color="off")
+    r2.metric("Cities in selection",
+              f"{sub['city'].nunique() if n_sub else 0}")
+    r3.metric("Operators in selection",
+              f"{sub['operator_name'].nunique() if n_sub else 0}")
+    r4.metric("High confidence in selection",
+              f"{int((sub.audit_confidence == 'high').sum()) if n_sub else 0:,}")
+
+    if n_sub == 0:
+        st.warning("No station matches the current filter. Loosen the criteria above.")
+    else:
+        section(2, "Geographic distribution")
+        # Build the map data
+        map_df = sub[["lat", "lon"]].dropna().copy()
+        if len(map_df) > 8000:
+            st.caption(
+                f"{len(map_df):,} stations would render on the map ; sampling "
+                "8,000 for responsiveness."
+            )
+            map_df = map_df.sample(8000, random_state=2026)
+        st.map(map_df, latitude="lat", longitude="lon", size=15,
+               color="#1A6FBF", use_container_width=True)
+
+        section(3, "Tabular view")
+        cols_show = [
+            "uid", "city", "operator_name", "station_type", "station_name",
+            "capacity_raw", "capacity_audited",
+            "flag_A1", "flag_A2", "flag_A3", "flag_A6", "flag_A7",
+            "audit_confidence", "lat", "lon",
+        ]
+        cols_show = [c for c in cols_show if c in sub.columns]
+        sort_options = [c for c in [
+            "city", "operator_name", "capacity_audited", "station_name",
+            "audit_confidence",
+        ] if c in sub.columns]
+        sb1, sb2 = st.columns([1, 4])
+        sort_col = sb1.selectbox("Sort by", sort_options, index=0)
+        sort_asc = sb2.radio("Order", ["ascending", "descending"],
+                              horizontal=True, index=0,
+                              label_visibility="collapsed") == "ascending"
+        sub_sorted = sub.sort_values(sort_col, ascending=sort_asc)
+        st.dataframe(sub_sorted[cols_show].head(500),
+                     height=420, hide_index=True)
+        if n_sub > 500:
+            st.caption(
+                f"Showing the first 500 of {n_sub:,} matching stations "
+                "(sorted by the column above). Use the download button "
+                "to export the full selection."
+            )
+
+        section(4, "Export")
+        csv_bytes = sub_sorted[cols_show].to_csv(index=False).encode("utf-8")
+        full_csv = sub_sorted.to_csv(index=False).encode("utf-8")
+        d1, d2 = st.columns(2)
+        d1.download_button(
+            "Download shown columns (CSV)",
+            data=csv_bytes,
+            file_name=f"gbfs_audit_selection_{n_sub}.csv",
+            mime="text/csv",
+        )
+        d2.download_button(
+            "Download all 46 columns (CSV)",
+            data=full_csv,
+            file_name=f"gbfs_audit_selection_full_{n_sub}.csv",
+            mime="text/csv",
+        )
 
 
 # ---------------------------------------------------------------------------
