@@ -1,0 +1,481 @@
+name,country,status,n_stations,url,elapsed_s,n_capacity_nan,n_capacity_zero,capacity_median,capacity_unique_values,A1_n_stations,A1_share_pct,A3_n_stations,A3_share_pct,A4_n_stations,A4_share_pct,A2_flagged,A5_flagged,A6_flagged,A7_flagged
+Yoio Erfurt,DE,too_small_below_Nmin,0.0,https://yoio.rideatom.com/gbfs/159/v3.0/gbfs,0.4,,,,,,,,,,,,,,
+Yaldi,AE,too_small_below_Nmin,0.0,https://yaldi.rideatom.com/gbfs/511/v3.0/gbfs,0.3,,,,,,,,,,,,,,
+3electra,UA,too_small_below_Nmin,0.0,https://zelectra.rideatom.com/gbfs/66/v3.0/gbfs,0.3,,,,,,,,,,,,,,
+Yoio Göttingen,DE,too_small_below_Nmin,1.0,https://yoio.rideatom.com/gbfs/9/v3.0/gbfs,0.3,,,,,,,,,,,,,,
+Donkey Republic Augsburg,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/Augsburg/gbfs.json,0.6,,,,,,,,,,,,,,
+Bolt Liverpool,GB,ok,1566.0,https://mds.bolt.eu/gbfs/3/412/gbfs,2.0,501.0,8.0,10.0,11.0,0.0,0.0,0.0,0.0,1.0,0.06,False,False,False,False
+Donkey Prignitz,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/Donkey-Prignitz/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Ergolding,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/Ergolding/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Kelheim,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/Kelheim/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Neutraubling,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/Neutraubling/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Obertraubling,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/Obertraubling/gbfs.json,0.6,,,,,,,,,,,,,,
+Auch Velo'C,FR,too_small_below_Nmin,10.0,https://api.gbfs.v3.0.ecovelo.mobi/auchveloc/gbfs.json,0.3,,,,,,,,,,,,,,
+Auto-en-Velay,FR,fetch_error: HTTPError,,https://backend.citiz.fr/public/provider/23/gbfs/3.0/gbfs.json,0.1,,,,,,,,,,,,,,
+Cooltra Barcelona,ES,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/barcelona/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Donkey Republic Bayern Komplett,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/bayern_komplett/gbfs.json,0.5,,,,,,,,,,,,,,
+Beryl Belfast,IE,ok,61.0,https://beryl-gbfs-production.web.app/v2_2/Belfast/gbfs.json,0.4,0.0,0.0,12.0,12.0,0.0,0.0,0.0,0.0,5.0,8.2,False,False,False,False
+Beryl - Bradford,GB,ok,32.0,https://beryl-gbfs-production.web.app/v2_2/Bradford/gbfs.json,0.3,0.0,0.0,6.0,9.0,0.0,0.0,0.0,0.0,2.0,6.25,False,False,False,False
+Beryl - Canterbury,GB,ok,25.0,https://beryl-gbfs-production.web.app/v2_2/Canterbury/gbfs.json,0.4,0.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,1.0,4.0,False,False,False,False
+Beryl - Eastleigh,GB,too_small_below_Nmin,13.0,https://beryl-gbfs-production.web.app/v2_2/Eastleigh/gbfs.json,0.3,,,,,,,,,,,,,,
+Beryl - Guildford,GB,ok,39.0,https://beryl-gbfs-production.web.app/v2_2/Guildford/gbfs.json,0.3,0.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,1.0,2.56,False,False,False,False
+Beryl - Stevenage,GB,ok,47.0,https://beryl-gbfs-production.web.app/v2_2/Stevenage/gbfs.json,0.3,0.0,0.0,6.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+Beryl - Weymouth,GB,ok,32.0,https://beryl-gbfs-production.web.app/v2_2/Weymouth/gbfs.json,0.3,0.0,0.0,6.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+Beryl - Worcester,GB,ok,56.0,https://beryl-gbfs-production.web.app/v2_2/Worcester/gbfs.json,0.3,0.0,0.0,6.5,8.0,0.0,0.0,0.0,0.0,3.0,5.36,False,False,False,False
+Bilbao Bizi,ES,ok,48.0,https://bilbao.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.2,0.0,0.0,826.5,15.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+Bird Adeje,ES,ok,200.0,https://mds.bird.co/gbfs/v2/public/adeje/gbfs.json,1.5,200.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Bird Ajaccio,FR,ok,36.0,https://mds.bird.co/gbfs/v2/public/ajaccio/gbfs.json,0.9,36.0,0.0,,0.0,0.0,0.0,0.0,0.0,2.0,5.56,False,False,False,True
+Bird Antigua,ES,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/antigua/gbfs.json,1.0,,,,,,,,,,,,,,
+Bird Atlanta,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/atlanta/gbfs.json,0.7,,,,,,,,,,,,,,
+Bird Barcelona,ES,ok,3603.0,https://mds.bird.co/gbfs/v2/public/barcelona/gbfs.json,2.2,3603.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Bird Dallas,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/dallas/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Denver,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/denver/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Florence,IT,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/florence/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Gainesville,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/gainesville/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Gap,FR,ok,50.0,https://mds.bird.co/gbfs/v2/public/gap/gbfs.json,0.5,50.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Bird Gijón,ES,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/gijon/gbfs.json,0.7,,,,,,,,,,,,,,
+Bird Greensboro,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/greensboro/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Halifax,CA,ok,620.0,https://mds.bird.co/gbfs/v2/public/halifax/gbfs.json,1.3,620.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Bird Hamilton,CA,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/hamilton/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Helsinki,FI,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/helsinki/gbfs.json,0.7,,,,,,,,,,,,,,
+Bird Israel,IL,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/israel/gbfs.json,0.7,,,,,,,,,,,,,,
+Bird Leduc,CA,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/leduc/gbfs.json,0.7,,,,,,,,,,,,,,
+Bird Lexington,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/lexington/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Marseille,FR,ok,803.0,https://mds.bird.co/gbfs/v2/public/marseille/gbfs.json,0.9,803.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,0.37,False,False,False,True
+Bird Matosinhos,PT,ok,182.0,https://mds.bird.co/gbfs/v2/public/matosinhos/gbfs.json,0.9,182.0,0.0,,0.0,0.0,0.0,0.0,0.0,2.0,1.1,False,False,False,True
+Bird Milan,IT,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/milan/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Munich,DE,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/munich/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Murcia,ES,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/murcia/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Nashville,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/nashville/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Newark,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/newark/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Orlando,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/orlando/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Porto,PT,ok,196.0,https://mds.bird.co/gbfs/v2/public/porto/gbfs.json,0.9,196.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Bird Pájara,ES,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/pajara/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Reno,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/reno/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Richmond,US,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/richmond/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Saskatoon,CA,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/saskatoon/gbfs.json,0.4,,,,,,,,,,,,,,
+Bird Schaffhausen,CH,ok,88.0,https://mds.bird.co/gbfs/v2/public/schaffhausen/gbfs.json,0.5,88.0,0.0,,0.0,0.0,0.0,0.0,0.0,1.0,1.14,False,False,False,True
+Bird Vaughan,CA,ok,466.0,https://mds.bird.co/gbfs/v2/public/vaughan/gbfs.json,0.9,466.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Bird Wiener Neustadt,AT,too_small_below_Nmin,0.0,https://mds.bird.co/gbfs/v2/public/wienerneustadt/gbfs.json,0.4,,,,,,,,,,,,,,
+Bora,PT,ok,39.0,https://gbfs.primelayer.pt/gbfs-smartmobility/gbfs/v3/gbfs.json,0.4,0.0,0.0,5.0,1.0,0.0,0.0,0.0,0.0,5.0,12.82,True,False,False,False
+Brennus à Vélo (Sens),FR,too_small_below_Nmin,18.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/sens/en/gbfs.json,0.2,,,,,,,,,,,,,,
+Vel’in,FR,ok,80.0,https://stce.transdev-hdf.fr/gbfs/,0.7,0.0,4.0,9.0,8.0,0.0,0.0,0.0,0.0,8.0,10.0,False,False,True,False
+Check Technologies,NL,fetch_error: LookupError,,https://api.ridecheck.app/gbfs/v3/haarlem/gbfs.json,0.1,,,,,,,,,,,,,,
+Check Technologies,NL,fetch_error: LookupError,,https://api.ridecheck.app/gbfs/v3/tilburg/gbfs.json,0.1,,,,,,,,,,,,,,
+Citédia Services,FR,fetch_error: HTTPError,,https://backend.citiz.fr/public/provider/22/gbfs/3.0/gbfs.json,1.0,,,,,,,,,,,,,,
+Citiz Métropole Lyon,FR,fetch_error: HTTPError,,https://backend.citiz.fr/public/provider/3/gbfs/3.0/gbfs.json,2.3,,,,,,,,,,,,,,
+Clem,FR,ok,379.0,https://gbfs.clem.mobi/gbfs.json,0.3,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,124.0,32.72,False,True,False,False
+Conficars,DE,ok,28.0,https://api.mobidata-bw.de/sharing/gbfs/v3/conficars_ulm/gbfs,0.3,0.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,2.0,7.14,False,False,False,False
+Felyx Amsterdam,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/amsterdam/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Antwerp,BE,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/antwerp/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Arnhem,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/arnhem/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Breda,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/breda/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Brussels,BE,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/brussels/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Delft,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/delft/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Den Bosch,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/den_bosch/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Eindhoven,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/eindhoven/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Enschede,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/enschede/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Groningen,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/groningen/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Haarlem,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/haarlem/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Nijmegen,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/nijmegen/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Rotterdam,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/rotterdam/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx The Hague,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/the_hague/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Tilburg,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/tilburg/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Felyx Zwolle,NL,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/zwolle/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Donkey Republic Barcelona,ES,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_barcelona/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Republic Hannover,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hannover/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Republic Katwijk,NL,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_katwijk/gbfs.json,0.5,,,,,,,,,,,,,,
+Donkey KielRegion+Smile24,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kielsmile/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Republic Qbuzz,NL,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_qbuzz/gbfs.json,0.5,,,,,,,,,,,,,,
+Donkey Regensburg,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_regensburg_straubing/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Republic Rivierenland,NL,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_rivierenland/gbfs.json,0.5,,,,,,,,,,,,,,
+Donkey Republic Rotterdam/Den Haag,NL,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_rotterdam_den_haag/gbfs.json,0.6,,,,,,,,,,,,,,
+Donkey Republic Schleswig,DE,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_schleswig/gbfs.json,0.6,,,,,,,,,,,,,,
+Dott As,NO,fetch_error: HTTPError,,https://gbfs.api.ridedott.com/public/v2/as/gbfs.json,0.1,,,,,,,,,,,,,,
+Dott Bergamo,IT,ok,746.0,https://gbfs.api.ridedott.com/public/v2/bergamo/gbfs.json,0.3,746.0,0.0,,0.0,0.0,0.0,0.0,0.0,1.0,0.13,False,False,False,True
+Dott Bremen,DE,ok,21.0,https://gbfs.api.ridedott.com/public/v2/bremen/gbfs.json,0.2,21.0,0.0,,0.0,0.0,0.0,0.0,0.0,4.0,19.05,False,False,False,True
+Dott Bremerhaven,DE,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/bremerhaven/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott brunel-university,GB,too_small_below_Nmin,8.0,https://gbfs.api.ridedott.com/public/v2/brunel-university/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Brzeg,PL,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/brzeg/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Brzeg Dolny,PL,too_small_below_Nmin,4.0,https://gbfs.api.ridedott.com/public/v2/brzeg-dolny/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Częstochowa,PL,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/czestochowa/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Dziwnów,PL,ok,205.0,https://gbfs.api.ridedott.com/public/v2/dziwnow/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Frederikssund,DK,ok,37.0,https://gbfs.api.ridedott.com/public/v2/frederikssund/gbfs.json,0.2,37.0,0.0,,0.0,0.0,0.0,0.0,0.0,2.0,5.41,False,False,False,True
+Dott Gdansk-Osowa,PL,ok,205.0,https://gbfs.api.ridedott.com/public/v2/gdansk-osowa/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Grado,ES,ok,205.0,https://gbfs.api.ridedott.com/public/v2/grado/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Hanko,FI,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/hanko/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Herzliya,IL,ok,205.0,https://gbfs.api.ridedott.com/public/v2/herzliya/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Höganäs,SE,ok,205.0,https://gbfs.api.ridedott.com/public/v2/hoganas/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Jelenia Góra,PL,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/jelenia-gora/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Jesolo,IT,ok,100.0,https://gbfs.api.ridedott.com/public/v2/jesolo/gbfs.json,0.2,100.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Dott Kajaani,FI,ok,205.0,https://gbfs.api.ridedott.com/public/v2/kajaani/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Klopein,AT,fetch_error: HTTPError,,https://gbfs.api.ridedott.com/public/v2/klopein/gbfs.json,0.1,,,,,,,,,,,,,,
+Dott Kortrijk,BE,ok,205.0,https://gbfs.api.ridedott.com/public/v2/kortrijk/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Kouvola,FI,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/kouvola/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Krynica Morska,PL,ok,205.0,https://gbfs.api.ridedott.com/public/v2/krynica-morska/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Lecco,IT,ok,61.0,https://gbfs.api.ridedott.com/public/v2/lecco/gbfs.json,0.2,61.0,0.0,,0.0,0.0,0.0,0.0,0.0,1.0,1.64,False,False,False,True
+Dott Makkah,SA,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/makkah/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Malvik,NO,too_small_below_Nmin,7.0,https://gbfs.api.ridedott.com/public/v2/malvik/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Melhus,NO,too_small_below_Nmin,10.0,https://gbfs.api.ridedott.com/public/v2/melhus/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Mielno,PL,ok,205.0,https://gbfs.api.ridedott.com/public/v2/mielno/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Mikkeli,FI,ok,205.0,https://gbfs.api.ridedott.com/public/v2/mikkeli/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Naantali,FI,ok,205.0,https://gbfs.api.ridedott.com/public/v2/naantali/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Pápa,HU,ok,50.0,https://gbfs.api.ridedott.com/public/v2/papa/gbfs.json,0.2,50.0,0.0,,0.0,0.0,0.0,0.0,0.0,4.0,8.0,False,False,False,True
+Dott Płock,PL,fetch_error: UnicodeEncodeError,,https://gbfs.api.ridedott.com/public/v2/płock/gbfs.json,0.0,,,,,,,,,,,,,,
+Dott Rauma,FI,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/rauma/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Region Hovedstaden,DK,ok,1151.0,https://gbfs.api.ridedott.com/public/v2/region-h/gbfs.json,0.3,1151.0,0.0,,0.0,0.0,0.0,0.0,0.0,11.0,0.96,False,False,False,True
+Dott Riihimäki,FI,too_small_below_Nmin,1.0,https://gbfs.api.ridedott.com/public/v2/riihimaki/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Rorschach,CH,ok,137.0,https://gbfs.api.ridedott.com/public/v2/rorschach/gbfs.json,0.2,137.0,0.0,,0.0,0.0,0.0,0.0,0.0,1.0,0.73,False,False,False,True
+Dott Roskilde,DK,ok,75.0,https://gbfs.api.ridedott.com/public/v2/roskilde/gbfs.json,0.2,75.0,0.0,,0.0,0.0,0.0,0.0,0.0,2.0,2.67,False,False,False,True
+Dott Saint Anton am Arlberg,AT,fetch_error: HTTPError,,https://gbfs.api.ridedott.com/public/v2/sankt-anton-am-arlberg/gbfs.json,0.1,,,,,,,,,,,,,,
+Dott SBF,SA,ok,22.0,https://gbfs.api.ridedott.com/public/v2/sbf/gbfs.json,0.2,22.0,0.0,,0.0,0.0,0.0,0.0,0.0,1.0,4.55,False,False,False,True
+Dott Schwäbisch Gmünd,DE,ok,205.0,https://gbfs.api.ridedott.com/public/v2/schwabisch-gmund/gbfs.json,0.4,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Serfaus,AT,fetch_error: HTTPError,,https://gbfs.api.ridedott.com/public/v2/serfaus/gbfs.json,0.1,,,,,,,,,,,,,,
+Dott Sobieszewo Island,PL,ok,205.0,https://gbfs.api.ridedott.com/public/v2/sobieszewo-island/gbfs.json,0.4,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott STC City,SA,too_small_below_Nmin,0.0,https://gbfs.api.ridedott.com/public/v2/stc-city/gbfs.json,0.2,,,,,,,,,,,,,,
+Dott Ekenäs,FI,ok,50.0,https://gbfs.api.ridedott.com/public/v2/tammisaari/gbfs.json,0.2,50.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Dott Thessaloniki,GR,ok,118.0,https://gbfs.api.ridedott.com/public/v2/thessaloniki/gbfs.json,0.2,118.0,0.0,,0.0,0.0,0.0,0.0,0.0,2.0,1.69,False,False,False,True
+Dott Toruń,PL,ok,205.0,https://gbfs.api.ridedott.com/public/v2/torun/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Ullensaker,NO,fetch_error: HTTPError,,https://gbfs.api.ridedott.com/public/v2/ullensaker/gbfs.json,0.1,,,,,,,,,,,,,,
+Dott Ustka,PL,ok,205.0,https://gbfs.api.ridedott.com/public/v2/ustka/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Veldhoven,NL,ok,25.0,https://gbfs.api.ridedott.com/public/v2/veldhoven/gbfs.json,0.2,25.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Dott Versailles Grand-Parc,FR,ok,79.0,https://gbfs.api.ridedott.com/public/v2/versailles-grand-parc/gbfs.json,0.2,79.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,True
+Dott Zvolen,SK,ok,205.0,https://gbfs.api.ridedott.com/public/v2/zvolen/gbfs.json,0.3,205.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,1.46,False,False,False,True
+Dott Łeba,PL,fetch_error: UnicodeEncodeError,,https://gbfs.api.ridedott.com/public/v2/łeba/gbfs.json,0.0,,,,,,,,,,,,,,
+Bleeper Bikes,IE,fetch_error: HTTPError,,https://data.smartdublin.ie/bleeperbike-api/gbfs,0.2,,,,,,,,,,,,,,
+Einfach Unterwegs,DE,ok,25.0,https://api.mobidata-bw.de/sharing/gbfs/v3/einfach_unterwegs/gbfs,0.2,3.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,2.0,8.0,False,False,False,False
+Donkey EPFL - Lausanne,CH,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/epfl_lausanne/gbfs.json,0.6,,,,,,,,,,,,,,
+esel.ac,DE,too_small_below_Nmin,0.0,https://di.esel.ac/gbfs/gbfs.json,0.4,,,,,,,,,,,,,,
+Farte Bysykkel,NO,ok,55.0,https://api.entur.io/mobility/v2/gbfs/v3/fartebysykkel/gbfs,0.3,55.0,0.0,,0.0,0.0,0.0,0.0,0.0,2.0,3.64,False,False,False,True
+Flamingo Auckland,NZ,ok,97.0,https://data.rideflamingo.com/gbfs/3/auckland/gbfs.json,1.3,97.0,0.0,,0.0,0.0,0.0,0.0,0.0,2.0,2.06,False,False,False,True
+Flamingo Christchurch,NZ,ok,27.0,https://data.rideflamingo.com/gbfs/3/christchurch/gbfs.json,0.9,27.0,0.0,,0.0,0.0,0.0,0.0,0.0,4.0,14.81,False,False,False,True
+Flamingo Tauranga,NZ,too_small_below_Nmin,13.0,https://data.rideflamingo.com/gbfs/3/tauranga/gbfs.json,5.0,,,,,,,,,,,,,,
+Ford Carsharing (Autohaus Baur),DE,ok,36.0,https://api.mobidata-bw.de/sharing/gbfs/v3/ford_carsharing_autohausbaur/gbfs,0.2,36.0,0.0,,0.0,0.0,0.0,0.0,0.0,2.0,5.56,False,False,False,True
+Ford Carsharing (Autohaus Kauderer),DE,too_small_below_Nmin,1.0,https://api.mobidata-bw.de/sharing/gbfs/v3/ford_carsharing_autohauskauderer/gbfs,0.2,,,,,,,,,,,,,,
+Trinity Metro Bikes,US,ok,57.0,https://fortworth.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.8,0.0,0.0,11.0,7.0,0.0,0.0,0.0,0.0,4.0,7.02,False,False,False,False
+franke,DE,fetch_error: LookupError,,https://api.mobidata-bw.de/sharing/gbfs/v3/freibe/gbfs,0.1,,,,,,,,,,,,,,
+Ganxeta,ES,ok,24.0,https://gbfs.ganxeta.cat/v2/gbfs.json,0.3,0.0,0.0,20.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+Getaround Aalst,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/aalst/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Aix-En-Provence,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/aix-en-provence/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Ajaccio,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/ajaccio/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Albi,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/albi/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Alcobendas,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/alcobendas/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Alesund,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/alesund/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Alicante,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/alicante/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Alta,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/alta/gbfs,0.5,,,,,,,,,,,,,,
+Getaround Amiens,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/amiens/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Angers,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/angers/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Antibes,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/antibes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Antony,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/antony/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Antwerpen,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/antwerpen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Aranjuez,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/aranjuez/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Arendal,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/arendal/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Argenteuil,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/argenteuil/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Arles,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/arles/gbfs,0.5,,,,,,,,,,,,,,
+Getaround Asker,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/asker/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Aubervilliers,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/aubervilliers/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Aulnay-Sous-Bois,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/aulnay-sous-bois/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Avignon,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/avignon/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Badalona,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/badalona/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Baerum,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/baerum/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Barcelona,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/barcelona/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Bayeux,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/bayeux/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Bayonne,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/bayonne/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Beaumont,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/beaumont/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Beauvais,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/beauvais/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Benidorm,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/benidorm/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Bergen,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/bergen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Berlin,DE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/berlin/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Blois,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/blois/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Bodo,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/bodo/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Bordeaux,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/bordeaux/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Boulogne-Billancourt,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/boulogne-billancourt/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Bourges,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/bourges/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Brest,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/brest/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Brive-La-Gaillarde,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/brive-la-gaillarde/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Caen,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/caen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Calais,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/calais/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Candelaria,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/candelaria/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Cannes,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/cannes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Castelldefels,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/castelldefels/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Cergy,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/cergy/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Champigny-Sur-Marne,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/champigny-sur-marne/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Charleroi,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/charleroi/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Clamart,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/clamart/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Clermont-Ferrand,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/clermont-ferrand/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Clichy,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/clichy/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Colmar,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/colmar/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Colombes,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/colombes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Coslada,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/coslada/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Courbevoie,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/courbevoie/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Dijon,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/dijon/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Drammen,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/drammen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Drancy,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/drancy/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Dunkerque,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/dunkerque/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Essen,DE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/essen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Evenes,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/evenes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Fontenay-Sous-Bois,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/fontenay-sous-bois/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Fredrikstad,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/fredrikstad/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Fuenlabrada,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/fuenlabrada/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Gardermoen,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/gardermoen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Gent,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/gent/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Getafe,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/getafe/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Granada,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/granada/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Granollers,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/granollers/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Graz,AT,fetch_error: LookupError,,https://getaround.com/gbfs/v3/graz/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Grenoble,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/grenoble/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Hamburg,DE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/hamburg/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Harstad,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/harstad/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Hove,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/hove/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Innsbruck,AT,fetch_error: LookupError,,https://getaround.com/gbfs/v3/innsbruck/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Issy-Les-Moulineaux,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/issy-les-moulineaux/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Ivry-Sur-Seine,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/ivry-sur-seine/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Kirkenes,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/kirkenes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Kristiansand,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/kristiansand/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Laval,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/laval/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Leknes,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/leknes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Leuven,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/leuven/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Levallois-Perret,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/levallois-perret/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Leverkusen,DE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/leverkusen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Lille,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/lille/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Lillehammer,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/lillehammer/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Lillestrom,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/lillestrom/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Limay,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/limay/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Limoges,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/limoges/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Lorenskog,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/lorenskog/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Lorient,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/lorient/gbfs,0.4,,,,,,,,,,,,,,
+Getaround Lyon,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/lyon/gbfs,0.3,,,,,,,,,,,,,,
+Getaround Macau,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/macau/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Macon,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/macon/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Madrid,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/madrid/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Maisons-Alfort,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/maisons-alfort/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Majadahonda,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/majadahonda/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Mao,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/mao/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Marseille,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/marseille/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Meaux,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/meaux/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Mechelen,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/mechelen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Meru,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/meru/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Metz,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/metz/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Molde,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/molde/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Montauban,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/montauban/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Montpellier,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/montpellier/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Montreuil,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/montreuil/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Moss,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/moss/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Mulhouse,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/mulhouse/gbfs,0.3,,,,,,,,,,,,,,
+Getaround Nancy,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/nancy/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Nanterre,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/nanterre/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Nantes,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/nantes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Narbonne,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/narbonne/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Narvik,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/narvik/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Nesodden,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/nesodden/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Neuilly-Sur-Seine,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/neuilly-sur-seine/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Nice,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/nice/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Niort,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/niort/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Noisy-Le-Grand,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/noisy-le-grand/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Norderstedt,DE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/norderstedt/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Orange,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/orange/gbfs,0.5,,,,,,,,,,,,,,
+Getaround Oslo,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/oslo/gbfs,0.6,,,,,,,,,,,,,,
+Getaround Pantin,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/pantin/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Paris,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/paris/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Parla,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/parla/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Paterna,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/paterna/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Pau,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/pau/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Perpignan,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/perpignan/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Pessac,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/pessac/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Poitiers,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/poitiers/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Porsgrunn,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/porsgrunn/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Pulheim,DE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/pulheim/gbfs,0.3,,,,,,,,,,,,,,
+Getaround Quimper,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/quimper/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Reims,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/reims/gbfs,0.5,,,,,,,,,,,,,,
+Getaround Rennes,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/rennes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Roubaix,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/roubaix/gbfs,0.5,,,,,,,,,,,,,,
+Getaround Rouen,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/rouen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Rueil-Malmaison,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/rueil-malmaison/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Sabadell,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/sabadell/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Brieuc,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-brieuc/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Denis,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-denis/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Laurent,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-laurent/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Louis,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-louis/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Malo,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-malo/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Nazaire,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-nazaire/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Paul,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-paul/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Quentin,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-quentin/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Saint-Quentin-En-Yvelines,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/saint-quentin-en-yvelines/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Sandefjord,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/sandefjord/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Sandvika,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/sandvika/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Sarcelles,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/sarcelles/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Sartrouville,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/sartrouville/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Seraing,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/seraing/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Sevilla,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/sevilla/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Ski,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/ski/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Skien,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/skien/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Stavanger,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/stavanger/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Stjordal,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/stjordal/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Strasbourg,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/strasbourg/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Strommen,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/strommen/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Tarbes,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/tarbes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Tonsberg,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/tonsberg/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Torremolinos,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/torremolinos/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Torrent,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/torrent/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Toulon,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/toulon/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Toulouse,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/toulouse/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Tourcoing,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/tourcoing/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Tours,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/tours/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Troisdorf,DE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/troisdorf/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Tromso,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/tromso/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Trondheim,NO,fetch_error: LookupError,,https://getaround.com/gbfs/v3/trondheim/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Troyes,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/troyes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Valdemoro,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/valdemoro/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Valence,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/valence/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Valencia,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/valencia/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Vannes,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/vannes/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Velbert,DE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/velbert/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Versailles,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/versailles/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Viladecans,ES,fetch_error: LookupError,,https://getaround.com/gbfs/v3/viladecans/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Villeurbanne,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/villeurbanne/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Vitry-Sur-Seine,FR,fetch_error: LookupError,,https://getaround.com/gbfs/v3/vitry-sur-seine/gbfs,0.2,,,,,,,,,,,,,,
+Getaround Waterloo,BE,fetch_error: LookupError,,https://getaround.com/gbfs/v3/waterloo/gbfs,0.3,,,,,,,,,,,,,,
+Vélo Fluo Grand-Est,FR,ok,52.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/velo-fluo/en/gbfs.json,0.2,0.0,20.0,5.0,4.0,0.0,0.0,0.0,0.0,1.0,1.92,False,True,True,False
+GraouLib',FR,ok,56.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/metz/en/gbfs.json,0.2,0.0,0.0,10.0,2.0,0.0,0.0,0.0,0.0,3.0,5.36,False,False,False,False
+ALF - das Affstätter Lastenfahrrad,DE,too_small_below_Nmin,1.0,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_alf/gbfs,0.2,,,,,,,,,,,,,,
+FaRe - das Bananologen Lastenrad,DE,too_small_below_Nmin,1.0,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_fare/gbfs,0.2,,,,,,,,,,,,,,
+Gülf - das Gültsteiner Lastenrad,DE,too_small_below_Nmin,1.0,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_guelf/gbfs,0.2,,,,,,,,,,,,,,
+stadtRad - das stadtnavi Lastenrad,DE,too_small_below_Nmin,1.0,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_stadtrad/gbfs,0.2,,,,,,,,,,,,,,
+HERTLEIN Carsharing,DE,too_small_below_Nmin,3.0,https://api.mobidata-bw.de/sharing/gbfs/v3/hertlein_carsharing/gbfs,0.3,,,,,,,,,,,,,,
+Hopp Konstanz,DE,fetch_error: LookupError,,https://api.mobidata-bw.de/sharing/gbfs/v3/hopp_konstanz/gbfs,0.1,,,,,,,,,,,,,,
+IDEcycle (Pau),FR,ok,40.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/pau/en/gbfs.json,0.2,0.0,0.0,10.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+JOLT New Plymouth,NZ,ok,72.0,https://prod-api.joltscooters.co.nz/api/gbfs/new_plymouth/gbfs.json,1.7,72.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,4.17,False,False,False,True
+JOLT Selwyn,NZ,too_small_below_Nmin,18.0,https://prod-api.joltscooters.co.nz/api/gbfs/selwyn/gbfs.json,1.7,,,,,,,,,,,,,,
+LaRa to go,DE,too_small_below_Nmin,17.0,https://api.mobidata-bw.de/sharing/gbfs/v3/lara_to_go/gbfs,0.2,,,,,,,,,,,,,,
+Lime Atlanta,US,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/atlanta/gbfs.json,0.1,,,,,,,,,,,,,,
+Lime Bari,IT,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/bari/gbfs.json,0.1,,,,,,,,,,,,,,
+Lime Stuttgart-Konstanz,DE,fetch_error: LookupError,,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_bw/gbfs,0.1,,,,,,,,,,,,,,
+Lime Denver,US,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/denver/gbfs.json,0.1,,,,,,,,,,,,,,
+Lime Lille,FR,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/lille/gbfs.json,0.1,,,,,,,,,,,,,,
+Lime Lincoln,US,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/lincoln/gbfs.json,0.1,,,,,,,,,,,,,,
+Lime Mississauga,CA,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/mississauga/gbfs.json,0.1,,,,,,,,,,,,,,
+Lime Naples,IT,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/naples/gbfs.json,0.1,,,,,,,,,,,,,,
+Lime Nice,FR,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/nice/gbfs.json,0.1,,,,,,,,,,,,,,
+Lime Stuttgart,DE,fetch_error: HTTPError,,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_stuttgart/gbfs,0.1,,,,,,,,,,,,,,
+Lime Wuppertal,DE,fetch_error: HTTPError,,https://data.lime.bike/api/partners/v2/gbfs/wuppertal/gbfs.json,0.1,,,,,,,,,,,,,,
+franke,DE,fetch_error: LookupError,,https://api.mobidata-bw.de/sharing/gbfs/v3/lube/gbfs,0.1,,,,,,,,,,,,,,
+Divvy,US,ok,1999.0,https://gbfs.divvybikes.com/gbfs/2.3/gbfs.json,1.2,0.0,0.0,11.0,38.0,0.0,0.0,0.0,0.0,5.0,0.25,False,False,False,False
+Inter Bike,US,too_small_below_Nmin,5.0,https://miamiunderline.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.6,,,,,,,,,,,,,,
+Mikar,DE,ok,178.0,https://api.mobidata-bw.de/sharing/gbfs/v3/mikar/gbfs,0.3,178.0,0.0,,0.0,0.0,0.0,0.0,0.0,10.0,5.62,False,True,False,True
+Mobility,CH,ok,1691.0,https://api.mobidata-bw.de/sharing/gbfs/v3/mobility_ch/gbfs,0.4,1691.0,0.0,,0.0,0.0,0.0,0.0,0.0,329.0,19.46,False,True,False,True
+Moby Dublin,IE,too_small_below_Nmin,0.0,https://api.sharebike.com/public-api-service/gbfs/v2/moby_dublin/gbfs.json,0.2,,,,,,,,,,,,,,
+MontenVélo,FR,ok,21.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/mont_blanc/en/gbfs.json,0.2,0.0,0.0,10.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,True,False,False,False
+PAYS DE L'ARBRESLE - VEL'PAR,FR,too_small_below_Nmin,4.0,https://www.mobility-parc.net/gbfs/v3/ARBRESLE/gbfs.json,0.3,,,,,,,,,,,,,,
+CHATELLERAULT,FR,too_small_below_Nmin,13.0,https://www.mobility-parc.net/gbfs/v3/CHATELLERAULT/gbfs.json,0.3,,,,,,,,,,,,,,
+PAYS DU COQUELICOT,FR,too_small_below_Nmin,1.0,https://www.mobility-parc.net/gbfs/v3/COQUELICOT/gbfs.json,0.3,,,,,,,,,,,,,,
+Estrées Saint Denis,FR,too_small_below_Nmin,6.0,https://www.mobility-parc.net/gbfs/v3/ESTREES/gbfs.json,0.3,,,,,,,,,,,,,,
+Gévaudan,FR,too_small_below_Nmin,2.0,https://www.mobility-parc.net/gbfs/v3/GEVAUDAN/gbfs.json,0.3,,,,,,,,,,,,,,
+VELO VEZERE LASCAUX,FR,too_small_below_Nmin,5.0,https://www.mobility-parc.net/gbfs/v3/LASCAUX/gbfs.json,0.3,,,,,,,,,,,,,,
+OLORON,FR,too_small_below_Nmin,2.0,https://www.mobility-parc.net/gbfs/v3/OLORON/gbfs.json,0.3,,,,,,,,,,,,,,
+VALLEE D'OSSAU,FR,too_small_below_Nmin,3.0,https://www.mobility-parc.net/gbfs/v3/OSSAU/gbfs.json,0.2,,,,,,,,,,,,,,
+PAYS D'OPALE,FR,too_small_below_Nmin,4.0,https://www.mobility-parc.net/gbfs/v3/Opale/gbfs.json,0.2,,,,,,,,,,,,,,
+BYCOR,FR,too_small_below_Nmin,2.0,https://www.mobility-parc.net/gbfs/v3/TARARE/gbfs.json,0.3,,,,,,,,,,,,,,
+Porte de Vassivière,FR,too_small_below_Nmin,1.0,https://www.mobility-parc.net/gbfs/v3/VASSIVIERE/gbfs.json,0.3,,,,,,,,,,,,,,
+MyBuxi,CH,ok,2118.0,https://api.mobidata-bw.de/sharing/gbfs/v3/mybuxi_ch/gbfs,0.4,0.0,0.0,7.0,1.0,0.0,0.0,0.0,0.0,21.0,0.99,True,False,False,False
+NemoVélo,FR,ok,52.0,https://api.gbfs.v3.0.ecovelo.mobi/nemovelo/gbfs.json,0.2,0.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,5.0,9.62,False,False,False,False
+Neuron Mobility,CA,fetch_error: HTTPError,,https://mds.neuron-mobility.com/yeg/gbfs/2/,0.4,,,,,,,,,,,,,,
+Neuron Mobility,CA,fetch_error: HTTPError,,https://mds.neuron-mobility.com/yqr/gbfs/2/,0.4,,,,,,,,,,,,,,
+VélO2,FR,ok,49.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ah/gbfs.json,0.3,0.0,0.0,15.0,12.0,0.0,0.0,0.0,0.0,4.0,8.16,False,False,False,False
+Alba Iulia Velocity,RO,too_small_below_Nmin,18.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ai/gbfs.json,0.3,,,,,,,,,,,,,,
+moin mobil Achim,DE,ok,35.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_am/gbfs.json,0.3,1.0,0.0,4.0,10.0,0.0,0.0,0.0,0.0,1.0,2.86,False,True,False,False
+euregiobike,DE,ok,47.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_an/gbfs.json,0.3,18.0,0.0,10.0,6.0,0.0,0.0,0.0,0.0,8.0,17.02,False,False,False,False
+bibo,ES,ok,37.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_by/gbfs.json,0.3,25.0,0.0,12.0,4.0,0.0,0.0,0.0,0.0,1.0,2.7,False,False,False,True
+Campus Berlin-Buch,DE,too_small_below_Nmin,16.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cb/gbfs.json,0.4,,,,,,,,,,,,,,
+Porec bike share (Croatia),HR,too_small_below_Nmin,6.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cv/gbfs.json,0.4,,,,,,,,,,,,,,
+EVENTbike - Austria,AT,ok,21.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_eq/gbfs.json,0.4,21.0,0.0,,0.0,0.0,0.0,0.0,0.0,3.0,14.29,False,False,False,True
+Bike Sharing Elliniko – Argyroupoli,GR,too_small_below_Nmin,8.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gu/gbfs.json,0.3,,,,,,,,,,,,,,
+Bike Sharing Alimos,GR,too_small_below_Nmin,6.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gv/gbfs.json,0.3,,,,,,,,,,,,,,
+Bike Sharing Glyfada,GR,too_small_below_Nmin,8.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gx/gbfs.json,0.3,,,,,,,,,,,,,,
+Bike Sharing Palaio Faliro,GR,too_small_below_Nmin,7.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gy/gbfs.json,0.3,,,,,,,,,,,,,,
+HelBi (Kreis Soest),DE,ok,81.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hb/gbfs.json,0.3,14.0,0.0,5.0,10.0,0.0,0.0,0.0,0.0,10.0,12.35,False,False,False,False
+Bajs Zagreb (Croatia),HR,ok,197.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hd/gbfs.json,0.4,0.0,0.0,10.0,14.0,0.0,0.0,0.0,0.0,15.0,7.61,False,False,False,False
+nextbike Kyjov,CZ,too_small_below_Nmin,10.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ky/gbfs.json,0.3,,,,,,,,,,,,,,
+nextbike Lipník nad Bečvou,CZ,too_small_below_Nmin,11.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lb/gbfs.json,0.3,,,,,,,,,,,,,,
+nextbike Lovosice,CZ,too_small_below_Nmin,18.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lo/gbfs.json,0.3,,,,,,,,,,,,,,
+MyRadl,DE,ok,754.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ml/gbfs.json,0.5,754.0,0.0,,0.0,0.0,0.0,0.0,0.0,41.0,5.44,False,False,False,True
+nextbike Český Brod,CZ,too_small_below_Nmin,12.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nd/gbfs.json,0.3,,,,,,,,,,,,,,
+nextbike Neratovice,CZ,too_small_below_Nmin,17.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ne/gbfs.json,0.3,,,,,,,,,,,,,,
+nextbike Šumperk,CZ,ok,20.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ns/gbfs.json,0.3,0.0,0.0,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,True,False,False,False
+nextbike Kahan,CZ,fetch_error: HTTPError,,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_oc/gbfs.json,0.2,,,,,,,,,,,,,,
+Hvar (Croatia),HR,too_small_below_Nmin,2.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ol/gbfs.json,0.3,,,,,,,,,,,,,,
+nextbike Otrokovice,CZ,too_small_below_Nmin,17.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ot/gbfs.json,0.4,,,,,,,,,,,,,,
+BikeCity Campia Turzii,RO,too_small_below_Nmin,1.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rc/gbfs.json,0.3,,,,,,,,,,,,,,
+nextbike Roudnice nad Labem,CZ,too_small_below_Nmin,17.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rl/gbfs.json,0.4,,,,,,,,,,,,,,
+Slobozia Bike City,RO,ok,21.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rw/gbfs.json,0.3,0.0,0.0,15.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+S11-Bike,DE,too_small_below_Nmin,5.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sv/gbfs.json,0.4,,,,,,,,,,,,,,
+nextbike Krnov,CZ,ok,51.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tw/gbfs.json,0.4,45.0,0.0,10.0,1.0,0.0,0.0,0.0,0.0,6.0,11.76,False,False,False,True
+nextbike Valašsko,CZ,ok,89.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vm/gbfs.json,0.4,89.0,0.0,,0.0,0.0,0.0,0.0,0.0,6.0,6.74,False,False,False,True
+welo,DE,ok,293.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wa/gbfs.json,0.4,254.0,0.0,6.0,8.0,0.0,0.0,0.0,0.0,39.0,13.31,False,False,False,True
+Włower - Włocławski Rower Miejski,PL,ok,43.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wf/gbfs.json,0.4,19.0,0.0,5.0,2.0,0.0,0.0,0.0,0.0,4.0,9.3,False,False,False,False
+Nextbike the World,IT,too_small_below_Nmin,3.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wh/gbfs.json,0.3,,,,,,,,,,,,,,
+Bikesharing Amprion,DE,too_small_below_Nmin,5.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wp/gbfs.json,0.3,,,,,,,,,,,,,,
+nextbike Ždár nad Sázavou,CZ,ok,43.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zs/gbfs.json,0.3,43.0,0.0,,0.0,0.0,0.0,0.0,0.0,1.0,2.33,False,False,False,True
+QuickRent,CH,ok,86.0,https://quickrent.ch/sbb/api/v1/gbfs,1.2,86.0,0.0,,0.0,0.0,0.0,0.0,0.0,5.0,5.81,False,False,False,True
+BicinRivas,ES,ok,42.0,https://rivas.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.2,0.0,0.0,20.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+RLV'Lib,FR,fetch_error: HTTPError,,https://api.gbfs.v3.0.ecovelo.mobi/rlvlib/gbfs.json,0.5,,,,,,,,,,,,,,
+Ryde Porsgrunn,NO,too_small_below_Nmin,16.0,https://api.entur.io/mobility/v2/gbfs/v3/rydeporsgrunn/gbfs,0.2,,,,,,,,,,,,,,
+Ryde Sandefjord,NO,fetch_error: HTTPError,,https://api.entur.io/mobility/v2/gbfs/v3/rydesandefjord/gbfs,0.1,,,,,,,,,,,,,,
+Ryde Skien,NO,fetch_error: HTTPError,,https://api.entur.io/mobility/v2/gbfs/v3/rydeskien/gbfs,0.1,,,,,,,,,,,,,,
+Ryde Stavanger,NO,fetch_error: HTTPError,,https://api.entur.io/mobility/v2/gbfs/v3/rydestavanger/gbfs,0.1,,,,,,,,,,,,,,
+Ryde Tønsberg,NO,fetch_error: HTTPError,,https://api.entur.io/mobility/v2/gbfs/v3/rydetonsberg/gbfs,0.1,,,,,,,,,,,,,,
+Ryde Tromsø,NO,fetch_error: HTTPError,,https://api.entur.io/mobility/v2/gbfs/v3/rydetromso/gbfs,0.2,,,,,,,,,,,,,,
+SEEFAHRER E-Carsharing,DE,too_small_below_Nmin,10.0,https://api.mobidata-bw.de/sharing/gbfs/v3/seefahrer_ecarsharing/gbfs,0.2,,,,,,,,,,,,,,
+Carsharing in Wertheim,DE,too_small_below_Nmin,2.0,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtwerke_wertheim/gbfs,0.2,,,,,,,,,,,,,,
+Stella,DE,fetch_error: LookupError,,https://api.mobidata-bw.de/sharing/gbfs/v3/stella/gbfs,0.1,,,,,,,,,,,,,,
+swabi - augsburg,DE,ok,527.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/swabi/en/gbfs.json,0.3,0.0,0.0,5.0,7.0,0.0,0.0,0.0,0.0,2.0,0.38,False,False,False,False
+Cooltra Turin,IT,fetch_error: LookupError,,https://maas.zeus.cooltra.com/gbfs/turin/3.0/en/gbfs.json,0.1,,,,,,,,,,,,,,
+Donkey Republic Valenciennes,FR,fetch_error: HTTPError,,https://stables.donkey.bike/api/public/gbfs/3.0/valenciennes/gbfs.json,0.6,,,,,,,,,,,,,,
+VéloModalis - TERRA,FR,too_small_below_Nmin,10.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/velo-modalis/en/gbfs.json,0.2,,,,,,,,,,,,,,
+Vélo Modalis,FR,ok,57.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/angouleme/en/gbfs.json,0.2,0.0,0.0,10.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+Vélomagg,FR,ok,52.0,https://gbfs.theta.fifteen.eu/gbfs/montpellier/gbfs.json,0.3,0.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,4.0,7.69,False,False,False,False
+VéloMoove,FR,ok,28.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/pompey/en/gbfs.json,0.2,0.0,0.0,10.0,1.0,0.0,0.0,0.0,0.0,7.0,25.0,True,False,False,False
+Vélonecy,FR,ok,80.0,https://gbfs.partners.fifteen.eu/gbfs/2.2/annecy/en/gbfs.json,0.2,0.0,0.0,10.0,5.0,0.0,0.0,0.0,0.0,3.0,3.75,False,False,False,False
+Veo University of Alabama,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/ala/gbfs,0.6,,,,,,,,,,,,,,
+Veo Asbury Park,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/asb/gbfs,0.6,,,,,,,,,,,,,,
+Veo Birmingham,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/bir/gbfs,0.5,,,,,,,,,,,,,,
+Veo Bend,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/bnd/gbfs,0.5,,,,,,,,,,,,,,
+Veo Columbus,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/cbs/gbfs,0.2,,,,,,,,,,,,,,
+Veo Cedar Rapids,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/cid/gbfs,0.6,,,,,,,,,,,,,,
+Veo Cleveland,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/cle/gbfs,0.2,,,,,,,,,,,,,,
+Veo College Park,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/cpk/gbfs,0.2,,,,,,,,,,,,,,
+Veo Charlottesville,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/cvl/gbfs,0.5,,,,,,,,,,,,,,
+Veo Fayetteville,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/fay/gbfs,0.2,,,,,,,,,,,,,,
+Veo Gainesville,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/gvl/gbfs,0.2,,,,,,,,,,,,,,
+Veo Hartford,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/hrt/gbfs,0.6,,,,,,,,,,,,,,
+"Veo University of Illinois, Urbana-Champaign",US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/iuc/gbfs,0.2,,,,,,,,,,,,,,
+Veo Kansas State University,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/ksu/gbfs,0.5,,,,,,,,,,,,,,
+Veo New Haven,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/nhv/gbfs,0.2,,,,,,,,,,,,,,
+Veo New Rochelle,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/nrc/gbfs,0.2,,,,,,,,,,,,,,
+Veo Newark,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/nwk/gbfs,0.2,,,,,,,,,,,,,,
+Veo Bronx,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/nyc/gbfs,0.2,,,,,,,,,,,,,,
+Veo Queens,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/nyq/gbfs,0.6,,,,,,,,,,,,,,
+Veo University of Oklahoma,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/oku/gbfs,0.2,,,,,,,,,,,,,,
+Veo Orlando,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/orl/gbfs,0.2,,,,,,,,,,,,,,
+Veo Oregon State Univeristy,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/osu/gbfs,0.2,,,,,,,,,,,,,,
+Veo Pensacola,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/pnc/gbfs,0.2,,,,,,,,,,,,,,
+Veo Purdue University,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/pur/gbfs,0.2,,,,,,,,,,,,,,
+Veo Rochester,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/roc/gbfs,0.2,,,,,,,,,,,,,,
+Veo Rutgers University,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/rut/gbfs,0.2,,,,,,,,,,,,,,
+Veo Sarasota,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/sar/gbfs,0.2,,,,,,,,,,,,,,
+Veo Southern Illinois University,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/siu/gbfs,0.2,,,,,,,,,,,,,,
+Veo San Antonio,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/stx/gbfs,0.2,,,,,,,,,,,,,,
+Veo Syracuse,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/syr/gbfs,0.2,,,,,,,,,,,,,,
+Veo Texas A&M University,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/tam/gbfs,0.2,,,,,,,,,,,,,,
+Veo Toledo,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/tol/gbfs,0.2,,,,,,,,,,,,,,
+Veo Wichita,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/wta/gbfs,0.2,,,,,,,,,,,,,,
+Veo Washington DC,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/xdc/gbfs,0.2,,,,,,,,,,,,,,
+Veo Oakland/Emeryville/Berkeley/Albany,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/xeb/gbfs,0.2,,,,,,,,,,,,,,
+Veo Los Angeles,US,fetch_error: LookupError,,https://cluster-prod.veoride.com/api/shares/name/xla/gbfs,0.2,,,,,,,,,,,,,,
+Viavélo,FR,fetch_error: HTTPError,,https://api.gbfs.v3.0.ecovelo.mobi/viavelo/gbfs.json,0.5,,,,,,,,,,,,,,
+Voi Grenoble,FR,ok,709.0,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/358/gbfs.json,0.3,0.0,0.0,8.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+Voi Paris,FR,ok,12906.0,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/352/gbfs.json,1.6,3.0,0.0,2.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,False,False,False,False
+Voi Saint-Quentin-en-Yvelines,FR,ok,384.0,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/355/gbfs.json,0.3,0.0,0.0,8.0,12.0,0.0,0.0,0.0,0.0,3.0,0.78,False,False,False,False
+Voi V'Lônes,FR,ok,75.0,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/406/gbfs.json,0.2,0.0,0.0,4.0,7.0,0.0,0.0,0.0,0.0,2.0,2.67,False,False,False,False
+Voi Fredrikstad,NO,ok,53.0,https://api.entur.io/mobility/v2/gbfs/v3/voifredrikstad/gbfs,0.3,53.0,0.0,,0.0,0.0,0.0,0.0,0.0,1.0,1.89,False,False,False,True
+2EM Car Sharing,CH,ok,1741.0,https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/gbfs,0.5,1741.0,0.0,,0.0,0.0,0.0,0.0,0.0,254.0,14.59,False,True,False,True
+Zeus Schwäbisch Gmünd,DE,fetch_error: LookupError,,https://zeus.city/api/v1/mds/gbfs/schwabisch%20gmund/gbfs.json,0.1,,,,,,,,,,,,,,

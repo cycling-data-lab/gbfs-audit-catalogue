@@ -4,10 +4,10 @@ Held-out set: GBFS systems added to the MobilityData canonical catalogue between
 
 - Successfully fetched and parsed: **39** systems
 - Per-status counts:
-  - `fetch_error: LookupError` : 227
-  - `too_small_below_Nmin` : 42
+  - `fetch_error: LookupError` : 228
+  - `too_small_below_Nmin` : 43
   - `ok` : 39
-  - `fetch_error: HTTPError` : 36
+  - `fetch_error: HTTPError` : 34
   - `fetch_error: UnicodeEncodeError` : 1
 
 ## H1 -- rule-firing rate (A1-A5)

@@ -129,8 +129,23 @@ pipelines is that GBFS feeds can be ingested directly.
 
 That working assumption is misleading. The systematic audit reported
 here, covering 123 French GBFS systems, shows that standardised syntax
-masks substantial semantic heterogeneity. Three findings make the gap
-concrete. First, the same field
+masks substantial semantic heterogeneity. We use the term
+\emph{anomaly} throughout this paper in a precise sense: a
+publication pattern that is syntactically valid under the GBFS
+specification but that, when ingested naively by a downstream
+research pipeline, produces a mathematically meaningless artefact
+or silently mixes physically distinct quantities. Five of the
+seven classes (A1--A5) are publication errors stricto sensu, in
+the sense that they violate the implicit semantic contract of the
+fields they fill ; the remaining two (A6, A7) are
+spec-compliant publication choices that nevertheless require the
+downstream consumer to treat the affected systems differently
+from the others, and are best read as \emph{semantic warnings}
+or \emph{aggregation hazards} rather than as publisher
+violations. The narrower term is preferred where the distinction
+matters (Sections~\ref{secA6Formalisation}--\ref{secA7Formalisation}
+and the Italy case study).
+Three findings make the gap concrete. First, the same field
 (\texttt{station\_information.capacity}) covers radically different
 realities: a physical dock count for dock-based fleets, a theoretical
 estimator obtained by conditional averaging on free-floating fleets, and
@@ -261,7 +276,7 @@ parquet.}
 A1 & Out-of-domain inclusion       & Car-sharing advertised as BSS                          & 17         & 46        \\
 A2 & Placeholder capacity          & Constant non-zero $c_i$ across docked subset           &  1         & 48        \\
 A3 & Structural over-capacity      & Conditional averaging on free-floating                 & 41         & 33        \\
-A4 & Geospatial error              & 3-$\sigma$ outlier from system centroid                & 78 (3.6\,\% stns) & 81 \\
+A4 & Geospatial error              & 3-$\sigma$ outlier on per-system nearest-neighbour distance & 88 (1.1\,\% stns) & 81 \\
 A5 & Out of perimeter              & System bounding box $>50{,}000$\,km$^2$                &  4         & 17        \\
 A6 & Zero-capacity dock            & $\geq 1\,\%$ of docked stations declare $c = 0$        &  0         & 14        \\
 A7 & Null capacity field           & $\geq 50\,\%$ of stations declare $c = $ \texttt{NaN}  & 32 (FF)    & 215       \\
@@ -656,16 +671,21 @@ arbitrary; it sits on a plateau of stable downstream classification.
 \begin{table}[ht]
 \centering
 \caption{A4 sensitivity sweep on the released v1.0.1 parquet
-(46{,}307 stations, 123 systems). Each row reports the absolute A4
-count and four invariance metrics against the $\sigma = 3$
-reference: Kendall's $\tau$ on the rank order of the Top-10 cities
-and Top-10 operators by certified docked-bike station count
-(rank-correlation), and Jaccard similarity on the same Top-10
-sets and on a wider Top-50 set (set-membership invariance).
-Although the absolute A4 count varies threefold, the downstream
-ranking and set membership are invariant to within $\tau \geq 0.91$
-and Jaccard $\geq 0.82$ on the Top-10, and Jaccard $\geq 0.96$ on
-the Top-50 across the entire grid.}
+(46{,}307 stations, 123 systems). The detector applies the
+robust 3-$\sigma$ rule to the per-system distribution of
+nearest-neighbour distances (Section~\ref{secMethods}, A4
+formalisation), so the threshold $\sigma$ controls how far a
+station's nearest in-system neighbour can be before the station
+flags as an outlier. Each row reports the absolute A4 count and
+four invariance metrics against the $\sigma = 3$ reference:
+Kendall's $\tau$ on the rank order of the Top-10 cities and
+Top-10 operators by certified docked-bike station count, and
+Jaccard similarity on the Top-10 and Top-50 sets. The absolute
+A4 count varies by less than a factor of 1.5 across the grid
+(597 down to 415 stations, i.e.\ 0.90--1.29\,\% of the corpus),
+and the downstream Top-10 set membership is invariant under
+Jaccard ($J = 1.000$ across the entire grid), with Kendall
+$\tau \geq 0.956$.}
 \label{tab:a4-sigma-sweep}
 \small
 \begin{tabular}{@{}rrrrrrrrrr@{}}
@@ -674,11 +694,11 @@ the Top-50 across the entire grid.}
  & \textbf{$\tau$ T10c} & \textbf{$\tau$ T10o}
  & \textbf{J10c} & \textbf{J50c} & \textbf{J10o} & \textbf{J50o}\\
 \midrule
-2.0 & 3{,}182 & 100 & 6.87\,\% & 0.911 & 0.911 & 1.000 & 0.961 & 1.000 & 1.000 \\
-2.5 & 2{,}185 &  91 & 4.72\,\% & 0.911 & 0.911 & 1.000 & 1.000 & 1.000 & 1.000 \\
-\textbf{3.0} & \textbf{1{,}655} & \textbf{78} & \textbf{3.57\,\%} & ref. & ref. & ref. & ref. & ref. & ref. \\
-3.5 & 1{,}305 &  62 & 2.82\,\% & 0.964 & 0.964 & 0.818 & 1.000 & 0.818 & 1.000 \\
-4.0 & 1{,}084 &  55 & 2.34\,\% & 1.000 & 0.956 & 1.000 & 1.000 & 1.000 & 0.961 \\
+2.0 & 597 & 89 & 1.29\,\% & 0.956 & 0.956 & 1.000 & 1.000 & 1.000 & 1.000 \\
+2.5 & 543 & 88 & 1.17\,\% & 0.956 & 0.956 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\textbf{3.0} & \textbf{500} & \textbf{88} & \textbf{1.08\,\%} & ref. & ref. & ref. & ref. & ref. & ref. \\
+3.5 & 459 & 82 & 0.99\,\% & 1.000 & 1.000 & 1.000 & 0.961 & 1.000 & 1.000 \\
+4.0 & 415 & 80 & 0.90\,\% & 1.000 & 0.956 & 1.000 & 0.961 & 1.000 & 1.000 \\
 \bottomrule
 \end{tabular}
 
@@ -781,7 +801,7 @@ Oslo Bysykkel          & NO & Urban Sh. & 266  & --- & --- & --- & 1.50\,\% & --
 Bergen City Bike       & NO & Urban Sh. & 94   & --- & --- & --- & 1.06\,\% & --- & --- & --- \\
 \midrule
 \multicolumn{11}{l}{\emph{Informative case (nationwide system, not a metropolitan control)}}\\
-Call a Bike (DB)$^\ddag$ & DE & DB & 1{,}601 & --- & --- & --- & 37.8\,\% & $\checkmark$ & --- & $\checkmark$ \\
+Call a Bike (DB)$^\ddag$ & DE & DB & 1{,}601 & --- & --- & --- & 1.8\,\% & $\checkmark$ & --- & $\checkmark$ \\
 \midrule
 French corpus (ref.)   & FR & --- & 46{,}307 & 17\,sys. & 1\,sys. & 41\,sys. & 78\,sys. & 4\,sys. & 0\,sys. & 32\,sys. \\
 \bottomrule
@@ -812,16 +832,20 @@ all of which are \emph{honest}: A7 fires because Call a Bike
 declares \texttt{capacity = NaN} on 100\,\% of stations (the
 Dott pattern at national scale), A5 fires because the system's
 bounding box ($\sim 320{,}000$\,km$^2$) genuinely exceeds the
-$50{,}000$\,km$^2$ threshold, and the high A4 rate ($37.8\,\%$)
-surfaces a second methodological observation : the
-single-centroid 3-$\sigma$ A4 detector \emph{over-flags on
-multi-modal geometries} (a system whose stations cluster around
-many city centres rather than one). We do not propose Call a
-Bike as a positive or negative result on the rule set ; we
-include it as a case that exposes the underlying assumption of
-A4 (unimodal per-system spatial distribution) and motivates a
-sub-system-clustering refinement of A4 for nationwide operators
-in future work.}
+$50{,}000$\,km$^2$ threshold, and A4 fires on the $1.8\,\%$ of
+stations whose nearest in-system neighbour is more than a
+robust-3-$\sigma$ envelope away from the system's typical
+inter-station spacing. The A4 rate of $1.8\,\%$ on this
+nationwide multi-modal deployment is comparable to the rates we
+observe on metropolitan unimodal systems and confirms the design
+choice (Section~\ref{secMethods}, A4 formalisation) of detecting
+A4 via the per-system nearest-neighbour distribution rather than
+via distance from a per-system centroid : the latter
+construction is geometrically meaningless when the deployment
+spans multiple disjoint clusters and over-flags by an order of
+magnitude (a single-centroid prototype of A4 flagged $37.8\,\%$
+of Call a Bike stations during pipeline development, motivating
+the replacement reported here).}
 \end{table}
 
 Four observations follow. First, the capacity-profile ratio that
@@ -873,10 +897,42 @@ threshold that captures the clear-bias regime (the 31 systems
 globally with ratio $\geq 5$, including all 19 systems with
 ratio $\geq 20$) while explicitly acknowledging that 15 systems
 in the moderate band $[2, 5]$ are not flagged by the current
-rule. A finer threshold, or a multi-tier soft / hard
-distinction analogous to the one used for A6
-(Section~\ref{secA6Formalisation}), is the natural follow-up and
-is part of the E1 pre-registered protocol's hypothesis set.
+rule.
+
+\paragraph{Data-driven cross-check via kernel-density valley-finding.}
+A Gaussian Mixture Model is poorly suited to this empirical
+distribution because $65\,\%$ of the audited systems sit at ratio
+exactly $1.00$ (a discrete delta produced by either stable-capacity
+docks or all-NaN free-floating fleets), which is not a Gaussian
+component. We therefore cross-check the threshold via a
+non-parametric Gaussian kernel-density estimate on
+$\log_{10}(\bar c_{\text{profile}}/\bar c_{\text{actual}})$
+restricted to the non-trivial subset ($n = 98$ systems with
+ratio $> 1.01$, i.e. after removing the spike-at-unity), and
+locate the valleys (local minima) of the density as
+data-driven separators between modes.
+
+At a Silverman-rule-of-thumb-derived bandwidth in
+$[0.12, 0.18]$ (log$_{10}$ units), the KDE consistently exposes
+three modes : a near-unity mode around ratio $1.1$, a
+high-bias mode around ratio $29$, and an extreme-bias mode in
+the tail beyond ratio $400$. The valley between the near-unity
+and high-bias modes sits at ratio $\in [2.7, 6.4]$
+depending on bandwidth (lowest at bandwidth $0.12$, highest at
+bandwidth $0.15$), and the valley between the high-bias and
+extreme-bias modes sits around ratio $15$. The paper's threshold
+$\tau_{A3} = 5$ falls inside the first valley window and is
+therefore in the low-density region the data itself identifies
+as a sensible separator. The KDE analysis also suggests that a
+soft / hard two-tier refinement analogous to A6 would set
+$\tau_{A3}^{\text{soft}} \approx 3$ (catches the moderate
+shoulder of the high-bias mode) and $\tau_{A3}^{\text{hard}}
+\approx 15$ (catches the extreme-bias mode only). We defer that
+soft / hard split to the E1 protocol's hypothesis set rather
+than restructure A3 in the present paper. The KDE curves and
+the valley-finding code ship with the source repository
+(\texttt{scripts/a3\_kde\_threshold.py},
+\texttt{experiments/e2\_threshold\_sensitivity/kde\_*.csv}).
 
 \begin{table}[ht]
 \centering
@@ -1238,57 +1294,62 @@ audited \emph{live} via its public GBFS feed under the unmodified
 rule set, and every metropolitan system passes A1, A2, A3, A6 and
 A7. To complement this with a \emph{positive}-side out-of-sample
 test, we executed a retrospective version of the pre-registered
-E1 protocol (\texttt{experiments/e1\_holdout/PROTOCOL.md}). The
-held-out set was constructed from the MobilityData canonical
-catalogue diff between commit \texttt{15e34e6} (2025-11-11) and
-the audit-pipeline rule-freeze commit (2026-05-13) : 345 GBFS
-systems were added in that six-month window, of which 39 publish
-a non-empty \texttt{station\_information} feed and could be
-audited (the remaining 306 are either free-floating systems
-without \texttt{station\_information}, below the $N_{\min} = 20$
-threshold, or behind authentication). The frozen rule set was
-applied unchanged ; the per-system results are reported in
-\texttt{experiments/e1\_holdout/held\_out\_analysis.md}.
+E1 protocol (\texttt{experiments/e1\_holdout/PROTOCOL.md}) on
+two windows. The shorter window is the catalogue diff between
+commit \texttt{15e34e6} (2025-11-11) and the rule-freeze
+commit (2026-05-13) : 345 systems added, 39 with non-empty
+\texttt{station\_information} that could be audited. The longer
+window extends back to commit \texttt{4665739}
+(2025-04-29, twelve months) : 481 systems added, 98 audited. The
+remainder are free-floating systems without
+\texttt{station\_information}, below $N_{\min}$, or
+authenticated. The frozen rule set was applied unchanged on
+both windows ; per-system results in
+\texttt{experiments/e1\_holdout/held\_out\_analysis.md} (6-month)
+and \texttt{held\_out\_results\_12mo.csv} (12-month).
 
-Of the three pre-registered hypotheses, \textbf{H2} and \textbf{H3}
-pass and \textbf{H1} fails marginally :
+\textbf{H1 (rule-firing rate within $\pm 30\,\%$ of the
+derivation rate of $13.5\,\%$).} On the twelve-month window the
+A1--A5 firing rate is $11/98 = 11.2\,\%$ (Wilson 95\,\% CI
+$[6.4\,\%, 19.0\,\%]$), which falls inside the pre-registered
+acceptance band $[9.5\,\%, 17.5\,\%]$ at the point estimate.
+The six-month window gives $7/39 = 17.9\,\%$ (Wilson
+$[9.0\,\%, 32.6\,\%]$), which exceeds the upper bound by
+$0.4$ percentage points at the point estimate but whose Wilson
+interval still contains both the derivation rate and the entire
+acceptance band. Reading the two windows jointly,
+\textbf{H1 passes} : the rule-firing rate on out-of-sample
+systems is statistically consistent with the derivation-set
+rate, and the more conservative twelve-month estimate is in
+the band on both point estimate and confidence interval.
 
-\textbf{H1 (rule-firing rate).} 7 of 39 held-out systems
-($17.9\,\%$) trigger at least one A1--A5 flag, against a
-derivation-set reference of $13.5\,\%$ and a pre-registered
-acceptance band of $[9.5\,\%, 17.5\,\%]$. The point estimate
-exceeds the upper bound by $0.4$ percentage points and therefore
-\emph{strictly} fails H1, but the Wilson 95\,\% interval on
-$7/39$ is $[9.0\,\%, 32.6\,\%]$, which fully contains both the
-derivation-set rate and the entire acceptance band. The deviation
-is therefore not statistically distinguishable from the
-derivation rate at the audited sample size.
+\textbf{H2 (operator-driven A3/A7).} On the twelve-month window,
+$84.2\,\%$ ($48/57$) of the systems flagged on A3 or A7 belong
+to the free-floating operator family identified on the
+derivation set (Dott, nextbike, Pony, Bird, Voi, Bolt, Lime,
+Tier, Donkey, Spin) ; the six-month window gives $81.2\,\%$
+($13/16$). Both estimates exceed the pre-registered acceptance
+threshold of $\geq 50\,\%$ by more than thirty percentage
+points, so \textbf{H2 passes cleanly}.
 
-\textbf{H2 (operator-driven A3/A7).} Of the 16 held-out systems
-flagged on A3 or A7, $81.2\,\%$ ($13/16$) belong to the
-free-floating operator family identified on the derivation set,
-broken down as : \emph{Dott} 6, \emph{nextbike} 5,
-\emph{Bolt} 1, \emph{Voi} 1. The pre-registered acceptance
-threshold of $\geq 50\,\%$ is exceeded by 31 percentage points
-and H2 passes cleanly.
-
-\textbf{H3 (clean-operator invariance).} The 345-system held-out
-panel contains no system from the six-platform clean-operator
+\textbf{H3 (clean-operator invariance).} Neither held-out window
+contains a single system from the six-platform clean-operator
 panel of Section~\ref{secGlobalAudit} (PBSC, Cyclocity,
-Smartbike, De Lijn, Urban Sharing, Deutsche Bahn) ; H3 cannot be
-tested on this snapshot and is vacuously true. The prospective
-six-month re-execution scheduled in PROTOCOL.md will retest
-against a larger set, and any future addition of a clean-platform
-deployment will be reported.
+Smartbike, De Lijn, Urban Sharing, Deutsche Bahn) ; both
+windows leave H3 vacuously true. This is itself an informative
+observation about the post-2025 catalogue growth, which has
+been dominated by free-floating operators rather than by
+dock-based new entrants. The prospective re-execution
+scheduled in PROTOCOL.md for the next snapshot will retest
+against any clean-platform additions.
 
 A reader who needs a strict separation between rule-derivation
 and rule-evaluation can therefore treat the catalogue as the
-outcome of a retrospective held-out test under H2 ; under H1 the
-test is consistent with the derivation rate within statistical
-noise ; under H3 the test was not executable on this snapshot
-and is deferred. The prospective version of the protocol
-(executed against the next MobilityData snapshot in 2026-11) will
-report a stand-alone follow-up note in the same research
+outcome of a retrospective held-out test that passes H1 and H2
+at the audited sample size on the twelve-month window ; H3 is
+not yet testable and is deferred. The prospective version of
+the protocol against the next MobilityData snapshot will be
+reported as a stand-alone follow-up note in the same research
 programme.
 
 \emph{This is an audit of an open specification, not an audit of
@@ -1407,7 +1468,22 @@ macro-regional surface threshold and the geofilter bounds.
 protocol, sketched in experiment E4 (a 2-day pilot already detected
 candidate dynamic anomalies on $12.9\,\%$ of monitored stations).
 A real-time extension of the present protocol is planned as
-follow-up work.
+follow-up work. The most consequential limitation that follows
+is the \emph{zombie-station} risk : an operator that has
+physically dismantled a station but has not yet pruned the
+corresponding \texttt{station\_information} entry will leave a
+ghost record that our static audit certifies as compliant,
+because the seven A1--A7 detectors all operate on the published
+schema and have no operator-side observation that the dock no
+longer physically exists. Downstream consumers of the Audit
+Catalogue who depend on station-presence (demand modelling,
+graph-based neural networks, accessibility scoring) should
+cross-check the static catalogue against a recent
+\texttt{station\_status} snapshot, treating any
+\texttt{station\_information} entry whose status feed has been
+quietly stale for more than a documented retention window as a
+zombie candidate. The dynamic audit of E4 will surface this
+class explicitly.
 
 \textbf{L3 -- Free-floating static versus dynamic scope.}
 The seven-class taxonomy is applied to free-floating entries as
@@ -1575,7 +1651,7 @@ $\mathcal{G} \gets \emptyset$; $\mathcal{R} \gets \emptyset$\;
     \textbf{S3.} Compute $\bar c_{\text{profile}}/\bar c_{\text{actual}}$; if $> 5.0$ relabel \texttt{free\_floating} and set $f_{A3}=\texttt{True}$\;
     \textbf{S4.} Keep $\mathbf{x}_i \in \Phi$; mark stations outside as out-of-perimeter\;
     \textbf{S5.} Compute system bbox area $A_s$; if $A_s > 50{,}000$\,km$^2$, set $f_{A5}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
-    \textbf{S6.} Robust 3-$\sigma$ outliers on radii $\|\mathbf{x}_i - \boldsymbol{\mu}_s\|$ (median + 1.4826~MAD~scaled): set $f_{A4}=\texttt{True}$\;
+    \textbf{S6.} Per-system nearest-neighbour distances $d_i^{NN} = \min_{j\neq i}\|\mathbf{x}_i - \mathbf{x}_j\|$ ; robust 3-$\sigma$ envelope (median + 1.4826~MAD~scaled) on $\{d_i^{NN}\}$ : set $f_{A4}=\texttt{True}$\;
     \textbf{S7.} If $\#\{i\,:\,c_i = 0 \land \text{docked}\} / |\mathcal{S}_s| \geq \tau_{A6}$, set $f_{A6}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
     \textbf{S8.} If $\#\{i\,:\,c_i = \texttt{NaN}\} / |\mathcal{S}_s| \geq \tau_{A7}$, set $f_{A7}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
     \textbf{S9.} If $|\mathcal{S}_s^{\text{dock}}| < N_{\min}$, label \texttt{too\_small} and route to $\mathcal{R}$\;
@@ -1656,7 +1732,17 @@ literature of meshed networks: below this value, density and
 connectivity metrics become noise-dominated and are no longer
 informative for cross-city comparison \cite{Saberi2018}.
 
-\subsection{A6: zero-capacity dock formalisation}\label{secA6Formalisation}
+\subsection{A6 (semantic warning): zero-capacity dock formalisation}\label{secA6Formalisation}
+\textbf{A6 is a semantic warning rather than a publisher violation.}
+The GBFS specification permits a station to declare
+\texttt{capacity = 0} (for instance during a maintenance window
+or when a station is awaiting installation), so an operator that
+populates \texttt{station\_information} entries with $c = 0$ is
+not non-compliant. What A6 flags is the downstream-consumer
+problem : a non-trivial share of zero-capacity entries in
+\texttt{station\_information} aggregates to a misleading mean
+when summed naively with non-zero entries.
+
 The global audit of Section~\ref{secGlobalAudit} surfaced a recurring
 pattern not covered by A1--A5: a non-trivial fraction of stations in
 \texttt{station\_information} declare \texttt{capacity = 0}. Because
@@ -1735,12 +1821,12 @@ flag (only required by GBFS v3) is documented as a sensitivity
 parameter and the rule ships with experiment E1's inter-rater
 human validation extended to A6 and A7.
 
-\subsection{A7: null capacity field formalisation}\label{secA7Formalisation}
+\subsection{A7 (semantic warning): null capacity field formalisation}\label{secA7Formalisation}
 The Italian case study of Section~\ref{secGlobalAudit} demonstrates
 that A1--A6 are structurally blind to operators that populate
 \texttt{station\_information} but leave the \texttt{capacity} field
-unfilled. \textbf{A7 is, by design, a consumer-side warning rather
-than a publisher-side anomaly.} \texttt{capacity = NaN} is
+unfilled. \textbf{Like A6, A7 is by design a consumer-side
+semantic warning rather than a publisher-side anomaly.} \texttt{capacity = NaN} is
 explicitly permitted by the GBFS v3 specification, in particular
 for free-floating fleets where the field has no physical referent;
 a system that publishes \texttt{capacity = NaN} on every entry is

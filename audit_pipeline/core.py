@@ -203,13 +203,25 @@ def _flag_a2(out: pd.DataFrame) -> pd.Series:
 
 
 def _flag_a4(out: pd.DataFrame, projected: np.ndarray) -> np.ndarray:
-    """A4 : geospatial outliers (robust 3-sigma per system centroid).
+    """A4 : geospatial outliers detected from nearest-neighbour distance.
 
-    Implemented with a MAD-based robust scale so the outliers themselves
-    do not inflate the dispersion estimate. A floor of
-    ``A4_MIN_THRESHOLD_M`` protects systems whose stations legitimately
-    cluster within a single street.
+    For each system, compute the distance from every station to its
+    nearest same-system neighbour, then apply a robust 3-$\\sigma$
+    rule (median + 3 $\\times$ MAD-rescaled scale) on that one-dimensional
+    distribution. A station is flagged A4 if its nearest neighbour is
+    farther than the system-specific threshold, with a 1 km floor.
+
+    This replaces the previous distance-to-centroid construction,
+    which over-flagged nationwide multi-modal deployments (e.g.
+    Deutsche Bahn's Call a Bike, where 37.8\\% of stations were
+    flagged as outliers relative to a single centroid that lies
+    nowhere on the actual network). The nearest-neighbour metric is
+    intrinsic to each station's local cluster rather than to the
+    geographically-arbitrary centroid, so it works on both unimodal
+    and multi-modal systems without recalibration.
     """
+    from scipy.spatial import cKDTree
+
     n = len(out)
     flag = np.zeros(n, dtype=bool)
     if n == 0:
@@ -228,19 +240,24 @@ def _flag_a4(out: pd.DataFrame, projected: np.ndarray) -> np.ndarray:
             pts = pts[finite]
         else:
             idx_f = idx
-        centroid = np.median(pts, axis=0)
-        radii = np.sqrt(((pts - centroid) ** 2).sum(axis=1))
-        radii_median = np.median(radii)
-        mad = np.median(np.abs(radii - radii_median))
+        tree = cKDTree(pts)
+        dists, _ = tree.query(pts, k=2)  # self + nearest
+        nn_dist = dists[:, 1]
+        nn_median = float(np.median(nn_dist))
+        mad = float(np.median(np.abs(nn_dist - nn_median)))
         sigma_robust = 1.4826 * mad
-        if sigma_robust <= 0.0:
-            continue  # degenerate: all stations coincide
-        # Outlier if the row's radius exceeds the system's typical radius
-        # by more than ``A4_SIGMA`` robust standard deviations. A 1 km
-        # floor prevents flagging tightly clustered systems whose normal
-        # spread is sub-kilometre.
-        threshold = max(radii_median + A4_SIGMA * sigma_robust, A4_MIN_THRESHOLD_M)
-        flag[idx_f[radii > threshold]] = True
+        if sigma_robust > 0.0:
+            # Standard robust-3-sigma envelope on the nearest-neighbour
+            # distribution.
+            threshold = max(
+                nn_median + A4_SIGMA * sigma_robust, A4_MIN_THRESHOLD_M
+            )
+        else:
+            # Degenerate scale (all neighbours equidistant, e.g. a
+            # regular grid): fall back to a multiplicative criterion
+            # so genuine outliers still flag.
+            threshold = max(10.0 * nn_median, A4_MIN_THRESHOLD_M)
+        flag[idx_f[nn_dist > threshold]] = True
     return flag
 
 

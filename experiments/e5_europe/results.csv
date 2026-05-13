@@ -1,14 +1,14 @@
 name,country,status,n_stations,n_capacity_nan,n_capacity_zero,capacity_median,capacity_unique_values,A1_n_stations,A1_share_pct,A3_n_stations,A3_share_pct,A4_n_stations,A4_share_pct,A2_flagged,A5_flagged,A6_flagged,A7_flagged,url,elapsed_s
-Bicing Barcelona,ES,ok,545,0,2,27.0,39,0,0.0,0,0.0,1,0.18,False,False,False,False,https://barcelona.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.3
-bicimad Madrid,ES,ok,637,0,3,44.0,36,0,0.0,0,0.0,0,0.0,False,False,False,False,https://madrid.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.3
+Bicing Barcelona,ES,ok,545,0,2,27.0,39,0,0.0,0,0.0,1,0.18,False,False,False,False,https://barcelona.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.7
+bicimad Madrid,ES,ok,637,0,3,44.0,36,0,0.0,0,0.0,8,1.26,False,False,False,False,https://madrid.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.3
 Bilbao Bizi,ES,ok,48,0,0,826.5,15,0,0.0,0,0.0,0,0.0,False,False,False,False,https://bilbao.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.2
-Bizi Zaragoza,ES,ok,276,0,0,19.0,12,0,0.0,0,0.0,1,0.36,False,False,False,False,https://zaragoza.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.3
+Bizi Zaragoza,ES,ok,276,0,0,19.0,12,0,0.0,0,0.0,0,0.0,False,False,False,False,https://zaragoza.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.3
 Dbizi Donostia,ES,ok,70,0,0,19.0,15,0,0.0,0,0.0,2,2.86,False,False,False,False,https://sansebastian.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,0.2
-Sevici Seville,ES,ok,247,0,2,20.0,23,0,0.0,0,0.0,11,4.45,False,True,False,False,https://api.cyclocity.fr/contracts/seville/gbfs/v3/gbfs.json,0.4
-Valenbisi Valencia,ES,ok,279,0,2,20.0,24,0,0.0,0,0.0,2,0.72,False,False,False,False,https://api.cyclocity.fr/contracts/valence/gbfs/v3/gbfs.json,0.4
-Velo Antwerpen,BE,ok,321,0,0,36.0,15,0,0.0,0,0.0,0,0.0,False,False,False,False,https://gbfs.smartbike.com/antwerp/1.0/gbfs.json,0.5
-Blue-bike,BE,ok,276,0,2,8.0,48,0,0.0,0,0.0,2,0.72,False,False,False,False,https://api.delijn.be/gbfs/gbfs.json,0.4
-BikeMi Milan,IT,ok,320,0,0,30.0,11,0,0.0,0,0.0,5,1.56,False,False,False,False,https://gbfs.urbansharing.com/bikemi.com/gbfs.json,0.3
-Oslo Bysykkel,NO,ok,266,0,0,21.0,26,0,0.0,0,0.0,4,1.5,False,False,False,False,https://api.entur.io/mobility/v2/gbfs/v3/oslobysykkel/gbfs,0.4
-Bergen City Bike,NO,ok,94,0,0,18.5,21,0,0.0,0,0.0,1,1.06,False,False,False,False,https://gbfs.urbansharing.com/bergenbysykkel.no/gbfs.json,0.2
-Call a Bike (Deutsche Bahn),DE,ok,1601,1601,0,,0,0,0.0,0,0.0,605,37.79,False,True,False,True,https://api.mobidata-bw.de/sharing/gbfs/v3/callabike/gbfs,0.5
+Sevici Seville,ES,ok,247,0,2,20.0,23,0,0.0,0,0.0,1,0.4,False,True,False,False,https://api.cyclocity.fr/contracts/seville/gbfs/v3/gbfs.json,0.4
+Valenbisi Valencia,ES,ok,279,0,2,20.0,24,0,0.0,0,0.0,1,0.36,False,False,False,False,https://api.cyclocity.fr/contracts/valence/gbfs/v3/gbfs.json,0.5
+Velo Antwerpen,BE,ok,321,0,0,36.0,15,0,0.0,0,0.0,0,0.0,False,False,False,False,https://gbfs.smartbike.com/antwerp/1.0/gbfs.json,0.4
+Blue-bike,BE,ok,276,0,2,8.0,46,0,0.0,0,0.0,17,6.16,False,False,False,False,https://api.delijn.be/gbfs/gbfs.json,0.4
+BikeMi Milan,IT,ok,320,0,0,30.0,11,0,0.0,0,0.0,0,0.0,False,False,False,False,https://gbfs.urbansharing.com/bikemi.com/gbfs.json,0.3
+Oslo Bysykkel,NO,ok,266,0,0,21.0,26,0,0.0,0,0.0,1,0.38,False,False,False,False,https://api.entur.io/mobility/v2/gbfs/v3/oslobysykkel/gbfs,0.3
+Bergen City Bike,NO,ok,94,0,0,18.5,21,0,0.0,0,0.0,0,0.0,False,False,False,False,https://gbfs.urbansharing.com/bergenbysykkel.no/gbfs.json,0.2
+Call a Bike (Deutsche Bahn),DE,ok,1601,1601,0,,0,0,0.0,0,0.0,29,1.81,False,True,False,True,https://api.mobidata-bw.de/sharing/gbfs/v3/callabike/gbfs,0.5
