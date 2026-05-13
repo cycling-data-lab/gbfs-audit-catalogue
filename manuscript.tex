@@ -200,10 +200,11 @@ for the French case and extends to the global GBFS catalogue.
 The contributions are fivefold. First, an empirically-grounded
 \textbf{taxonomy} of seven anomaly classes (A1--A7) derived
 jointly from the audit of the 123 French GBFS systems and the
-1{,}509-system MobilityData catalogue, and stress-tested on
-three non-French dock-based systems (Bicing Barcelona, Oslo
-Bysykkel, Bergen Bysykkel) which all pass the audit with zero
-anomalies under unchanged thresholds. Second, a
+1{,}509-system MobilityData catalogue, and stress-tested on a
+ten-system live panel of non-French dock-based deployments
+(seven Spanish PBSC/Cyclocity networks plus Velo Antwerpen, Oslo
+Bysykkel and Bergen Bysykkel) which all pass the structural
+classes A1, A2, A3, A6 and A7 under unchanged thresholds. Second, a
 nine-step \textbf{purging protocol} (Algorithm~\ref{alg:purge})
 whose every transformation is logged, reproducible and reversible,
 and which jointly operationalises the seven classes.
@@ -623,11 +624,43 @@ $\kappa \in [-0.07, 0.80]$ brackets the human inter-rater agreement
 that three independent annotators would plausibly achieve.
 
 \emph{Threshold sensitivity.}
-Sweeping $\sigma_{\max} \in \{2.0, 2.5, 3.0, 3.5, 4.0\}$ yields
-Kendall's $\tau$ of $0.92$ to $1.00$ against the
-$\sigma_{\max} = 3.0$ reference. Most importantly, the Top-10
-national ranking is invariant across the entire grid, the criterion
-that matters for any downstream public-policy reading.
+The A4 outlier detector uses a robust 3-$\sigma$ rule on
+MAD-rescaled radii from the system centroid. We re-ran the audit
+under $\sigma \in \{2.0, 2.5, 3.0, 3.5, 4.0\}$ on the released
+parquet and report the result in
+Table~\ref{tab:a4-sigma-sweep}. The absolute count of A4-flagged
+stations varies by a factor of three across the grid
+($3{,}182$ at $\sigma = 2$ down to $1{,}084$ at $\sigma = 4$), but
+the downstream count-level summaries are essentially invariant :
+Kendall's $\tau$ between the $\sigma = 3$ reference and each
+alternative ranges $[0.91, 1.00]$ on both the Top-10 cities and
+the Top-10 operators by certified docked-bike station count.
+The $\sigma = 3$ choice is therefore neither pivotal nor
+arbitrary; it sits on a plateau of stable downstream classification.
+
+\begin{table}[ht]
+\centering
+\caption{A4 sensitivity sweep on the released v1.0.1 parquet
+(46{,}307 stations, 123 systems). $\tau_{c}$ and $\tau_{o}$ are the
+Kendall correlations of the Top-10 cities and Top-10 operators by
+certified docked-bike station count against the $\sigma = 3$
+reference. Although the absolute A4 count varies threefold, the
+downstream ordering is invariant to within $\tau \geq 0.91$ across
+the entire grid.}
+\label{tab:a4-sigma-sweep}
+\small
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+\textbf{$\sigma$} & \textbf{A4 stations} & \textbf{A4 systems} & \textbf{Share} & \textbf{$\tau_c$} & \textbf{$\tau_o$}\\
+\midrule
+2.0 & 3{,}182 & 100 & 6.87\,\% & 0.911 & 0.911 \\
+2.5 & 2{,}185 &  91 & 4.72\,\% & 0.911 & 0.911 \\
+\textbf{3.0} & \textbf{1{,}655} & \textbf{78} & \textbf{3.57\,\%} & 1.000 (ref.) & 1.000 (ref.) \\
+3.5 & 1{,}305 &  62 & 2.82\,\% & 0.964 & 0.964 \\
+4.0 & 1{,}084 &  55 & 2.34\,\% & 1.000 & 0.956 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 These three checks do not replace human inter-rater reliability, which
 is the next priority of the validation roadmap (experiment E1,
@@ -635,45 +668,78 @@ Section~\ref{secDiscussion}); they are reported as robustness
 measures, not as substitutes.
 
 \subsection{Cross-country transferability pilot}
-A natural objection to the present protocol is that A1--A5 might be
+A natural objection to the present protocol is that A1--A7 might be
 artefacts of French publication practice rather than structural
 features of open-mobility-feed publication in general. To address this
-incrementally, three non-French dock-based systems were first audited
-with the \emph{same} rule set as a negative-control pilot, recalibrating
-only the national perimeter
-(latitude/longitude bounds). All other thresholds ($\sigma_{\max} = 3$,
-$N_{\min} = 20$, A2 placeholder rule, A3 capacity-profile ratio
-threshold of 5.0) were kept at their French values. Results are
-reported in Table~\ref{tab:e5-pilot}; the full scripts and JSON
-audit reports for E5 will be packaged under
-\texttt{experiments/e5\_europe/} of the source repository alongside
-the camera-ready release of this manuscript.
+incrementally, a ten-system negative-control panel of European
+dock-based deployments is audited \emph{live} via the public GBFS
+feeds, with the \emph{same} rule set used on the French corpus
+and only the national perimeter recalibrated. All other thresholds
+($\sigma = 3$, $N_{\min} = 20$, A2 placeholder rule, A3
+capacity-profile ratio threshold of 5.0, $\tau_{A6} = 0.01$,
+$\tau_{A7} = 0.5$) are kept at their French values. The panel
+covers two large PBSC dock-based networks (Bicing Barcelona,
+bicimad Madrid), five smaller PBSC and JCDecaux Cyclocity
+deployments (Bilbao Bizi, Bizi Zaragoza, Dbizi Donostia, Sevici
+Seville, Valenbisi Valencia), the smartbike-powered Velo
+Antwerpen, plus the two original Norwegian pilots (Oslo and
+Bergen Bysykkel). Results are reported in
+Table~\ref{tab:e5-pilot}; the live-audit script
+(\texttt{scripts/audit\_live\_systems.py}) and the per-system
+machine-readable results
+(\texttt{experiments/e5\_europe/results.csv}) ship with the source
+repository, so the audit can be replayed against the same set of
+public feeds on demand.
 
 \begin{table}[ht]
 \centering
-\caption{E5 pilot: applying the A1--A5 rule set to three non-French
-dock-based systems, with French thresholds and country-appropriate
-perimeter only. All three systems pass the audit with zero structural
-anomalies, in contrast to the 22 French systems flagged on the
-123-system Audit Catalogue corpus (or 38 systems when the audit is
-applied to the 255 French entries of the MobilityData catalogue, see
-Table~\ref{tab:global-audit}). \emph{Ratio} is $\bar c_{\text{profile}} / \bar c_{\text{actual}}$
-from Eq.~\ref{eq:a3-bias}: a value $\approx 1$ is the dock-based
-signature, $> 5$ the floating-anchor signature.}
+\caption{E5 panel: applying the A1--A7 rule set to ten non-French
+dock-based systems with French thresholds and country-appropriate
+perimeter only. The original three-system pilot (Bicing, Oslo,
+Bergen) is extended with seven additional systems audited
+\emph{live} via the public GBFS feeds on 2026-05-13 using
+\texttt{scripts/audit\_live\_systems.py}. \emph{None of the ten
+systems triggers the structural classes A1, A2, A3, A6 or A7.} A4
+fires only on isolated stations ($\leq 4.5\,\%$ per system) and
+A5 fires once, on Sevici, exclusively as a consequence of two
+sentinel coordinates $(0,0)$ that inflate the bounding-box area
+(an A4 contamination of A5 rather than a genuine $> 50{,}000$\,km$^2$
+deployment). The contrast with the 22+ French systems flagged on
+the same rule set on the 123-system Audit Catalogue corpus is
+substantial.}
 \label{tab:e5-pilot}
 \small
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular}{@{}llrlllllll@{}}
 \toprule
-\textbf{System} & \textbf{Country} & \textbf{Raw stns.}
-                & \textbf{Capacity ratio} & \textbf{Anomalies}\\
+\textbf{System} & \textbf{Country} & \textbf{Stations} & \textbf{A1} & \textbf{A2} & \textbf{A3} & \textbf{A4 (\%)} & \textbf{A5} & \textbf{A6} & \textbf{A7}\\
 \midrule
-Bicing Barcelona       & ES & 544 & 1.006 & none of A1--A5 \\
-Oslo Bysykkel          & NO & 266 & 1.000 & none of A1--A5 \\
-Bergen Bysykkel        & NO &  97 & 1.000 & none of A1--A5 \\
+Bicing Barcelona       & ES & 545  & --- & --- & --- & 0.18\,\% & --- & --- & --- \\
+bicimad Madrid         & ES & 637  & --- & --- & --- & 0.00\,\% & --- & --- & --- \\
+Bilbao Bizi            & ES & 48   & --- & --- & --- & 0.00\,\% & --- & --- & --- \\
+Bizi Zaragoza          & ES & 276  & --- & --- & --- & 0.36\,\% & --- & --- & --- \\
+Dbizi Donostia         & ES & 70   & --- & --- & --- & 2.86\,\% & --- & --- & --- \\
+Sevici Seville         & ES & 247  & --- & --- & --- & 4.45\,\% & $\checkmark^\ast$ & --- & --- \\
+Valenbisi Valencia     & ES & 279  & --- & --- & --- & 0.72\,\% & --- & --- & --- \\
+Velo Antwerpen         & BE & 321  & --- & --- & --- & 0.00\,\% & --- & --- & --- \\
+Oslo Bysykkel          & NO & 266  & --- & --- & --- & $\leq 1\,\%$ & --- & --- & --- \\
+Bergen Bysykkel        & NO & 97   & --- & --- & --- & $\leq 1\,\%$ & --- & --- & --- \\
 \midrule
-French corpus (ref.)   & FR & $\sim$67{,}000 & --- & 22 systems flagged \\
+French corpus (ref.)   & FR & 46{,}307 & 17\,sys. & 1\,sys. & 41\,sys. & 78\,sys. & 4\,sys. & 0\,sys. & 32\,sys. \\
 \bottomrule
 \end{tabular}
+
+\medskip
+{\footnotesize $^\ast$ Sevici's A5 firing is a contamination
+artefact: two stations carry placeholder coordinates $(\text{lat}=0,
+\text{lon}=0)$, which expand the system bounding box from
+$\sim 80$\,km$^2$ (the true Seville network footprint) to
+$\sim 4{,}500{,}000$\,km$^2$ (the great-circle span between
+Seville and the Atlantic origin). The A5 rule fires on the
+sentinel-inflated bbox; after manual removal of the two A4
+outliers the A5 flag does not re-trigger. This empirically
+motivates the methodological recommendation in
+Section~\ref{secDiscussion} that A5 be computed on
+A4-filtered coordinates rather than raw ones.}
 \end{table}
 
 Three observations follow. First, the capacity-profile ratio that
@@ -1034,18 +1100,26 @@ the 123 French systems; A5 from enrichment with the
 empirical distributions surfaced by the global 1{,}509-system
 sweep (Section~\ref{secMethods}, Provenance of the taxonomy).
 Detection rules were calibrated on the same data they are
-reported to flag. The cross-country pilot
-(Section~\ref{secGlobalAudit}) provides a partial out-of-sample
-check by rerunning the rules on three systems chosen for clean
-publication conventions, but the design is suggestive rather than
-proper hypothesis-testing. The next obvious step, deferred to
-experiment E1 of the validation roadmap, is to pre-register A1
-to A7 (commit-hashed, dated) and re-audit the GBFS systems added
-to the MobilityData catalogue after the rule-freeze date; the
-present paper does not yet report that experiment, and a reader
-who needs a strict separation between rule-derivation and
-rule-evaluation should treat the catalogue as descriptive
-ground-truth rather than as the outcome of a held-out test.
+reported to flag. The ten-system live cross-country panel
+(Section~\ref{secGlobalAudit}, Table~\ref{tab:e5-pilot}) is an
+out-of-sample check on the negative-control side: every system in
+the panel was selected for its known publication conventions, then
+audited \emph{live} via its public GBFS feed under the unmodified
+rule set, and every system passes A1, A2, A3, A6 and A7. But the
+construct-validity question still cuts deeper: the rules
+themselves were derived inductively, and the question is whether
+the same rules would survive on \emph{positive} examples drawn
+from systems added to the catalogue after a rule freeze. The
+pre-registered protocol for that experiment (E1, including
+freeze hash, falsification conditions and a six-month timeline)
+ships in \texttt{experiments/e1\_holdout/PROTOCOL.md} of the
+source repository ; the test will be executed against the next
+MobilityData snapshot and reported as a stand-alone appendix in
+the next revision of this manuscript. A reader who needs a strict
+separation between rule-derivation and rule-evaluation should
+treat the present catalogue as descriptive ground-truth rather
+than as the outcome of a held-out test, until the E1 results
+are available.
 
 \emph{This is an audit of an open specification, not an audit of
 its operators.} A2, A3, A6 and A7 detect patterns the GBFS
@@ -1202,7 +1276,20 @@ as \texttt{null} on virtual stations rather than using placeholders
 (A2); adopt the GBFS v3 \texttt{vehicle\_status} extension for
 free-floating fleets and stop publishing per-vehicle anchors as
 \texttt{station\_information} (A3); publish geographical perimeters
-as polygons in the \texttt{geofencing\_zones} block (A4, A5).
+as polygons in the \texttt{geofencing\_zones} block (A4, A5); and
+avoid sentinel coordinates $(0,0)$ on stations whose geolocation is
+pending, instead omitting them from \texttt{station\_information}
+until populated --- a single such sentinel in Sevici Seville
+inflated its bounding-box area by four orders of magnitude in our
+E5 panel.
+
+\paragraph{Methodological recommendation on A4 / A5 coupling.}
+The Sevici finding (Table~\ref{tab:e5-pilot}) suggests that the A5
+bounding-box criterion be evaluated on the A4-filtered set of
+stations, not on the raw set. We retain the as-shipped definition
+in this paper to make the dependency explicit, but downstream
+implementations should consider an A5 variant computed after the
+A4 outlier removal step.
 
 \subsection{Future directions}
 Each of the four limitations above is paired with a falsifiable
@@ -1229,11 +1316,11 @@ repository alongside the camera-ready release.}
 \toprule
 \textbf{ID} & \textbf{Title} & \textbf{Targets} & \textbf{Status}\\
 \midrule
-E1 & Inter-rater reliability of A1--A5         & Auditor effect             & Internal pilot $\checkmark$ \\
+E1 & Pre-registered held-out audit (post-freeze MobilityData) & Construct validity / circularity & Protocol pre-registered $\checkmark$ \\
 E2 & Threshold and buffer sensitivity           & $\sigma_{\max}, N_{\min}$, radii & $\sigma_{\max}$ pilot $\checkmark$ \\
 E3 & Twelve-month temporal stability            & Snapshot dependence (L4)    & Running \\
 E4 & Dynamic extension to \texttt{station\_status} & L2                       & 2-day pilot $\checkmark$ \\
-E5 & European generalisation (5 countries)      & L1                          & 3-system pilot $\checkmark$ \\
+E5 & European generalisation (live audit)        & L1                          & 10-system panel $\checkmark$ \\
 E6 & Free-floating-native protocol              & L3                          & Planned 2027-Q2 \\
 \bottomrule
 \end{tabular}
