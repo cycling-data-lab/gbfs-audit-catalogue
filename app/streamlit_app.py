@@ -894,20 +894,272 @@ with tab4:
         unsafe_allow_html=True,
     )
 
-    schema_rows = []
-    for col in gs.columns:
-        s = gs[col]
-        schema_rows.append({
-            "column": col,
-            "dtype": str(s.dtype),
-            "completeness": float(s.notna().mean()),
-            "n_unique": int(s.nunique(dropna=True)),
-        })
-    st.dataframe(
-        pd.DataFrame(schema_rows).style.format({"completeness": "{:.1%}"}),
-        height=520,
-        hide_index=True,
+    # --- Visual data dictionary: 46 columns grouped by category ---
+    SCHEMA_GROUPS = {
+        "Identifiers": {
+            "color": "#1A6FBF",
+            "cols": [
+                ("uid", "Audit Catalogue primary key"),
+                ("station_id", "GBFS native identifier"),
+                ("system_id", "Operator-system identifier"),
+                ("system_name", "Operator-system label"),
+                ("source", "Feed URL / catalogue source"),
+            ],
+        },
+        "Spatial and administrative": {
+            "color": "#1A6FBF",
+            "cols": [
+                ("lat", "Geofiltered WGS84 latitude"),
+                ("lon", "Geofiltered WGS84 longitude"),
+                ("city", "Normalised city name"),
+                ("commune_name", "INSEE commune label"),
+                ("code_commune", "INSEE commune code"),
+                ("region_id", "Administrative region"),
+            ],
+        },
+        "Station description": {
+            "color": "#1A6FBF",
+            "cols": [
+                ("station_name", "GBFS station name"),
+                ("address", "GBFS address"),
+                ("capacity", "Raw declared capacity (may be placeholder)"),
+                ("n_stations_system", "Total stations in parent system"),
+            ],
+        },
+        "Audit pipeline outputs": {
+            "color": "#C0392B",
+            "cols": [
+                ("station_type", "Audited type: docked_bike, free_floating, carsharing"),
+                ("capacity_raw", "Raw GBFS capacity (preserves NaN, placeholders)"),
+                ("capacity_audited", "Post-audit capacity (NaN for non-dock types)"),
+                ("flag_A1", "Out-of-domain inclusion (carsharing)"),
+                ("flag_A2", "Placeholder capacity at system level"),
+                ("flag_A3", "Structural over-capacity (free-floating)"),
+                ("flag_A4", "Geospatial outlier (kept set: False)"),
+                ("flag_A5", "Out-of-perimeter (kept set: False)"),
+                ("flag_A6", "Zero-capacity dock"),
+                ("flag_A7", "Null capacity field at system level"),
+                ("operator_name", "Normalised operator label"),
+                ("audit_confidence", "Audit confidence: high, medium, low"),
+                ("fetched_at", "Timestamp of the audited snapshot"),
+            ],
+        },
+        "Network geometry": {
+            "color": "#7B5EA7",
+            "cols": [
+                ("dist_to_nearest_station_m", "Intra-system KNN distance"),
+                ("n_stations_within_500m", "Intra-system 500 m density"),
+                ("n_stations_within_1km", "Intra-system 1 km density"),
+                ("nearest_system_dist_m", "Distance to nearest non-self system"),
+                ("catchment_density_per_km2", "Stations per km^2 (1 km buffer)"),
+            ],
+        },
+        "Topography": {
+            "color": "#2E7D32",
+            "cols": [
+                ("elevation_m", "BD ALTI elevation (IGN)"),
+                ("topography_roughness_index", "Local relief amplitude"),
+            ],
+        },
+        "Cycling infrastructure": {
+            "color": "#2E7D32",
+            "cols": [
+                ("infra_cyclable_km", "BD TOPO cycle-lane linear (300 m buffer)"),
+                ("infra_cyclable_pct", "Share of dedicated right-of-way"),
+            ],
+        },
+        "Safety": {
+            "color": "#2E7D32",
+            "cols": [
+                ("baac_accidents_cyclistes", "Severe-crash count (500 m, 5 yr)"),
+            ],
+        },
+        "Multimodal access": {
+            "color": "#2E7D32",
+            "cols": [
+                ("gtfs_heavy_stops_300m", "Heavy-transit stops within 300 m"),
+                ("gtfs_stops_within_300m_pct", "Share of accessible heavy-transit"),
+            ],
+        },
+        "Socio-economic context": {
+            "color": "#E08E0B",
+            "cols": [
+                ("revenu_median_uc", "INSEE Filosofi median income per CU"),
+                ("gini_revenu", "Local Gini index"),
+                ("revenu_d1", "First-decile income"),
+                ("ecart_interquar", "Interquartile income spread"),
+                ("part_menages_voit0", "Share of car-less households"),
+            ],
+        },
+        "Modal share": {
+            "color": "#E08E0B",
+            "cols": [
+                ("part_velo_travail", "Share of commute by bike (INSEE)"),
+            ],
+        },
+    }
+
+    # Inject schema-card CSS once.
+    st.markdown(
+        """
+        <style>
+        .schema-group {
+            margin: 0.55rem 0 1.1rem 0;
+        }
+        .schema-group-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            padding: 0.35rem 0;
+            border-bottom: 1px solid #e8edf3;
+            margin-bottom: 0.45rem;
+        }
+        .schema-group-header .accent {
+            width: 4px;
+            height: 14px;
+            border-radius: 2px;
+            display: inline-block;
+            margin-bottom: -2px;
+        }
+        .schema-group-header .name {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: #1A2332;
+        }
+        .schema-group-header .count {
+            font-size: 0.72rem;
+            color: #5a7a96;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-left: auto;
+        }
+        .schema-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 0.5rem;
+        }
+        .schema-card {
+            border: 1px solid #e4ecf3;
+            border-left-width: 3px;
+            border-radius: 4px;
+            padding: 0.55rem 0.7rem;
+            background: #ffffff;
+        }
+        .schema-card .col-row {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin-bottom: 0.25rem;
+        }
+        .schema-card .col-name {
+            font-family: ui-monospace, Menlo, Consolas, monospace;
+            font-size: 0.83rem;
+            font-weight: 600;
+            color: #1A2332;
+        }
+        .schema-card .dtype-pill {
+            font-family: ui-monospace, Menlo, monospace;
+            font-size: 0.66rem;
+            padding: 0.06rem 0.4rem;
+            background: #eef2f7;
+            color: #5a6470;
+            border-radius: 999px;
+            border: 1px solid #e4ecf3;
+            text-transform: lowercase;
+        }
+        .schema-card .completeness {
+            margin-left: auto;
+            font-size: 0.7rem;
+            color: #5a7a96;
+            font-variant-numeric: tabular-nums;
+        }
+        .schema-card .bar {
+            height: 3px;
+            background: #eef2f7;
+            border-radius: 999px;
+            overflow: hidden;
+            margin: 0.15rem 0 0.35rem 0;
+        }
+        .schema-card .bar > div {
+            height: 100%;
+            background: #1A6FBF;
+            border-radius: 999px;
+        }
+        .schema-card .desc {
+            font-size: 0.78rem;
+            color: #5a6470;
+            line-height: 1.4;
+            margin-bottom: 0.2rem;
+        }
+        .schema-card .example {
+            font-family: ui-monospace, Menlo, monospace;
+            font-size: 0.72rem;
+            color: #7a8a9a;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-top: 1px dashed #eef2f7;
+            padding-top: 0.25rem;
+            margin-top: 0.15rem;
+        }
+        .schema-card .example .lbl {
+            color: #b0bccb;
+            margin-right: 0.3rem;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
     )
+
+    def _format_example(value) -> str:
+        if pd.isna(value):
+            return "<i>NaN</i>"
+        if isinstance(value, float):
+            return f"{value:.3f}".rstrip("0").rstrip(".") or "0"
+        if isinstance(value, bool):
+            return "True" if value else "False"
+        s = str(value)
+        if len(s) > 38:
+            return s[:35] + "…"
+        return s
+
+    sample_row = gs.iloc[0]
+
+    for group_name, info in SCHEMA_GROUPS.items():
+        # Header
+        st.markdown(
+            f'<div class="schema-group-header">'
+            f'  <span class="accent" style="background:{info["color"]};"></span>'
+            f'  <span class="name">{group_name}</span>'
+            f'  <span class="count">{len(info["cols"])} column'
+            f'{"s" if len(info["cols"]) > 1 else ""}</span>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+
+        cards_html = '<div class="schema-grid">'
+        for col, desc in info["cols"]:
+            if col not in gs.columns:
+                continue
+            series = gs[col]
+            completeness = float(series.notna().mean())
+            dtype = str(series.dtype)
+            example = _format_example(sample_row[col])
+            cards_html += (
+                f'<div class="schema-card" style="border-left-color:{info["color"]};">'
+                f'  <div class="col-row">'
+                f'    <span class="col-name">{col}</span>'
+                f'    <span class="dtype-pill">{dtype}</span>'
+                f'    <span class="completeness">{completeness*100:.1f}%</span>'
+                f'  </div>'
+                f'  <div class="bar"><div style="width:{completeness*100:.1f}%;'
+                f'background:{info["color"]};"></div></div>'
+                f'  <div class="desc">{desc}</div>'
+                f'  <div class="example"><span class="lbl">e.g.</span>{example}</div>'
+                f'</div>'
+            )
+        cards_html += "</div>"
+        st.markdown(cards_html, unsafe_allow_html=True)
 
     section(2, "The seven anomaly classes")
     classes_html = ""
