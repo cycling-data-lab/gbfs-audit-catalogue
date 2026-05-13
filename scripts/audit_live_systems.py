@@ -36,6 +36,40 @@ USER_AGENT = (
     "GBFS-Audit-Catalogue/1.0.1 (Fossé & Pallares 2026 CSI E5 panel)"
 )
 
+# Operator-name heuristics for station_type inference. When --infer-type
+# is passed, the script labels each system based on the operator brand
+# in the panel's name/url columns so A1 (carsharing) and A3
+# (free-floating) actually fire on the global catalogue sweep. The
+# explicit panel default ("docked_bike") is used otherwise.
+import re as _re
+
+_FF_PATTERN = _re.compile(
+    r"\b(dott|pony|bird|voi|bolt|lime|tier|spin|"
+    r"donkey|cooltra|felyx|whoosh|free.?floating|"
+    r"share.?now|free.?now|free2move|"
+    r"ridedott|rideflash|wind|circ|jump|"
+    r"e.?scooter|scooter|moped|trottinette)\b",
+    _re.IGNORECASE,
+)
+_CARSHARE_PATTERN = _re.compile(
+    r"\b(citiz|carsharing|car.?sharing|car2go|zipcar|"
+    r"stadtmobil|flinkster|edrive|car.?ship|"
+    r"teilauto|quickrent|2em|mybuxi|conficars|"
+    r"getaround|sixt.?share|miles|cambio|"
+    r"ford.?carsharing|ubeeqo|virtuo|tribu|invers|"
+    r"deer)\b",
+    _re.IGNORECASE,
+)
+
+
+def _infer_station_type(name: str, url: str) -> str:
+    s = f"{name or ''} {url or ''}"
+    if _CARSHARE_PATTERN.search(s):
+        return "carsharing"
+    if _FF_PATTERN.search(s):
+        return "free_floating"
+    return "docked_bike"
+
 
 def _fetch(url: str) -> dict:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -59,7 +93,7 @@ def _resolve_station_information_url(disco_url: str) -> str:
     raise LookupError(f"no station_information feed in {disco_url}")
 
 
-def _audit_one(name: str, country: str, disco_url: str) -> dict:
+def _audit_one(name: str, country: str, disco_url: str, infer_type: bool = False) -> dict:
     t0 = time.monotonic()
     try:
         si_url = _resolve_station_information_url(disco_url)
@@ -84,6 +118,14 @@ def _audit_one(name: str, country: str, disco_url: str) -> dict:
             "elapsed_s": round(time.monotonic() - t0, 1),
         }
 
+    # When the global-catalogue sweep is requested, infer station_type
+    # from operator name. The E5 panel passes infer_type=False because
+    # every system there is known dock-based by selection.
+    if infer_type:
+        station_type = _infer_station_type(name, disco_url)
+    else:
+        station_type = "docked_bike"
+
     rows = []
     sid = f"e5__{country.lower()}__{name.lower().replace(' ', '_')}"
     for s in stations:
@@ -97,7 +139,7 @@ def _audit_one(name: str, country: str, disco_url: str) -> dict:
                 "system_id": sid,
                 "system_name": name,
                 "station_id": str(s.get("station_id", "")),
-                "station_type": "docked_bike",  # E5 panel = known dock-based
+                "station_type": station_type,
                 "lat": float(s.get("lat", float("nan"))),
                 "lon": float(s.get("lon", float("nan"))),
                 "capacity": float(cap),
@@ -123,6 +165,7 @@ def _audit_one(name: str, country: str, disco_url: str) -> dict:
         "country": country,
         "status": "ok",
         "n_stations": len(stations),
+        "station_type": station_type,
         "n_capacity_nan": int(df["capacity"].isna().sum()),
         "n_capacity_zero": int((df["capacity"] == 0).sum()),
         "capacity_median": float(df["capacity"].median()) if df["capacity"].notna().any() else float("nan"),
@@ -147,6 +190,16 @@ def main() -> None:
         default=Path("experiments/e5_europe/results.csv"),
         help="Where to write per-system audit results",
     )
+    parser.add_argument(
+        "--infer-type",
+        action="store_true",
+        help=(
+            "Infer station_type from operator name (carsharing / "
+            "free_floating / docked_bike) before applying the audit. "
+            "Required for the global-catalogue sweep where A1 and A3 "
+            "depend on knowing the operator class."
+        ),
+    )
     args = parser.parse_args()
 
     panel_rows = []
@@ -161,7 +214,10 @@ def main() -> None:
     for r in panel_rows:
         safe_name = r["name"].encode("ascii", errors="replace").decode("ascii")
         print(f"[*] {r['country']} {safe_name}  ...", end="", flush=True)
-        out = _audit_one(r["name"], r["country"], r["auto_discovery_url"])
+        out = _audit_one(
+            r["name"], r["country"], r["auto_discovery_url"],
+            infer_type=args.infer_type,
+        )
         results.append(out)
         print(f" {out['status']} ({out.get('elapsed_s', '?')}s)")
 
