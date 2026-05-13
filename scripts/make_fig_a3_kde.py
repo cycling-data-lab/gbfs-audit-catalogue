@@ -86,8 +86,8 @@ def main() -> None:
     ax.set_xticklabels(
         [r"$10^0$", r"$2$", r"$5$", r"$10^1$", r"$20$", r"$10^2$", r"$500$", r"$10^3$"]
     )
-    ax.set_xlabel(r"$\bar c_{\mathrm{profile}} / \bar c_{\mathrm{actual}}$  (log scale)")
-    ax.set_ylabel("Kernel density (log$_{10}$ scale)")
+    ax.set_xlabel(r"$\bar c_{\mathrm{profile}} / \bar c_{\mathrm{actual}}$  (log$_{10}$ scale)")
+    ax.set_ylabel("Kernel density")
     ax.set_title(
         r"A3 ratio distribution on the global subset ($n=98$, ratio $> 1.01$)",
         loc="left",

@@ -1,0 +1,1505 @@
+country,name,auto_discovery_url
+AE,Careem BIKE,https://careem.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+AE,Dott Abu Dhabi,https://gbfs.api.ridedott.com/public/v2/abu-dhabi/gbfs.json
+AE,Dott Dubai,https://gbfs.api.ridedott.com/public/v2/dubai/gbfs.json
+AE,Dott Dubai Hills,https://gbfs.api.ridedott.com/public/v2/dubai-hills/gbfs.json
+AE,Dott Ras Al Khaimah,https://gbfs.api.ridedott.com/public/v2/ras-al-khaimah/gbfs.json
+AE,Dott Sharjah,https://gbfs.api.ridedott.com/public/v2/sharjah/gbfs.json
+AE,Yaldi,https://yaldi.rideatom.com/gbfs/511/v3.0/gbfs
+AR,Bike Nordelta,https://nordelta.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+AR,Ecobici,https://buenosaires.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+AR,MiBiciTuBici,https://www.mibicitubici.gob.ar/opendata/gbfs.json
+AT,Bird Wiener Neustadt,https://mds.bird.co/gbfs/v2/public/wienerneustadt/gbfs.json
+AT,city bike Linz,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/gbfs.json
+AT,Dott Baden bei Wien,https://gbfs.api.ridedott.com/public/v2/baden-bei-wien/gbfs.json
+AT,Dott Bregenz,https://gbfs.api.ridedott.com/public/v2/bregenz/gbfs.json
+AT,Dott Dornbirn,https://gbfs.api.ridedott.com/public/v2/dornbirn/gbfs.json
+AT,Dott Feldkirchen bei Graz,https://gbfs.api.ridedott.com/public/v2/feldkirchen-bei-graz/gbfs.json
+AT,Dott Innsbruck,https://gbfs.api.ridedott.com/public/v2/innsbruck/gbfs.json
+AT,Dott Klagenfurt,https://gbfs.api.ridedott.com/public/v2/klagenfurt/gbfs.json
+AT,Dott Klopein,https://gbfs.api.ridedott.com/public/v2/klopein/gbfs.json
+AT,Dott Korneuburg,https://gbfs.api.ridedott.com/public/v2/korneuburg/gbfs.json
+AT,Dott Leoben,https://gbfs.api.ridedott.com/public/v2/leoben/gbfs.json
+AT,Dott Linz,https://gbfs.api.ridedott.com/public/v2/linz/gbfs.json
+AT,Dott Mödling,https://gbfs.api.ridedott.com/public/v2/modling/gbfs.json
+AT,Dott Saint Anton am Arlberg,https://gbfs.api.ridedott.com/public/v2/sankt-anton-am-arlberg/gbfs.json
+AT,Dott Serfaus,https://gbfs.api.ridedott.com/public/v2/serfaus/gbfs.json
+AT,Dott Steyr,https://gbfs.api.ridedott.com/public/v2/steyr/gbfs.json
+AT,Dott Velden-Am-Worthersee,https://gbfs.api.ridedott.com/public/v2/velden-am-worthersee/gbfs.json
+AT,Dott Villach,https://gbfs.api.ridedott.com/public/v2/villach/gbfs.json
+AT,Dott Wels,https://gbfs.api.ridedott.com/public/v2/wels/gbfs.json
+AT,EVENTbike - Austria,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_eq/gbfs.json
+AT,Getaround Graz,https://getaround.com/gbfs/v3/graz/gbfs
+AT,Getaround Innsbruck,https://getaround.com/gbfs/v3/innsbruck/gbfs
+AT,nextbike Klagenfurt Austria,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ka/gbfs.json
+AT,nextbike Niederösterreich,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_la/gbfs.json
+AT,Stadtrad Innsbruck Austria,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_si/gbfs.json
+AT,VVT REGIORAD Tirol,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vt/gbfs.json
+AT,WienMobil Rad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wr/gbfs.json
+BA,BL bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bj/gbfs.json
+BA,nextbike BIH,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ba/gbfs.json
+BA,Zenica,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bz/gbfs.json
+BE,Bird Antwerp,https://mds.bird.co/gbfs/v2/public/antwerp/gbfs.json
+BE,Blue-bike,https://api.delijn.be/gbfs/gbfs.json
+BE,Bolt Technology OÜ,https://mds.bolt.eu/gbfs/3/336/gbfs
+BE,Donkey Republic Antwerp,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_antwerp/gbfs.json
+BE,Donkey Republic Ghent,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_gh/gbfs.json
+BE,Donkey Republic Kortrijk & Leiedal,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kortrijk_leiedal/gbfs
+BE,Donkey Republic Westhoek,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_westhoek/gbfs.json
+BE,Dott Aalst,https://gbfs.api.ridedott.com/public/v2/aalst/gbfs.json
+BE,Dott Brussels,https://gbfs.api.ridedott.com/public/v2/brussels/gbfs.json
+BE,Dott Charleroi,https://gbfs.api.ridedott.com/public/v2/charleroi/gbfs.json
+BE,Dott Ghent,https://gbfs.api.ridedott.com/public/v2/ghent/gbfs.json
+BE,Dott Kortrijk,https://gbfs.api.ridedott.com/public/v2/kortrijk/gbfs.json
+BE,Dott Liege,https://gbfs.api.ridedott.com/public/v2/liege/gbfs.json
+BE,Felyx Antwerp,https://maas.zeus.cooltra.com/gbfs/antwerp/3.0/en/gbfs.json
+BE,Felyx Brussels,https://maas.zeus.cooltra.com/gbfs/brussels/3.0/en/gbfs.json
+BE,Getaround Aalst,https://getaround.com/gbfs/v3/aalst/gbfs
+BE,Getaround Antwerpen,https://getaround.com/gbfs/v3/antwerpen/gbfs
+BE,Getaround Beaumont,https://getaround.com/gbfs/v3/beaumont/gbfs
+BE,Getaround Charleroi,https://getaround.com/gbfs/v3/charleroi/gbfs
+BE,Getaround Essen,https://getaround.com/gbfs/v3/essen/gbfs
+BE,Getaround Gent,https://getaround.com/gbfs/v3/gent/gbfs
+BE,Getaround Hove,https://getaround.com/gbfs/v3/hove/gbfs
+BE,Getaround Leuven,https://getaround.com/gbfs/v3/leuven/gbfs
+BE,Getaround Lille,https://getaround.com/gbfs/v3/lille/gbfs
+BE,Getaround Mechelen,https://getaround.com/gbfs/v3/mechelen/gbfs
+BE,Getaround Seraing,https://getaround.com/gbfs/v3/seraing/gbfs
+BE,Getaround Waterloo,https://getaround.com/gbfs/v3/waterloo/gbfs
+BE,Li Bia Velo,https://api.cyclocity.fr/contracts/namur/gbfs/v3/gbfs.json
+BE,Lime Antwerp,https://data.lime.bike/api/partners/v2/gbfs/antwerp/gbfs.json
+BE,Lime Brussels,https://data.lime.bike/api/partners/v2/gbfs/brussels/gbfs.json
+BE,nextbike BE Vlaamse Rand,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hf/gbfs.json
+BE,Pony Brussels,https://gbfs.getapony.com/v1/brussels/en/gbfs.json?key=AIzaSyBMkR2fCYvZZC22Ls5A5wJQRwDERao07Nc
+BE,Pony Charleroi,https://gbfs.getapony.com/v1/charleroi/en/gbfs.json?key=AIzaSyBMkR2fCYvZZC22Ls5A5wJQRwDERao07Nc
+BE,Pony Liège,https://gbfs.getapony.com/v1/liege/en/gbfs.json?key=AIzaSyBMkR2fCYvZZC22Ls5A5wJQRwDERao07Nc
+BE,Velo Antwerpen,https://gbfs.smartbike.com/antwerp/1.0/gbfs.json
+BE,Villo,https://api.cyclocity.fr/contracts/bruxelles/gbfs/v3/gbfs.json
+BE,VOI Antwerp,https://api.voiapp.io/gbfs/be/7a4cb689-a2ee-409d-a5fe-49d2e8d50717/v2/gbfs.json
+BR,Bike Brasilia,https://brasilia.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+BR,Bike Estácio,https://curitiba.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+BR,Bike Itaú - Pernambuco,https://recife.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+BR,Bike Itaú - Rio,https://riodejaneiro.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+BR,Bike Itaú - Salvador,https://salvador.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+BR,Bike Itaú - Sampa,https://saopaulo.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+BR,Bike Porto Alegre,https://portoalegre.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+BR,Rivi Bike,https://riviera.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+CA,Accès Vélo,https://saguenay.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+CA,àVélo,https://quebec.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+CA,Bike Share Toronto,https://toronto.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+CA,Bird Calgary,https://mds.bird.co/gbfs/v2/public/calgary/gbfs.json
+CA,Bird Edmonton,https://mds.bird.co/gbfs/v2/public/edmonton/gbfs.json
+CA,Bird Halifax,https://mds.bird.co/gbfs/v2/public/halifax/gbfs.json
+CA,Bird Hamilton,https://mds.bird.co/gbfs/v2/public/hamilton/gbfs.json
+CA,Bird Leduc,https://mds.bird.co/gbfs/v2/public/leduc/gbfs.json
+CA,Bird Ottawa,https://mds.bird.co/gbfs/v2/public/ottawa/gbfs.json
+CA,Bird Saskatoon,https://mds.bird.co/gbfs/v2/public/saskatoon/gbfs.json
+CA,Bird Vaughan,https://mds.bird.co/gbfs/v2/public/vaughan/gbfs.json
+CA,BIXI Montréal,https://gbfs.velobixi.com/gbfs/gbfs.json
+CA,Lime Calgary,https://data.lime.bike/api/partners/v2/gbfs/calgary/gbfs.json
+CA,Lime Edmonton,https://data.lime.bike/api/partners/v2/gbfs/edmonton/gbfs.json
+CA,Lime Kelowna,https://data.lime.bike/api/partners/v2/gbfs/kelowna/gbfs.json
+CA,Lime Mississauga,https://data.lime.bike/api/partners/v2/gbfs/mississauga/gbfs.json
+CA,Lime Ottawa,https://data.lime.bike/api/partners/v2/gbfs/ottawa/gbfs.json
+CA,Lime Vancouver,https://data.lime.bike/api/partners/v2/gbfs/vancouver_bc/gbfs.json
+CA,LocoMotion Montreal,https://locomotion.app/api/gbfs/3.0/montreal/gbfs
+CA,LocoMotion Sherbrooke,https://locomotion.app/api/gbfs/3.0/sherbrooke/gbfs
+CA,Mobi Bike Share,https://gbfs.kappa.fifteen.eu/gbfs/2.2/mobi/en/gbfs.json
+CA,Neuron Mobility,https://mds.neuron-mobility.com/ard/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/bmt/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yyc/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yeg/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/kcw/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yql/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yow/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yqf/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yqr/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yxe/gbfs/2/
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yve/gbfs/2/
+CA,Neuron Oshawa,https://mds.neuron-mobility.com/yoo/gbfs/2/
+CA,PBSC HQ,https://pbsn.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+CA,Sobi Hamilton,https://hamilton.socialbicycles.com/opendata/gbfs.json
+CH,2EM Car Sharing,https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/gbfs
+CH,Bird Basel,https://mds.bird.co/gbfs/v2/public/basel/gbfs.json
+CH,Bird Biel,https://mds.bird.co/gbfs/v2/public/biel/gbfs.json
+CH,Bird Bulle,https://mds.bird.co/gbfs/v2/public/bulle/gbfs.json
+CH,Bird Grenchen,https://mds.bird.co/gbfs/v2/public/grenchen/gbfs.json
+CH,Bird Kloten,https://mds.bird.co/gbfs/v2/public/kloten/gbfs.json
+CH,Bird Schaffhausen,https://mds.bird.co/gbfs/v2/public/schaffhausen/gbfs.json
+CH,Bird Uster,https://mds.bird.co/gbfs/v2/public/uster/gbfs.json
+CH,Bird Winterthur,https://mds.bird.co/gbfs/v2/public/winterthur/gbfs.json
+CH,Bird Zurich,https://mds.bird.co/gbfs/v2/public/zurich/gbfs.json
+CH,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_basel/gbfs
+CH,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_zurich/gbfs
+CH,Car-ship,https://api.mobidata-bw.de/sharing/gbfs/v3/car_ship/gbfs
+CH,carvelo eCargo-Bike Sharing,https://api.mobidata-bw.de/sharing/gbfs/v3/carvelo2go_ch/gbfs
+CH,Donkey EPFL - Lausanne,https://stables.donkey.bike/api/public/gbfs/3.0/epfl_lausanne/gbfs.json
+CH,Donkey Republic Geneva,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_ge/gbfs.json
+CH,Donkey Republic Kreuzlingen,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kreuzlingen/gbfs.json
+CH,Donkey Republic Neuchâtel,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_neuchatel/gbfs.json
+CH,Donkey Republic Sion,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_sion/gbfs.json
+CH,Donkey Republic Thun,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_thun/gbfs.json
+CH,Donkey Republic Yverdon-les-Bains,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_yverdon-les-bains/gbfs.json
+CH,Dott Basel,https://gbfs.api.ridedott.com/public/v2/basel/gbfs.json
+CH,Dott Romanshorn,https://gbfs.api.ridedott.com/public/v2/romanshorn/gbfs.json
+CH,Dott Rorschach,https://gbfs.api.ridedott.com/public/v2/rorschach/gbfs.json
+CH,Dott St. Gallen,https://gbfs.api.ridedott.com/public/v2/st.-gallen/gbfs.json
+CH,Dott Winterthur,https://gbfs.api.ridedott.com/public/v2/winterthur/gbfs.json
+CH,Dott Zurich,https://gbfs.api.ridedott.com/public/v2/zurich/gbfs.json
+CH,edrive carsharing,https://api.mobidata-bw.de/sharing/gbfs/v3/edrivecarsharing_ch/gbfs
+CH,invia BikeShare,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ms/gbfs.json
+CH,Lime Basel,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_basel/gbfs
+CH,Lime Opfikon,https://data.lime.bike/api/partners/v2/gbfs/opfikon/gbfs.json
+CH,Lime Uster,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_uster/gbfs
+CH,Lime Zug,https://data.lime.bike/api/partners/v2/gbfs/zug/gbfs.json
+CH,Lime Zurich,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_zurich/gbfs
+CH,Mobility,https://api.mobidata-bw.de/sharing/gbfs/v3/mobility_ch/gbfs
+CH,MyBuxi,https://api.mobidata-bw.de/sharing/gbfs/v3/mybuxi_ch/gbfs
+CH,nextbike Switzerland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ch/gbfs.json
+CH,PickeBike Aubonne,https://api.mobidata-bw.de/sharing/gbfs/v3/pickebike_aubonne/gbfs
+CH,PickeBike Basel,https://api.mobidata-bw.de/sharing/gbfs/v3/pickebike_basel/gbfs
+CH,PickeBike Fribourg,https://api.mobidata-bw.de/sharing/gbfs/v3/pickebike_fribourg/gbfs
+CH,PubliBike,https://api.publibike.ch/v1/gbfs/v2/gbfs.json
+CH,QuickRent,https://quickrent.ch/sbb/api/v1/gbfs
+CH,Share Birrer,https://www.share-birrer.ch/gbfs/gbfs.json
+CH,sharedmobility.ch,https://www.sharedmobility.ch/gbfs.json
+CH,Velospot,https://api.mobidata-bw.de/sharing/gbfs/v3/velospot_ch/gbfs
+CH,Voi Switzerland,https://api.mobidata-bw.de/sharing/gbfs/v3/voi_ch/gbfs
+CL,Bike Itaú - Santiago,https://santiago.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+CO,Bogotá,https://bogota.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+CY,nextbike Cyprus,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cy/gbfs.json
+CZ,nextbike Benešov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_co/gbfs.json
+CZ,nextbike Berounsko,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_td/gbfs.json
+CZ,nextbike Brno,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_te/gbfs.json
+CZ,nextbike Česká Třebová,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nc/gbfs.json
+CZ,nextbike Český Brod,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nd/gbfs.json
+CZ,nextbike Dvůr Králové,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tf/gbfs.json
+CZ,nextbike Frýdek-Místek,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ts/gbfs.json
+CZ,nextbike Hodonín,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nh/gbfs.json
+CZ,nextbike Hořice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_uf/gbfs.json
+CZ,nextbike Hradec Králové,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tl/gbfs.json
+CZ,nextbike Hranice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_na/gbfs.json
+CZ,nextbike Jablonec,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ud/gbfs.json
+CZ,nextbike Jičín,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nt/gbfs.json
+CZ,nextbike Kahan,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_oc/gbfs.json
+CZ,nextbike Kladno,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tk/gbfs.json
+CZ,nextbike Klášterec nad Ohří,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ko/gbfs.json
+CZ,nextbike Kolín,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ni/gbfs.json
+CZ,nextbike Krnov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tw/gbfs.json
+CZ,nextbike Kyjov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ky/gbfs.json
+CZ,nextbike Liberec,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_xa/gbfs.json
+CZ,nextbike Lipník nad Bečvou,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lb/gbfs.json
+CZ,nextbike Lovosice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lo/gbfs.json
+CZ,nextbike Mladoboleslavsko,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tq/gbfs.json
+CZ,nextbike Moravská Třebová,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_xc/gbfs.json
+CZ,nextbike Most,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_uo/gbfs.json
+CZ,nextbike Neratovice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ne/gbfs.json
+CZ,nextbike OlbramoviceVotice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cu/gbfs.json
+CZ,nextbike Olomouc,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ti/gbfs.json
+CZ,nextbike Opava,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tj/gbfs.json
+CZ,nextbike Ostrava,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_to/gbfs.json
+CZ,nextbike Otrokovice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ot/gbfs.json
+CZ,nextbike Pelhřimov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cq/gbfs.json
+CZ,nextbike Písek,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ty/gbfs.json
+CZ,nextbike Praha,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tg/gbfs.json
+CZ,nextbike Přerov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nr/gbfs.json
+CZ,nextbike Roudnice nad Labem,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rl/gbfs.json
+CZ,nextbike Rychnovsko,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tx/gbfs.json
+CZ,nextbike Šumperk,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ns/gbfs.json
+CZ,nextbike Třebíč,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tu/gbfs.json
+CZ,nextbike Trutnov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_xb/gbfs.json
+CZ,nextbike Uherské Hradiště,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tt/gbfs.json
+CZ,nextbike Valašsko,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vm/gbfs.json
+CZ,nextbike Vrchlabí,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vr/gbfs.json
+CZ,nextbike Ždár nad Sázavou,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zs/gbfs.json
+CZ,nextbike Zlín,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tv/gbfs.json
+DE,AB mit Lara,https://abmitlara.de/wp-json/commonsbooking/v1/gbfs.json
+DE,ALF - das Affstätter Lastenfahrrad,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_alf/gbfs
+DE,AW-bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rh/gbfs.json
+DE,Bergisches e-Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ac/gbfs.json
+DE,Bikesharing Amprion,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wp/gbfs.json
+DE,Bird Munich,https://mds.bird.co/gbfs/v2/public/munich/gbfs.json
+DE,Bird Ulm,https://mds.bird.co/gbfs/v2/public/ulm/gbfs.json
+DE,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_karlsruhe/gbfs
+DE,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_reutlingen_tuebingen/gbfs
+DE,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_stuttgart/gbfs
+DE,Bre.Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bq/gbfs.json
+DE,Call a Bike,https://api.mobidata-bw.de/sharing/gbfs/v3/callabike/gbfs
+DE,Campus Berlin-Buch,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cb/gbfs.json
+DE,Carsharing in Wertheim,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtwerke_wertheim/gbfs
+DE,CarSharing Renningen,https://api.mobidata-bw.de/sharing/gbfs/v3/oekostadt_renningen/gbfs
+DE,Conficars,https://api.mobidata-bw.de/sharing/gbfs/v3/conficars_ulm/gbfs
+DE,Deer,https://api.mobidata-bw.de/sharing/gbfs/v3/deer/gbfs
+DE,Die Grüne Flotte,https://api.mobidata-bw.de/sharing/gbfs/v3/gruene-flotte_freiburg/gbfs
+DE,Donkey Ergolding,https://stables.donkey.bike/api/public/gbfs/3.0/Ergolding/gbfs.json
+DE,Donkey Kelheim,https://stables.donkey.bike/api/public/gbfs/3.0/Kelheim/gbfs.json
+DE,Donkey KielRegion+Smile24,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kielsmile/gbfs.json
+DE,Donkey Neutraubling,https://stables.donkey.bike/api/public/gbfs/3.0/Neutraubling/gbfs.json
+DE,Donkey Obertraubling,https://stables.donkey.bike/api/public/gbfs/3.0/Obertraubling/gbfs.json
+DE,Donkey Prignitz,https://stables.donkey.bike/api/public/gbfs/3.0/Donkey-Prignitz/gbfs.json
+DE,Donkey Regensburg,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_regensburg_straubing/gbfs.json
+DE,Donkey Republic Augsburg,https://stables.donkey.bike/api/public/gbfs/3.0/Augsburg/gbfs.json
+DE,Donkey Republic Bamberg,https://stables.donkey.bike/api/public/gbfs/3.0/Bamberg/gbfs.json
+DE,Donkey Republic Bayern Komplett,https://stables.donkey.bike/api/public/gbfs/3.0/bayern_komplett/gbfs.json
+DE,Donkey Republic Hannover,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hannover/gbfs.json
+DE,Donkey Republic Kiel,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kiel/gbfs.json
+DE,Donkey Republic Munich,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_munich/gbfs.json
+DE,Donkey Republic Regensburg,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_regensburg/gbfs.json
+DE,Donkey Republic Schleswig,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_schleswig/gbfs.json
+DE,Dott Aachen,https://gbfs.api.ridedott.com/public/v2/aachen/gbfs.json
+DE,Dott Baunatal,https://gbfs.api.ridedott.com/public/v2/baunatal/gbfs.json
+DE,Dott Berlin,https://gbfs.api.ridedott.com/public/v2/berlin/gbfs.json
+DE,Dott Bielefeld,https://gbfs.api.ridedott.com/public/v2/bielefeld/gbfs.json
+DE,Dott Böblingen,https://gbfs.api.ridedott.com/public/v2/boblingen/gbfs.json
+DE,Dott Bochum,https://gbfs.api.ridedott.com/public/v2/bochum/gbfs.json
+DE,Dott Bonn,https://gbfs.api.ridedott.com/public/v2/bonn/gbfs.json
+DE,Dott Bremen,https://gbfs.api.ridedott.com/public/v2/bremen/gbfs.json
+DE,Dott Bremerhaven,https://gbfs.api.ridedott.com/public/v2/bremerhaven/gbfs.json
+DE,Dott Brühl,https://gbfs.api.ridedott.com/public/v2/bruhl/gbfs.json
+DE,Dott Brunswick,https://gbfs.api.ridedott.com/public/v2/brunswick/gbfs.json
+DE,Dott Celle,https://gbfs.api.ridedott.com/public/v2/celle/gbfs.json
+DE,Dott Chemnitz,https://gbfs.api.ridedott.com/public/v2/chemnitz/gbfs.json
+DE,Dott Cologne,https://gbfs.api.ridedott.com/public/v2/cologne/gbfs.json
+DE,Dott Cottbus,https://gbfs.api.ridedott.com/public/v2/cottbus/gbfs.json
+DE,Dott Darmstadt,https://gbfs.api.ridedott.com/public/v2/darmstadt/gbfs.json
+DE,Dott Detmold,https://gbfs.api.ridedott.com/public/v2/detmold/gbfs.json
+DE,Dott Dortmund,https://gbfs.api.ridedott.com/public/v2/dortmund/gbfs.json
+DE,Dott Duisburg,https://gbfs.api.ridedott.com/public/v2/duisburg/gbfs.json
+DE,Dott Dusseldorf,https://gbfs.api.ridedott.com/public/v2/dusseldorf/gbfs.json
+DE,Dott Elmshorn,https://gbfs.api.ridedott.com/public/v2/elmshorn/gbfs.json
+DE,Dott Erfurt,https://gbfs.api.ridedott.com/public/v2/erfurt/gbfs.json
+DE,Dott Erlangen,https://gbfs.api.ridedott.com/public/v2/erlangen/gbfs.json
+DE,Dott Essen,https://gbfs.api.ridedott.com/public/v2/essen/gbfs.json
+DE,Dott Flensburg,https://gbfs.api.ridedott.com/public/v2/flensburg/gbfs.json
+DE,Dott Frankfurt,https://gbfs.api.ridedott.com/public/v2/frankfurt/gbfs.json
+DE,Dott Friedrichshafen,https://gbfs.api.ridedott.com/public/v2/friedrichshafen/gbfs.json
+DE,Dott Gera,https://gbfs.api.ridedott.com/public/v2/gera/gbfs.json
+DE,Dott Gifhorn,https://gbfs.api.ridedott.com/public/v2/gifhorn/gbfs.json
+DE,Dott Gladbeck,https://gbfs.api.ridedott.com/public/v2/gladbeck/gbfs.json
+DE,Dott Hamburg,https://gbfs.api.ridedott.com/public/v2/hamburg/gbfs.json
+DE,Dott Hamm,https://gbfs.api.ridedott.com/public/v2/hamm/gbfs.json
+DE,Dott Hannover,https://gbfs.api.ridedott.com/public/v2/hannover/gbfs.json
+DE,Dott Heidelberg,https://gbfs.api.ridedott.com/public/v2/heidelberg/gbfs.json
+DE,Dott Heilbronn,https://gbfs.api.ridedott.com/public/v2/heilbronn/gbfs.json
+DE,Dott Hennef,https://gbfs.api.ridedott.com/public/v2/hennef/gbfs.json
+DE,Dott Herford,https://gbfs.api.ridedott.com/public/v2/herford/gbfs.json
+DE,Dott Herne,https://gbfs.api.ridedott.com/public/v2/herne/gbfs.json
+DE,Dott Herten,https://gbfs.api.ridedott.com/public/v2/herten/gbfs.json
+DE,Dott Hilden,https://gbfs.api.ridedott.com/public/v2/hilden/gbfs.json
+DE,Dott Hildesheim,https://gbfs.api.ridedott.com/public/v2/hildesheim/gbfs.json
+DE,Dott Ingolstadt,https://gbfs.api.ridedott.com/public/v2/ingolstadt/gbfs.json
+DE,Dott Jena,https://gbfs.api.ridedott.com/public/v2/jena/gbfs.json
+DE,Dott Kaiserslautern,https://gbfs.api.ridedott.com/public/v2/kaiserslautern/gbfs.json
+DE,Dott Karlsruhe,https://gbfs.api.ridedott.com/public/v2/karlsruhe/gbfs.json
+DE,Dott Kassel,https://gbfs.api.ridedott.com/public/v2/kassel/gbfs.json
+DE,Dott Kiel,https://gbfs.api.ridedott.com/public/v2/kiel/gbfs.json
+DE,Dott Langenfeld,https://gbfs.api.ridedott.com/public/v2/langenfeld/gbfs.json
+DE,Dott Leipzig,https://gbfs.api.ridedott.com/public/v2/leipzig/gbfs.json
+DE,Dott Lindau,https://gbfs.api.ridedott.com/public/v2/lindau/gbfs.json
+DE,Dott Lübeck,https://gbfs.api.ridedott.com/public/v2/lubeck/gbfs.json
+DE,Dott Ludwigsburg,https://gbfs.api.ridedott.com/public/v2/ludwigsburg/gbfs.json
+DE,Dott Mainz,https://gbfs.api.ridedott.com/public/v2/mainz/gbfs.json
+DE,Dott Mannheim,https://gbfs.api.ridedott.com/public/v2/mannheim/gbfs.json
+DE,Dott Minden,https://gbfs.api.ridedott.com/public/v2/minden/gbfs.json
+DE,Dott Monchengladbach,https://gbfs.api.ridedott.com/public/v2/monchengladbach/gbfs.json
+DE,Dott Monheim am Rhein,https://gbfs.api.ridedott.com/public/v2/monheim-am-rhein/gbfs.json
+DE,Dott Mulheim an der Ruhr,https://gbfs.api.ridedott.com/public/v2/mulheim-an-der-ruhr/gbfs.json
+DE,Dott Munich,https://gbfs.api.ridedott.com/public/v2/munich/gbfs.json
+DE,Dott Münster,https://gbfs.api.ridedott.com/public/v2/munster/gbfs.json
+DE,Dott Neumünster,https://gbfs.api.ridedott.com/public/v2/neumunster/gbfs.json
+DE,Dott Neuss,https://gbfs.api.ridedott.com/public/v2/neuss/gbfs.json
+DE,Dott Nuremberg,https://gbfs.api.ridedott.com/public/v2/nuremberg/gbfs.json
+DE,Dott Osnabrück,https://gbfs.api.ridedott.com/public/v2/osnabruck/gbfs.json
+DE,Dott Paderborn,https://gbfs.api.ridedott.com/public/v2/paderborn/gbfs.json
+DE,Dott Peine,https://gbfs.api.ridedott.com/public/v2/peine/gbfs.json
+DE,Dott Pinneberg,https://gbfs.api.ridedott.com/public/v2/pinneberg/gbfs.json
+DE,Dott Potsdam,https://gbfs.api.ridedott.com/public/v2/potsdam/gbfs.json
+DE,Dott Recklinghausen,https://gbfs.api.ridedott.com/public/v2/recklinghausen/gbfs.json
+DE,Dott Regensburg,https://gbfs.api.ridedott.com/public/v2/regensburg/gbfs.json
+DE,Dott Reutlingen,https://gbfs.api.ridedott.com/public/v2/reutlingen/gbfs.json
+DE,Dott Rheda-Wiedenbrück,https://gbfs.api.ridedott.com/public/v2/rheda-wiedenbruck/gbfs.json
+DE,Dott Rheine,https://gbfs.api.ridedott.com/public/v2/rheine/gbfs.json
+DE,Dott Rostock,https://gbfs.api.ridedott.com/public/v2/rostock/gbfs.json
+DE,Dott Rüsselsheim,https://gbfs.api.ridedott.com/public/v2/russelsheim/gbfs.json
+DE,Dott Saarbrücken,https://gbfs.api.ridedott.com/public/v2/saarbrucken/gbfs.json
+DE,Dott Salzgitter,https://gbfs.api.ridedott.com/public/v2/salzgitter/gbfs.json
+DE,Dott Sankt Augustin,https://gbfs.api.ridedott.com/public/v2/sankt-augustin/gbfs.json
+DE,Dott Schwäbisch Gmünd,https://gbfs.api.ridedott.com/public/v2/schwabisch-gmund/gbfs.json
+DE,Dott Solingen,https://gbfs.api.ridedott.com/public/v2/solingen/gbfs.json
+DE,Dott Stuttgart,https://gbfs.api.ridedott.com/public/v2/stuttgart/gbfs.json
+DE,Dott Troisdorf,https://gbfs.api.ridedott.com/public/v2/troisdorf/gbfs.json
+DE,Dott Tübingen,https://gbfs.api.ridedott.com/public/v2/tubingen/gbfs.json
+DE,Dott Überlingen,https://gbfs.api.ridedott.com/public/v2/uberlingen/gbfs.json
+DE,Dott Ulm,https://gbfs.api.ridedott.com/public/v2/ulm/gbfs.json
+DE,Dott Wiesbaden,https://gbfs.api.ridedott.com/public/v2/wiesbaden/gbfs.json
+DE,Dott Wolfsburg,https://gbfs.api.ridedott.com/public/v2/wolfsburg/gbfs.json
+DE,Dott Wuppertal,https://gbfs.api.ridedott.com/public/v2/wuppertal/gbfs.json
+DE,Dott Zwickau,https://gbfs.api.ridedott.com/public/v2/zwickau/gbfs.json
+DE,EDEKA Grünheide,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ed/gbfs.json
+DE,Eifel e-Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_eb/gbfs.json
+DE,Einfach Unterwegs,https://api.mobidata-bw.de/sharing/gbfs/v3/einfach_unterwegs/gbfs
+DE,EinfachMobil,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_eh/gbfs.json
+DE,esel.ac,https://di.esel.ac/gbfs/gbfs.json
+DE,euregiobike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_an/gbfs.json
+DE,FaRe - das Bananologen Lastenrad,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_fare/gbfs
+DE,Flinkster,https://api.mobidata-bw.de/sharing/gbfs/v3/flinkster_carsharing/gbfs
+DE,flux Bikesharing,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ev/gbfs.json
+DE,Ford Carsharing (Autohaus Baur),https://api.mobidata-bw.de/sharing/gbfs/v3/ford_carsharing_autohausbaur/gbfs
+DE,Ford Carsharing (Autohaus Kauderer),https://api.mobidata-bw.de/sharing/gbfs/v3/ford_carsharing_autohauskauderer/gbfs
+DE,franke,https://api.mobidata-bw.de/sharing/gbfs/v3/freibe/gbfs
+DE,franke,https://api.mobidata-bw.de/sharing/gbfs/v3/lube/gbfs
+DE,Frelo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_df/gbfs.json
+DE,Getaround Berlin,https://getaround.com/gbfs/v3/berlin/gbfs
+DE,Getaround Essen,https://getaround.com/gbfs/v3/essen/gbfs
+DE,Getaround Hamburg,https://getaround.com/gbfs/v3/hamburg/gbfs
+DE,Getaround Leverkusen,https://getaround.com/gbfs/v3/leverkusen/gbfs
+DE,Getaround Norderstedt,https://getaround.com/gbfs/v3/norderstedt/gbfs
+DE,Getaround Pulheim,https://getaround.com/gbfs/v3/pulheim/gbfs
+DE,Getaround Troisdorf,https://getaround.com/gbfs/v3/troisdorf/gbfs
+DE,Getaround Velbert,https://getaround.com/gbfs/v3/velbert/gbfs
+DE,Graben - ready4green,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_da/gbfs.json
+DE,Gülf - das Gültsteiner Lastenrad,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_guelf/gbfs
+DE,HelBi (Kreis Soest),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hb/gbfs.json
+DE,Heraeus Hanau,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hg/gbfs.json
+DE,HERTLEIN Carsharing,https://api.mobidata-bw.de/sharing/gbfs/v3/hertlein_carsharing/gbfs
+DE,Hopp Konstanz,https://api.mobidata-bw.de/sharing/gbfs/v3/hopp_konstanz/gbfs
+DE,KVB Rad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_kg/gbfs.json
+DE,KVV.nextbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_fg/gbfs.json
+DE,Landkreis Nordsachsen,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lc/gbfs.json
+DE,LaRa to go,https://api.mobidata-bw.de/sharing/gbfs/v3/lara_to_go/gbfs
+DE,LastenVelo Freiburg,https://api.mobidata-bw.de/sharing/gbfs/v3/lastenvelo_fr/gbfs
+DE,Lime Frankfurt,https://data.lime.bike/api/partners/v2/gbfs/frankfurt/gbfs.json
+DE,Lime Hamburg,https://data.lime.bike/api/partners/v2/gbfs/hamburg/gbfs.json
+DE,Lime Oberhausen,https://data.lime.bike/api/partners/v2/gbfs/oberhausen/gbfs.json
+DE,Lime Stuttgart,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_stuttgart/gbfs
+DE,Lime Stuttgart-Konstanz,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_bw/gbfs
+DE,Lime Wuppertal,https://data.lime.bike/api/partners/v2/gbfs/wuppertal/gbfs.json
+DE,Mein konrad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_kk/gbfs.json
+DE,meinSiggi,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dg/gbfs.json
+DE,metropolradruhr,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_mr/gbfs.json
+DE,Mikar,https://api.mobidata-bw.de/sharing/gbfs/v3/mikar/gbfs
+DE,MOBIbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dx/gbfs.json
+DE,mobic,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_re/gbfs.json
+DE,moin mobil Achim,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_am/gbfs.json
+DE,movemix_bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_mx/gbfs.json
+DE,MyRadl,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ml/gbfs.json
+DE,Naturenergie sharing,https://api.mobidata-bw.de/sharing/gbfs/v3/naturenergie_sharing/gbfs
+DE,NEW MöBus nextbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sn/gbfs.json
+DE,nextbike Berlin,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json
+DE,nextbike Düsseldorf,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dd/gbfs.json
+DE,nextbike Frankfurt,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ff/gbfs.json
+DE,nextbike Gießen,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ng/gbfs.json
+DE,nextbike Gütersloh,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dj/gbfs.json
+DE,nextbike Hannover,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dh/gbfs.json
+DE,nextbike Kassel,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dk/gbfs.json
+DE,nextbike Leipzig,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_le/gbfs.json
+DE,nextbike Marburg,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nm/gbfs.json
+DE,nextbike Norderstedt,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nn/gbfs.json
+DE,nextbike Rüsselsheim am Main,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_do/gbfs.json
+DE,nextbike Wiesbaden,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wn/gbfs.json
+DE,OberSchwabenMobil CarSharing,https://api.mobidata-bw.de/sharing/gbfs/v3/oberschwabenmobil/gbfs
+DE,OLi-Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wo/gbfs.json
+DE,Potsdam Rad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json
+DE,RegioRadStuttgart,https://api.mobidata-bw.de/sharing/gbfs/v3/regiorad_stuttgart/gbfs
+DE,Roche - Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rr/gbfs.json
+DE,S11-Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sv/gbfs.json
+DE,SAP Walldorf,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ds/gbfs.json
+DE,SEEFAHRER E-Carsharing,https://api.mobidata-bw.de/sharing/gbfs/v3/seefahrer_ecarsharing/gbfs
+DE,Stadtmobil Karlsruhe,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtmobil_karlsruhe/gbfs
+DE,Stadtmobil Rhein-Neckar,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtmobil_rhein-neckar/gbfs
+DE,Stadtmobil Stuttgart,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtmobil_stuttgart/gbfs
+DE,stadtRad - das stadtnavi Lastenrad,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_stadtrad/gbfs
+DE,StadtRad Greifswald,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ug/gbfs.json
+DE,Stadtwerk Tauberfranken,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtwerk_tauberfranken/gbfs
+DE,Stella,https://api.mobidata-bw.de/sharing/gbfs/v3/stella/gbfs
+DE,swabi - augsburg,https://gbfs.partners.fifteen.eu/gbfs/2.2/swabi/en/gbfs.json
+DE,swu2go Carsharing,https://ixsi.swu.de/gbfs.json
+DE,TeilAuto Biberach,https://api.mobidata-bw.de/sharing/gbfs/v3/teilauto_biberach/gbfs
+DE,TeilAuto Neckar-Alb,https://api.mobidata-bw.de/sharing/gbfs/v3/teilauto_neckar-alb/gbfs
+DE,TeilAuto Schwäbisch Hall,https://api.mobidata-bw.de/sharing/gbfs/v3/teilauto_schwaebisch_hall/gbfs
+DE,UsedomRad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ur/gbfs.json
+DE,VAG_Rad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dv/gbfs.json
+DE,Veloleo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dn/gbfs.json
+DE,Voi,https://api.mobidata-bw.de/sharing/gbfs/v3/voi_de/gbfs
+DE,VRNnextbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vn/gbfs.json
+DE,welo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wa/gbfs.json
+DE,westBike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gh/gbfs.json
+DE,WinsenRad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wd/gbfs.json
+DE,wupsiRad Leverkusen,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dw/gbfs.json
+DE,Yoio Erfurt,https://yoio.rideatom.com/gbfs/159/v3.0/gbfs
+DE,Yoio Freiburg,https://yoio.rideatom.com/gbfs/71/v3.0/gbfs
+DE,Yoio Göttingen,https://yoio.rideatom.com/gbfs/9/v3.0/gbfs
+DE,zeo Carsharing,https://api.mobidata-bw.de/sharing/gbfs/v3/zeo_bruchsal/gbfs
+DE,Zeus Bamberg,https://zeus.city/api/v1/mds/gbfs/bamberg/gbfs.json
+DE,Zeus Castrop Rauxel,https://zeus.city/api/v1/mds/gbfs/castrop-rauxel/gbfs.json
+DE,Zeus Duisburg,https://zeus.city/api/v1/mds/gbfs/duisburg/gbfs.json
+DE,Zeus Freiburg,https://zeus.city/api/v1/mds/gbfs/freiburg%20im%20breisgau/gbfs.json
+DE,Zeus Friedberg,https://zeus.city/api/v1/mds/gbfs/friedberg/gbfs.json
+DE,Zeus Gera,https://zeus.city/api/v1/mds/gbfs/gera/gbfs.json
+DE,Zeus Goppingen,https://zeus.city/api/v1/mds/gbfs/goppingen/gbfs.json
+DE,Zeus Hagen,https://zeus.city/api/v1/mds/gbfs/hagen/gbfs.json
+DE,Zeus Hattingen,https://zeus.city/api/v1/mds/gbfs/hattingen/gbfs.json
+DE,Zeus Heidelberg,https://zeus.city/api/v1/mds/gbfs/heidelberg/gbfs.json
+DE,Zeus Heilbronn,https://zeus.city/api/v1/mds/gbfs/heilbronn/gbfs.json
+DE,Zeus Hemmingen,https://zeus.city/api/v1/mds/gbfs/hemmingen/gbfs.json
+DE,Zeus Herne,https://zeus.city/api/v1/mds/gbfs/herne/gbfs.json
+DE,Zeus Jena,https://zeus.city/api/v1/mds/gbfs/jena/gbfs.json
+DE,Zeus Kempten,https://zeus.city/api/v1/mds/gbfs/kempten/gbfs.json
+DE,Zeus Konstanz,https://zeus.city/api/v1/mds/gbfs/konstanz/gbfs.json
+DE,Zeus Limburgerhof,https://zeus.city/api/v1/mds/gbfs/limburgerhof/gbfs.json
+DE,Zeus Ludwigsburg,https://zeus.city/api/v1/mds/gbfs/ludwigsburg/gbfs.json
+DE,Zeus Marburg,https://zeus.city/api/v1/mds/gbfs/marburg/gbfs.json
+DE,Zeus Neustadt,https://zeus.city/api/v1/mds/gbfs/neustadt/gbfs.json
+DE,Zeus Pforzheim,https://zeus.city/api/v1/mds/gbfs/pforzheim/gbfs.json
+DE,Zeus Regensburg,https://zeus.city/api/v1/mds/gbfs/regensburg/gbfs.json
+DE,Zeus Renningen-Malmsheim,https://zeus.city/api/v1/mds/gbfs/renningen-malmsheim/gbfs.json
+DE,Zeus Reutlingen,https://zeus.city/api/v1/mds/gbfs/reutlingen/gbfs.json
+DE,Zeus Russelsheim,https://zeus.city/api/v1/mds/gbfs/russelsheim/gbfs.json
+DE,Zeus Schwäbisch Gmünd,https://zeus.city/api/v1/mds/gbfs/schwabisch%20gmund/gbfs.json
+DE,Zeus Schweinfurt,https://zeus.city/api/v1/mds/gbfs/schweinfurt/gbfs.json
+DE,Zeus Straubing,https://zeus.city/api/v1/mds/gbfs/straubing/gbfs.json
+DE,Zeus Tubingen,https://zeus.city/api/v1/mds/gbfs/tubingen/gbfs.json
+DE,Zeus Tuttlingen,https://zeus.city/api/v1/mds/gbfs/tuttlingen/gbfs.json
+DE,Zeus Villingen-Schwenningen,https://zeus.city/api/v1/mds/gbfs/villingen-schwenningen/gbfs.json
+DE,Zeus Wurzburg,https://zeus.city/api/v1/mds/gbfs/wurzburg/gbfs.json
+DK,Donkey Republic Aalborg,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_aalborg/gbfs.json
+DK,Donkey Republic Aarhus,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_aarhus/gbfs.json
+DK,Donkey Republic Ballerup,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_ballerup/gbfs.json
+DK,Donkey Republic Bandholm,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_bandholm/gbfs.json
+DK,Donkey Republic Copenhagen,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_copenhagen/gbfs.json
+DK,Donkey Republic Frederikshavn,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_frederikshavn/gbfs.json
+DK,Donkey Republic Glostrup,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_glostrup/gbfs.json
+DK,Donkey Republic Herning,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_herning/gbfs.json
+DK,Donkey Republic Hillerød,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hillerod/gbfs
+DK,Donkey Republic Klampenborg,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_klampenborg/gbfs.json
+DK,Donkey Republic Lalandia (Rødby),https://stables.donkey.bike/api/public/gbfs/3.0/donkey_lalandia/gbfs.json
+DK,Donkey Republic Middelfart,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_middelfart/gbfs.json
+DK,Donkey Republic Odense,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_odense/gbfs.json
+DK,Donkey Republic Rødvig,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_roedvig/gbfs.json
+DK,Donkey Republic Store Heddinge,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_store_heddinge/gbfs.json
+DK,Dott Copenhagen,https://gbfs.api.ridedott.com/public/v2/copenhagen/gbfs.json
+DK,Dott Frederikssund,https://gbfs.api.ridedott.com/public/v2/frederikssund/gbfs.json
+DK,Dott Region Hovedstaden,https://gbfs.api.ridedott.com/public/v2/region-h/gbfs.json
+DK,Dott Roskilde,https://gbfs.api.ridedott.com/public/v2/roskilde/gbfs.json
+ES,AMBici,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bs/gbfs.json
+ES,BBK Klimabizi,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ey/gbfs.json
+ES,bibo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_by/gbfs.json
+ES,biciArteixo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_aa/gbfs.json
+ES,Bicicoruña,https://acoruna.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+ES,bicimad,https://madrid.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+ES,BiciMislata,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ad/gbfs.json
+ES,Bicing,https://barcelona.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+ES,BicinRivas,https://rivas.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+ES,BiciPalma,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ea/gbfs.json
+ES,Bilbao Bizi,https://bilbao.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+ES,Bird Adeje,https://mds.bird.co/gbfs/v2/public/adeje/gbfs.json
+ES,Bird Antigua,https://mds.bird.co/gbfs/v2/public/antigua/gbfs.json
+ES,Bird Barcelona,https://mds.bird.co/gbfs/v2/public/barcelona/gbfs.json
+ES,Bird Gijón,https://mds.bird.co/gbfs/v2/public/gijon/gbfs.json
+ES,Bird Madrid,https://mds.bird.co/gbfs/v2/public/madrid/gbfs.json
+ES,Bird Murcia,https://mds.bird.co/gbfs/v2/public/murcia/gbfs.json
+ES,Bird Pájara,https://mds.bird.co/gbfs/v2/public/pajara/gbfs.json
+ES,Bird Zaragoza,https://mds.bird.co/gbfs/v2/public/zaragoza/gbfs.json
+ES,Bizi,https://zaragoza.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+ES,bizkaibizi (Spain),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bw/gbfs.json
+ES,Cooltra Barcelona,https://maas.zeus.cooltra.com/gbfs/barcelona/3.0/en/gbfs.json
+ES,Dbizi,https://sansebastian.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+ES,Donkey Republic Barcelona,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_barcelona/gbfs.json
+ES,Dott Estepona,https://gbfs.api.ridedott.com/public/v2/estepona/gbfs.json
+ES,Dott Grado,https://gbfs.api.ridedott.com/public/v2/grado/gbfs.json
+ES,Dott Ibiza,https://gbfs.api.ridedott.com/public/v2/ibiza/gbfs.json
+ES,Dott La-Manga,https://gbfs.api.ridedott.com/public/v2/la-manga/gbfs.json
+ES,Dott Lorca,https://gbfs.api.ridedott.com/public/v2/lorca/gbfs.json
+ES,Dott Murcia,https://gbfs.api.ridedott.com/public/v2/murcia/gbfs.json
+ES,Dott Tarragona,https://gbfs.api.ridedott.com/public/v2/tarragona/gbfs.json
+ES,Dott Tenerife,https://gbfs.api.ridedott.com/public/v2/tenerife/gbfs.json
+ES,Dott Tenerife-Sur,https://gbfs.api.ridedott.com/public/v2/tenerife-sur/gbfs.json
+ES,Ganxeta,https://gbfs.ganxeta.cat/v2/gbfs.json
+ES,Getaround Alcobendas,https://getaround.com/gbfs/v3/alcobendas/gbfs
+ES,Getaround Alicante,https://getaround.com/gbfs/v3/alicante/gbfs
+ES,Getaround Aranjuez,https://getaround.com/gbfs/v3/aranjuez/gbfs
+ES,Getaround Badalona,https://getaround.com/gbfs/v3/badalona/gbfs
+ES,Getaround Barcelona,https://getaround.com/gbfs/v3/barcelona/gbfs
+ES,Getaround Benidorm,https://getaround.com/gbfs/v3/benidorm/gbfs
+ES,Getaround Candelaria,https://getaround.com/gbfs/v3/candelaria/gbfs
+ES,Getaround Castelldefels,https://getaround.com/gbfs/v3/castelldefels/gbfs
+ES,Getaround Coslada,https://getaround.com/gbfs/v3/coslada/gbfs
+ES,Getaround Fuenlabrada,https://getaround.com/gbfs/v3/fuenlabrada/gbfs
+ES,Getaround Getafe,https://getaround.com/gbfs/v3/getafe/gbfs
+ES,Getaround Granada,https://getaround.com/gbfs/v3/granada/gbfs
+ES,Getaround Granollers,https://getaround.com/gbfs/v3/granollers/gbfs
+ES,Getaround Madrid,https://getaround.com/gbfs/v3/madrid/gbfs
+ES,Getaround Majadahonda,https://getaround.com/gbfs/v3/majadahonda/gbfs
+ES,Getaround Mao,https://getaround.com/gbfs/v3/mao/gbfs
+ES,Getaround Parla,https://getaround.com/gbfs/v3/parla/gbfs
+ES,Getaround Paterna,https://getaround.com/gbfs/v3/paterna/gbfs
+ES,Getaround Sabadell,https://getaround.com/gbfs/v3/sabadell/gbfs
+ES,Getaround Sevilla,https://getaround.com/gbfs/v3/sevilla/gbfs
+ES,Getaround Torremolinos,https://getaround.com/gbfs/v3/torremolinos/gbfs
+ES,Getaround Torrent,https://getaround.com/gbfs/v3/torrent/gbfs
+ES,Getaround Valdemoro,https://getaround.com/gbfs/v3/valdemoro/gbfs
+ES,Getaround Valencia,https://getaround.com/gbfs/v3/valencia/gbfs
+ES,Getaround Viladecans,https://getaround.com/gbfs/v3/viladecans/gbfs
+ES,Lovesharing (Canary Islands),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ls/gbfs.json
+ES,moxsi (Las Palmas de Gran Canaria),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_el/gbfs.json
+ES,nextbike BiciLOG,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ej/gbfs.json
+ES,nextbike León,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sl/gbfs.json
+ES,Ontibici,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_oy/gbfs.json
+ES,Sevici,https://api.cyclocity.fr/contracts/seville/gbfs/v3/gbfs.json
+ES,TORRENTBICI,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_en/gbfs.json
+ES,TUeBICI,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ek/gbfs.json
+ES,Valenbisi,https://api.cyclocity.fr/contracts/valence/gbfs/v3/gbfs.json
+ES,Valladolid,https://valladolid.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+FI,Bird Helsinki,https://mds.bird.co/gbfs/v2/public/helsinki/gbfs.json
+FI,Donkey Republic Hämeenlinna,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_haemeenlinna/gbfs.json
+FI,Donkey Republic Hamina,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hamina/gbfs.json
+FI,Donkey Republic Hyvinkää,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hyvinkaa/gbfs
+FI,Donkey Republic Iisalmi,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_iisalmi/gbfs.json
+FI,Donkey Republic Imatra,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_imatra/gbfs.json
+FI,Donkey Republic Kotka,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kotka/gbfs.json
+FI,Donkey Republic Kouvola,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kouvola/gbfs.json
+FI,Donkey Republic Lappeenranta,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_lappeenranta/gbfs.json
+FI,Donkey Republic Mäntsälä,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_maentsaelae/gbfs.json
+FI,Donkey Republic Mikkeli,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_mikkeli/gbfs.json
+FI,Donkey Republic Porvoo,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_porvoo/gbfs.json
+FI,Donkey Republic Raasepori,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_raasepori/gbfs
+FI,Donkey Republic Riihimäki,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_riihimaki/gbfs
+FI,Donkey Republic Turku,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_turku/gbfs.json
+FI,Dott Ekenäs,https://gbfs.api.ridedott.com/public/v2/tammisaari/gbfs.json
+FI,Dott Espoo,https://gbfs.api.ridedott.com/public/v2/espoo/gbfs.json
+FI,Dott Hameenlinna,https://gbfs.api.ridedott.com/public/v2/hameenlinna/gbfs.json
+FI,Dott Hamina,https://gbfs.api.ridedott.com/public/v2/hamina/gbfs.json
+FI,Dott Hanko,https://gbfs.api.ridedott.com/public/v2/hanko/gbfs.json
+FI,Dott Helsinki,https://gbfs.api.ridedott.com/public/v2/helsinki/gbfs.json
+FI,Dott Hyvinkaa,https://gbfs.api.ridedott.com/public/v2/hyvinkaa/gbfs.json
+FI,Dott Imatra,https://gbfs.api.ridedott.com/public/v2/imatra/gbfs.json
+FI,Dott Jakobstad,https://gbfs.api.ridedott.com/public/v2/jakobstad/gbfs.json
+FI,Dott Jarvenpaa,https://gbfs.api.ridedott.com/public/v2/jarvenpaa/gbfs.json
+FI,Dott Joensuu,https://gbfs.api.ridedott.com/public/v2/joensuu/gbfs.json
+FI,Dott Jyvaskyla,https://gbfs.api.ridedott.com/public/v2/jyvaskyla/gbfs.json
+FI,Dott Kaarina,https://gbfs.api.ridedott.com/public/v2/kaarina/gbfs.json
+FI,Dott Kajaani,https://gbfs.api.ridedott.com/public/v2/kajaani/gbfs.json
+FI,Dott Kangasala,https://gbfs.api.ridedott.com/public/v2/kangasala/gbfs.json
+FI,Dott Kerava,https://gbfs.api.ridedott.com/public/v2/kerava/gbfs.json
+FI,Dott Kirkkonummi,https://gbfs.api.ridedott.com/public/v2/kirkkonummi/gbfs.json
+FI,Dott Klaukkala,https://gbfs.api.ridedott.com/public/v2/klaukkala/gbfs.json
+FI,Dott Kokkola,https://gbfs.api.ridedott.com/public/v2/kokkola/gbfs.json
+FI,Dott Kotka,https://gbfs.api.ridedott.com/public/v2/kotka/gbfs.json
+FI,Dott Kouvola,https://gbfs.api.ridedott.com/public/v2/kouvola/gbfs.json
+FI,Dott Kuopio,https://gbfs.api.ridedott.com/public/v2/kuopio/gbfs.json
+FI,Dott Lahti,https://gbfs.api.ridedott.com/public/v2/lahti/gbfs.json
+FI,Dott Lappeenranta,https://gbfs.api.ridedott.com/public/v2/lappeenranta/gbfs.json
+FI,Dott Lempaala,https://gbfs.api.ridedott.com/public/v2/lempaala/gbfs.json
+FI,Dott Mikkeli,https://gbfs.api.ridedott.com/public/v2/mikkeli/gbfs.json
+FI,Dott Myyrmaki,https://gbfs.api.ridedott.com/public/v2/myyrmaki/gbfs.json
+FI,Dott Naantali,https://gbfs.api.ridedott.com/public/v2/naantali/gbfs.json
+FI,Dott Nokia,https://gbfs.api.ridedott.com/public/v2/nokia/gbfs.json
+FI,Dott Porvoo,https://gbfs.api.ridedott.com/public/v2/porvoo/gbfs.json
+FI,Dott Raisio,https://gbfs.api.ridedott.com/public/v2/raisio/gbfs.json
+FI,Dott Rauma,https://gbfs.api.ridedott.com/public/v2/rauma/gbfs.json
+FI,Dott Riihimäki,https://gbfs.api.ridedott.com/public/v2/riihimaki/gbfs.json
+FI,Dott Salo,https://gbfs.api.ridedott.com/public/v2/salo/gbfs.json
+FI,Dott Seinajoki,https://gbfs.api.ridedott.com/public/v2/seinajoki/gbfs.json
+FI,Dott Tampere,https://gbfs.api.ridedott.com/public/v2/tampere/gbfs.json
+FI,Dott Turku,https://gbfs.api.ridedott.com/public/v2/turku/gbfs.json
+FI,Dott Vaasa,https://gbfs.api.ridedott.com/public/v2/vaasa/gbfs.json
+FI,Dott Vantaa,https://gbfs.api.ridedott.com/public/v2/vantaa/gbfs.json
+FI,Joe Rauma,https://joe.rideatom.com/gbfs/v2_2/en/gbfs?id=475
+FR,Altervelo Libre-service,https://api.gbfs.v3.0.ecovelo.mobi/altervelo/gbfs.json
+FR,AQTA,https://gbfs.partners.fifteen.eu/gbfs/auray-quiberon/gbfs.json
+FR,Auch Velo'C,https://api.gbfs.v3.0.ecovelo.mobi/auchveloc/gbfs.json
+FR,Auto-en-Velay,https://backend.citiz.fr/public/provider/23/gbfs/3.0/gbfs.json
+FR,AuxR_M le vélo,https://gbfs.partners.fifteen.eu/gbfs/2.2/auxerre/en/gbfs.json
+FR,Bird Ajaccio,https://mds.bird.co/gbfs/v2/public/ajaccio/gbfs.json
+FR,Bird Bordeaux,https://mds.bird.co/gbfs/v2/public/bordeaux/gbfs.json
+FR,Bird Castres,https://mds.bird.co/gbfs/v2/public/castres/gbfs.json
+FR,Bird Chalonsenchampagne,https://mds.bird.co/gbfs/v2/public/chalonsenchampagne/gbfs.json
+FR,Bird Dieppe,https://mds.bird.co/gbfs/v2/public/dieppe/gbfs.json
+FR,Bird Draguignan,https://mds.bird.co/gbfs/v2/public/draguignan/gbfs.json
+FR,Bird Epron,https://mds.bird.co/gbfs/v2/public/epron/gbfs.json
+FR,Bird Gap,https://mds.bird.co/gbfs/v2/public/gap/gbfs.json
+FR,Bird Herouvillesaintclair,https://mds.bird.co/gbfs/v2/public/herouvillesaintclair/gbfs.json
+FR,Bird Larochesuryon,https://mds.bird.co/gbfs/v2/public/larochesuryon/gbfs.json
+FR,Bird Laval,https://mds.bird.co/gbfs/v2/public/laval/gbfs.json
+FR,Bird Marseille,https://mds.bird.co/gbfs/v2/public/marseille/gbfs.json
+FR,Bird Millau,https://mds.bird.co/gbfs/v2/public/millau/gbfs.json
+FR,Bird Montlucon,https://mds.bird.co/gbfs/v2/public/montlucon/gbfs.json
+FR,Bird Ouistreham,https://mds.bird.co/gbfs/v2/public/ouistreham/gbfs.json
+FR,Bird Sarreguemines,https://mds.bird.co/gbfs/v2/public/sarreguemines/gbfs.json
+FR,Bird Vichy,https://mds.bird.co/gbfs/v2/public/vichy/gbfs.json
+FR,Brennus à Vélo (Sens),https://gbfs.partners.fifteen.eu/gbfs/2.2/sens/en/gbfs.json
+FR,BYCOR,https://www.mobility-parc.net/gbfs/v3/TARARE/gbfs.json
+FR,C-Vélo,https://clermontferrand.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+FR,CaliVélo,https://api.gbfs.v3.0.ecovelo.mobi/calivelo/gbfs.json
+FR,CapCotentin,https://api.gbfs.v3.0.ecovelo.mobi/capcotentin/gbfs.json
+FR,CHATELLERAULT,https://www.mobility-parc.net/gbfs/v3/CHATELLERAULT/gbfs.json
+FR,Choletbus 2 Roues,https://api.gbfs.v3.0.ecovelo.mobi/choletbus/gbfs.json
+FR,Citédia Services,https://backend.citiz.fr/public/provider/22/gbfs/3.0/gbfs.json
+FR,Citiz Alpes Loire,https://backend.citiz.fr/public/provider/5/gbfs/3.0/gbfs.json
+FR,Citiz Angers,https://backend.citiz.fr/public/provider/7/gbfs/3.0/gbfs.json
+FR,Citiz AUPA,https://backend.citiz.fr/public/provider/20/gbfs/3.0/gbfs.json
+FR,Citiz BFC,https://backend.citiz.fr/public/provider/2/gbfs/3.0/gbfs.json
+FR,Citiz Développement,https://backend.citiz.fr/public/provider/12/gbfs/3.0/gbfs.json
+FR,Citiz Gironde,https://backend.citiz.fr/public/provider/4/gbfs/3.0/gbfs.json
+FR,Citiz Grand Est,https://backend.citiz.fr/public/provider/1/gbfs/3.0/gbfs.json
+FR,Citiz Grand Poitiers,https://backend.citiz.fr/public/provider/9/gbfs/3.0/gbfs.json
+FR,Citiz La Rochelle,https://backend.citiz.fr/public/provider/18/gbfs/3.0/gbfs.json
+FR,Citiz Lille Arras,https://backend.citiz.fr/public/provider/16/gbfs/3.0/gbfs.json
+FR,Citiz Métropole Lyon,https://backend.citiz.fr/public/provider/3/gbfs/3.0/gbfs.json
+FR,Citiz Nantes,https://backend.citiz.fr/public/provider/15/gbfs/3.0/gbfs.json
+FR,Citiz Occitanie,https://backend.citiz.fr/public/provider/8/gbfs/3.0/gbfs.json
+FR,Citiz Provence,https://backend.citiz.fr/public/provider/6/gbfs/3.0/gbfs.json
+FR,Citiz Rennes Métropole,https://backend.citiz.fr/public/provider/19/gbfs/3.0/gbfs.json
+FR,Clem,https://gbfs.clem.mobi/gbfs.json
+FR,Cycl'AM,https://api.gbfs.v3.0.ecovelo.mobi/cyclam/gbfs.json
+FR,Cyclolibre,https://api.gbfs.v3.0.ecovelo.mobi/cyclolibre/gbfs.json
+FR,Cyclovis,https://api.gbfs.v3.0.ecovelo.mobi/cyclovis/gbfs.json
+FR,Donkey Republic Valenciennes,https://stables.donkey.bike/api/public/gbfs/3.0/valenciennes/gbfs.json
+FR,Dott Bordeaux,https://gbfs.api.ridedott.com/public/v2/bordeaux/gbfs.json
+FR,Dott Bourgoin Jallieu,https://gbfs.api.ridedott.com/public/v2/bourgoin-jallieu/gbfs.json
+FR,Dott Gpseo,https://gbfs.api.ridedott.com/public/v2/gpseo/gbfs.json
+FR,Dott Lyon,https://gbfs.api.ridedott.com/public/v2/lyon/gbfs.json
+FR,Dott Ol-Vallee,https://gbfs.api.ridedott.com/public/v2/ol-vallee/gbfs.json
+FR,Dott Paris,https://gbfs.api.ridedott.com/public/v2/paris/gbfs.json
+FR,Dott SIEMU,https://gbfs.api.ridedott.com/public/v2/siemu/gbfs.json
+FR,Dott Versailles Grand-Parc,https://gbfs.api.ridedott.com/public/v2/versailles-grand-parc/gbfs.json
+FR,Estrées Saint Denis,https://www.mobility-parc.net/gbfs/v3/ESTREES/gbfs.json
+FR,Getaround Aix-En-Provence,https://getaround.com/gbfs/v3/aix-en-provence/gbfs
+FR,Getaround Ajaccio,https://getaround.com/gbfs/v3/ajaccio/gbfs
+FR,Getaround Albi,https://getaround.com/gbfs/v3/albi/gbfs
+FR,Getaround Amiens,https://getaround.com/gbfs/v3/amiens/gbfs
+FR,Getaround Angers,https://getaround.com/gbfs/v3/angers/gbfs
+FR,Getaround Antibes,https://getaround.com/gbfs/v3/antibes/gbfs
+FR,Getaround Antony,https://getaround.com/gbfs/v3/antony/gbfs
+FR,Getaround Argenteuil,https://getaround.com/gbfs/v3/argenteuil/gbfs
+FR,Getaround Arles,https://getaround.com/gbfs/v3/arles/gbfs
+FR,Getaround Aubervilliers,https://getaround.com/gbfs/v3/aubervilliers/gbfs
+FR,Getaround Aulnay-Sous-Bois,https://getaround.com/gbfs/v3/aulnay-sous-bois/gbfs
+FR,Getaround Avignon,https://getaround.com/gbfs/v3/avignon/gbfs
+FR,Getaround Bayeux,https://getaround.com/gbfs/v3/bayeux/gbfs
+FR,Getaround Bayonne,https://getaround.com/gbfs/v3/bayonne/gbfs
+FR,Getaround Beaumont,https://getaround.com/gbfs/v3/beaumont/gbfs
+FR,Getaround Beauvais,https://getaround.com/gbfs/v3/beauvais/gbfs
+FR,Getaround Blois,https://getaround.com/gbfs/v3/blois/gbfs
+FR,Getaround Bordeaux,https://getaround.com/gbfs/v3/bordeaux/gbfs
+FR,Getaround Boulogne-Billancourt,https://getaround.com/gbfs/v3/boulogne-billancourt/gbfs
+FR,Getaround Bourges,https://getaround.com/gbfs/v3/bourges/gbfs
+FR,Getaround Brest,https://getaround.com/gbfs/v3/brest/gbfs
+FR,Getaround Brive-La-Gaillarde,https://getaround.com/gbfs/v3/brive-la-gaillarde/gbfs
+FR,Getaround Caen,https://getaround.com/gbfs/v3/caen/gbfs
+FR,Getaround Calais,https://getaround.com/gbfs/v3/calais/gbfs
+FR,Getaround Cannes,https://getaround.com/gbfs/v3/cannes/gbfs
+FR,Getaround Cergy,https://getaround.com/gbfs/v3/cergy/gbfs
+FR,Getaround Champigny-Sur-Marne,https://getaround.com/gbfs/v3/champigny-sur-marne/gbfs
+FR,Getaround Clamart,https://getaround.com/gbfs/v3/clamart/gbfs
+FR,Getaround Clermont-Ferrand,https://getaround.com/gbfs/v3/clermont-ferrand/gbfs
+FR,Getaround Clichy,https://getaround.com/gbfs/v3/clichy/gbfs
+FR,Getaround Colmar,https://getaround.com/gbfs/v3/colmar/gbfs
+FR,Getaround Colombes,https://getaround.com/gbfs/v3/colombes/gbfs
+FR,Getaround Courbevoie,https://getaround.com/gbfs/v3/courbevoie/gbfs
+FR,Getaround Dijon,https://getaround.com/gbfs/v3/dijon/gbfs
+FR,Getaround Drancy,https://getaround.com/gbfs/v3/drancy/gbfs
+FR,Getaround Dunkerque,https://getaround.com/gbfs/v3/dunkerque/gbfs
+FR,Getaround Fontenay-Sous-Bois,https://getaround.com/gbfs/v3/fontenay-sous-bois/gbfs
+FR,Getaround Grenoble,https://getaround.com/gbfs/v3/grenoble/gbfs
+FR,Getaround Issy-Les-Moulineaux,https://getaround.com/gbfs/v3/issy-les-moulineaux/gbfs
+FR,Getaround Ivry-Sur-Seine,https://getaround.com/gbfs/v3/ivry-sur-seine/gbfs
+FR,Getaround Laval,https://getaround.com/gbfs/v3/laval/gbfs
+FR,Getaround Levallois-Perret,https://getaround.com/gbfs/v3/levallois-perret/gbfs
+FR,Getaround Lille,https://getaround.com/gbfs/v3/lille/gbfs
+FR,Getaround Limay,https://getaround.com/gbfs/v3/limay/gbfs
+FR,Getaround Limoges,https://getaround.com/gbfs/v3/limoges/gbfs
+FR,Getaround Lorient,https://getaround.com/gbfs/v3/lorient/gbfs
+FR,Getaround Lyon,https://getaround.com/gbfs/v3/lyon/gbfs
+FR,Getaround Macau,https://getaround.com/gbfs/v3/macau/gbfs
+FR,Getaround Macon,https://getaround.com/gbfs/v3/macon/gbfs
+FR,Getaround Maisons-Alfort,https://getaround.com/gbfs/v3/maisons-alfort/gbfs
+FR,Getaround Marseille,https://getaround.com/gbfs/v3/marseille/gbfs
+FR,Getaround Meaux,https://getaround.com/gbfs/v3/meaux/gbfs
+FR,Getaround Meru,https://getaround.com/gbfs/v3/meru/gbfs
+FR,Getaround Metz,https://getaround.com/gbfs/v3/metz/gbfs
+FR,Getaround Montauban,https://getaround.com/gbfs/v3/montauban/gbfs
+FR,Getaround Montpellier,https://getaround.com/gbfs/v3/montpellier/gbfs
+FR,Getaround Montreuil,https://getaround.com/gbfs/v3/montreuil/gbfs
+FR,Getaround Mulhouse,https://getaround.com/gbfs/v3/mulhouse/gbfs
+FR,Getaround Nancy,https://getaround.com/gbfs/v3/nancy/gbfs
+FR,Getaround Nanterre,https://getaround.com/gbfs/v3/nanterre/gbfs
+FR,Getaround Nantes,https://getaround.com/gbfs/v3/nantes/gbfs
+FR,Getaround Narbonne,https://getaround.com/gbfs/v3/narbonne/gbfs
+FR,Getaround Neuilly-Sur-Seine,https://getaround.com/gbfs/v3/neuilly-sur-seine/gbfs
+FR,Getaround Nice,https://getaround.com/gbfs/v3/nice/gbfs
+FR,Getaround Niort,https://getaround.com/gbfs/v3/niort/gbfs
+FR,Getaround Noisy-Le-Grand,https://getaround.com/gbfs/v3/noisy-le-grand/gbfs
+FR,Getaround Orange,https://getaround.com/gbfs/v3/orange/gbfs
+FR,Getaround Pantin,https://getaround.com/gbfs/v3/pantin/gbfs
+FR,Getaround Paris,https://getaround.com/gbfs/v3/paris/gbfs
+FR,Getaround Pau,https://getaround.com/gbfs/v3/pau/gbfs
+FR,Getaround Perpignan,https://getaround.com/gbfs/v3/perpignan/gbfs
+FR,Getaround Pessac,https://getaround.com/gbfs/v3/pessac/gbfs
+FR,Getaround Poitiers,https://getaround.com/gbfs/v3/poitiers/gbfs
+FR,Getaround Quimper,https://getaround.com/gbfs/v3/quimper/gbfs
+FR,Getaround Reims,https://getaround.com/gbfs/v3/reims/gbfs
+FR,Getaround Rennes,https://getaround.com/gbfs/v3/rennes/gbfs
+FR,Getaround Roubaix,https://getaround.com/gbfs/v3/roubaix/gbfs
+FR,Getaround Rouen,https://getaround.com/gbfs/v3/rouen/gbfs
+FR,Getaround Rueil-Malmaison,https://getaround.com/gbfs/v3/rueil-malmaison/gbfs
+FR,Getaround Saint-Brieuc,https://getaround.com/gbfs/v3/saint-brieuc/gbfs
+FR,Getaround Saint-Denis,https://getaround.com/gbfs/v3/saint-denis/gbfs
+FR,Getaround Saint-Laurent,https://getaround.com/gbfs/v3/saint-laurent/gbfs
+FR,Getaround Saint-Louis,https://getaround.com/gbfs/v3/saint-louis/gbfs
+FR,Getaround Saint-Malo,https://getaround.com/gbfs/v3/saint-malo/gbfs
+FR,Getaround Saint-Nazaire,https://getaround.com/gbfs/v3/saint-nazaire/gbfs
+FR,Getaround Saint-Paul,https://getaround.com/gbfs/v3/saint-paul/gbfs
+FR,Getaround Saint-Quentin,https://getaround.com/gbfs/v3/saint-quentin/gbfs
+FR,Getaround Saint-Quentin-En-Yvelines,https://getaround.com/gbfs/v3/saint-quentin-en-yvelines/gbfs
+FR,Getaround Sarcelles,https://getaround.com/gbfs/v3/sarcelles/gbfs
+FR,Getaround Sartrouville,https://getaround.com/gbfs/v3/sartrouville/gbfs
+FR,Getaround Strasbourg,https://getaround.com/gbfs/v3/strasbourg/gbfs
+FR,Getaround Tarbes,https://getaround.com/gbfs/v3/tarbes/gbfs
+FR,Getaround Toulon,https://getaround.com/gbfs/v3/toulon/gbfs
+FR,Getaround Toulouse,https://getaround.com/gbfs/v3/toulouse/gbfs
+FR,Getaround Tourcoing,https://getaround.com/gbfs/v3/tourcoing/gbfs
+FR,Getaround Tours,https://getaround.com/gbfs/v3/tours/gbfs
+FR,Getaround Troyes,https://getaround.com/gbfs/v3/troyes/gbfs
+FR,Getaround Valence,https://getaround.com/gbfs/v3/valence/gbfs
+FR,Getaround Vannes,https://getaround.com/gbfs/v3/vannes/gbfs
+FR,Getaround Versailles,https://getaround.com/gbfs/v3/versailles/gbfs
+FR,Getaround Villeurbanne,https://getaround.com/gbfs/v3/villeurbanne/gbfs
+FR,Getaround Vitry-Sur-Seine,https://getaround.com/gbfs/v3/vitry-sur-seine/gbfs
+FR,Gévaudan,https://www.mobility-parc.net/gbfs/v3/GEVAUDAN/gbfs.json
+FR,GraouLib',https://gbfs.partners.fifteen.eu/gbfs/2.2/metz/en/gbfs.json
+FR,IDEcycle (Pau),https://gbfs.partners.fifteen.eu/gbfs/2.2/pau/en/gbfs.json
+FR,Impulsyon,https://api.gbfs.v3.0.ecovelo.mobi/impulsyon/gbfs.json
+FR,Karu'Vélo,https://api.gbfs.v3.0.ecovelo.mobi/karu/gbfs.json
+FR,Knot Strasbourg,https://api.knotcity.io/gbfs/v3/strasbourg/gbfs.json
+FR,La Baule,https://api.gbfs.v3.0.ecovelo.mobi/labaule/gbfs.json
+FR,Le Marcel,https://api.gbfs.v3.0.ecovelo.mobi/lemarcel/gbfs.json
+FR,Le Vélo par TBM,https://bdx.mecatran.com/utw/ws/gbfs/bordeaux/v3/gbfs.json?apiKey=opendata-bordeaux-metropole-flux-gtfs-rt
+FR,LE vélo STAR,https://eu.ftp.opendatasoft.com/star/gbfs/gbfs.json
+FR,Leo and Go,https://download.data.grandlyon.com/files/rdata/lag_leoandgo.disponibilite/gbfs.json
+FR,Les Petites Reines,https://api.gbfs.v3.0.ecovelo.mobi/petitesreines/gbfs.json
+FR,levélo - Marseille,https://gbfs.omega.fifteen.eu/gbfs/2.2/marseille/en/gbfs.json
+FR,Libélo,https://valence.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+FR,Lime Lille,https://data.lime.bike/api/partners/v2/gbfs/lille/gbfs.json
+FR,Lime Marseille,https://data.lime.bike/api/partners/v2/gbfs/marseille/gbfs.json
+FR,Lime Nice,https://data.lime.bike/api/partners/v2/gbfs/nice/gbfs.json
+FR,Lime Paris,https://data.lime.bike/api/partners/v2/gbfs/paris/gbfs.json
+FR,LOVELO Libre-service,https://gbfs.urbansharing.com/lovelolibreservice.fr/gbfs.json
+FR,MontenVélo,https://gbfs.partners.fifteen.eu/gbfs/2.2/mont_blanc/en/gbfs.json
+FR,Naolib,https://api.cyclocity.fr/contracts/nantes/gbfs/v3/gbfs.json
+FR,Naolib Micromob',https://api.gbfs.v3.0.ecovelo.mobi/chantrerie/gbfs.json
+FR,NemoVélo,https://api.gbfs.v3.0.ecovelo.mobi/nemovelo/gbfs.json
+FR,Ogalo Cyclette,https://api.gbfs.v3.0.ecovelo.mobi/ogalo/gbfs.json
+FR,OLORON,https://www.mobility-parc.net/gbfs/v3/OLORON/gbfs.json
+FR,Optymo Belfort,https://data.optymo.fr/vls/gbfs.json
+FR,Optymo Belfort Auto libre-service,https://data.optymo.fr/als/gbfs.json
+FR,PAYS D'OPALE,https://www.mobility-parc.net/gbfs/v3/Opale/gbfs.json
+FR,PAYS DE L'ARBRESLE - VEL'PAR,https://www.mobility-parc.net/gbfs/v3/ARBRESLE/gbfs.json
+FR,PAYS DU COQUELICOT,https://www.mobility-parc.net/gbfs/v3/COQUELICOT/gbfs.json
+FR,Périvélo,https://api.gbfs.v3.0.ecovelo.mobi/perivelo/gbfs.json
+FR,Pony Angers,https://proxy.transport.data.gouv.fr/resource/pony-angers-gbfs/gbfs.json
+FR,Pony Basque Country,https://proxy.transport.data.gouv.fr/resource/pony-pays-basque-gbfs/gbfs.json
+FR,Pony Beauvais,https://proxy.transport.data.gouv.fr/resource/pony-beauvais-gbfs/gbfs.json
+FR,Pony Bordeaux,https://proxy.transport.data.gouv.fr/resource/pony-bordeaux-gbfs/gbfs.json
+FR,Pony Bourges,https://proxy.transport.data.gouv.fr/resource/pony-bourges-gbfs/gbfs.json
+FR,Pony Evry,https://proxy.transport.data.gouv.fr/resource/pony-evry-gbfs/gbfs.json
+FR,Pony Herouville,https://proxy.transport.data.gouv.fr/resource/pony-herouville-gbfs/gbfs.json
+FR,Pony Limoges,https://proxy.transport.data.gouv.fr/resource/pony-limoges-gbfs/gbfs.json
+FR,Pony Lorient,https://proxy.transport.data.gouv.fr/resource/pony-lorient-gbfs/gbfs.json
+FR,Pony Nice,https://proxy.transport.data.gouv.fr/resource/pony-nice-gbfs/gbfs.json
+FR,Pony Perpignan,https://proxy.transport.data.gouv.fr/resource/pony-perpignan-gbfs/gbfs.json
+FR,Pony Poitiers,https://proxy.transport.data.gouv.fr/resource/pony-poitiers-gbfs/gbfs.json
+FR,Porte de Vassivière,https://www.mobility-parc.net/gbfs/v3/VASSIVIERE/gbfs.json
+FR,Rhoule,https://api.gbfs.v3.0.ecovelo.mobi/rhoule/gbfs.json
+FR,RLV'Lib,https://api.gbfs.v3.0.ecovelo.mobi/rlvlib/gbfs.json
+FR,Rubis'Velo,https://api.gbfs.v3.0.ecovelo.mobi/beb/gbfs.json
+FR,Semo Vélo,https://api.gbfs.v3.0.ecovelo.mobi/semo/gbfs.json
+FR,Tempovelo,https://api.gbfs.v3.0.ecovelo.mobi/tempovelo/gbfs.json
+FR,Ti Vélo,https://gbfs.partners.fifteen.eu/gbfs/2.2/landerneau/en/gbfs.json
+FR,TLP Mobilites,https://api.gbfs.v3.0.ecovelo.mobi/tlpmobilites/gbfs.json
+FR,Twisto Vélolib,https://gbfs.partners.fifteen.eu/gbfs/2.2/caen/en/gbfs.json
+FR,V'lille,https://media.ilevia.fr/opendata/gbfs.json
+FR,VALLEE D'OSSAU,https://www.mobility-parc.net/gbfs/v3/OSSAU/gbfs.json
+FR,Vel’in,https://stce.transdev-hdf.fr/gbfs/
+FR,Velam,https://api.cyclocity.fr/contracts/amiens/gbfs/v3/gbfs.json
+FR,Velect'in,https://api.gbfs.v3.0.ecovelo.mobi/calais/gbfs.json
+FR,Vélhop - Strasbourg,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ae/gbfs.json
+FR,Vélib' Metropole,https://velib-metropole-opendata.smovengo.cloud/opendata/Velib_Metropole/gbfs.json
+FR,Vélibéo,https://api.gbfs.v3.0.ecovelo.mobi/velibeo/gbfs.json
+FR,Vélivert,https://api.saint-etienne-metropole.fr/velivert/api/gbfs/gbfs.json
+FR,Vélo d'Aqui,https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/gbfs.json
+FR,Vélo Fluo Grand-Est,https://gbfs.partners.fifteen.eu/gbfs/2.2/velo-fluo/en/gbfs.json
+FR,Vélo Modalis,https://gbfs.partners.fifteen.eu/gbfs/2.2/angouleme/en/gbfs.json
+FR,Vélo Tanlib,https://api.gbfs.v3.0.ecovelo.mobi/tanlib/gbfs.json
+FR,VELO VEZERE LASCAUX,https://www.mobility-parc.net/gbfs/v3/LASCAUX/gbfs.json
+FR,Vélo'Baie,https://gbfs.partners.fifteen.eu/gbfs/2.2/saintbrieuc/en/gbfs.json
+FR,Vélo'Cité,https://api.gbfs.v3.0.ecovelo.mobi/velocite/gbfs.json
+FR,Vélo'v,https://api.cyclocity.fr/contracts/lyon/gbfs/v3/gbfs.json
+FR,VélO2,https://api.cyclocity.fr/contracts/cergy/gbfs/v3/gbfs.json
+FR,VélO2,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ah/gbfs.json
+FR,VéloCité,https://api.cyclocity.fr/contracts/besancon/gbfs/v3/gbfs.json
+FR,VéloCité Mulhouse,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_af/gbfs.json
+FR,Vélomagg,https://gbfs.theta.fifteen.eu/gbfs/montpellier/gbfs.json
+FR,VéloModalis - TERRA,https://gbfs.partners.fifteen.eu/gbfs/2.2/velo-modalis/en/gbfs.json
+FR,VéloMoove,https://gbfs.partners.fifteen.eu/gbfs/2.2/pompey/en/gbfs.json
+FR,Vélonecy,https://gbfs.partners.fifteen.eu/gbfs/2.2/annecy/en/gbfs.json
+FR,Vélopop,https://gbfs.partners.fifteen.eu/gbfs/avignon/gbfs.json
+FR,VélOstan'lib,https://api.cyclocity.fr/contracts/nancy/gbfs/v3/gbfs.json
+FR,VélÔToulouse,https://api.cyclocity.fr/contracts/toulouse/gbfs/v3/gbfs.json
+FR,VéloZef,https://gbfs.partners.fifteen.eu/gbfs/2.2/brest/en/gbfs.json
+FR,VélYcéo,https://api.gbfs.v3.0.ecovelo.mobi/velyceo/gbfs.json
+FR,Vernou Vélo,https://api.gbfs.v3.0.ecovelo.mobi/vernouvelo/gbfs.json
+FR,Vertuose,https://api.gbfs.v3.0.ecovelo.mobi/vertuose/gbfs.json
+FR,Viavélo,https://api.gbfs.v3.0.ecovelo.mobi/viavelo/gbfs.json
+FR,Vilvolt,https://gbfs.partners.fifteen.eu/gbfs/epinal/gbfs.json
+FR,Vivélo,https://gbfs.partners.fifteen.eu/gbfs/vichy/gbfs.json
+FR,Voi Grenoble,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/358/gbfs.json
+FR,Voi Le Havre,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/336/gbfs.json
+FR,Voi Marseille,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/66/gbfs.json
+FR,Voi Paris,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/352/gbfs.json
+FR,Voi Saint-Quentin-en-Yvelines,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/355/gbfs.json
+FR,Voi V'Lônes,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/406/gbfs.json
+FR,Zebullo,https://api.gbfs.v3.0.ecovelo.mobi/zebullo/gbfs.json
+GB,Beryl - BCP,https://beryl-gbfs-production.web.app/v2_2/BCP/gbfs.json
+GB,Beryl - Bradford,https://beryl-gbfs-production.web.app/v2_2/Bradford/gbfs.json
+GB,Beryl - Brighton,https://beryl-gbfs-production.web.app/v2_2/Brighton/gbfs.json
+GB,Beryl - Canterbury,https://beryl-gbfs-production.web.app/v2_2/Canterbury/gbfs.json
+GB,Beryl - Cornwall,https://beryl-gbfs-production.web.app/v2_2/Cornwall/gbfs.json
+GB,Beryl - Eastleigh,https://beryl-gbfs-production.web.app/v2_2/Eastleigh/gbfs.json
+GB,Beryl - Greater Manchester,https://beryl-gbfs-production.web.app/v2_2/Greater_Manchester/gbfs.json
+GB,Beryl - Guildford,https://beryl-gbfs-production.web.app/v2_2/Guildford/gbfs.json
+GB,Beryl - Hackney Cargo Bike,https://gbfs.beryl.cc/v2_2/Hackney_Cargo_Bike/gbfs.json
+GB,Beryl - Hereford,https://beryl-gbfs-production.web.app/v2_2/Hereford/gbfs.json
+GB,Beryl - Hertsmere,https://beryl-gbfs-production.web.app/v2_2/Hertsmere/gbfs.json
+GB,Beryl - Isle of Wight,https://gbfs.beryl.cc/v2_2/Isle_of_Wight/gbfs.json
+GB,Beryl - Leeds,https://beryl-gbfs-production.web.app/v2_2/Leeds/gbfs.json
+GB,Beryl - Norwich,https://beryl-gbfs-production.web.app/v2_2/Norwich/gbfs.json
+GB,Beryl - Plymouth,https://beryl-gbfs-production.web.app/v2_2/Plymouth/gbfs.json
+GB,Beryl - Portsmouth,https://gbfs.beryl.cc/v2_2/Portsmouth/gbfs.json
+GB,Beryl - Southampton,https://gbfs.beryl.cc/v2_2/Southampton/gbfs.json
+GB,Beryl - Stevenage,https://beryl-gbfs-production.web.app/v2_2/Stevenage/gbfs.json
+GB,Beryl - Watford,https://beryl-gbfs-production.web.app/v2_2/Watford/gbfs.json
+GB,Beryl - West Midlands,https://beryl-gbfs-production.web.app/v2_2/West_Midlands/gbfs.json
+GB,Beryl - Weymouth,https://beryl-gbfs-production.web.app/v2_2/Weymouth/gbfs.json
+GB,Beryl - Wool,https://gbfs.beryl.cc/v2_2/Wool/gbfs.json
+GB,Beryl - Worcester,https://beryl-gbfs-production.web.app/v2_2/Worcester/gbfs.json
+GB,Bolt Liverpool,https://mds.bolt.eu/gbfs/3/412/gbfs
+GB,Donkey Republic Charlbury,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_charlbury/gbfs.json
+GB,Donkey Republic Cheltenham Spa,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_cheltenham_spa/gbfs.json
+GB,Donkey Republic Cirencester,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_cirencester/gbfs.json
+GB,Donkey Republic Henley On Thames,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_henley_on_thames/gbfs.json
+GB,Donkey Republic Kingham,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kingham/gbfs.json
+GB,Donkey Republic Milton Park,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_miltonpark/gbfs
+GB,Donkey Republic Moreton In Marsh,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_moreton_in_marsh/gbfs.json
+GB,Donkey Republic Northleach,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_northleach/gbfs.json
+GB,Donkey Republic Oxford,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_oxford/gbfs.json
+GB,Donkey Republic Plymouth,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_plymouth/gbfs.json
+GB,Donkey Republic Stroud,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_stroud/gbfs.json
+GB,Donkey Republic Tetbury,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_tetbury/gbfs.json
+GB,Donkey Republic The Cotswold Water Park,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_the_cotswold_water_park/gbfs.json
+GB,Donkey Republic Whichford,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_whichford/gbfs.json
+GB,Donkey Republic Worthing,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_worthing/gbfs.json
+GB,Dott Bath,https://gbfs.api.ridedott.com/public/v2/bath/gbfs.json
+GB,Dott Braintree,https://gbfs.api.ridedott.com/public/v2/braintree/gbfs.json
+GB,Dott Bristol,https://gbfs.api.ridedott.com/public/v2/bristol/gbfs.json
+GB,Dott brunel-university,https://gbfs.api.ridedott.com/public/v2/brunel-university/gbfs.json
+GB,Dott Chelmsford,https://gbfs.api.ridedott.com/public/v2/chelmsford/gbfs.json
+GB,Dott Colchester,https://gbfs.api.ridedott.com/public/v2/colchester/gbfs.json
+GB,Dott Milton Keynes,https://gbfs.api.ridedott.com/public/v2/milton-keynes/gbfs.json
+GB,Dott Nottingham,https://gbfs.api.ridedott.com/public/v2/nottingham/gbfs.json
+GB,Neuron Mobility,https://mds.neuron-mobility.com/ncl/gbfs/2/
+GB,nextbike Stirling,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_uk/gbfs.json
+GB,Santander Cycles - Milton Keynes,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ku/gbfs.json
+GB,Swansea University Cycles,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_uu/gbfs.json
+GB,WESTcargo powered by nextbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_we/gbfs.json
+GB,Zeus Cheltenham,https://zeus.city/api/v1/mds/gbfs/cheltenham/gbfs.json
+GB,Zeus Gloucester,https://zeus.city/api/v1/mds/gbfs/gloucester/gbfs.json
+GB,Zeus Sunderland,https://zeus.city/api/v1/mds/gbfs/sunderland/gbfs.json
+GB,Zeus Yeovil,https://zeus.city/api/v1/mds/gbfs/yeovil/gbfs.json
+GR,Bike Sharing Alimos,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gv/gbfs.json
+GR,Bike Sharing Elliniko – Argyroupoli,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gu/gbfs.json
+GR,Bike Sharing Glyfada,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gx/gbfs.json
+GR,Bike Sharing Palaio Faliro,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gy/gbfs.json
+GR,Dott Athens,https://gbfs.api.ridedott.com/public/v2/athens/gbfs.json
+GR,Dott Thessaloniki,https://gbfs.api.ridedott.com/public/v2/thessaloniki/gbfs.json
+HR,Bajs Zagreb (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hd/gbfs.json
+HR,Dalmacija (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_se/gbfs.json
+HR,eMobi,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_em/gbfs.json
+HR,Grad Drniš (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gd/gbfs.json
+HR,Grad Ivanić-Grad (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ig/gbfs.json
+HR,Grad Karlovac (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_kc/gbfs.json
+HR,Grad Križevci,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gk/gbfs.json
+HR,Grad Šibenik (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bc/gbfs.json
+HR,Grad Sisak (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cs/gbfs.json
+HR,Grad Slavonski Brod (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sb/gbfs.json
+HR,Grad Split,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gt/gbfs.json
+HR,Grad Velika Gorica (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cg/gbfs.json
+HR,Grad Vinkovci (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cm/gbfs.json
+HR,Grad Vukovar (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vu/gbfs.json
+HR,Grad Zadar (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zd/gbfs.json
+HR,Grad Zaprešić (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sg/gbfs.json
+HR,Hvar (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ol/gbfs.json
+HR,Jastrebarsko (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cj/gbfs.json
+HR,nextbike Croatia,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hr/gbfs.json
+HR,Općina Brinje (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_br/gbfs.json
+HR,Porec bike share (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cv/gbfs.json
+HU,Donkey Republic Budapest,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_budapest/gbfs.json
+HU,Dott Budapest,https://gbfs.api.ridedott.com/public/v2/budapest/gbfs.json
+HU,Dott Dunaujvaros,https://gbfs.api.ridedott.com/public/v2/dunaujvaros/gbfs.json
+HU,Dott Godollo,https://gbfs.api.ridedott.com/public/v2/godollo/gbfs.json
+HU,Dott Gyor,https://gbfs.api.ridedott.com/public/v2/gyor/gbfs.json
+HU,Dott Hatvan,https://gbfs.api.ridedott.com/public/v2/hatvan/gbfs.json
+HU,Dott Miskolc,https://gbfs.api.ridedott.com/public/v2/miskolc/gbfs.json
+HU,Dott Pápa,https://gbfs.api.ridedott.com/public/v2/papa/gbfs.json
+HU,Dott Siófok,https://gbfs.api.ridedott.com/public/v2/siofok/gbfs.json
+IE,Beryl Belfast,https://beryl-gbfs-production.web.app/v2_2/Belfast/gbfs.json
+IE,Bleeper Bikes,https://data.smartdublin.ie/bleeperbike-api/gbfs
+IE,Dublinbikes,https://api.cyclocity.fr/contracts/dublin/gbfs/v3/gbfs.json
+IE,Moby Dublin,https://api.sharebike.com/public-api-service/gbfs/v2/moby_dublin/gbfs.json
+IL,Bird Israel,https://mds.bird.co/gbfs/v2/public/israel/gbfs.json
+IL,Bird Tel Aviv,https://mds.bird.co/gbfs/v2/public/tel-aviv/gbfs.json
+IL,Dott Herzliya,https://gbfs.api.ridedott.com/public/v2/herzliya/gbfs.json
+IL,Dott Tel-Aviv,https://gbfs.api.ridedott.com/public/v2/tel-aviv/gbfs.json
+IL,Lime Tel Aviv,https://data.lime.bike/api/partners/v2/gbfs/tel_aviv/gbfs.json
+IS,Donkey Republic Reykjavik,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_reykjavik/gbfs.json
+IT,Amicarnapoli,https://www.amicarnapoli.it/gbfs/gbfs.json
+IT,Bird Florence,https://mds.bird.co/gbfs/v2/public/florence/gbfs.json
+IT,Bird Milan,https://mds.bird.co/gbfs/v2/public/milan/gbfs.json
+IT,Bird Rome,https://mds.bird.co/gbfs/v2/public/rome/gbfs.json
+IT,Cooltra Turin,https://maas.zeus.cooltra.com/gbfs/turin/3.0/en/gbfs.json
+IT,Dott Arezzo,https://gbfs.api.ridedott.com/public/v2/arezzo/gbfs.json
+IT,Dott Bari,https://gbfs.api.ridedott.com/public/v2/bari/gbfs.json
+IT,Dott Bergamo,https://gbfs.api.ridedott.com/public/v2/bergamo/gbfs.json
+IT,Dott Cagliari,https://gbfs.api.ridedott.com/public/v2/cagliari/gbfs.json
+IT,Dott Catania,https://gbfs.api.ridedott.com/public/v2/catania/gbfs.json
+IT,Dott Ferrara,https://gbfs.api.ridedott.com/public/v2/ferrara/gbfs.json
+IT,Dott Jesolo,https://gbfs.api.ridedott.com/public/v2/jesolo/gbfs.json
+IT,Dott Lecco,https://gbfs.api.ridedott.com/public/v2/lecco/gbfs.json
+IT,Dott Milan,https://gbfs.api.ridedott.com/public/v2/milan/gbfs.json
+IT,Dott Modena,https://gbfs.api.ridedott.com/public/v2/modena/gbfs.json
+IT,Dott Monza,https://gbfs.api.ridedott.com/public/v2/monza/gbfs.json
+IT,Dott Padua,https://gbfs.api.ridedott.com/public/v2/padua/gbfs.json
+IT,Dott Palermo,https://gbfs.api.ridedott.com/public/v2/palermo/gbfs.json
+IT,Dott Reggio Emilia,https://gbfs.api.ridedott.com/public/v2/reggio-emilia/gbfs.json
+IT,Dott Rome,https://gbfs.api.ridedott.com/public/v2/rome/gbfs.json
+IT,Dott Trento,https://gbfs.api.ridedott.com/public/v2/trento/gbfs.json
+IT,Dott Turin,https://gbfs.api.ridedott.com/public/v2/turin/gbfs.json
+IT,Dott Varese,https://gbfs.api.ridedott.com/public/v2/varese/gbfs.json
+IT,Dott Verona,https://gbfs.api.ridedott.com/public/v2/verona/gbfs.json
+IT,Fa.Mo.Se,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_fa/gbfs.json
+IT,Lime Bari,https://data.lime.bike/api/partners/v2/gbfs/bari/gbfs.json
+IT,Lime Naples,https://data.lime.bike/api/partners/v2/gbfs/naples/gbfs.json
+IT,Milan Bikemi,https://gbfs.urbansharing.com/bikemi.com/gbfs.json
+IT,nextbike Bergamo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ib/gbfs.json
+IT,Nextbike the World,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wh/gbfs.json
+IT,Verona Bike,https://gbfs.urbansharing.com/bikeverona.it/gbfs.json
+IT,Zeus Anzio,https://zeus.city/api/v1/mds/gbfs/anzio/gbfs.json
+IT,Zeus Augusta,https://zeus.city/api/v1/mds/gbfs/augusta/gbfs.json
+IT,Zeus Mazara,https://zeus.city/api/v1/mds/gbfs/mazara/gbfs.json
+JP,CyclOcity,https://api.cyclocity.fr/contracts/toyama/gbfs/v3/gbfs.json
+JP,docomo bike share service,https://api-public.odpt.org/api/v4/gbfs/docomo-cycle/gbfs.json
+JP,docomo bike share service,https://api-public.odpt.org/api/v4/gbfs/docomo-cycle-tokyo/gbfs.json
+JP,HELLO CYCLING,https://api-public.odpt.org/api/v4/gbfs/hellocycling/gbfs.json
+JP,kotobike,https://app.kotobike.jp/api/exposed/v2/gbfs/gbfs.json
+LI,Donkey Republic Liechtenstein,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_li/gbfs.json
+LI,LIEmobil Liechtenstein,https://api.mobidata-bw.de/sharing/gbfs/v3/liemobil_liechtenstein/gbfs
+LT,Cyclocity,https://api.cyclocity.fr/contracts/vilnius/gbfs/v3/gbfs.json
+LU,Vel'OH!,https://api.cyclocity.fr/contracts/luxembourg/gbfs/v3/gbfs.json
+LV,nextbike LV,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lv/gbfs.json
+MC,MonaBike,https://monaco.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+MX,Ecobici,https://gbfs.mex.lyftbikes.com/gbfs/gbfs.json
+MX,Mibici Guadalajara,https://guadalajara.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+MY,Zeus Kuala Lumpur,https://zeus.city/api/v1/mds/gbfs/kuala%20lumpur/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/almere/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/amersfoort/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/amsterdam/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/breda/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/delft/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/denbosch/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/denhaag/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/eindhoven/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/groningen/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/haarlem/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/hilversum/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/lansingerland/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/leeuwarden/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/nijmegen/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/rijswijk/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/rotterdam/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/schiedam/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/tilburg/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/vlaardingen/gbfs.json
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/zwolle/gbfs.json
+NL,Check Voorburg,https://api.ridecheck.app/gbfs/v3/voorburg/gbfs.json
+NL,Cykl,https://www.cykl.nl/gbfs/gbfs.json
+NL,Donkey Republic Amsterdam,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_am/gbfs.json
+NL,Donkey Republic Den Haag,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_den_haag/gbfs.json
+NL,Donkey Republic Dordrecht,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_dordrecht/gbfs.json
+NL,Donkey Republic Gorinchem,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_gorinchem/gbfs.json
+NL,Donkey Republic Katwijk,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_katwijk/gbfs.json
+NL,Donkey Republic Qbuzz,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_qbuzz/gbfs.json
+NL,Donkey Republic Rivierenland,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_rivierenland/gbfs.json
+NL,Donkey Republic Rotterdam,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_rt/gbfs.json
+NL,Donkey Republic Rotterdam/Den Haag,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_rotterdam_den_haag/gbfs.json
+NL,Donkey Republic Utrecht,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_ut/gbfs.json
+NL,Donkey Republic Utrechtse Heuvelrug,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_utrechtse_heuvelrug/gbfs.json
+NL,Dott Eindhoven,https://gbfs.api.ridedott.com/public/v2/eindhoven/gbfs.json
+NL,Dott Utrecht,https://gbfs.api.ridedott.com/public/v2/utrecht/gbfs.json
+NL,Dott Veldhoven,https://gbfs.api.ridedott.com/public/v2/veldhoven/gbfs.json
+NL,Felyx Amsterdam,https://maas.zeus.cooltra.com/gbfs/amsterdam/3.0/en/gbfs.json
+NL,Felyx Arnhem,https://maas.zeus.cooltra.com/gbfs/arnhem/3.0/en/gbfs.json
+NL,Felyx Breda,https://maas.zeus.cooltra.com/gbfs/breda/3.0/en/gbfs.json
+NL,Felyx Delft,https://maas.zeus.cooltra.com/gbfs/delft/3.0/en/gbfs.json
+NL,Felyx Den Bosch,https://maas.zeus.cooltra.com/gbfs/den_bosch/3.0/en/gbfs.json
+NL,Felyx Eindhoven,https://maas.zeus.cooltra.com/gbfs/eindhoven/3.0/en/gbfs.json
+NL,Felyx Enschede,https://maas.zeus.cooltra.com/gbfs/enschede/3.0/en/gbfs.json
+NL,Felyx Groningen,https://maas.zeus.cooltra.com/gbfs/groningen/3.0/en/gbfs.json
+NL,Felyx Haarlem,https://maas.zeus.cooltra.com/gbfs/haarlem/3.0/en/gbfs.json
+NL,Felyx Nijmegen,https://maas.zeus.cooltra.com/gbfs/nijmegen/3.0/en/gbfs.json
+NL,Felyx Rotterdam,https://maas.zeus.cooltra.com/gbfs/rotterdam/3.0/en/gbfs.json
+NL,Felyx The Hague,https://maas.zeus.cooltra.com/gbfs/the_hague/3.0/en/gbfs.json
+NL,Felyx Tilburg,https://maas.zeus.cooltra.com/gbfs/tilburg/3.0/en/gbfs.json
+NL,Felyx Zwolle,https://maas.zeus.cooltra.com/gbfs/zwolle/3.0/en/gbfs.json
+NL,GoAbout,https://gbfs.goabout.com/2/gbfs.json
+NL,NS OV Fiets,http://gbfs.openov.nl/ovfiets/gbfs.json
+NO,Bergen City Bike,https://gbfs.urbansharing.com/bergenbysykkel.no/gbfs.json
+NO,Bolt Arpsborg,https://api.entur.io/mobility/v2/gbfs/v3/boltsarpsborg/gbfs
+NO,Bolt Bergen,https://api.entur.io/mobility/v2/gbfs/v3/boltbergen/gbfs
+NO,Bolt Drammen,https://api.entur.io/mobility/v2/gbfs/v3/boltdrammen/gbfs
+NO,Bolt Fredrikstad,https://api.entur.io/mobility/v2/gbfs/v3/boltfredrikstad/gbfs
+NO,Bolt Gjovik,https://api.entur.io/mobility/v2/gbfs/v3/boltgjovik/gbfs
+NO,Bolt Hamar,https://api.entur.io/mobility/v2/gbfs/v3/bolthamar/gbfs
+NO,Bolt Kristiansand,https://api.entur.io/mobility/v2/gbfs/v3/boltkristiansand/gbfs
+NO,Bolt Lillehammer,https://api.entur.io/mobility/v2/gbfs/v3/boltlillehammer/gbfs
+NO,Bolt Lillestrom,https://api.entur.io/mobility/v2/gbfs/v3/boltlillestrom/gbfs
+NO,Bolt Oslo,https://api.entur.io/mobility/v2/gbfs/v3/boltoslo/gbfs
+NO,Bysykkel,https://api.cyclocity.fr/contracts/lillestrom/gbfs/v3/gbfs.json
+NO,Dott As,https://gbfs.api.ridedott.com/public/v2/as/gbfs.json
+NO,Dott Asker,https://gbfs.api.ridedott.com/public/v2/asker/gbfs.json
+NO,Dott Bodø,https://gbfs.api.ridedott.com/public/v2/bodø/gbfs.json
+NO,Dott Drammen,https://gbfs.api.ridedott.com/public/v2/drammen/gbfs.json
+NO,Dott Lillestrøm,https://gbfs.api.ridedott.com/public/v2/lillestrøm/gbfs.json
+NO,Dott Malvik,https://gbfs.api.ridedott.com/public/v2/malvik/gbfs.json
+NO,Dott Melhus,https://gbfs.api.ridedott.com/public/v2/melhus/gbfs.json
+NO,Dott Sandefjord,https://gbfs.api.ridedott.com/public/v2/sandefjord/gbfs.json
+NO,Dott Stjørdal,https://gbfs.api.ridedott.com/public/v2/stjørdal/gbfs.json
+NO,Dott Trondheim,https://gbfs.api.ridedott.com/public/v2/trondheim/gbfs.json
+NO,Dott Ullensaker,https://gbfs.api.ridedott.com/public/v2/ullensaker/gbfs.json
+NO,Farte Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/fartebysykkel/gbfs
+NO,Getaround Alesund,https://getaround.com/gbfs/v3/alesund/gbfs
+NO,Getaround Alta,https://getaround.com/gbfs/v3/alta/gbfs
+NO,Getaround Arendal,https://getaround.com/gbfs/v3/arendal/gbfs
+NO,Getaround Asker,https://getaround.com/gbfs/v3/asker/gbfs
+NO,Getaround Baerum,https://getaround.com/gbfs/v3/baerum/gbfs
+NO,Getaround Bergen,https://getaround.com/gbfs/v3/bergen/gbfs
+NO,Getaround Bodo,https://getaround.com/gbfs/v3/bodo/gbfs
+NO,Getaround Drammen,https://getaround.com/gbfs/v3/drammen/gbfs
+NO,Getaround Evenes,https://getaround.com/gbfs/v3/evenes/gbfs
+NO,Getaround Fredrikstad,https://getaround.com/gbfs/v3/fredrikstad/gbfs
+NO,Getaround Gardermoen,https://getaround.com/gbfs/v3/gardermoen/gbfs
+NO,Getaround Harstad,https://getaround.com/gbfs/v3/harstad/gbfs
+NO,Getaround Kirkenes,https://getaround.com/gbfs/v3/kirkenes/gbfs
+NO,Getaround Kristiansand,https://getaround.com/gbfs/v3/kristiansand/gbfs
+NO,Getaround Leknes,https://getaround.com/gbfs/v3/leknes/gbfs
+NO,Getaround Lillehammer,https://getaround.com/gbfs/v3/lillehammer/gbfs
+NO,Getaround Lillestrom,https://getaround.com/gbfs/v3/lillestrom/gbfs
+NO,Getaround Lorenskog,https://getaround.com/gbfs/v3/lorenskog/gbfs
+NO,Getaround Molde,https://getaround.com/gbfs/v3/molde/gbfs
+NO,Getaround Moss,https://getaround.com/gbfs/v3/moss/gbfs
+NO,Getaround Narvik,https://getaround.com/gbfs/v3/narvik/gbfs
+NO,Getaround Nesodden,https://getaround.com/gbfs/v3/nesodden/gbfs
+NO,Getaround Oslo,https://getaround.com/gbfs/v3/oslo/gbfs
+NO,Getaround Porsgrunn,https://getaround.com/gbfs/v3/porsgrunn/gbfs
+NO,Getaround Sandefjord,https://getaround.com/gbfs/v3/sandefjord/gbfs
+NO,Getaround Sandvika,https://getaround.com/gbfs/v3/sandvika/gbfs
+NO,Getaround Ski,https://getaround.com/gbfs/v3/ski/gbfs
+NO,Getaround Skien,https://getaround.com/gbfs/v3/skien/gbfs
+NO,Getaround Stavanger,https://getaround.com/gbfs/v3/stavanger/gbfs
+NO,Getaround Stjordal,https://getaround.com/gbfs/v3/stjordal/gbfs
+NO,Getaround Strommen,https://getaround.com/gbfs/v3/strommen/gbfs
+NO,Getaround Tonsberg,https://getaround.com/gbfs/v3/tonsberg/gbfs
+NO,Getaround Tromso,https://getaround.com/gbfs/v3/tromso/gbfs
+NO,Getaround Trondheim,https://getaround.com/gbfs/v3/trondheim/gbfs
+NO,Hertz Bildeling,https://api.entur.io/mobility/v2/gbfs/v3/hertzbildeling/gbfs
+NO,Hyre,https://api.entur.io/mobility/v2/gbfs/v3/hyrenorge/gbfs
+NO,Kolumbus Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/kolumbusbysykkel/gbfs
+NO,Oslo Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/oslobysykkel/gbfs
+NO,Otto,https://api.entur.io/mobility/v2/gbfs/v3/otto/gbfs
+NO,Ryde Fredrikstad,https://api.entur.io/mobility/v2/gbfs/v3/rydefredrikstad/gbfs
+NO,Ryde Porsgrunn,https://api.entur.io/mobility/v2/gbfs/v3/rydeporsgrunn/gbfs
+NO,Ryde Sandefjord,https://api.entur.io/mobility/v2/gbfs/v3/rydesandefjord/gbfs
+NO,Ryde Sarpsborg,https://api.entur.io/mobility/v2/gbfs/v3/rydesarpsborg/gbfs
+NO,Ryde Skien,https://api.entur.io/mobility/v2/gbfs/v3/rydeskien/gbfs
+NO,Ryde Stavanger,https://api.entur.io/mobility/v2/gbfs/v3/rydestavanger/gbfs
+NO,Ryde Tønsberg,https://api.entur.io/mobility/v2/gbfs/v3/rydetonsberg/gbfs
+NO,Ryde Tromsø,https://api.entur.io/mobility/v2/gbfs/v3/rydetromso/gbfs
+NO,Ryde Trondheim,https://api.entur.io/mobility/v2/gbfs/v3/rydetrondheim/gbfs
+NO,Ryde_Oslo,https://api.entur.io/mobility/v2/gbfs/v3/rydeoslo/gbfs
+NO,Trondheim Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/trondheimbysykkel/gbfs
+NO,Voi Arendal,https://api.entur.io/mobility/v2/gbfs/v3/voiarendal/gbfs
+NO,Voi Bergen,https://api.entur.io/mobility/v2/gbfs/v3/voibergen/gbfs
+NO,Voi Fredrikstad,https://api.entur.io/mobility/v2/gbfs/v3/voifredrikstad/gbfs
+NO,Voi Kristiansand,https://api.entur.io/mobility/v2/gbfs/v3/voikristiansand/gbfs
+NO,Voi Lillestrom,https://api.entur.io/mobility/v2/gbfs/v3/voilillestrom/gbfs
+NO,Voi Oslo,https://api.entur.io/mobility/v2/gbfs/v3/voioslo/gbfs
+NO,Voi Stavanger,https://api.entur.io/mobility/v2/gbfs/v3/voistavanger/gbfs
+NO,Voi Trondheim,https://api.entur.io/mobility/v2/gbfs/v3/voitrondheim/gbfs
+NO,Zeus Oslo,https://zeus.city/api/v1/mds/gbfs/oslo/gbfs.json
+NZ,Flamingo Auckland,https://data.rideflamingo.com/gbfs/3/auckland/gbfs.json
+NZ,Flamingo Christchurch,https://data.rideflamingo.com/gbfs/3/christchurch/gbfs.json
+NZ,Flamingo Dunedin,https://data.rideflamingo.com/gbfs/3/dunedin/gbfs.json
+NZ,Flamingo Palmerston North,https://data.rideflamingo.com/gbfs/3/palmerston-north/gbfs.json
+NZ,Flamingo Porirua,https://data.rideflamingo.com/gbfs/3/porirua/gbfs.json
+NZ,Flamingo Tauranga,https://data.rideflamingo.com/gbfs/3/tauranga/gbfs.json
+NZ,Flamingo Waimakariri,https://data.rideflamingo.com/gbfs/3/waimakariri/gbfs.json
+NZ,Flamingo Wellington,https://data.rideflamingo.com/gbfs/3/wellington/gbfs.json
+NZ,JOLT Hutt Valley,https://prod-api.joltscooters.co.nz/api/gbfs/hutt_valley/gbfs.json
+NZ,JOLT New Plymouth,https://prod-api.joltscooters.co.nz/api/gbfs/new_plymouth/gbfs.json
+NZ,JOLT Selwyn,https://prod-api.joltscooters.co.nz/api/gbfs/selwyn/gbfs.json
+PL,Chełmski Rower,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cw/gbfs.json
+PL,Dott Bialogard,https://gbfs.api.ridedott.com/public/v2/bialogard/gbfs.json
+PL,Dott Bielawa,https://gbfs.api.ridedott.com/public/v2/bielawa/gbfs.json
+PL,Dott Braniewo,https://gbfs.api.ridedott.com/public/v2/braniewo/gbfs.json
+PL,Dott Brodnica,https://gbfs.api.ridedott.com/public/v2/brodnica/gbfs.json
+PL,Dott Brzeg,https://gbfs.api.ridedott.com/public/v2/brzeg/gbfs.json
+PL,Dott Brzeg Dolny,https://gbfs.api.ridedott.com/public/v2/brzeg-dolny/gbfs.json
+PL,Dott Bytom,https://gbfs.api.ridedott.com/public/v2/bytom/gbfs.json
+PL,Dott Chrzanów,https://gbfs.api.ridedott.com/public/v2/chrzanow/gbfs.json
+PL,Dott Częstochowa,https://gbfs.api.ridedott.com/public/v2/czestochowa/gbfs.json
+PL,Dott Dzierżoniów,https://gbfs.api.ridedott.com/public/v2/dzierzoniow/gbfs.json
+PL,Dott Dziwnów,https://gbfs.api.ridedott.com/public/v2/dziwnow/gbfs.json
+PL,Dott Elbląg,https://gbfs.api.ridedott.com/public/v2/elblag/gbfs.json
+PL,Dott Gdansk,https://gbfs.api.ridedott.com/public/v2/gdansk/gbfs.json
+PL,Dott Gdansk-Osowa,https://gbfs.api.ridedott.com/public/v2/gdansk-osowa/gbfs.json
+PL,Dott Goleniow,https://gbfs.api.ridedott.com/public/v2/goleniow/gbfs.json
+PL,Dott Grodzisk Mazowiecki,https://gbfs.api.ridedott.com/public/v2/grodzisk-mazowiecki/gbfs.json
+PL,Dott Grudziadz,https://gbfs.api.ridedott.com/public/v2/grudziadz/gbfs.json
+PL,Dott Gryfino,https://gbfs.api.ridedott.com/public/v2/gryfino/gbfs.json
+PL,Dott Iława,https://gbfs.api.ridedott.com/public/v2/iława/gbfs.json
+PL,Dott Jastrzebie-Zdroj,https://gbfs.api.ridedott.com/public/v2/jastrzebie-zdroj/gbfs.json
+PL,Dott Jelenia Góra,https://gbfs.api.ridedott.com/public/v2/jelenia-gora/gbfs.json
+PL,Dott Kalisz,https://gbfs.api.ridedott.com/public/v2/kalisz/gbfs.json
+PL,Dott Katowice,https://gbfs.api.ridedott.com/public/v2/katowice/gbfs.json
+PL,Dott Kołobrzeg,https://gbfs.api.ridedott.com/public/v2/kołobrzeg/gbfs.json
+PL,Dott Konin,https://gbfs.api.ridedott.com/public/v2/konin/gbfs.json
+PL,Dott Koscierzyna,https://gbfs.api.ridedott.com/public/v2/koscierzyna/gbfs.json
+PL,Dott Koszalin,https://gbfs.api.ridedott.com/public/v2/koszalin/gbfs.json
+PL,Dott Krakow,https://gbfs.api.ridedott.com/public/v2/krakow/gbfs.json
+PL,Dott Krynica Morska,https://gbfs.api.ridedott.com/public/v2/krynica-morska/gbfs.json
+PL,Dott Kwidzyn,https://gbfs.api.ridedott.com/public/v2/kwidzyn/gbfs.json
+PL,Dott Łeba,https://gbfs.api.ridedott.com/public/v2/łeba/gbfs.json
+PL,Dott Lebork,https://gbfs.api.ridedott.com/public/v2/lebork/gbfs.json
+PL,Dott Legionowo,https://gbfs.api.ridedott.com/public/v2/legionowo/gbfs.json
+PL,Dott Leszno,https://gbfs.api.ridedott.com/public/v2/leszno/gbfs.json
+PL,Dott Lubliniec,https://gbfs.api.ridedott.com/public/v2/lubliniec/gbfs.json
+PL,Dott Łuków,https://gbfs.api.ridedott.com/public/v2/łukow/gbfs.json
+PL,Dott Malbork,https://gbfs.api.ridedott.com/public/v2/malbork/gbfs.json
+PL,Dott Międzyzdroje,https://gbfs.api.ridedott.com/public/v2/miedzyzdroje/gbfs.json
+PL,Dott Mielno,https://gbfs.api.ridedott.com/public/v2/mielno/gbfs.json
+PL,Dott Mikołów,https://gbfs.api.ridedott.com/public/v2/mikołow/gbfs.json
+PL,Dott Nowogard,https://gbfs.api.ridedott.com/public/v2/nowogard/gbfs.json
+PL,Dott Nowy Dwór Mazowiecki,https://gbfs.api.ridedott.com/public/v2/nowy-dwor-mazowiecki/gbfs.json
+PL,Dott Nowy Sącz,https://gbfs.api.ridedott.com/public/v2/nowy-sacz/gbfs.json
+PL,Dott Nowy-Targ,https://gbfs.api.ridedott.com/public/v2/nowy-targ/gbfs.json
+PL,Dott Nysa,https://gbfs.api.ridedott.com/public/v2/nysa/gbfs.json
+PL,Dott Oława,https://gbfs.api.ridedott.com/public/v2/oława/gbfs.json
+PL,Dott Oleśnica,https://gbfs.api.ridedott.com/public/v2/olesnica/gbfs.json
+PL,Dott Ostroda,https://gbfs.api.ridedott.com/public/v2/ostroda/gbfs.json
+PL,Dott Oświęcim,https://gbfs.api.ridedott.com/public/v2/oswiecim/gbfs.json
+PL,Dott Piekary Śląskie,https://gbfs.api.ridedott.com/public/v2/piekary-slaskie/gbfs.json
+PL,Dott Płock,https://gbfs.api.ridedott.com/public/v2/płock/gbfs.json
+PL,Dott Police,https://gbfs.api.ridedott.com/public/v2/police/gbfs.json
+PL,Dott Poznan,https://gbfs.api.ridedott.com/public/v2/poznan/gbfs.json
+PL,Dott Prawobrzeże,https://gbfs.api.ridedott.com/public/v2/prawobrzeze/gbfs.json
+PL,Dott Pruszcz Gdański,https://gbfs.api.ridedott.com/public/v2/pruszcz-gdanski/gbfs.json
+PL,Dott Rewal,https://gbfs.api.ridedott.com/public/v2/rewal/gbfs.json
+PL,Dott Ruda Śląska,https://gbfs.api.ridedott.com/public/v2/ruda-slaska/gbfs.json
+PL,Dott Siedlce,https://gbfs.api.ridedott.com/public/v2/siedlce/gbfs.json
+PL,Dott Skawina,https://gbfs.api.ridedott.com/public/v2/skawina/gbfs.json
+PL,Dott Słupsk,https://gbfs.api.ridedott.com/public/v2/słupsk/gbfs.json
+PL,Dott Sobieszewo Island,https://gbfs.api.ridedott.com/public/v2/sobieszewo-island/gbfs.json
+PL,Dott Starogard Gdański,https://gbfs.api.ridedott.com/public/v2/starogard-gdanski/gbfs.json
+PL,Dott Swidnica,https://gbfs.api.ridedott.com/public/v2/swidnica/gbfs.json
+PL,Dott Swiecie,https://gbfs.api.ridedott.com/public/v2/swiecie/gbfs.json
+PL,Dott Świnoujście,https://gbfs.api.ridedott.com/public/v2/swinoujscie/gbfs.json
+PL,Dott Szczecin,https://gbfs.api.ridedott.com/public/v2/szczecin/gbfs.json
+PL,Dott Tarnowskie Góry,https://gbfs.api.ridedott.com/public/v2/tarnowskie-gory/gbfs.json
+PL,Dott Tczew,https://gbfs.api.ridedott.com/public/v2/tczew/gbfs.json
+PL,Dott Toruń,https://gbfs.api.ridedott.com/public/v2/torun/gbfs.json
+PL,Dott Trzebnica,https://gbfs.api.ridedott.com/public/v2/trzebnica/gbfs.json
+PL,Dott Ustka,https://gbfs.api.ridedott.com/public/v2/ustka/gbfs.json
+PL,Dott Warsaw,https://gbfs.api.ridedott.com/public/v2/warsaw/gbfs.json
+PL,Dott Wrocław,https://gbfs.api.ridedott.com/public/v2/wrocław/gbfs.json
+PL,Dott Zawiercie,https://gbfs.api.ridedott.com/public/v2/zawiercie/gbfs.json
+PL,Dott Żory,https://gbfs.api.ridedott.com/public/v2/zory/gbfs.json
+PL,GRM Grodzisk Poland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gp/gbfs.json
+PL,JasKółka,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pj/gbfs.json
+PL,Koniński Rower Miejski Poland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pn/gbfs.json
+PL,Koszaliński Rower Miejski Poland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ps/gbfs.json
+PL,Łódzki Rower Publiczny,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lp/gbfs.json
+PL,METROROWER,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zz/gbfs.json
+PL,MEVO,https://gbfs.urbansharing.com/rowermevo.pl/gbfs.json
+PL,Piaseczyński Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pi/gbfs.json
+PL,Pruszkowski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_or/gbfs.json
+PL,Rower Miejski w Ostrowie Wielkopolskim,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_po/gbfs.json
+PL,Tarnowski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tn/gbfs.json
+PL,Tychowski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_py/gbfs.json
+PL,VETURILO 3.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vw/gbfs.json
+PL,Włower - Włocławski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wf/gbfs.json
+PL,Wolsztyński Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_fp/gbfs.json
+PL,WRM nextbike Poland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pl/gbfs.json
+PL,Zielonogórski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pm/gbfs.json
+PL,Żyrardowski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zy/gbfs.json
+PT,Bird Braga,https://mds.bird.co/gbfs/v2/public/braga/gbfs.json
+PT,Bird Cascais,https://mds.bird.co/gbfs/v2/public/cascais/gbfs.json
+PT,Bird Lisbon,https://mds.bird.co/gbfs/v2/public/lisbon/gbfs.json
+PT,Bird Matosinhos,https://mds.bird.co/gbfs/v2/public/matosinhos/gbfs.json
+PT,Bird Porto,https://mds.bird.co/gbfs/v2/public/porto/gbfs.json
+PT,Bora,https://gbfs.primelayer.pt/gbfs-smartmobility/gbfs/v3/gbfs.json
+PT,Demoland Loule,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tb/gbfs.json
+PT,TubaBike (Barcelos),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bx/gbfs.json
+QA,Dott Doha,https://gbfs.api.ridedott.com/public/v2/doha/gbfs.json
+RO,Alba Iulia Velocity,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ai/gbfs.json
+RO,BikeCity Campia Turzii,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rc/gbfs.json
+RO,Buzau VeloCity,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bv/gbfs.json
+RO,Dej Velo City,https://dej.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+RO,Hunedoara,https://hunedoara.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+RO,Moinesti,https://moinesti.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+RO,Sibiu BikeCity,https://sibiu.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+RO,Slatina Velo City,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rv/gbfs.json
+RO,Slobozia Bike City,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rw/gbfs.json
+RO,Targu Mures,https://targumures.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+RO,Topoloveni Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rt/gbfs.json
+RO,Velo Sântana,https://santana.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+SA,Dott Jeddah,https://gbfs.api.ridedott.com/public/v2/jeddah/gbfs.json
+SA,Dott Makkah,https://gbfs.api.ridedott.com/public/v2/makkah/gbfs.json
+SA,Dott Riyadh,https://gbfs.api.ridedott.com/public/v2/riyadh/gbfs.json
+SA,Dott SBF,https://gbfs.api.ridedott.com/public/v2/sbf/gbfs.json
+SA,Dott STC City,https://gbfs.api.ridedott.com/public/v2/stc-city/gbfs.json
+SE,Donkey Republic Ängelholm,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_aengelholm/gbfs.json
+SE,Donkey Republic Båstad,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_baastad/gbfs.json
+SE,Donkey Republic Malmö,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_malmoe/gbfs.json
+SE,Donkey Republic Ystad,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_ystad/gbfs.json
+SE,Dott Eskilstuna,https://gbfs.api.ridedott.com/public/v2/eskilstuna/gbfs.json
+SE,Dott Gothenburg,https://gbfs.api.ridedott.com/public/v2/gothenburg/gbfs.json
+SE,Dott Helsingborg,https://gbfs.api.ridedott.com/public/v2/helsingborg/gbfs.json
+SE,Dott Höganäs,https://gbfs.api.ridedott.com/public/v2/hoganas/gbfs.json
+SE,Dott Jonkoping,https://gbfs.api.ridedott.com/public/v2/jonkoping/gbfs.json
+SE,Dott Lidköping,https://gbfs.api.ridedott.com/public/v2/lidkoping/gbfs.json
+SE,Dott Partille,https://gbfs.api.ridedott.com/public/v2/partille/gbfs.json
+SE,Dott Skovde,https://gbfs.api.ridedott.com/public/v2/skovde/gbfs.json
+SE,Dott Trollhättan,https://gbfs.api.ridedott.com/public/v2/trollhattan/gbfs.json
+SE,Dott Varberg,https://gbfs.api.ridedott.com/public/v2/varberg/gbfs.json
+SE,Dott Värnamo,https://gbfs.api.ridedott.com/public/v2/varnamo/gbfs.json
+SE,Dott Vaxjo,https://gbfs.api.ridedott.com/public/v2/vaxjo/gbfs.json
+SE,Gothenburg Cargo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zc/gbfs.json
+SE,Lundahoj,https://api.cyclocity.fr/contracts/lund/gbfs/v3/gbfs.json
+SE,"Styr & Ställ (Sweden, Göteborg)",https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/gbfs.json
+SE,Zeus Borlänge,https://zeus.city/api/v1/mds/gbfs/borlange/gbfs.json
+SE,Zeus Falun,https://zeus.city/api/v1/mds/gbfs/falun/gbfs.json
+SE,Zeus Halmstad,https://zeus.city/api/v1/mds/gbfs/halmstad/gbfs.json
+SE,Zeus Karlstad,https://zeus.city/api/v1/mds/gbfs/karlstad/gbfs.json
+SI,BicikeLJ,https://api.cyclocity.fr/contracts/ljubljana/gbfs/v3/gbfs.json
+SI,MBajk,https://api.cyclocity.fr/contracts/maribor/gbfs/v3/gbfs.json
+SI,Nomago Bikes -  LJUBLJANA in MEDVODE,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cc/gbfs.json
+SI,Nomago Bikes - GO2GO,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ce/gbfs.json
+SI,Nomago Bikes - GO2GO Gorizia,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cd/gbfs.json
+SI,Nomago Bikes - KOLESCE,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cn/gbfs.json
+SI,Nomago Bikes - ZANAPREJ,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cf/gbfs.json
+SK,Arriva Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_as/gbfs.json
+SK,BikeKIA,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ak/gbfs.json
+SK,Dott Banska Bystrica,https://gbfs.api.ridedott.com/public/v2/banska-bystrica/gbfs.json
+SK,Dott Bardejov,https://gbfs.api.ridedott.com/public/v2/bardejov/gbfs.json
+SK,Dott Bratislava,https://gbfs.api.ridedott.com/public/v2/bratislava/gbfs.json
+SK,Dott Humenne,https://gbfs.api.ridedott.com/public/v2/humenne/gbfs.json
+SK,Dott Kosice,https://gbfs.api.ridedott.com/public/v2/kosice/gbfs.json
+SK,Dott Liptovsky-Mikulas,https://gbfs.api.ridedott.com/public/v2/liptovsky-mikulas/gbfs.json
+SK,Dott Martin,https://gbfs.api.ridedott.com/public/v2/martin/gbfs.json
+SK,Dott Michalovce,https://gbfs.api.ridedott.com/public/v2/michalovce/gbfs.json
+SK,Dott Nitra,https://gbfs.api.ridedott.com/public/v2/nitra/gbfs.json
+SK,Dott Pezinok,https://gbfs.api.ridedott.com/public/v2/pezinok/gbfs.json
+SK,Dott Poprad,https://gbfs.api.ridedott.com/public/v2/poprad/gbfs.json
+SK,Dott Prešov,https://gbfs.api.ridedott.com/public/v2/presov/gbfs.json
+SK,Dott Prievidza,https://gbfs.api.ridedott.com/public/v2/prievidza/gbfs.json
+SK,Dott Trnava,https://gbfs.api.ridedott.com/public/v2/trnava/gbfs.json
+SK,Dott Vranov-Nad-Toplou,https://gbfs.api.ridedott.com/public/v2/vranov-nad-toplou/gbfs.json
+SK,Dott Zvolen,https://gbfs.api.ridedott.com/public/v2/zvolen/gbfs.json
+SK,Senica bajk,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_av/gbfs.json
+TR,AAR Bike,https://app.linkalock.com/api/gbfs/D2uRLGw8vBa2FJxa8/gbfs.json
+UA,3electra,https://zelectra.rideatom.com/gbfs/66/v3.0/gbfs
+US,Aventura BCycle,https://gbfs.bcycle.com/bcycle_aventura/gbfs.json
+US,Bay Wheels,https://gbfs.baywheels.com/gbfs/2.3/gbfs.json
+US,Bentonville BCycle,https://gbfs.bcycle.com/bcycle_bentonville/gbfs.json
+US,Bike Chattanooga,https://chattanooga.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,BikeLNK,https://gbfs.bcycle.com/bcycle_bikelnk/gbfs.json
+US,BIKETOWN,https://gbfs.biketownpdx.com/gbfs/2.3/gbfs.json
+US,Biki,https://honolulu.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Bird Alexandria,https://mds.bird.co/gbfs/v2/public/alexandria/gbfs.json
+US,Bird Arlingtonco,https://mds.bird.co/gbfs/v2/public/arlingtonco/gbfs.json
+US,Bird Atlanta,https://mds.bird.co/gbfs/v2/public/atlanta/gbfs.json
+US,Bird Cleveland,https://mds.bird.co/gbfs/v2/public/cleveland/gbfs.json
+US,Bird Columbus,https://mds.bird.co/gbfs/v2/public/columbus/gbfs.json
+US,Bird Culver City,https://mds.bird.co/gbfs/v2/public/culver-city/gbfs.json
+US,Bird Dallas,https://mds.bird.co/gbfs/v2/public/dallas/gbfs.json
+US,Bird Denver,https://mds.bird.co/gbfs/v2/public/denver/gbfs.json
+US,Bird Detroit,https://mds.bird.co/gbfs/v2/public/detroit/gbfs.json
+US,Bird Durham,https://mds.bird.co/gbfs/v2/public/durham/gbfs.json
+US,Bird Fairfax,https://mds.bird.co/gbfs/v2/public/fairfax/gbfs.json
+US,Bird Gainesville,https://mds.bird.co/gbfs/v2/public/gainesville/gbfs.json
+US,Bird Greensboro,https://mds.bird.co/gbfs/v2/public/greensboro/gbfs.json
+US,Bird Indianapolis,https://mds.bird.co/gbfs/v2/public/indianapolis/gbfs.json
+US,Bird Kansas City,https://mds.bird.co/gbfs/v2/public/kansas-city/gbfs.json
+US,Bird Lexington,https://mds.bird.co/gbfs/v2/public/lexington/gbfs.json
+US,Bird Los Angeles,https://mds.bird.co/gbfs/v2/public/los-angeles/gbfs.json
+US,Bird Louisville,https://mds.bird.co/gbfs/v2/public/louisville/gbfs.json
+US,Bird Miami,https://mds.bird.co/gbfs/v2/public/miami/gbfs.json
+US,Bird Montgomery County,https://mds.bird.co/gbfs/v2/public/provider/bird/montgomery-county/gbfs.json
+US,Bird Nashville,https://mds.bird.co/gbfs/v2/public/nashville/gbfs.json
+US,Bird New York,https://mds.bird.co/gbfs/v2/public/new-york/gbfs.json
+US,Bird Newark,https://mds.bird.co/gbfs/v2/public/newark/gbfs.json
+US,Bird Orlando,https://mds.bird.co/gbfs/v2/public/orlando/gbfs.json
+US,Bird Portland,https://mds.bird.co/gbfs/v2/public/portland/gbfs.json
+US,Bird Reno,https://mds.bird.co/gbfs/v2/public/reno/gbfs.json
+US,Bird Richmond,https://mds.bird.co/gbfs/v2/public/richmond/gbfs.json
+US,Bird Seattle Washington,https://mds.bird.co/gbfs/v2/public/seattle-washington/gbfs.json
+US,Bird St Louis,https://mds.bird.co/gbfs/v2/public/st-louis/gbfs.json
+US,Bird Tempe,https://mds.bird.co/gbfs/v2/public/tempe/gbfs.json
+US,Bird Washington DC,https://mds.bird.co/gbfs/v2/public/washington-dc/gbfs.json
+US,Blue Bikes,https://gbfs.bluebikes.com/gbfs/gbfs.json
+US,Bolt Technology OÜ,https://mds.bolt.eu/gbfs/3/23/gbfs
+US,Boulder BCycle,https://gbfs.bcycle.com/bcycle_boulder/gbfs.json
+US,Broward B-cycle,https://gbfs.bcycle.com/bcycle_broward/gbfs.json
+US,Bublr Bikes,https://gbfs.bcycle.com/bcycle_bublr/gbfs.json
+US,Capital Bike Share,https://gbfs.capitalbikeshare.com/gbfs/2.3/gbfs.json
+US,CapMetro,https://austin.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Cincy Red Bike,https://gbfs.bcycle.com/bcycle_cincyredbike/gbfs.json
+US,Citi Bike,https://gbfs.citibikenyc.com/gbfs/2.3/gbfs.json
+US,Clemson BikeShare,https://gbfs.bcycle.com/bcycle_clemson/gbfs.json
+US,CoGo,https://gbfs.cogobikeshare.com/gbfs/2.3/gbfs.json
+US,Des Moines B-cycle,https://gbfs.bcycle.com/bcycle_desmoines/gbfs.json
+US,Divvy,https://gbfs.divvybikes.com/gbfs/2.3/gbfs.json
+US,El Paso B-cycle,https://gbfs.bcycle.com/bcycle_elpaso/gbfs.json
+US,Evie Carshare,https://gbfs.vulog.io/mds/fleets/HOURCAR-USMSP/gbfs/2/en/gbfs.json
+US,Explore Bike Share,https://gbfs.bcycle.com/bcycle_memphis/gbfs.json
+US,GREENbike,https://gbfs.bcycle.com/bcycle_greenbikeslc/gbfs.json
+US,Greenville B-cycle,https://gbfs.bcycle.com/bcycle_greenville/gbfs.json
+US,Heartland B-cycle,https://gbfs.bcycle.com/bcycle_heartland/gbfs.json
+US,HIBike,https://kona.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Indego,https://gbfs.bcycle.com/bcycle_indego/gbfs.json
+US,Indy - Pacers Bikeshare,https://gbfs.bcycle.com/bcycle_pacersbikeshare/gbfs.json
+US,Inter Bike,https://miamiunderline.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Jackson County,https://gbfs.bcycle.com/bcycle_jacksoncounty/gbfs.json
+US,Lime Arlington,https://data.lime.bike/api/partners/v2/gbfs/arlington/gbfs.json
+US,Lime Atlanta,https://data.lime.bike/api/partners/v2/gbfs/atlanta/gbfs.json
+US,Lime Baltimore,https://data.lime.bike/api/partners/v2/gbfs/baltimore/gbfs.json
+US,Lime Chicago,https://data.lime.bike/api/partners/v2/gbfs/chicago/gbfs.json
+US,Lime Cleveland,https://data.lime.bike/api/partners/v2/gbfs/cleveland/gbfs.json
+US,Lime Colorado Springs,https://data.lime.bike/api/partners/v2/gbfs/colorado_springs/gbfs.json
+US,Lime Denver,https://data.lime.bike/api/partners/v2/gbfs/denver/gbfs.json
+US,Lime Detroit,https://data.lime.bike/api/partners/v2/gbfs/detroit/gbfs.json
+US,Lime Grand Rapids,https://data.lime.bike/api/partners/v2/gbfs/grand_rapids/gbfs.json
+US,Lime Lincoln,https://data.lime.bike/api/partners/v2/gbfs/lincoln/gbfs.json
+US,Lime Louisville,https://data.lime.bike/api/partners/v2/gbfs/louisville/gbfs.json
+US,Lime New York,https://data.lime.bike/api/partners/v2/gbfs/new_york/gbfs.json
+US,Lime Oakland,https://data.lime.bike/api/partners/v2/gbfs/oakland/gbfs.json
+US,Lime Portland,https://data.lime.bike/api/partners/v2/gbfs/portland/gbfs.json
+US,Lime San Francisco,https://data.lime.bike/api/partners/v2/gbfs/san_francisco/gbfs.json
+US,Lime San Jose,https://data.lime.bike/api/partners/v2/gbfs/san_jose/gbfs.json
+US,Lime Seattle,https://data.lime.bike/api/partners/v2/gbfs/seattle/gbfs.json
+US,Lime Washington DC,https://data.lime.bike/api/partners/v2/gbfs/washington_dc/gbfs.json
+US,Lyft,https://gbfs.lyft.com/gbfs/2.3/dca/gbfs.json
+US,Lyft Scooters Denver,https://gbfs.lyft.com/gbfs/2.3/den/gbfs.json
+US,Madison B-cycle,https://gbfs.bcycle.com/bcycle_madison/gbfs.json
+US,Metro Bike Share,https://gbfs.bcycle.com/bcycle_lametro/gbfs.json
+US,Mogo Detroit,https://detroit.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Nashville BCycle,https://gbfs.bcycle.com/bcycle_nashville/gbfs.json
+US,Nike Biketown,https://nike.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,PeaceHealth Rides,https://peacehealthrides.com/opendata/gbfs.json
+US,Pogoh,https://pittsburgh.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Redding Bikeshare,https://gbfs.bcycle.com/bcycle_redding/gbfs.json
+US,Reddy Bikeshare,https://reddybikeshare.socialbicycles.com/opendata/gbfs.json
+US,Relay Bike Share,https://relaybikeshare.socialbicycles.com/opendata/gbfs.json
+US,RGV B-cycle,https://gbfs.bcycle.com/bcycle_mcallen/gbfs.json
+US,RTC Bike Share,https://gbfs.bcycle.com/bcycle_rtcbikeshare/gbfs.json
+US,San Antonio B-cycle,https://gbfs.bcycle.com/bcycle_sanantonio/gbfs.json
+US,Santa Barbara BCycle,https://gbfs.bcycle.com/bcycle_santabarbara/gbfs.json
+US,Santa Cruz BCycle,https://gbfs.bcycle.com/bcycle_santacruz/gbfs.json
+US,SBU Wolf Ride Bike Share,https://stonybrook.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Spin Akron,https://mds.bird.co/gbfs/v2/public/provider/spin/akron/gbfs.json
+US,Spin Alexandria,https://mds.bird.co/gbfs/v2/public/provider/spin/alexandria/gbfs.json
+US,Spin Ann Arbor,https://mds.bird.co/gbfs/v2/public/provider/spin/ann_arbor/gbfs.json
+US,Spin Baltimore,https://mds.bird.co/gbfs/v2/public/provider/spin/baltimore/gbfs.json
+US,Spin Chicago,https://mds.bird.co/gbfs/v2/public/provider/spin/chicago/gbfs.json
+US,Spin Columbus,https://mds.bird.co/gbfs/v2/public/provider/spin/columbus/gbfs.json
+US,Spin Dayton,https://mds.bird.co/gbfs/v2/public/provider/spin/dayton/gbfs.json
+US,Spin Detroit,https://mds.bird.co/gbfs/v2/public/provider/spin/detroit/gbfs.json
+US,Spin Durham,https://mds.bird.co/gbfs/v2/public/provider/spin/durham/gbfs.json
+US,Spin East Lansing,https://mds.bird.co/gbfs/v2/public/provider/spin/east_lansing/gbfs.json
+US,Spin Fayetteville,https://mds.bird.co/gbfs/v2/public/provider/spin/fayetteville/gbfs.json
+US,Spin Fort Collins,https://mds.bird.co/gbfs/v2/public/provider/spin/fort_collins/gbfs.json
+US,Spin Gainesville,https://mds.bird.co/gbfs/v2/public/provider/spin/gainesville/gbfs.json
+US,Spin Lexington,https://mds.bird.co/gbfs/v2/public/provider/spin/lexington/gbfs.json
+US,Spin Los Angeles,https://mds.bird.co/gbfs/v2/public/provider/spin/los_angeles/gbfs.json
+US,Spin Michigan State University,https://mds.bird.co/gbfs/v2/public/provider/spin/michigan_state_university/gbfs.json
+US,Spin Milwaukee,https://mds.bird.co/gbfs/v2/public/provider/spin/milwaukee/gbfs.json
+US,Spin Minneapolis,https://mds.bird.co/gbfs/v2/public/provider/spin/minneapolis/gbfs.json
+US,Spin Nashville,https://mds.bird.co/gbfs/v2/public/provider/spin/nashville/gbfs.json
+US,Spin Ohio State,https://mds.bird.co/gbfs/v2/public/provider/spin/ohio_state/gbfs.json
+US,Spin Phoenix,https://mds.bird.co/gbfs/v2/public/provider/spin/phoenix/gbfs.json
+US,Spin Providence,https://mds.bird.co/gbfs/v2/public/provider/spin/providence/gbfs.json
+US,Spin Raleigh,https://mds.bird.co/gbfs/v2/public/provider/spin/raleigh/gbfs.json
+US,Spin Salt Lake City,https://mds.bird.co/gbfs/v2/public/provider/spin/salt_lake_city/gbfs.json
+US,Spin San Diego,https://mds.bird.co/gbfs/v2/public/provider/spin/san_diego/gbfs.json
+US,Spin San Francisco,https://mds.bird.co/gbfs/v2/public/provider/spin/san_francisco/gbfs.json
+US,Spin San Marcos,https://mds.bird.co/gbfs/v2/public/provider/spin/san_marcos/gbfs.json
+US,Spin Santa Monica,https://mds.bird.co/gbfs/v2/public/provider/spin/santa_monica/gbfs.json
+US,Spin St George,https://mds.bird.co/gbfs/v2/public/provider/spin/st_george/gbfs.json
+US,Spin St. Paul,https://mds.bird.co/gbfs/v2/public/provider/spin/st_paul/gbfs.json
+US,Spin Stillwater,https://mds.bird.co/gbfs/v2/public/provider/spin/stillwater/gbfs.json
+US,Spin Tallahassee,https://mds.bird.co/gbfs/v2/public/provider/spin/tallahassee/gbfs.json
+US,Spin Tampa,https://mds.bird.co/gbfs/v2/public/provider/spin/tampa/gbfs.json
+US,Spin Tempe,https://mds.bird.co/gbfs/v2/public/provider/spin/tempe/gbfs.json
+US,Spin University of Central Florida,https://mds.bird.co/gbfs/v2/public/provider/spin/university_of_central_florida/gbfs.json
+US,Spin Washington DC,https://mds.bird.co/gbfs/v2/public/provider/spin/washington_dc/gbfs.json
+US,Trinity Metro Bikes,https://fortworth.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Truckee BCycle,https://gbfs.bcycle.com/bcycle_truckee/gbfs.json
+US,Tugo,https://tucson.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+US,Valentine Bike Share,https://gbfs.bcycle.com/bcycle_valentine/gbfs.json
+US,Veo Asbury Park,https://cluster-prod.veoride.com/api/shares/name/asb/gbfs
+US,Veo Bend,https://cluster-prod.veoride.com/api/shares/name/bnd/gbfs
+US,Veo Birmingham,https://cluster-prod.veoride.com/api/shares/name/bir/gbfs
+US,Veo Bronx,https://cluster-prod.veoride.com/api/shares/name/nyc/gbfs
+US,Veo Cedar Rapids,https://cluster-prod.veoride.com/api/shares/name/cid/gbfs
+US,Veo Charlottesville,https://cluster-prod.veoride.com/api/shares/name/cvl/gbfs
+US,Veo Cleveland,https://cluster-prod.veoride.com/api/shares/name/cle/gbfs
+US,Veo College Park,https://cluster-prod.veoride.com/api/shares/name/cpk/gbfs
+US,Veo Columbus,https://cluster-prod.veoride.com/api/shares/name/cbs/gbfs
+US,Veo Fayetteville,https://cluster-prod.veoride.com/api/shares/name/fay/gbfs
+US,Veo Gainesville,https://cluster-prod.veoride.com/api/shares/name/gvl/gbfs
+US,Veo Hartford,https://cluster-prod.veoride.com/api/shares/name/hrt/gbfs
+US,Veo Kansas State University,https://cluster-prod.veoride.com/api/shares/name/ksu/gbfs
+US,Veo Los Angeles,https://cluster-prod.veoride.com/api/shares/name/xla/gbfs
+US,Veo New Haven,https://cluster-prod.veoride.com/api/shares/name/nhv/gbfs
+US,Veo New Rochelle,https://cluster-prod.veoride.com/api/shares/name/nrc/gbfs
+US,Veo Newark,https://cluster-prod.veoride.com/api/shares/name/nwk/gbfs
+US,Veo Oakland/Emeryville/Berkeley/Albany,https://cluster-prod.veoride.com/api/shares/name/xeb/gbfs
+US,Veo Oregon State Univeristy,https://cluster-prod.veoride.com/api/shares/name/osu/gbfs
+US,Veo Orlando,https://cluster-prod.veoride.com/api/shares/name/orl/gbfs
+US,Veo Pensacola,https://cluster-prod.veoride.com/api/shares/name/pnc/gbfs
+US,Veo Purdue University,https://cluster-prod.veoride.com/api/shares/name/pur/gbfs
+US,Veo Queens,https://cluster-prod.veoride.com/api/shares/name/nyq/gbfs
+US,Veo Rochester,https://cluster-prod.veoride.com/api/shares/name/roc/gbfs
+US,Veo Rutgers University,https://cluster-prod.veoride.com/api/shares/name/rut/gbfs
+US,Veo San Antonio,https://cluster-prod.veoride.com/api/shares/name/stx/gbfs
+US,Veo Sarasota,https://cluster-prod.veoride.com/api/shares/name/sar/gbfs
+US,Veo Southern Illinois University,https://cluster-prod.veoride.com/api/shares/name/siu/gbfs
+US,Veo Syracuse,https://cluster-prod.veoride.com/api/shares/name/syr/gbfs
+US,Veo Texas A&M University,https://cluster-prod.veoride.com/api/shares/name/tam/gbfs
+US,Veo Toledo,https://cluster-prod.veoride.com/api/shares/name/tol/gbfs
+US,Veo University of Alabama,https://cluster-prod.veoride.com/api/shares/name/ala/gbfs
+US,"Veo University of Illinois, Urbana-Champaign",https://cluster-prod.veoride.com/api/shares/name/iuc/gbfs
+US,Veo University of Oklahoma,https://cluster-prod.veoride.com/api/shares/name/oku/gbfs
+US,Veo Washington DC,https://cluster-prod.veoride.com/api/shares/name/xdc/gbfs
+US,Veo Wichita,https://cluster-prod.veoride.com/api/shares/name/wta/gbfs
+US,WE-cycle,https://aspen.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
+XK,Prishtina bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gs/gbfs.json
