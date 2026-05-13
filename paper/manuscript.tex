@@ -83,7 +83,11 @@ capacity field. Across the French corpus the taxonomy
 reclassifies \textbf{30.9\,\%} of the raw stations (95\,\%
 bootstrap CI [30.5, 31.3]); across the global catalogue it flags
 204 systems on A1--A5, 14 on A6 and 215 on A7, jointly covering
-70{,}176 stations on A7 alone. We formalise a six-step idempotent
+70{,}176 stations on A7 alone. The Italian deployment of a single
+operator illustrates the policy stake : 17 systems publish
+capacity~=~NaN on every station and would be ``clean'' under any
+v1.0 syntactic validator, yet collectively hide the most populous
+single-operator capacity blackout in the audited catalogue. We formalise a six-step idempotent
 purging protocol and release the resulting \emph{GBFS Audit
 Catalogue} (46{,}307 stations, 97 cities) on Zenodo. The Czech Republic is the European
 hotspot (55.6\,\% of audited systems flagged, all from a single
@@ -833,6 +837,50 @@ attempt to span dock-based, free-floating and car-sharing fleets in
 the same schema accumulate semantic ambiguity exactly because they
 refuse to specialise.
 
+\subsection{When a clean verdict hides a missing column}
+The Italian case study of Section~\ref{secGlobalAudit} crystallises
+what is at stake. Of the $34$ Italian systems in the catalogue, $33$
+are reachable and $25$ publish station data ; \emph{none} of them is
+flagged by classes A1 to A6 in the original v1.0 taxonomy. A reviewer
+reading only the A1--A6 verdict would conclude that the Italian GBFS
+publication is the cleanest in the catalogue. The seventh class A7
+reveals the opposite: $17$ of the $25$ data-publishing Italian systems
+are deployments of a single operator (\emph{Dott}) whose Italian
+feeds declare \texttt{capacity = NaN} on $100\,\%$ of their
+$\sim 11{,}000$ \texttt{station\_information} entries. The country is
+not clean ; the country is silent on the only field that matters for
+infrastructure quantification. An audit framework that conflates
+\emph{no problem detected} with \emph{no data published} mis-reads
+the entire national corpus. A7's empirical role is precisely to keep
+those two cases distinguishable, and the Italian episode is the
+clearest reminder that absence of evidence is not evidence of absence
+in open-standards compliance auditing.
+
+\subsection{GBFS v3 and the durability of the v2 legacy}
+A natural counter-argument to the audit is that GBFS v3
+(released 2023) introduces \texttt{is\_virtual\_station}, a boolean
+that in principle disambiguates free-floating anchors from physical
+docks and would mechanically suppress A3 detection. Three
+observations temper this expectation. First, \textbf{adoption is
+slow}: of the $1{,}509$ audited systems, only $541$ ($35.9\,\%$)
+declare GBFS v3 in their auto-discovery feed at the audit date,
+against $772$ ($51.2\,\%$) on v2.x ; $50$ remain on v1 and $146$
+expose no parseable version. Second, the v2 legacy will persist:
+regulatory feeds on \emph{transport.data.gouv.fr} and the
+MobilityData canonical catalogue archive snapshots that any
+longitudinal study from 2017 onward will need to ingest, and a v3
+feed published today does not retro-fix the v2 historical record.
+Third, and most importantly, \textbf{adoption is not compliance}:
+the German cargo-bicycle mis-detection we report
+(Section~\ref{secGlobalAudit}) and the Italian Dott NaN-capacity
+propagation both occur on GBFS v3 feeds, because v3 makes the
+\texttt{is\_virtual\_station} flag \emph{available} but does not
+make it \emph{mandatory} or \emph{verified}. The seven-class
+taxonomy A1--A7 therefore remains operationally relevant under
+full v3 adoption, and the protocol is straightforwardly extensible
+to the additional v3 attributes by adding rule-level checks at
+ingestion time.
+
 \subsection{Limitations}\label{secLimitations}
 The protocol has four acknowledged limitations.
 
@@ -999,6 +1047,48 @@ applied. \emph{Explicit parameterisation:} all thresholds
 ($\sigma_{\max}$, $N_{\min}$, geofilter bounds, hybridisation radii)
 are documented as hyperparameters and can be varied for sensitivity
 analysis without modifying the source code.
+
+These four properties are not arbitrary engineering choices; they
+operationalise the data-quality dimensions formalised by
+ISO/IEC~25012 \cite{ISO25012} and ISO/IEC~25024 \cite{ISO25024}, and
+together they make the pipeline a direct domain-level implementation
+of the standard. Idempotence enforces the
+\emph{internal consistency} dimension (two computations on the same
+input must yield the same output). Reversibility, through the
+\texttt{rejected\_stations.parquet} sidecar and the systematic
+preservation of the exclusion motive, materialises the
+\emph{recoverability} property and contributes to
+\emph{traceability}. Logging at every step extends that traceability
+to the full pipeline run. Explicit hyperparameter declaration
+addresses the \emph{understandability} dimension at the protocol
+level. Finally, the FAIR release of the audit report alongside
+DCAT-AP, JSON Schema and Croissant manifests (Section
+\ref{secMethods}) closes the \emph{compliance} requirement of
+25012. Table~\ref{tab:iso-mapping} summarises the mapping; we are
+not aware of a published reference implementation of ISO/IEC~25012
+on an open mobility standard prior to the present work.
+
+\begin{table}[ht]
+\centering
+\caption{Mapping of the six-step purging-protocol design properties
+to the data-quality dimensions of ISO/IEC~25012:2008 and its
+companion measurement standard ISO/IEC~25024:2015. The Audit
+Catalogue is, to our knowledge, the first FAIR-released
+implementation of these dimensions on a GBFS corpus.}
+\label{tab:iso-mapping}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Protocol property}     & \textbf{ISO/IEC~25012 dimension}   & \textbf{Mechanism in the pipeline}\\
+\midrule
+Idempotence                    & Internal consistency               & Unit-tested re-application on certified output\\
+Reversibility                  & Recoverability + Traceability      & \texttt{rejected\_stations.parquet} with exclusion motive\\
+Step-level logging             & Traceability                       & Per-step in/out counts and transformation type\\
+Explicit parameterisation      & Understandability                  & Hyperparameters in code + documented in audit report\\
+FAIR release                   & Compliance + Accessibility         & JSON Schema, DCAT-AP, Croissant, ODbL on Zenodo\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Threshold justification}
 The topological threshold $\sigma_{\max} = 3$ is a compromise between
