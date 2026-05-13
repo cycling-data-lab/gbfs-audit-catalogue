@@ -1,0 +1,1505 @@
+country,name,url,n,n_nan,n_zero,c_profile,c_actual,ratio,status
+AE,Careem BIKE,https://careem.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,225,0,6,14.968036529680365,14.568888888888889,1.0273972602739725,ok
+AE,Dott Abu Dhabi,https://gbfs.api.ridedott.com/public/v2/abu-dhabi/gbfs.json,1433,1433,0,,,nan,ok
+AE,Dott Dubai,https://gbfs.api.ridedott.com/public/v2/dubai/gbfs.json,342,342,0,,,nan,ok
+AE,Dott Dubai Hills,https://gbfs.api.ridedott.com/public/v2/dubai-hills/gbfs.json,,,,,,,too_small_n=7
+AE,Dott Ras Al Khaimah,https://gbfs.api.ridedott.com/public/v2/ras-al-khaimah/gbfs.json,31,31,0,,,nan,ok
+AE,Dott Sharjah,https://gbfs.api.ridedott.com/public/v2/sharjah/gbfs.json,38,38,0,,,nan,ok
+AE,Yaldi,https://yaldi.rideatom.com/gbfs/511/v3.0/gbfs,,,,,,,too_small_n=0
+AR,Bike Nordelta,https://nordelta.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,21,0,0,14.428571428571429,14.428571428571429,1.0,ok
+AR,Ecobici,https://buenosaires.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,392,0,0,18.581632653061224,18.581632653061224,1.0,ok
+AR,MiBiciTuBici,https://www.mibicitubici.gob.ar/opendata/gbfs.json,99,0,2,20.52577319587629,20.11111111111111,1.020618556701031,ok
+AT,Bird Wiener Neustadt,https://mds.bird.co/gbfs/v2/public/wienerneustadt/gbfs.json,,,,,,,too_small_n=0
+AT,city bike Linz,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_al/gbfs.json,50,1,0,9.306122448979592,9.12,1.0204081632653061,ok
+AT,Dott Baden bei Wien,https://gbfs.api.ridedott.com/public/v2/baden-bei-wien/gbfs.json,47,47,0,,,nan,ok
+AT,Dott Bregenz,https://gbfs.api.ridedott.com/public/v2/bregenz/gbfs.json,98,98,0,,,nan,ok
+AT,Dott Dornbirn,https://gbfs.api.ridedott.com/public/v2/dornbirn/gbfs.json,,,,,,,too_small_n=3
+AT,Dott Feldkirchen bei Graz,https://gbfs.api.ridedott.com/public/v2/feldkirchen-bei-graz/gbfs.json,25,25,0,,,nan,ok
+AT,Dott Innsbruck,https://gbfs.api.ridedott.com/public/v2/innsbruck/gbfs.json,56,56,0,,,nan,ok
+AT,Dott Klagenfurt,https://gbfs.api.ridedott.com/public/v2/klagenfurt/gbfs.json,46,46,0,,,nan,ok
+AT,Dott Klopein,https://gbfs.api.ridedott.com/public/v2/klopein/gbfs.json,,,,,,,err:HTTPError
+AT,Dott Korneuburg,https://gbfs.api.ridedott.com/public/v2/korneuburg/gbfs.json,43,43,0,,,nan,ok
+AT,Dott Leoben,https://gbfs.api.ridedott.com/public/v2/leoben/gbfs.json,46,46,0,,,nan,ok
+AT,Dott Linz,https://gbfs.api.ridedott.com/public/v2/linz/gbfs.json,156,156,0,,,nan,ok
+AT,Dott Mödling,https://gbfs.api.ridedott.com/public/v2/modling/gbfs.json,68,68,0,,,nan,ok
+AT,Dott Saint Anton am Arlberg,https://gbfs.api.ridedott.com/public/v2/sankt-anton-am-arlberg/gbfs.json,,,,,,,err:HTTPError
+AT,Dott Serfaus,https://gbfs.api.ridedott.com/public/v2/serfaus/gbfs.json,,,,,,,err:HTTPError
+AT,Dott Steyr,https://gbfs.api.ridedott.com/public/v2/steyr/gbfs.json,,,,,,,too_small_n=16
+AT,Dott Velden-Am-Worthersee,https://gbfs.api.ridedott.com/public/v2/velden-am-worthersee/gbfs.json,,,,,,,err:HTTPError
+AT,Dott Villach,https://gbfs.api.ridedott.com/public/v2/villach/gbfs.json,,,,,,,too_small_n=0
+AT,Dott Wels,https://gbfs.api.ridedott.com/public/v2/wels/gbfs.json,47,47,0,,,nan,ok
+AT,EVENTbike - Austria,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_eq/gbfs.json,21,21,0,,,nan,ok
+AT,Getaround Graz,https://getaround.com/gbfs/v3/graz/gbfs,,,,,,,err:LookupError
+AT,Getaround Innsbruck,https://getaround.com/gbfs/v3/innsbruck/gbfs,,,,,,,err:LookupError
+AT,nextbike Klagenfurt Austria,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ka/gbfs.json,50,0,0,8.04,8.04,1.0,ok
+AT,nextbike Niederösterreich,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_la/gbfs.json,245,235,0,6.0,0.24489795918367346,24.5,ok
+AT,Stadtrad Innsbruck Austria,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_si/gbfs.json,55,0,0,15.745454545454546,15.745454545454546,1.0,ok
+AT,VVT REGIORAD Tirol,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vt/gbfs.json,21,0,0,7.0476190476190474,7.0476190476190474,1.0,ok
+AT,WienMobil Rad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wr/gbfs.json,258,62,0,21.091836734693878,16.023255813953487,1.3163265306122451,ok
+BA,BL bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bj/gbfs.json,,,,,,,too_small_n=5
+BA,nextbike BIH,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ba/gbfs.json,38,38,0,,,nan,ok
+BA,Zenica,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bz/gbfs.json,,,,,,,too_small_n=15
+BE,Bird Antwerp,https://mds.bird.co/gbfs/v2/public/antwerp/gbfs.json,,,,,,,too_small_n=0
+BE,Blue-bike,https://api.delijn.be/gbfs/gbfs.json,276,0,2,13.291970802919709,13.195652173913043,1.0072992700729928,ok
+BE,Bolt Technology OÜ,https://mds.bolt.eu/gbfs/3/336/gbfs,2558,2557,0,4.0,0.001563721657544957,2558.0,ok
+BE,Donkey Republic Antwerp,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_antwerp/gbfs.json,,,,,,,err:HTTPError
+BE,Donkey Republic Ghent,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_gh/gbfs.json,,,,,,,err:HTTPError
+BE,Donkey Republic Kortrijk & Leiedal,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kortrijk_leiedal/gbfs,,,,,,,err:HTTPError
+BE,Donkey Republic Westhoek,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_westhoek/gbfs.json,,,,,,,err:HTTPError
+BE,Dott Aalst,https://gbfs.api.ridedott.com/public/v2/aalst/gbfs.json,205,205,0,,,nan,ok
+BE,Dott Brussels,https://gbfs.api.ridedott.com/public/v2/brussels/gbfs.json,2476,2476,0,,,nan,ok
+BE,Dott Charleroi,https://gbfs.api.ridedott.com/public/v2/charleroi/gbfs.json,1078,1078,0,,,nan,ok
+BE,Dott Ghent,https://gbfs.api.ridedott.com/public/v2/ghent/gbfs.json,3211,3211,0,,,nan,ok
+BE,Dott Kortrijk,https://gbfs.api.ridedott.com/public/v2/kortrijk/gbfs.json,205,205,0,,,nan,ok
+BE,Dott Liege,https://gbfs.api.ridedott.com/public/v2/liege/gbfs.json,922,922,0,,,nan,ok
+BE,Felyx Antwerp,https://maas.zeus.cooltra.com/gbfs/antwerp/3.0/en/gbfs.json,,,,,,,err:LookupError
+BE,Felyx Brussels,https://maas.zeus.cooltra.com/gbfs/brussels/3.0/en/gbfs.json,,,,,,,err:LookupError
+BE,Getaround Aalst,https://getaround.com/gbfs/v3/aalst/gbfs,,,,,,,err:LookupError
+BE,Getaround Antwerpen,https://getaround.com/gbfs/v3/antwerpen/gbfs,,,,,,,err:LookupError
+BE,Getaround Beaumont,https://getaround.com/gbfs/v3/beaumont/gbfs,,,,,,,err:LookupError
+BE,Getaround Charleroi,https://getaround.com/gbfs/v3/charleroi/gbfs,,,,,,,err:LookupError
+BE,Getaround Essen,https://getaround.com/gbfs/v3/essen/gbfs,,,,,,,err:LookupError
+BE,Getaround Gent,https://getaround.com/gbfs/v3/gent/gbfs,,,,,,,err:LookupError
+BE,Getaround Hove,https://getaround.com/gbfs/v3/hove/gbfs,,,,,,,err:LookupError
+BE,Getaround Leuven,https://getaround.com/gbfs/v3/leuven/gbfs,,,,,,,err:LookupError
+BE,Getaround Lille,https://getaround.com/gbfs/v3/lille/gbfs,,,,,,,err:LookupError
+BE,Getaround Mechelen,https://getaround.com/gbfs/v3/mechelen/gbfs,,,,,,,err:LookupError
+BE,Getaround Seraing,https://getaround.com/gbfs/v3/seraing/gbfs,,,,,,,err:LookupError
+BE,Getaround Waterloo,https://getaround.com/gbfs/v3/waterloo/gbfs,,,,,,,err:LookupError
+BE,Li Bia Velo,https://api.cyclocity.fr/contracts/namur/gbfs/v3/gbfs.json,27,0,0,14.518518518518519,14.518518518518519,1.0,ok
+BE,Lime Antwerp,https://data.lime.bike/api/partners/v2/gbfs/antwerp/gbfs.json,,,,,,,err:HTTPError
+BE,Lime Brussels,https://data.lime.bike/api/partners/v2/gbfs/brussels/gbfs.json,,,,,,,err:HTTPError
+BE,nextbike BE Vlaamse Rand,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hf/gbfs.json,57,57,0,,,nan,ok
+BE,Pony Brussels,https://gbfs.getapony.com/v1/brussels/en/gbfs.json?key=AIzaSyBMkR2fCYvZZC22Ls5A5wJQRwDERao07Nc,,,,,,,err:HTTPError
+BE,Pony Charleroi,https://gbfs.getapony.com/v1/charleroi/en/gbfs.json?key=AIzaSyBMkR2fCYvZZC22Ls5A5wJQRwDERao07Nc,,,,,,,err:HTTPError
+BE,Pony Liège,https://gbfs.getapony.com/v1/liege/en/gbfs.json?key=AIzaSyBMkR2fCYvZZC22Ls5A5wJQRwDERao07Nc,,,,,,,err:HTTPError
+BE,Velo Antwerpen,https://gbfs.smartbike.com/antwerp/1.0/gbfs.json,321,0,0,32.25545171339564,32.25545171339564,1.0,ok
+BE,Villo,https://api.cyclocity.fr/contracts/bruxelles/gbfs/v3/gbfs.json,349,0,1,23.99712643678161,23.92836676217765,1.002873563218391,ok
+BE,VOI Antwerp,https://api.voiapp.io/gbfs/be/7a4cb689-a2ee-409d-a5fe-49d2e8d50717/v2/gbfs.json,2777,2742,0,3.1714285714285713,0.03997119193374145,79.34285714285714,ok
+BR,Bike Brasilia,https://brasilia.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,70,0,0,11.214285714285714,11.214285714285714,1.0,ok
+BR,Bike Estácio,https://curitiba.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,51,0,1,16.62,16.294117647058822,1.02,ok
+BR,Bike Itaú - Pernambuco,https://recife.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,90,0,0,18.133333333333333,18.133333333333333,1.0,ok
+BR,Bike Itaú - Rio,https://riodejaneiro.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,404,0,0,17.22772277227723,17.22772277227723,1.0,ok
+BR,Bike Itaú - Salvador,https://salvador.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,74,0,0,15.256756756756756,15.256756756756756,1.0,ok
+BR,Bike Itaú - Sampa,https://saopaulo.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,240,0,0,17.1375,17.1375,1.0,ok
+BR,Bike Porto Alegre,https://portoalegre.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,90,0,0,16.91111111111111,16.91111111111111,1.0,ok
+BR,Rivi Bike,https://riviera.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=7
+CA,Accès Vélo,https://saguenay.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=18
+CA,àVélo,https://quebec.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,226,0,6,19.486363636363638,18.969026548672566,1.0272727272727273,ok
+CA,Bike Share Toronto,https://toronto.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,1032,0,0,19.164728682170544,19.164728682170544,1.0,ok
+CA,Bird Calgary,https://mds.bird.co/gbfs/v2/public/calgary/gbfs.json,,,,,,,too_small_n=0
+CA,Bird Edmonton,https://mds.bird.co/gbfs/v2/public/edmonton/gbfs.json,,,,,,,too_small_n=0
+CA,Bird Halifax,https://mds.bird.co/gbfs/v2/public/halifax/gbfs.json,620,620,0,,,nan,ok
+CA,Bird Hamilton,https://mds.bird.co/gbfs/v2/public/hamilton/gbfs.json,,,,,,,too_small_n=0
+CA,Bird Leduc,https://mds.bird.co/gbfs/v2/public/leduc/gbfs.json,,,,,,,too_small_n=0
+CA,Bird Ottawa,https://mds.bird.co/gbfs/v2/public/ottawa/gbfs.json,566,566,0,,,nan,ok
+CA,Bird Saskatoon,https://mds.bird.co/gbfs/v2/public/saskatoon/gbfs.json,,,,,,,too_small_n=0
+CA,Bird Vaughan,https://mds.bird.co/gbfs/v2/public/vaughan/gbfs.json,466,466,0,,,nan,ok
+CA,BIXI Montréal,https://gbfs.velobixi.com/gbfs/gbfs.json,1059,0,1,22.373345935727787,22.35221907459868,1.0009451795841209,ok
+CA,Lime Calgary,https://data.lime.bike/api/partners/v2/gbfs/calgary/gbfs.json,,,,,,,err:HTTPError
+CA,Lime Edmonton,https://data.lime.bike/api/partners/v2/gbfs/edmonton/gbfs.json,,,,,,,err:HTTPError
+CA,Lime Kelowna,https://data.lime.bike/api/partners/v2/gbfs/kelowna/gbfs.json,,,,,,,err:HTTPError
+CA,Lime Mississauga,https://data.lime.bike/api/partners/v2/gbfs/mississauga/gbfs.json,,,,,,,err:HTTPError
+CA,Lime Ottawa,https://data.lime.bike/api/partners/v2/gbfs/ottawa/gbfs.json,,,,,,,err:HTTPError
+CA,Lime Vancouver,https://data.lime.bike/api/partners/v2/gbfs/vancouver_bc/gbfs.json,,,,,,,err:HTTPError
+CA,LocoMotion Montreal,https://locomotion.app/api/gbfs/3.0/montreal/gbfs,,,,,,,err:LookupError
+CA,LocoMotion Sherbrooke,https://locomotion.app/api/gbfs/3.0/sherbrooke/gbfs,,,,,,,err:LookupError
+CA,Mobi Bike Share,https://gbfs.kappa.fifteen.eu/gbfs/2.2/mobi/en/gbfs.json,262,0,2,19.084615384615386,18.938931297709924,1.0076923076923077,ok
+CA,Neuron Mobility,https://mds.neuron-mobility.com/ard/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/bmt/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yyc/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yeg/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/kcw/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yql/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yow/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yqf/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yqr/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yxe/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Mobility,https://mds.neuron-mobility.com/yve/gbfs/2/,,,,,,,err:HTTPError
+CA,Neuron Oshawa,https://mds.neuron-mobility.com/yoo/gbfs/2/,,,,,,,err:HTTPError
+CA,PBSC HQ,https://pbsn.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=11
+CA,Sobi Hamilton,https://hamilton.socialbicycles.com/opendata/gbfs.json,199,199,0,,,nan,ok
+CH,2EM Car Sharing,https://api.mobidata-bw.de/sharing/gbfs/v3/zem_ch/gbfs,1740,1740,0,,,nan,ok
+CH,Bird Basel,https://mds.bird.co/gbfs/v2/public/basel/gbfs.json,,,,,,,too_small_n=0
+CH,Bird Biel,https://mds.bird.co/gbfs/v2/public/biel/gbfs.json,,,,,,,too_small_n=0
+CH,Bird Bulle,https://mds.bird.co/gbfs/v2/public/bulle/gbfs.json,,,,,,,too_small_n=0
+CH,Bird Grenchen,https://mds.bird.co/gbfs/v2/public/grenchen/gbfs.json,,,,,,,too_small_n=0
+CH,Bird Kloten,https://mds.bird.co/gbfs/v2/public/kloten/gbfs.json,,,,,,,too_small_n=0
+CH,Bird Schaffhausen,https://mds.bird.co/gbfs/v2/public/schaffhausen/gbfs.json,88,88,0,,,nan,ok
+CH,Bird Uster,https://mds.bird.co/gbfs/v2/public/uster/gbfs.json,,,,,,,too_small_n=0
+CH,Bird Winterthur,https://mds.bird.co/gbfs/v2/public/winterthur/gbfs.json,,,,,,,too_small_n=0
+CH,Bird Zurich,https://mds.bird.co/gbfs/v2/public/zurich/gbfs.json,,,,,,,too_small_n=0
+CH,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_basel/gbfs,,,,,,,too_small_n=2
+CH,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_zurich/gbfs,54,51,0,6.666666666666667,0.37037037037037035,18.000000000000004,ok
+CH,Car-ship,https://api.mobidata-bw.de/sharing/gbfs/v3/car_ship/gbfs,,,,,,,too_small_n=18
+CH,carvelo eCargo-Bike Sharing,https://api.mobidata-bw.de/sharing/gbfs/v3/carvelo2go_ch/gbfs,315,315,0,,,nan,ok
+CH,Donkey EPFL - Lausanne,https://stables.donkey.bike/api/public/gbfs/3.0/epfl_lausanne/gbfs.json,,,,,,,err:HTTPError
+CH,Donkey Republic Geneva,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_ge/gbfs.json,,,,,,,err:HTTPError
+CH,Donkey Republic Kreuzlingen,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kreuzlingen/gbfs.json,,,,,,,err:HTTPError
+CH,Donkey Republic Neuchâtel,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_neuchatel/gbfs.json,,,,,,,err:HTTPError
+CH,Donkey Republic Sion,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_sion/gbfs.json,,,,,,,err:HTTPError
+CH,Donkey Republic Thun,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_thun/gbfs.json,,,,,,,err:HTTPError
+CH,Donkey Republic Yverdon-les-Bains,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_yverdon-les-bains/gbfs.json,,,,,,,err:HTTPError
+CH,Dott Basel,https://gbfs.api.ridedott.com/public/v2/basel/gbfs.json,34,34,0,,,nan,ok
+CH,Dott Romanshorn,https://gbfs.api.ridedott.com/public/v2/romanshorn/gbfs.json,209,209,0,,,nan,ok
+CH,Dott Rorschach,https://gbfs.api.ridedott.com/public/v2/rorschach/gbfs.json,137,137,0,,,nan,ok
+CH,Dott St. Gallen,https://gbfs.api.ridedott.com/public/v2/st.-gallen/gbfs.json,131,131,0,,,nan,ok
+CH,Dott Winterthur,https://gbfs.api.ridedott.com/public/v2/winterthur/gbfs.json,205,205,0,,,nan,ok
+CH,Dott Zurich,https://gbfs.api.ridedott.com/public/v2/zurich/gbfs.json,77,77,0,,,nan,ok
+CH,edrive carsharing,https://api.mobidata-bw.de/sharing/gbfs/v3/edrivecarsharing_ch/gbfs,78,78,0,,,nan,ok
+CH,invia BikeShare,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ms/gbfs.json,55,26,0,8.448275862068966,4.454545454545454,1.8965517241379313,ok
+CH,Lime Basel,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_basel/gbfs,,,,,,,err:LookupError
+CH,Lime Opfikon,https://data.lime.bike/api/partners/v2/gbfs/opfikon/gbfs.json,,,,,,,err:HTTPError
+CH,Lime Uster,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_uster/gbfs,,,,,,,err:LookupError
+CH,Lime Zug,https://data.lime.bike/api/partners/v2/gbfs/zug/gbfs.json,,,,,,,err:HTTPError
+CH,Lime Zurich,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_zurich/gbfs,,,,,,,err:LookupError
+CH,Mobility,https://api.mobidata-bw.de/sharing/gbfs/v3/mobility_ch/gbfs,1691,1691,0,,,nan,ok
+CH,MyBuxi,https://api.mobidata-bw.de/sharing/gbfs/v3/mybuxi_ch/gbfs,2118,0,0,7.0,7.0,1.0,ok
+CH,nextbike Switzerland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ch/gbfs.json,380,379,0,1.0,0.002631578947368421,380.0,ok
+CH,PickeBike Aubonne,https://api.mobidata-bw.de/sharing/gbfs/v3/pickebike_aubonne/gbfs,,,,,,,too_small_n=14
+CH,PickeBike Basel,https://api.mobidata-bw.de/sharing/gbfs/v3/pickebike_basel/gbfs,79,79,0,,,nan,ok
+CH,PickeBike Fribourg,https://api.mobidata-bw.de/sharing/gbfs/v3/pickebike_fribourg/gbfs,32,32,0,,,nan,ok
+CH,PubliBike,https://api.publibike.ch/v1/gbfs/v2/gbfs.json,,,,,,,too_small_n=0
+CH,QuickRent,https://quickrent.ch/sbb/api/v1/gbfs,86,86,0,,,nan,ok
+CH,Share Birrer,https://www.share-birrer.ch/gbfs/gbfs.json,21,21,0,,,nan,ok
+CH,sharedmobility.ch,https://www.sharedmobility.ch/gbfs.json,12099,7463,0,16.351164797239,6.2653111827423755,2.6097929249352894,ok
+CH,Velospot,https://api.mobidata-bw.de/sharing/gbfs/v3/velospot_ch/gbfs,1634,0,0,32.65667074663403,32.65667074663403,1.0,ok
+CH,Voi Switzerland,https://api.mobidata-bw.de/sharing/gbfs/v3/voi_ch/gbfs,772,763,0,4.333333333333333,0.050518134715025906,85.77777777777777,ok
+CL,Bike Itaú - Santiago,https://santiago.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,199,0,0,15.457286432160805,15.457286432160805,1.0,ok
+CO,Bogotá,https://bogota.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,194,0,1,15.49740932642487,15.417525773195877,1.005181347150259,ok
+CY,nextbike Cyprus,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cy/gbfs.json,316,234,0,6.2560975609756095,1.6234177215189873,3.8536585365853657,ok
+CZ,nextbike Benešov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_co/gbfs.json,26,0,0,4.0,4.0,1.0,ok
+CZ,nextbike Berounsko,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_td/gbfs.json,29,0,0,14.551724137931034,14.551724137931034,1.0,ok
+CZ,nextbike Brno,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_te/gbfs.json,297,246,0,4.0,0.6868686868686869,5.823529411764706,ok
+CZ,nextbike Česká Třebová,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nc/gbfs.json,26,0,0,6.346153846153846,6.346153846153846,1.0,ok
+CZ,nextbike Český Brod,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nd/gbfs.json,,,,,,,too_small_n=12
+CZ,nextbike Dvůr Králové,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tf/gbfs.json,27,26,0,4.0,0.14814814814814814,27.0,ok
+CZ,nextbike Frýdek-Místek,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ts/gbfs.json,127,124,0,4.333333333333333,0.10236220472440945,42.33333333333333,ok
+CZ,nextbike Hodonín,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nh/gbfs.json,45,13,0,4.0,2.8444444444444446,1.40625,ok
+CZ,nextbike Hořice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_uf/gbfs.json,,,,,,,too_small_n=9
+CZ,nextbike Hradec Králové,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tl/gbfs.json,136,99,0,5.405405405405405,1.4705882352941178,3.6756756756756754,ok
+CZ,nextbike Hranice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_na/gbfs.json,25,25,0,,,nan,ok
+CZ,nextbike Jablonec,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ud/gbfs.json,38,29,0,4.0,0.9473684210526315,4.222222222222222,ok
+CZ,nextbike Jičín,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nt/gbfs.json,26,26,0,,,nan,ok
+CZ,nextbike Kahan,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_oc/gbfs.json,,,,,,,err:HTTPError
+CZ,nextbike Kladno,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tk/gbfs.json,87,52,0,8.371428571428572,3.367816091954023,2.4857142857142858,ok
+CZ,nextbike Klášterec nad Ohří,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ko/gbfs.json,22,0,0,4.0,4.0,1.0,ok
+CZ,nextbike Kolín,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ni/gbfs.json,41,41,0,,,nan,ok
+CZ,nextbike Krnov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tw/gbfs.json,51,45,0,10.0,1.1764705882352942,8.5,ok
+CZ,nextbike Kyjov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ky/gbfs.json,,,,,,,too_small_n=10
+CZ,nextbike Liberec,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_xa/gbfs.json,51,3,0,4.458333333333333,4.196078431372549,1.0624999999999998,ok
+CZ,nextbike Lipník nad Bečvou,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lb/gbfs.json,,,,,,,too_small_n=11
+CZ,nextbike Lovosice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lo/gbfs.json,,,,,,,too_small_n=18
+CZ,nextbike Mladoboleslavsko,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tq/gbfs.json,146,114,0,6.4375,1.4109589041095891,4.5625,ok
+CZ,nextbike Moravská Třebová,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_xc/gbfs.json,,,,,,,too_small_n=15
+CZ,nextbike Most,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_uo/gbfs.json,,,,,,,err:HTTPError
+CZ,nextbike Neratovice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ne/gbfs.json,,,,,,,too_small_n=17
+CZ,nextbike OlbramoviceVotice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cu/gbfs.json,20,2,0,3.0,2.7,1.111111111111111,ok
+CZ,nextbike Olomouc,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ti/gbfs.json,70,70,0,,,nan,ok
+CZ,nextbike Opava,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tj/gbfs.json,63,59,0,2.0,0.12698412698412698,15.75,ok
+CZ,nextbike Ostrava,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_to/gbfs.json,437,386,0,4.098039215686274,0.4782608695652174,8.568627450980392,ok
+CZ,nextbike Otrokovice,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ot/gbfs.json,,,,,,,too_small_n=17
+CZ,nextbike Pelhřimov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cq/gbfs.json,27,24,0,2.0,0.2222222222222222,9.0,ok
+CZ,nextbike Písek,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ty/gbfs.json,62,60,0,3.0,0.0967741935483871,31.0,ok
+CZ,nextbike Praha,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tg/gbfs.json,1489,34,0,6.6542955326460484,6.502350570852921,1.0233676975945019,ok
+CZ,nextbike Přerov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nr/gbfs.json,69,7,0,4.016129032258065,3.608695652173913,1.1129032258064517,ok
+CZ,nextbike Roudnice nad Labem,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rl/gbfs.json,,,,,,,too_small_n=17
+CZ,nextbike Rychnovsko,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tx/gbfs.json,,,,,,,too_small_n=18
+CZ,nextbike Šumperk,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ns/gbfs.json,20,0,0,5.0,5.0,1.0,ok
+CZ,nextbike Třebíč,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tu/gbfs.json,43,42,0,3.0,0.06976744186046512,43.0,ok
+CZ,nextbike Trutnov,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_xb/gbfs.json,36,27,0,4.0,1.0,4.0,ok
+CZ,nextbike Uherské Hradiště,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tt/gbfs.json,50,49,0,4.0,0.08,50.0,ok
+CZ,nextbike Valašsko,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vm/gbfs.json,89,89,0,,,nan,ok
+CZ,nextbike Vrchlabí,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vr/gbfs.json,25,0,0,8.56,8.56,1.0,ok
+CZ,nextbike Ždár nad Sázavou,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zs/gbfs.json,43,43,0,,,nan,ok
+CZ,nextbike Zlín,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tv/gbfs.json,104,92,0,4.166666666666667,0.4807692307692308,8.666666666666668,ok
+DE,AB mit Lara,https://abmitlara.de/wp-json/commonsbooking/v1/gbfs.json,,,,,,,too_small_n=16
+DE,ALF - das Affstätter Lastenfahrrad,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_alf/gbfs,,,,,,,too_small_n=1
+DE,AW-bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rh/gbfs.json,22,22,0,,,nan,ok
+DE,Bergisches e-Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ac/gbfs.json,57,40,0,8.470588235294118,2.526315789473684,3.3529411764705883,ok
+DE,Bikesharing Amprion,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wp/gbfs.json,,,,,,,too_small_n=5
+DE,Bird Munich,https://mds.bird.co/gbfs/v2/public/munich/gbfs.json,,,,,,,too_small_n=0
+DE,Bird Ulm,https://mds.bird.co/gbfs/v2/public/ulm/gbfs.json,,,,,,,too_small_n=0
+DE,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_karlsruhe/gbfs,27,0,0,5.481481481481482,5.481481481481482,1.0,ok
+DE,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_reutlingen_tuebingen/gbfs,,,,,,,too_small_n=0
+DE,Bolt Technology OÜ,https://api.mobidata-bw.de/sharing/gbfs/v3/bolt_stuttgart/gbfs,52,49,0,9.0,0.5192307692307693,17.333333333333332,ok
+DE,Bre.Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bq/gbfs.json,108,0,0,7.935185185185185,7.935185185185185,1.0,ok
+DE,Call a Bike,https://api.mobidata-bw.de/sharing/gbfs/v3/callabike/gbfs,1601,1601,0,,,nan,ok
+DE,Campus Berlin-Buch,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cb/gbfs.json,,,,,,,too_small_n=16
+DE,Carsharing in Wertheim,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtwerke_wertheim/gbfs,,,,,,,too_small_n=2
+DE,CarSharing Renningen,https://api.mobidata-bw.de/sharing/gbfs/v3/oekostadt_renningen/gbfs,33,0,0,1.2121212121212122,1.2121212121212122,1.0,ok
+DE,Conficars,https://api.mobidata-bw.de/sharing/gbfs/v3/conficars_ulm/gbfs,28,0,0,1.1785714285714286,1.1785714285714286,1.0,ok
+DE,Deer,https://api.mobidata-bw.de/sharing/gbfs/v3/deer/gbfs,,,,,,,err:HTTPError
+DE,Die Grüne Flotte,https://api.mobidata-bw.de/sharing/gbfs/v3/gruene-flotte_freiburg/gbfs,279,0,0,1.8351254480286738,1.8351254480286738,1.0,ok
+DE,Donkey Ergolding,https://stables.donkey.bike/api/public/gbfs/3.0/Ergolding/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Kelheim,https://stables.donkey.bike/api/public/gbfs/3.0/Kelheim/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey KielRegion+Smile24,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kielsmile/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Neutraubling,https://stables.donkey.bike/api/public/gbfs/3.0/Neutraubling/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Obertraubling,https://stables.donkey.bike/api/public/gbfs/3.0/Obertraubling/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Prignitz,https://stables.donkey.bike/api/public/gbfs/3.0/Donkey-Prignitz/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Regensburg,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_regensburg_straubing/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Republic Augsburg,https://stables.donkey.bike/api/public/gbfs/3.0/Augsburg/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Republic Bamberg,https://stables.donkey.bike/api/public/gbfs/3.0/Bamberg/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Republic Bayern Komplett,https://stables.donkey.bike/api/public/gbfs/3.0/bayern_komplett/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Republic Hannover,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hannover/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Republic Kiel,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kiel/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Republic Munich,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_munich/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Republic Regensburg,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_regensburg/gbfs.json,,,,,,,err:HTTPError
+DE,Donkey Republic Schleswig,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_schleswig/gbfs.json,,,,,,,err:HTTPError
+DE,Dott Aachen,https://gbfs.api.ridedott.com/public/v2/aachen/gbfs.json,21,21,0,,,nan,ok
+DE,Dott Baunatal,https://gbfs.api.ridedott.com/public/v2/baunatal/gbfs.json,205,205,0,,,nan,ok
+DE,Dott Berlin,https://gbfs.api.ridedott.com/public/v2/berlin/gbfs.json,584,584,0,,,nan,ok
+DE,Dott Bielefeld,https://gbfs.api.ridedott.com/public/v2/bielefeld/gbfs.json,27,27,0,,,nan,ok
+DE,Dott Böblingen,https://gbfs.api.ridedott.com/public/v2/boblingen/gbfs.json,,,,,,,too_small_n=8
+DE,Dott Bochum,https://gbfs.api.ridedott.com/public/v2/bochum/gbfs.json,,,,,,,too_small_n=7
+DE,Dott Bonn,https://gbfs.api.ridedott.com/public/v2/bonn/gbfs.json,,,,,,,too_small_n=3
+DE,Dott Bremen,https://gbfs.api.ridedott.com/public/v2/bremen/gbfs.json,21,21,0,,,nan,ok
+DE,Dott Bremerhaven,https://gbfs.api.ridedott.com/public/v2/bremerhaven/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Brühl,https://gbfs.api.ridedott.com/public/v2/bruhl/gbfs.json,78,78,0,,,nan,ok
+DE,Dott Brunswick,https://gbfs.api.ridedott.com/public/v2/brunswick/gbfs.json,41,41,0,,,nan,ok
+DE,Dott Celle,https://gbfs.api.ridedott.com/public/v2/celle/gbfs.json,,,,,,,too_small_n=1
+DE,Dott Chemnitz,https://gbfs.api.ridedott.com/public/v2/chemnitz/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Cologne,https://gbfs.api.ridedott.com/public/v2/cologne/gbfs.json,135,135,0,,,nan,ok
+DE,Dott Cottbus,https://gbfs.api.ridedott.com/public/v2/cottbus/gbfs.json,,,,,,,too_small_n=3
+DE,Dott Darmstadt,https://gbfs.api.ridedott.com/public/v2/darmstadt/gbfs.json,63,63,0,,,nan,ok
+DE,Dott Detmold,https://gbfs.api.ridedott.com/public/v2/detmold/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Dortmund,https://gbfs.api.ridedott.com/public/v2/dortmund/gbfs.json,27,27,0,,,nan,ok
+DE,Dott Duisburg,https://gbfs.api.ridedott.com/public/v2/duisburg/gbfs.json,,,,,,,too_small_n=1
+DE,Dott Dusseldorf,https://gbfs.api.ridedott.com/public/v2/dusseldorf/gbfs.json,286,286,0,,,nan,ok
+DE,Dott Elmshorn,https://gbfs.api.ridedott.com/public/v2/elmshorn/gbfs.json,20,20,0,,,nan,ok
+DE,Dott Erfurt,https://gbfs.api.ridedott.com/public/v2/erfurt/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Erlangen,https://gbfs.api.ridedott.com/public/v2/erlangen/gbfs.json,,,,,,,too_small_n=13
+DE,Dott Essen,https://gbfs.api.ridedott.com/public/v2/essen/gbfs.json,57,57,0,,,nan,ok
+DE,Dott Flensburg,https://gbfs.api.ridedott.com/public/v2/flensburg/gbfs.json,30,30,0,,,nan,ok
+DE,Dott Frankfurt,https://gbfs.api.ridedott.com/public/v2/frankfurt/gbfs.json,144,144,0,,,nan,ok
+DE,Dott Friedrichshafen,https://gbfs.api.ridedott.com/public/v2/friedrichshafen/gbfs.json,36,36,0,,,nan,ok
+DE,Dott Gera,https://gbfs.api.ridedott.com/public/v2/gera/gbfs.json,24,24,0,,,nan,ok
+DE,Dott Gifhorn,https://gbfs.api.ridedott.com/public/v2/gifhorn/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Gladbeck,https://gbfs.api.ridedott.com/public/v2/gladbeck/gbfs.json,,,,,,,too_small_n=10
+DE,Dott Hamburg,https://gbfs.api.ridedott.com/public/v2/hamburg/gbfs.json,51,51,0,,,nan,ok
+DE,Dott Hamm,https://gbfs.api.ridedott.com/public/v2/hamm/gbfs.json,,,,,,,too_small_n=1
+DE,Dott Hannover,https://gbfs.api.ridedott.com/public/v2/hannover/gbfs.json,34,34,0,,,nan,ok
+DE,Dott Heidelberg,https://gbfs.api.ridedott.com/public/v2/heidelberg/gbfs.json,,,,,,,too_small_n=19
+DE,Dott Heilbronn,https://gbfs.api.ridedott.com/public/v2/heilbronn/gbfs.json,35,35,0,,,nan,ok
+DE,Dott Hennef,https://gbfs.api.ridedott.com/public/v2/hennef/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Herford,https://gbfs.api.ridedott.com/public/v2/herford/gbfs.json,,,,,,,too_small_n=3
+DE,Dott Herne,https://gbfs.api.ridedott.com/public/v2/herne/gbfs.json,,,,,,,too_small_n=1
+DE,Dott Herten,https://gbfs.api.ridedott.com/public/v2/herten/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Hilden,https://gbfs.api.ridedott.com/public/v2/hilden/gbfs.json,22,22,0,,,nan,ok
+DE,Dott Hildesheim,https://gbfs.api.ridedott.com/public/v2/hildesheim/gbfs.json,,,,,,,too_small_n=4
+DE,Dott Ingolstadt,https://gbfs.api.ridedott.com/public/v2/ingolstadt/gbfs.json,,,,,,,too_small_n=15
+DE,Dott Jena,https://gbfs.api.ridedott.com/public/v2/jena/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Kaiserslautern,https://gbfs.api.ridedott.com/public/v2/kaiserslautern/gbfs.json,28,28,0,,,nan,ok
+DE,Dott Karlsruhe,https://gbfs.api.ridedott.com/public/v2/karlsruhe/gbfs.json,33,33,0,,,nan,ok
+DE,Dott Kassel,https://gbfs.api.ridedott.com/public/v2/kassel/gbfs.json,29,29,0,,,nan,ok
+DE,Dott Kiel,https://gbfs.api.ridedott.com/public/v2/kiel/gbfs.json,,,,,,,too_small_n=17
+DE,Dott Langenfeld,https://gbfs.api.ridedott.com/public/v2/langenfeld/gbfs.json,,,,,,,too_small_n=8
+DE,Dott Leipzig,https://gbfs.api.ridedott.com/public/v2/leipzig/gbfs.json,133,133,0,,,nan,ok
+DE,Dott Lindau,https://gbfs.api.ridedott.com/public/v2/lindau/gbfs.json,35,35,0,,,nan,ok
+DE,Dott Lübeck,https://gbfs.api.ridedott.com/public/v2/lubeck/gbfs.json,50,50,0,,,nan,ok
+DE,Dott Ludwigsburg,https://gbfs.api.ridedott.com/public/v2/ludwigsburg/gbfs.json,,,,,,,too_small_n=18
+DE,Dott Mainz,https://gbfs.api.ridedott.com/public/v2/mainz/gbfs.json,205,205,0,,,nan,ok
+DE,Dott Mannheim,https://gbfs.api.ridedott.com/public/v2/mannheim/gbfs.json,195,195,0,,,nan,ok
+DE,Dott Minden,https://gbfs.api.ridedott.com/public/v2/minden/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Monchengladbach,https://gbfs.api.ridedott.com/public/v2/monchengladbach/gbfs.json,,,,,,,too_small_n=3
+DE,Dott Monheim am Rhein,https://gbfs.api.ridedott.com/public/v2/monheim-am-rhein/gbfs.json,,,,,,,too_small_n=3
+DE,Dott Mulheim an der Ruhr,https://gbfs.api.ridedott.com/public/v2/mulheim-an-der-ruhr/gbfs.json,70,70,0,,,nan,ok
+DE,Dott Munich,https://gbfs.api.ridedott.com/public/v2/munich/gbfs.json,373,373,0,,,nan,ok
+DE,Dott Münster,https://gbfs.api.ridedott.com/public/v2/munster/gbfs.json,397,397,0,,,nan,ok
+DE,Dott Neumünster,https://gbfs.api.ridedott.com/public/v2/neumunster/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Neuss,https://gbfs.api.ridedott.com/public/v2/neuss/gbfs.json,,,,,,,too_small_n=16
+DE,Dott Nuremberg,https://gbfs.api.ridedott.com/public/v2/nuremberg/gbfs.json,354,354,0,,,nan,ok
+DE,Dott Osnabrück,https://gbfs.api.ridedott.com/public/v2/osnabruck/gbfs.json,,,,,,,too_small_n=2
+DE,Dott Paderborn,https://gbfs.api.ridedott.com/public/v2/paderborn/gbfs.json,26,26,0,,,nan,ok
+DE,Dott Peine,https://gbfs.api.ridedott.com/public/v2/peine/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Pinneberg,https://gbfs.api.ridedott.com/public/v2/pinneberg/gbfs.json,205,205,0,,,nan,ok
+DE,Dott Potsdam,https://gbfs.api.ridedott.com/public/v2/potsdam/gbfs.json,,,,,,,too_small_n=6
+DE,Dott Recklinghausen,https://gbfs.api.ridedott.com/public/v2/recklinghausen/gbfs.json,,,,,,,too_small_n=13
+DE,Dott Regensburg,https://gbfs.api.ridedott.com/public/v2/regensburg/gbfs.json,40,40,0,,,nan,ok
+DE,Dott Reutlingen,https://gbfs.api.ridedott.com/public/v2/reutlingen/gbfs.json,,,,,,,too_small_n=12
+DE,Dott Rheda-Wiedenbrück,https://gbfs.api.ridedott.com/public/v2/rheda-wiedenbruck/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Rheine,https://gbfs.api.ridedott.com/public/v2/rheine/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Rostock,https://gbfs.api.ridedott.com/public/v2/rostock/gbfs.json,,,,,,,too_small_n=5
+DE,Dott Rüsselsheim,https://gbfs.api.ridedott.com/public/v2/russelsheim/gbfs.json,66,66,0,,,nan,ok
+DE,Dott Saarbrücken,https://gbfs.api.ridedott.com/public/v2/saarbrucken/gbfs.json,34,34,0,,,nan,ok
+DE,Dott Salzgitter,https://gbfs.api.ridedott.com/public/v2/salzgitter/gbfs.json,,,,,,,too_small_n=0
+DE,Dott Sankt Augustin,https://gbfs.api.ridedott.com/public/v2/sankt-augustin/gbfs.json,40,40,0,,,nan,ok
+DE,Dott Schwäbisch Gmünd,https://gbfs.api.ridedott.com/public/v2/schwabisch-gmund/gbfs.json,205,205,0,,,nan,ok
+DE,Dott Solingen,https://gbfs.api.ridedott.com/public/v2/solingen/gbfs.json,,,,,,,too_small_n=6
+DE,Dott Stuttgart,https://gbfs.api.ridedott.com/public/v2/stuttgart/gbfs.json,61,61,0,,,nan,ok
+DE,Dott Troisdorf,https://gbfs.api.ridedott.com/public/v2/troisdorf/gbfs.json,,,,,,,too_small_n=1
+DE,Dott Tübingen,https://gbfs.api.ridedott.com/public/v2/tubingen/gbfs.json,,,,,,,too_small_n=10
+DE,Dott Überlingen,https://gbfs.api.ridedott.com/public/v2/uberlingen/gbfs.json,,,,,,,too_small_n=12
+DE,Dott Ulm,https://gbfs.api.ridedott.com/public/v2/ulm/gbfs.json,,,,,,,too_small_n=16
+DE,Dott Wiesbaden,https://gbfs.api.ridedott.com/public/v2/wiesbaden/gbfs.json,65,65,0,,,nan,ok
+DE,Dott Wolfsburg,https://gbfs.api.ridedott.com/public/v2/wolfsburg/gbfs.json,25,25,0,,,nan,ok
+DE,Dott Wuppertal,https://gbfs.api.ridedott.com/public/v2/wuppertal/gbfs.json,205,205,0,,,nan,ok
+DE,Dott Zwickau,https://gbfs.api.ridedott.com/public/v2/zwickau/gbfs.json,,,,,,,too_small_n=0
+DE,EDEKA Grünheide,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ed/gbfs.json,,,,,,,too_small_n=18
+DE,Eifel e-Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_eb/gbfs.json,56,36,0,10.5,3.75,2.8,ok
+DE,Einfach Unterwegs,https://api.mobidata-bw.de/sharing/gbfs/v3/einfach_unterwegs/gbfs,25,3,0,1.2272727272727273,1.08,1.1363636363636362,ok
+DE,EinfachMobil,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_eh/gbfs.json,91,23,0,7.455882352941177,5.571428571428571,1.3382352941176472,ok
+DE,esel.ac,https://di.esel.ac/gbfs/gbfs.json,,,,,,,too_small_n=0
+DE,euregiobike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_an/gbfs.json,47,18,0,9.827586206896552,6.0638297872340425,1.6206896551724137,ok
+DE,FaRe - das Bananologen Lastenrad,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_fare/gbfs,,,,,,,too_small_n=1
+DE,Flinkster,https://api.mobidata-bw.de/sharing/gbfs/v3/flinkster_carsharing/gbfs,84,0,0,3.4404761904761907,3.4404761904761907,1.0,ok
+DE,flux Bikesharing,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ev/gbfs.json,,,,,,,too_small_n=17
+DE,Ford Carsharing (Autohaus Baur),https://api.mobidata-bw.de/sharing/gbfs/v3/ford_carsharing_autohausbaur/gbfs,36,36,0,,,nan,ok
+DE,Ford Carsharing (Autohaus Kauderer),https://api.mobidata-bw.de/sharing/gbfs/v3/ford_carsharing_autohauskauderer/gbfs,,,,,,,too_small_n=1
+DE,franke,https://api.mobidata-bw.de/sharing/gbfs/v3/freibe/gbfs,,,,,,,err:LookupError
+DE,franke,https://api.mobidata-bw.de/sharing/gbfs/v3/lube/gbfs,,,,,,,err:LookupError
+DE,Frelo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_df/gbfs.json,161,5,0,6.92948717948718,6.714285714285714,1.0320512820512822,ok
+DE,Getaround Berlin,https://getaround.com/gbfs/v3/berlin/gbfs,,,,,,,err:LookupError
+DE,Getaround Essen,https://getaround.com/gbfs/v3/essen/gbfs,,,,,,,err:LookupError
+DE,Getaround Hamburg,https://getaround.com/gbfs/v3/hamburg/gbfs,,,,,,,err:LookupError
+DE,Getaround Leverkusen,https://getaround.com/gbfs/v3/leverkusen/gbfs,,,,,,,err:LookupError
+DE,Getaround Norderstedt,https://getaround.com/gbfs/v3/norderstedt/gbfs,,,,,,,err:LookupError
+DE,Getaround Pulheim,https://getaround.com/gbfs/v3/pulheim/gbfs,,,,,,,err:LookupError
+DE,Getaround Troisdorf,https://getaround.com/gbfs/v3/troisdorf/gbfs,,,,,,,err:LookupError
+DE,Getaround Velbert,https://getaround.com/gbfs/v3/velbert/gbfs,,,,,,,err:LookupError
+DE,Graben - ready4green,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_da/gbfs.json,,,,,,,too_small_n=2
+DE,Gülf - das Gültsteiner Lastenrad,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_guelf/gbfs,,,,,,,too_small_n=1
+DE,HelBi (Kreis Soest),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hb/gbfs.json,81,14,0,4.865671641791045,4.0246913580246915,1.208955223880597,ok
+DE,Heraeus Hanau,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hg/gbfs.json,,,,,,,err:HTTPError
+DE,HERTLEIN Carsharing,https://api.mobidata-bw.de/sharing/gbfs/v3/hertlein_carsharing/gbfs,,,,,,,too_small_n=3
+DE,Hopp Konstanz,https://api.mobidata-bw.de/sharing/gbfs/v3/hopp_konstanz/gbfs,,,,,,,err:LookupError
+DE,KVB Rad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_kg/gbfs.json,261,252,0,10.333333333333334,0.3563218390804598,29.0,ok
+DE,KVV.nextbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_fg/gbfs.json,117,83,0,6.205882352941177,1.8034188034188035,3.4411764705882355,ok
+DE,Landkreis Nordsachsen,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lc/gbfs.json,,,,,,,too_small_n=18
+DE,LaRa to go,https://api.mobidata-bw.de/sharing/gbfs/v3/lara_to_go/gbfs,,,,,,,too_small_n=17
+DE,LastenVelo Freiburg,https://api.mobidata-bw.de/sharing/gbfs/v3/lastenvelo_fr/gbfs,45,45,0,,,nan,ok
+DE,Lime Frankfurt,https://data.lime.bike/api/partners/v2/gbfs/frankfurt/gbfs.json,,,,,,,err:HTTPError
+DE,Lime Hamburg,https://data.lime.bike/api/partners/v2/gbfs/hamburg/gbfs.json,,,,,,,err:HTTPError
+DE,Lime Oberhausen,https://data.lime.bike/api/partners/v2/gbfs/oberhausen/gbfs.json,,,,,,,err:HTTPError
+DE,Lime Stuttgart,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_stuttgart/gbfs,,,,,,,err:HTTPError
+DE,Lime Stuttgart-Konstanz,https://api.mobidata-bw.de/sharing/gbfs/v3/lime_bw/gbfs,,,,,,,err:LookupError
+DE,Lime Wuppertal,https://data.lime.bike/api/partners/v2/gbfs/wuppertal/gbfs.json,,,,,,,err:HTTPError
+DE,Mein konrad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_kk/gbfs.json,37,37,0,,,nan,ok
+DE,meinSiggi,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dg/gbfs.json,65,65,0,,,nan,ok
+DE,metropolradruhr,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_mr/gbfs.json,,,,,,,too_small_n=18
+DE,Mikar,https://api.mobidata-bw.de/sharing/gbfs/v3/mikar/gbfs,178,178,0,,,nan,ok
+DE,MOBIbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dx/gbfs.json,543,470,0,6.383561643835616,0.858195211786372,7.438356164383561,ok
+DE,mobic,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_re/gbfs.json,156,155,0,10.0,0.0641025641025641,156.0,ok
+DE,moin mobil Achim,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_am/gbfs.json,35,1,0,4.647058823529412,4.514285714285714,1.0294117647058825,ok
+DE,movemix_bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_mx/gbfs.json,89,0,0,8.775280898876405,8.775280898876405,1.0,ok
+DE,MyRadl,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ml/gbfs.json,754,754,0,,,nan,ok
+DE,Naturenergie sharing,https://api.mobidata-bw.de/sharing/gbfs/v3/naturenergie_sharing/gbfs,318,0,0,1.6823899371069182,1.6823899371069182,1.0,ok
+DE,NEW MöBus nextbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sn/gbfs.json,56,25,0,6.870967741935484,3.8035714285714284,1.806451612903226,ok
+DE,nextbike Berlin,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json,1547,5,0,5.301556420233463,5.284421460892049,1.003242542153048,ok
+DE,nextbike Düsseldorf,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dd/gbfs.json,296,295,0,7.0,0.02364864864864865,296.0,ok
+DE,nextbike Frankfurt,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ff/gbfs.json,,,,,,,err:HTTPError
+DE,nextbike Gießen,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ng/gbfs.json,64,4,0,18.316666666666666,17.171875,1.0666666666666667,ok
+DE,nextbike Gütersloh,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dj/gbfs.json,,,,,,,too_small_n=5
+DE,nextbike Hannover,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dh/gbfs.json,120,120,0,,,nan,ok
+DE,nextbike Kassel,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dk/gbfs.json,65,0,0,9.892307692307693,9.892307692307693,1.0,ok
+DE,nextbike Leipzig,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_le/gbfs.json,149,66,0,9.25301204819277,5.154362416107382,1.7951807228915664,ok
+DE,nextbike Marburg,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nm/gbfs.json,57,55,0,14.0,0.49122807017543857,28.5,ok
+DE,nextbike Norderstedt,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_nn/gbfs.json,,,,,,,too_small_n=19
+DE,nextbike Rüsselsheim am Main,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_do/gbfs.json,,,,,,,too_small_n=16
+DE,nextbike Wiesbaden,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wn/gbfs.json,35,32,0,8.0,0.6857142857142857,11.666666666666666,ok
+DE,OberSchwabenMobil CarSharing,https://api.mobidata-bw.de/sharing/gbfs/v3/oberschwabenmobil/gbfs,,,,,,,too_small_n=7
+DE,OLi-Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wo/gbfs.json,,,,,,,err:HTTPError
+DE,Potsdam Rad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json,149,53,0,6.208333333333333,4.0,1.5520833333333333,ok
+DE,RegioRadStuttgart,https://api.mobidata-bw.de/sharing/gbfs/v3/regiorad_stuttgart/gbfs,233,233,0,,,nan,ok
+DE,Roche - Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rr/gbfs.json,,,,,,,too_small_n=12
+DE,S11-Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sv/gbfs.json,,,,,,,too_small_n=5
+DE,SAP Walldorf,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ds/gbfs.json,,,,,,,too_small_n=16
+DE,SEEFAHRER E-Carsharing,https://api.mobidata-bw.de/sharing/gbfs/v3/seefahrer_ecarsharing/gbfs,,,,,,,too_small_n=10
+DE,Stadtmobil Karlsruhe,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtmobil_karlsruhe/gbfs,590,0,0,2.48135593220339,2.48135593220339,1.0,ok
+DE,Stadtmobil Rhein-Neckar,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtmobil_rhein-neckar/gbfs,461,0,0,1.6984815618221258,1.6984815618221258,1.0,ok
+DE,Stadtmobil Stuttgart,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtmobil_stuttgart/gbfs,334,0,0,2.05688622754491,2.05688622754491,1.0,ok
+DE,stadtRad - das stadtnavi Lastenrad,https://api.mobidata-bw.de/sharing/gbfs/v3/herrenberg_stadtrad/gbfs,,,,,,,too_small_n=1
+DE,StadtRad Greifswald,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ug/gbfs.json,25,0,0,14.64,14.64,1.0,ok
+DE,Stadtwerk Tauberfranken,https://api.mobidata-bw.de/sharing/gbfs/v3/stadtwerk_tauberfranken/gbfs,,,,,,,too_small_n=13
+DE,Stella,https://api.mobidata-bw.de/sharing/gbfs/v3/stella/gbfs,,,,,,,err:LookupError
+DE,swabi - augsburg,https://gbfs.partners.fifteen.eu/gbfs/2.2/swabi/en/gbfs.json,527,0,0,5.176470588235294,5.176470588235294,1.0,ok
+DE,swu2go Carsharing,https://ixsi.swu.de/gbfs.json,,,,,,,err:HTTPError
+DE,TeilAuto Biberach,https://api.mobidata-bw.de/sharing/gbfs/v3/teilauto_biberach/gbfs,,,,,,,too_small_n=11
+DE,TeilAuto Neckar-Alb,https://api.mobidata-bw.de/sharing/gbfs/v3/teilauto_neckar-alb/gbfs,172,0,0,1.3837209302325582,1.3837209302325582,1.0,ok
+DE,TeilAuto Schwäbisch Hall,https://api.mobidata-bw.de/sharing/gbfs/v3/teilauto_schwaebisch_hall/gbfs,,,,,,,too_small_n=11
+DE,UsedomRad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ur/gbfs.json,98,0,0,13.071428571428571,13.071428571428571,1.0,ok
+DE,VAG_Rad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dv/gbfs.json,120,19,0,8.326732673267326,7.008333333333334,1.188118811881188,ok
+DE,Veloleo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dn/gbfs.json,154,154,0,,,nan,ok
+DE,Voi,https://api.mobidata-bw.de/sharing/gbfs/v3/voi_de/gbfs,439,338,0,2.1881188118811883,0.5034168564920274,4.346534653465347,ok
+DE,VRNnextbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vn/gbfs.json,384,206,0,8.741573033707866,4.052083333333333,2.1573033707865172,ok
+DE,welo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wa/gbfs.json,293,254,0,7.435897435897436,0.9897610921501706,7.512820512820514,ok
+DE,westBike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gh/gbfs.json,20,0,0,7.2,7.2,1.0,ok
+DE,WinsenRad,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wd/gbfs.json,21,8,0,5.076923076923077,3.142857142857143,1.6153846153846154,ok
+DE,wupsiRad Leverkusen,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dw/gbfs.json,121,117,0,5.0,0.1652892561983471,30.25,ok
+DE,Yoio Erfurt,https://yoio.rideatom.com/gbfs/159/v3.0/gbfs,,,,,,,too_small_n=0
+DE,Yoio Freiburg,https://yoio.rideatom.com/gbfs/71/v3.0/gbfs,,,,,,,too_small_n=0
+DE,Yoio Göttingen,https://yoio.rideatom.com/gbfs/9/v3.0/gbfs,,,,,,,too_small_n=1
+DE,zeo Carsharing,https://api.mobidata-bw.de/sharing/gbfs/v3/zeo_bruchsal/gbfs,61,61,0,,,nan,ok
+DE,Zeus Bamberg,https://zeus.city/api/v1/mds/gbfs/bamberg/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Castrop Rauxel,https://zeus.city/api/v1/mds/gbfs/castrop-rauxel/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Duisburg,https://zeus.city/api/v1/mds/gbfs/duisburg/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Freiburg,https://zeus.city/api/v1/mds/gbfs/freiburg%20im%20breisgau/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Friedberg,https://zeus.city/api/v1/mds/gbfs/friedberg/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Gera,https://zeus.city/api/v1/mds/gbfs/gera/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Goppingen,https://zeus.city/api/v1/mds/gbfs/goppingen/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Hagen,https://zeus.city/api/v1/mds/gbfs/hagen/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Hattingen,https://zeus.city/api/v1/mds/gbfs/hattingen/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Heidelberg,https://zeus.city/api/v1/mds/gbfs/heidelberg/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Heilbronn,https://zeus.city/api/v1/mds/gbfs/heilbronn/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Hemmingen,https://zeus.city/api/v1/mds/gbfs/hemmingen/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Herne,https://zeus.city/api/v1/mds/gbfs/herne/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Jena,https://zeus.city/api/v1/mds/gbfs/jena/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Kempten,https://zeus.city/api/v1/mds/gbfs/kempten/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Konstanz,https://zeus.city/api/v1/mds/gbfs/konstanz/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Limburgerhof,https://zeus.city/api/v1/mds/gbfs/limburgerhof/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Ludwigsburg,https://zeus.city/api/v1/mds/gbfs/ludwigsburg/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Marburg,https://zeus.city/api/v1/mds/gbfs/marburg/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Neustadt,https://zeus.city/api/v1/mds/gbfs/neustadt/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Pforzheim,https://zeus.city/api/v1/mds/gbfs/pforzheim/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Regensburg,https://zeus.city/api/v1/mds/gbfs/regensburg/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Renningen-Malmsheim,https://zeus.city/api/v1/mds/gbfs/renningen-malmsheim/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Reutlingen,https://zeus.city/api/v1/mds/gbfs/reutlingen/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Russelsheim,https://zeus.city/api/v1/mds/gbfs/russelsheim/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Schwäbisch Gmünd,https://zeus.city/api/v1/mds/gbfs/schwabisch%20gmund/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Schweinfurt,https://zeus.city/api/v1/mds/gbfs/schweinfurt/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Straubing,https://zeus.city/api/v1/mds/gbfs/straubing/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Tubingen,https://zeus.city/api/v1/mds/gbfs/tubingen/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Tuttlingen,https://zeus.city/api/v1/mds/gbfs/tuttlingen/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Villingen-Schwenningen,https://zeus.city/api/v1/mds/gbfs/villingen-schwenningen/gbfs.json,,,,,,,err:LookupError
+DE,Zeus Wurzburg,https://zeus.city/api/v1/mds/gbfs/wurzburg/gbfs.json,,,,,,,err:LookupError
+DK,Donkey Republic Aalborg,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_aalborg/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Aarhus,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_aarhus/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Ballerup,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_ballerup/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Bandholm,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_bandholm/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Copenhagen,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_copenhagen/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Frederikshavn,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_frederikshavn/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Glostrup,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_glostrup/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Herning,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_herning/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Hillerød,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hillerod/gbfs,,,,,,,err:HTTPError
+DK,Donkey Republic Klampenborg,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_klampenborg/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Lalandia (Rødby),https://stables.donkey.bike/api/public/gbfs/3.0/donkey_lalandia/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Middelfart,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_middelfart/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Odense,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_odense/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Rødvig,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_roedvig/gbfs.json,,,,,,,err:HTTPError
+DK,Donkey Republic Store Heddinge,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_store_heddinge/gbfs.json,,,,,,,err:HTTPError
+DK,Dott Copenhagen,https://gbfs.api.ridedott.com/public/v2/copenhagen/gbfs.json,7696,7696,0,,,nan,ok
+DK,Dott Frederikssund,https://gbfs.api.ridedott.com/public/v2/frederikssund/gbfs.json,37,37,0,,,nan,ok
+DK,Dott Region Hovedstaden,https://gbfs.api.ridedott.com/public/v2/region-h/gbfs.json,1151,1151,0,,,nan,ok
+DK,Dott Roskilde,https://gbfs.api.ridedott.com/public/v2/roskilde/gbfs.json,75,75,0,,,nan,ok
+ES,AMBici,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bs/gbfs.json,237,0,0,19.90717299578059,19.90717299578059,1.0,ok
+ES,BBK Klimabizi,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ey/gbfs.json,,,,,,,err:HTTPError
+ES,bibo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_by/gbfs.json,37,25,0,12.333333333333334,4.0,3.0833333333333335,ok
+ES,biciArteixo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_aa/gbfs.json,,,,,,,too_small_n=8
+ES,Bicicoruña,https://acoruna.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,84,0,5,18.354430379746834,17.261904761904763,1.0632911392405062,ok
+ES,bicimad,https://madrid.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,637,0,3,44.572555205047315,44.362637362637365,1.0047318611987381,ok
+ES,BiciMislata,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ad/gbfs.json,21,3,0,8.11111111111111,6.9523809523809526,1.1666666666666665,ok
+ES,Bicing,https://barcelona.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,545,0,2,27.154696132596683,27.05504587155963,1.003683241252302,ok
+ES,BicinRivas,https://rivas.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,42,0,0,20.023809523809526,20.023809523809526,1.0,ok
+ES,BiciPalma,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ea/gbfs.json,91,1,0,18.288888888888888,18.087912087912088,1.011111111111111,ok
+ES,Bilbao Bizi,https://bilbao.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,48,0,0,810.8125,810.8125,1.0,ok
+ES,Bird Adeje,https://mds.bird.co/gbfs/v2/public/adeje/gbfs.json,200,200,0,,,nan,ok
+ES,Bird Antigua,https://mds.bird.co/gbfs/v2/public/antigua/gbfs.json,,,,,,,too_small_n=0
+ES,Bird Barcelona,https://mds.bird.co/gbfs/v2/public/barcelona/gbfs.json,3603,3603,0,,,nan,ok
+ES,Bird Gijón,https://mds.bird.co/gbfs/v2/public/gijon/gbfs.json,,,,,,,too_small_n=0
+ES,Bird Madrid,https://mds.bird.co/gbfs/v2/public/madrid/gbfs.json,,,,,,,too_small_n=0
+ES,Bird Murcia,https://mds.bird.co/gbfs/v2/public/murcia/gbfs.json,,,,,,,too_small_n=0
+ES,Bird Pájara,https://mds.bird.co/gbfs/v2/public/pajara/gbfs.json,,,,,,,too_small_n=0
+ES,Bird Zaragoza,https://mds.bird.co/gbfs/v2/public/zaragoza/gbfs.json,,,,,,,too_small_n=0
+ES,Bizi,https://zaragoza.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,276,0,0,19.996376811594203,19.996376811594203,1.0,ok
+ES,bizkaibizi (Spain),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bw/gbfs.json,105,0,0,13.114285714285714,13.114285714285714,1.0,ok
+ES,Cooltra Barcelona,https://maas.zeus.cooltra.com/gbfs/barcelona/3.0/en/gbfs.json,,,,,,,err:LookupError
+ES,Dbizi,https://sansebastian.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,70,0,0,19.17142857142857,19.17142857142857,1.0,ok
+ES,Donkey Republic Barcelona,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_barcelona/gbfs.json,,,,,,,err:HTTPError
+ES,Dott Estepona,https://gbfs.api.ridedott.com/public/v2/estepona/gbfs.json,47,47,0,,,nan,ok
+ES,Dott Grado,https://gbfs.api.ridedott.com/public/v2/grado/gbfs.json,205,205,0,,,nan,ok
+ES,Dott Ibiza,https://gbfs.api.ridedott.com/public/v2/ibiza/gbfs.json,,,,,,,err:HTTPError
+ES,Dott La-Manga,https://gbfs.api.ridedott.com/public/v2/la-manga/gbfs.json,21,21,0,,,nan,ok
+ES,Dott Lorca,https://gbfs.api.ridedott.com/public/v2/lorca/gbfs.json,168,168,0,,,nan,ok
+ES,Dott Murcia,https://gbfs.api.ridedott.com/public/v2/murcia/gbfs.json,400,400,0,,,nan,ok
+ES,Dott Tarragona,https://gbfs.api.ridedott.com/public/v2/tarragona/gbfs.json,107,107,0,,,nan,ok
+ES,Dott Tenerife,https://gbfs.api.ridedott.com/public/v2/tenerife/gbfs.json,172,172,0,,,nan,ok
+ES,Dott Tenerife-Sur,https://gbfs.api.ridedott.com/public/v2/tenerife-sur/gbfs.json,171,171,0,,,nan,ok
+ES,Ganxeta,https://gbfs.ganxeta.cat/v2/gbfs.json,24,0,0,21.125,21.125,1.0,ok
+ES,Getaround Alcobendas,https://getaround.com/gbfs/v3/alcobendas/gbfs,,,,,,,err:LookupError
+ES,Getaround Alicante,https://getaround.com/gbfs/v3/alicante/gbfs,,,,,,,err:LookupError
+ES,Getaround Aranjuez,https://getaround.com/gbfs/v3/aranjuez/gbfs,,,,,,,err:LookupError
+ES,Getaround Badalona,https://getaround.com/gbfs/v3/badalona/gbfs,,,,,,,err:LookupError
+ES,Getaround Barcelona,https://getaround.com/gbfs/v3/barcelona/gbfs,,,,,,,err:LookupError
+ES,Getaround Benidorm,https://getaround.com/gbfs/v3/benidorm/gbfs,,,,,,,err:LookupError
+ES,Getaround Candelaria,https://getaround.com/gbfs/v3/candelaria/gbfs,,,,,,,err:LookupError
+ES,Getaround Castelldefels,https://getaround.com/gbfs/v3/castelldefels/gbfs,,,,,,,err:LookupError
+ES,Getaround Coslada,https://getaround.com/gbfs/v3/coslada/gbfs,,,,,,,err:LookupError
+ES,Getaround Fuenlabrada,https://getaround.com/gbfs/v3/fuenlabrada/gbfs,,,,,,,err:LookupError
+ES,Getaround Getafe,https://getaround.com/gbfs/v3/getafe/gbfs,,,,,,,err:LookupError
+ES,Getaround Granada,https://getaround.com/gbfs/v3/granada/gbfs,,,,,,,err:LookupError
+ES,Getaround Granollers,https://getaround.com/gbfs/v3/granollers/gbfs,,,,,,,err:LookupError
+ES,Getaround Madrid,https://getaround.com/gbfs/v3/madrid/gbfs,,,,,,,err:LookupError
+ES,Getaround Majadahonda,https://getaround.com/gbfs/v3/majadahonda/gbfs,,,,,,,err:LookupError
+ES,Getaround Mao,https://getaround.com/gbfs/v3/mao/gbfs,,,,,,,err:LookupError
+ES,Getaround Parla,https://getaround.com/gbfs/v3/parla/gbfs,,,,,,,err:LookupError
+ES,Getaround Paterna,https://getaround.com/gbfs/v3/paterna/gbfs,,,,,,,err:LookupError
+ES,Getaround Sabadell,https://getaround.com/gbfs/v3/sabadell/gbfs,,,,,,,err:LookupError
+ES,Getaround Sevilla,https://getaround.com/gbfs/v3/sevilla/gbfs,,,,,,,err:LookupError
+ES,Getaround Torremolinos,https://getaround.com/gbfs/v3/torremolinos/gbfs,,,,,,,err:LookupError
+ES,Getaround Torrent,https://getaround.com/gbfs/v3/torrent/gbfs,,,,,,,err:LookupError
+ES,Getaround Valdemoro,https://getaround.com/gbfs/v3/valdemoro/gbfs,,,,,,,err:LookupError
+ES,Getaround Valencia,https://getaround.com/gbfs/v3/valencia/gbfs,,,,,,,err:LookupError
+ES,Getaround Viladecans,https://getaround.com/gbfs/v3/viladecans/gbfs,,,,,,,err:LookupError
+ES,Lovesharing (Canary Islands),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ls/gbfs.json,,,,,,,too_small_n=15
+ES,moxsi (Las Palmas de Gran Canaria),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_el/gbfs.json,64,0,0,9.9375,9.9375,1.0,ok
+ES,nextbike BiciLOG,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ej/gbfs.json,35,0,0,13.428571428571429,13.428571428571429,1.0,ok
+ES,nextbike León,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sl/gbfs.json,51,0,0,7.705882352941177,7.705882352941177,1.0,ok
+ES,Ontibici,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_oy/gbfs.json,,,,,,,err:HTTPError
+ES,Sevici,https://api.cyclocity.fr/contracts/seville/gbfs/v3/gbfs.json,247,0,2,19.416326530612245,19.25910931174089,1.0081632653061225,ok
+ES,TORRENTBICI,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_en/gbfs.json,20,8,0,11.333333333333334,6.8,1.6666666666666667,ok
+ES,TUeBICI,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ek/gbfs.json,42,0,0,12.285714285714286,12.285714285714286,1.0,ok
+ES,Valenbisi,https://api.cyclocity.fr/contracts/valence/gbfs/v3/gbfs.json,279,0,2,19.740072202166065,19.59856630824373,1.007220216606498,ok
+ES,Valladolid,https://valladolid.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,104,0,0,18.798076923076923,18.798076923076923,1.0,ok
+FI,Bird Helsinki,https://mds.bird.co/gbfs/v2/public/helsinki/gbfs.json,,,,,,,too_small_n=0
+FI,Donkey Republic Hämeenlinna,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_haemeenlinna/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Hamina,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hamina/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Hyvinkää,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_hyvinkaa/gbfs,,,,,,,err:HTTPError
+FI,Donkey Republic Iisalmi,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_iisalmi/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Imatra,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_imatra/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Kotka,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kotka/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Kouvola,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kouvola/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Lappeenranta,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_lappeenranta/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Mäntsälä,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_maentsaelae/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Mikkeli,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_mikkeli/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Porvoo,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_porvoo/gbfs.json,,,,,,,err:HTTPError
+FI,Donkey Republic Raasepori,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_raasepori/gbfs,,,,,,,err:HTTPError
+FI,Donkey Republic Riihimäki,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_riihimaki/gbfs,,,,,,,err:HTTPError
+FI,Donkey Republic Turku,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_turku/gbfs.json,,,,,,,err:HTTPError
+FI,Dott Ekenäs,https://gbfs.api.ridedott.com/public/v2/tammisaari/gbfs.json,50,50,0,,,nan,ok
+FI,Dott Espoo,https://gbfs.api.ridedott.com/public/v2/espoo/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Hameenlinna,https://gbfs.api.ridedott.com/public/v2/hameenlinna/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Hamina,https://gbfs.api.ridedott.com/public/v2/hamina/gbfs.json,,,,,,,too_small_n=15
+FI,Dott Hanko,https://gbfs.api.ridedott.com/public/v2/hanko/gbfs.json,,,,,,,too_small_n=0
+FI,Dott Helsinki,https://gbfs.api.ridedott.com/public/v2/helsinki/gbfs.json,565,565,0,,,nan,ok
+FI,Dott Hyvinkaa,https://gbfs.api.ridedott.com/public/v2/hyvinkaa/gbfs.json,,,,,,,too_small_n=6
+FI,Dott Imatra,https://gbfs.api.ridedott.com/public/v2/imatra/gbfs.json,,,,,,,too_small_n=0
+FI,Dott Jakobstad,https://gbfs.api.ridedott.com/public/v2/jakobstad/gbfs.json,,,,,,,too_small_n=0
+FI,Dott Jarvenpaa,https://gbfs.api.ridedott.com/public/v2/jarvenpaa/gbfs.json,40,40,0,,,nan,ok
+FI,Dott Joensuu,https://gbfs.api.ridedott.com/public/v2/joensuu/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Jyvaskyla,https://gbfs.api.ridedott.com/public/v2/jyvaskyla/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Kaarina,https://gbfs.api.ridedott.com/public/v2/kaarina/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Kajaani,https://gbfs.api.ridedott.com/public/v2/kajaani/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Kangasala,https://gbfs.api.ridedott.com/public/v2/kangasala/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Kerava,https://gbfs.api.ridedott.com/public/v2/kerava/gbfs.json,21,21,0,,,nan,ok
+FI,Dott Kirkkonummi,https://gbfs.api.ridedott.com/public/v2/kirkkonummi/gbfs.json,,,,,,,too_small_n=1
+FI,Dott Klaukkala,https://gbfs.api.ridedott.com/public/v2/klaukkala/gbfs.json,,,,,,,too_small_n=1
+FI,Dott Kokkola,https://gbfs.api.ridedott.com/public/v2/kokkola/gbfs.json,,,,,,,too_small_n=13
+FI,Dott Kotka,https://gbfs.api.ridedott.com/public/v2/kotka/gbfs.json,,,,,,,too_small_n=2
+FI,Dott Kouvola,https://gbfs.api.ridedott.com/public/v2/kouvola/gbfs.json,,,,,,,too_small_n=0
+FI,Dott Kuopio,https://gbfs.api.ridedott.com/public/v2/kuopio/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Lahti,https://gbfs.api.ridedott.com/public/v2/lahti/gbfs.json,97,97,0,,,nan,ok
+FI,Dott Lappeenranta,https://gbfs.api.ridedott.com/public/v2/lappeenranta/gbfs.json,,,,,,,too_small_n=3
+FI,Dott Lempaala,https://gbfs.api.ridedott.com/public/v2/lempaala/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Mikkeli,https://gbfs.api.ridedott.com/public/v2/mikkeli/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Myyrmaki,https://gbfs.api.ridedott.com/public/v2/myyrmaki/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Naantali,https://gbfs.api.ridedott.com/public/v2/naantali/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Nokia,https://gbfs.api.ridedott.com/public/v2/nokia/gbfs.json,,,,,,,too_small_n=1
+FI,Dott Porvoo,https://gbfs.api.ridedott.com/public/v2/porvoo/gbfs.json,,,,,,,too_small_n=5
+FI,Dott Raisio,https://gbfs.api.ridedott.com/public/v2/raisio/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Rauma,https://gbfs.api.ridedott.com/public/v2/rauma/gbfs.json,,,,,,,too_small_n=0
+FI,Dott Riihimäki,https://gbfs.api.ridedott.com/public/v2/riihimaki/gbfs.json,,,,,,,too_small_n=1
+FI,Dott Salo,https://gbfs.api.ridedott.com/public/v2/salo/gbfs.json,,,,,,,too_small_n=0
+FI,Dott Seinajoki,https://gbfs.api.ridedott.com/public/v2/seinajoki/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Tampere,https://gbfs.api.ridedott.com/public/v2/tampere/gbfs.json,276,276,0,,,nan,ok
+FI,Dott Turku,https://gbfs.api.ridedott.com/public/v2/turku/gbfs.json,205,205,0,,,nan,ok
+FI,Dott Vaasa,https://gbfs.api.ridedott.com/public/v2/vaasa/gbfs.json,,,,,,,too_small_n=0
+FI,Dott Vantaa,https://gbfs.api.ridedott.com/public/v2/vantaa/gbfs.json,29,29,0,,,nan,ok
+FI,Joe Rauma,https://joe.rideatom.com/gbfs/v2_2/en/gbfs?id=475,,,,,,,too_small_n=0
+FR,Altervelo Libre-service,https://api.gbfs.v3.0.ecovelo.mobi/altervelo/gbfs.json,31,0,0,14.451612903225806,14.451612903225806,1.0,ok
+FR,AQTA,https://gbfs.partners.fifteen.eu/gbfs/auray-quiberon/gbfs.json,,,,,,,too_small_n=12
+FR,Auch Velo'C,https://api.gbfs.v3.0.ecovelo.mobi/auchveloc/gbfs.json,,,,,,,too_small_n=10
+FR,Auto-en-Velay,https://backend.citiz.fr/public/provider/23/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,AuxR_M le vélo,https://gbfs.partners.fifteen.eu/gbfs/2.2/auxerre/en/gbfs.json,55,0,1,12.592592592592593,12.363636363636363,1.0185185185185186,ok
+FR,Bird Ajaccio,https://mds.bird.co/gbfs/v2/public/ajaccio/gbfs.json,36,36,0,,,nan,ok
+FR,Bird Bordeaux,https://mds.bird.co/gbfs/v2/public/bordeaux/gbfs.json,3152,3152,0,,,nan,ok
+FR,Bird Castres,https://mds.bird.co/gbfs/v2/public/castres/gbfs.json,,,,,,,too_small_n=0
+FR,Bird Chalonsenchampagne,https://mds.bird.co/gbfs/v2/public/chalonsenchampagne/gbfs.json,,,,,,,too_small_n=0
+FR,Bird Dieppe,https://mds.bird.co/gbfs/v2/public/dieppe/gbfs.json,,,,,,,too_small_n=0
+FR,Bird Draguignan,https://mds.bird.co/gbfs/v2/public/draguignan/gbfs.json,63,63,0,,,nan,ok
+FR,Bird Epron,https://mds.bird.co/gbfs/v2/public/epron/gbfs.json,,,,,,,too_small_n=0
+FR,Bird Gap,https://mds.bird.co/gbfs/v2/public/gap/gbfs.json,50,50,0,,,nan,ok
+FR,Bird Herouvillesaintclair,https://mds.bird.co/gbfs/v2/public/herouvillesaintclair/gbfs.json,,,,,,,too_small_n=0
+FR,Bird Larochesuryon,https://mds.bird.co/gbfs/v2/public/larochesuryon/gbfs.json,69,69,0,,,nan,ok
+FR,Bird Laval,https://mds.bird.co/gbfs/v2/public/laval/gbfs.json,83,83,0,,,nan,ok
+FR,Bird Marseille,https://mds.bird.co/gbfs/v2/public/marseille/gbfs.json,803,803,0,,,nan,ok
+FR,Bird Millau,https://mds.bird.co/gbfs/v2/public/millau/gbfs.json,76,76,0,,,nan,ok
+FR,Bird Montlucon,https://mds.bird.co/gbfs/v2/public/montlucon/gbfs.json,63,63,0,,,nan,ok
+FR,Bird Ouistreham,https://mds.bird.co/gbfs/v2/public/ouistreham/gbfs.json,,,,,,,too_small_n=0
+FR,Bird Sarreguemines,https://mds.bird.co/gbfs/v2/public/sarreguemines/gbfs.json,65,65,0,,,nan,ok
+FR,Bird Vichy,https://mds.bird.co/gbfs/v2/public/vichy/gbfs.json,45,45,0,,,nan,ok
+FR,Brennus à Vélo (Sens),https://gbfs.partners.fifteen.eu/gbfs/2.2/sens/en/gbfs.json,,,,,,,too_small_n=18
+FR,BYCOR,https://www.mobility-parc.net/gbfs/v3/TARARE/gbfs.json,,,,,,,too_small_n=2
+FR,C-Vélo,https://clermontferrand.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,82,0,0,20.951219512195124,20.951219512195124,1.0,ok
+FR,CaliVélo,https://api.gbfs.v3.0.ecovelo.mobi/calivelo/gbfs.json,66,0,0,10.984848484848484,10.984848484848484,1.0,ok
+FR,CapCotentin,https://api.gbfs.v3.0.ecovelo.mobi/capcotentin/gbfs.json,49,0,0,10.122448979591837,10.122448979591837,1.0,ok
+FR,CHATELLERAULT,https://www.mobility-parc.net/gbfs/v3/CHATELLERAULT/gbfs.json,,,,,,,too_small_n=13
+FR,Choletbus 2 Roues,https://api.gbfs.v3.0.ecovelo.mobi/choletbus/gbfs.json,,,,,,,too_small_n=16
+FR,Citédia Services,https://backend.citiz.fr/public/provider/22/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Alpes Loire,https://backend.citiz.fr/public/provider/5/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Angers,https://backend.citiz.fr/public/provider/7/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz AUPA,https://backend.citiz.fr/public/provider/20/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz BFC,https://backend.citiz.fr/public/provider/2/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Développement,https://backend.citiz.fr/public/provider/12/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Gironde,https://backend.citiz.fr/public/provider/4/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Grand Est,https://backend.citiz.fr/public/provider/1/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Grand Poitiers,https://backend.citiz.fr/public/provider/9/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz La Rochelle,https://backend.citiz.fr/public/provider/18/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Lille Arras,https://backend.citiz.fr/public/provider/16/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Métropole Lyon,https://backend.citiz.fr/public/provider/3/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Nantes,https://backend.citiz.fr/public/provider/15/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Occitanie,https://backend.citiz.fr/public/provider/8/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Provence,https://backend.citiz.fr/public/provider/6/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Citiz Rennes Métropole,https://backend.citiz.fr/public/provider/19/gbfs/3.0/gbfs.json,,,,,,,err:HTTPError
+FR,Clem,https://gbfs.clem.mobi/gbfs.json,379,0,0,1.0026385224274406,1.0026385224274406,1.0,ok
+FR,Cycl'AM,https://api.gbfs.v3.0.ecovelo.mobi/cyclam/gbfs.json,34,0,0,9.058823529411764,9.058823529411764,1.0,ok
+FR,Cyclolibre,https://api.gbfs.v3.0.ecovelo.mobi/cyclolibre/gbfs.json,,,,,,,too_small_n=11
+FR,Cyclovis,https://api.gbfs.v3.0.ecovelo.mobi/cyclovis/gbfs.json,28,0,0,12.535714285714286,12.535714285714286,1.0,ok
+FR,Donkey Republic Valenciennes,https://stables.donkey.bike/api/public/gbfs/3.0/valenciennes/gbfs.json,,,,,,,err:HTTPError
+FR,Dott Bordeaux,https://gbfs.api.ridedott.com/public/v2/bordeaux/gbfs.json,3454,3454,0,,,nan,ok
+FR,Dott Bourgoin Jallieu,https://gbfs.api.ridedott.com/public/v2/bourgoin-jallieu/gbfs.json,69,69,0,,,nan,ok
+FR,Dott Gpseo,https://gbfs.api.ridedott.com/public/v2/gpseo/gbfs.json,,,,,,,err:HTTPError
+FR,Dott Lyon,https://gbfs.api.ridedott.com/public/v2/lyon/gbfs.json,1403,1403,0,,,nan,ok
+FR,Dott Ol-Vallee,https://gbfs.api.ridedott.com/public/v2/ol-vallee/gbfs.json,,,,,,,too_small_n=8
+FR,Dott Paris,https://gbfs.api.ridedott.com/public/v2/paris/gbfs.json,13050,13050,0,,,nan,ok
+FR,Dott SIEMU,https://gbfs.api.ridedott.com/public/v2/siemu/gbfs.json,117,117,0,,,nan,ok
+FR,Dott Versailles Grand-Parc,https://gbfs.api.ridedott.com/public/v2/versailles-grand-parc/gbfs.json,79,79,0,,,nan,ok
+FR,Estrées Saint Denis,https://www.mobility-parc.net/gbfs/v3/ESTREES/gbfs.json,,,,,,,too_small_n=6
+FR,Getaround Aix-En-Provence,https://getaround.com/gbfs/v3/aix-en-provence/gbfs,,,,,,,err:LookupError
+FR,Getaround Ajaccio,https://getaround.com/gbfs/v3/ajaccio/gbfs,,,,,,,err:LookupError
+FR,Getaround Albi,https://getaround.com/gbfs/v3/albi/gbfs,,,,,,,err:LookupError
+FR,Getaround Amiens,https://getaround.com/gbfs/v3/amiens/gbfs,,,,,,,err:LookupError
+FR,Getaround Angers,https://getaround.com/gbfs/v3/angers/gbfs,,,,,,,err:LookupError
+FR,Getaround Antibes,https://getaround.com/gbfs/v3/antibes/gbfs,,,,,,,err:LookupError
+FR,Getaround Antony,https://getaround.com/gbfs/v3/antony/gbfs,,,,,,,err:LookupError
+FR,Getaround Argenteuil,https://getaround.com/gbfs/v3/argenteuil/gbfs,,,,,,,err:LookupError
+FR,Getaround Arles,https://getaround.com/gbfs/v3/arles/gbfs,,,,,,,err:LookupError
+FR,Getaround Aubervilliers,https://getaround.com/gbfs/v3/aubervilliers/gbfs,,,,,,,err:LookupError
+FR,Getaround Aulnay-Sous-Bois,https://getaround.com/gbfs/v3/aulnay-sous-bois/gbfs,,,,,,,err:LookupError
+FR,Getaround Avignon,https://getaround.com/gbfs/v3/avignon/gbfs,,,,,,,err:LookupError
+FR,Getaround Bayeux,https://getaround.com/gbfs/v3/bayeux/gbfs,,,,,,,err:LookupError
+FR,Getaround Bayonne,https://getaround.com/gbfs/v3/bayonne/gbfs,,,,,,,err:LookupError
+FR,Getaround Beaumont,https://getaround.com/gbfs/v3/beaumont/gbfs,,,,,,,err:LookupError
+FR,Getaround Beauvais,https://getaround.com/gbfs/v3/beauvais/gbfs,,,,,,,err:LookupError
+FR,Getaround Blois,https://getaround.com/gbfs/v3/blois/gbfs,,,,,,,err:LookupError
+FR,Getaround Bordeaux,https://getaround.com/gbfs/v3/bordeaux/gbfs,,,,,,,err:LookupError
+FR,Getaround Boulogne-Billancourt,https://getaround.com/gbfs/v3/boulogne-billancourt/gbfs,,,,,,,err:LookupError
+FR,Getaround Bourges,https://getaround.com/gbfs/v3/bourges/gbfs,,,,,,,err:LookupError
+FR,Getaround Brest,https://getaround.com/gbfs/v3/brest/gbfs,,,,,,,err:LookupError
+FR,Getaround Brive-La-Gaillarde,https://getaround.com/gbfs/v3/brive-la-gaillarde/gbfs,,,,,,,err:LookupError
+FR,Getaround Caen,https://getaround.com/gbfs/v3/caen/gbfs,,,,,,,err:LookupError
+FR,Getaround Calais,https://getaround.com/gbfs/v3/calais/gbfs,,,,,,,err:LookupError
+FR,Getaround Cannes,https://getaround.com/gbfs/v3/cannes/gbfs,,,,,,,err:LookupError
+FR,Getaround Cergy,https://getaround.com/gbfs/v3/cergy/gbfs,,,,,,,err:LookupError
+FR,Getaround Champigny-Sur-Marne,https://getaround.com/gbfs/v3/champigny-sur-marne/gbfs,,,,,,,err:LookupError
+FR,Getaround Clamart,https://getaround.com/gbfs/v3/clamart/gbfs,,,,,,,err:LookupError
+FR,Getaround Clermont-Ferrand,https://getaround.com/gbfs/v3/clermont-ferrand/gbfs,,,,,,,err:LookupError
+FR,Getaround Clichy,https://getaround.com/gbfs/v3/clichy/gbfs,,,,,,,err:LookupError
+FR,Getaround Colmar,https://getaround.com/gbfs/v3/colmar/gbfs,,,,,,,err:LookupError
+FR,Getaround Colombes,https://getaround.com/gbfs/v3/colombes/gbfs,,,,,,,err:LookupError
+FR,Getaround Courbevoie,https://getaround.com/gbfs/v3/courbevoie/gbfs,,,,,,,err:LookupError
+FR,Getaround Dijon,https://getaround.com/gbfs/v3/dijon/gbfs,,,,,,,err:LookupError
+FR,Getaround Drancy,https://getaround.com/gbfs/v3/drancy/gbfs,,,,,,,err:LookupError
+FR,Getaround Dunkerque,https://getaround.com/gbfs/v3/dunkerque/gbfs,,,,,,,err:LookupError
+FR,Getaround Fontenay-Sous-Bois,https://getaround.com/gbfs/v3/fontenay-sous-bois/gbfs,,,,,,,err:LookupError
+FR,Getaround Grenoble,https://getaround.com/gbfs/v3/grenoble/gbfs,,,,,,,err:LookupError
+FR,Getaround Issy-Les-Moulineaux,https://getaround.com/gbfs/v3/issy-les-moulineaux/gbfs,,,,,,,err:LookupError
+FR,Getaround Ivry-Sur-Seine,https://getaround.com/gbfs/v3/ivry-sur-seine/gbfs,,,,,,,err:LookupError
+FR,Getaround Laval,https://getaround.com/gbfs/v3/laval/gbfs,,,,,,,err:LookupError
+FR,Getaround Levallois-Perret,https://getaround.com/gbfs/v3/levallois-perret/gbfs,,,,,,,err:LookupError
+FR,Getaround Lille,https://getaround.com/gbfs/v3/lille/gbfs,,,,,,,err:LookupError
+FR,Getaround Limay,https://getaround.com/gbfs/v3/limay/gbfs,,,,,,,err:LookupError
+FR,Getaround Limoges,https://getaround.com/gbfs/v3/limoges/gbfs,,,,,,,err:LookupError
+FR,Getaround Lorient,https://getaround.com/gbfs/v3/lorient/gbfs,,,,,,,err:LookupError
+FR,Getaround Lyon,https://getaround.com/gbfs/v3/lyon/gbfs,,,,,,,err:LookupError
+FR,Getaround Macau,https://getaround.com/gbfs/v3/macau/gbfs,,,,,,,err:LookupError
+FR,Getaround Macon,https://getaround.com/gbfs/v3/macon/gbfs,,,,,,,err:LookupError
+FR,Getaround Maisons-Alfort,https://getaround.com/gbfs/v3/maisons-alfort/gbfs,,,,,,,err:LookupError
+FR,Getaround Marseille,https://getaround.com/gbfs/v3/marseille/gbfs,,,,,,,err:LookupError
+FR,Getaround Meaux,https://getaround.com/gbfs/v3/meaux/gbfs,,,,,,,err:LookupError
+FR,Getaround Meru,https://getaround.com/gbfs/v3/meru/gbfs,,,,,,,err:LookupError
+FR,Getaround Metz,https://getaround.com/gbfs/v3/metz/gbfs,,,,,,,err:LookupError
+FR,Getaround Montauban,https://getaround.com/gbfs/v3/montauban/gbfs,,,,,,,err:LookupError
+FR,Getaround Montpellier,https://getaround.com/gbfs/v3/montpellier/gbfs,,,,,,,err:LookupError
+FR,Getaround Montreuil,https://getaround.com/gbfs/v3/montreuil/gbfs,,,,,,,err:LookupError
+FR,Getaround Mulhouse,https://getaround.com/gbfs/v3/mulhouse/gbfs,,,,,,,err:LookupError
+FR,Getaround Nancy,https://getaround.com/gbfs/v3/nancy/gbfs,,,,,,,err:LookupError
+FR,Getaround Nanterre,https://getaround.com/gbfs/v3/nanterre/gbfs,,,,,,,err:LookupError
+FR,Getaround Nantes,https://getaround.com/gbfs/v3/nantes/gbfs,,,,,,,err:LookupError
+FR,Getaround Narbonne,https://getaround.com/gbfs/v3/narbonne/gbfs,,,,,,,err:LookupError
+FR,Getaround Neuilly-Sur-Seine,https://getaround.com/gbfs/v3/neuilly-sur-seine/gbfs,,,,,,,err:LookupError
+FR,Getaround Nice,https://getaround.com/gbfs/v3/nice/gbfs,,,,,,,err:LookupError
+FR,Getaround Niort,https://getaround.com/gbfs/v3/niort/gbfs,,,,,,,err:LookupError
+FR,Getaround Noisy-Le-Grand,https://getaround.com/gbfs/v3/noisy-le-grand/gbfs,,,,,,,err:LookupError
+FR,Getaround Orange,https://getaround.com/gbfs/v3/orange/gbfs,,,,,,,err:LookupError
+FR,Getaround Pantin,https://getaround.com/gbfs/v3/pantin/gbfs,,,,,,,err:LookupError
+FR,Getaround Paris,https://getaround.com/gbfs/v3/paris/gbfs,,,,,,,err:LookupError
+FR,Getaround Pau,https://getaround.com/gbfs/v3/pau/gbfs,,,,,,,err:LookupError
+FR,Getaround Perpignan,https://getaround.com/gbfs/v3/perpignan/gbfs,,,,,,,err:LookupError
+FR,Getaround Pessac,https://getaround.com/gbfs/v3/pessac/gbfs,,,,,,,err:LookupError
+FR,Getaround Poitiers,https://getaround.com/gbfs/v3/poitiers/gbfs,,,,,,,err:LookupError
+FR,Getaround Quimper,https://getaround.com/gbfs/v3/quimper/gbfs,,,,,,,err:LookupError
+FR,Getaround Reims,https://getaround.com/gbfs/v3/reims/gbfs,,,,,,,err:LookupError
+FR,Getaround Rennes,https://getaround.com/gbfs/v3/rennes/gbfs,,,,,,,err:LookupError
+FR,Getaround Roubaix,https://getaround.com/gbfs/v3/roubaix/gbfs,,,,,,,err:LookupError
+FR,Getaround Rouen,https://getaround.com/gbfs/v3/rouen/gbfs,,,,,,,err:LookupError
+FR,Getaround Rueil-Malmaison,https://getaround.com/gbfs/v3/rueil-malmaison/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Brieuc,https://getaround.com/gbfs/v3/saint-brieuc/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Denis,https://getaround.com/gbfs/v3/saint-denis/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Laurent,https://getaround.com/gbfs/v3/saint-laurent/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Louis,https://getaround.com/gbfs/v3/saint-louis/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Malo,https://getaround.com/gbfs/v3/saint-malo/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Nazaire,https://getaround.com/gbfs/v3/saint-nazaire/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Paul,https://getaround.com/gbfs/v3/saint-paul/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Quentin,https://getaround.com/gbfs/v3/saint-quentin/gbfs,,,,,,,err:LookupError
+FR,Getaround Saint-Quentin-En-Yvelines,https://getaround.com/gbfs/v3/saint-quentin-en-yvelines/gbfs,,,,,,,err:LookupError
+FR,Getaround Sarcelles,https://getaround.com/gbfs/v3/sarcelles/gbfs,,,,,,,err:LookupError
+FR,Getaround Sartrouville,https://getaround.com/gbfs/v3/sartrouville/gbfs,,,,,,,err:LookupError
+FR,Getaround Strasbourg,https://getaround.com/gbfs/v3/strasbourg/gbfs,,,,,,,err:LookupError
+FR,Getaround Tarbes,https://getaround.com/gbfs/v3/tarbes/gbfs,,,,,,,err:LookupError
+FR,Getaround Toulon,https://getaround.com/gbfs/v3/toulon/gbfs,,,,,,,err:LookupError
+FR,Getaround Toulouse,https://getaround.com/gbfs/v3/toulouse/gbfs,,,,,,,err:LookupError
+FR,Getaround Tourcoing,https://getaround.com/gbfs/v3/tourcoing/gbfs,,,,,,,err:LookupError
+FR,Getaround Tours,https://getaround.com/gbfs/v3/tours/gbfs,,,,,,,err:LookupError
+FR,Getaround Troyes,https://getaround.com/gbfs/v3/troyes/gbfs,,,,,,,err:LookupError
+FR,Getaround Valence,https://getaround.com/gbfs/v3/valence/gbfs,,,,,,,err:LookupError
+FR,Getaround Vannes,https://getaround.com/gbfs/v3/vannes/gbfs,,,,,,,err:LookupError
+FR,Getaround Versailles,https://getaround.com/gbfs/v3/versailles/gbfs,,,,,,,err:LookupError
+FR,Getaround Villeurbanne,https://getaround.com/gbfs/v3/villeurbanne/gbfs,,,,,,,err:LookupError
+FR,Getaround Vitry-Sur-Seine,https://getaround.com/gbfs/v3/vitry-sur-seine/gbfs,,,,,,,err:LookupError
+FR,Gévaudan,https://www.mobility-parc.net/gbfs/v3/GEVAUDAN/gbfs.json,,,,,,,too_small_n=2
+FR,GraouLib',https://gbfs.partners.fifteen.eu/gbfs/2.2/metz/en/gbfs.json,56,0,0,11.785714285714286,11.785714285714286,1.0,ok
+FR,IDEcycle (Pau),https://gbfs.partners.fifteen.eu/gbfs/2.2/pau/en/gbfs.json,40,0,0,10.5,10.5,1.0,ok
+FR,Impulsyon,https://api.gbfs.v3.0.ecovelo.mobi/impulsyon/gbfs.json,31,0,0,7.290322580645161,7.290322580645161,1.0,ok
+FR,Karu'Vélo,https://api.gbfs.v3.0.ecovelo.mobi/karu/gbfs.json,,,,,,,too_small_n=19
+FR,Knot Strasbourg,https://api.knotcity.io/gbfs/v3/strasbourg/gbfs.json,,,,,,,err:URLError
+FR,La Baule,https://api.gbfs.v3.0.ecovelo.mobi/labaule/gbfs.json,,,,,,,too_small_n=14
+FR,Le Marcel,https://api.gbfs.v3.0.ecovelo.mobi/lemarcel/gbfs.json,30,0,0,13.533333333333333,13.533333333333333,1.0,ok
+FR,Le Vélo par TBM,https://bdx.mecatran.com/utw/ws/gbfs/bordeaux/v3/gbfs.json?apiKey=opendata-bordeaux-metropole-flux-gtfs-rt,228,0,3,19.782222222222224,19.521929824561404,1.0133333333333334,ok
+FR,LE vélo STAR,https://eu.ftp.opendatasoft.com/star/gbfs/gbfs.json,57,0,0,24.736842105263158,24.736842105263158,1.0,ok
+FR,Leo and Go,https://download.data.grandlyon.com/files/rdata/lag_leoandgo.disponibilite/gbfs.json,,,,,,,err:LookupError
+FR,Les Petites Reines,https://api.gbfs.v3.0.ecovelo.mobi/petitesreines/gbfs.json,,,,,,,too_small_n=15
+FR,levélo - Marseille,https://gbfs.omega.fifteen.eu/gbfs/2.2/marseille/en/gbfs.json,228,0,3,23.288888888888888,22.982456140350877,1.0133333333333334,ok
+FR,Libélo,https://valence.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,68,0,0,11.25,11.25,1.0,ok
+FR,Lime Lille,https://data.lime.bike/api/partners/v2/gbfs/lille/gbfs.json,,,,,,,err:HTTPError
+FR,Lime Marseille,https://data.lime.bike/api/partners/v2/gbfs/marseille/gbfs.json,,,,,,,err:HTTPError
+FR,Lime Nice,https://data.lime.bike/api/partners/v2/gbfs/nice/gbfs.json,,,,,,,err:HTTPError
+FR,Lime Paris,https://data.lime.bike/api/partners/v2/gbfs/paris/gbfs.json,,,,,,,err:HTTPError
+FR,LOVELO Libre-service,https://gbfs.urbansharing.com/lovelolibreservice.fr/gbfs.json,124,0,0,11.564516129032258,11.564516129032258,1.0,ok
+FR,MontenVélo,https://gbfs.partners.fifteen.eu/gbfs/2.2/mont_blanc/en/gbfs.json,21,0,0,10.0,10.0,1.0,ok
+FR,Naolib,https://api.cyclocity.fr/contracts/nantes/gbfs/v3/gbfs.json,123,0,0,19.8130081300813,19.8130081300813,1.0,ok
+FR,Naolib Micromob',https://api.gbfs.v3.0.ecovelo.mobi/chantrerie/gbfs.json,,,,,,,too_small_n=17
+FR,NemoVélo,https://api.gbfs.v3.0.ecovelo.mobi/nemovelo/gbfs.json,52,0,0,7.865384615384615,7.865384615384615,1.0,ok
+FR,Ogalo Cyclette,https://api.gbfs.v3.0.ecovelo.mobi/ogalo/gbfs.json,22,0,0,9.0,9.0,1.0,ok
+FR,OLORON,https://www.mobility-parc.net/gbfs/v3/OLORON/gbfs.json,,,,,,,too_small_n=2
+FR,Optymo Belfort,https://data.optymo.fr/vls/gbfs.json,32,0,0,17.65625,17.65625,1.0,ok
+FR,Optymo Belfort Auto libre-service,https://data.optymo.fr/als/gbfs.json,52,52,0,,,nan,ok
+FR,PAYS D'OPALE,https://www.mobility-parc.net/gbfs/v3/Opale/gbfs.json,,,,,,,too_small_n=4
+FR,PAYS DE L'ARBRESLE - VEL'PAR,https://www.mobility-parc.net/gbfs/v3/ARBRESLE/gbfs.json,,,,,,,too_small_n=4
+FR,PAYS DU COQUELICOT,https://www.mobility-parc.net/gbfs/v3/COQUELICOT/gbfs.json,,,,,,,too_small_n=1
+FR,Périvélo,https://api.gbfs.v3.0.ecovelo.mobi/perivelo/gbfs.json,,,,,,,err:HTTPError
+FR,Pony Angers,https://proxy.transport.data.gouv.fr/resource/pony-angers-gbfs/gbfs.json,1455,1443,0,3.9166666666666665,0.03230240549828179,121.24999999999999,ok
+FR,Pony Basque Country,https://proxy.transport.data.gouv.fr/resource/pony-pays-basque-gbfs/gbfs.json,536,536,0,,,nan,ok
+FR,Pony Beauvais,https://proxy.transport.data.gouv.fr/resource/pony-beauvais-gbfs/gbfs.json,221,221,0,,,nan,ok
+FR,Pony Bordeaux,https://proxy.transport.data.gouv.fr/resource/pony-bordeaux-gbfs/gbfs.json,3049,3044,0,13.0,0.021318465070514922,609.8000000000001,ok
+FR,Pony Bourges,https://proxy.transport.data.gouv.fr/resource/pony-bourges-gbfs/gbfs.json,376,376,0,,,nan,ok
+FR,Pony Evry,https://proxy.transport.data.gouv.fr/resource/pony-evry-gbfs/gbfs.json,214,214,0,,,nan,ok
+FR,Pony Herouville,https://proxy.transport.data.gouv.fr/resource/pony-herouville-gbfs/gbfs.json,209,209,0,,,nan,ok
+FR,Pony Limoges,https://proxy.transport.data.gouv.fr/resource/pony-limoges-gbfs/gbfs.json,298,226,0,4.236111111111111,1.023489932885906,4.138888888888889,ok
+FR,Pony Lorient,https://proxy.transport.data.gouv.fr/resource/pony-lorient-gbfs/gbfs.json,203,203,0,,,nan,ok
+FR,Pony Nice,https://proxy.transport.data.gouv.fr/resource/pony-nice-gbfs/gbfs.json,448,0,0,100.0,100.0,1.0,ok
+FR,Pony Perpignan,https://proxy.transport.data.gouv.fr/resource/pony-perpignan-gbfs/gbfs.json,1041,1039,0,2.5,0.004803073967339097,520.5,ok
+FR,Pony Poitiers,https://proxy.transport.data.gouv.fr/resource/pony-poitiers-gbfs/gbfs.json,392,385,0,4.857142857142857,0.08673469387755102,55.99999999999999,ok
+FR,Porte de Vassivière,https://www.mobility-parc.net/gbfs/v3/VASSIVIERE/gbfs.json,,,,,,,too_small_n=1
+FR,Rhoule,https://api.gbfs.v3.0.ecovelo.mobi/rhoule/gbfs.json,,,,,,,too_small_n=2
+FR,RLV'Lib,https://api.gbfs.v3.0.ecovelo.mobi/rlvlib/gbfs.json,,,,,,,err:HTTPError
+FR,Rubis'Velo,https://api.gbfs.v3.0.ecovelo.mobi/beb/gbfs.json,46,0,0,11.804347826086957,11.804347826086957,1.0,ok
+FR,Semo Vélo,https://api.gbfs.v3.0.ecovelo.mobi/semo/gbfs.json,40,0,0,9.75,9.75,1.0,ok
+FR,Tempovelo,https://api.gbfs.v3.0.ecovelo.mobi/tempovelo/gbfs.json,,,,,,,too_small_n=16
+FR,Ti Vélo,https://gbfs.partners.fifteen.eu/gbfs/2.2/landerneau/en/gbfs.json,,,,,,,too_small_n=14
+FR,TLP Mobilites,https://api.gbfs.v3.0.ecovelo.mobi/tlpmobilites/gbfs.json,,,,,,,too_small_n=13
+FR,Twisto Vélolib,https://gbfs.partners.fifteen.eu/gbfs/2.2/caen/en/gbfs.json,76,0,0,12.763157894736842,12.763157894736842,1.0,ok
+FR,V'lille,https://media.ilevia.fr/opendata/gbfs.json,,,,,,,err:HTTPError
+FR,VALLEE D'OSSAU,https://www.mobility-parc.net/gbfs/v3/OSSAU/gbfs.json,,,,,,,too_small_n=3
+FR,Vel’in,https://stce.transdev-hdf.fr/gbfs/,80,0,4,10.578947368421053,10.05,1.0526315789473684,ok
+FR,Velam,https://api.cyclocity.fr/contracts/amiens/gbfs/v3/gbfs.json,46,0,1,18.88888888888889,18.47826086956522,1.0222222222222221,ok
+FR,Velect'in,https://api.gbfs.v3.0.ecovelo.mobi/calais/gbfs.json,,,,,,,too_small_n=9
+FR,Vélhop - Strasbourg,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ae/gbfs.json,39,0,0,13.23076923076923,13.23076923076923,1.0,ok
+FR,Vélib' Metropole,https://velib-metropole-opendata.smovengo.cloud/opendata/Velib_Metropole/gbfs.json,1511,0,1,32.22980132450331,32.208471211118464,1.0006622516556292,ok
+FR,Vélibéo,https://api.gbfs.v3.0.ecovelo.mobi/velibeo/gbfs.json,26,0,0,12.115384615384615,12.115384615384615,1.0,ok
+FR,Vélivert,https://api.saint-etienne-metropole.fr/velivert/api/gbfs/gbfs.json,97,0,1,18.645833333333332,18.45360824742268,1.0104166666666667,ok
+FR,Vélo d'Aqui,https://api.gbfs.v3.0.ecovelo.mobi/velodaqui/gbfs.json,,,,,,,too_small_n=6
+FR,Vélo Fluo Grand-Est,https://gbfs.partners.fifteen.eu/gbfs/2.2/velo-fluo/en/gbfs.json,52,0,20,7.65625,4.711538461538462,1.625,ok
+FR,Vélo Modalis,https://gbfs.partners.fifteen.eu/gbfs/2.2/angouleme/en/gbfs.json,57,0,0,10.017543859649123,10.017543859649123,1.0,ok
+FR,Vélo Tanlib,https://api.gbfs.v3.0.ecovelo.mobi/tanlib/gbfs.json,58,0,0,13.206896551724139,13.206896551724139,1.0,ok
+FR,VELO VEZERE LASCAUX,https://www.mobility-parc.net/gbfs/v3/LASCAUX/gbfs.json,,,,,,,too_small_n=5
+FR,Vélo'Baie,https://gbfs.partners.fifteen.eu/gbfs/2.2/saintbrieuc/en/gbfs.json,,,,,,,too_small_n=12
+FR,Vélo'Cité,https://api.gbfs.v3.0.ecovelo.mobi/velocite/gbfs.json,,,,,,,too_small_n=19
+FR,Vélo'v,https://api.cyclocity.fr/contracts/lyon/gbfs/v3/gbfs.json,462,0,0,20.83982683982684,20.83982683982684,1.0,ok
+FR,VélO2,https://api.cyclocity.fr/contracts/cergy/gbfs/v3/gbfs.json,45,0,0,19.4,19.4,1.0,ok
+FR,VélO2,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ah/gbfs.json,49,0,0,15.408163265306122,15.408163265306122,1.0,ok
+FR,VéloCité,https://api.cyclocity.fr/contracts/besancon/gbfs/v3/gbfs.json,33,0,0,14.393939393939394,14.393939393939394,1.0,ok
+FR,VéloCité Mulhouse,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_af/gbfs.json,62,0,0,16.580645161290324,16.580645161290324,1.0,ok
+FR,Vélomagg,https://gbfs.theta.fifteen.eu/gbfs/montpellier/gbfs.json,52,0,0,12.673076923076923,12.673076923076923,1.0,ok
+FR,VéloModalis - TERRA,https://gbfs.partners.fifteen.eu/gbfs/2.2/velo-modalis/en/gbfs.json,,,,,,,too_small_n=10
+FR,VéloMoove,https://gbfs.partners.fifteen.eu/gbfs/2.2/pompey/en/gbfs.json,28,0,0,10.0,10.0,1.0,ok
+FR,Vélonecy,https://gbfs.partners.fifteen.eu/gbfs/2.2/annecy/en/gbfs.json,80,0,0,10.925,10.925,1.0,ok
+FR,Vélopop,https://gbfs.partners.fifteen.eu/gbfs/avignon/gbfs.json,29,0,0,20.344827586206897,20.344827586206897,1.0,ok
+FR,VélOstan'lib,https://api.cyclocity.fr/contracts/nancy/gbfs/v3/gbfs.json,39,0,0,17.743589743589745,17.743589743589745,1.0,ok
+FR,VélÔToulouse,https://api.cyclocity.fr/contracts/toulouse/gbfs/v3/gbfs.json,448,0,5,17.75846501128668,17.560267857142858,1.0112866817155755,ok
+FR,VéloZef,https://gbfs.partners.fifteen.eu/gbfs/2.2/brest/en/gbfs.json,46,0,0,10.0,10.0,1.0,ok
+FR,VélYcéo,https://api.gbfs.v3.0.ecovelo.mobi/velyceo/gbfs.json,,,,,,,too_small_n=5
+FR,Vernou Vélo,https://api.gbfs.v3.0.ecovelo.mobi/vernouvelo/gbfs.json,,,,,,,too_small_n=1
+FR,Vertuose,https://api.gbfs.v3.0.ecovelo.mobi/vertuose/gbfs.json,,,,,,,err:HTTPError
+FR,Viavélo,https://api.gbfs.v3.0.ecovelo.mobi/viavelo/gbfs.json,,,,,,,err:HTTPError
+FR,Vilvolt,https://gbfs.partners.fifteen.eu/gbfs/epinal/gbfs.json,106,0,1,16.0,15.849056603773585,1.0095238095238095,ok
+FR,Vivélo,https://gbfs.partners.fifteen.eu/gbfs/vichy/gbfs.json,,,,,,,too_small_n=8
+FR,Voi Grenoble,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/358/gbfs.json,709,0,0,9.692524682651621,9.692524682651621,1.0,ok
+FR,Voi Le Havre,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/336/gbfs.json,470,0,0,9.091489361702127,9.091489361702127,1.0,ok
+FR,Voi Marseille,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/66/gbfs.json,1277,1,0,5.22884012539185,5.224745497259201,1.000783699059561,ok
+FR,Voi Paris,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/352/gbfs.json,12906,3,0,2.5869177710609934,2.5863164419649776,1.0002325040688211,ok
+FR,Voi Saint-Quentin-en-Yvelines,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/355/gbfs.json,384,0,0,8.046875,8.046875,1.0,ok
+FR,Voi V'Lônes,https://api.voiapp.io/gbfs/fr/6bb6b5dc-1cda-4da7-9216-d3023a0bc54a/v2/406/gbfs.json,75,0,0,4.96,4.96,1.0,ok
+FR,Zebullo,https://api.gbfs.v3.0.ecovelo.mobi/zebullo/gbfs.json,66,0,0,10.742424242424242,10.742424242424242,1.0,ok
+GB,Beryl - BCP,https://beryl-gbfs-production.web.app/v2_2/BCP/gbfs.json,400,0,0,6.9075,6.9075,1.0,ok
+GB,Beryl - Bradford,https://beryl-gbfs-production.web.app/v2_2/Bradford/gbfs.json,32,0,0,6.53125,6.53125,1.0,ok
+GB,Beryl - Brighton,https://beryl-gbfs-production.web.app/v2_2/Brighton/gbfs.json,108,0,0,10.824074074074074,10.824074074074074,1.0,ok
+GB,Beryl - Canterbury,https://beryl-gbfs-production.web.app/v2_2/Canterbury/gbfs.json,25,0,0,5.28,5.28,1.0,ok
+GB,Beryl - Cornwall,https://beryl-gbfs-production.web.app/v2_2/Cornwall/gbfs.json,109,0,0,5.577981651376147,5.577981651376147,1.0,ok
+GB,Beryl - Eastleigh,https://beryl-gbfs-production.web.app/v2_2/Eastleigh/gbfs.json,,,,,,,too_small_n=13
+GB,Beryl - Greater Manchester,https://beryl-gbfs-production.web.app/v2_2/Greater_Manchester/gbfs.json,286,0,30,9.25,8.27972027972028,1.1171875,ok
+GB,Beryl - Guildford,https://beryl-gbfs-production.web.app/v2_2/Guildford/gbfs.json,39,0,0,8.076923076923077,8.076923076923077,1.0,ok
+GB,Beryl - Hackney Cargo Bike,https://gbfs.beryl.cc/v2_2/Hackney_Cargo_Bike/gbfs.json,,,,,,,too_small_n=4
+GB,Beryl - Hereford,https://beryl-gbfs-production.web.app/v2_2/Hereford/gbfs.json,73,0,0,5.534246575342466,5.534246575342466,1.0,ok
+GB,Beryl - Hertsmere,https://beryl-gbfs-production.web.app/v2_2/Hertsmere/gbfs.json,27,0,0,4.37037037037037,4.37037037037037,1.0,ok
+GB,Beryl - Isle of Wight,https://gbfs.beryl.cc/v2_2/Isle_of_Wight/gbfs.json,88,0,0,5.636363636363637,5.636363636363637,1.0,ok
+GB,Beryl - Leeds,https://beryl-gbfs-production.web.app/v2_2/Leeds/gbfs.json,94,0,0,8.925531914893616,8.925531914893616,1.0,ok
+GB,Beryl - Norwich,https://beryl-gbfs-production.web.app/v2_2/Norwich/gbfs.json,205,0,0,7.092682926829268,7.092682926829268,1.0,ok
+GB,Beryl - Plymouth,https://beryl-gbfs-production.web.app/v2_2/Plymouth/gbfs.json,133,0,0,6.293233082706767,6.293233082706767,1.0,ok
+GB,Beryl - Portsmouth,https://gbfs.beryl.cc/v2_2/Portsmouth/gbfs.json,104,0,0,6.028846153846154,6.028846153846154,1.0,ok
+GB,Beryl - Southampton,https://gbfs.beryl.cc/v2_2/Southampton/gbfs.json,105,0,0,6.266666666666667,6.266666666666667,1.0,ok
+GB,Beryl - Stevenage,https://beryl-gbfs-production.web.app/v2_2/Stevenage/gbfs.json,47,0,0,7.0638297872340425,7.0638297872340425,1.0,ok
+GB,Beryl - Watford,https://beryl-gbfs-production.web.app/v2_2/Watford/gbfs.json,97,0,0,7.484536082474227,7.484536082474227,1.0,ok
+GB,Beryl - West Midlands,https://beryl-gbfs-production.web.app/v2_2/West_Midlands/gbfs.json,257,0,0,12.081712062256809,12.081712062256809,1.0,ok
+GB,Beryl - Weymouth,https://beryl-gbfs-production.web.app/v2_2/Weymouth/gbfs.json,32,0,0,6.09375,6.09375,1.0,ok
+GB,Beryl - Wool,https://gbfs.beryl.cc/v2_2/Wool/gbfs.json,,,,,,,too_small_n=7
+GB,Beryl - Worcester,https://beryl-gbfs-production.web.app/v2_2/Worcester/gbfs.json,56,0,0,8.892857142857142,8.892857142857142,1.0,ok
+GB,Bolt Liverpool,https://mds.bolt.eu/gbfs/3/412/gbfs,1566,501,8,9.913907284768213,6.6915708812260535,1.4815515610217598,ok
+GB,Donkey Republic Charlbury,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_charlbury/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Cheltenham Spa,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_cheltenham_spa/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Cirencester,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_cirencester/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Henley On Thames,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_henley_on_thames/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Kingham,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_kingham/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Milton Park,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_miltonpark/gbfs,,,,,,,err:HTTPError
+GB,Donkey Republic Moreton In Marsh,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_moreton_in_marsh/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Northleach,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_northleach/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Oxford,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_oxford/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Plymouth,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_plymouth/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Stroud,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_stroud/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Tetbury,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_tetbury/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic The Cotswold Water Park,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_the_cotswold_water_park/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Whichford,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_whichford/gbfs.json,,,,,,,err:HTTPError
+GB,Donkey Republic Worthing,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_worthing/gbfs.json,,,,,,,err:HTTPError
+GB,Dott Bath,https://gbfs.api.ridedott.com/public/v2/bath/gbfs.json,232,232,0,,,nan,ok
+GB,Dott Braintree,https://gbfs.api.ridedott.com/public/v2/braintree/gbfs.json,205,205,0,,,nan,ok
+GB,Dott Bristol,https://gbfs.api.ridedott.com/public/v2/bristol/gbfs.json,1254,1254,0,,,nan,ok
+GB,Dott brunel-university,https://gbfs.api.ridedott.com/public/v2/brunel-university/gbfs.json,,,,,,,too_small_n=8
+GB,Dott Chelmsford,https://gbfs.api.ridedott.com/public/v2/chelmsford/gbfs.json,205,205,0,,,nan,ok
+GB,Dott Colchester,https://gbfs.api.ridedott.com/public/v2/colchester/gbfs.json,556,556,0,,,nan,ok
+GB,Dott Milton Keynes,https://gbfs.api.ridedott.com/public/v2/milton-keynes/gbfs.json,1854,1854,0,,,nan,ok
+GB,Dott Nottingham,https://gbfs.api.ridedott.com/public/v2/nottingham/gbfs.json,386,386,0,,,nan,ok
+GB,Neuron Mobility,https://mds.neuron-mobility.com/ncl/gbfs/2/,,,,,,,err:HTTPError
+GB,nextbike Stirling,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_uk/gbfs.json,,,,,,,too_small_n=10
+GB,Santander Cycles - Milton Keynes,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ku/gbfs.json,,,,,,,err:HTTPError
+GB,Swansea University Cycles,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_uu/gbfs.json,,,,,,,too_small_n=8
+GB,WESTcargo powered by nextbike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_we/gbfs.json,,,,,,,too_small_n=4
+GB,Zeus Cheltenham,https://zeus.city/api/v1/mds/gbfs/cheltenham/gbfs.json,,,,,,,err:LookupError
+GB,Zeus Gloucester,https://zeus.city/api/v1/mds/gbfs/gloucester/gbfs.json,,,,,,,err:LookupError
+GB,Zeus Sunderland,https://zeus.city/api/v1/mds/gbfs/sunderland/gbfs.json,,,,,,,err:LookupError
+GB,Zeus Yeovil,https://zeus.city/api/v1/mds/gbfs/yeovil/gbfs.json,,,,,,,err:LookupError
+GR,Bike Sharing Alimos,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gv/gbfs.json,,,,,,,too_small_n=6
+GR,Bike Sharing Elliniko – Argyroupoli,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gu/gbfs.json,,,,,,,too_small_n=8
+GR,Bike Sharing Glyfada,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gx/gbfs.json,,,,,,,too_small_n=8
+GR,Bike Sharing Palaio Faliro,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gy/gbfs.json,,,,,,,too_small_n=7
+GR,Dott Athens,https://gbfs.api.ridedott.com/public/v2/athens/gbfs.json,,,,,,,too_small_n=0
+GR,Dott Thessaloniki,https://gbfs.api.ridedott.com/public/v2/thessaloniki/gbfs.json,118,118,0,,,nan,ok
+HR,Bajs Zagreb (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hd/gbfs.json,197,0,0,11.248730964467006,11.248730964467006,1.0,ok
+HR,Dalmacija (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_se/gbfs.json,,,,,,,too_small_n=3
+HR,eMobi,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_em/gbfs.json,26,1,0,7.44,7.153846153846154,1.04,ok
+HR,Grad Drniš (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gd/gbfs.json,,,,,,,too_small_n=6
+HR,Grad Ivanić-Grad (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ig/gbfs.json,,,,,,,too_small_n=5
+HR,Grad Karlovac (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_kc/gbfs.json,,,,,,,too_small_n=13
+HR,Grad Križevci,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gk/gbfs.json,,,,,,,too_small_n=15
+HR,Grad Šibenik (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bc/gbfs.json,,,,,,,too_small_n=11
+HR,Grad Sisak (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cs/gbfs.json,,,,,,,too_small_n=5
+HR,Grad Slavonski Brod (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sb/gbfs.json,,,,,,,too_small_n=10
+HR,Grad Split,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gt/gbfs.json,100,40,0,7.0,4.2,1.6666666666666665,ok
+HR,Grad Velika Gorica (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cg/gbfs.json,,,,,,,err:HTTPError
+HR,Grad Vinkovci (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cm/gbfs.json,,,,,,,too_small_n=5
+HR,Grad Vukovar (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vu/gbfs.json,,,,,,,too_small_n=2
+HR,Grad Zadar (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zd/gbfs.json,,,,,,,too_small_n=8
+HR,Grad Zaprešić (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_sg/gbfs.json,,,,,,,too_small_n=7
+HR,Hvar (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ol/gbfs.json,,,,,,,too_small_n=2
+HR,Jastrebarsko (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cj/gbfs.json,,,,,,,too_small_n=1
+HR,nextbike Croatia,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_hr/gbfs.json,52,46,0,5.833333333333333,0.6730769230769231,8.666666666666666,ok
+HR,Općina Brinje (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_br/gbfs.json,,,,,,,too_small_n=2
+HR,Porec bike share (Croatia),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cv/gbfs.json,,,,,,,too_small_n=6
+HU,Donkey Republic Budapest,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_budapest/gbfs.json,,,,,,,err:HTTPError
+HU,Dott Budapest,https://gbfs.api.ridedott.com/public/v2/budapest/gbfs.json,981,981,0,,,nan,ok
+HU,Dott Dunaujvaros,https://gbfs.api.ridedott.com/public/v2/dunaujvaros/gbfs.json,23,23,0,,,nan,ok
+HU,Dott Godollo,https://gbfs.api.ridedott.com/public/v2/godollo/gbfs.json,80,80,0,,,nan,ok
+HU,Dott Gyor,https://gbfs.api.ridedott.com/public/v2/gyor/gbfs.json,229,229,0,,,nan,ok
+HU,Dott Hatvan,https://gbfs.api.ridedott.com/public/v2/hatvan/gbfs.json,32,32,0,,,nan,ok
+HU,Dott Miskolc,https://gbfs.api.ridedott.com/public/v2/miskolc/gbfs.json,,,,,,,err:HTTPError
+HU,Dott Pápa,https://gbfs.api.ridedott.com/public/v2/papa/gbfs.json,50,50,0,,,nan,ok
+HU,Dott Siófok,https://gbfs.api.ridedott.com/public/v2/siofok/gbfs.json,52,52,0,,,nan,ok
+IE,Beryl Belfast,https://beryl-gbfs-production.web.app/v2_2/Belfast/gbfs.json,61,0,0,12.754098360655737,12.754098360655737,1.0,ok
+IE,Bleeper Bikes,https://data.smartdublin.ie/bleeperbike-api/gbfs,,,,,,,err:HTTPError
+IE,Dublinbikes,https://api.cyclocity.fr/contracts/dublin/gbfs/v3/gbfs.json,117,0,0,31.77777777777778,31.77777777777778,1.0,ok
+IE,Moby Dublin,https://api.sharebike.com/public-api-service/gbfs/v2/moby_dublin/gbfs.json,,,,,,,too_small_n=0
+IL,Bird Israel,https://mds.bird.co/gbfs/v2/public/israel/gbfs.json,,,,,,,too_small_n=0
+IL,Bird Tel Aviv,https://mds.bird.co/gbfs/v2/public/tel-aviv/gbfs.json,,,,,,,too_small_n=0
+IL,Dott Herzliya,https://gbfs.api.ridedott.com/public/v2/herzliya/gbfs.json,205,205,0,,,nan,ok
+IL,Dott Tel-Aviv,https://gbfs.api.ridedott.com/public/v2/tel-aviv/gbfs.json,1590,1590,0,,,nan,ok
+IL,Lime Tel Aviv,https://data.lime.bike/api/partners/v2/gbfs/tel_aviv/gbfs.json,,,,,,,err:HTTPError
+IS,Donkey Republic Reykjavik,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_reykjavik/gbfs.json,,,,,,,err:HTTPError
+IT,Amicarnapoli,https://www.amicarnapoli.it/gbfs/gbfs.json,,,,,,,err:HTTPError
+IT,Bird Florence,https://mds.bird.co/gbfs/v2/public/florence/gbfs.json,,,,,,,too_small_n=0
+IT,Bird Milan,https://mds.bird.co/gbfs/v2/public/milan/gbfs.json,,,,,,,too_small_n=0
+IT,Bird Rome,https://mds.bird.co/gbfs/v2/public/rome/gbfs.json,,,,,,,too_small_n=0
+IT,Cooltra Turin,https://maas.zeus.cooltra.com/gbfs/turin/3.0/en/gbfs.json,,,,,,,err:LookupError
+IT,Dott Arezzo,https://gbfs.api.ridedott.com/public/v2/arezzo/gbfs.json,67,67,0,,,nan,ok
+IT,Dott Bari,https://gbfs.api.ridedott.com/public/v2/bari/gbfs.json,61,61,0,,,nan,ok
+IT,Dott Bergamo,https://gbfs.api.ridedott.com/public/v2/bergamo/gbfs.json,746,746,0,,,nan,ok
+IT,Dott Cagliari,https://gbfs.api.ridedott.com/public/v2/cagliari/gbfs.json,179,179,0,,,nan,ok
+IT,Dott Catania,https://gbfs.api.ridedott.com/public/v2/catania/gbfs.json,,,,,,,too_small_n=7
+IT,Dott Ferrara,https://gbfs.api.ridedott.com/public/v2/ferrara/gbfs.json,250,250,0,,,nan,ok
+IT,Dott Jesolo,https://gbfs.api.ridedott.com/public/v2/jesolo/gbfs.json,100,100,0,,,nan,ok
+IT,Dott Lecco,https://gbfs.api.ridedott.com/public/v2/lecco/gbfs.json,61,61,0,,,nan,ok
+IT,Dott Milan,https://gbfs.api.ridedott.com/public/v2/milan/gbfs.json,11199,11199,0,,,nan,ok
+IT,Dott Modena,https://gbfs.api.ridedott.com/public/v2/modena/gbfs.json,,,,,,,too_small_n=0
+IT,Dott Monza,https://gbfs.api.ridedott.com/public/v2/monza/gbfs.json,235,235,0,,,nan,ok
+IT,Dott Padua,https://gbfs.api.ridedott.com/public/v2/padua/gbfs.json,62,62,0,,,nan,ok
+IT,Dott Palermo,https://gbfs.api.ridedott.com/public/v2/palermo/gbfs.json,54,54,0,,,nan,ok
+IT,Dott Reggio Emilia,https://gbfs.api.ridedott.com/public/v2/reggio-emilia/gbfs.json,,,,,,,too_small_n=2
+IT,Dott Rome,https://gbfs.api.ridedott.com/public/v2/rome/gbfs.json,82,82,0,,,nan,ok
+IT,Dott Trento,https://gbfs.api.ridedott.com/public/v2/trento/gbfs.json,1179,1179,0,,,nan,ok
+IT,Dott Turin,https://gbfs.api.ridedott.com/public/v2/turin/gbfs.json,2265,2265,0,,,nan,ok
+IT,Dott Varese,https://gbfs.api.ridedott.com/public/v2/varese/gbfs.json,153,153,0,,,nan,ok
+IT,Dott Verona,https://gbfs.api.ridedott.com/public/v2/verona/gbfs.json,1822,1822,0,,,nan,ok
+IT,Fa.Mo.Se,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_fa/gbfs.json,25,19,0,4.833333333333333,1.16,4.166666666666667,ok
+IT,Lime Bari,https://data.lime.bike/api/partners/v2/gbfs/bari/gbfs.json,,,,,,,err:HTTPError
+IT,Lime Naples,https://data.lime.bike/api/partners/v2/gbfs/naples/gbfs.json,,,,,,,err:HTTPError
+IT,Milan Bikemi,https://gbfs.urbansharing.com/bikemi.com/gbfs.json,320,0,0,29.3875,29.3875,1.0,ok
+IT,nextbike Bergamo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ib/gbfs.json,76,35,0,8.439024390243903,4.552631578947368,1.853658536585366,ok
+IT,Nextbike the World,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wh/gbfs.json,,,,,,,too_small_n=3
+IT,Verona Bike,https://gbfs.urbansharing.com/bikeverona.it/gbfs.json,40,0,0,26.175,26.175,1.0,ok
+IT,Zeus Anzio,https://zeus.city/api/v1/mds/gbfs/anzio/gbfs.json,,,,,,,err:LookupError
+IT,Zeus Augusta,https://zeus.city/api/v1/mds/gbfs/augusta/gbfs.json,,,,,,,err:LookupError
+IT,Zeus Mazara,https://zeus.city/api/v1/mds/gbfs/mazara/gbfs.json,,,,,,,err:LookupError
+JP,CyclOcity,https://api.cyclocity.fr/contracts/toyama/gbfs/v3/gbfs.json,24,0,1,20.043478260869566,19.208333333333332,1.0434782608695654,ok
+JP,docomo bike share service,https://api-public.odpt.org/api/v4/gbfs/docomo-cycle/gbfs.json,5903,0,55,9.172195622435021,9.08673555819075,1.009404924760602,ok
+JP,docomo bike share service,https://api-public.odpt.org/api/v4/gbfs/docomo-cycle-tokyo/gbfs.json,1825,0,5,11.092307692307692,11.061917808219178,1.0027472527472527,ok
+JP,HELLO CYCLING,https://api-public.odpt.org/api/v4/gbfs/hellocycling/gbfs.json,14221,14221,0,,,nan,ok
+JP,kotobike,https://app.kotobike.jp/api/exposed/v2/gbfs/gbfs.json,,,,,,,err:URLError
+LI,Donkey Republic Liechtenstein,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_li/gbfs.json,,,,,,,err:HTTPError
+LI,LIEmobil Liechtenstein,https://api.mobidata-bw.de/sharing/gbfs/v3/liemobil_liechtenstein/gbfs,36,36,0,,,nan,ok
+LT,Cyclocity,https://api.cyclocity.fr/contracts/vilnius/gbfs/v3/gbfs.json,36,0,0,17.083333333333332,17.083333333333332,1.0,ok
+LU,Vel'OH!,https://api.cyclocity.fr/contracts/luxembourg/gbfs/v3/gbfs.json,146,0,0,19.143835616438356,19.143835616438356,1.0,ok
+LV,nextbike LV,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lv/gbfs.json,44,15,0,7.862068965517241,5.181818181818182,1.5172413793103448,ok
+MC,MonaBike,https://monaco.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,59,0,4,15.363636363636363,14.322033898305085,1.0727272727272728,ok
+MX,Ecobici,https://gbfs.mex.lyftbikes.com/gbfs/gbfs.json,677,0,0,26.889217134416544,26.889217134416544,1.0,ok
+MX,Mibici Guadalajara,https://guadalajara.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,369,0,2,16.79019073569482,16.69918699186992,1.0054495912806538,ok
+MY,Zeus Kuala Lumpur,https://zeus.city/api/v1/mds/gbfs/kuala%20lumpur/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/almere/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/amersfoort/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/amsterdam/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/breda/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/delft/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/denbosch/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/denhaag/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/eindhoven/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/groningen/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/haarlem/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/hilversum/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/lansingerland/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/leeuwarden/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/nijmegen/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/rijswijk/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/rotterdam/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/schiedam/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/tilburg/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/vlaardingen/gbfs.json,,,,,,,err:LookupError
+NL,Check Technologies,https://api.ridecheck.app/gbfs/v3/zwolle/gbfs.json,,,,,,,err:LookupError
+NL,Check Voorburg,https://api.ridecheck.app/gbfs/v3/voorburg/gbfs.json,,,,,,,err:LookupError
+NL,Cykl,https://www.cykl.nl/gbfs/gbfs.json,,,,,,,too_small_n=14
+NL,Donkey Republic Amsterdam,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_am/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Den Haag,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_den_haag/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Dordrecht,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_dordrecht/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Gorinchem,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_gorinchem/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Katwijk,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_katwijk/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Qbuzz,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_qbuzz/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Rivierenland,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_rivierenland/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Rotterdam,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_rt/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Rotterdam/Den Haag,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_rotterdam_den_haag/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Utrecht,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_ut/gbfs.json,,,,,,,err:HTTPError
+NL,Donkey Republic Utrechtse Heuvelrug,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_utrechtse_heuvelrug/gbfs.json,,,,,,,err:HTTPError
+NL,Dott Eindhoven,https://gbfs.api.ridedott.com/public/v2/eindhoven/gbfs.json,118,118,0,,,nan,ok
+NL,Dott Utrecht,https://gbfs.api.ridedott.com/public/v2/utrecht/gbfs.json,205,205,0,,,nan,ok
+NL,Dott Veldhoven,https://gbfs.api.ridedott.com/public/v2/veldhoven/gbfs.json,25,25,0,,,nan,ok
+NL,Felyx Amsterdam,https://maas.zeus.cooltra.com/gbfs/amsterdam/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Arnhem,https://maas.zeus.cooltra.com/gbfs/arnhem/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Breda,https://maas.zeus.cooltra.com/gbfs/breda/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Delft,https://maas.zeus.cooltra.com/gbfs/delft/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Den Bosch,https://maas.zeus.cooltra.com/gbfs/den_bosch/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Eindhoven,https://maas.zeus.cooltra.com/gbfs/eindhoven/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Enschede,https://maas.zeus.cooltra.com/gbfs/enschede/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Groningen,https://maas.zeus.cooltra.com/gbfs/groningen/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Haarlem,https://maas.zeus.cooltra.com/gbfs/haarlem/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Nijmegen,https://maas.zeus.cooltra.com/gbfs/nijmegen/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Rotterdam,https://maas.zeus.cooltra.com/gbfs/rotterdam/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx The Hague,https://maas.zeus.cooltra.com/gbfs/the_hague/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Tilburg,https://maas.zeus.cooltra.com/gbfs/tilburg/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,Felyx Zwolle,https://maas.zeus.cooltra.com/gbfs/zwolle/3.0/en/gbfs.json,,,,,,,err:LookupError
+NL,GoAbout,https://gbfs.goabout.com/2/gbfs.json,44,44,0,,,nan,ok
+NL,NS OV Fiets,http://gbfs.openov.nl/ovfiets/gbfs.json,291,291,0,,,nan,ok
+NO,Bergen City Bike,https://gbfs.urbansharing.com/bergenbysykkel.no/gbfs.json,94,0,0,18.095744680851062,18.095744680851062,1.0,ok
+NO,Bolt Arpsborg,https://api.entur.io/mobility/v2/gbfs/v3/boltsarpsborg/gbfs,,,,,,,err:LookupError
+NO,Bolt Bergen,https://api.entur.io/mobility/v2/gbfs/v3/boltbergen/gbfs,,,,,,,err:HTTPError
+NO,Bolt Drammen,https://api.entur.io/mobility/v2/gbfs/v3/boltdrammen/gbfs,,,,,,,err:HTTPError
+NO,Bolt Fredrikstad,https://api.entur.io/mobility/v2/gbfs/v3/boltfredrikstad/gbfs,,,,,,,err:LookupError
+NO,Bolt Gjovik,https://api.entur.io/mobility/v2/gbfs/v3/boltgjovik/gbfs,,,,,,,err:HTTPError
+NO,Bolt Hamar,https://api.entur.io/mobility/v2/gbfs/v3/bolthamar/gbfs,,,,,,,err:HTTPError
+NO,Bolt Kristiansand,https://api.entur.io/mobility/v2/gbfs/v3/boltkristiansand/gbfs,,,,,,,err:HTTPError
+NO,Bolt Lillehammer,https://api.entur.io/mobility/v2/gbfs/v3/boltlillehammer/gbfs,,,,,,,err:HTTPError
+NO,Bolt Lillestrom,https://api.entur.io/mobility/v2/gbfs/v3/boltlillestrom/gbfs,,,,,,,err:LookupError
+NO,Bolt Oslo,https://api.entur.io/mobility/v2/gbfs/v3/boltoslo/gbfs,,,,,,,err:HTTPError
+NO,Bysykkel,https://api.cyclocity.fr/contracts/lillestrom/gbfs/v3/gbfs.json,,,,,,,too_small_n=7
+NO,Dott As,https://gbfs.api.ridedott.com/public/v2/as/gbfs.json,,,,,,,err:HTTPError
+NO,Dott Asker,https://gbfs.api.ridedott.com/public/v2/asker/gbfs.json,,,,,,,err:HTTPError
+NO,Dott Bodø,https://gbfs.api.ridedott.com/public/v2/bodø/gbfs.json,,,,,,,err:UnicodeEncodeError
+NO,Dott Drammen,https://gbfs.api.ridedott.com/public/v2/drammen/gbfs.json,,,,,,,err:HTTPError
+NO,Dott Lillestrøm,https://gbfs.api.ridedott.com/public/v2/lillestrøm/gbfs.json,,,,,,,err:UnicodeEncodeError
+NO,Dott Malvik,https://gbfs.api.ridedott.com/public/v2/malvik/gbfs.json,,,,,,,too_small_n=7
+NO,Dott Melhus,https://gbfs.api.ridedott.com/public/v2/melhus/gbfs.json,,,,,,,too_small_n=10
+NO,Dott Sandefjord,https://gbfs.api.ridedott.com/public/v2/sandefjord/gbfs.json,205,205,0,,,nan,ok
+NO,Dott Stjørdal,https://gbfs.api.ridedott.com/public/v2/stjørdal/gbfs.json,,,,,,,err:UnicodeEncodeError
+NO,Dott Trondheim,https://gbfs.api.ridedott.com/public/v2/trondheim/gbfs.json,128,128,0,,,nan,ok
+NO,Dott Ullensaker,https://gbfs.api.ridedott.com/public/v2/ullensaker/gbfs.json,,,,,,,err:HTTPError
+NO,Farte Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/fartebysykkel/gbfs,55,55,0,,,nan,ok
+NO,Getaround Alesund,https://getaround.com/gbfs/v3/alesund/gbfs,,,,,,,err:LookupError
+NO,Getaround Alta,https://getaround.com/gbfs/v3/alta/gbfs,,,,,,,err:LookupError
+NO,Getaround Arendal,https://getaround.com/gbfs/v3/arendal/gbfs,,,,,,,err:LookupError
+NO,Getaround Asker,https://getaround.com/gbfs/v3/asker/gbfs,,,,,,,err:LookupError
+NO,Getaround Baerum,https://getaround.com/gbfs/v3/baerum/gbfs,,,,,,,err:LookupError
+NO,Getaround Bergen,https://getaround.com/gbfs/v3/bergen/gbfs,,,,,,,err:LookupError
+NO,Getaround Bodo,https://getaround.com/gbfs/v3/bodo/gbfs,,,,,,,err:LookupError
+NO,Getaround Drammen,https://getaround.com/gbfs/v3/drammen/gbfs,,,,,,,err:LookupError
+NO,Getaround Evenes,https://getaround.com/gbfs/v3/evenes/gbfs,,,,,,,err:LookupError
+NO,Getaround Fredrikstad,https://getaround.com/gbfs/v3/fredrikstad/gbfs,,,,,,,err:LookupError
+NO,Getaround Gardermoen,https://getaround.com/gbfs/v3/gardermoen/gbfs,,,,,,,err:LookupError
+NO,Getaround Harstad,https://getaround.com/gbfs/v3/harstad/gbfs,,,,,,,err:LookupError
+NO,Getaround Kirkenes,https://getaround.com/gbfs/v3/kirkenes/gbfs,,,,,,,err:LookupError
+NO,Getaround Kristiansand,https://getaround.com/gbfs/v3/kristiansand/gbfs,,,,,,,err:LookupError
+NO,Getaround Leknes,https://getaround.com/gbfs/v3/leknes/gbfs,,,,,,,err:LookupError
+NO,Getaround Lillehammer,https://getaround.com/gbfs/v3/lillehammer/gbfs,,,,,,,err:LookupError
+NO,Getaround Lillestrom,https://getaround.com/gbfs/v3/lillestrom/gbfs,,,,,,,err:LookupError
+NO,Getaround Lorenskog,https://getaround.com/gbfs/v3/lorenskog/gbfs,,,,,,,err:LookupError
+NO,Getaround Molde,https://getaround.com/gbfs/v3/molde/gbfs,,,,,,,err:LookupError
+NO,Getaround Moss,https://getaround.com/gbfs/v3/moss/gbfs,,,,,,,err:LookupError
+NO,Getaround Narvik,https://getaround.com/gbfs/v3/narvik/gbfs,,,,,,,err:LookupError
+NO,Getaround Nesodden,https://getaround.com/gbfs/v3/nesodden/gbfs,,,,,,,err:LookupError
+NO,Getaround Oslo,https://getaround.com/gbfs/v3/oslo/gbfs,,,,,,,err:LookupError
+NO,Getaround Porsgrunn,https://getaround.com/gbfs/v3/porsgrunn/gbfs,,,,,,,err:LookupError
+NO,Getaround Sandefjord,https://getaround.com/gbfs/v3/sandefjord/gbfs,,,,,,,err:LookupError
+NO,Getaround Sandvika,https://getaround.com/gbfs/v3/sandvika/gbfs,,,,,,,err:LookupError
+NO,Getaround Ski,https://getaround.com/gbfs/v3/ski/gbfs,,,,,,,err:LookupError
+NO,Getaround Skien,https://getaround.com/gbfs/v3/skien/gbfs,,,,,,,err:LookupError
+NO,Getaround Stavanger,https://getaround.com/gbfs/v3/stavanger/gbfs,,,,,,,err:LookupError
+NO,Getaround Stjordal,https://getaround.com/gbfs/v3/stjordal/gbfs,,,,,,,err:LookupError
+NO,Getaround Strommen,https://getaround.com/gbfs/v3/strommen/gbfs,,,,,,,err:LookupError
+NO,Getaround Tonsberg,https://getaround.com/gbfs/v3/tonsberg/gbfs,,,,,,,err:LookupError
+NO,Getaround Tromso,https://getaround.com/gbfs/v3/tromso/gbfs,,,,,,,err:LookupError
+NO,Getaround Trondheim,https://getaround.com/gbfs/v3/trondheim/gbfs,,,,,,,err:LookupError
+NO,Hertz Bildeling,https://api.entur.io/mobility/v2/gbfs/v3/hertzbildeling/gbfs,26,26,0,,,nan,ok
+NO,Hyre,https://api.entur.io/mobility/v2/gbfs/v3/hyrenorge/gbfs,,,,,,,err:HTTPError
+NO,Kolumbus Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/kolumbusbysykkel/gbfs,,,,,,,err:HTTPError
+NO,Oslo Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/oslobysykkel/gbfs,,,,,,,err:HTTPError
+NO,Otto,https://api.entur.io/mobility/v2/gbfs/v3/otto/gbfs,,,,,,,err:HTTPError
+NO,Ryde Fredrikstad,https://api.entur.io/mobility/v2/gbfs/v3/rydefredrikstad/gbfs,,,,,,,err:HTTPError
+NO,Ryde Porsgrunn,https://api.entur.io/mobility/v2/gbfs/v3/rydeporsgrunn/gbfs,,,,,,,err:HTTPError
+NO,Ryde Sandefjord,https://api.entur.io/mobility/v2/gbfs/v3/rydesandefjord/gbfs,,,,,,,err:HTTPError
+NO,Ryde Sarpsborg,https://api.entur.io/mobility/v2/gbfs/v3/rydesarpsborg/gbfs,,,,,,,err:HTTPError
+NO,Ryde Skien,https://api.entur.io/mobility/v2/gbfs/v3/rydeskien/gbfs,,,,,,,err:HTTPError
+NO,Ryde Stavanger,https://api.entur.io/mobility/v2/gbfs/v3/rydestavanger/gbfs,,,,,,,err:HTTPError
+NO,Ryde Tønsberg,https://api.entur.io/mobility/v2/gbfs/v3/rydetonsberg/gbfs,,,,,,,err:HTTPError
+NO,Ryde Tromsø,https://api.entur.io/mobility/v2/gbfs/v3/rydetromso/gbfs,,,,,,,err:HTTPError
+NO,Ryde Trondheim,https://api.entur.io/mobility/v2/gbfs/v3/rydetrondheim/gbfs,,,,,,,err:HTTPError
+NO,Ryde_Oslo,https://api.entur.io/mobility/v2/gbfs/v3/rydeoslo/gbfs,,,,,,,err:HTTPError
+NO,Trondheim Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/trondheimbysykkel/gbfs,,,,,,,err:HTTPError
+NO,Voi Arendal,https://api.entur.io/mobility/v2/gbfs/v3/voiarendal/gbfs,,,,,,,err:HTTPError
+NO,Voi Bergen,https://api.entur.io/mobility/v2/gbfs/v3/voibergen/gbfs,,,,,,,err:HTTPError
+NO,Voi Fredrikstad,https://api.entur.io/mobility/v2/gbfs/v3/voifredrikstad/gbfs,,,,,,,err:HTTPError
+NO,Voi Kristiansand,https://api.entur.io/mobility/v2/gbfs/v3/voikristiansand/gbfs,,,,,,,err:HTTPError
+NO,Voi Lillestrom,https://api.entur.io/mobility/v2/gbfs/v3/voilillestrom/gbfs,,,,,,,err:HTTPError
+NO,Voi Oslo,https://api.entur.io/mobility/v2/gbfs/v3/voioslo/gbfs,,,,,,,err:HTTPError
+NO,Voi Stavanger,https://api.entur.io/mobility/v2/gbfs/v3/voistavanger/gbfs,,,,,,,err:HTTPError
+NO,Voi Trondheim,https://api.entur.io/mobility/v2/gbfs/v3/voitrondheim/gbfs,,,,,,,err:HTTPError
+NO,Zeus Oslo,https://zeus.city/api/v1/mds/gbfs/oslo/gbfs.json,,,,,,,err:LookupError
+NZ,Flamingo Auckland,https://data.rideflamingo.com/gbfs/3/auckland/gbfs.json,97,97,0,,,nan,ok
+NZ,Flamingo Christchurch,https://data.rideflamingo.com/gbfs/3/christchurch/gbfs.json,27,27,0,,,nan,ok
+NZ,Flamingo Dunedin,https://data.rideflamingo.com/gbfs/3/dunedin/gbfs.json,37,37,0,,,nan,ok
+NZ,Flamingo Palmerston North,https://data.rideflamingo.com/gbfs/3/palmerston-north/gbfs.json,53,53,0,,,nan,ok
+NZ,Flamingo Porirua,https://data.rideflamingo.com/gbfs/3/porirua/gbfs.json,20,20,0,,,nan,ok
+NZ,Flamingo Tauranga,https://data.rideflamingo.com/gbfs/3/tauranga/gbfs.json,,,,,,,too_small_n=13
+NZ,Flamingo Waimakariri,https://data.rideflamingo.com/gbfs/3/waimakariri/gbfs.json,,,,,,,too_small_n=6
+NZ,Flamingo Wellington,https://data.rideflamingo.com/gbfs/3/wellington/gbfs.json,58,58,0,,,nan,ok
+NZ,JOLT Hutt Valley,https://prod-api.joltscooters.co.nz/api/gbfs/hutt_valley/gbfs.json,81,81,0,,,nan,ok
+NZ,JOLT New Plymouth,https://prod-api.joltscooters.co.nz/api/gbfs/new_plymouth/gbfs.json,72,72,0,,,nan,ok
+NZ,JOLT Selwyn,https://prod-api.joltscooters.co.nz/api/gbfs/selwyn/gbfs.json,,,,,,,too_small_n=18
+PL,Chełmski Rower,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cw/gbfs.json,,,,,,,too_small_n=17
+PL,Dott Bialogard,https://gbfs.api.ridedott.com/public/v2/bialogard/gbfs.json,46,46,0,,,nan,ok
+PL,Dott Bielawa,https://gbfs.api.ridedott.com/public/v2/bielawa/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Braniewo,https://gbfs.api.ridedott.com/public/v2/braniewo/gbfs.json,,,,,,,too_small_n=15
+PL,Dott Brodnica,https://gbfs.api.ridedott.com/public/v2/brodnica/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Brzeg,https://gbfs.api.ridedott.com/public/v2/brzeg/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Brzeg Dolny,https://gbfs.api.ridedott.com/public/v2/brzeg-dolny/gbfs.json,,,,,,,too_small_n=4
+PL,Dott Bytom,https://gbfs.api.ridedott.com/public/v2/bytom/gbfs.json,,,,,,,too_small_n=2
+PL,Dott Chrzanów,https://gbfs.api.ridedott.com/public/v2/chrzanow/gbfs.json,,,,,,,too_small_n=2
+PL,Dott Częstochowa,https://gbfs.api.ridedott.com/public/v2/czestochowa/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Dzierżoniów,https://gbfs.api.ridedott.com/public/v2/dzierzoniow/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Dziwnów,https://gbfs.api.ridedott.com/public/v2/dziwnow/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Elbląg,https://gbfs.api.ridedott.com/public/v2/elblag/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Gdansk,https://gbfs.api.ridedott.com/public/v2/gdansk/gbfs.json,471,471,0,,,nan,ok
+PL,Dott Gdansk-Osowa,https://gbfs.api.ridedott.com/public/v2/gdansk-osowa/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Goleniow,https://gbfs.api.ridedott.com/public/v2/goleniow/gbfs.json,,,,,,,too_small_n=19
+PL,Dott Grodzisk Mazowiecki,https://gbfs.api.ridedott.com/public/v2/grodzisk-mazowiecki/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Grudziadz,https://gbfs.api.ridedott.com/public/v2/grudziadz/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Gryfino,https://gbfs.api.ridedott.com/public/v2/gryfino/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Iława,https://gbfs.api.ridedott.com/public/v2/iława/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Jastrzebie-Zdroj,https://gbfs.api.ridedott.com/public/v2/jastrzebie-zdroj/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Jelenia Góra,https://gbfs.api.ridedott.com/public/v2/jelenia-gora/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Kalisz,https://gbfs.api.ridedott.com/public/v2/kalisz/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Katowice,https://gbfs.api.ridedott.com/public/v2/katowice/gbfs.json,98,98,0,,,nan,ok
+PL,Dott Kołobrzeg,https://gbfs.api.ridedott.com/public/v2/kołobrzeg/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Konin,https://gbfs.api.ridedott.com/public/v2/konin/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Koscierzyna,https://gbfs.api.ridedott.com/public/v2/koscierzyna/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Koszalin,https://gbfs.api.ridedott.com/public/v2/koszalin/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Krakow,https://gbfs.api.ridedott.com/public/v2/krakow/gbfs.json,387,387,0,,,nan,ok
+PL,Dott Krynica Morska,https://gbfs.api.ridedott.com/public/v2/krynica-morska/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Kwidzyn,https://gbfs.api.ridedott.com/public/v2/kwidzyn/gbfs.json,,,,,,,too_small_n=10
+PL,Dott Łeba,https://gbfs.api.ridedott.com/public/v2/łeba/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Lebork,https://gbfs.api.ridedott.com/public/v2/lebork/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Legionowo,https://gbfs.api.ridedott.com/public/v2/legionowo/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Leszno,https://gbfs.api.ridedott.com/public/v2/leszno/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Lubliniec,https://gbfs.api.ridedott.com/public/v2/lubliniec/gbfs.json,,,,,,,too_small_n=2
+PL,Dott Łuków,https://gbfs.api.ridedott.com/public/v2/łukow/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Malbork,https://gbfs.api.ridedott.com/public/v2/malbork/gbfs.json,,,,,,,too_small_n=10
+PL,Dott Międzyzdroje,https://gbfs.api.ridedott.com/public/v2/miedzyzdroje/gbfs.json,24,24,0,,,nan,ok
+PL,Dott Mielno,https://gbfs.api.ridedott.com/public/v2/mielno/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Mikołów,https://gbfs.api.ridedott.com/public/v2/mikołow/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Nowogard,https://gbfs.api.ridedott.com/public/v2/nowogard/gbfs.json,27,27,0,,,nan,ok
+PL,Dott Nowy Dwór Mazowiecki,https://gbfs.api.ridedott.com/public/v2/nowy-dwor-mazowiecki/gbfs.json,,,,,,,too_small_n=10
+PL,Dott Nowy Sącz,https://gbfs.api.ridedott.com/public/v2/nowy-sacz/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Nowy-Targ,https://gbfs.api.ridedott.com/public/v2/nowy-targ/gbfs.json,,,,,,,too_small_n=16
+PL,Dott Nysa,https://gbfs.api.ridedott.com/public/v2/nysa/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Oława,https://gbfs.api.ridedott.com/public/v2/oława/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Oleśnica,https://gbfs.api.ridedott.com/public/v2/olesnica/gbfs.json,71,71,0,,,nan,ok
+PL,Dott Ostroda,https://gbfs.api.ridedott.com/public/v2/ostroda/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Oświęcim,https://gbfs.api.ridedott.com/public/v2/oswiecim/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Piekary Śląskie,https://gbfs.api.ridedott.com/public/v2/piekary-slaskie/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Płock,https://gbfs.api.ridedott.com/public/v2/płock/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Police,https://gbfs.api.ridedott.com/public/v2/police/gbfs.json,,,,,,,too_small_n=18
+PL,Dott Poznan,https://gbfs.api.ridedott.com/public/v2/poznan/gbfs.json,359,359,0,,,nan,ok
+PL,Dott Prawobrzeże,https://gbfs.api.ridedott.com/public/v2/prawobrzeze/gbfs.json,30,30,0,,,nan,ok
+PL,Dott Pruszcz Gdański,https://gbfs.api.ridedott.com/public/v2/pruszcz-gdanski/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Rewal,https://gbfs.api.ridedott.com/public/v2/rewal/gbfs.json,20,20,0,,,nan,ok
+PL,Dott Ruda Śląska,https://gbfs.api.ridedott.com/public/v2/ruda-slaska/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Siedlce,https://gbfs.api.ridedott.com/public/v2/siedlce/gbfs.json,104,104,0,,,nan,ok
+PL,Dott Skawina,https://gbfs.api.ridedott.com/public/v2/skawina/gbfs.json,34,34,0,,,nan,ok
+PL,Dott Słupsk,https://gbfs.api.ridedott.com/public/v2/słupsk/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Sobieszewo Island,https://gbfs.api.ridedott.com/public/v2/sobieszewo-island/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Starogard Gdański,https://gbfs.api.ridedott.com/public/v2/starogard-gdanski/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Swidnica,https://gbfs.api.ridedott.com/public/v2/swidnica/gbfs.json,,,,,,,too_small_n=1
+PL,Dott Swiecie,https://gbfs.api.ridedott.com/public/v2/swiecie/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Świnoujście,https://gbfs.api.ridedott.com/public/v2/swinoujscie/gbfs.json,,,,,,,too_small_n=1
+PL,Dott Szczecin,https://gbfs.api.ridedott.com/public/v2/szczecin/gbfs.json,108,108,0,,,nan,ok
+PL,Dott Tarnowskie Góry,https://gbfs.api.ridedott.com/public/v2/tarnowskie-gory/gbfs.json,,,,,,,too_small_n=15
+PL,Dott Tczew,https://gbfs.api.ridedott.com/public/v2/tczew/gbfs.json,23,23,0,,,nan,ok
+PL,Dott Toruń,https://gbfs.api.ridedott.com/public/v2/torun/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Trzebnica,https://gbfs.api.ridedott.com/public/v2/trzebnica/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Ustka,https://gbfs.api.ridedott.com/public/v2/ustka/gbfs.json,205,205,0,,,nan,ok
+PL,Dott Warsaw,https://gbfs.api.ridedott.com/public/v2/warsaw/gbfs.json,37,37,0,,,nan,ok
+PL,Dott Wrocław,https://gbfs.api.ridedott.com/public/v2/wrocław/gbfs.json,,,,,,,err:UnicodeEncodeError
+PL,Dott Zawiercie,https://gbfs.api.ridedott.com/public/v2/zawiercie/gbfs.json,,,,,,,too_small_n=0
+PL,Dott Żory,https://gbfs.api.ridedott.com/public/v2/zory/gbfs.json,,,,,,,too_small_n=0
+PL,GRM Grodzisk Poland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gp/gbfs.json,,,,,,,too_small_n=17
+PL,JasKółka,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pj/gbfs.json,30,1,0,4.758620689655173,4.6,1.0344827586206897,ok
+PL,Koniński Rower Miejski Poland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pn/gbfs.json,,,,,,,too_small_n=13
+PL,Koszaliński Rower Miejski Poland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ps/gbfs.json,20,0,0,11.1,11.1,1.0,ok
+PL,Łódzki Rower Publiczny,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_lp/gbfs.json,,,,,,,err:HTTPError
+PL,METROROWER,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zz/gbfs.json,944,1,0,5.032873806998939,5.0275423728813555,1.0010604453870626,ok
+PL,MEVO,https://gbfs.urbansharing.com/rowermevo.pl/gbfs.json,821,0,0,12.84652862362972,12.84652862362972,1.0,ok
+PL,Piaseczyński Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pi/gbfs.json,,,,,,,too_small_n=7
+PL,Pruszkowski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_or/gbfs.json,,,,,,,too_small_n=16
+PL,Rower Miejski w Ostrowie Wielkopolskim,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_po/gbfs.json,,,,,,,too_small_n=12
+PL,Tarnowski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tn/gbfs.json,,,,,,,too_small_n=18
+PL,Tychowski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_py/gbfs.json,,,,,,,too_small_n=2
+PL,VETURILO 3.0,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_vw/gbfs.json,344,0,0,10.090116279069768,10.090116279069768,1.0,ok
+PL,Włower - Włocławski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_wf/gbfs.json,43,19,0,5.25,2.9302325581395348,1.7916666666666667,ok
+PL,Wolsztyński Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_fp/gbfs.json,,,,,,,err:HTTPError
+PL,WRM nextbike Poland,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pl/gbfs.json,263,7,0,9.3828125,9.133079847908744,1.02734375,ok
+PL,Zielonogórski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_pm/gbfs.json,,,,,,,err:HTTPError
+PL,Żyrardowski Rower Miejski,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zy/gbfs.json,,,,,,,too_small_n=7
+PT,Bird Braga,https://mds.bird.co/gbfs/v2/public/braga/gbfs.json,,,,,,,too_small_n=0
+PT,Bird Cascais,https://mds.bird.co/gbfs/v2/public/cascais/gbfs.json,160,160,0,,,nan,ok
+PT,Bird Lisbon,https://mds.bird.co/gbfs/v2/public/lisbon/gbfs.json,1787,1787,0,,,nan,ok
+PT,Bird Matosinhos,https://mds.bird.co/gbfs/v2/public/matosinhos/gbfs.json,182,182,0,,,nan,ok
+PT,Bird Porto,https://mds.bird.co/gbfs/v2/public/porto/gbfs.json,196,196,0,,,nan,ok
+PT,Bora,https://gbfs.primelayer.pt/gbfs-smartmobility/gbfs/v3/gbfs.json,39,0,0,5.0,5.0,1.0,ok
+PT,Demoland Loule,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_tb/gbfs.json,,,,,,,too_small_n=4
+PT,TubaBike (Barcelos),https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bx/gbfs.json,41,41,0,,,nan,ok
+QA,Dott Doha,https://gbfs.api.ridedott.com/public/v2/doha/gbfs.json,205,205,0,,,nan,ok
+RO,Alba Iulia Velocity,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ai/gbfs.json,,,,,,,too_small_n=18
+RO,BikeCity Campia Turzii,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rc/gbfs.json,,,,,,,too_small_n=1
+RO,Buzau VeloCity,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bv/gbfs.json,49,0,0,10.10204081632653,10.10204081632653,1.0,ok
+RO,Dej Velo City,https://dej.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=16
+RO,Hunedoara,https://hunedoara.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=12
+RO,Moinesti,https://moinesti.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=8
+RO,Sibiu BikeCity,https://sibiu.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,57,0,0,15.964912280701755,15.964912280701755,1.0,ok
+RO,Slatina Velo City,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rv/gbfs.json,,,,,,,too_small_n=5
+RO,Slobozia Bike City,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rw/gbfs.json,21,0,0,12.380952380952381,12.380952380952381,1.0,ok
+RO,Targu Mures,https://targumures.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=5
+RO,Topoloveni Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_rt/gbfs.json,,,,,,,too_small_n=4
+RO,Velo Sântana,https://santana.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=8
+SA,Dott Jeddah,https://gbfs.api.ridedott.com/public/v2/jeddah/gbfs.json,46,46,0,,,nan,ok
+SA,Dott Makkah,https://gbfs.api.ridedott.com/public/v2/makkah/gbfs.json,,,,,,,too_small_n=0
+SA,Dott Riyadh,https://gbfs.api.ridedott.com/public/v2/riyadh/gbfs.json,173,173,0,,,nan,ok
+SA,Dott SBF,https://gbfs.api.ridedott.com/public/v2/sbf/gbfs.json,22,22,0,,,nan,ok
+SA,Dott STC City,https://gbfs.api.ridedott.com/public/v2/stc-city/gbfs.json,,,,,,,too_small_n=0
+SE,Donkey Republic Ängelholm,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_aengelholm/gbfs.json,,,,,,,err:HTTPError
+SE,Donkey Republic Båstad,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_baastad/gbfs.json,,,,,,,err:HTTPError
+SE,Donkey Republic Malmö,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_malmoe/gbfs.json,,,,,,,err:HTTPError
+SE,Donkey Republic Ystad,https://stables.donkey.bike/api/public/gbfs/3.0/donkey_ystad/gbfs.json,,,,,,,err:HTTPError
+SE,Dott Eskilstuna,https://gbfs.api.ridedott.com/public/v2/eskilstuna/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Gothenburg,https://gbfs.api.ridedott.com/public/v2/gothenburg/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Helsingborg,https://gbfs.api.ridedott.com/public/v2/helsingborg/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Höganäs,https://gbfs.api.ridedott.com/public/v2/hoganas/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Jonkoping,https://gbfs.api.ridedott.com/public/v2/jonkoping/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Lidköping,https://gbfs.api.ridedott.com/public/v2/lidkoping/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Partille,https://gbfs.api.ridedott.com/public/v2/partille/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Skovde,https://gbfs.api.ridedott.com/public/v2/skovde/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Trollhättan,https://gbfs.api.ridedott.com/public/v2/trollhattan/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Varberg,https://gbfs.api.ridedott.com/public/v2/varberg/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Värnamo,https://gbfs.api.ridedott.com/public/v2/varnamo/gbfs.json,205,205,0,,,nan,ok
+SE,Dott Vaxjo,https://gbfs.api.ridedott.com/public/v2/vaxjo/gbfs.json,205,205,0,,,nan,ok
+SE,Gothenburg Cargo,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zc/gbfs.json,,,,,,,too_small_n=3
+SE,Lundahoj,https://api.cyclocity.fr/contracts/lund/gbfs/v3/gbfs.json,20,0,0,25.4,25.4,1.0,ok
+SE,"Styr & Ställ (Sweden, Göteborg)",https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_zg/gbfs.json,138,138,0,,,nan,ok
+SE,Zeus Borlänge,https://zeus.city/api/v1/mds/gbfs/borlange/gbfs.json,,,,,,,err:LookupError
+SE,Zeus Falun,https://zeus.city/api/v1/mds/gbfs/falun/gbfs.json,,,,,,,err:LookupError
+SE,Zeus Halmstad,https://zeus.city/api/v1/mds/gbfs/halmstad/gbfs.json,,,,,,,err:LookupError
+SE,Zeus Karlstad,https://zeus.city/api/v1/mds/gbfs/karlstad/gbfs.json,,,,,,,err:LookupError
+SI,BicikeLJ,https://api.cyclocity.fr/contracts/ljubljana/gbfs/v3/gbfs.json,87,0,0,19.620689655172413,19.620689655172413,1.0,ok
+SI,MBajk,https://api.cyclocity.fr/contracts/maribor/gbfs/v3/gbfs.json,42,0,2,20.025,19.071428571428573,1.0499999999999998,ok
+SI,Nomago Bikes -  LJUBLJANA in MEDVODE,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cc/gbfs.json,49,0,0,5.653061224489796,5.653061224489796,1.0,ok
+SI,Nomago Bikes - GO2GO,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ce/gbfs.json,21,0,0,7.523809523809524,7.523809523809524,1.0,ok
+SI,Nomago Bikes - GO2GO Gorizia,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cd/gbfs.json,,,,,,,too_small_n=3
+SI,Nomago Bikes - KOLESCE,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cn/gbfs.json,84,0,0,8.011904761904763,8.011904761904763,1.0,ok
+SI,Nomago Bikes - ZANAPREJ,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cf/gbfs.json,,,,,,,too_small_n=7
+SK,Arriva Bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_as/gbfs.json,,,,,,,too_small_n=17
+SK,BikeKIA,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_ak/gbfs.json,39,17,0,9.181818181818182,5.17948717948718,1.7727272727272727,ok
+SK,Dott Banska Bystrica,https://gbfs.api.ridedott.com/public/v2/banska-bystrica/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Bardejov,https://gbfs.api.ridedott.com/public/v2/bardejov/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Bratislava,https://gbfs.api.ridedott.com/public/v2/bratislava/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Humenne,https://gbfs.api.ridedott.com/public/v2/humenne/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Kosice,https://gbfs.api.ridedott.com/public/v2/kosice/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Liptovsky-Mikulas,https://gbfs.api.ridedott.com/public/v2/liptovsky-mikulas/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Martin,https://gbfs.api.ridedott.com/public/v2/martin/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Michalovce,https://gbfs.api.ridedott.com/public/v2/michalovce/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Nitra,https://gbfs.api.ridedott.com/public/v2/nitra/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Pezinok,https://gbfs.api.ridedott.com/public/v2/pezinok/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Poprad,https://gbfs.api.ridedott.com/public/v2/poprad/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Prešov,https://gbfs.api.ridedott.com/public/v2/presov/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Prievidza,https://gbfs.api.ridedott.com/public/v2/prievidza/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Trnava,https://gbfs.api.ridedott.com/public/v2/trnava/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Vranov-Nad-Toplou,https://gbfs.api.ridedott.com/public/v2/vranov-nad-toplou/gbfs.json,205,205,0,,,nan,ok
+SK,Dott Zvolen,https://gbfs.api.ridedott.com/public/v2/zvolen/gbfs.json,205,205,0,,,nan,ok
+SK,Senica bajk,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_av/gbfs.json,26,1,0,9.32,8.961538461538462,1.04,ok
+TR,AAR Bike,https://app.linkalock.com/api/gbfs/D2uRLGw8vBa2FJxa8/gbfs.json,118,0,0,11.889830508474576,11.889830508474576,1.0,ok
+UA,3electra,https://zelectra.rideatom.com/gbfs/66/v3.0/gbfs,,,,,,,too_small_n=0
+US,Aventura BCycle,https://gbfs.bcycle.com/bcycle_aventura/gbfs.json,,,,,,,too_small_n=2
+US,Bay Wheels,https://gbfs.baywheels.com/gbfs/2.3/gbfs.json,628,0,0,21.777070063694268,21.777070063694268,1.0,ok
+US,Bentonville BCycle,https://gbfs.bcycle.com/bcycle_bentonville/gbfs.json,28,28,0,,,nan,ok
+US,Bike Chattanooga,https://chattanooga.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,43,0,0,16.186046511627907,16.186046511627907,1.0,ok
+US,BikeLNK,https://gbfs.bcycle.com/bcycle_bikelnk/gbfs.json,21,21,0,,,nan,ok
+US,BIKETOWN,https://gbfs.biketownpdx.com/gbfs/2.3/gbfs.json,274,0,0,11.624087591240876,11.624087591240876,1.0,ok
+US,Biki,https://honolulu.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,134,0,0,17.895522388059703,17.895522388059703,1.0,ok
+US,Bird Alexandria,https://mds.bird.co/gbfs/v2/public/alexandria/gbfs.json,,,,,,,too_small_n=0
+US,Bird Arlingtonco,https://mds.bird.co/gbfs/v2/public/arlingtonco/gbfs.json,,,,,,,too_small_n=0
+US,Bird Atlanta,https://mds.bird.co/gbfs/v2/public/atlanta/gbfs.json,,,,,,,too_small_n=0
+US,Bird Cleveland,https://mds.bird.co/gbfs/v2/public/cleveland/gbfs.json,,,,,,,too_small_n=0
+US,Bird Columbus,https://mds.bird.co/gbfs/v2/public/columbus/gbfs.json,,,,,,,too_small_n=0
+US,Bird Culver City,https://mds.bird.co/gbfs/v2/public/culver-city/gbfs.json,,,,,,,too_small_n=0
+US,Bird Dallas,https://mds.bird.co/gbfs/v2/public/dallas/gbfs.json,,,,,,,too_small_n=0
+US,Bird Denver,https://mds.bird.co/gbfs/v2/public/denver/gbfs.json,,,,,,,too_small_n=0
+US,Bird Detroit,https://mds.bird.co/gbfs/v2/public/detroit/gbfs.json,,,,,,,too_small_n=0
+US,Bird Durham,https://mds.bird.co/gbfs/v2/public/durham/gbfs.json,,,,,,,too_small_n=0
+US,Bird Fairfax,https://mds.bird.co/gbfs/v2/public/fairfax/gbfs.json,,,,,,,too_small_n=0
+US,Bird Gainesville,https://mds.bird.co/gbfs/v2/public/gainesville/gbfs.json,,,,,,,too_small_n=0
+US,Bird Greensboro,https://mds.bird.co/gbfs/v2/public/greensboro/gbfs.json,,,,,,,too_small_n=0
+US,Bird Indianapolis,https://mds.bird.co/gbfs/v2/public/indianapolis/gbfs.json,,,,,,,too_small_n=0
+US,Bird Kansas City,https://mds.bird.co/gbfs/v2/public/kansas-city/gbfs.json,,,,,,,too_small_n=0
+US,Bird Lexington,https://mds.bird.co/gbfs/v2/public/lexington/gbfs.json,,,,,,,too_small_n=0
+US,Bird Los Angeles,https://mds.bird.co/gbfs/v2/public/los-angeles/gbfs.json,,,,,,,too_small_n=0
+US,Bird Louisville,https://mds.bird.co/gbfs/v2/public/louisville/gbfs.json,,,,,,,too_small_n=0
+US,Bird Miami,https://mds.bird.co/gbfs/v2/public/miami/gbfs.json,,,,,,,too_small_n=0
+US,Bird Montgomery County,https://mds.bird.co/gbfs/v2/public/provider/bird/montgomery-county/gbfs.json,,,,,,,too_small_n=0
+US,Bird Nashville,https://mds.bird.co/gbfs/v2/public/nashville/gbfs.json,,,,,,,too_small_n=0
+US,Bird New York,https://mds.bird.co/gbfs/v2/public/new-york/gbfs.json,,,,,,,too_small_n=0
+US,Bird Newark,https://mds.bird.co/gbfs/v2/public/newark/gbfs.json,,,,,,,too_small_n=0
+US,Bird Orlando,https://mds.bird.co/gbfs/v2/public/orlando/gbfs.json,,,,,,,too_small_n=0
+US,Bird Portland,https://mds.bird.co/gbfs/v2/public/portland/gbfs.json,,,,,,,too_small_n=0
+US,Bird Reno,https://mds.bird.co/gbfs/v2/public/reno/gbfs.json,,,,,,,too_small_n=0
+US,Bird Richmond,https://mds.bird.co/gbfs/v2/public/richmond/gbfs.json,,,,,,,too_small_n=0
+US,Bird Seattle Washington,https://mds.bird.co/gbfs/v2/public/seattle-washington/gbfs.json,,,,,,,too_small_n=0
+US,Bird St Louis,https://mds.bird.co/gbfs/v2/public/st-louis/gbfs.json,,,,,,,too_small_n=0
+US,Bird Tempe,https://mds.bird.co/gbfs/v2/public/tempe/gbfs.json,,,,,,,too_small_n=0
+US,Bird Washington DC,https://mds.bird.co/gbfs/v2/public/washington-dc/gbfs.json,,,,,,,too_small_n=0
+US,Blue Bikes,https://gbfs.bluebikes.com/gbfs/gbfs.json,597,0,0,17.683417085427134,17.683417085427134,1.0,ok
+US,Bolt Technology OÜ,https://mds.bolt.eu/gbfs/3/23/gbfs,254,254,0,,,nan,ok
+US,Boulder BCycle,https://gbfs.bcycle.com/bcycle_boulder/gbfs.json,64,64,0,,,nan,ok
+US,Broward B-cycle,https://gbfs.bcycle.com/bcycle_broward/gbfs.json,,,,,,,err:HTTPError
+US,Bublr Bikes,https://gbfs.bcycle.com/bcycle_bublr/gbfs.json,151,151,0,,,nan,ok
+US,Capital Bike Share,https://gbfs.capitalbikeshare.com/gbfs/2.3/gbfs.json,829,0,0,17.217129071170085,17.217129071170085,1.0,ok
+US,CapMetro,https://austin.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,84,0,0,13.666666666666666,13.666666666666666,1.0,ok
+US,Cincy Red Bike,https://gbfs.bcycle.com/bcycle_cincyredbike/gbfs.json,78,78,0,,,nan,ok
+US,Citi Bike,https://gbfs.citibikenyc.com/gbfs/2.3/gbfs.json,2406,0,59,30.73668512995313,29.982959268495428,1.0251384746484875,ok
+US,Clemson BikeShare,https://gbfs.bcycle.com/bcycle_clemson/gbfs.json,,,,,,,too_small_n=12
+US,CoGo,https://gbfs.cogobikeshare.com/gbfs/2.3/gbfs.json,,,,,,,too_small_n=0
+US,Des Moines B-cycle,https://gbfs.bcycle.com/bcycle_desmoines/gbfs.json,30,30,0,,,nan,ok
+US,Divvy,https://gbfs.divvybikes.com/gbfs/2.3/gbfs.json,1999,0,0,10.583791895947973,10.583791895947973,1.0,ok
+US,El Paso B-cycle,https://gbfs.bcycle.com/bcycle_elpaso/gbfs.json,,,,,,,too_small_n=19
+US,Evie Carshare,https://gbfs.vulog.io/mds/fleets/HOURCAR-USMSP/gbfs/2/en/gbfs.json,,,,,,,err:LookupError
+US,Explore Bike Share,https://gbfs.bcycle.com/bcycle_memphis/gbfs.json,31,31,0,,,nan,ok
+US,GREENbike,https://gbfs.bcycle.com/bcycle_greenbikeslc/gbfs.json,69,69,0,,,nan,ok
+US,Greenville B-cycle,https://gbfs.bcycle.com/bcycle_greenville/gbfs.json,,,,,,,too_small_n=14
+US,Heartland B-cycle,https://gbfs.bcycle.com/bcycle_heartland/gbfs.json,84,84,0,,,nan,ok
+US,HIBike,https://kona.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,23,0,0,15.652173913043478,15.652173913043478,1.0,ok
+US,Indego,https://gbfs.bcycle.com/bcycle_indego/gbfs.json,302,302,0,,,nan,ok
+US,Indy - Pacers Bikeshare,https://gbfs.bcycle.com/bcycle_pacersbikeshare/gbfs.json,54,54,0,,,nan,ok
+US,Inter Bike,https://miamiunderline.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=5
+US,Jackson County,https://gbfs.bcycle.com/bcycle_jacksoncounty/gbfs.json,,,,,,,too_small_n=1
+US,Lime Arlington,https://data.lime.bike/api/partners/v2/gbfs/arlington/gbfs.json,,,,,,,err:HTTPError
+US,Lime Atlanta,https://data.lime.bike/api/partners/v2/gbfs/atlanta/gbfs.json,,,,,,,err:HTTPError
+US,Lime Baltimore,https://data.lime.bike/api/partners/v2/gbfs/baltimore/gbfs.json,,,,,,,err:HTTPError
+US,Lime Chicago,https://data.lime.bike/api/partners/v2/gbfs/chicago/gbfs.json,,,,,,,err:HTTPError
+US,Lime Cleveland,https://data.lime.bike/api/partners/v2/gbfs/cleveland/gbfs.json,,,,,,,err:HTTPError
+US,Lime Colorado Springs,https://data.lime.bike/api/partners/v2/gbfs/colorado_springs/gbfs.json,,,,,,,err:HTTPError
+US,Lime Denver,https://data.lime.bike/api/partners/v2/gbfs/denver/gbfs.json,,,,,,,err:HTTPError
+US,Lime Detroit,https://data.lime.bike/api/partners/v2/gbfs/detroit/gbfs.json,,,,,,,err:HTTPError
+US,Lime Grand Rapids,https://data.lime.bike/api/partners/v2/gbfs/grand_rapids/gbfs.json,,,,,,,err:HTTPError
+US,Lime Lincoln,https://data.lime.bike/api/partners/v2/gbfs/lincoln/gbfs.json,,,,,,,err:HTTPError
+US,Lime Louisville,https://data.lime.bike/api/partners/v2/gbfs/louisville/gbfs.json,,,,,,,err:HTTPError
+US,Lime New York,https://data.lime.bike/api/partners/v2/gbfs/new_york/gbfs.json,,,,,,,err:HTTPError
+US,Lime Oakland,https://data.lime.bike/api/partners/v2/gbfs/oakland/gbfs.json,,,,,,,err:HTTPError
+US,Lime Portland,https://data.lime.bike/api/partners/v2/gbfs/portland/gbfs.json,,,,,,,err:HTTPError
+US,Lime San Francisco,https://data.lime.bike/api/partners/v2/gbfs/san_francisco/gbfs.json,,,,,,,err:HTTPError
+US,Lime San Jose,https://data.lime.bike/api/partners/v2/gbfs/san_jose/gbfs.json,,,,,,,err:HTTPError
+US,Lime Seattle,https://data.lime.bike/api/partners/v2/gbfs/seattle/gbfs.json,,,,,,,err:HTTPError
+US,Lime Washington DC,https://data.lime.bike/api/partners/v2/gbfs/washington_dc/gbfs.json,,,,,,,err:HTTPError
+US,Lyft,https://gbfs.lyft.com/gbfs/2.3/dca/gbfs.json,,,,,,,too_small_n=0
+US,Lyft Scooters Denver,https://gbfs.lyft.com/gbfs/2.3/den/gbfs.json,119,0,0,15.915966386554622,15.915966386554622,1.0,ok
+US,Madison B-cycle,https://gbfs.bcycle.com/bcycle_madison/gbfs.json,108,108,0,,,nan,ok
+US,Metro Bike Share,https://gbfs.bcycle.com/bcycle_lametro/gbfs.json,225,225,0,,,nan,ok
+US,Mogo Detroit,https://detroit.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,81,0,1,13.4,13.234567901234568,1.0125,ok
+US,Nashville BCycle,https://gbfs.bcycle.com/bcycle_nashville/gbfs.json,36,36,0,,,nan,ok
+US,Nike Biketown,https://nike.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,25,0,0,41.0,41.0,1.0,ok
+US,PeaceHealth Rides,https://peacehealthrides.com/opendata/gbfs.json,161,161,0,,,nan,ok
+US,Pogoh,https://pittsburgh.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,60,0,0,17.833333333333332,17.833333333333332,1.0,ok
+US,Redding Bikeshare,https://gbfs.bcycle.com/bcycle_redding/gbfs.json,22,22,0,,,nan,ok
+US,Reddy Bikeshare,https://reddybikeshare.socialbicycles.com/opendata/gbfs.json,137,137,0,,,nan,ok
+US,Relay Bike Share,https://relaybikeshare.socialbicycles.com/opendata/gbfs.json,,,,,,,too_small_n=0
+US,RGV B-cycle,https://gbfs.bcycle.com/bcycle_mcallen/gbfs.json,,,,,,,err:HTTPError
+US,RTC Bike Share,https://gbfs.bcycle.com/bcycle_rtcbikeshare/gbfs.json,38,38,0,,,nan,ok
+US,San Antonio B-cycle,https://gbfs.bcycle.com/bcycle_sanantonio/gbfs.json,,,,,,,too_small_n=18
+US,Santa Barbara BCycle,https://gbfs.bcycle.com/bcycle_santabarbara/gbfs.json,85,85,0,,,nan,ok
+US,Santa Cruz BCycle,https://gbfs.bcycle.com/bcycle_santacruz/gbfs.json,71,71,0,,,nan,ok
+US,SBU Wolf Ride Bike Share,https://stonybrook.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,,,,,,,too_small_n=14
+US,Spin Akron,https://mds.bird.co/gbfs/v2/public/provider/spin/akron/gbfs.json,,,,,,,too_small_n=0
+US,Spin Alexandria,https://mds.bird.co/gbfs/v2/public/provider/spin/alexandria/gbfs.json,,,,,,,too_small_n=0
+US,Spin Ann Arbor,https://mds.bird.co/gbfs/v2/public/provider/spin/ann_arbor/gbfs.json,,,,,,,too_small_n=0
+US,Spin Baltimore,https://mds.bird.co/gbfs/v2/public/provider/spin/baltimore/gbfs.json,,,,,,,too_small_n=0
+US,Spin Chicago,https://mds.bird.co/gbfs/v2/public/provider/spin/chicago/gbfs.json,,,,,,,too_small_n=0
+US,Spin Columbus,https://mds.bird.co/gbfs/v2/public/provider/spin/columbus/gbfs.json,,,,,,,too_small_n=0
+US,Spin Dayton,https://mds.bird.co/gbfs/v2/public/provider/spin/dayton/gbfs.json,,,,,,,too_small_n=0
+US,Spin Detroit,https://mds.bird.co/gbfs/v2/public/provider/spin/detroit/gbfs.json,,,,,,,too_small_n=0
+US,Spin Durham,https://mds.bird.co/gbfs/v2/public/provider/spin/durham/gbfs.json,,,,,,,too_small_n=0
+US,Spin East Lansing,https://mds.bird.co/gbfs/v2/public/provider/spin/east_lansing/gbfs.json,,,,,,,too_small_n=0
+US,Spin Fayetteville,https://mds.bird.co/gbfs/v2/public/provider/spin/fayetteville/gbfs.json,,,,,,,too_small_n=0
+US,Spin Fort Collins,https://mds.bird.co/gbfs/v2/public/provider/spin/fort_collins/gbfs.json,,,,,,,too_small_n=0
+US,Spin Gainesville,https://mds.bird.co/gbfs/v2/public/provider/spin/gainesville/gbfs.json,,,,,,,too_small_n=0
+US,Spin Lexington,https://mds.bird.co/gbfs/v2/public/provider/spin/lexington/gbfs.json,,,,,,,too_small_n=0
+US,Spin Los Angeles,https://mds.bird.co/gbfs/v2/public/provider/spin/los_angeles/gbfs.json,,,,,,,too_small_n=0
+US,Spin Michigan State University,https://mds.bird.co/gbfs/v2/public/provider/spin/michigan_state_university/gbfs.json,,,,,,,too_small_n=0
+US,Spin Milwaukee,https://mds.bird.co/gbfs/v2/public/provider/spin/milwaukee/gbfs.json,,,,,,,too_small_n=0
+US,Spin Minneapolis,https://mds.bird.co/gbfs/v2/public/provider/spin/minneapolis/gbfs.json,,,,,,,too_small_n=0
+US,Spin Nashville,https://mds.bird.co/gbfs/v2/public/provider/spin/nashville/gbfs.json,,,,,,,too_small_n=0
+US,Spin Ohio State,https://mds.bird.co/gbfs/v2/public/provider/spin/ohio_state/gbfs.json,,,,,,,too_small_n=0
+US,Spin Phoenix,https://mds.bird.co/gbfs/v2/public/provider/spin/phoenix/gbfs.json,,,,,,,too_small_n=0
+US,Spin Providence,https://mds.bird.co/gbfs/v2/public/provider/spin/providence/gbfs.json,,,,,,,too_small_n=0
+US,Spin Raleigh,https://mds.bird.co/gbfs/v2/public/provider/spin/raleigh/gbfs.json,,,,,,,too_small_n=0
+US,Spin Salt Lake City,https://mds.bird.co/gbfs/v2/public/provider/spin/salt_lake_city/gbfs.json,,,,,,,too_small_n=0
+US,Spin San Diego,https://mds.bird.co/gbfs/v2/public/provider/spin/san_diego/gbfs.json,,,,,,,too_small_n=0
+US,Spin San Francisco,https://mds.bird.co/gbfs/v2/public/provider/spin/san_francisco/gbfs.json,,,,,,,too_small_n=0
+US,Spin San Marcos,https://mds.bird.co/gbfs/v2/public/provider/spin/san_marcos/gbfs.json,,,,,,,too_small_n=0
+US,Spin Santa Monica,https://mds.bird.co/gbfs/v2/public/provider/spin/santa_monica/gbfs.json,,,,,,,too_small_n=0
+US,Spin St George,https://mds.bird.co/gbfs/v2/public/provider/spin/st_george/gbfs.json,,,,,,,too_small_n=0
+US,Spin St. Paul,https://mds.bird.co/gbfs/v2/public/provider/spin/st_paul/gbfs.json,,,,,,,too_small_n=0
+US,Spin Stillwater,https://mds.bird.co/gbfs/v2/public/provider/spin/stillwater/gbfs.json,,,,,,,too_small_n=0
+US,Spin Tallahassee,https://mds.bird.co/gbfs/v2/public/provider/spin/tallahassee/gbfs.json,,,,,,,too_small_n=0
+US,Spin Tampa,https://mds.bird.co/gbfs/v2/public/provider/spin/tampa/gbfs.json,,,,,,,too_small_n=0
+US,Spin Tempe,https://mds.bird.co/gbfs/v2/public/provider/spin/tempe/gbfs.json,,,,,,,too_small_n=0
+US,Spin University of Central Florida,https://mds.bird.co/gbfs/v2/public/provider/spin/university_of_central_florida/gbfs.json,,,,,,,err:HTTPError
+US,Spin Washington DC,https://mds.bird.co/gbfs/v2/public/provider/spin/washington_dc/gbfs.json,,,,,,,too_small_n=0
+US,Trinity Metro Bikes,https://fortworth.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,57,0,0,13.070175438596491,13.070175438596491,1.0,ok
+US,Truckee BCycle,https://gbfs.bcycle.com/bcycle_truckee/gbfs.json,,,,,,,too_small_n=0
+US,Tugo,https://tucson.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,42,0,0,13.095238095238095,13.095238095238095,1.0,ok
+US,Valentine Bike Share,https://gbfs.bcycle.com/bcycle_valentine/gbfs.json,,,,,,,too_small_n=1
+US,Veo Asbury Park,https://cluster-prod.veoride.com/api/shares/name/asb/gbfs,,,,,,,err:LookupError
+US,Veo Bend,https://cluster-prod.veoride.com/api/shares/name/bnd/gbfs,,,,,,,err:LookupError
+US,Veo Birmingham,https://cluster-prod.veoride.com/api/shares/name/bir/gbfs,,,,,,,err:LookupError
+US,Veo Bronx,https://cluster-prod.veoride.com/api/shares/name/nyc/gbfs,,,,,,,err:LookupError
+US,Veo Cedar Rapids,https://cluster-prod.veoride.com/api/shares/name/cid/gbfs,,,,,,,err:LookupError
+US,Veo Charlottesville,https://cluster-prod.veoride.com/api/shares/name/cvl/gbfs,,,,,,,err:LookupError
+US,Veo Cleveland,https://cluster-prod.veoride.com/api/shares/name/cle/gbfs,,,,,,,err:LookupError
+US,Veo College Park,https://cluster-prod.veoride.com/api/shares/name/cpk/gbfs,,,,,,,err:LookupError
+US,Veo Columbus,https://cluster-prod.veoride.com/api/shares/name/cbs/gbfs,,,,,,,err:LookupError
+US,Veo Fayetteville,https://cluster-prod.veoride.com/api/shares/name/fay/gbfs,,,,,,,err:LookupError
+US,Veo Gainesville,https://cluster-prod.veoride.com/api/shares/name/gvl/gbfs,,,,,,,err:LookupError
+US,Veo Hartford,https://cluster-prod.veoride.com/api/shares/name/hrt/gbfs,,,,,,,err:LookupError
+US,Veo Kansas State University,https://cluster-prod.veoride.com/api/shares/name/ksu/gbfs,,,,,,,err:LookupError
+US,Veo Los Angeles,https://cluster-prod.veoride.com/api/shares/name/xla/gbfs,,,,,,,err:LookupError
+US,Veo New Haven,https://cluster-prod.veoride.com/api/shares/name/nhv/gbfs,,,,,,,err:LookupError
+US,Veo New Rochelle,https://cluster-prod.veoride.com/api/shares/name/nrc/gbfs,,,,,,,err:LookupError
+US,Veo Newark,https://cluster-prod.veoride.com/api/shares/name/nwk/gbfs,,,,,,,err:LookupError
+US,Veo Oakland/Emeryville/Berkeley/Albany,https://cluster-prod.veoride.com/api/shares/name/xeb/gbfs,,,,,,,err:LookupError
+US,Veo Oregon State Univeristy,https://cluster-prod.veoride.com/api/shares/name/osu/gbfs,,,,,,,err:LookupError
+US,Veo Orlando,https://cluster-prod.veoride.com/api/shares/name/orl/gbfs,,,,,,,err:LookupError
+US,Veo Pensacola,https://cluster-prod.veoride.com/api/shares/name/pnc/gbfs,,,,,,,err:LookupError
+US,Veo Purdue University,https://cluster-prod.veoride.com/api/shares/name/pur/gbfs,,,,,,,err:LookupError
+US,Veo Queens,https://cluster-prod.veoride.com/api/shares/name/nyq/gbfs,,,,,,,err:LookupError
+US,Veo Rochester,https://cluster-prod.veoride.com/api/shares/name/roc/gbfs,,,,,,,err:LookupError
+US,Veo Rutgers University,https://cluster-prod.veoride.com/api/shares/name/rut/gbfs,,,,,,,err:LookupError
+US,Veo San Antonio,https://cluster-prod.veoride.com/api/shares/name/stx/gbfs,,,,,,,err:LookupError
+US,Veo Sarasota,https://cluster-prod.veoride.com/api/shares/name/sar/gbfs,,,,,,,err:LookupError
+US,Veo Southern Illinois University,https://cluster-prod.veoride.com/api/shares/name/siu/gbfs,,,,,,,err:LookupError
+US,Veo Syracuse,https://cluster-prod.veoride.com/api/shares/name/syr/gbfs,,,,,,,err:LookupError
+US,Veo Texas A&M University,https://cluster-prod.veoride.com/api/shares/name/tam/gbfs,,,,,,,err:LookupError
+US,Veo Toledo,https://cluster-prod.veoride.com/api/shares/name/tol/gbfs,,,,,,,err:LookupError
+US,Veo University of Alabama,https://cluster-prod.veoride.com/api/shares/name/ala/gbfs,,,,,,,err:LookupError
+US,"Veo University of Illinois, Urbana-Champaign",https://cluster-prod.veoride.com/api/shares/name/iuc/gbfs,,,,,,,err:LookupError
+US,Veo University of Oklahoma,https://cluster-prod.veoride.com/api/shares/name/oku/gbfs,,,,,,,err:LookupError
+US,Veo Washington DC,https://cluster-prod.veoride.com/api/shares/name/xdc/gbfs,,,,,,,err:LookupError
+US,Veo Wichita,https://cluster-prod.veoride.com/api/shares/name/wta/gbfs,,,,,,,err:LookupError
+US,WE-cycle,https://aspen.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,99,0,0,14.05050505050505,14.05050505050505,1.0,ok
+XK,Prishtina bike,https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_gs/gbfs.json,,,,,,,too_small_n=10

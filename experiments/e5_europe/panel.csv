@@ -1,9 +1,14 @@
-country,name,auto_discovery_url
-ES,Bicing Barcelona,https://barcelona.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
-ES,bicimad Madrid,https://madrid.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
-ES,Bilbao Bizi,https://bilbao.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
-ES,Bizi Zaragoza,https://zaragoza.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
-ES,Dbizi Donostia,https://sansebastian.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json
-ES,Sevici,https://api.cyclocity.fr/contracts/seville/gbfs/v3/gbfs.json
-ES,Valenbisi,https://api.cyclocity.fr/contracts/valence/gbfs/v3/gbfs.json
-BE,Velo Antwerpen,https://gbfs.smartbike.com/antwerp/1.0/gbfs.json
+country,name,auto_discovery_url,tech_stack,group
+ES,Bicing Barcelona,https://barcelona.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,PBSC,metropolitan-control
+ES,bicimad Madrid,https://madrid.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,PBSC,metropolitan-control
+ES,Bilbao Bizi,https://bilbao.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,PBSC,metropolitan-control
+ES,Bizi Zaragoza,https://zaragoza.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,PBSC,metropolitan-control
+ES,Dbizi Donostia,https://sansebastian.publicbikesystem.net/customer/gbfs/v3.0/gbfs.json,PBSC,metropolitan-control
+ES,Sevici Seville,https://api.cyclocity.fr/contracts/seville/gbfs/v3/gbfs.json,Cyclocity,metropolitan-control
+ES,Valenbisi Valencia,https://api.cyclocity.fr/contracts/valence/gbfs/v3/gbfs.json,Cyclocity,metropolitan-control
+BE,Velo Antwerpen,https://gbfs.smartbike.com/antwerp/1.0/gbfs.json,smartbike,metropolitan-control
+BE,Blue-bike,https://api.delijn.be/gbfs/gbfs.json,De Lijn / Blue-bike,metropolitan-control
+IT,BikeMi Milan,https://gbfs.urbansharing.com/bikemi.com/gbfs.json,Urban Sharing,metropolitan-control
+NO,Oslo Bysykkel,https://api.entur.io/mobility/v2/gbfs/v3/oslobysykkel/gbfs,Urban Sharing,metropolitan-control
+NO,Bergen City Bike,https://gbfs.urbansharing.com/bergenbysykkel.no/gbfs.json,Urban Sharing,metropolitan-control
+DE,Call a Bike (Deutsche Bahn),https://api.mobidata-bw.de/sharing/gbfs/v3/callabike/gbfs,Deutsche Bahn,informative-national

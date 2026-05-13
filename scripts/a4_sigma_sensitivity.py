@@ -45,18 +45,24 @@ def _audit_with_sigma(raw: pd.DataFrame, sigma: float) -> pd.DataFrame:
         core.A4_SIGMA = saved
 
 
-def _top10_cities(df: pd.DataFrame) -> list[str]:
+def _topk_cities(df: pd.DataFrame, k: int) -> list[str]:
     docked = df[(df.station_type == "docked_bike") & (~df.flag_A4)]
     return (
-        docked.groupby("city").size().sort_values(ascending=False).head(10).index.tolist()
+        docked.groupby("city").size().sort_values(ascending=False).head(k).index.tolist()
     )
 
 
-def _top10_operators(df: pd.DataFrame) -> list[str]:
+def _topk_operators(df: pd.DataFrame, k: int) -> list[str]:
     docked = df[(df.station_type == "docked_bike") & (~df.flag_A4)]
     return (
-        docked.groupby("operator_name").size().sort_values(ascending=False).head(10).index.tolist()
+        docked.groupby("operator_name").size().sort_values(ascending=False).head(k).index.tolist()
     )
+
+
+def _jaccard(a: list[str], b: list[str]) -> float:
+    sa, sb = set(a), set(b)
+    union = sa | sb
+    return len(sa & sb) / len(union) if union else 1.0
 
 
 def _rank_overlap_tau(ref_order: list[str], test_order: list[str]) -> float:
@@ -81,25 +87,29 @@ def main() -> None:
     sigmas = [2.0, 2.5, 3.0, 3.5, 4.0]
     rows = []
     ref_audited = _audit_with_sigma(raw, 3.0)
-    ref_cities = _top10_cities(ref_audited)
-    ref_operators = _top10_operators(ref_audited)
-    print(f"  Reference Top-10 cities (sigma=3.0): {ref_cities}")
-    print(f"  Reference Top-10 operators (sigma=3.0): {ref_operators}")
+    ref_top10_cities = _topk_cities(ref_audited, 10)
+    ref_top50_cities = _topk_cities(ref_audited, 50)
+    ref_top10_ops = _topk_operators(ref_audited, 10)
+    ref_top50_ops = _topk_operators(ref_audited, 50)
+    print(f"  Reference Top-10 cities (sigma=3.0): {ref_top10_cities}")
+    print(f"  Reference Top-10 operators (sigma=3.0): {ref_top10_ops}")
 
     for sigma in sigmas:
         audited = _audit_with_sigma(raw, sigma)
         n_a4_stations = int(audited.flag_A4.sum())
         n_a4_systems = audited.loc[audited.flag_A4, "system_id"].nunique()
-        tau_cities = _rank_overlap_tau(ref_cities, _top10_cities(audited))
-        tau_operators = _rank_overlap_tau(ref_operators, _top10_operators(audited))
         rows.append(
             {
                 "sigma": sigma,
                 "A4_stations": n_a4_stations,
                 "A4_systems": n_a4_systems,
                 "A4_share_pct": round(100.0 * n_a4_stations / len(audited), 2),
-                "tau_top10_cities_vs_ref": round(tau_cities, 3),
-                "tau_top10_operators_vs_ref": round(tau_operators, 3),
+                "tau_top10_cities": round(_rank_overlap_tau(ref_top10_cities, _topk_cities(audited, 10)), 3),
+                "tau_top10_operators": round(_rank_overlap_tau(ref_top10_ops, _topk_operators(audited, 10)), 3),
+                "jaccard_top10_cities": round(_jaccard(ref_top10_cities, _topk_cities(audited, 10)), 3),
+                "jaccard_top50_cities": round(_jaccard(ref_top50_cities, _topk_cities(audited, 50)), 3),
+                "jaccard_top10_operators": round(_jaccard(ref_top10_ops, _topk_operators(audited, 10)), 3),
+                "jaccard_top50_operators": round(_jaccard(ref_top50_ops, _topk_operators(audited, 50)), 3),
             }
         )
 
