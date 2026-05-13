@@ -14,6 +14,9 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import streamlit as st
 
@@ -21,6 +24,34 @@ import streamlit as st
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from audit_pipeline import ANOMALY_CLASSES, load_catalogue, load_summary  # noqa: E402
+
+# Academic matplotlib style, aligned with the paper figures
+mpl.rcParams.update({
+    "font.family": "sans-serif",
+    "font.sans-serif": ["Inter", "Helvetica Neue", "Helvetica", "Arial",
+                          "DejaVu Sans"],
+    "font.size": 9,
+    "axes.titlesize": 9.5,
+    "axes.labelsize": 9,
+    "xtick.labelsize": 8,
+    "ytick.labelsize": 8,
+    "legend.fontsize": 8,
+    "axes.spines.top": False,
+    "axes.spines.right": False,
+    "axes.edgecolor": "#404040",
+    "axes.linewidth": 0.6,
+    "axes.labelcolor": "#404040",
+    "xtick.color": "#404040",
+    "ytick.color": "#404040",
+    "grid.color": "#E5E5E5",
+    "grid.linewidth": 0.5,
+    "figure.dpi": 110,
+})
+
+NAVY = "#1A6FBF"
+NAVY_DARK = "#15538f"
+ACCENT = "#C0392B"
+MUTED = "#9DBADD"
 
 
 # ---------------------------------------------------------------------------
@@ -338,6 +369,118 @@ def section(number: int | str, title: str) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Inline academic figures (matplotlib, cached)
+# ---------------------------------------------------------------------------
+
+@st.cache_data(ttl=3600)
+def fig_anomaly_incidence() -> plt.Figure:
+    """Side-by-side bars: FR vs Global incidence per class A1..A7."""
+    classes = ["A1", "A2", "A3", "A4", "A5", "A6", "A7"]
+    fr = [14, 3, 8, 4, 5, 0, 19]
+    glob = [46, 48, 33, 81, 17, 14, 215]
+    x = np.arange(len(classes))
+    w = 0.38
+    fig, ax = plt.subplots(figsize=(6.4, 2.7))
+    b1 = ax.bar(x - w / 2, fr, width=w, color=NAVY,
+                 edgecolor="white", linewidth=0.5,
+                 label="French corpus (123 systems)")
+    b2 = ax.bar(x + w / 2, glob, width=w, color=MUTED,
+                 edgecolor="white", linewidth=0.5,
+                 label="Global catalogue (1,509 systems)")
+    for rect, v in zip(b1, fr):
+        if v:
+            ax.text(rect.get_x() + w / 2, v + 5, str(v),
+                    ha="center", va="bottom", fontsize=7, color=NAVY_DARK)
+    for rect, v in zip(b2, glob):
+        ax.text(rect.get_x() + w / 2, v + 5, str(v),
+                ha="center", va="bottom", fontsize=7, color="#5a7a96")
+    ax.set_xticks(x)
+    ax.set_xticklabels(classes)
+    ax.set_ylabel("Systems flagged")
+    ax.set_ylim(0, max(glob) * 1.18)
+    ax.grid(True, axis="y", alpha=0.45)
+    ax.legend(frameon=False, loc="upper center",
+              bbox_to_anchor=(0.5, -0.22), ncol=2)
+    fig.tight_layout()
+    return fig
+
+
+@st.cache_data(ttl=3600)
+def fig_confidence_distribution(audit_confidence: pd.Series) -> plt.Figure:
+    """Stacked horizontal bar of audit_confidence proportions."""
+    counts = audit_confidence.value_counts().reindex(
+        ["high", "medium", "low"], fill_value=0
+    )
+    total = counts.sum()
+    fig, ax = plt.subplots(figsize=(6.4, 0.9))
+    palette = {"high": NAVY, "medium": MUTED, "low": "#D7E3F2"}
+    left = 0
+    for tier in ["high", "medium", "low"]:
+        v = counts[tier]
+        ax.barh(0, v, left=left, color=palette[tier],
+                edgecolor="white", linewidth=0.6,
+                label=f"{tier} ({v:,}, {100 * v / total:.1f}%)")
+        if v / total > 0.04:
+            ax.text(left + v / 2, 0, f"{tier}\n{100 * v / total:.1f}%",
+                    ha="center", va="center", color="white",
+                    fontsize=8, fontweight=600)
+        left += v
+    ax.set_xlim(0, total)
+    ax.set_yticks([])
+    ax.set_xlabel("Stations")
+    ax.spines["left"].set_visible(False)
+    ax.grid(False)
+    ax.legend(frameon=False, loc="upper center",
+              bbox_to_anchor=(0.5, -0.55), ncol=3, fontsize=8)
+    fig.tight_layout()
+    return fig
+
+
+@st.cache_data(ttl=3600)
+def fig_operator_anomaly_rates(gs_df: pd.DataFrame) -> plt.Figure:
+    """Top-10 operators by station count, with A3 / A7 rates."""
+    op = (
+        gs_df.groupby("operator_name")
+              .agg(n=("uid", "size"),
+                   A3=("flag_A3", "mean"),
+                   A7=("flag_A7", "mean"))
+              .sort_values("n", ascending=False)
+              .head(10)
+              .sort_values("n", ascending=True)
+    )
+    fig, ax = plt.subplots(figsize=(6.4, 3.6))
+    y = np.arange(len(op))
+    h = 0.38
+    ax.barh(y + h / 2, op["A3"] * 100, height=h, color=NAVY,
+            edgecolor="white", linewidth=0.5,
+            label="A3 (structural over-capacity)")
+    ax.barh(y - h / 2, op["A7"] * 100, height=h, color=ACCENT,
+            edgecolor="white", linewidth=0.5, alpha=0.85,
+            label="A7 (null capacity field)")
+    for yi, (a3, a7, n) in enumerate(zip(op["A3"], op["A7"], op["n"])):
+        if a3 > 0.02:
+            ax.text(a3 * 100 + 1.5, yi + h / 2,
+                    f"{a3*100:.0f}%", va="center",
+                    fontsize=7, color=NAVY_DARK)
+        if a7 > 0.02:
+            ax.text(a7 * 100 + 1.5, yi - h / 2,
+                    f"{a7*100:.0f}%", va="center",
+                    fontsize=7, color=ACCENT)
+    ax.set_yticks(y)
+    ax.set_yticklabels(
+        [f"{name}  (n={int(n):,})" for name, n in
+         zip(op.index, op["n"])],
+        fontsize=8,
+    )
+    ax.set_xlabel("Anomaly rate (% of operator's stations)")
+    ax.set_xlim(0, 110)
+    ax.grid(True, axis="x", alpha=0.45)
+    ax.legend(frameon=False, loc="lower right", fontsize=8)
+    fig.tight_layout()
+    return fig
+
+
+# ---------------------------------------------------------------------------
 # Data
 # ---------------------------------------------------------------------------
 
@@ -485,7 +628,51 @@ with tab1:
               delta_color="off",
               help="audit_confidence == 'high'")
 
-    section(2, "Reusing the catalogue")
+    section(2, "Anomaly incidence across the French and global corpora")
+    st.pyplot(fig_anomaly_incidence(), clear_figure=False, use_container_width=True)
+    st.caption(
+        "Figure 1. System-level incidence of the seven anomaly classes "
+        "(A1 to A7) across the 123 audited French GBFS systems and the "
+        "1,509-system MobilityData canonical catalogue. The most "
+        "frequent global class is A7 (null capacity field, 215 systems "
+        "covering 70,176 stations), led by Dott across Germany, Italy "
+        "and the United Arab Emirates."
+    )
+
+    section(3, "A3: empirical signature of the structural over-capacity bias")
+    st.markdown(
+        "<p class='muted' style='max-width:760px;'>"
+        "Free-floating fleets advertise virtual stations and typically "
+        "report a capacity profile by conditional averaging on stations "
+        "whose instantaneous capacity is non-zero. Aggregated at the "
+        "system level, this estimator differs from the actual mean "
+        "capacity by an order of magnitude and would wrongly classify "
+        "thousands of free-floating bikes as dock-based stations."
+        "</p>",
+        unsafe_allow_html=True,
+    )
+    st.latex(
+        r"""\bar{c}_{\text{profile}}
+          \;=\;
+          \frac{\sum_{i\,:\,c_i > 0} c_i}{\#\{i\,:\,c_i > 0\}}
+          \;\neq\;
+          \bar{c}_{\text{actual}}
+          \;=\;
+          \frac{1}{N}\sum_{i=1}^{N} c_i"""
+    )
+    st.markdown(
+        "<p class='muted' style='font-size:0.84rem;'>"
+        "The audit detects A3 by computing the ratio "
+        "$\\bar{c}_{\\text{profile}} / \\bar{c}_{\\text{actual}}$ per "
+        "system and flagging any value above 5.0 (the empirical "
+        "threshold separating dock-based fleets from free-floating ones; "
+        "Bicing Barcelona and Oslo Bysykkel give ratios essentially "
+        "equal to 1.0)."
+        "</p>",
+        unsafe_allow_html=True,
+    )
+
+    section(4, "Reusing the catalogue")
     st.markdown(
         "<p class='muted'>Three drop-in patterns. Pick the one that suits "
         "your workflow.</p>",
@@ -529,7 +716,7 @@ with tab1:
         language="python",
     )
 
-    section(3, "Citation")
+    section(5, "Citation")
     st.code(
         '@article{Fosse2026gbfs,\n'
         '  author  = {Foss\\\'e, Rohan and Pallares, Ga\\"el},\n'
@@ -553,7 +740,19 @@ with tab1:
 # === Tab 2 -- Anomaly browser ============================================
 
 with tab2:
-    section(1, "Filter the catalogue at the row level")
+    section(1, "Audit-confidence distribution on the certified corpus")
+    st.pyplot(fig_confidence_distribution(gs["audit_confidence"]),
+              clear_figure=False, use_container_width=True)
+    st.caption(
+        "Figure 2. Distribution of the per-row audit confidence over "
+        f"the {len(gs):,} certified stations. Only 5,402 stations "
+        "(11.7 %) reach the high-confidence tier ; the bulk of the "
+        "corpus sits at low confidence because the dominant operators "
+        "(Dott, Pony, Bird) propagate the A3 / A7 flags across every "
+        "station they publish."
+    )
+
+    section(2, "Filter the catalogue at the row level")
     st.markdown(
         "<p class='muted'>The 46-column parquet exposes one anomaly flag "
         "per class (<code>flag_A1</code> to <code>flag_A7</code>) and an "
@@ -622,7 +821,18 @@ with tab2:
 # === Tab 3 -- Operator audit =============================================
 
 with tab3:
-    section(1, "Per-operator anomaly profile")
+    section(1, "Top operators: A3 and A7 rates")
+    st.pyplot(fig_operator_anomaly_rates(gs),
+              clear_figure=False, use_container_width=True)
+    st.caption(
+        "Figure 3. A3 (structural over-capacity) and A7 (null capacity "
+        "field) flagging rates for the ten operators with the largest "
+        "station count. Pony triggers A3 on 100 % of its stations and "
+        "Dott triggers A7 on 100 % of its stations: the audit's verdict "
+        "is operator-driven, not city-driven."
+    )
+
+    section(2, "Per-operator anomaly profile (full table)")
     st.markdown(
         "<p class='muted' style='max-width:780px;'>"
         "Operator-driven hotspots are the central empirical finding of "
