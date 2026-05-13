@@ -94,10 +94,10 @@ Catalogue} (46{,}307 stations, 97 cities) on Zenodo. The Czech Republic is the E
 hotspot (55.6\,\% of audited systems flagged, all from a single
 operator, mirroring \emph{Pony} in France). A positive control on
 Beryl London shows the standard can be used correctly when an audit
-tier exists. A single A3 correction moves Bordeaux from rank 2 to
-rank 14 in a soft-mobility ranking, quantifying the policy cost of
-skipping the audit. The dataset, pipeline and Docker image are
-released for bit-exact reproduction.
+tier exists. A single A3 correction collapses Bordeaux's nominal
+docking total from $35{,}952$ docks to $690$ ($-98.1\,\%$),
+quantifying the policy cost of skipping the audit. The dataset,
+pipeline and Docker image are released for bit-exact reproduction.
 
 \begin{highlights}
 \item Audit of 1{,}509 GBFS systems worldwide; unified taxonomy of 7 anomaly classes
@@ -152,12 +152,25 @@ Bike-sharing demand modelling and rebalancing analysis have generated
 a rich operational literature
 \cite{Buehler2017BikeShare,Medard2017Rebalancing,Eren2020Review}, but
 all of these works treat the input feeds as given and do not audit
-the standard itself. Tao \textit{et al.} \cite{Tao2020} document
-sampling biases in mobile-phone records used for origin-destination
-estimation; Romanillos \textit{et al.} \cite{Romanillos2016} warn
-against statistical artefacts of ingesting raw GPS feeds directly;
-Fishman \cite{Fishman2016} stresses the heterogeneity of operational
-definitions in international BSS comparisons.
+the standard itself. The closest precedent in transit-data quality
+is the smart-card literature : Pelletier et al.
+\cite{Pelletier2011SmartCard} systematically catalogue the gaps
+between what fare-collection feeds nominally publish and what they
+operationally support for research reuse, a programme structurally
+analogous to the GBFS audit we report here.
+Tao \textit{et al.} \cite{Tao2020} document sampling biases in
+mobile-phone records used for origin-destination estimation;
+Romanillos \textit{et al.} \cite{Romanillos2016} warn against
+statistical artefacts of ingesting raw GPS feeds directly;
+Bachand-Marleau et al. \cite{BachandMarleau2012} surfaced
+operational-definition heterogeneity in bike-sharing demand data
+more than a decade ago; and Fishman \cite{Fishman2016} stresses the
+heterogeneity of operational definitions in international BSS
+comparisons. The North American Bikeshare and Scootershare
+Association tracks cross-operator harmonisation gaps annually
+\cite{NABSA2024StateOfIndustry}, with the regulatory framing
+typical of an industry-side body but without the per-row audit
+trail a research consumer needs.
 In the adjacent transit literature, the GTFS community has been more
 proactive: the Canonical GTFS Schedule Validator
 \cite{MobilityData2024Validator} and the earlier Conveyal validator
@@ -313,14 +326,21 @@ with an explicit \texttt{station\_type} and per-row anomaly flags,
 of which a further 40{,}865 ($61.0\,\%$ of the raw) are
 \emph{relabelled} away from their declared GBFS type (39{,}235
 relabelled to \texttt{free\_floating} by step S3, 1{,}630 to
-\texttt{carsharing} by step S1). A 95\,\% bootstrap interval on
-the removal rate is reported in the audit report ; we omit it from
-the main text because resampling at the system level (123 clusters)
-under-represents within-system correlation. The headline figure is
-that fewer than 9\,\% of raw entries survive into the catalogue
-without either being relabelled or removed --- a strong empirical
-argument against the view that the standard alone delivers a
-research-ready dataset.
+\texttt{carsharing} by step S1). A 95\,\% cluster-bootstrap interval on the removal rate (resampling
+at the system level, $n = 10{,}000$, seed 42) is uninformative on
+this corpus because the 123 systems span four orders of magnitude in
+size (from 20 stations at the $N_{\min}$ threshold to $\sim 15{,}000$
+for the largest Dott deployment); a single large system carries
+enough mass to flip the resampled mean. We therefore report the
+$30.9\,\%$ removal rate as a deterministic accounting fact on the
+audit-dated snapshot rather than as a population estimate.
+Re-running the audit on a freshly fetched snapshot is the
+right path to a temporal uncertainty assessment, which is the
+purpose of experiment E3 (twelve-month stability). The headline
+figure is that fewer than $9\,\%$ of raw entries survive into the
+catalogue without either being relabelled or removed --- a strong
+empirical argument against the view that the standard alone
+delivers a research-ready dataset.
 
 \begin{table}[ht]
 \centering
@@ -386,10 +406,14 @@ three for V\'elib-class infrastructure.
 \centering
 \caption{Bordeaux: impact of the A3 correction on the
 \emph{Pony Bordeaux} subsystem and on the agglomeration as a whole.
-The national soft-mobility rank is reported for context: a composite
-supply-side ranking of French agglomerations on dock-based cycling
-infrastructure. The point is not the absolute rank value but the
-seven-position downward move that the A3 correction produces.}
+The nominal docking total drops by $98.1\,\%$ once the
+\emph{Pony} entries are correctly typed as
+\texttt{free\_floating}; without the A3 step, a naive supply-side
+indicator would credit Bordeaux with about $36{,}000$ physical
+docks, more than \emph{V\'elib' M\'etropole} (the dock-based
+flagship of \^Ile-de-France). The certified subset of $225$
+dock-based stations corresponds to the historical
+\emph{V\'elo par TBM} network.}
 \label{tab:bordeaux}
 \small
 \begin{tabular}{@{}lrr@{}}
@@ -406,7 +430,7 @@ seven-position downward move that the A3 correction produces.}
 \quad Total raw entries                      & 9{,}921 & -- \\
 \quad Certified dock-based stations           & --      & 225 \\
 \quad Nominal docking total (dock-based only) & 35{,}952 & 690 \\
-\quad National IMD rank (companion study)     & 2       & 14 \\
+\quad Implied over-count factor               & --       & $\times\,52$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -416,13 +440,12 @@ reclassifies the 2{,}996 Pony entries as \texttt{free\_floating},
 recomputes their actual capacity to 0.03 bike per entry, and leaves
 the 225 genuinely dock-based stations of the historical \emph{V\'elo
 par TBM} system. At the agglomeration level, this collapses the
-nominal docking total by $98\,\%$, drops Bordeaux's dock-based
-infrastructure from the top decile to the second quartile of the
-national distribution, and shifts the agglomeration's rank from
-2 to 14 in a supply-side composite ranking of French dock-based
-cycling networks reconstructed from the same Audit Catalogue.
-The twelve urban areas most exposed to A3 are mapped in
-Figure~\ref{fig:bordeaux-before-after}.
+nominal docking total by $98\,\%$ and drops Bordeaux's dock-based
+infrastructure from a top-quartile position on the national
+distribution of nominal docks to a position below the median: an
+order-of-magnitude effect on any supply-side aggregate built on
+the raw feed. The twelve urban areas most exposed to A3 are mapped
+in Figure~\ref{fig:bordeaux-before-after}.
 
 \begin{figure}[ht]
 \centering
@@ -436,19 +459,19 @@ Dott) and Lyon (mixed) also see substantial corrections.}
 \label{fig:bordeaux-before-after}
 \end{figure}
 
-Beyond the absolute station-count drop, the operational stakes are
-captured by the rerankings induced on a downstream composite
-indicator. Table~\ref{tab:top5-reranks} reports the five urban areas
-whose count of dock-based stations is most reduced by the purging
+Beyond the absolute station-count drop, the order-of-magnitude
+change in nominal infrastructure is the operational stake.
+Table~\ref{tab:top5-reranks} reports the five urban areas whose
+count of dock-based stations is most reduced by the purging
 protocol, together with the anomaly classes that drive the
-reclassification and the order-of-magnitude change in nominal
-infrastructure visible from the raw feed. The point is not the value
-of any specific rank but the consistency of the move: every one of
-these five urban areas would be placed in the top decile of a French
-soft-mobility ranking by a naive ingestion of GBFS, and every one of
-them drops by at least one quartile after the audit. A non-audited
-pipeline does not just over-count by a small margin ; it inverts the
-ordering between the principal French agglomerations.
+reclassification. The point is the consistency of the move:
+every one of these five urban areas would be credited with a
+top-decile dock-based deployment by a naive ingestion of GBFS,
+yet after the audit only Paris retains more than $1{,}500$
+certified dock-based stations. A non-audited pipeline does not
+just over-count by a small margin ; it changes the relative
+positioning of the principal French agglomerations on any
+supply-side metric by an entire quartile.
 
 \begin{table}[ht]
 \centering
@@ -545,9 +568,10 @@ MobilityData audit &
 \end{table}
 
 Three findings deserve emphasis. First, and most importantly, A3
-reclassification recall is $0\,\%$ for every baseline (Wilson upper
-bound $9\,\%$): structural over-capacity is invisible to syntactic
-validators by construction. Only a semantically-aware step on the
+reclassification recall is $0\,\%$ for every baseline (Wilson 95\,\%
+upper bound $\approx 8.6\,\%$ at $n = 41$ A3-positive systems):
+structural over-capacity is invisible to syntactic validators by
+construction. Only a semantically-aware step on the
 capacity distribution can recover it. Second, the
 \emph{vehicle\_type filter} and the \emph{MobilityData audit} baselines
 produce identical numbers on this corpus, because schema-level checks
@@ -567,11 +591,19 @@ priority of the validation roadmap.
 
 \emph{Orthogonal-coverage.}
 Three rule-based classifiers, each restricted to one signal source
-(name, capacity, geospatial), agree on a stratified 500-station
-sample (stratified on \texttt{station\_type} and operator,
-proportional allocation) at essentially chance level
-(pairwise Cohen's $\kappa$ near zero ; Fleiss
-$\kappa = -0.07$, indistinguishable from independence). We do
+(name, capacity, geospatial), agree on a stratified
+500-station sample at essentially chance level: pairwise Cohen's
+$\kappa$ near zero, Fleiss $\kappa = -0.07$, indistinguishable
+from independence. The sample is stratified jointly on
+\texttt{station\_type} (\texttt{docked\_bike},
+\texttt{free\_floating}, \texttt{carsharing}) and on the ten
+largest operators by station count, allocated proportionally to
+the size of each cell, with a floor of $n=5$ per stratum to keep
+the smallest cells estimable; small operators are pooled into an
+\texttt{other} stratum. The seed used is
+\texttt{numpy.random.default\_rng(42)} and the sample is shipped
+alongside the audit report so the agreement statistics can be
+independently recomputed. We do
 \emph{not} interpret near-zero $\kappa$ as a positive measure of
 ``coverage'' --- inter-rater agreement is not a coverage statistic ;
 we report it only to falsify the alternative hypothesis that the
@@ -654,6 +686,50 @@ Oslo: \{\texttt{bicycle}\}), so no A1 false positive is triggered
 either. Third, perimeter and topological filters caught only a
 handful of edge outliers (1 station in Bicing, 3 in Oslo, 1 in Bergen), in line
 with what would be expected from any GPS-anchored fleet.
+
+\paragraph{Empirical justification of $\tau_{A3} = 5$.}
+The choice of the A3 threshold can be inspected directly on the
+released French corpus
+(Table~\ref{tab:a3-threshold-empirical}). Of the 95 audited systems
+whose \texttt{station\_information} populates \texttt{capacity}, 81
+are dock-based and produce
+$\bar c_{\text{profile}}/\bar c_{\text{actual}} \in [1.00, 1.93]$
+(median 1.00, 95th percentile 1.04). The remaining 14 are
+free-floating, of which 9 also sit near unity (capacity is either
+NaN or systematically zero, which makes the conditional and
+unconditional means coincide trivially) and 5 deploy the
+conditional-averaging publication pattern, giving ratios in the
+range $[51, 514]$. The histogram is bimodal with a wide empty
+region between roughly $2$ and $50$, and any threshold in that
+region produces an identical classification. We adopt
+$\tau_{A3} = 5$ at the lower edge of the gap to maximise robustness
+to small-corpus jitter without ever flagging a dock-based system on
+the released parquet.
+
+\begin{table}[ht]
+\centering
+\caption{Empirical distribution of
+$\bar c_{\text{profile}}/\bar c_{\text{actual}}$ across the 95
+audited French systems with non-empty \texttt{capacity}. The
+threshold band $\tau_{A3} \in [2, 50]$ partitions docked from
+biased free-floating systems with a margin of more than one order
+of magnitude on either side ; $\tau_{A3} = 5$ is reported in the
+paper for parsimony.}
+\label{tab:a3-threshold-empirical}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Ratio bucket} & \textbf{Docked systems} & \textbf{Free-floating systems}\\
+\midrule
+$[1.00, 1.10]$ & 79 & 9 \\
+$[1.10, 2.00]$ & 2  & 0 \\
+$[2.00, 50.00]$ & 0  & 0 \\
+$[50.00, \infty)$ & 0  & 5 \\
+\midrule
+\textbf{Total}  & 81 & 14 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \label{secGlobalAudit}%
 To turn the negative-control argument into a positive one, the rule
@@ -785,47 +861,56 @@ A3, 1 A4 and 5 A5 across 16 flagged systems out of 49. The
 underlying pattern is the dual of the Czech case. Where Czech
 Republic has 45 systems published by a single operator that
 propagates one anti-pattern (nextbike, all A2/A3), Switzerland has
-\textbf{15 distinct operators among 16 flagged systems},
-representing five distinct failure modes simultaneously. Three
-classes of Swiss operators stand out. First, national-scale
-car-sharing brands (\emph{2EM Car Sharing} 1{,}741 stations,
-\emph{Mobility} 1{,}691, \emph{MyBuxi} 2{,}118, \emph{edrive
-carsharing}, \emph{Car-ship}, \emph{QuickRent}) are listed on the
-same federal GBFS catalogue as bike-sharing fleets and trigger A1.
-Second, mixed-fleet operators (\emph{Voi Switzerland} 771 e-scooter
-anchors, \emph{Bolt Switzerland} 54, \emph{nextbike Switzerland}
-380) publish virtual station entries with capacity profiles that
-trigger A3. Third, national aggregators
-(\emph{sharedmobility.ch} 12{,}091 entries, \emph{Velospot} 1{,}634)
-combine multiple operators into a single feed whose bounding box
-exceeds the A5 macro-region threshold. The case is empirically
-informative because it demonstrates that the same five anomaly
-classes can be reached through two opposite organisational
-configurations: monopoly publication (Czech Republic) or
-fragmented publication (Switzerland). The audit framework is
-operator-agnostic and detects both.
+\textbf{14 distinct entities publishing 16 flagged GBFS feeds},
+two of which are federal multi-operator aggregators rather than
+single fleets. We distinguish three publisher categories. First,
+national-scale car-sharing brands (\emph{2EM Car Sharing}
+1{,}741 stations, \emph{Mobility} 1{,}691, \emph{MyBuxi} 2{,}118,
+\emph{edrive carsharing}, \emph{Car-ship}, \emph{QuickRent}) are
+listed on the same federal GBFS catalogue as bike-sharing fleets
+and trigger A1. Second, mixed-fleet operators (\emph{Voi
+Switzerland} 771 e-scooter anchors, \emph{Bolt Switzerland} 54,
+\emph{nextbike Switzerland} 380) publish virtual-station entries
+with capacity profiles that trigger A3. Third, \emph{federal
+multi-operator aggregators} (\emph{sharedmobility.ch} 12{,}091
+entries, \emph{Velospot} 1{,}634 entries) combine many operators
+into a single GBFS feed whose union-bounding-box necessarily
+exceeds the A5 macro-region threshold: A5 here is therefore a
+property of the \emph{aggregation layer}, not of the underlying
+operators it republishes. The case is empirically informative
+because the same A1--A5 envelope can be reached through two
+opposite organisational configurations: monopoly publication
+(Czech Republic) or fragmented publication compounded by federal
+aggregation (Switzerland). The audit framework is
+publisher-agnostic and detects both, and the operator vs
+aggregator distinction is recorded in the audit report so
+downstream consumers can disambiguate the A5 attribution.
 
-\paragraph{Italy: a clean audit that hides 70{,}000 stations.}
-Italy is the most informative \emph{negative} result of the global
+\paragraph{Italy: a clean audit that the capacity field cannot speak for.}
+Italy is the most informative \emph{boundary case} of the global
 audit: 33 of 34 systems reachable, 25 with published station data,
-and zero classed as flagged by A1--A6. A closer look at the
-underlying capacity column tells a different story. Of the 25
-Italian systems with data, 17 are deployments of \emph{Dott} (Milan
-alone publishes 11{,}199 stations) and every Dott deployment
-declares \texttt{capacity = NaN} on 100\,\% of its
-\texttt{station\_information} entries. The pattern is the same as
-the \emph{Dott} pattern documented on the French corpus, scaled to
-a national level. Because A2 requires a constant non-zero value,
-A3 requires numerical capacities to compute the profile ratio,
-A4--A5 are geospatial, and A6 tests $c = 0$ (not
-$c = \texttt{NaN}$), the NaN-capacity pattern requires its own
-class. Across the audit corpus, \textbf{215 reachable systems
-with at least 20 stations have $\geq 50\,\%$ NaN capacity and are
-flagged exclusively by A7}, together covering 70{,}176 stations.
-Dott alone accounts for 141 of these systems, distributed across
-Germany, Italy, Austria, UAE, and beyond. This is the empirical
-basis of A7 (null capacity field), formalised in
-Section~\ref{secA7Formalisation}.
+and zero classed as flagged by A1--A6. We emphasise that this
+result is \emph{not} a violation of the GBFS specification: every
+Italian system audited is spec-compliant. A closer look at the
+underlying capacity column nevertheless reveals a downstream
+research-reuse problem. Of the 25 Italian systems with data, 17 are
+deployments of \emph{Dott} (Milan alone publishes 11{,}199
+stations) and every Dott deployment declares \texttt{capacity =
+NaN} on 100\,\% of its \texttt{station\_information} entries.
+Because A2 requires a constant non-zero value, A3 requires
+numerical capacities to compute the profile ratio, A4--A5 are
+geospatial, and A6 tests $c = 0$ (not $c = \texttt{NaN}$), the
+NaN-capacity pattern is not actionable from A1--A6. A7 fills that
+gap as a consumer-side warning (Section~\ref{secA7Formalisation}):
+\textbf{215 reachable systems with at least 20 stations cross the
+50\,\% NaN-capacity threshold and are flagged exclusively by A7},
+together covering 70{,}176 stations of which $\sim 46{,}000$
+($\sim 65\,\%$) are a single operator (\emph{Dott}, 141 systems
+across Germany, Italy, Austria, UAE, and beyond) and the remaining
+$\sim 24{,}000$ are spread across 74 smaller systems. The point of
+A7 is not to label these systems non-compliant ; it is to make
+their capacity column non-aggregable to any downstream consumer
+who would otherwise sum NaN with non-NaN values silently.
 
 \paragraph{Germany: how the audit caught itself.}
 The German case carries a methodological lesson. An initial run of
@@ -936,6 +1021,89 @@ semantics, is also the empirical case for what Stonebraker and
 attempt to span dock-based, free-floating and car-sharing fleets in
 the same schema accumulate semantic ambiguity exactly because they
 refuse to specialise.
+
+\subsection{What this paper claims --- and what it does not}
+\label{secScope}
+Three demarcations should be stated explicitly to avoid
+over-reading the contribution.
+
+\emph{This is an inductive taxonomy, not a statistically
+validated one.} A1 to A4 were derived from an exploratory scan of
+the 123 French systems; A5 from enrichment with the
+\emph{transport.data.gouv.fr} catalogue; A6 and A7 from the
+empirical distributions surfaced by the global 1{,}509-system
+sweep (Section~\ref{secMethods}, Provenance of the taxonomy).
+Detection rules were calibrated on the same data they are
+reported to flag. The cross-country pilot
+(Section~\ref{secGlobalAudit}) provides a partial out-of-sample
+check by rerunning the rules on three systems chosen for clean
+publication conventions, but the design is suggestive rather than
+proper hypothesis-testing. The next obvious step, deferred to
+experiment E1 of the validation roadmap, is to pre-register A1
+to A7 (commit-hashed, dated) and re-audit the GBFS systems added
+to the MobilityData catalogue after the rule-freeze date; the
+present paper does not yet report that experiment, and a reader
+who needs a strict separation between rule-derivation and
+rule-evaluation should treat the catalogue as descriptive
+ground-truth rather than as the outcome of a held-out test.
+
+\emph{This is an audit of an open specification, not an audit of
+its operators.} A2, A3, A6 and A7 detect patterns the GBFS
+specification \emph{permits} (a constant placeholder, a
+conditionally-averaged virtual-station fleet, a zero-dock
+station, an empty capacity field). What our framework flags is
+that those permitted patterns are mutually incompatible with the
+arithmetic a downstream research consumer would naturally apply
+to the field. The technical lesson is about the standard, not
+about the publishers ; criticism of the operators we name is out
+of scope for this paper. The standards-side recommendation in
+Section~\ref{secDiscussion} is therefore phrased as a request for
+specification revision, not for operator sanction.
+
+\emph{This is a static audit. } The
+\texttt{station\_information} feed describes the deployment, not
+its dynamic behaviour. Real-time availability, rebalancing
+patterns and per-vehicle relocation live in the
+\texttt{station\_status} feed, which carries its own quality
+issues and would require an analogous but disjoint audit
+protocol. The dynamic audit is the subject of the L2 limitation
+and the E4 future-work item.
+
+\subsection{Intellectual lineage in adjacent fields}
+The protocol's design intent is consistent with two adjacent
+traditions of data audit that the mobility-data community has so
+far engaged with only sparingly.
+
+\emph{Property-based testing in software engineering.} Each of the
+seven anomaly classes A1--A7 admits a translation into a
+\emph{property} that a compliant feed should satisfy: capacity is
+either a positive dock count, NaN or the same value across the
+system; coordinates lie within an a-priori perimeter; the
+$\bar c_{\text{profile}}/\bar c_{\text{actual}}$ ratio is bounded.
+This is the same intellectual move as in QuickCheck-style
+property-based testing for software, where invariants on the
+output are stated explicitly and checked across many inputs
+\cite{Hughes2007QuickCheck}. The Great Expectations and Pandera
+toolchains \cite{GreatExpectations2024,Pandera2024} we benchmarked
+against are descendants of the same lineage. The contribution of
+the present audit, in that light, is to identify which properties
+GBFS implicitly assumes and to make their absence diagnosable;
+the SE community has spent two decades building infrastructure
+for that, but the mobility-data community has not yet imported
+it.
+
+\emph{Regulatory data audit in clinical-trial pipelines.}
+The audit-trail / reversibility / per-step logging design of the
+purging protocol mirrors the audit requirements of clinical-trial
+data management standardised in ISO 14155 and in the FDA's
+21 CFR Part 11. The open-mobility-data community is, in effect,
+re-discovering with two decades of delay what the
+pharmacovigilance community formalised in the 1990s. The
+analogue is informative because it suggests that long-term
+sustainability of the audit protocol depends on a community of
+practice and a regulatory backstop (e.g.\ ADEME or the European
+EuroMobility coordination layer), not on the lifespan of any
+single research artefact.
 
 \subsection{When a clean verdict hides a missing column}
 The Italian case study of Section~\ref{secGlobalAudit} crystallises
@@ -1080,6 +1248,23 @@ from A3 are a known confound; spatial-equity analysis combining
 station access with INSEE Filosofi; and multimodal integration with
 GTFS, for which the hybridisation schema is compatible with the
 canonical GTFS validator \cite{MobilityData2024Validator}.
+
+\paragraph{Interactive dashboard.}
+To make the audit verdicts directly inspectable without code, a
+focused Streamlit dashboard is shipped at
+\url{https://gbfs-audit.streamlit.app}, mirrored by
+\texttt{app/streamlit\_app.py} in the source repository. The
+dashboard exposes five tabs: an overview with the corpus-level
+incidence of A1--A7; a row-level anomaly browser with live
+multi-flag filters and CSV export; an operator-level audit table
+with the per-class flag rates that drive the operator-driven
+hotspots reported in Section~\ref{secResults}; a visual data
+dictionary of the 46 columns with completeness bars; and a
+free-text data explorer with a KD-tree-backed geographic map
+coloured by audit confidence. The dashboard is the artefact that
+turns the audit from a one-off paper into a continuously
+inspectable reference, addressing the persistence concern raised
+in Section~\ref{secDiscussion}.
 
 % ===================================================================
 \section{Methods}\label{secMethods}
@@ -1295,9 +1480,21 @@ human validation extended to A6 and A7.
 
 \subsection{A7: null capacity field formalisation}\label{secA7Formalisation}
 The Italian case study of Section~\ref{secGlobalAudit} demonstrates
-that A1--A6 are structurally blind to operators that publish
-\texttt{station\_information} entries with \texttt{capacity =
-NaN}. The signature is:
+that A1--A6 are structurally blind to operators that populate
+\texttt{station\_information} but leave the \texttt{capacity} field
+unfilled. \textbf{A7 is, by design, a consumer-side warning rather
+than a publisher-side anomaly.} \texttt{capacity = NaN} is
+explicitly permitted by the GBFS v3 specification, in particular
+for free-floating fleets where the field has no physical referent;
+a system that publishes \texttt{capacity = NaN} on every entry is
+\emph{spec-compliant}. What A7 captures is the downstream
+consequence: any analytical pipeline that sums or averages the
+\texttt{capacity} column across such a system aggregates NaN with
+non-NaN values silently, and produces a number whose physical
+meaning is undefined. The flag is therefore tooling for the
+consumer (``do not arithmetically combine these stations with
+others''), not a verdict on the publisher. The empirical signature
+is:
 \begin{equation}
 \rho_s^{A7} \,=\,
 \frac{\#\{i \in \mathcal{S}_s \,:\, c_i = \mathtt{NaN}\}}{|\mathcal{S}_s|}
