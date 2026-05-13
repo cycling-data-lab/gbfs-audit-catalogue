@@ -1470,6 +1470,30 @@ The audit pipeline is implemented in roughly $1{,}300$ lines of
 Python organised in three modules, with a stable public API
 documented in the source repository.
 
+\paragraph{Software validation.}
+The audit primitives are accompanied by a unit-test suite
+(\texttt{tests/test\_core.py}, $24$ tests, $85\,\%$ line coverage of
+the public \texttt{audit\_pipeline.core} surface) that exercises each
+of the seven anomaly classes in isolation as well as the combined
+end-to-end \texttt{enrich()} pipeline. Each detector is paired with
+a deterministic synthetic fixture engineered to trip exactly that
+class (e.g., a 25-station grid with one transposed-coordinate row
+for A4, a 32-station fleet spanning more than $300{,}000$\,km$^2$
+for A5, a $60\,\%$-NaN-capacity dock-based system for A7) and with
+specificity controls verifying that healthy fixtures stay
+unflagged. The suite further checks that the Tier-2 geometry
+columns (intra- and inter-system $k$-nearest-neighbour distances,
+local densities) are consistent with the equirectangular projection
+used for the meter-scale arithmetic, and that the pipeline is
+idempotent under repeated application. Tests are executed by
+\texttt{pytest} as a GitHub Actions workflow on every push and pull
+request, and locally inside the published Docker image. We stress
+that this suite validates the correspondence between the
+implemented logic and the published anomaly taxonomy; it is not a
+substitute for the hand-curated cross-operator audit, which
+provides the external ground truth against which the pipeline's
+verdicts were calibrated.
+
 % ===================================================================
 \section{Data and code availability}
 
