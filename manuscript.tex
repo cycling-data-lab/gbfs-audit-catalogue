@@ -1230,26 +1230,66 @@ the 123 French systems; A5 from enrichment with the
 empirical distributions surfaced by the global 1{,}509-system
 sweep (Section~\ref{secMethods}, Provenance of the taxonomy).
 Detection rules were calibrated on the same data they are
-reported to flag. The ten-system live cross-country panel
+reported to flag. The cross-country live panel
 (Section~\ref{secGlobalAudit}, Table~\ref{tab:e5-pilot}) is an
 out-of-sample check on the negative-control side: every system in
 the panel was selected for its known publication conventions, then
 audited \emph{live} via its public GBFS feed under the unmodified
-rule set, and every system passes A1, A2, A3, A6 and A7. But the
-construct-validity question still cuts deeper: the rules
-themselves were derived inductively, and the question is whether
-the same rules would survive on \emph{positive} examples drawn
-from systems added to the catalogue after a rule freeze. The
-pre-registered protocol for that experiment (E1, including
-freeze hash, falsification conditions and a six-month timeline)
-ships in \texttt{experiments/e1\_holdout/PROTOCOL.md} of the
-source repository ; the test will be executed against the next
-MobilityData snapshot and reported as a stand-alone appendix in
-a follow-up note in the same research programme. A reader who
-needs a strict separation between rule-derivation and
-rule-evaluation should treat the present catalogue as descriptive
-ground-truth rather than as the outcome of a held-out test, until
-the E1 results are released.
+rule set, and every metropolitan system passes A1, A2, A3, A6 and
+A7. To complement this with a \emph{positive}-side out-of-sample
+test, we executed a retrospective version of the pre-registered
+E1 protocol (\texttt{experiments/e1\_holdout/PROTOCOL.md}). The
+held-out set was constructed from the MobilityData canonical
+catalogue diff between commit \texttt{15e34e6} (2025-11-11) and
+the audit-pipeline rule-freeze commit (2026-05-13) : 345 GBFS
+systems were added in that six-month window, of which 39 publish
+a non-empty \texttt{station\_information} feed and could be
+audited (the remaining 306 are either free-floating systems
+without \texttt{station\_information}, below the $N_{\min} = 20$
+threshold, or behind authentication). The frozen rule set was
+applied unchanged ; the per-system results are reported in
+\texttt{experiments/e1\_holdout/held\_out\_analysis.md}.
+
+Of the three pre-registered hypotheses, \textbf{H2} and \textbf{H3}
+pass and \textbf{H1} fails marginally :
+
+\textbf{H1 (rule-firing rate).} 7 of 39 held-out systems
+($17.9\,\%$) trigger at least one A1--A5 flag, against a
+derivation-set reference of $13.5\,\%$ and a pre-registered
+acceptance band of $[9.5\,\%, 17.5\,\%]$. The point estimate
+exceeds the upper bound by $0.4$ percentage points and therefore
+\emph{strictly} fails H1, but the Wilson 95\,\% interval on
+$7/39$ is $[9.0\,\%, 32.6\,\%]$, which fully contains both the
+derivation-set rate and the entire acceptance band. The deviation
+is therefore not statistically distinguishable from the
+derivation rate at the audited sample size.
+
+\textbf{H2 (operator-driven A3/A7).} Of the 16 held-out systems
+flagged on A3 or A7, $81.2\,\%$ ($13/16$) belong to the
+free-floating operator family identified on the derivation set,
+broken down as : \emph{Dott} 6, \emph{nextbike} 5,
+\emph{Bolt} 1, \emph{Voi} 1. The pre-registered acceptance
+threshold of $\geq 50\,\%$ is exceeded by 31 percentage points
+and H2 passes cleanly.
+
+\textbf{H3 (clean-operator invariance).} The 345-system held-out
+panel contains no system from the six-platform clean-operator
+panel of Section~\ref{secGlobalAudit} (PBSC, Cyclocity,
+Smartbike, De Lijn, Urban Sharing, Deutsche Bahn) ; H3 cannot be
+tested on this snapshot and is vacuously true. The prospective
+six-month re-execution scheduled in PROTOCOL.md will retest
+against a larger set, and any future addition of a clean-platform
+deployment will be reported.
+
+A reader who needs a strict separation between rule-derivation
+and rule-evaluation can therefore treat the catalogue as the
+outcome of a retrospective held-out test under H2 ; under H1 the
+test is consistent with the derivation rate within statistical
+noise ; under H3 the test was not executable on this snapshot
+and is deferred. The prospective version of the protocol
+(executed against the next MobilityData snapshot in 2026-11) will
+report a stand-alone follow-up note in the same research
+programme.
 
 \emph{This is an audit of an open specification, not an audit of
 its operators.} A2, A3, A6 and A7 detect patterns the GBFS
@@ -1446,7 +1486,7 @@ repository alongside the camera-ready release.}
 \toprule
 \textbf{ID} & \textbf{Title} & \textbf{Targets} & \textbf{Status}\\
 \midrule
-E1 & Pre-registered held-out audit (post-freeze MobilityData) & Construct validity / circularity & Protocol pre-registered $\checkmark$ \\
+E1 & Pre-registered held-out audit (post-freeze MobilityData) & Construct validity / circularity & Retrospective version executed (2/3 H pass) $\checkmark$ \\
 E2 & Threshold and buffer sensitivity           & $\sigma_{\max}, N_{\min}$, radii & $\sigma_{\max}$ pilot $\checkmark$ \\
 E3 & Twelve-month temporal stability            & Snapshot dependence (L4)    & Running \\
 E4 & Dynamic extension to \texttt{station\_status} & L2                       & 2-day pilot $\checkmark$ \\
