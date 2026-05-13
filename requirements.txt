@@ -1,0 +1,18 @@
+# GBFS Audit Catalogue -- runtime dependencies
+# Python >= 3.10
+
+# Core data stack
+pandas>=2.0.0
+numpy>=1.26.0
+pyarrow>=14.0.0          # parquet I/O
+
+# Streamlit dashboard (app/streamlit_app.py)
+streamlit>=1.35.0
+
+# Notebook execution (notebooks/catalogue_recipes.ipynb)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Optional integrations
+datasets>=4.0.0          # for Hugging Face Hub loading
+huggingface_hub[cli]>=1.0.0

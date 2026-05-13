@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+title: GBFS Audit Catalogue
+message: >-
+  If you use this catalogue, please cite both the paper and the
+  Zenodo deposit using the metadata below.
+type: dataset
+authors:
+  - family-names: Fossé
+    given-names: Rohan
+    email: rfosse@cesi.fr
+    affiliation: CESI LINEACT (EA 7527), Montpellier, France
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Pallares
+    given-names: Gaël
+    affiliation: CESI LINEACT (EA 7527), Montpellier, France
+repository-code: "https://github.com/rohanfosse/gbfs-audit-catalogue"
+url: "https://gbfs-audit.streamlit.app"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20125460
+    description: Zenodo concept DOI for all versions
+abstract: >-
+  A reproducible audit of 1,509 GBFS bike-sharing feeds across 48
+  countries, exposing seven recurring anomaly classes (A1-A7) that
+  reclassify 30.9% of the raw French stations. The Audit Catalogue is
+  a 46-column reference dataset for 46,307 certified stations across
+  123 French operators, with per-row anomaly flags and contextual
+  enrichment from INSEE, BAAC, BD TOPO, BD ALTI and the national GTFS
+  aggregator.
+keywords:
+  - GBFS
+  - bike-sharing
+  - open mobility data
+  - data quality
+  - FAIR
+  - standards compliance
+  - reproducibility
+  - smart city
+license: ODbL-1.0
+license-url: "https://opendatacommons.org/licenses/odbl/1-0/"
+version: 1.0.0
+date-released: "2026-05-13"
+preferred-citation:
+  type: article
+  title: >-
+    Auditing GBFS bike-sharing feeds at country and global scale:
+    A reproducible anomaly taxonomy for open mobility data
+  authors:
+    - family-names: Fossé
+      given-names: Rohan
+    - family-names: Pallares
+      given-names: Gaël
+  journal: Computer Standards & Interfaces
+  year: 2026
+  notes: Under review

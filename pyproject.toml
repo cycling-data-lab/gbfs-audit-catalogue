@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gbfs-audit-catalogue"
+version = "1.0.0"
+description = "A reproducible audit of 1,509 GBFS bike-sharing feeds across 48 countries"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Rohan Fossé", email = "rfosse@cesi.fr"},
+    {name = "Gaël Pallares"},
+]
+keywords = ["GBFS", "bike-sharing", "data quality", "FAIR", "smart city",
+            "open mobility data", "audit", "reproducibility"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.26.0",
+    "pyarrow>=14.0.0",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.35.0"]
+notebook = ["jupyter>=1.0.0", "ipykernel>=6.25.0"]
+hub = ["datasets>=4.0.0", "huggingface_hub[cli]>=1.0.0"]
+all = ["streamlit>=1.35.0", "jupyter>=1.0.0", "ipykernel>=6.25.0",
+       "datasets>=4.0.0", "huggingface_hub[cli]>=1.0.0"]
+
+[project.urls]
+Homepage = "https://gbfs-audit.streamlit.app"
+Repository = "https://github.com/rohanfosse/gbfs-audit-catalogue"
+Dataset = "https://huggingface.co/datasets/rohanfosse/gbfs-audit-catalogue"
+DOI = "https://doi.org/10.5281/zenodo.20125460"
+
+[tool.setuptools.packages.find]
+include = ["audit_pipeline*"]
+exclude = ["catalogue*", "paper*", "docs*", "huggingface*", "notebooks*", "app*"]
