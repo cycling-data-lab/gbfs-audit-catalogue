@@ -6,6 +6,7 @@ A reproducible audit of the 1,509 General Bikeshare Feed Specification (GBFS) sy
 [![Hugging Face Datasets](https://img.shields.io/badge/Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/rohanfosse/gbfs-audit-catalogue)
 [![Streamlit demo](https://img.shields.io/badge/Streamlit-Live%20demo-red)](https://gbfs-audit.streamlit.app)
 [![Project page](https://img.shields.io/badge/GitHub%20Pages-Project%20page-lightgrey)](https://rohanfosse.github.io/gbfs-audit-catalogue)
+[![tests](https://github.com/rohanfosse/gbfs-audit-catalogue/actions/workflows/tests.yml/badge.svg)](https://github.com/rohanfosse/gbfs-audit-catalogue/actions/workflows/tests.yml)
 [![Data licence: ODbL v1.0](https://img.shields.io/badge/data-ODbL%20v1.0-blue)](LICENSE-DATA)
 [![Code licence: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
