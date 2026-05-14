@@ -97,7 +97,7 @@ on point estimate and confidence interval. Dataset, pipeline and
 Docker image are released for bit-exact reproduction.
 
 \begin{highlights}
-\item Audit of 1{,}509 GBFS systems worldwide: 5 structural errors + 2 semantic warnings
+\item Audit of 1{,}509 GBFS systems worldwide: seven-class taxonomy (5 structural + 2 semantic)
 \item 30.9\,\% of raw French stations removed, further 61\,\% relabelled by the audit
 \item Hotspots are operator-driven (nextbike in Czechia, Pony in France)
 \item One single capacity field carries four mutually incompatible publication semantics
@@ -386,7 +386,7 @@ Total stations (certified)          & 67{,}000 & 46{,}307 \\
 \quad dock-based                    & --       & 5{,}442 \\
 \quad free-floating (labelled, preserved) & -- & 39{,}235 \\
 \quad car-sharing (A1)              & 1{,}630  & re-labelled, excluded from BSS use \\
-Stations reclassified or dropped    & --       & 20{,}693 (30.9\,\%) \\
+Stations dropped from catalogue     & --       & 20{,}693 (30.9\,\%) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -960,7 +960,7 @@ the 9 free-floating French systems sit there by virtue of
 \emph{the arithmetic}, because their capacity column is mostly
 NaN or zero and the ratio degenerates to unity rather than
 reflecting the conditional-averaging publication choice. The
-same indistinguishability affects the global "All" column,
+same indistinguishability affects the global ``All'' column,
 where we cannot a-priori separate clean docks from degenerate-FF
 without a per-system audit; the top 10 global systems by ratio
 are however all known free-floating operators (Pony, nextbike,
@@ -974,22 +974,29 @@ set was then applied to the entire MobilityData canonical catalogue:
 \textbf{1{,}509 GBFS systems across 48 countries (the complete world
 inventory at the audit date)}. 1{,}421 systems (94.2\,\%) were
 reachable, 917 publish a \texttt{station\_information} document, and
-\textbf{204 systems trigger at least one A1--A5 class} after three
-methodological corrections that emerged from the audit itself: a
-country-perimeter calibration on A4, a substring-matching fix in the
-A1 detector (the GBFS form factor \texttt{cargo\_bicycle} contains
-the string \texttt{car} and was initially flagged as A1; the fix
-tightens A1 to exact list membership on the GBFS v3 form factor
-enum), and a convex-hull replacement of the bounding-box surface
-estimator in A5 (the rectangular bbox overestimates the operational
-area for elongated networks; Switzerland's national operators had a
-bbox area of 99{,}000\,km$^2$ versus a hull area of
-$\approx 41{,}000$\,km$^2$). A side observation is that the French
+\textbf{204 systems trigger at least one A1--A5 class}. The result
+rests on three methodological corrections that emerged from the audit
+itself. First, a country-perimeter calibration on A4. Second, a
+substring-matching fix in the A1 detector: the GBFS v3 form factor
+\texttt{cargo\_bicycle} contains the string \texttt{car} and was
+initially flagged as A1, so the fix tightens A1 to exact list
+membership on the GBFS v3 form factor enum. Third, an explicit
+acknowledgement that the bounding-box surface estimator in A5
+overestimates the operational area for elongated networks
+(Switzerland's national operators have a bbox area of
+99{,}000\,km$^2$ against a convex-hull area of
+$\approx 41{,}000$\,km$^2$): the shipped detector
+(\texttt{audit\_pipeline.core.\_flag\_a5}) retains the bbox formula
+for cross-corpus comparability, and the threshold
+$50{,}000$\,km$^2$ is calibrated on bbox; a convex-hull
+variant is documented as a refinement option in
+Section~\ref{secDiscussion}. A side observation is that the French
 national portal \emph{transport.data.gouv.fr} indexes only 123 of
 the 255 French entries that the MobilityData catalogue lists, so
 the global audit also exposes the incompleteness of the national
 regulatory pipeline. The corrected breakdown is shown in
-Table~\ref{tab:global-audit}.
+Table~\ref{tab:global-audit} and visualised in
+Figure~\ref{fig:global-audit-overview}.
 
 A3 (structural over-capacity) is detected on 29 non-French systems
 concentrated in Czech Republic (12) and Germany (9); A2 (placeholder
@@ -1271,29 +1278,39 @@ the same anomaly recurs across operators: the GBFS field
 \texttt{station\_information.capacity} is populated by French
 free-floating operators according to four mutually incompatible
 publication conventions, observed across six operator--city
-combinations (Table~\ref{tab:capacity-semantics}), aggregating to
+combinations (Table~\ref{tab:capacity-semantics},
+Figure~\ref{fig:capacity-semantics-diagram}), aggregating to
 \textbf{84.7\,\% of the certified French rows}. A downstream
 consumer who applies a single arithmetic to the field therefore
 aggregates four physically distinct quantities (NaN, constant
 placeholder, per-vehicle ratio, conditional fleet profile),
-silently mixed across six operator deployments. The corresponding operator-level pattern
-is global: Beryl London (UK) provides a positive control by
-publishing an empty \texttt{station\_information} document for its
-free-floating fleet (zero entries), which is the canonical GBFS v3
-behaviour for non-docked fleets and is therefore not flagged by any
-of A1--A7 (in particular A7 only fires on \emph{populated}
-documents whose entries declare \texttt{capacity = NaN}, which is
-the qualitatively different Dott pattern). The official
-MobilityData GBFS Validator \cite{MobilityData2024Validator}, by
-contrast, returns no error on any of the flagged French systems
-(0\,\% recall on A3 in Table~\ref{tab:baselines}).
+silently mixed across six operator deployments. The corresponding
+operator-level pattern is global. Beryl London (UK) provides a
+positive control by publishing an empty \texttt{station\_information}
+document for its free-floating fleet (zero entries), the canonical
+GBFS v3 behaviour for non-docked fleets, and is therefore not flagged
+by any of A1--A7. In particular, A7 only fires on \emph{populated}
+documents whose entries declare \texttt{capacity = NaN}, which is the
+qualitatively different Dott pattern. The same operator's
+Greater Manchester deployment, by contrast, populates
+\texttt{station\_information} with a 10.5\,\% zero-capacity rate
+(\emph{cf.} Section~\ref{secA6A7Incidence}) and is therefore
+A6-flagged: A6 and A7 thus carve out distinct publication regimes
+within a single operator's portfolio. The official MobilityData GBFS
+Validator \cite{MobilityData2024Validator}, by contrast, returns no
+error on any of the flagged French systems (0\,\% recall on A3 in
+Table~\ref{tab:baselines}).
 
 \begin{table}[ht]
 \centering
 \caption{Six observed semantics of the same
 \texttt{station\_information.capacity} field across French
-free-floating operators. Total = 39{,}235 stations, 84.7\,\% of the
-certified corpus.}
+free-floating operators. The six operator deployments enumerated
+below cover 39{,}004 stations; the residual 231 stations belong to
+smaller free-floating operators (Lime, Tier, Dott pilots, etc.) that
+follow one of the same four publication conventions and are folded
+into the corresponding bucket. Aggregate FF coverage is therefore
+39{,}235 stations, 84.7\,\% of the certified corpus.}
 \label{tab:capacity-semantics}
 \small
 \begin{tabular}{@{}llrrl@{}}
@@ -1331,7 +1348,11 @@ the released catalogue.}
 
 \subsection{Retrospective hold-out validation}
 \label{secHoldoutValidation}
-To test the rule set on systems unseen at calibration time, we
+This subsection tests \emph{construct validity}: do the rules
+generalise to systems that were not specifically inspected at
+calibration time? External validity (whether the rules generalise
+to systems that did not yet exist at rule-freeze) is the object
+of the prospective E1 execution and is deferred. Concretely, we
 executed a retrospective version of the pre-registered E1
 protocol (\texttt{experiments/e1\_holdout/PROTOCOL.md}) on two
 calendar windows of the MobilityData canonical catalogue. The
@@ -1418,8 +1439,21 @@ refuse to specialise.
 
 \subsection{Scope of the contribution}
 \label{secScope}
-Three demarcations should be stated explicitly to avoid
+Four demarcations should be stated explicitly to avoid
 over-reading the contribution.
+
+\emph{The taxonomy's primary discrimination axis is dock-based vs
+free-floating publication.} Of the seven classes, A2, A3, A6 and A7
+all surfaced from operator publication conventions specific to
+free-floating fleets (conditional-averaging profiles, NaN-capacity
+fields, zero-capacity ghost-docks); A1, A4 and A5 are
+fleet-type-agnostic but the largest country-level hotspots
+(Table~\ref{tab:global-audit}) are themselves operator-driven (\emph{Pony}
+and \emph{nextbike} on A2/A3, \emph{Dott} on A7). The twelve
+metropolitan clean-platform negative controls of
+Table~\ref{tab:e5-pilot} demonstrate that the rule set does not
+over-fire on dock-based deployments; the free-floating-native
+extension is the object of experiment E6, planned for 2027-Q2.
 
 \emph{This is an inductive taxonomy, not a statistically
 validated one.} A1 to A4 were derived from an exploratory scan of
@@ -1639,6 +1673,23 @@ final experiment protocols will be packaged under
 camera-ready release, so that the artefact can be challenged in
 public rather than defended in private.
 
+\paragraph{Human inter-rater reliability (E1 extension).}
+The internal robustness checks of Section~\ref{secInternal} are
+inter-classifier statistics, not inter-rater. The next priority of
+the E1 protocol is to convert this into an inter-rater agreement
+study. Concretely, we plan a $n = 200$ blinded-station sample
+drawn from the catalogue under the same stratification used for
+the orthogonal-coverage check (\texttt{station\_type} $\times$
+ten-largest-operators, seed 42), to be annotated by three
+independent domain experts (one each from CESI LINEACT,
+MobilityData, and a francophone micromobility laboratory) on the
+seven-class assignment. We pre-register Cohen's $\kappa \geq 0.7$
+on pairwise agreement and Fleiss's $\kappa \geq 0.6$ on the
+three-way agreement as success thresholds, with the per-class
+confusion matrix shipped alongside the agreement statistics so
+that disagreement is diagnosable at the level of individual A1--A7
+rules rather than aggregated into a single score.
+
 \begin{table}[ht]
 \centering
 \caption{Six falsifiable experiments mapped to the limitations of
@@ -1714,9 +1765,9 @@ $0\,\%/100\,\%$ distribution of NaN-capacity stations
 duplicate'', no instance found) ship with the audit report
 for transparency.
 
-\subsection{Six-step purging protocol}
+\subsection{Nine-step purging protocol}
 The transition from the raw feed to the Audit Catalogue proceeds through
-a chain of six sequential transformations (Algorithm~\ref{alg:purge}),
+a chain of nine sequential transformations (Algorithm~\ref{alg:purge}),
 each coded in \texttt{utils/data\_loader.py} and logged in an audit
 report shipped alongside the dataset. The protocol is deliberately
 sequential: early steps are inexpensive and remove out-of-domain or
@@ -1982,7 +2033,12 @@ inspectable per row, rather than aggregated in a separate report.
 \caption{Released schema of \texttt{stations\_gold\_standard\_final.parquet}.
 ``Compl.'' is the empirical completeness rate on the certified subset.
 Columns marked $^\dag$ are introduced by the audit pipeline; columns
-marked $^\ast$ are derived from external sources.}
+marked $^\ast$ are derived from external sources. The
+\texttt{audit\_confidence} enum is assigned by
+\texttt{audit\_pipeline.core.\_audit\_confidence}: \emph{high} if
+no A-flag fires, \emph{medium} if a single A3 or A7 flag fires
+(spec-compliant but consumer-ambiguous), \emph{low} for any other
+combination of one or more structural flags.}
 \label{tab:schema}
 \small
 \begin{tabular}{@{}lllr@{}}
@@ -2221,7 +2277,12 @@ alongside the dataset.
 A single \texttt{read\_parquet} call exposes the 46 typed columns;
 typical project filters use \texttt{station\_type},
 \texttt{audit\_confidence} and the per-row anomaly flags
-\texttt{flag\_A1..flag\_A7}.
+\texttt{flag\_A1..flag\_A7}. The example below selects only
+dock-based stations whose audit is unambiguous (zero A1--A7 flags
+fired); the 40-station gap with the 5{,}442 dock-based count of
+Table~\ref{tab:overview} corresponds to dock-based stations whose
+single A4 or A6 flag downgraded their \texttt{audit\_confidence}
+from \emph{high} to \emph{low}.
 \begin{quote}\small\ttfamily
 import pandas as pd\\
 gs = pd.read\_parquet("stations\_gold\_standard\_final.parquet")\\
