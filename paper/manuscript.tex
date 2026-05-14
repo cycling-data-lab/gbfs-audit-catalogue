@@ -75,7 +75,7 @@ as a guarantee that the data is research-ready; we show that it is
 not. An audit of the 123 French GBFS systems, cross-validated by an
 exhaustive sweep of the 1{,}509-system MobilityData canonical
 catalogue across 48 countries, yields a unified data-quality
-taxonomy of seven classes (A1--A7) : five \emph{structural errors}
+taxonomy of seven classes (A1--A7): five \emph{structural errors}
 (out-of-domain inclusion, placeholder capacity, structural
 over-capacity, geospatial outlier, out-of-perimeter coverage) and
 two \emph{semantic warnings} (zero-capacity dock, null-capacity
@@ -254,7 +254,7 @@ publication choices whose downstream-consumer interpretation is
 nevertheless ambiguous. Observed incidence on the released French
 catalogue (FR, 123 audited systems) and on the global MobilityData
 catalogue (Global, 1{,}509 systems across 48 countries). Each
-class is formalised in Methods (Section~\ref{secMethods}) ;
+class is formalised in Methods (Section~\ref{secMethods});
 per-system counts use the operational definitions documented in
 Section~\ref{secMethods} (\eg A3 flags any system with at least
 one \texttt{free\_floating} entry after the S3 reclassification,
@@ -342,13 +342,13 @@ relabelled to \texttt{free\_floating} by step S3, 1{,}630 to
 \texttt{carsharing} by step S1). We report two complementary uncertainty bounds on the
 $30.9\,\%$ removal rate to surface the role of clustering. A
 \emph{station-level} Wilson 95\,\% interval, ignoring within-system
-correlation, gives $[30.54\,\%, 31.24\,\%]$ ; this is the bound a
+correlation, gives $[30.54\,\%, 31.24\,\%]$; this is the bound a
 naive independent-Bernoulli assumption would place on the figure
 and is a \emph{lower bound} on the real uncertainty. A
 \emph{size-stratified cluster bootstrap} (123 systems partitioned
 into size quartiles, resampled with replacement within each
 stratum, $n = 10{,}000$, seed 42) gives a 95\,\% interval of
-$[-18.6\,\%, 63.6\,\%]$ ; this is an \emph{upper bound} because
+$[-18.6\,\%, 63.6\,\%]$; this is an \emph{upper bound} because
 the largest size quartile contains a single dominant deployment
 (\emph{V\'elib' M\'etropole}, $\sim 14{,}700$ stations) whose
 inclusion or exclusion across resamples mechanically shifts the
@@ -533,7 +533,7 @@ Lyon             & 2{,}057 & 452   & $-78.0\,\%$
 \paragraph{Two further illustrative cases: Nice (A2) and Strasbourg (A1).}
 A3 is not the only class with a measurable downstream effect.
 \emph{Nice} carries the flagship A2 placeholder via
-\texttt{pony\_Nice} : every station declares $c = 100$, yielding a
+\texttt{pony\_Nice}: every station declares $c = 100$, yielding a
 total nominal capacity of about 25{,}000 bikes for an agglomeration
 whose actual dock-based network is essentially the rebadged
 \emph{V\'eloBleu} of 91 stations. After purging, the nominal
@@ -741,7 +741,7 @@ nationwide system and is reported as an informative case rather
 than a control (its A5 / A7 firings are honest at national scope
 and its high A4 rate surfaces a known limitation of the
 single-centroid detector on multi-modal geometries). Results are
-reported in Table~\ref{tab:e5-pilot} ; the live-audit script
+reported in Table~\ref{tab:e5-pilot}; the live-audit script
 (\texttt{scripts/audit\_live\_systems.py}) and the per-system
 machine-readable results
 (\texttt{experiments/e5\_europe/results.csv}) ship with the source
@@ -793,7 +793,7 @@ French corpus (ref.)   & FR & --- & 46{,}307 & 17\,sys. & 1\,sys. & 41\,sys. & 7
 \medskip
 {\footnotesize $^\ast$ Sevici's A5 firing is a coupling artefact:
 two stations carry sentinel coordinates $(0, 0)$ that inflate the
-bounding box from $\sim 80$\,km$^2$ to $\sim 4.5\times 10^6$\,km$^2$ ;
+bounding box from $\sim 80$\,km$^2$ to $\sim 4.5\times 10^6$\,km$^2$;
 the coupling is discussed in Section~\ref{secDiscussion}.
 $^\ddag$ \emph{Call a Bike} (Deutsche Bahn) is a nationwide
 deployment, not a metropolitan control. Its three flags are
@@ -809,7 +809,7 @@ defines the A3 signature on free-floating French fleets is
 essentially \textbf{unity} on every metropolitan dock-based system
 in the panel, across six distinct technology stacks. This is the
 out-of-sample confirmation called for in
-Section~\ref{secScope} : the A3 detector does not over-fire on
+Section~\ref{secScope}: the A3 detector does not over-fire on
 clean docks. Second, vehicle-type metadata on all twelve
 metropolitan feeds is populated cleanly, so A1 produces no false
 positive either. Third, A4 (geospatial outlier) fires only on
@@ -834,7 +834,7 @@ Table~\ref{tab:a3-threshold-empirical}: the released French
 parquet (the derivation set; Section~\ref{secScope} caveat
 applies) and the 267 systems with computable ratios from a
 live global sweep on 2026-05-13 across 33 countries
-(\texttt{scripts/global\_a3\_ratio.py} ; results in
+(\texttt{scripts/global\_a3\_ratio.py}; results in
 \texttt{experiments/e2\_threshold\_sensitivity/global\_a3\_ratio.csv}).
 On the French corpus the distribution is sharply bimodal: the
 81 dock-based systems sit in $[1.00, 1.93]$
@@ -1343,10 +1343,10 @@ protocol (\texttt{experiments/e1\_holdout/PROTOCOL.md}) on two
 calendar windows of the MobilityData canonical catalogue. The
 shorter window is the catalogue diff between commit
 \texttt{15e34e6} (2025-11-11) and the rule-freeze commit
-(2026-05-13) : 345 systems added in six months, 39 with non-empty
+(2026-05-13): 345 systems added in six months, 39 with non-empty
 \texttt{station\_information} that could be audited. The longer
 window extends back to commit \texttt{4665739} (2025-04-29,
-twelve months) : 481 systems added, 98 audited. The remainder
+twelve months): 481 systems added, 98 audited. The remainder
 are free-floating systems without \texttt{station\_information},
 below $N_{\min}$, or authenticated. The frozen rule set was
 applied unchanged on both windows; per-system results in
@@ -1363,7 +1363,7 @@ $[9.0\,\%, 32.6\,\%]$), which exceeds the upper bound by
 $0.4$ percentage points at the point estimate but whose Wilson
 interval still contains both the derivation rate and the entire
 acceptance band. Reading the two windows jointly,
-\textbf{H1 passes} : the rule-firing rate on out-of-sample
+\textbf{H1 passes}: the rule-firing rate on out-of-sample
 systems is statistically consistent with the derivation-set
 rate, and the more conservative twelve-month estimate is in
 the band on both point estimate and confidence interval.
@@ -1372,7 +1372,7 @@ the band on both point estimate and confidence interval.
 $84.2\,\%$ ($48/57$) of the systems flagged on A3 or A7 belong
 to the free-floating operator family identified on the
 derivation set (Dott, nextbike, Pony, Bird, Voi, Bolt, Lime,
-Tier, Donkey, Spin) ; the six-month window gives $81.2\,\%$
+Tier, Donkey, Spin); the six-month window gives $81.2\,\%$
 ($13/16$). Both estimates exceed the pre-registered acceptance
 threshold of $\geq 50\,\%$ by more than thirty percentage
 points, so \textbf{H2 passes cleanly}.
@@ -1610,7 +1610,7 @@ of free-floating fleets -- rebalancing patterns, real-time density
 of available vehicles, per-vehicle relocation -- which would
 require an analogous audit of the \texttt{station\_status} feed
 rather than \texttt{station\_information}. That dynamic audit is
-out of scope here (it is the topic of L2) ; the present catalogue
+out of scope here (it is the topic of L2); the present catalogue
 is therefore best characterised as a \emph{static} audit of GBFS
 \texttt{station\_information} across both dock-based and
 free-floating fleets, with the operational caveat that a
@@ -1777,7 +1777,7 @@ $\mathcal{G} \gets \emptyset$; $\mathcal{R} \gets \emptyset$\;
     \textbf{S3.} Compute $\bar c_{\text{profile}}/\bar c_{\text{actual}}$; if $> 5.0$ relabel \texttt{free\_floating} and set $f_{A3}=\texttt{True}$\;
     \textbf{S4.} Keep $\mathbf{x}_i \in \Phi$; mark stations outside as out-of-perimeter\;
     \textbf{S5.} Compute system bbox area $A_s$; if $A_s > 50{,}000$\,km$^2$, set $f_{A5}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
-    \textbf{S6.} Per-system nearest-neighbour distances $d_i^{NN} = \min_{j\neq i}\|\mathbf{x}_i - \mathbf{x}_j\|$ ; robust 3-$\sigma$ envelope (median + 1.4826~MAD~scaled) on $\{d_i^{NN}\}$ : set $f_{A4}=\texttt{True}$\;
+    \textbf{S6.} Per-system nearest-neighbour distances $d_i^{NN} = \min_{j\neq i}\|\mathbf{x}_i - \mathbf{x}_j\|$; robust 3-$\sigma$ envelope (median + 1.4826~MAD~scaled) on $\{d_i^{NN}\}$: set $f_{A4}=\texttt{True}$\;
     \textbf{S7.} If $\#\{i\,:\,c_i = 0 \land \text{docked}\} / |\mathcal{S}_s| \geq \tau_{A6}$, set $f_{A6}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
     \textbf{S8.} If $\#\{i\,:\,c_i = \texttt{NaN}\} / |\mathcal{S}_s| \geq \tau_{A7}$, set $f_{A7}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
     \textbf{S9.} If $|\mathcal{S}_s^{\text{dock}}| < N_{\min}$, label \texttt{too\_small} and route to $\mathcal{R}$\;
@@ -2201,7 +2201,7 @@ deposit contains four artefacts under the same concept DOI
 (i) the $46{,}307$-station certified Parquet
 (\texttt{stations\_gold\_standard\_final.parquet}, $\sim 6.6$\,MB,
 46 typed columns including per-row anomaly flags and audited
-capacities) ;
+capacities);
 (ii) the lightweight system-level executive summary
 (\texttt{stations\_gold\_standard\_audit\_summary.csv}, $\sim$60\,kB,
 one row per audited system with anomaly counts and operator
@@ -2256,7 +2256,7 @@ are released as supplementary material alongside the dataset.
 
 Five concrete reuse patterns are documented below. Each is a
 self-contained few-line snippet against
-\texttt{stations\_gold\_standard\_final.parquet} ; a complete
+\texttt{stations\_gold\_standard\_final.parquet}; a complete
 Jupyter notebook (\texttt{catalogue\_recipes.ipynb}) is released
 alongside the dataset.
 
@@ -2281,7 +2281,7 @@ len(clean)\ \ \#\ returns\ 5{,}402
 \paragraph{Use case 2 -- Per-operator anomaly profile.}
 The audit's verdict is exposed at the row level by the seven flag
 columns, so a single \texttt{groupby} returns the per-operator
-anomaly rates that drive Section~\ref{secResults} :
+anomaly rates that drive Section~\ref{secResults}:
 \begin{quote}\small\ttfamily
 gs.groupby("operator\_name").agg(\\
 \ \ n=("uid", "size"),\\
@@ -2298,9 +2298,9 @@ documented in Section~\ref{secResults}.
 \paragraph{Use case 3 -- Raw vs.\ audited capacity per system.}
 \texttt{capacity\_raw} preserves the GBFS-declared value (including
 placeholders and NaN) while \texttt{capacity\_audited} carries the
-post-audit count (NaN for non-dock types) ; one can therefore
+post-audit count (NaN for non-dock types); one can therefore
 quantify per-system the gap between what GBFS \emph{claims} and
-what the audit \emph{certifies} :
+what the audit \emph{certifies}:
 \begin{quote}\small\ttfamily
 sys = gs.groupby("system\_id").agg(\\
 \ \ raw\_capacity=("capacity\_raw", "sum"),\\
@@ -2332,7 +2332,7 @@ station-level effect concentrated in the lower income quartile.
 \paragraph{Use case 5 -- Identifying mobility deserts.}
 Three filters on \texttt{station\_type}, \texttt{revenu\_median\_uc}
 and the multimodal \texttt{gtfs\_heavy\_stops\_300m} count
-materialise the desert concept of Section~\ref{secResults} :
+materialise the desert concept of Section~\ref{secResults}:
 \begin{quote}\small\ttfamily
 q1 = gs.revenu\_median\_uc.quantile(0.25)\\
 deserts = gs[(\\
