@@ -21,6 +21,8 @@ paper/*.bbl
 paper/*.blg
 paper/*.synctex.gz
 paper/*.toc
+paper/*.fdb_latexmk
+paper/*.fls
 
 # Jupyter
 .ipynb_checkpoints/
