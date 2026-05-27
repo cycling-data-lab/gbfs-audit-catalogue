@@ -84,12 +84,12 @@ two \emph{semantic warnings} (zero-capacity dock, null-capacity
 field) for spec-compliant patterns that nevertheless make a
 column non-aggregable. Across the French corpus the taxonomy
 reclassifies \textbf{30.9\,\%} of the raw stations (95\,\%
-bootstrap CI [30.5, 31.3]); across the global catalogue it flags
+Wilson 95\,\% CI [30.5, 31.3]); across the global catalogue it flags
 204 systems on A1--A5, 14 on A6 and 215 on A7, jointly covering
 70{,}176 stations on A7 alone. In Italy, 17 spec-compliant deployments of a single
 operator declare \texttt{capacity = NaN} on every station;
 all pass syntactic validation unchanged, yet collectively
-represent the most populous capacity gap in the audited
+represent the largest capacity gap in the audited
 catalogue. Two methodological advances strengthen the protocol:
 a topology-aware geospatial detector (HDBSCAN + spectral graph
 analysis) that eliminates 8{,}005 discordant flags of the legacy
@@ -109,7 +109,7 @@ for bit-exact reproduction.
 \begin{highlights}
 \item Audit of 1{,}509 GBFS systems: seven-class taxonomy (5 structural, 2 semantic)
 \item Topology-aware A4 detector eliminates 8{,}005 centroid false positives
-\item Leave-one-operator-out CV on 7 operators confirms rule generalisability
+\item Leave-one-operator-out CV on 7 operators supports rule generalisability
 \item 30.9\,\% of raw FR stations reclassified; hotspots are operator-driven
 \item Released as a versioned Parquet (46k stations) with Docker and a hold-out test
 \end{highlights}
@@ -148,11 +148,11 @@ Three findings make the gap concrete. First, the same field
 (\texttt{station\_information.capacity}) covers radically different
 realities: a physical dock count for dock-based fleets, a theoretical
 estimator obtained by conditional averaging on free-floating fleets, and
-arbitrary placeholders for under-reporting operators. Second, fourteen
-\emph{Citiz} car-sharing systems are listed on the national portal under
+arbitrary placeholders for under-reporting operators. Second, seventeen
+car-sharing systems (fourteen under the \emph{Citiz} brand) are listed on the national portal under
 the GBFS schema, blurring the very definition of the object of study.
-Third, approximately $3.6\,\%$ of the certified stations are flagged
-by A4 as 3-$\sigma$ geospatial outliers from their system centroid,
+Third, $1.1\,\%$ of the certified stations are flagged
+by A4 as $3\sigma$ geospatial outliers (down from $3.6\,\%$ under the legacy centroid detector),
 and four additional systems publish bounding boxes exceeding the
 50{,}000\,km$^2$ A5 threshold or list stations outside the national
 perimeter.
@@ -238,8 +238,8 @@ Python package, MIT, $\sim 560$ LOC, unit-tested) and a
 five-tab \textbf{interactive dashboard}
 (\url{https://gbfs-audit.streamlit.app}) that surfaces every
 audit verdict at the row level.
-Fifth, a \textbf{validation roadmap} of six falsifiable experiments,
-four of which already include a completed pilot, so that the
+Fifth, a \textbf{validation roadmap} of nine falsifiable experiments,
+six of which already include completed results, so that the
 protocol can be challenged in public rather than defended in
 private. Section~\ref{secResults} reports the empirical results,
 Section~\ref{secDiscussion} discusses implications and limitations, and
@@ -286,7 +286,7 @@ parquet.}
 A1 & Out-of-domain inclusion       & Car-sharing advertised as BSS                          & 17         & 46        \\
 A2 & Placeholder capacity          & Constant non-zero $c_i$ across docked subset           &  1         & 48        \\
 A3 & Structural over-capacity      & Conditional averaging on free-floating                 & 41         & 33        \\
-A4 & Geospatial error              & 3-$\sigma$ outlier on per-system nearest-neighbour distance & 88 (1.1\,\% stns) & 81 \\
+A4 & Geospatial error              & $3\sigma$ outlier on per-system nearest-neighbour distance & 88 (1.1\,\% stns) & 81 \\
 A5 & Out of perimeter              & System bounding box $>50{,}000$\,km$^2$                &  4         & 17        \\
 \midrule
 \multicolumn{5}{l}{\textit{Semantic warnings (spec-compliant but consumer-ambiguous)}}\\
@@ -297,10 +297,9 @@ A7 & Null capacity field           & $\geq 50\,\%$ of stations declare $c = $ \t
 \end{table}
 
 The audit status of the 142 French GBFS feeds at the national portal
-is summarised in Figure~\ref{fig:audit-status}: 126 systems are
-certified into the Audit Catalogue, 14 are excluded as micro-networks
-below the $N_{\min} = 20$ threshold, and 2 fail technical ingestion.
-The 14 car-sharing systems (A1) are filtered upstream.
+is summarised in Figure~\ref{fig:audit-status}: 123 systems are
+certified into the Audit Catalogue, 2 fail technical ingestion,
+and the 17 car-sharing systems (A1) are filtered upstream.
 
 \begin{figure}[ht]
 \centering
@@ -504,7 +503,7 @@ change in nominal infrastructure is the operational stake.
 Table~\ref{tab:top5-reranks} reports the five urban areas whose
 count of dock-based stations is most reduced by the purging
 protocol, together with the anomaly classes that drive the
-reclassification. The point is the consistency of the move:
+reclassification. The salient observation is the consistency of the shift:
 every one of these five urban areas would be credited with a
 top-decile dock-based deployment by a naive ingestion of GBFS,
 yet after the audit only Paris retains more than $1{,}500$
@@ -667,13 +666,13 @@ $\kappa \in [-0.07, 0.80]$ brackets the human inter-rater agreement
 that three independent annotators would plausibly achieve.
 
 \emph{Threshold sensitivity.}
-The A4 outlier detector uses a robust 3-$\sigma$ rule on
+The A4 outlier detector uses a robust $3\sigma$ rule on
 MAD-rescaled radii from the system centroid. We re-ran the audit
 under $\sigma \in \{2.0, 2.5, 3.0, 3.5, 4.0\}$ on the released
 parquet and report the result in
 Table~\ref{tab:a4-sigma-sweep}. The absolute count of A4-flagged
-stations varies by a factor of three across the grid
-($3{,}182$ at $\sigma = 2$ down to $1{,}084$ at $\sigma = 4$), but
+stations varies by a factor of $\sim 1.4$ across the grid
+($597$ at $\sigma = 2$ down to $415$ at $\sigma = 4$), but
 the downstream count-level summaries are essentially invariant:
 Kendall's $\tau$ between the $\sigma = 3$ reference and each
 alternative ranges $[0.91, 1.00]$ on both the Top-10 cities and
@@ -710,7 +709,7 @@ $\tau \geq 0.956$ throughout.}
 
 \medskip
 {\footnotesize \textbf{Methodological caveat on the MAD scale.}
-The robust 3-$\sigma$ A4 detector uses
+The robust $3\sigma$ A4 detector uses
 $\hat\sigma = 1.4826 \cdot \mathrm{MAD}$ as a Gaussian-consistent
 scale estimator. This assumes an approximately unimodal,
 isotropic spatial distribution of stations per system. For
@@ -811,7 +810,7 @@ DISCORDANT\_COMPOSITE (composite only) & 1{,}001 &  2.2 \\
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/fig09_xp2_ablation_overview.pdf}
+\includegraphics[width=0.95\linewidth]{fig09_xp2_ablation_overview.pdf}
 \caption{Ablation of the centroid-based A4 detector against the
 topology-aware composite detector. \emph{Left}: discordance
 classification across all 46{,}307 stations. \emph{Centre}:
@@ -898,7 +897,7 @@ A7 & 1.19 & 37.8\,\% & [9.3, 71.4]\,\%   & Real anti-pattern \\
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/fig10_xp3_looo_overview.pdf}
+\includegraphics[width=0.95\linewidth]{fig10_xp3_looo_overview.pdf}
 \caption{LOOO cross-validation overview. \emph{Top-left}: per-rule
 coefficient of variation (green = CV $< 0.20$, red = above).
 \emph{Top-right}: mean flag rate with 95\,\% bootstrap CI.
@@ -943,7 +942,7 @@ thirteen non-French systems on 2026-05-13
 (\texttt{scripts/audit\_live\_systems.py}), with French thresholds
 and country-appropriate perimeter only. Six station-management
 platforms (PBSC, JCDecaux Cyclocity, Smartbike, De Lijn /
-Blue-bike, Urban Sharing AS, Deutsche Bahn) across seven
+Blue-bike, Urban Sharing AS, Deutsche Bahn) across five
 countries; twelve metropolitan dock-based deployments form the
 \emph{negative-control panel}, plus one \emph{informative case}
 (\emph{Call a Bike Deutsche Bahn}, nationwide).
@@ -974,7 +973,7 @@ Bergen City Bike       & NO & Urban Sh. & 94   & --- & --- & --- & 1.06\,\% & --
 \multicolumn{11}{l}{\emph{Informative case (nationwide system, not a metropolitan control)}}\\
 Call a Bike (DB)$^\ddag$ & DE & DB & 1{,}601 & --- & --- & --- & 1.8\,\% & $\checkmark$ & --- & $\checkmark$ \\
 \midrule
-French corpus (ref.)   & FR & --- & 46{,}307 & 17\,sys. & 1\,sys. & 41\,sys. & 78\,sys. & 4\,sys. & 0\,sys. & 32\,sys. \\
+French corpus (ref.)   & FR & --- & 46{,}307 & 17\,sys. & 1\,sys. & 41\,sys. & 88\,sys. & 4\,sys. & 0\,sys. & 32\,sys. \\
 \bottomrule
 \end{tabular}
 
@@ -1084,7 +1083,9 @@ low-density region the data itself identifies as a separator.
 The high-bias and extreme-bias modes are also visible in the
 tail at ratio $\approx 30$ and $\approx 500$.}
 \label{fig:a3-kde-valley}
-\end{figure} The KDE analysis also suggests that a
+\end{figure}
+
+The KDE analysis also suggests that a
 soft / hard two-tier refinement analogous to A6 would set
 $\tau_{A3}^{\text{soft}} \approx 3$ (catches the moderate
 shoulder of the high-bias mode) and $\tau_{A3}^{\text{hard}}
@@ -1144,7 +1145,7 @@ Voi, Bolt), so the $[5, \infty)$ tail tracks the A3 mechanism
 across the sweep.}
 \end{table}
 
-\label{secGlobalAudit}%
+\subsection{Global catalogue audit}\label{secGlobalAudit}
 To turn the negative-control argument into a positive one, the rule
 set was then applied to the entire MobilityData canonical catalogue:
 \textbf{1{,}509 GBFS systems across 48 countries (the complete world
@@ -1195,7 +1196,7 @@ methodological recalibration.
 \caption{Per-country breakdown of the four structural classes
 A1--A4 on the MobilityData canonical catalogue (1{,}509 systems,
 including the 255 French entries). The macro-region class A5
-(10 systems globally), zero-capacity A6 (14) and null-capacity A7
+(17 systems globally), zero-capacity A6 (14) and null-capacity A7
 (215 / 70{,}176 stations) are calibrated on station-count-conditioned
 sub-corpora and are reported in
 Tables~\ref{tab:a6-distribution} and \ref{tab:a7-distribution}.
@@ -1246,7 +1247,7 @@ used here is archived in
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.92\linewidth]{figures/fig07_global_audit.pdf}
+\includegraphics[width=0.92\linewidth]{fig07_global_audit.pdf}
 \caption{Per-country incidence of the structural classes A1--A4 across
 the 1{,}509-system MobilityData catalogue (top 18 countries by total
 flagged). The chart shows the stacked composition of the
@@ -1502,7 +1503,7 @@ Voi          & 4  &  2{,}816 & 5--10 & Small fleet-profile estimator \\
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/fig08_capacity_semantics.pdf}
+\includegraphics[width=0.95\linewidth]{fig08_capacity_semantics.pdf}
 \caption{Conceptual diagram of the four incompatible publication
 conventions of the GBFS \texttt{station\_information.capacity}
 field observed across six French free-floating operator deployments
@@ -1597,8 +1598,8 @@ under ADEME or \emph{transport.data.gouv.fr} to formalise an
 extended GBFS schema with a certification framework; and a
 continuous validation chain running the pipeline monthly on the
 national feeds, with automated publication of the audit report and
-operator-side notification on regression. Star \cite{Star2010}
-reminds us that the most durable infrastructures are those whose
+operator-side notification on regression. As Star \cite{Star2010}
+observes, the most durable infrastructures are those whose
 governance is explicit and tied to an identifiable community of
 practice; moving the artefact from author-led to community-led
 governance is therefore an institutional challenge as much as a
@@ -1663,7 +1664,7 @@ of scope for this paper. The standards-side recommendation in
 Section~\ref{secDiscussion} is therefore phrased as a request for
 specification revision, not for operator sanction.
 
-\emph{This is a static audit. } The
+\emph{This is a static audit.} The
 \texttt{station\_information} feed describes the deployment, not
 its dynamic behaviour. Real-time availability, rebalancing
 patterns and per-vehicle relocation live in the
@@ -1700,7 +1701,7 @@ The audit-trail / reversibility / per-step logging design of the
 purging protocol mirrors the audit requirements of clinical-trial
 data management standardised in ISO 14155 \cite{ISO14155} and in
 the FDA's 21 CFR Part 11 \cite{FDA21CFR11}. The open-mobility-data community is, in effect,
-re-discovering with two decades of delay what the
+adopting audit practices that the
 pharmacovigilance community formalised in the 1990s. The
 analogue is informative because it suggests that long-term
 sustainability of the audit protocol depends on a community of
@@ -1709,23 +1710,14 @@ EuroMobility coordination layer), not on the lifespan of any
 single research artefact.
 
 \subsection{When a clean verdict hides a missing column}
-The Italian case study of Section~\ref{secGlobalAudit} crystallises
-what is at stake. Of the $34$ Italian systems in the catalogue, $33$
-are reachable and $25$ publish station data; \emph{none} of them is
-flagged by classes A1 to A6 in the original v1.0 taxonomy. A reviewer
-reading only the A1--A6 verdict would conclude that the Italian GBFS
-publication is the cleanest in the catalogue. The seventh class A7
-reveals the opposite: $17$ of the $25$ data-publishing Italian systems
-are deployments of a single operator (\emph{Dott}) whose Italian
-feeds declare \texttt{capacity = NaN} on $100\,\%$ of their
-$\sim 11{,}000$ \texttt{station\_information} entries. The country is
-not clean; the country is silent on the only field that matters for
-infrastructure quantification. An audit framework that conflates
-\emph{no problem detected} with \emph{no data published} mis-reads
-the entire national corpus. A7's empirical role is precisely to keep
-those two cases distinguishable, and the Italian episode is the
-clearest reminder that absence of evidence is not evidence of absence
-in open-standards compliance auditing.
+The Italian \emph{Dott} case documented in
+Section~\ref{secGlobalAudit} illustrates what is at stake: a country
+that passes A1--A6 cleanly is not necessarily clean --- it may be
+silent on the only field that matters for infrastructure
+quantification. An audit framework that conflates \emph{no problem
+detected} with \emph{no data published} mis-reads the entire national
+corpus. A7's empirical role is precisely to keep those two cases
+distinguishable.
 
 \subsection{GBFS v3 and the durability of the v2 legacy}
 GBFS v3 (released 2023) introduces \texttt{is\_virtual\_station},
@@ -1835,7 +1827,7 @@ A4 outlier removal step.
 
 \subsection{Future directions}
 Each of the four limitations above is paired with a falsifiable
-experiment (Table~\ref{tab:roadmap}); four of the six include a
+experiment (Table~\ref{tab:roadmap}); six of the nine include a
 completed pilot reported in this paper. The remaining priorities are
 the human inter-rater reliability of E1, the full four-dimensional
 threshold sweep of E2, the twelve-month temporal stability of E3,
@@ -1966,7 +1958,7 @@ $\mathcal{G} \gets \emptyset$; $\mathcal{R} \gets \emptyset$\;
     \textbf{S2.} If $\mathrm{Var}(c) = 0$, $c > 0$ and $|\mathcal{S}_s^{\text{dock}}| \geq \tau_{A2}^{\text{size}}$, set $f_{A2}=\texttt{True}$ and force \texttt{free\_floating}\;
     \textbf{S3.} Compute $\bar c_{\text{profile}}/\bar c_{\text{actual}}$; if $> 5.0$ relabel \texttt{free\_floating} and set $f_{A3}=\texttt{True}$\;
     \textbf{S4.} Keep $\mathbf{x}_i \in \Phi$; mark stations outside as out-of-perimeter\;
-    \textbf{S5.} Compute composite anomaly score $a_i = \alpha\,\hat o_i + (1-\alpha)\,s_i$; if $a_i > 0.8$ set $f_{A4}=\texttt{True}$ (Section~\ref{secA4v2}); fallback: nearest-neighbour robust 3-$\sigma$ envelope\;
+    \textbf{S5.} Compute composite anomaly score $a_i = \alpha\,\hat o_i + (1-\alpha)\,s_i$; if $a_i > 0.8$ set $f_{A4}=\texttt{True}$ (Section~\ref{secA4v2}); fallback: nearest-neighbour robust $3\sigma$ envelope\;
     \textbf{S6.} Compute system bbox area $A_s$; if $A_s > 50{,}000$\,km$^2$, set $f_{A5}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
     \textbf{S7.} If $\#\{i\,:\,c_i = 0 \land \text{docked}\} / |\mathcal{S}_s| \geq \tau_{A6}$, set $f_{A6}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
     \textbf{S8.} If $\#\{i\,:\,c_i = \texttt{NaN}\} / |\mathcal{S}_s| \geq \tau_{A7}$, set $f_{A7}=\texttt{True}$ on every $i \in \mathcal{S}_s$\;
@@ -1977,8 +1969,9 @@ $\mathcal{G} \gets \emptyset$; $\mathcal{R} \gets \emptyset$\;
 \caption{GBFS raw-to-Audit-Catalogue purging pipeline. Steps S1–S3
 both purge and label (a station relabelled to \texttt{free\_floating}
 or \texttt{carsharing} stays in the catalogue with its A-flags set);
-S4–S5 implement the A5 perimeter check; S6 the A4 outlier check;
-S7–S8 the A6 / A7 capacity-field anomalies. S9 is the only
+S4 implements the national perimeter filter; S5 the A4 topology-aware
+outlier check (Section~\ref{secA4v2}); S6 the A5 macro-region surface
+check; S7–S8 the A6 / A7 capacity-field warnings. S9 is the only
 truly-removing step.}
 \label{alg:purge}
 \end{algorithm}
@@ -2058,17 +2051,6 @@ exceeds this scale plausibly aggregates operationally-independent
 deployments and the resulting system-level statistics
 (centroid, intra-system KNN, capacity profile) are no longer
 geographically interpretable.
-
-\subsection{A6 (semantic warning): zero-capacity dock formalisation}\label{secA6Formalisation}
-\textbf{A6 is a semantic warning rather than a publisher violation.}
-The GBFS specification permits a station to declare
-\texttt{capacity = 0} (for instance during a maintenance window
-or when a station is awaiting installation), so an operator that
-populates \texttt{station\_information} entries with $c = 0$ is
-not non-compliant. What A6 flags is the downstream-consumer
-problem: a non-trivial share of zero-capacity entries in
-\texttt{station\_information} aggregates to a misleading mean
-when summed naively with non-zero entries.
 
 \subsection{A4\,v2: topology-aware geospatial detector}\label{secA4v2}
 The original A4 detector (step~S5 in Algorithm~\ref{alg:purge})
@@ -2302,7 +2284,7 @@ combination of one or more structural flags.\label{tab:schema}}\\
 \quad\texttt{flag\_A1}            & bool    & Out-of-domain inclusion (carsharing)          & 100\,\%\\
 \quad\texttt{flag\_A2}            & bool    & Placeholder capacity at system level          & 100\,\%\\
 \quad\texttt{flag\_A3}            & bool    & Structural over-capacity (free-floating)      & 100\,\%\\
-\quad\texttt{flag\_A4}            & bool    & Geospatial outlier (3-$\sigma$ on system centroid) & 100\,\%\\
+\quad\texttt{flag\_A4}            & bool    & Geospatial outlier ($3\sigma$ on system centroid) & 100\,\%\\
 \quad\texttt{flag\_A5}            & bool    & Out-of-perimeter (system bbox $> 50{,}000$\,km$^2$) & 100\,\%\\
 \quad\texttt{flag\_A6}            & bool    & Zero-capacity dock                            & 100\,\%\\
 \quad\texttt{flag\_A7}            & bool    & Null-capacity field at system level           & 100\,\%\\
@@ -2422,7 +2404,7 @@ provides the external ground truth against which the pipeline's
 verdicts were calibrated.
 
 % ===================================================================
-\section{Data and code availability}
+\section*{Data and code availability}
 
 \paragraph{Lead contact.} Requests for further information should be
 directed to and will be fulfilled by the lead contact, Rohan Foss\'e
@@ -2532,7 +2514,7 @@ gs.groupby("operator\_name").agg(\\
 ).sort\_values("n", ascending=False).head(10)
 \end{quote}
 The two largest operators on the corpus (\emph{Dott},
-$\sim 20\,000$ stations; \emph{Pony}, $\sim 11\,500$) come out at
+$\sim 20{,}000$ stations; \emph{Pony}, $\sim 11{,}500$) come out at
 \texttt{A7\_rate} = 1.0 and \texttt{A3\_rate} = 1.0 respectively,
 which is the row-level expression of the operator-driven hotspots
 documented in Section~\ref{secResults}.
@@ -2596,7 +2578,7 @@ hyperparameters of the audit.
 \includegraphics[width=0.75\linewidth]{fig06_mobility_deserts.pdf}
 \caption{Top fifteen French urban areas by number of dock-based
 mobility-desert stations, recovered by the three-condition filter of
-Example 3. A station counts as a mobility desert if its commune sits
+Use case 5. A station counts as a mobility desert if its commune sits
 in the lowest national income quartile and the station has zero
 heavy-transit stops within a 300\,m buffer.}
 \label{fig:mobility-deserts}
