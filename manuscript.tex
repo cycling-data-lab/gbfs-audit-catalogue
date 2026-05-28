@@ -21,6 +21,7 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{graphicx}
+\usepackage{adjustbox}
 \graphicspath{{figures/}}
 \usepackage{algorithm2e}
 \usepackage{xcolor}
@@ -30,6 +31,10 @@
 \usepackage{caption}
 \usepackage{titlesec}
 \usepackage{authblk}
+
+% Discourage widows/orphans (a single line stranded at the top/bottom of a page)
+\widowpenalty=10000
+\clubpenalty=10000
 
 \titleformat{\section}{\large\bfseries\sffamily\color{black!85}}{\thesection}{0.8em}{}
 \titleformat{\subsection}{\normalsize\bfseries\sffamily\color{black!75}}{\thesubsection}{0.8em}{}
@@ -134,7 +139,7 @@ real-time availability and pricing
 \cite{Mobi2024,OMF2023}. In France, the 2019 Mobility Orientation Law
 \cite{LOM2019} (LOM, article L.~1115-1 of the transport code) makes
 the publication of these feeds on the national open-mobility-data
-portal \emph{transport.data.gouv.fr} \cite{PAN2017} a regulatory
+portal \emph{transport.data.gouv.fr}~\cite{PAN2017} a regulatory
 acquis, so
 that by 2026 the working assumption of many research and policy
 pipelines is that GBFS feeds can be ingested directly.
@@ -175,13 +180,13 @@ is the smart-card literature: Pelletier et al.
 between what fare-collection feeds nominally publish and what they
 operationally support for research reuse, a programme structurally
 analogous to the GBFS audit we report here.
-Tao et al. \cite{Tao2020} document sampling biases in
+Tao et al.~\cite{Tao2020} document sampling biases in
 mobile-phone records used for origin-destination estimation;
-Romanillos et al. \cite{Romanillos2016} warn against
+Romanillos et al.~\cite{Romanillos2016} warn against
 statistical artefacts of ingesting raw GPS feeds directly;
-Bachand-Marleau et al. \cite{BachandMarleau2012} surfaced
+Bachand-Marleau et al.~\cite{BachandMarleau2012} surfaced
 operational-definition heterogeneity in bike-sharing demand data
-more than a decade ago; and Fishman \cite{Fishman2016} stresses the
+more than a decade ago; and Fishman~\cite{Fishman2016} stresses the
 heterogeneity of operational definitions in international BSS
 comparisons. The North American Bikeshare and Scootershare
 Association tracks cross-operator harmonisation gaps annually
@@ -194,24 +199,24 @@ proactive: the Canonical GTFS Schedule Validator
 \cite{Antrim2013Conveyal} codify hundreds of schema-level checks on
 transit feeds, and the data-engineering community has produced reusable
 declarative-validation frameworks such as Great Expectations
-\cite{GreatExpectations2024}, Pandera \cite{Pandera2024} and the
-Frictionless Data specifications \cite{FrictionlessData2023}.
+\cite{GreatExpectations2024}, Pandera~\cite{Pandera2024} and the
+Frictionless Data specifications~\cite{FrictionlessData2023}.
 The broader anomaly-detection literature~\cite{Chandola2009AnomalyDetection}
 provides a taxonomy of detection paradigms (statistical, proximity-based,
 clustering-based) that contextualises the spatial outlier methods we
 adopt in Section~\ref{secA4v2}.
 The underlying data-quality literature is mature: Wang and Strong
 \cite{Wang1996Quality} established the consumer-centred dimensions,
-Pipino et al. \cite{Pipino2002Assessment} the assessment
-procedures, Khatri and Brown \cite{Khatri2010DataGovernance} the
-governance framing, Sebastian-Coleman \cite{SebastianColeman2013}
+Pipino et al.~\cite{Pipino2002Assessment} the assessment
+procedures, Khatri and Brown~\cite{Khatri2010DataGovernance} the
+governance framing, Sebastian-Coleman~\cite{SebastianColeman2013}
 the ongoing-improvement perspective, and Naumann
-\cite{Naumann2014DataProfiling} the modern profiling approach. ISO/IEC~25012 \cite{ISO25012} and its companion
-measurement standard ISO/IEC~25024 \cite{ISO25024} formalise the
+\cite{Naumann2014DataProfiling} the modern profiling approach. ISO/IEC~25012~\cite{ISO25012} and its companion
+measurement standard ISO/IEC~25024~\cite{ISO25024} formalise the
 quality dimensions; for geographic information specifically,
-ISO~19157 \cite{ISO19157} provides the corresponding framework, and
-the European INSPIRE directive \cite{INSPIRE2007} makes them
-regulatory. W3C's DCAT \cite{DCAT2020} and Data Quality Vocabulary
+ISO~19157~\cite{ISO19157} provides the corresponding framework, and
+the European INSPIRE directive~\cite{INSPIRE2007} makes them
+regulatory. W3C's DCAT~\cite{DCAT2020} and Data Quality Vocabulary
 \cite{W3CDQV} translate these dimensions into machine-readable
 metadata. None of these references, however, addresses GBFS
 specifically, and none produces a versioned, audited reference
@@ -261,7 +266,7 @@ Table~\ref{tab:anomalies}. Each class, in isolation, is sufficient
 to invalidate a non-audited cross-system comparison; the
 detection rules are formalised in Section~\ref{secMethods}.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{The unified GBFS data-quality taxonomy: five
 \emph{structural errors} (A1--A5) that violate the implicit
@@ -304,7 +309,7 @@ is summarised in Figure~\ref{fig:audit-status}: 123 systems are
 certified into the Audit Catalogue, 2 fail technical ingestion,
 and the 17 car-sharing systems (A1) are filtered upstream.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{fig01_audit_status.pdf}
 \caption{Verdict of the systematic audit applied to the 142 GBFS
@@ -333,7 +338,7 @@ stations. Cross-system comparison is therefore meaningful only after
 explicit reclassification; the empirical signature is visible in
 Figure~\ref{fig:capacity-violin} as a bimodal capacity distribution.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.75\linewidth]{fig02_capacity_violin.pdf}
 \caption{Empirical signature of the A3 floating-anchor bias. Declared
@@ -369,7 +374,7 @@ the largest size quartile contains a single dominant deployment
 (\emph{V\'elib' M\'etropole}, $\sim 14{,}700$ stations) whose
 inclusion or exclusion across resamples mechanically shifts the
 denominator by an order of magnitude. The asymmetry of these two
-intervals --- one tight, one degenerate --- is itself the
+intervals, one tight and one degenerate, is itself the
 substantive observation: on a 123-system corpus with size
 spanning four orders of magnitude, the within-snapshot
 uncertainty on a stations-level total is dominated by which
@@ -381,10 +386,10 @@ stability) where re-running the audit on freshly fetched
 snapshots gives a properly aligned variance estimate. The
 headline figure is that fewer than $9\,\%$ of raw entries
 survive into the catalogue without either being relabelled or
-removed --- a strong empirical argument against the view that the
+removed, a strong empirical argument against the view that the
 standard alone delivers a research-ready dataset.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Effect of the purging pipeline on the national GBFS corpus.
 \emph{Certified} entries are kept in the Parquet with a typed
@@ -421,7 +426,7 @@ historical V\'elib' deployment, while regions with many free-floating
 systems (Nouvelle-Aquitaine, Auvergne-Rh\^one-Alpes) hold a much
 smaller dock-based stock after the A3 correction is applied.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{fig03_region_stations.pdf}
 \caption{Certified stations by administrative region, after the
@@ -444,7 +449,7 @@ Gironde} (car-sharing). \emph{Pony} alone advertises 2{,}996
 thousands of nominal docking points and places it in the national top
 three for V\'elib-class infrastructure.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Bordeaux: impact of the A3 correction on the
 \emph{Pony Bordeaux} subsystem and on the agglomeration as a whole.
@@ -489,7 +494,7 @@ order-of-magnitude effect on any supply-side aggregate built on
 the raw feed. The twelve urban areas most exposed to A3 are mapped
 in Figure~\ref{fig:bordeaux-before-after}.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.9\linewidth]{fig04_bordeaux_before_after.pdf}
 \caption{Top twelve French urban areas ranked by absolute reduction in
@@ -515,7 +520,7 @@ just over-count by a small margin; it changes the relative
 positioning of the principal French agglomerations on any
 supply-side metric by an entire quartile.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Top five French urban areas most affected by the purging
 protocol. ``Raw'' is the count of \texttt{station\_information}
@@ -578,7 +583,7 @@ mimics what a careful data engineer would write in a notebook. The
 \emph{MobilityData audit} adapts the canonical GTFS-realtime
 schema-level rules to GBFS.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Measured comparison of the Audit Catalogue against three
 baselines on the same 123-system French GBFS corpus. Brackets are
@@ -651,7 +656,7 @@ the smallest cells estimable; small operators are pooled into an
 alongside the audit report so the agreement statistics can be
 independently recomputed. We do
 \emph{not} interpret near-zero $\kappa$ as a positive measure of
-``coverage'' --- inter-rater agreement is not a coverage statistic;
+``coverage'': inter-rater agreement is not a coverage statistic;
 we report it only to falsify the alternative hypothesis that the
 three sources catch the same anomalies through correlated rules.
 The actually-relevant evidence is union recall: the three
@@ -683,7 +688,7 @@ the Top-10 operators by certified docked-bike station count.
 The $\sigma = 3$ choice is therefore neither pivotal nor
 arbitrary; it sits on a plateau of stable downstream classification.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{A4 sensitivity sweep on the released v1.0.1 parquet
 (46{,}307 stations, 123 systems). Each row reports the absolute
@@ -777,8 +782,9 @@ To classify each system's spatial geometry we compute the eigenvalue
 ratio $r = \lambda_1 / \lambda_2$ of the 2D coordinate covariance
 matrix: $r > 5$ indicates a \emph{linear} network.
 
-Table~\ref{tab:ablation} summarises the ablation. The composite
-detector agrees with the legacy method on $80.6\,\%$ of stations.
+Table~\ref{tab:ablation} and Figure~\ref{fig:ablation} summarise the
+ablation. The composite detector agrees with the legacy method on
+$80.6\,\%$ of stations.
 Of the discordant stations, $17.3\,\%$ are \textbf{flagged by the
 legacy method only} (centroid, not composite), while only
 $2.2\,\%$ are new findings of the composite detector. Three cases
@@ -788,7 +794,7 @@ legacy flags to 43 composite flags (saving 217 false positives);
 \emph{Clermont-Ferrand} (82 stations, linear network with $r = 6.07$)
 drops from 18 to~0.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Ablation of the legacy centroid-based A4 detector (3$\sigma$
 MAD) against the topology-aware composite detector (HDBSCAN +
@@ -811,7 +817,7 @@ DISCORDANT\_COMPOSITE (composite only) & 1{,}001 &  2.2 \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\linewidth]{fig09_xp2_ablation_overview.pdf}
 \caption{Ablation of the centroid-based A4 detector against the
@@ -842,7 +848,8 @@ therefore be interpreted as a consistency check on rule stability
 rather than a definitive generalisability proof. Extension to the
 global catalogue ($K \approx 20$--$30$) is planned as follow-up.
 
-Table~\ref{tab:looo} reports the results. A crucial distinction
+Table~\ref{tab:looo} reports the results, with the overview in
+Figure~\ref{fig:looo}. A crucial distinction
 emerges between \emph{structural rules} and \emph{threshold rules}:
 %
 \begin{itemize}[nosep]
@@ -873,7 +880,7 @@ A5--A7 and only $1.7\,\%$ on A4, consistent with residual GPS noise.
 Holding out V\'elo\&Co (94 stations) yields $0\,\%$ across all
 seven rules.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Leave-one-operator-out cross-validation on the 46{,}307-station
 French catalogue. $K = 7$ eligible operators. CV = coefficient of
@@ -898,7 +905,7 @@ A7 & 1.19 & 37.8\,\% & [9.3, 71.4]\,\%   & Real anti-pattern \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\linewidth]{fig10_xp3_looo_overview.pdf}
 \caption{LOOO cross-validation overview. \emph{Top-left}: per-rule
@@ -938,7 +945,7 @@ irreducible ambiguity of imagery-based verification; these are excluded
 from precision and recall but reported here as a result in their own right.
 % TODO: n_merged, n_indeterminate
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Inter-rater reliability between the two annotators
 ($n=$~XX co-rated stations). Krippendorff's $\alpha$
@@ -964,12 +971,12 @@ Holistic verdict                    & XX & XX & XX\,\% & XX\\
 % TODO: reliability_report.json -> agreement[<question>].{cohens_kappa, krippendorff_alpha, raw_agreement, n}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Per-rule performance against the human ground truth, derived
 \emph{a posteriori} from the factual judgements (the gold standard never
 encodes a verdict about the pipeline). Confidence intervals are Wilson
-95\,\% \cite{Wilson1927Interval}. A2 and A7 are system-level structural
+95\,\%~\cite{Wilson1927Interval}. A2 and A7 are system-level structural
 rules not amenable to per-station imagery validation (a single operator
 each in this snapshot); A6 and the A3-boundary stratum had no eligible
 stations, so their per-station recall is not estimated here.}
@@ -991,8 +998,8 @@ A5 & out-of-perimeter (Q4)            & XX & XX & XX & 0.XX\,[0.XX, 0.XX] & 0.XX
 \end{table}
 
 A qualitative read of the disagreements is itself informative: the hardest
-cases sit on the A1/A3 boundary --- a car-sharing bay versus a free-floating
-drop zone --- i.e.\ \emph{boundary objects} that the GBFS specification
+cases sit on the A1/A3 boundary (a car-sharing bay versus a free-floating
+drop zone), i.e.\ \emph{boundary objects} that the GBFS specification
 permits to be encoded ambiguously, evidence that the standard
 underspecifies what a ``station'' physically is. Where annotators diverge
 below the $\kappa \geq 0.70$ threshold, the disagreement is itself a finding:
@@ -1010,8 +1017,8 @@ national perimeter recalibrated. All other thresholds ($\sigma =
 3$, $N_{\min} = 20$, A2 placeholder rule, A3 capacity-profile
 ratio threshold of 5.0, $\tau_{A6} = 0.01$, $\tau_{A7} = 0.5$) are
 kept at their French values. The panel diversifies on the
-station-management \emph{technology stack} --- the layer at which
-publication conventions actually originate --- rather than only on
+station-management \emph{technology stack}, the layer at which
+publication conventions actually originate, rather than only on
 country: six distinct platforms are represented (PBSC, JCDecaux
 Cyclocity, Smartbike Mobility Plus, De Lijn / Blue-bike, Urban
 Sharing AS, Deutsche Bahn), spanning Spain, Belgium, Italy,
@@ -1029,7 +1036,7 @@ machine-readable results
 repository, so the audit can be replayed against the same set of
 public feeds on demand.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{E5 panel: A1--A7 rule set applied \emph{live} to
 thirteen non-French systems on 2026-05-13
@@ -1046,6 +1053,7 @@ on Sevici (sentinel-coordinate artefact, footnote $^\ast$).}
 \label{tab:e5-pilot}
 \scriptsize
 \setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{@{}lllr@{\hskip 6pt}ccccccc@{}}
 \toprule
 \textbf{System} & \textbf{Country} & \textbf{Stack} & \textbf{Stns.} & \textbf{A1} & \textbf{A2} & \textbf{A3} & \textbf{A4 (\%)} & \textbf{A5} & \textbf{A6} & \textbf{A7}\\
@@ -1070,6 +1078,7 @@ Call a Bike (DB)$^\ddag$ & DE & DB & 1{,}601 & --- & --- & --- & 1.8\,\% & $\che
 French corpus (ref.)   & FR & --- & 46{,}307 & 17\,sys. & 1\,sys. & 41\,sys. & 88\,sys. & 4\,sys. & 0\,sys. & 32\,sys. \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 
 \medskip
 {\footnotesize $^\ast$ Sevici's A5 firing is a coupling artefact:
@@ -1162,7 +1171,7 @@ ratio $15$. The paper's threshold $\tau_{A3} = 5$ falls inside
 the first valley window and is therefore in the low-density
 region the data itself identifies as a sensible separator.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.85\linewidth]{fig09_a3_kde_valley.pdf}
 \caption{Kernel-density estimate of
@@ -1190,7 +1199,7 @@ the valley-finding code ship with the source repository
 (\texttt{scripts/a3\_kde\_threshold.py},
 \texttt{experiments/e2\_threshold\_sensitivity/kde\_*.csv}).
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Empirical distribution of
 $\bar c_{\text{profile}}/\bar c_{\text{actual}}$ across two
@@ -1285,7 +1294,7 @@ the documented anti-patterns are not French-specific but global,
 and the protocol generalises to a 1{,}254-system corpus with no
 methodological recalibration.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Per-country breakdown of the four structural classes
 A1--A4 on the MobilityData canonical catalogue (1{,}509 systems,
@@ -1339,7 +1348,7 @@ used here is archived in
 \texttt{experiments/e2\_threshold\_sensitivity/global\_audit\_results\_typed.csv}.}
 \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.92\linewidth]{fig07_global_audit.pdf}
 \caption{Per-country incidence of the structural classes A1--A4 across
@@ -1457,7 +1466,7 @@ calibrations (Methods, Sections~\ref{secA6Formalisation} and
 are reported in Tables~\ref{tab:a6-distribution} and
 \ref{tab:a7-distribution}.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Empirical distribution of the zero-capacity rate
 $r_s^{A6}$ across the 538 globally audited systems with at least
@@ -1499,7 +1508,7 @@ French corpus, no dock-based system crosses either threshold
 (0/65 dock systems with $c = 0$), which is consistent with the
 corpus-level median behaviour and provides a negative control.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Empirical distribution of the NaN-capacity rate
 $\rho_s^{A7}$ across the 640 globally audited systems with at least
@@ -1565,11 +1574,11 @@ Greater Manchester deployment, by contrast, populates
 (\emph{cf.} Section~\ref{secA6A7Incidence}) and is therefore
 A6-flagged: A6 and A7 thus carve out distinct publication regimes
 within a single operator's portfolio. The official MobilityData GBFS
-Validator \cite{MobilityData2024Validator}, by contrast, returns no
+Validator~\cite{MobilityData2024Validator}, by contrast, returns no
 error on any of the flagged French systems (0\,\% recall on A3 in
 Table~\ref{tab:baselines}).
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Six observed semantics of the same
 \texttt{station\_information.capacity} field across French
@@ -1595,7 +1604,7 @@ Voi          & 4  &  2{,}816 & 5--10 & Small fleet-profile estimator \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\linewidth]{fig08_capacity_semantics.pdf}
 \caption{Conceptual diagram of the four incompatible publication
@@ -1692,7 +1701,7 @@ under ADEME or \emph{transport.data.gouv.fr} to formalise an
 extended GBFS schema with a certification framework; and a
 continuous validation chain running the pipeline monthly on the
 national feeds, with automated publication of the audit report and
-operator-side notification on regression. As Star \cite{Star2010}
+operator-side notification on regression. As Star~\cite{Star2010}
 observes, the most durable infrastructures are those whose
 governance is explicit and tied to an identifiable community of
 practice; moving the artefact from author-led to community-led
@@ -1700,7 +1709,7 @@ governance is therefore an institutional challenge as much as a
 scientific one. The technical lesson of the audit, that a single
 field (\texttt{capacity}) cannot serve six different operational
 semantics, is also the empirical case for what Stonebraker and
-\c{C}etintemel \cite{Stonebraker2005OneSize} call the end of
+\c{C}etintemel~\cite{Stonebraker2005OneSize} call the end of
 ``one size fits all'' data architectures: open standards that
 attempt to span dock-based, free-floating and car-sharing fleets in
 the same schema accumulate semantic ambiguity exactly because they
@@ -1782,7 +1791,7 @@ This is the same intellectual move as in QuickCheck-style
 property-based testing for software, where invariants on the
 output are stated explicitly and checked across many inputs
 \cite{Hughes2007QuickCheck}. The Great Expectations and Pandera
-toolchains \cite{GreatExpectations2024,Pandera2024} we benchmarked
+toolchains~\cite{GreatExpectations2024,Pandera2024} we benchmarked
 against are descendants of the same lineage. The contribution of
 the present audit, in that light, is to identify which properties
 GBFS implicitly assumes and to make their absence diagnosable;
@@ -1793,8 +1802,8 @@ it.
 \emph{Regulatory data audit in clinical-trial pipelines.}
 The audit-trail / reversibility / per-step logging design of the
 purging protocol mirrors the audit requirements of clinical-trial
-data management standardised in ISO 14155 \cite{ISO14155} and in
-the FDA's 21 CFR Part 11 \cite{FDA21CFR11}. The open-mobility-data community is, in effect,
+data management standardised in ISO 14155~\cite{ISO14155} and in
+the FDA's 21 CFR Part 11~\cite{FDA21CFR11}. The open-mobility-data community is, in effect,
 adopting audit practices that the
 pharmacovigilance community formalised in the 1990s. The
 analogue is informative because it suggests that long-term
@@ -1806,7 +1815,7 @@ single research artefact.
 \subsection{When a clean verdict hides a missing column}
 The Italian \emph{Dott} case documented in
 Section~\ref{secGlobalAudit} illustrates what is at stake: a country
-that passes A1--A6 cleanly is not necessarily clean --- it may be
+that passes A1--A6 cleanly is not necessarily clean: it may be
 silent on the only field that matters for infrastructure
 quantification. An audit framework that conflates \emph{no problem
 detected} with \emph{no data published} mis-reads the entire national
@@ -1899,8 +1908,8 @@ experiment E3.
 \textbf{L5 -- Scope of the human validation.} The ground-truth
 validation (Section~\ref{secHumanVal}) covers the rules verifiable from
 spatial imagery (A1, A3, A4, A5). A2 and A7 are structural data-property
-rules confirmed at the system level only --- each is represented by a
-single operator in this catalogue snapshot --- and A6 and the A3-boundary
+rules confirmed at the system level only (each is represented by a
+single operator in this catalogue snapshot), and A6 and the A3-boundary
 stratum had no eligible stations, so their per-station recall is not
 estimated. The two annotators are domain experts from the same
 institution; broader, multi-institution annotation is left to future work.
@@ -1914,7 +1923,7 @@ free-floating fleets and stop publishing per-vehicle anchors as
 as polygons in the \texttt{geofencing\_zones} block (A4, A5); and
 avoid sentinel coordinates $(0,0)$ on stations whose geolocation is
 pending, instead omitting them from \texttt{station\_information}
-until populated --- a single such sentinel in Sevici Seville
+until populated; a single such sentinel in Sevici Seville
 inflated its bounding-box area by four orders of magnitude in our
 E5 panel.
 
@@ -1955,7 +1964,7 @@ confusion matrix shipped alongside the agreement statistics so
 that disagreement is diagnosable at the level of individual A1--A7
 rules rather than aggregated into a single score.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Nine falsifiable experiments mapped to the limitations of
 Section~\ref{secLimitations}. ``$\checkmark$'' = completed result
@@ -1985,11 +1994,11 @@ E6 & Free-floating-native protocol              & L3                          & 
 The Audit Catalogue unlocks four families of downstream studies:
 supply-side composite-index work on cycling-environment quality at
 station and commune resolution; demand modelling with graph-based
-neural networks \cite{Lin2018BSSGraph} whose false-station nodes
+neural networks~\cite{Lin2018BSSGraph} whose false-station nodes
 from A3 are a known confound; spatial-equity analysis combining
 station access with INSEE Filosofi; and multimodal integration with
 GTFS, for which the hybridisation schema is compatible with the
-canonical GTFS validator \cite{MobilityData2024Validator}.
+canonical GTFS validator~\cite{MobilityData2024Validator}.
 
 \paragraph{Interactive dashboard.}
 To make the audit verdicts directly inspectable without code, a
@@ -2043,7 +2052,7 @@ coarse-grained anomalies (A1, A2, A4 perimeter), while later steps
 require system-level statistics ($\bar c$, centroids, $\sigma$) and
 therefore benefit from operating on a pre-cleaned set.
 
-\begin{algorithm}[ht]
+\begin{algorithm}[!htbp]
 \SetAlgoLined
 \DontPrintSemicolon
 \KwIn{National catalogue $\mathcal{C}$ (123 systems); thresholds
@@ -2091,7 +2100,7 @@ analysis without modifying the source code.
 
 These four properties are not arbitrary engineering choices; they
 operationalise the data-quality dimensions formalised by
-ISO/IEC~25012 \cite{ISO25012} and ISO/IEC~25024 \cite{ISO25024}, and
+ISO/IEC~25012~\cite{ISO25012} and ISO/IEC~25024~\cite{ISO25024}, and
 together they make the pipeline a direct domain-level implementation
 of the standard. Idempotence enforces the
 \emph{internal consistency} dimension (two computations on the same
@@ -2109,7 +2118,7 @@ DCAT-AP, JSON Schema and Croissant manifests (Section
 not aware of a published reference implementation of ISO/IEC~25012
 on an open mobility standard prior to the present work.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Mapping of the nine-step purging-protocol design properties
 to the data-quality dimensions of ISO/IEC~25012:2008 and its
@@ -2141,7 +2150,7 @@ pilot: Top-10 invariance for $\sigma_{\max} \ge 2.5$. The robustness
 threshold $N_{\min} = 20$ dock-based stations is calibrated on the
 literature of meshed networks: below this value, density and
 connectivity metrics become noise-dominated and are no longer
-informative for cross-city comparison \cite{Saberi2018}. The A5
+informative for cross-city comparison~\cite{Saberi2018}. The A5
 macro-region threshold of $50{,}000$\,km$^2$ is calibrated at the
 order of magnitude of a French métropolitaine
 \emph{région administrative} (median area $\approx 47{,}000$\,km$^2$
@@ -2285,7 +2294,7 @@ depending on the granularity of the source. Each row of
 Table~\ref{tab:sources} corresponds to one or more typed columns
 of the released parquet schema (Table~\ref{tab:schema}).
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Reference sources used for contextual enrichment. Every
 listed source contributes at least one column to the released
@@ -2435,7 +2444,7 @@ above $93\,\%$ for every contextual variable except the optional
 of $90\,\%$ documented in the audit report is therefore reached on
 every certified column of the released schema.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{fig05_completeness.pdf}
 \caption{Empirical completeness of contextual enrichment per
@@ -2457,8 +2466,8 @@ hidden behind an opt-in panel, and a single universal rubric (with no
 stratum label) was shown for every station.
 
 Crucially, the annotation is \emph{pipeline-agnostic}: annotators judge the
-physical reality of each station --- installation type, visible
-infrastructure, capacity coherence and network position --- from a
+physical reality of each station (installation type, visible
+infrastructure, capacity coherence and network position) from a
 CyclOSM/satellite map, Street View and OpenStreetMap; they never label
 ``the pipeline is right'' or ``wrong''. Per-rule true/false positives and
 negatives are derived \emph{a posteriori} by joining the adjudicated
@@ -2469,24 +2478,24 @@ are structural data-property rules validated at the system level. This
 design removes the circularity of asking a blind annotator to label a
 ``pipeline false positive''. Disagreements were resolved by consensus,
 with a third adjudicator on residual conflicts. Reliability uses
-Krippendorff's $\alpha$ \cite{Krippendorff2018Content} alongside Cohen's
-$\kappa$ \cite{Cohen1960Kappa, ArtsteinPoesio2008}; proportions use Wilson
-95\,\% intervals \cite{Wilson1927Interval}; stratum sizes follow a
+Krippendorff's $\alpha$~\cite{Krippendorff2018Content} alongside Cohen's
+$\kappa$~\cite{Cohen1960Kappa, ArtsteinPoesio2008}; proportions use Wilson
+95\,\% intervals~\cite{Wilson1927Interval}; stratum sizes follow a
 power analysis recorded in the released protocol. The stratified sample,
 the blind annotation interface and the reliability computation are released
 with the repository (\texttt{experiments/annotation/}).
 
 \subsection{Reproducibility infrastructure}
 The Audit Catalogue is released in alignment with the four FAIR
-principles \cite{Wilkinson2016}. \emph{Findable:} primary deposit on
+principles~\cite{Wilkinson2016}. \emph{Findable:} primary deposit on
 Zenodo under concept DOI \texttt{10.5281/zenodo.20125460}, with one
 DOI per SemVer-tagged release (current 1.0.0, dated 2026-05); mirrored
 on \emph{Recherche Data Gouv} (HAL/BSO indexing). \emph{Accessible:}
 Parquet format, direct HTTPS download and Git LFS mirror.
 \emph{Interoperable:} the schema extends GBFS v3 and is published as a
 JSON Schema, a Frictionless Data Package descriptor
-\cite{FrictionlessData2023}, a DCAT-AP record \cite{DCATAP2021} and a
-Croissant manifest \cite{Croissant2024}. \emph{Reusable:} released
+\cite{FrictionlessData2023}, a DCAT-AP record~\cite{DCATAP2021} and a
+Croissant manifest~\cite{Croissant2024}. \emph{Reusable:} released
 under ODbL v1.0; code under MIT, with audit report and source code; the
 human-validation gold standard (\texttt{gold\_labels.csv}), the
 inter-rater reliability report and the blind annotation tool ship with the
@@ -2708,7 +2717,7 @@ contributing cities; the count is sensitive to the income data
 vintage and to the GTFS-stop buffer, both of which are documented
 hyperparameters of the audit.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.75\linewidth]{fig06_mobility_deserts.pdf}
 \caption{Top fifteen French urban areas by number of dock-based
