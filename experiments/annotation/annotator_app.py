@@ -313,6 +313,8 @@ if "just_saved" not in st.session_state:
     st.session_state.just_saved = False
 if "last_saved_station" not in st.session_state:
     st.session_state.last_saved_station = ""
+if "session_count" not in st.session_state:
+    st.session_state.session_count = 0
 
 
 # =====================================================================
@@ -616,13 +618,7 @@ st.markdown(
 
 if st.session_state.just_saved:
     prev = st.session_state.last_saved_station
-    st.markdown(
-        f"<div class='transition-msg'>"
-        f"Station <code>{prev}</code> enregistrée. "
-        f"Passage automatique à la station suivante."
-        f"</div>",
-        unsafe_allow_html=True,
-    )
+    st.toast(f"Station {prev} enregistrée", icon="✅")
     st.session_state.just_saved = False
 
 st.markdown(
@@ -644,7 +640,7 @@ def _build_map_html(
     net_json = json.dumps(network_points, ensure_ascii=False)
     sid_safe = json.dumps(str(station_id))
     return f"""
-    <div id="annomap" style="width:100%;height:480px;border-radius:6px;
+    <div id="annomap" style="width:100%;height:600px;border-radius:6px;
          border:1px solid #d0d5dd;"></div>
     <link rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -675,11 +671,13 @@ def _build_map_html(
           .bindPopup('<b>Station à évaluer</b><br>' + {sid_safe})
           .openPopup();
 
+        // Radius ring is available via the layer control but off by
+        // default to reduce visual noise.
         var radius300 = L.circle([lat, lon], {{
             radius: 300, color: '#1A6FBF', weight: 1.5,
             fillColor: '#1A6FBF', fillOpacity: 0.04,
             dashArray: '6,4'
-        }}).addTo(map);
+        }});
 
         var netGroup = L.layerGroup();
         var netData = {net_json};
@@ -736,12 +734,200 @@ def _build_map_html(
 
 
 # =====================================================================
-# Two columns : Map | Metadata + Pipeline
+# Annotation panel (isolated fragment + persistence)
 # =====================================================================
 
-col_left, col_right = st.columns([3, 2])
+def _existing_label(options, existing_rec, field):
+    """Display label for a previously stored option key (prefill helper)."""
+    if not existing_rec:
+        return None
+    key = existing_rec.get(field)
+    for k, lbl in options:
+        if k == key:
+            return lbl
+    return None
 
-with col_left:
+
+def _persist(
+    row, station_key, stratum, lat, lon,
+    ground_label, infra_labels, sv_date,
+    cap_label, loc_label, verdict_label, confidence, notes,
+    is_skip=False,
+):
+    elapsed_s = time.time() - st.session_state.start_times.get(
+        station_key, time.time(),
+    )
+    if is_skip:
+        ground_key, infra_keys = "indetermine", []
+        cap_key, loc_key, verdict_key = (
+            "impossible", "integree_reseau", "skipped",
+        )
+        conf_val, sv, nt = 0, "", ""
+    else:
+        ground_key = _opt_key(GROUND_OPTIONS, ground_label) or "indetermine"
+        infra_keys = [
+            k for k in (
+                _opt_key(INFRA_OPTIONS, l) for l in (infra_labels or [])
+            ) if k
+        ]
+        cap_key = _opt_key(CAPACITY_OPTIONS, cap_label) or "impossible"
+        loc_key = _opt_key(LOCATION_OPTIONS, loc_label) or "integree_reseau"
+        verdict_key = _opt_key(VERDICT_OPTIONS, verdict_label) or "indetermine"
+        conf_val = confidence or 3
+        sv = (sv_date or "").strip()
+        nt = (notes or "").strip()
+
+    store.save({
+        "session_id": st.session_state.session_id,
+        "annotator": annotator_id,
+        "system_id": str(row["system_id"]),
+        "station_id": str(row["station_id"]),
+        "stratum": stratum,
+        "lat": lat,
+        "lon": lon,
+        "ground_reality": ground_key,
+        "infrastructure_elements": infra_keys,
+        "streetview_date": sv,
+        "capacity_assessment": cap_key,
+        "location_assessment": loc_key,
+        "verdict": verdict_key,
+        "confidence": conf_val,
+        "notes": nt,
+        "duration_s": round(elapsed_s, 1),
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        **{
+            f"flag_A{i}": int(bool(row.get(f"flag_A{i}", False)))
+            for i in range(1, 8)
+            if f"flag_A{i}" in row.index
+        },
+    })
+    st.session_state.start_times.pop(station_key, None)
+    st.session_state.just_saved = True
+    st.session_state.last_saved_station = str(row.get("station_id", ""))
+    if not is_skip:
+        st.session_state.session_count += 1
+    if "nav_select" in st.session_state:
+        del st.session_state["nav_select"]
+
+
+@st.fragment
+def _annotation_panel(row, station_key, existing, cap_val, stratum, lat, lon):
+    """Annotation controls isolated in a fragment: interacting with a
+    widget reruns only this panel, so the Leaflet map never reloads."""
+    st.markdown("**1 · Observation**")
+    ground = st.segmented_control(
+        "Type d'installation",
+        _opt_labels(GROUND_OPTIONS),
+        default=_existing_label(GROUND_OPTIONS, existing, "ground_reality"),
+        key=f"ground_{station_key}",
+    )
+    infra = st.pills(
+        "Éléments visibles sur le terrain",
+        _opt_labels(INFRA_OPTIONS),
+        selection_mode="multi",
+        default=_opt_default_labels(
+            INFRA_OPTIONS,
+            existing.get("infrastructure_elements") if existing else None,
+        ),
+        key=f"infra_{station_key}",
+    )
+    sv_date = st.text_input(
+        "Date imagerie Street View (facultatif)",
+        value=(existing or {}).get("streetview_date", "") or "",
+        placeholder="ex : juin 2024",
+        key=f"svdate_{station_key}",
+    )
+
+    st.markdown("**2 · Évaluation**")
+    cap_display = (
+        cap_val if pd.notna(cap_val) and str(cap_val) != "nan" else "NaN"
+    )
+    cap = st.segmented_control(
+        f"Capacité = {cap_display}. Cohérente ?",
+        _opt_labels(CAPACITY_OPTIONS),
+        default=_existing_label(
+            CAPACITY_OPTIONS, existing, "capacity_assessment",
+        ),
+        key=f"cap_{station_key}",
+    )
+    loc = st.segmented_control(
+        "Position dans le réseau de l'opérateur",
+        _opt_labels(LOCATION_OPTIONS),
+        default=_existing_label(
+            LOCATION_OPTIONS, existing, "location_assessment",
+        ),
+        key=f"loc_{station_key}",
+    )
+
+    st.markdown("**3 · Synthèse**")
+    verdict = st.segmented_control(
+        "Vraie station vélo, présente et correctement décrite ?",
+        _opt_labels(VERDICT_OPTIONS),
+        default=_existing_label(VERDICT_OPTIONS, existing, "verdict"),
+        key=f"verdict_{station_key}",
+    )
+    conf = st.pills(
+        "Confiance (1 = incertain · 5 = très sûr)",
+        CONFIDENCE_OPTIONS,
+        default=(existing or {}).get("confidence", 3),
+        key=f"conf_{station_key}",
+    )
+    notes = st.text_area(
+        "Remarques (facultatif)",
+        value=(existing or {}).get("notes", "") or "",
+        placeholder="Date imagerie, station en travaux, doute...",
+        key=f"notes_{station_key}",
+        height=70,
+    )
+
+    missing = []
+    if ground is None:
+        missing.append("Installation")
+    if cap is None:
+        missing.append("Capacité")
+    if loc is None:
+        missing.append("Position")
+    if verdict is None:
+        missing.append("Synthèse")
+    all_ok = not missing
+
+    b1, b2 = st.columns([3, 1])
+    save = b1.button(
+        "Enregistrer et continuer",
+        type="primary",
+        disabled=not all_ok,
+        use_container_width=True,
+        key=f"save_{station_key}",
+    )
+    skip = b2.button(
+        "Passer", use_container_width=True, key=f"skip_{station_key}",
+    )
+    if missing:
+        st.caption("À compléter : " + ", ".join(missing))
+
+    if save and all_ok:
+        _persist(
+            row, station_key, stratum, lat, lon,
+            ground, infra, sv_date, cap, loc, verdict, conf, notes,
+            is_skip=False,
+        )
+        st.rerun(scope="app")
+    if skip:
+        _persist(
+            row, station_key, stratum, lat, lon,
+            None, None, None, None, None, None, None, None,
+            is_skip=True,
+        )
+        st.rerun(scope="app")
+
+
+# =====================================================================
+# Split-screen : dominant map (left) | annotation panel (right)
+# =====================================================================
+
+col_map, col_panel = st.columns([1.4, 1])
+
+with col_map:
     if lat is not None and lon is not None:
         network_points: list[dict] = []
         if full_cat is not None:
@@ -758,12 +944,14 @@ with col_left:
                 same[["lat", "lon"]].dropna().to_dict("records")
             )
 
-        st.components.v1.html(
+        # st.iframe replaces the deprecated st.components.v1.html
+        # (removed after 2026-06-01); it embeds the HTML string in a
+        # sandboxed iframe that runs the Leaflet scripts.
+        st.iframe(
             _build_map_html(
                 lat, lon, str(row["station_id"]), network_points,
             ),
-            height=500,
-            scrolling=False,
+            height=620,
         )
 
         sv_url = (
@@ -816,7 +1004,7 @@ with col_left:
         st.warning("Coordonnées indisponibles pour cette station.")
 
 
-with col_right:
+with col_panel:
     st.markdown("**Métadonnées GBFS**")
     cap_val = row.get("capacity", "?")
     meta_pairs = [
@@ -921,217 +1109,5 @@ with col_right:
             )
 
 
-# =====================================================================
-# Evaluation form (linear flow, horizontal controls)
-# =====================================================================
-
-with st.form(f"annotation_{station_key}", clear_on_submit=False):
-
-    # -- Observation --
-
-    st.markdown("**Observation**")
-
-    ground_selected = st.radio(
-        "Type d'installation à cet emplacement",
-        _opt_labels(GROUND_OPTIONS),
-        index=_opt_index(
-            GROUND_OPTIONS,
-            existing["ground_reality"] if existing else None,
-        ),
-        horizontal=True,
-        key=f"ground_{station_key}",
-    )
-
-    infra_selected = st.multiselect(
-        "Éléments visibles sur le terrain",
-        _opt_labels(INFRA_OPTIONS),
-        default=_opt_default_labels(
-            INFRA_OPTIONS,
-            existing["infrastructure_elements"] if existing else None,
-        ),
-        key=f"infra_{station_key}",
-    )
-
-    sv_date = st.text_input(
-        "Date imagerie Street View (facultatif)",
-        value=(existing or {}).get("streetview_date", "") or "",
-        placeholder="ex : juin 2024",
-        key=f"svdate_{station_key}",
-    )
-
-    # -- Évaluation --
-
-    st.markdown("**Évaluation technique**")
-
-    cap_display = (
-        cap_val
-        if pd.notna(cap_val) and str(cap_val) != "nan"
-        else "NaN"
-    )
-    cap_selected = st.radio(
-        f"Capacité déclarée = {cap_display}. Cohérente ?",
-        _opt_labels(CAPACITY_OPTIONS),
-        index=_opt_index(
-            CAPACITY_OPTIONS,
-            existing["capacity_assessment"] if existing else None,
-        ),
-        horizontal=True,
-        key=f"cap_{station_key}",
-    )
-
-    loc_selected = st.radio(
-        "Position par rapport au réseau de l'opérateur",
-        _opt_labels(LOCATION_OPTIONS),
-        index=_opt_index(
-            LOCATION_OPTIONS,
-            existing["location_assessment"] if existing else None,
-        ),
-        horizontal=True,
-        key=f"loc_{station_key}",
-    )
-
-    # -- Synthèse (verdict factuel, agnostique au pipeline) --
-
-    st.markdown("**Synthèse**")
-
-    verdict_selected = st.radio(
-        "Est-ce une vraie station de vélos en libre-service, "
-        "physiquement présente et correctement décrite ?",
-        _opt_labels(VERDICT_OPTIONS),
-        index=_opt_index(
-            VERDICT_OPTIONS,
-            existing["verdict"] if existing else None,
-        ),
-        horizontal=True,
-        key=f"verdict_{station_key}",
-    )
-
-    conf_col, notes_col = st.columns([1, 3])
-    with conf_col:
-        _prev_conf = (existing or {}).get("confidence", 3)
-        confidence = st.radio(
-            "Confiance",
-            CONFIDENCE_OPTIONS,
-            index=_prev_conf - 1,
-            horizontal=True,
-            key=f"conf_{station_key}",
-        )
-        st.caption("1 = incertain · 5 = très confiant")
-    with notes_col:
-        notes = st.text_area(
-            "Remarques (facultatif)",
-            value=(existing or {}).get("notes", "") or "",
-            placeholder="Date imagerie, station en travaux, doute...",
-            key=f"notes_{station_key}",
-            height=80,
-        )
-
-    # -- Actions --
-
-    missing: list[str] = []
-    if ground_selected is None:
-        missing.append("Installation")
-    if cap_selected is None:
-        missing.append("Capacité")
-    if loc_selected is None:
-        missing.append("Position")
-    if verdict_selected is None:
-        missing.append("Verdict")
-
-    btn_col1, btn_col2 = st.columns([3, 1])
-    with btn_col1:
-        save_btn = st.form_submit_button(
-            "Enregistrer et continuer",
-            type="primary",
-            use_container_width=True,
-        )
-    with btn_col2:
-        skip_btn = st.form_submit_button(
-            "Passer",
-            use_container_width=True,
-        )
-
-    if missing and not skip_btn:
-        st.caption(
-            "Manquant : **" + "**, **".join(missing) + "**"
-        )
-
-
-# =====================================================================
-# Form submission
-# =====================================================================
-
-def _save_annotation(verdict_val: str, is_skip: bool = False) -> None:
-    elapsed_s = time.time() - st.session_state.start_times.get(
-        station_key, time.time(),
-    )
-    ground_key = (
-        _opt_key(GROUND_OPTIONS, ground_selected)
-        if not is_skip
-        else "indetermine"
-    )
-    infra_keys = (
-        [_opt_key(INFRA_OPTIONS, l) for l in (infra_selected or [])]
-        if not is_skip
-        else []
-    )
-    cap_key = (
-        _opt_key(CAPACITY_OPTIONS, cap_selected)
-        if not is_skip
-        else "impossible"
-    )
-    loc_key = (
-        _opt_key(LOCATION_OPTIONS, loc_selected)
-        if not is_skip
-        else "integree_reseau"
-    )
-
-    store.save({
-        "session_id": st.session_state.session_id,
-        "annotator": annotator_id,
-        "system_id": str(row["system_id"]),
-        "station_id": str(row["station_id"]),
-        "stratum": stratum,
-        "lat": lat,
-        "lon": lon,
-        "ground_reality": ground_key,
-        "infrastructure_elements": [k for k in infra_keys if k],
-        "streetview_date": sv_date.strip() if not is_skip else "",
-        "capacity_assessment": cap_key,
-        "location_assessment": loc_key,
-        "verdict": verdict_val,
-        "confidence": confidence if not is_skip else 0,
-        "notes": notes.strip() if not is_skip else "",
-        "duration_s": round(elapsed_s, 1),
-        "created_at": datetime.now(timezone.utc).isoformat(),
-        **{
-            f"flag_A{i}": int(bool(row.get(f"flag_A{i}", False)))
-            for i in range(1, 8)
-            if f"flag_A{i}" in row.index
-        },
-    })
-    st.session_state.start_times.pop(station_key, None)
-    st.session_state.just_saved = True
-    st.session_state.last_saved_station = str(row.get("station_id", ""))
-    # Auto-avance vers la prochaine station en attente
-    if "nav_select" in st.session_state:
-        del st.session_state["nav_select"]
-
-
-if save_btn:
-    if missing:
-        st.error(
-            "Impossible d'enregistrer : complétez "
-            + ", ".join(missing)
-            + " avant de valider."
-        )
-    else:
-        verdict_key = (
-            _opt_key(VERDICT_OPTIONS, verdict_selected) or "indetermine"
-        )
-        _save_annotation(verdict_key)
-        st.rerun()
-
-if skip_btn:
-    _save_annotation("skipped", is_skip=True)
-    st.rerun()
+    # Annotation form (isolated fragment — the map never reloads on input)
+    _annotation_panel(row, station_key, existing, cap_val, stratum, lat, lon)
