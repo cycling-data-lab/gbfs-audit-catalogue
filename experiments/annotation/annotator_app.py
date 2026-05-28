@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from storage import AnnotationStore
+from storage import get_store
 
 # =====================================================================
 # Paths
@@ -368,7 +368,15 @@ with st.sidebar:
 # Storage init + legacy migration
 # =====================================================================
 
-store = AnnotationStore()
+try:
+    store = get_store()
+except Exception as exc:  # noqa: BLE001
+    st.error(
+        "Connexion à la base de données impossible. Vérifiez "
+        "`ANNOTATION_DB_URL` dans les secrets Streamlit.\n\n"
+        f"Détail : {exc}"
+    )
+    st.stop()
 
 legacy_path = LABELS_DIR / f"labels_{annotator_id}.csv"
 if store.count(annotator_id) == 0 and legacy_path.exists():

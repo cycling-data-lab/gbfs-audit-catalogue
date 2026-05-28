@@ -33,7 +33,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-app = ["streamlit>=1.40.0"]
+app = ["streamlit>=1.40.0", "psycopg2-binary>=2.9.0"]
 notebook = ["jupyter>=1.0.0", "ipykernel>=6.25.0"]
 hub = ["datasets>=4.0.0", "huggingface_hub[cli]>=1.0.0"]
 test = ["pytest>=7.4.0", "pytest-cov>=4.1.0"]
