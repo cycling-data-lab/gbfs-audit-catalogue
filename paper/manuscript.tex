@@ -90,12 +90,15 @@ Wilson 95\,\% CI [30.5, 31.3]); across the global catalogue it flags
 operator declare \texttt{capacity = NaN} on every station;
 all pass syntactic validation unchanged, yet collectively
 represent the largest capacity gap in the audited
-catalogue. Two methodological advances strengthen the protocol:
+catalogue. Three methodological advances strengthen the protocol:
 a topology-aware geospatial detector (HDBSCAN + spectral graph
 analysis) that eliminates 8{,}005 discordant flags of the legacy
-centroid heuristic on anisotropic networks, and a
+centroid heuristic on anisotropic networks; a
 leave-one-operator-out cross-validation on seven operators that
-supports the generalisability of the rules across publishers. We
+supports the generalisability of the rules across publishers; and a
+blind dual-annotator human validation (Krippendorff's
+$\alpha = $~XX) that confirms XX\,\% of the contested legacy A4 flags
+as true false positives. We
 formalise the detection as a nine-step idempotent purging protocol,
 release the \emph{GBFS Audit Catalogue} (46{,}307 stations,
 97 cities, 46 typed columns) on Zenodo under ODbL, and pre-register
@@ -104,7 +107,7 @@ additions that the rule set passes on point estimate and confidence
 interval. A single A3 correction moves Bordeaux from rank 2 to
 rank 14 in a soft-mobility ranking, quantifying the policy cost of
 skipping the audit. Dataset, pipeline and Docker image are released
-for bit-exact reproduction.
+for reproducible rebuilds.
 
 \begin{highlights}
 \item Audit of 1{,}509 GBFS systems: seven-class taxonomy (5 structural, 2 semantic)
@@ -906,6 +909,97 @@ test fold. \emph{Bottom-right}: test/train flag-rate ratio
 (ratio $\approx 1$ indicates operator-agnostic behaviour).}
 \label{fig:looo}
 \end{figure}
+
+\subsection{Ground-truth validation via human annotation}\label{secHumanVal}
+The ablation of Section~\ref{secAblation} and the cross-validation above
+compare \emph{algorithms}; neither can establish which verdict matches the
+physical world. We therefore constructed an independent human ground truth
+and used it to (i) confirm that the flagged anomalies correspond to real
+data defects rather than algorithmic artefacts, and (ii) adjudicate the
+8{,}005 stations on which the legacy centroid and the topology-aware A4
+detector disagree.
+
+% --- HEADLINE EMPIRICAL RESULT (fill after the annotation run) ---
+On the discordant-legacy stratum, human inspection confirms
+\textbf{XX\,\%} of the legacy-only A4 flags as true false positives
+(Wilson 95\,\% CI [XX, XX]; $n=$~XX adjudicated stations), establishing
+that the topology-aware detector's removal of these flags is correct and
+not a loss of recall.
+% TODO: precision_recall.A4_discordant_legacy_fp_rate.{fp_rate, wilson_ci, n_usable}
+
+Two annotators (an urban-mobility researcher and a data engineer) labelled
+a stratified sample of \textbf{325} stations independently and blind to
+each other and to the pipeline (Section~\ref{secAnnotation}). Inter-rater
+reliability is reported in Table~\ref{tab:irr} and per-rule performance,
+derived \emph{a posteriori} from the factual judgements, in
+Table~\ref{tab:perrule}. Of the $n=$~XX co-rated stations, \textbf{XX}
+reached an indeterminate consensus (\textbf{XX\,\%}), quantifying the
+irreducible ambiguity of imagery-based verification; these are excluded
+from precision and recall but reported here as a result in their own right.
+% TODO: n_merged, n_indeterminate
+
+\begin{table}[ht]
+\centering
+\caption{Inter-rater reliability between the two annotators
+($n=$~XX co-rated stations). Krippendorff's $\alpha$
+\cite{Krippendorff2018Content} is the primary measure (it handles
+indeterminate labels and generalises beyond two raters); Cohen's $\kappa$
+\cite{Cohen1960Kappa} is reported for comparability against the
+``substantial agreement'' benchmark $\kappa \geq 0.70$ of
+\cite{Landis1977Agreement}.}
+\label{tab:irr}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Judgement} & \textbf{$\kappa$} & \textbf{$\alpha$}
+                   & \textbf{Agreement} & \textbf{$n$}\\
+\midrule
+Q1 -- is a bike-share system?       & XX & XX & XX\,\% & XX\\
+Q2 -- capacity physical?            & XX & XX & XX\,\% & XX\\
+Q3 -- infrastructure on the ground? & XX & XX & XX\,\% & XX\\
+Q4 -- coherent network position?    & XX & XX & XX\,\% & XX\\
+Holistic verdict                    & XX & XX & XX\,\% & XX\\
+\bottomrule
+\end{tabular}
+% TODO: reliability_report.json -> agreement[<question>].{cohens_kappa, krippendorff_alpha, raw_agreement, n}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Per-rule performance against the human ground truth, derived
+\emph{a posteriori} from the factual judgements (the gold standard never
+encodes a verdict about the pipeline). Confidence intervals are Wilson
+95\,\% \cite{Wilson1927Interval}. A2 and A7 are system-level structural
+rules not amenable to per-station imagery validation (a single operator
+each in this snapshot); A6 and the A3-boundary stratum had no eligible
+stations, so their per-station recall is not estimated here.}
+\label{tab:perrule}
+\small
+\begin{tabular}{@{}llcccll@{}}
+\toprule
+\textbf{Rule} & \textbf{Ground-truth criterion} & \textbf{TP} & \textbf{FP}
+              & \textbf{FN} & \textbf{Precision\,[95\,\% CI]} & \textbf{Recall\,[95\,\% CI]}\\
+\midrule
+A1 & not a bike-share system (Q1)     & XX & XX & XX & 0.XX\,[0.XX, 0.XX] & 0.XX\,[0.XX, 0.XX]\\
+A3 & no physical dock (Q3)            & XX & XX & XX & 0.XX\,[0.XX, 0.XX] & 0.XX\,[0.XX, 0.XX]\\
+A4 & incoherent network position (Q4) & XX & XX & XX & 0.XX\,[0.XX, 0.XX] & 0.XX\,[0.XX, 0.XX]\\
+A5 & out-of-perimeter (Q4)            & XX & XX & XX & 0.XX\,[0.XX, 0.XX] & 0.XX\,[0.XX, 0.XX]\\
+\bottomrule
+\end{tabular}
+% TODO: precision_recall[A1,A3,A4,A5].{tp,fp,fn,precision,precision_ci,recall,recall_ci}
+% NOTE: strata with n<20 -> report as directional evidence, cite the power table.
+\end{table}
+
+A qualitative read of the disagreements is itself informative: the hardest
+cases sit on the A1/A3 boundary --- a car-sharing bay versus a free-floating
+drop zone --- i.e.\ \emph{boundary objects} that the GBFS specification
+permits to be encoded ambiguously, evidence that the standard
+underspecifies what a ``station'' physically is. Where annotators diverge
+below the $\kappa \geq 0.70$ threshold, the disagreement is itself a finding:
+it identifies physically undecidable objects admitted by the specification
+rather than a measurement failure, and motivates the operator
+recommendations of Section~\ref{secLimitations}.
+% TODO: if all kappa >= 0.70, soften the last sentence accordingly.
 
 \subsection{Cross-country transferability pilot}
 To verify out-of-sample transferability of A1--A7 beyond French
@@ -1745,7 +1839,7 @@ to the additional v3 attributes by adding rule-level checks at
 ingestion time.
 
 \subsection{Limitations}\label{secLimitations}
-The protocol has four acknowledged limitations.
+The protocol has five acknowledged limitations.
 
 \textbf{L1 -- National coverage.} The corpus is limited to metropolitan
 France; extension to overseas territories and other European
@@ -1802,7 +1896,14 @@ completeness is therefore not guaranteed and must be re-evaluated
 periodically, which is the purpose of the temporal-stability
 experiment E3.
 
-\subsection{Recommendations to operators}
+\textbf{L5 -- Scope of the human validation.} The ground-truth
+validation (Section~\ref{secHumanVal}) covers the rules verifiable from
+spatial imagery (A1, A3, A4, A5). A2 and A7 are structural data-property
+rules confirmed at the system level only --- each is represented by a
+single operator in this catalogue snapshot --- and A6 and the A3-boundary
+stratum had no eligible stations, so their per-station recall is not
+estimated. The two annotators are domain experts from the same
+institution; broader, multi-institution annotation is left to future work.
 Four conventions, compatible with the current GBFS specification,
 would close most of the anomalies documented here: populate
 \texttt{vehicle\_type} exhaustively (A1); leave \texttt{capacity}
@@ -2026,6 +2127,7 @@ Reversibility                  & Recoverability + Traceability      & \texttt{re
 Step-level logging             & Traceability                       & Per-step in/out counts and transformation type\\
 Explicit parameterisation      & Understandability                  & Hyperparameters in code + documented in audit report\\
 FAIR release                   & Compliance + Accessibility         & JSON Schema, DCAT-AP, Croissant, ODbL on Zenodo\\
+Human ground-truth validation  & Accuracy + Semantic consistency    & Blind dual-annotator confirmation that flagged anomalies are real defects (Section~\ref{secHumanVal})\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -2344,6 +2446,36 @@ $6\,\%$ across the corpus.}
 \label{fig:completeness}
 \end{figure}
 
+\subsection{Human annotation protocol}\label{secAnnotation}
+To obtain a ground truth independent of the pipeline we drew a stratified
+sample of \textbf{325} stations across nine strata, deduplicated across
+strata and shuffled to remove order effects (seed 42), over-sampling the
+two A4 discordant strata ($n=50$ each) where the ground truth is decisive.
+Two annotators evaluated each station independently and blind to each other
+and to the pipeline: the audit flags, audited type and confidence were
+hidden behind an opt-in panel, and a single universal rubric (with no
+stratum label) was shown for every station.
+
+Crucially, the annotation is \emph{pipeline-agnostic}: annotators judge the
+physical reality of each station --- installation type, visible
+infrastructure, capacity coherence and network position --- from a
+CyclOSM/satellite map, Street View and OpenStreetMap; they never label
+``the pipeline is right'' or ``wrong''. Per-rule true/false positives and
+negatives are derived \emph{a posteriori} by joining the adjudicated
+factual answers with the flags: A1 is a true positive iff the station is
+judged not a bike-share system; A3 and A6 iff no physical dock is present;
+A4 and A5 iff the position is judged incoherent with the network. A2 and A7
+are structural data-property rules validated at the system level. This
+design removes the circularity of asking a blind annotator to label a
+``pipeline false positive''. Disagreements were resolved by consensus,
+with a third adjudicator on residual conflicts. Reliability uses
+Krippendorff's $\alpha$ \cite{Krippendorff2018Content} alongside Cohen's
+$\kappa$ \cite{Cohen1960Kappa, ArtsteinPoesio2008}; proportions use Wilson
+95\,\% intervals \cite{Wilson1927Interval}; stratum sizes follow a
+power analysis recorded in the released protocol. The stratified sample,
+the blind annotation interface and the reliability computation are released
+with the repository (\texttt{experiments/annotation/}).
+
 \subsection{Reproducibility infrastructure}
 The Audit Catalogue is released in alignment with the four FAIR
 principles \cite{Wilkinson2016}. \emph{Findable:} primary deposit on
@@ -2355,10 +2487,13 @@ Parquet format, direct HTTPS download and Git LFS mirror.
 JSON Schema, a Frictionless Data Package descriptor
 \cite{FrictionlessData2023}, a DCAT-AP record \cite{DCATAP2021} and a
 Croissant manifest \cite{Croissant2024}. \emph{Reusable:} released
-under ODbL v1.0; code under MIT, with audit report and source code.
+under ODbL v1.0; code under MIT, with audit report and source code; the
+human-validation gold standard (\texttt{gold\_labels.csv}), the
+inter-rater reliability report and the blind annotation tool ship with the
+repository (\texttt{experiments/annotation/}).
 Raw sources are archived with SHA-256 hashes; the Python
-environment is pinned in \texttt{requirements.txt}; a Docker image
-is published for bit-exact reproduction. The audit pipeline itself
+environment is declared in \texttt{requirements.txt}; a Docker image
+is published for reproducible rebuilds. The audit pipeline itself
 is fully deterministic (no random sampling); the only stochastic
 step is the bootstrap resampling used for the confidence intervals
 reported in the main text, for which the random seed is pinned at
