@@ -26,7 +26,11 @@ class TestEntropy:
         assert H > 0.9
 
     def test_bimodal_has_intermediate_entropy(self):
-        series = np.array([0] * 50 + [10] * 50, dtype=float)
+        # Unbalanced two-state series -> high but not maximal entropy.
+        # A balanced 50/50 split is uniform over its support, so its
+        # normalised entropy is exactly 1.0; an unbalanced split yields a
+        # genuinely intermediate value strictly between 0 and 1.
+        series = np.array([0] * 70 + [10] * 30, dtype=float)
         H = _normalised_entropy(series)
         assert 0.0 < H < 1.0
 
