@@ -96,6 +96,7 @@ The full machine-readable schema ships as a JSON Schema, a Frictionless Data Pac
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @article{Fosse2026gbfs,
   author  = {Foss\'e, Rohan and Pallares, Ga\"el},
@@ -114,6 +115,7 @@ The full machine-readable schema ships as a JSON Schema, a Frictionless Data Pac
   doi       = {10.5281/zenodo.20125460}
 }
 ```
+{% endraw %}
 
 ---
 
