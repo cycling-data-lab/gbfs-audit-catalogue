@@ -7,9 +7,9 @@ description: A reproducible audit of 1,509 open bike-sharing feeds across 48 cou
 theme: jekyll-theme-cayman
 show_downloads: false
 google_analytics:
-# url stub for hyperlink rewriting (none required for project pages)
-baseurl: ""
-url: "https://rohanfosse.github.io/bikeshare-data-explorer"
+# Project page served at https://cycling-data-lab.github.io/gbfs-audit-catalogue/
+baseurl: "/gbfs-audit-catalogue"
+url: "https://cycling-data-lab.github.io"
 
 # Use kramdown + Rouge for code highlighting consistent with GitHub-style.
 markdown: kramdown

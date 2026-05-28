@@ -1,4 +1,8 @@
-# GBFS Audit Catalogue
+---
+layout: default
+title: GBFS Audit Catalogue
+description: A reproducible audit of 1,509 open bike-sharing feeds across 48 countries.
+---
 
 **A reproducible audit of 1,509 open bike-sharing feeds across 48 countries.**
 
