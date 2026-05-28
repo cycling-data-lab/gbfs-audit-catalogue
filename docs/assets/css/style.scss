@@ -28,8 +28,8 @@ $line: #e4ecf3;
 
   h1, h2, h3 { color: $ink; }
   h2 {
-    border-bottom: 2px solid $line;
-    padding-bottom: 0.3rem;
+    border-bottom: none;
+    padding-bottom: 0;
     margin-top: 2.3rem;
     font-weight: 700;
   }
