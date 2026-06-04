@@ -45,3 +45,4 @@ Thumbs.db
 experiments/annotation/annotations.db
 experiments/annotation/labels_*.csv
 experiments/annotation/labels_v2_*.csv
+experiments/annotation/reliability*.json
