@@ -47,7 +47,7 @@ verrouillé et publication des labels bruts.
 Pour chaque station je veux savoir : **(1) y a-t-il des docks physiques, (2) la
 bonne taille (capacité) dedans, (3) est-elle placée au bon endroit.**
 
-## Instrument proposé (v2) : 4 questions binaires EN CASCADE
+## Instrument proposé (v2) : 4 questions binaires EN ARBRE DE DÉCISION
 
 Chaque question = oui / non / indéterminé. `indéterminé` est enregistré, jamais
 forcé. Le routage conditionnel évite de poser une question hors-contexte.
@@ -86,14 +86,14 @@ A5⟺Q3=non, A6⟺Q1=non. A7 reste système-niveau (non vérifiable sur imagerie
 4. **Q2 — tolérance ±50 %** : est-ce raisonnable vu l'imprécision du comptage
    de docks sur imagerie ? Proposerais-tu une autre bande, ou une échelle
    ordinale (sous-estimé / correct / sur-estimé) plutôt qu'un binaire ?
-5. **Routage conditionnel** : la logique de cascade est-elle correcte ? Y a-t-il
+5. **Routage conditionnel** : la logique d'arbre de décision conditionnel est-elle correcte ? Y a-t-il
    un cas de station réelle qui tombe dans un trou (aucune feuille valide) ?
 6. **Biais d'anchoring** : montrer la capacité brute du flux en Q2 est-il un
    problème ? Et l'overlay des stations sœurs en Q3 ?
 7. **Contrainte 2-auteurs** : au-delà du pré-enregistrement et du codebook
    verrouillé, que recommandes-tu pour rendre l'accord crédible malgré
    l'absence d'annotateur externe ?
-8. **Métriques** : pour un instrument en cascade, vaut-il mieux reporter
+8. **Métriques** : pour un instrument en arbre de décision, vaut-il mieux reporter
    l'α par question sur l'ensemble co-routé, ou un α sur le verdict composite,
    ou les deux ? Pièges statistiques du routage conditionnel sur le calcul d'accord ?
 

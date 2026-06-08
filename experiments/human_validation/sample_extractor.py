@@ -1,19 +1,19 @@
-"""Extract the stratified sample for the cascade annotation campaign (v2).
+"""Extract the stratified sample for the human-validation annotation campaign (v2).
 
 Same sampling philosophy as ``experiments/annotation/sample_extractor.py``
 (stratify by the route the pipeline predicts, deduplicate across strata,
 shuffle to kill order effects) but resized so every decision-tree node of the
-cascade instrument (see PROTOCOL.md) receives >= 50 dual-rated stations, and
+decision-tree instrument (see PROTOCOL.md) receives >= 50 dual-rated stations, and
 with a new ``clean_freefloating`` negative-control stratum that v1 lacked.
 
 The output CSV carries one empty column per tree node instead of the v1
 Q1..Q5 columns, plus a per-node evidence-log column.
 
 Usage:
-    python -m experiments.annotation_cascade.sample_extractor \
+    python -m experiments.human_validation.sample_extractor \
         --catalogue catalogue/stations_gold_standard_final.parquet \
         --ablation results/xp2/xp2_ablation.parquet \
-        --output experiments/annotation_cascade/sample.csv
+        --output experiments/human_validation/sample.csv
 """
 from __future__ import annotations
 
@@ -26,24 +26,44 @@ import pandas as pd
 
 SEED = 42
 
-# Strata sized for the cascade (PROTOCOL.md Section 4). A4 discordant strata
-# stay at 50-60 (core contribution, tightest CI). clean_freefloating is the
-# new negative control for the M1.Q2=NO / M1.Q4=NO leaf. A2/A7 are pool-capped
-# single-operator strata, validated at the system level.
+# Sampling design (PROTOCOL.md Section 4), ~435 stations total:
+#   - a random prevalence sample (SRS) of SRS_N stations drawn from the whole
+#     catalogue, for catalogue-level prevalence (+/-5.7% at 95% with n=300) and
+#     for validating the common classes (docked, free-floating/A3), which are
+#     abundant under random sampling;
+#   - operator-balanced BOOSTER strata for the rare / decisive classes an SRS
+#     cannot cover: the two A4 discordant sets (core ablation), A1, A5, A2.
+# A6/A7/A3-boundary are not per-station validatable here (empty or
+# system-level) and are validated at the system level instead.
+SRS_N = 300
 STRATA_N = {
-    "clean_docked": 70,
-    "ff_honest_capacity": 60,
-    "A1_carsharing": 60,
-    "A2_placeholder": 40,
-    "A3_freefloating": 70,
-    "A4_agree_flag": 40,
-    "A4_discordant_legacy": 60,
-    "A4_discordant_composite": 60,
-    "A5_out_of_perimeter": 40,
-    "A6_zero_capacity": 10,
-    "A7_null_capacity": 30,
-    "A3_boundary": 20,
+    "A1_carsharing": 30,            # spread across the ~17 car-sharing systems
+    "A2_placeholder": 10,           # mono-operator: parser fidelity, system-level
+    "A4_discordant_legacy": 40,     # core: confirm the legacy centroid FP
+    "A4_discordant_composite": 40,  # core: are the new composite flags real?
+    "A5_out_of_perimeter": 15,
 }
+
+
+def _balanced_pick(pool: pd.DataFrame, n: int, seed: int,
+                   max_per_system: int | None = None) -> pd.DataFrame:
+    """Round-robin pick across distinct systems to maximise operator diversity.
+
+    The publication variance lives at the operator level, not the station level,
+    so a flat ``sample(n)`` that returns 50 stations of one operator has an
+    effective n close to 1. This spreads the draw across as many systems as
+    possible (one per system, then two per system, ...) and optionally caps the
+    number of stations per system."""
+    if len(pool) <= n and max_per_system is None:
+        return pool
+    shuffled = pool.sample(frac=1, random_state=seed).reset_index(drop=True)
+    sys_order = {s: i for i, s in enumerate(shuffled["system_id"].drop_duplicates())}
+    shuffled["_rank"] = shuffled.groupby("system_id").cumcount()
+    if max_per_system is not None:
+        shuffled = shuffled[shuffled["_rank"] < max_per_system]
+    shuffled["_sord"] = shuffled["system_id"].map(sys_order)
+    shuffled = shuffled.sort_values(["_rank", "_sord"]).head(n)
+    return shuffled.drop(columns=["_rank", "_sord"])
 
 
 def extract_sample(
@@ -70,31 +90,37 @@ def extract_sample(
                 stacklevel=2,
             )
             return pd.DataFrame()
-        s = pool.sample(min(n, len(pool)), random_state=SEED).copy()
+        # cap per system so no single operator dominates a stratum (effective n)
+        cap = max(4, n // 8)
+        s = _balanced_pick(pool, min(n, len(pool)), SEED, max_per_system=cap).copy()
         s["stratum"] = stratum
+        n_sys = s["system_id"].nunique()
+        if n_sys < 5 and stratum not in ("A2_placeholder", "A7_null_capacity"):
+            warnings.warn(
+                f"Stratum '{stratum}': only {n_sys} distinct system(s) "
+                f"({len(s)} stations) - per-rule CI will be operator-bound.",
+                stacklevel=2,
+            )
         seen_keys.update(s.apply(_key, axis=1))
         return s
 
     cat = catalogue.copy()
 
-    clean = cat[(cat["station_type"] == "docked_bike")
-                & (cat["audit_confidence"] == "high")]
-    samples.append(_sample(clean, "clean_docked"))
+    # 1) Random prevalence sample (SRS), drawn FIRST so it is a true random
+    #    sample of the population; the targeted boosters below come from the
+    #    rest, so the two sets do not overlap.
+    srs = cat.sample(min(SRS_N, len(cat)), random_state=SEED).copy()
+    srs["stratum"] = "random_prevalence"
+    srs["_key"] = srs.apply(_key, axis=1)
+    seen_keys.update(srs["_key"])
+    srs.drop(columns=["_key"], inplace=True)
+    samples.append(srs)
 
-    # Hardest case for A3: free-floating with a small, honest declared
-    # capacity (1-3). In this catalogue every free_floating is flagged A3,
-    # so this stratum tests whether imagery still confirms "no physical dock"
-    # (A3 precision) even when the declared capacity is not inflated.
-    ff_honest = cat[(cat["station_type"] == "free_floating")
-                    & (cat["capacity"].fillna(0).between(1, 3))]
-    samples.append(_sample(ff_honest, "ff_honest_capacity"))
-
+    # 2) Operator-balanced boosters for the rare / decisive classes the SRS
+    #    cannot cover. Common classes (docked, free-floating/A3) are validated
+    #    from the SRS.
     samples.append(_sample(cat[cat["flag_A1"] == True], "A1_carsharing"))  # noqa: E712
     samples.append(_sample(cat[cat["flag_A2"] == True], "A2_placeholder"))  # noqa: E712
-    samples.append(_sample(
-        cat[(cat["flag_A3"] == True) & (cat["flag_A2"] == False)],  # noqa: E712
-        "A3_freefloating",
-    ))
 
     if ablation is not None:
         meta_cols = [
@@ -104,7 +130,6 @@ def extract_sample(
         flag_cols = [f"flag_A{i}" for i in range(1, 8) if f"flag_A{i}" in cat.columns]
         join_cols = [c for c in meta_cols + flag_cols if c in cat.columns]
         for cls, name in [
-            ("AGREE_FLAG", "A4_agree_flag"),
             ("FP_LEGACY", "A4_discordant_legacy"),
             ("FN_COMPOSITE", "A4_discordant_composite"),
         ]:
@@ -113,23 +138,17 @@ def extract_sample(
                 merged = pool.merge(
                     cat[join_cols], on=["system_id", "station_id"], how="left",
                 )
+                # car-sharing terminates at Q0 (= A1) and never reaches the
+                # geospatial node, so keep it out of the A4 strata.
+                if "flag_A1" in merged.columns:
+                    merged = merged[merged["flag_A1"] != True]  # noqa: E712
                 samples.append(_sample(merged, name))
 
     if "flag_A5" in cat.columns:
-        samples.append(_sample(cat[cat["flag_A5"] == True], "A5_out_of_perimeter"))  # noqa: E712
-    samples.append(_sample(cat[cat["flag_A6"] == True], "A6_zero_capacity"))  # noqa: E712
-    samples.append(_sample(
-        cat[(cat["flag_A7"] == True) & (cat["flag_A3"] == False)],  # noqa: E712
-        "A7_null_capacity",
-    ))
-
-    docked = cat[(cat["station_type"] == "docked_bike")
-                 & (cat["capacity"].notna()) & (cat["capacity"] > 0)]
-    if len(docked) > 0:
-        stats = docked.groupby("system_id")["capacity"].agg(["mean", "median"])
-        stats["ratio"] = stats["mean"] / stats["median"].clip(lower=0.01)
-        boundary_sys = stats[(stats["ratio"] >= 2) & (stats["ratio"] <= 5)].index
-        samples.append(_sample(cat[cat["system_id"].isin(boundary_sys)], "A3_boundary"))
+        samples.append(_sample(
+            cat[(cat["flag_A5"] == True) & (cat["flag_A1"] == False)],  # noqa: E712
+            "A5_out_of_perimeter",
+        ))
 
     valid = [s for s in samples if len(s) > 0]
     if not valid:
@@ -144,17 +163,16 @@ def extract_sample(
         "flag_A6", "flag_A7", "audit_confidence",
     ] if c in result.columns]
 
-    # One empty column per cascade question (v3 schema, see QUESTIONS.md).
+    # One empty column per decision-tree node (v2 schema, see QUESTIONS.md).
     # The Streamlit app writes answers to the DB, not to these columns; they
     # exist only for an optional manual-CSV workflow and for documentation.
-    #   Q0 domain gate, Q1 docks present, Q2 ordinal dock count,
-    #   Q3a perimeter valid, Q3b within network.
+    #   Q0 = 5-way type, Q2 ordinal dock count (si VLS à borne),
+    #   Q3a perimeter valid, Q3b within network (si VLS à/sans borne).
     node_cols = [
-        "Q0_libre_service",     # oui/non/indetermine
-        "Q1_docks_presents",    # oui/non/indetermine  (si Q0=oui)
-        "Q2_nb_docks_classe",   # 1-5/6-10/.../>50/indet  (si Q1=oui)
-        "Q3a_perimetre",        # oui/non/indetermine  (si Q0=oui)
-        "Q3b_proximite",        # oui/non/indetermine  (si Q0=oui)
+        "Q0_type",              # vls_borne/vls_sans_borne/trottinettes/autopartage/rien/indéterminé
+        "Q2_nb_docks_classe",   # 0/1-5/.../>50/indéterminé  (si Q0=vls_borne)
+        "Q3a_perimetre",        # oui/non/indéterminé  (si Q0 vélo)
+        "Q3b_proximite",        # oui/non/indéterminé  (si Q0 vélo)
         "verdict",              # derived label, left blank (script derives it)
     ]
     for c in node_cols:

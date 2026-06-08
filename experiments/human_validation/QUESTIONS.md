@@ -1,6 +1,6 @@
-# Cascade Annotation — Detailed Question Specification (v2)
+# Human-Validation Annotation — Detailed Question Specification (v2)
 
-Four plain questions in a conditional cascade. Q1/Q2/Q3 are the three audit
+Four plain questions in a conditional decision tree. Q1/Q2/Q3 are the three audit
 objectives (docks present? right size? right place?); Q0 is a domain gate that
 exists only to keep car-sharing out and to validate rule A1. Each answer is
 **oui / non / indéterminé**; `indéterminé` is recorded, never forced.

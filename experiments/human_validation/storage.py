@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Persistent storage for the cascade annotation campaign (v2).
+"""Persistent storage for the human-validation annotation campaign (v2).
 
 Same backend strategy as ``experiments/annotation/storage.py`` (SQLite local
 by default, PostgreSQL/Supabase if ``ANNOTATION_DB_URL`` is set) but with the
-cascade schema: four routed questions (Q0..Q3b), a per-question evidence log,
+v2 schema: four routed questions (Q0..Q3b), a per-question evidence log,
 and the two rigor fields recommended in review (gold-trap flag, test-retest
 round).
 
@@ -20,13 +20,13 @@ from typing import Any
 
 import pandas as pd
 
-_DEFAULT_DB = Path(__file__).resolve().parent / "annotations_cascade.db"
+_DEFAULT_DB = Path(__file__).resolve().parent / "annotations_v2.db"
 
 _COLUMNS = [
     "session_id", "annotator", "system_id", "station_id", "stratum",
     "lat", "lon",
-    "q0_libre_service", "q1_docks_presents", "q2_nb_docks_classe",
-    "q3a_perimetre", "q3b_proximite",
+    "q0_type", "q2_nb_docks_classe", "q3a_perimetre", "q3b_proximite",
+    "sv_date", "sv_pano_id", "sv_status",
     "verdict", "evidence", "notes",
     "is_trap", "revisit_round", "duration_s", "created_at",
     "flag_A1", "flag_A2", "flag_A3", "flag_A4",
@@ -36,7 +36,7 @@ _COLUMNS = [
 _FLAG_RENAME = {f"flag_a{i}": f"flag_A{i}" for i in range(1, 8)}
 
 _SQLITE_SCHEMA = """\
-CREATE TABLE IF NOT EXISTS annotations (
+CREATE TABLE IF NOT EXISTS annotations_v2 (
     id                 INTEGER PRIMARY KEY AUTOINCREMENT,
     session_id         TEXT NOT NULL,
     annotator          TEXT NOT NULL,
@@ -45,11 +45,13 @@ CREATE TABLE IF NOT EXISTS annotations (
     stratum            TEXT,
     lat                REAL,
     lon                REAL,
-    q0_libre_service   TEXT,
-    q1_docks_presents  TEXT,
+    q0_type            TEXT,
     q2_nb_docks_classe TEXT,
     q3a_perimetre      TEXT,
     q3b_proximite      TEXT,
+    sv_date            TEXT,
+    sv_pano_id         TEXT,
+    sv_status          TEXT,
     verdict            TEXT,
     evidence           TEXT,
     notes              TEXT,
@@ -62,13 +64,13 @@ CREATE TABLE IF NOT EXISTS annotations (
     flag_A5 INTEGER DEFAULT 0, flag_A6 INTEGER DEFAULT 0,
     flag_A7 INTEGER DEFAULT 0
 );
-CREATE INDEX IF NOT EXISTS idx_c_annotator ON annotations(annotator);
+CREATE INDEX IF NOT EXISTS idx_c_annotator ON annotations_v2(annotator);
 CREATE UNIQUE INDEX IF NOT EXISTS idx_c_unique
-    ON annotations(annotator, system_id, station_id, revisit_round);
+    ON annotations_v2(annotator, system_id, station_id, revisit_round);
 """
 
 _PG_SCHEMA = """
-CREATE TABLE IF NOT EXISTS annotations (
+CREATE TABLE IF NOT EXISTS annotations_v2 (
     id                 BIGSERIAL PRIMARY KEY,
     session_id         TEXT NOT NULL,
     annotator          TEXT NOT NULL,
@@ -77,11 +79,13 @@ CREATE TABLE IF NOT EXISTS annotations (
     stratum            TEXT,
     lat                DOUBLE PRECISION,
     lon                DOUBLE PRECISION,
-    q0_libre_service   TEXT,
-    q1_docks_presents  TEXT,
+    q0_type            TEXT,
     q2_nb_docks_classe TEXT,
     q3a_perimetre      TEXT,
     q3b_proximite      TEXT,
+    sv_date            TEXT,
+    sv_pano_id         TEXT,
+    sv_status          TEXT,
     verdict            TEXT,
     evidence           TEXT,
     notes              TEXT,
@@ -93,9 +97,9 @@ CREATE TABLE IF NOT EXISTS annotations (
     flag_A3 INTEGER DEFAULT 0, flag_A4 INTEGER DEFAULT 0,
     flag_A5 INTEGER DEFAULT 0, flag_A6 INTEGER DEFAULT 0,
     flag_A7 INTEGER DEFAULT 0,
-    CONSTRAINT uq_cascade UNIQUE (annotator, system_id, station_id, revisit_round)
+    CONSTRAINT uq_v2 UNIQUE (annotator, system_id, station_id, revisit_round)
 );
-CREATE INDEX IF NOT EXISTS idx_c_annotator ON annotations(annotator);
+CREATE INDEX IF NOT EXISTS idx_c_annotator ON annotations_v2(annotator);
 """
 
 
@@ -106,14 +110,14 @@ class _Base:
     def get_all(self, annotator: str) -> pd.DataFrame: raise NotImplementedError
     def count(self, annotator: str) -> int: raise NotImplementedError
     def median_duration(self, annotator: str): raise NotImplementedError
+    def delete_last(self, annotator: str, revisit_round: int = 0) -> None: raise NotImplementedError
     def close(self) -> None: ...
 
     def export_csv(self, annotator: str, path: Path) -> None:
         """Export in the column layout expected by compute_reliability.py."""
         df = self.get_all(annotator)
         rename = {
-            "q0_libre_service": "Q0_libre_service",
-            "q1_docks_presents": "Q1_docks_presents",
+            "q0_type": "Q0_type",
             "q2_nb_docks_classe": "Q2_nb_docks_classe",
             "q3a_perimetre": "Q3a_perimetre",
             "q3b_proximite": "Q3b_proximite",
@@ -136,42 +140,49 @@ class AnnotationStore(_Base):
         names = ", ".join(present)
         ph = ", ".join(["?"] * len(present))
         cur = self._conn.execute(
-            f"INSERT OR REPLACE INTO annotations ({names}) VALUES ({ph})",
+            f"INSERT OR REPLACE INTO annotations_v2 ({names}) VALUES ({ph})",
             list(present.values()))
         self._conn.commit()
         return cur.lastrowid or 0
 
     def get_done_keys(self, annotator: str, revisit_round: int = 0) -> set[str]:
         rows = self._conn.execute(
-            "SELECT system_id, station_id FROM annotations "
+            "SELECT system_id, station_id FROM annotations_v2 "
             "WHERE annotator = ? AND revisit_round = ?",
             (annotator, revisit_round)).fetchall()
         return {f"{r['system_id']}|{r['station_id']}" for r in rows}
 
     def get_annotation(self, annotator, system_id, station_id, revisit_round=0):
         r = self._conn.execute(
-            "SELECT * FROM annotations WHERE annotator=? AND system_id=? "
+            "SELECT * FROM annotations_v2 WHERE annotator=? AND system_id=? "
             "AND station_id=? AND revisit_round=?",
             (annotator, system_id, station_id, revisit_round)).fetchone()
         return dict(r) if r else None
 
     def get_all(self, annotator: str) -> pd.DataFrame:
         return pd.read_sql_query(
-            "SELECT * FROM annotations WHERE annotator=? ORDER BY created_at",
+            "SELECT * FROM annotations_v2 WHERE annotator=? ORDER BY created_at",
             self._conn, params=(annotator,))
 
     def count(self, annotator: str) -> int:
         r = self._conn.execute(
-            "SELECT COUNT(*) AS n FROM annotations WHERE annotator=?",
+            "SELECT COUNT(*) AS n FROM annotations_v2 WHERE annotator=?",
             (annotator,)).fetchone()
         return r["n"] if r else 0
 
     def median_duration(self, annotator: str):
         rows = self._conn.execute(
-            "SELECT duration_s FROM annotations WHERE annotator=? "
+            "SELECT duration_s FROM annotations_v2 WHERE annotator=? "
             "AND verdict != 'skipped' AND duration_s > 0 ORDER BY duration_s",
             (annotator,)).fetchall()
         return _median([r["duration_s"] for r in rows])
+
+    def delete_last(self, annotator: str, revisit_round: int = 0) -> None:
+        self._conn.execute(
+            "DELETE FROM annotations_v2 WHERE id = (SELECT id FROM annotations_v2 "
+            "WHERE annotator=? AND revisit_round=? ORDER BY created_at DESC, id DESC "
+            "LIMIT 1)", (annotator, revisit_round))
+        self._conn.commit()
 
     def close(self) -> None:
         self._conn.close()
@@ -192,7 +203,7 @@ class PostgresAnnotationStore(_Base):
         updates = ", ".join(
             f"{c}=EXCLUDED.{c}" for c in present
             if c not in ("annotator", "system_id", "station_id", "revisit_round"))
-        sql = (f"INSERT INTO annotations ({names}) VALUES ({ph}) "
+        sql = (f"INSERT INTO annotations_v2 ({names}) VALUES ({ph}) "
                f"ON CONFLICT (annotator, system_id, station_id, revisit_round) "
                f"DO UPDATE SET {updates}")
         with self._conn.cursor() as cur:
@@ -202,7 +213,7 @@ class PostgresAnnotationStore(_Base):
     def get_done_keys(self, annotator: str, revisit_round: int = 0) -> set[str]:
         with self._conn.cursor() as cur:
             cur.execute(
-                "SELECT system_id, station_id FROM annotations "
+                "SELECT system_id, station_id FROM annotations_v2 "
                 "WHERE annotator=%s AND revisit_round=%s",
                 (annotator, revisit_round))
             return {f"{a}|{b}" for a, b in cur.fetchall()}
@@ -210,7 +221,7 @@ class PostgresAnnotationStore(_Base):
     def get_annotation(self, annotator, system_id, station_id, revisit_round=0):
         with self._conn.cursor() as cur:
             cur.execute(
-                "SELECT * FROM annotations WHERE annotator=%s AND system_id=%s "
+                "SELECT * FROM annotations_v2 WHERE annotator=%s AND system_id=%s "
                 "AND station_id=%s AND revisit_round=%s",
                 (annotator, system_id, station_id, revisit_round))
             r = cur.fetchone()
@@ -222,7 +233,7 @@ class PostgresAnnotationStore(_Base):
     def get_all(self, annotator: str) -> pd.DataFrame:
         with self._conn.cursor() as cur:
             cur.execute(
-                "SELECT * FROM annotations WHERE annotator=%s ORDER BY created_at",
+                "SELECT * FROM annotations_v2 WHERE annotator=%s ORDER BY created_at",
                 (annotator,))
             rows = cur.fetchall()
             cols = [_FLAG_RENAME.get(c.name, c.name) for c in cur.description]
@@ -230,17 +241,24 @@ class PostgresAnnotationStore(_Base):
 
     def count(self, annotator: str) -> int:
         with self._conn.cursor() as cur:
-            cur.execute("SELECT COUNT(*) FROM annotations WHERE annotator=%s",
+            cur.execute("SELECT COUNT(*) FROM annotations_v2 WHERE annotator=%s",
                         (annotator,))
             return int(cur.fetchone()[0])
 
     def median_duration(self, annotator: str):
         with self._conn.cursor() as cur:
             cur.execute(
-                "SELECT duration_s FROM annotations WHERE annotator=%s "
+                "SELECT duration_s FROM annotations_v2 WHERE annotator=%s "
                 "AND verdict <> 'skipped' AND duration_s > 0 ORDER BY duration_s",
                 (annotator,))
             return _median([r[0] for r in cur.fetchall()])
+
+    def delete_last(self, annotator: str, revisit_round: int = 0) -> None:
+        with self._conn.cursor() as cur:
+            cur.execute(
+                "DELETE FROM annotations_v2 WHERE id = (SELECT id FROM annotations_v2 "
+                "WHERE annotator=%s AND revisit_round=%s ORDER BY created_at DESC, "
+                "id DESC LIMIT 1)", (annotator, revisit_round))
 
     def close(self) -> None:
         self._conn.close()
