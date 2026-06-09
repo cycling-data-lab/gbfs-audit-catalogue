@@ -220,6 +220,22 @@ def _bind_shortcuts(mapping, nonce):
     components.html(js, height=0, width=0)
 
 
+def _autofocus(selector, nonce):
+    """Focus (and select) the first element matching `selector` in the parent
+    document. Identical content across reruns means Streamlit reuses the iframe
+    and the script fires only once per screen, so it never steals focus back
+    while the annotator is interacting with the rest of the form."""
+    js = (
+        "<script>/*" + str(nonce) + "*/(function(){"
+        "var d=window.parent.document, sel=" + json.dumps(selector) + ";"
+        "function f(){var el=d.querySelector(sel);"
+        "if(el){el.focus();try{el.select();}catch(e){}}}"
+        "f();setTimeout(f,80);"
+        "})();</script>"
+    )
+    components.html(js, height=0, width=0)
+
+
 # ============================================================================
 st.set_page_config(page_title="Validation humaine de l'audit GBFS",
                    layout="centered")
@@ -530,15 +546,17 @@ def _flow():
         st.caption(summary)
         note = st.text_input("Remarque (facultatif)", key=f"note_{station_key}")
         c_save, c_reset = st.columns([3, 1])
-        if c_save.button("Enregistrer et station suivante", type="primary",
-                         use_container_width=True):
+        if c_save.button("Enregistrer et station suivante  (Entrée)", key="savenext",
+                         type="primary", use_container_width=True):
             _persist(ans, note)
             st.rerun(scope="app")
         if c_reset.button("Recommencer", use_container_width=True):
             st.session_state.pop(f"ans_{station_key}", None)
             st.rerun(scope="fragment")
         st.markdown("</div>", unsafe_allow_html=True)
-        _bind_shortcuts({}, f"{station_key}|review")
+        # Enter saves + advances. The keydown hook lets Enter through even from
+        # the note field, so typing a remark then hitting Enter also saves.
+        _bind_shortcuts({"savenext": "enter"}, f"{station_key}|review")
         return
 
     q = QUESTIONS[current]
@@ -580,6 +598,9 @@ def _flow():
             ans[q["col"]] = "indéterminé" if imposs else str(int(nb))
             st.rerun(scope="fragment")
         kbmap["q2valider"] = "enter"
+        # Drop the cursor straight into the count field so the annotator can
+        # type the number and hit Enter without touching the mouse.
+        _autofocus("[class*='st-key-num_'] input", f"{station_key}|q2focus")
     else:                                 # binary - OUI / NON, Indéterminé détaché
         oui, non = st.columns(2)
         if oui.button("[1]  OUI", key="ansoui", use_container_width=True):
