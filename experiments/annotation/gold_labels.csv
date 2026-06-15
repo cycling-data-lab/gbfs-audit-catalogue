@@ -1,0 +1,326 @@
+system_id,station_id,stratum,gold_Q1_is_bikeshare,disagree_Q1_is_bikeshare,gold_Q2_capacity_physical,disagree_Q2_capacity_physical,gold_Q3_exists_at_coords,disagree_Q3_exists_at_coords,gold_Q4_within_perimeter,disagree_Q4_within_perimeter,gold_Q5_verdict,disagree_Q5_verdict
+cergy,54905,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-paris,861325a8-fcde-450a-b7ef-c6e1978b79d4,A3_freefloating,non,False,oui,False,,True,oui,False,station problématique,False
+choletbus,stn_GVEPc8q7RzeKRH5R6SYBEt,A4_discordant_composite,,True,,True,,True,oui,False,,True
+velopop,cpbfghsqessegmi81dgg,clean_docked,,True,,True,,True,oui,False,,True
+velocite,stn_3kUZMHxF4oaWxjzoWCHwGi,A4_discordant_composite,,True,,True,oui,False,oui,False,,True
+velozef,cirqbhsg3q5td18hqi80,A2_placeholder,non,False,,True,,True,oui,False,station problématique,False
+dott-paris,5130186d-aa31-4863-a470-1f4e0094b54c,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+citiz_grand_est,259,A5_out_of_perimeter,non,False,,True,non,False,oui,False,station problématique,False
+pony_Angers,BikeRack Juret 2,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+dott-bordeaux,84258fa5-9d0a-4ba8-8543-758910b75550,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+velozef,st_d52j6o2ebjgc73d7avv0,A2_placeholder,oui,False,,True,oui,False,oui,False,,True
+bird-bordeaux,4309a848-3986-4555-9d18-57e94d5c0b2f,A3_freefloating,non,False,,True,non,False,oui,False,station problématique,False
+pony_Angers,angers_parking_Proposition___Arceau_Vallon_zid4H4LQCD5,A4_discordant_legacy,non,False,,True,,True,oui,False,station problématique,False
+le_velo_star,5535,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Optymo_Belfort_ALS,d28bca5c-9f12-48fc-9f82-66a7d9f3fb6c,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+dott-paris,5f98af5c-4ea0-4e63-932d-ea58f034cd90,A3_freefloating,,True,,True,,True,oui,False,station problématique,False
+Optymo_Belfort_ALS,50a9a79c-79bc-4ca1-9c69-ed4f45411b1f,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+voi_Marseille,b089d4cc-636c-49fc-8404-c6e1a0c74c60,A4_agree_flag,non,False,indéterminé,False,non,False,,True,station problématique,False
+bird-vichy,b2fdce32-67ab-420f-9128-aefcd7d37145,A4_agree_flag,non,False,,True,non,False,,True,station problématique,False
+calais-velos,69,A4_agree_flag,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Paris,54000547,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+v_lille,242,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+velozef,cirqc2kg3q5td18hr1gg,A2_placeholder,oui,False,,True,oui,False,oui,False,,True
+dott-gpseo,4911de22-e5c6-41a2-9d5b-12eb95673abc,A4_discordant_legacy,non,False,,True,non,False,,True,station problématique,False
+citiz_alpes_loire,997,A1_carsharing,,True,,True,,True,oui,False,station problématique,False
+lyon,1023,A5_out_of_perimeter,non,False,,True,,True,oui,False,station problématique,False
+velozef,st_d52j60ko7dgs73ca65e0,A2_placeholder,non,False,,True,,True,,True,station problématique,False
+Optymo_Belfort_ALS,e1c8594a-f54e-4ee6-a57e-c4111fed20d4,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+bird-bordeaux,3cf0dec5-f15c-4573-b115-2b4dcb83d4af,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+bird-laval,e44e0581-7841-4a4a-b262-a2f9841b86a2,A3_freefloating,,True,,True,non,False,oui,False,station problématique,False
+citiz_alpes_loire,1815,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+citiz_grand_est,192,A5_out_of_perimeter,non,False,,True,non,False,oui,False,station problématique,False
+velopop,cpbfgh40a5bcngo02sc0,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_grand_est,167,A4_discordant_legacy,non,False,,True,,True,oui,False,station problématique,False
+Optymo_Belfort_ALS,347e2191-4d05-447d-bb65-cb3ba7027a03,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+dott-paris,9a4c8e01-894f-4845-b612-7a76600ec66c,A4_discordant_legacy,,True,,True,oui,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,27f09500-a988-4875-9ef0-72aa73877e7a,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+dott-paris,3fdee56e-7bb8-4b76-98b1-e5b6bed5d174,A4_discordant_legacy,,True,,True,,True,oui,False,station problématique,False
+citiz_grand_est,245,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+toulouse,74,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Optymo_Belfort_ALS,2ef6cd3d-3b63-45e3-a001-234c84dce8d5,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+vilvolt_epinal,cle719kcjsjn0coovpag,A4_agree_flag,non,False,,True,non,False,,True,,True
+citiz_angers,278,A4_discordant_composite,non,False,,True,,True,oui,False,station problématique,False
+beb,stn_Lm3VNhCDCCWGie5594UZKD,clean_docked,non,False,indéterminé,False,non,False,oui,False,,True
+pony_paris,paris_parking_MORILLONS_zidJYRK7VY5,A3_freefloating,non,False,indéterminé,False,oui,False,oui,False,station problématique,False
+voi_Grenoble,d559ce99-3485-4868-84ea-60f635657a4f,A4_discordant_legacy,non,False,indéterminé,False,non,False,,True,station problématique,False
+citiz_grand_est,76,A1_carsharing,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,1311c18c-b9a2-4e42-b0b6-cfcd5de36065,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+velozef,cirqblkg3q5td18hqm7g,A2_placeholder,,True,,True,oui,False,oui,False,,True
+Optymo_Belfort_ALS,c2430a85-0f13-43e5-a584-27954115c7a3,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+citiz_metropole_lyon,361,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+nantes,35,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+velozef,cirqbq4g3q5td18hqph0,A2_placeholder,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+velozef,cirqbmkg3q5td18hqn8g,A2_placeholder,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Paris,19697937136,clean_docked,,True,indéterminé,False,non,False,oui,False,,True
+velozef,cirqbqcg3q5td18hqplg,A2_placeholder,,True,,True,,True,,True,,True
+velozef,cirqc2cg3q5td18hr120,A2_placeholder,oui,False,,True,oui,False,oui,False,vraie station (légitime),False
+grand-est,st_d34n08mmbtds73f5vdcg,A5_out_of_perimeter,,True,,True,,True,,True,station problématique,False
+lyon,5005,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_grand_est,229,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+calais,stn_8WQURqherzFNRsNbRKGR5c,clean_docked,non,False,indéterminé,False,non,False,oui,False,,True
+citiz_alpes_loire,836,A1_carsharing,,True,indéterminé,False,non,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,ee4a47cc-c0da-4102-8545-5b9a70982a17,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+tempovelo,stn_bBWcSvQCV6dQJkb3uw2dRV,A4_discordant_composite,oui,False,,True,oui,False,oui,False,vraie station (légitime),False
+citiz_metropole_lyon,1183,A1_carsharing,oui,False,,True,oui,False,oui,False,,True
+dott-paris,30a88f62-484f-4705-af2b-159704ee66e8,A3_freefloating,non,False,,True,non,False,oui,False,station problématique,False
+pony_Herouville,Herouville_parking_64,A4_discordant_composite,non,False,,True,non,False,oui,False,station problématique,False
+v_lille,216,A4_discordant_legacy,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+pony_paris,paris_parking_VAN_LOO_zidQKALDJ1X,A4_discordant_legacy,,True,,True,oui,False,oui,False,station problématique,False
+nantes,9,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+le_velo_star,5506,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-paris,6dce9cad-eb99-4a48-8ee8-5507af562970,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+bird-bordeaux,8cc232dc-1834-4656-a123-65c004eca215,A3_freefloating,,True,,True,oui,False,,True,,True
+idecycle_pau,st_d3d5976mbtds73dja9ug,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+velozef,cirqbskg3q5td18hqqmg,A2_placeholder,oui,False,,True,oui,False,oui,False,,True
+citiz_grand_est,1107,A5_out_of_perimeter,,True,indéterminé,False,non,False,non,False,station problématique,False
+pony_Evry,evry_parking_Rue_Emile_Biort_zid08F8ZAU4,A4_agree_flag,,True,,True,non,False,oui,False,station problématique,False
+dott-bordeaux,dc5b5e94-8efd-41d3-838d-2d22ec7a7b38,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+bird-bordeaux,83118b56-e35c-427e-8a02-9511d3489a38,A3_freefloating,non,False,,True,,True,oui,False,station problématique,False
+pony_Herouville,Herouville_21_Boulevard_Charles_Poullain,A3_freefloating,non,False,,True,non,False,oui,False,station problématique,False
+bird-bordeaux,b61f5538-5d9a-455f-ac8e-0a0fd851d47f,A3_freefloating,non,False,,True,,True,oui,False,station problématique,False
+dott-bordeaux,64d525d1-fa6d-4049-8293-08c3a5d8a71c,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+levelo_inurba_marseille,chh1huq6cuj3fo74tm60,clean_docked,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+pony_Herouville,Herouville_parking_143,A4_discordant_composite,non,False,,True,non,False,,True,station problématique,False
+bird-draguignan,46780d9d-6d8a-40e9-8d8b-05d3f60017cc,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+inurba-rouen,5011,A4_agree_flag,,True,,True,oui,False,oui,False,,True
+auxrmlevelo,ch8cipdlc8te4d3h84vg,A4_discordant_composite,,True,indéterminé,False,,True,non,False,station problématique,False
+Optymo_Belfort_ALS,e204330b-088e-4e06-8652-ccc03363dc0b,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+tempovelo,stn_ktr222ez4etYF5D4unKbL2,A4_discordant_composite,,True,,True,,True,oui,False,,True
+citiz_rennes_metropole,1683,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+dijon,22,A4_discordant_composite,,True,,True,,True,oui,False,,True
+cyclolibre,stn_RQQZWSTr5Eyjxcg49dadWi,A4_discordant_composite,,True,indéterminé,False,,True,oui,False,,True
+levelo_inurba_marseille,st_d3jp68qikq2c7381ktn0,clean_docked,,True,,True,,True,oui,False,,True
+auray-quiberon,cqocpipmrgc3lc0gde6g,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+toulouse,385,clean_docked,,True,,True,,True,oui,False,,True
+tanlib,stn_d7hQ9mvcr5MQEiCHfjijbV,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+vilvolt_epinal,cle6np4cjsjn0conscj0,A4_agree_flag,,True,indéterminé,False,non,False,,True,station problématique,False
+Optymo_Belfort_ALS,f4c34bb4-5e55-41e6-9378-1102fa7d329c,A7_null_capacity,non,False,,True,oui,False,oui,False,station problématique,False
+bird-millau,f5029000-e899-4c5d-83cb-3827a6ba8232,A4_discordant_composite,non,False,,True,non,False,oui,False,station problématique,False
+citiz_rennes_metropole,1821,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,b9ade083-519b-4915-b964-59cd759d1e11,A7_null_capacity,oui,False,,True,oui,False,oui,False,station problématique,False
+dott-gpseo,eeae1fc7-0c46-420c-8ad0-abea98460230,A3_freefloating,non,False,,True,non,False,oui,False,station problématique,False
+dott-paris,84e17d1f-dd1b-42ae-a318-7747a17d97b0,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+pony_paris,paris_parking_SIMPLON_zidYYHAQDZM,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+Paris,66491368,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+pony_La_Roche_Sur_Yon,la_roche_sur_yon_parking_La_Noue_zidDUZQ70BQ,A4_discordant_composite,non,False,,True,non,False,oui,False,station problématique,False
+dott-paris,0dc1d212-9304-452b-b4b8-789829e0bba8,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+Paris,20497547989,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+citiz_developpement,53,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+montpellier,041,A4_agree_flag,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+montpellier,039,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_gironde,609,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+citiz_angers,286,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+bird-bordeaux,6037a1af-a60a-4ecd-9e58-59e5bb9945b8,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+impulsyon,stn_a2BM5JGRBA2GVAz7tPDuvL,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_developpement,1641,A5_out_of_perimeter,non,False,,True,non,False,non,False,station problématique,False
+lyon,7057,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dijon,35,clean_docked,non,False,,True,non,False,oui,False,station problématique,False
+bird-ajaccio,da7b7129-674b-4c03-9875-400a92f438f0,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+velozef,cirqc14g3q5td18hqvj0,A2_placeholder,non,False,,True,non,False,oui,False,station problématique,False
+velozef,cirqbjsg3q5td18hqkt0,A2_placeholder,non,False,,True,oui,False,oui,False,station problématique,False
+pony_paris,paris_parking_PAU_CASALS_zidM60BCR7A,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+bird-millau,0ebecdf5-6c30-4de7-8ada-581f0c88fcaa,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+citiz_gironde,691,A1_carsharing,non,False,,True,oui,False,oui,False,station problématique,False
+dott-lyon,f1fd9915-243b-491c-970a-ca2670f60c7c,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+amiens,114,clean_docked,non,False,,True,non,False,oui,False,station problématique,False
+pony_paris,paris_parking_SAINT_HONORE_zid1FX7MBZA,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+Paris,128841079,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-lyon,bd92e450-8e86-483d-8535-49f68ea49380,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+citiz_grand_est,220,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+dott-paris,480828b8-1c05-421e-a442-2cf4e37b2d38,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+bird-gap,236bdb95-ffca-493a-9c1a-3176ecf667bf,A4_agree_flag,non,False,,True,oui,False,oui,False,station problématique,False
+citiz_grand_est,241,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+cyclam,stn_J3ph8f8hgUnpWvbJXj993c,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Paris,235241110,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+labaule,stn_gYz6VVkfwAyHzsjCknvG9H,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_gironde,665,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+velocite,stn_EvBPTc3ZfAxrmkeKJygest,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_grand_poitiers,1487,A4_discordant_composite,non,False,,True,non,False,oui,False,station problématique,False
+dott-lyon,86a1488b-b446-4e1b-8eaa-34f34841d314,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+bird-bordeaux,5f02a525-bba5-4b83-a892-058f68417832,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+velozef,cirqbn4g3q5td18hqnfg,A2_placeholder,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_grand_est,1264,A5_out_of_perimeter,non,False,,True,non,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,0d0d97cd-27e9-4b75-8269-fa7ae3d1c703,A7_null_capacity,non,False,,True,oui,False,oui,False,station problématique,False
+grand-est,st_d34n06embtds7381rajg,A5_out_of_perimeter,non,False,,True,oui,False,oui,False,station problématique,False
+bird-laval,0337e45d-b62a-4f65-87cd-83381bcf7353,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+lyon,3003,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+amiens,102,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+citiz_grand_est,80,A5_out_of_perimeter,non,False,,True,non,False,oui,False,station problématique,False
+auxrmlevelo,ch8cimllc8te4d3h8410,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_gironde,667,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+pony_Evry,Evry_parking_151,A3_freefloating,non,False,,True,,True,oui,False,station problématique,False
+inurba-rouen,3613,clean_docked,,True,oui,False,oui,False,oui,False,,True
+citiz_rennes_metropole,1563,A4_discordant_composite,non,False,,True,,True,oui,False,station problématique,False
+dott-bordeaux,8ec0022b-d831-42c8-b91a-46b50fa466b8,A4_discordant_legacy,non,False,,True,,True,oui,False,station problématique,False
+Optymo_Belfort_ALS,4d3a9251-6bfe-4717-99db-d3a06252353a,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+pony_bordeaux,bordeaux_parking_Arceau_10884_zidE3WBDTCR,A3_freefloating,non,False,,True,,True,oui,False,station problématique,False
+dott-paris,06aea842-3642-4028-b6a7-58e4c830a27c,A4_discordant_legacy,non,False,,True,,True,oui,False,station problématique,False
+pony_bordeaux,bordeaux_parking_Arceau_11700_zid31RFKN97,A3_freefloating,,True,,True,,True,oui,False,station problématique,False
+Optymo_Belfort_ALS,683ebe0b-ff1a-4ca9-8ecf-c9c4cbf2cc37,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,f3db772f-b649-4a2b-93a5-274136e2c368,A7_null_capacity,non,False,,True,,True,oui,False,station problématique,False
+lyon,2010,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-paris,5ce19e7c-53d4-40f3-8f62-dade9132eb1c,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+dott-paris,b04542ed-9ec6-424b-b27e-1bfc61825160,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+pony_Evry,evry_parking_5_rue_du_Bois_Sauvage_zidPYEYQP23,A4_agree_flag,non,False,,True,,True,oui,False,station problématique,False
+dott-bordeaux,b49ed06e-d03c-44f8-9309-0ca15b79ece0,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+levelo_inurba_marseille,ce4bho12rcd13ifvqh2g,clean_docked,,True,,True,,True,oui,False,,True
+pony_poitiers,poitiers_parking_Abris_Appuis_velos6411_zid66E8KL9E,A3_freefloating,non,False,,True,non,False,oui,False,station problématique,False
+Optymo_FR_Belfort,st_d18jddmrumbh8rh03ss0,A4_agree_flag,non,False,,True,non,False,oui,False,station problématique,False
+bird-bordeaux,c1de4bc3-0318-459a-98e5-bada152fd114,A4_discordant_legacy,,True,NaN (champ vide),False,oui,False,oui,False,station problématique,False
+pony_Angers,BikeRack 121 Patton,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+knot_strasbourg,51,A4_discordant_composite,non,False,indéterminé,False,,True,oui,False,station problématique,False
+citiz_grand_est,1234,A5_out_of_perimeter,non,False,indéterminé,False,oui,False,oui,False,station problématique,False
+dott-paris,f66e8f22-4a82-4ba4-b217-a7d193763278,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+citiz_alpes_loire,780,A1_carsharing,,True,indéterminé,False,non,False,oui,False,station problématique,False
+libelo,52,clean_docked,,True,,True,,True,oui,False,,True
+velozef,st_d52j7e2ebjgc73d7b0ig,A2_placeholder,non,False,indéterminé,False,non,False,,True,station problématique,False
+bird-vichy,2bb98b22-2cde-40b5-9a56-f2ff37989c6f,A4_discordant_composite,non,False,,True,non,False,oui,False,station problématique,False
+pony_paris,paris_parking_FIGUIER_zidZI2CM755,A3_freefloating,non,False,indéterminé,False,,True,oui,False,station problématique,False
+dott-paris,d9a74f8d-ac7c-4d81-ac78-957a18f47c40,A4_discordant_legacy,oui,False,,True,oui,False,oui,False,vraie station (légitime),False
+pony_Angers,BikeRack église st aubin,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+dott-paris,1b30a94a-5a9b-4916-a53a-8f67c0404e04,A3_freefloating,non,False,,True,oui,False,,True,station problématique,False
+tempovelo,stn_jS3qxxcWXSRuMLXNgAEK5y,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+amiens,130,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_grand_est,173,A5_out_of_perimeter,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+citiz_metropole_lyon,404,A1_carsharing,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+idecycle_pau,st_d3d5976mbtds73djaa20,A4_discordant_composite,oui,False,,True,oui,False,,True,vraie station (légitime),False
+velozef,cirqc1sg3q5td18hr090,A2_placeholder,oui,False,,True,oui,False,oui,False,,True
+bird-larochesuryon,a3b3e89f-5c54-4bf1-9c46-5be9e38a719b,A4_discordant_composite,non,False,,True,non,False,oui,False,station problématique,False
+montpellier,036,A4_agree_flag,oui,False,oui,False,oui,False,,True,,True
+levelo_inurba_marseille,ce4bhr92rcd13ifvqhsg,clean_docked,oui,False,,True,oui,False,oui,False,station problématique,False
+labaule,stn_WEMpofPk3uNNrYCA2Uoagq,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+tanlib,stn_SNZtYxcRJYnTAMaZ6zegBF,clean_docked,,True,,True,oui,False,oui,False,,True
+dott-paris,9a8ba4d3-3ca8-435b-bbe8-f6cdf5bd5d74,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+nextbike_af,551506281,A4_agree_flag,non,False,indéterminé,False,non,False,,True,station problématique,False
+idecycle_pau,st_d3d597embtds73djaadg,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-paris,f0921237-d000-467b-ac46-c760f25226d4,A3_freefloating,non,False,,True,non,False,oui,False,station problématique,False
+velivert_saint_etienne,chf7r1c3casf4nvmd3vg,A4_discordant_legacy,oui,False,,True,oui,False,oui,False,,True
+citiz_provence,1427,A1_carsharing,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+pony_bordeaux,bordeaux_parking_Arceau_14910_zidCWWRJ69V,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+lyon,3080,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-paris,9a8e7a15-a5f3-402f-b229-f1e511228c38,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+pony_bordeaux,bordeaux_parking_Arceau_14452_zid9W5RE9GU,A3_freefloating,non,False,,True,non,False,oui,False,station problématique,False
+Paris,82562496,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+velozef,st_d52j69co7dgs73ca65tg,A2_placeholder,non,False,indéterminé,False,,True,oui,False,station problématique,False
+amiens,138,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-paris,9bbbe4f7-134e-471e-a800-422f463eaaa8,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+calivelo,stn_KTXq2tQ6iQ97n5z4WJkne3,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Optymo_Belfort_ALS,10a87317-7863-452e-93b6-3fad65bf839d,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+voi_Grenoble,d7f70ed4-0a6c-4225-b55f-f27e97991952,A4_agree_flag,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+bird-millau,368daf5b-3045-4c8f-9a55-79427d2153af,A4_discordant_composite,non,False,,True,non,False,,True,station problématique,False
+Paris,128843085,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_grand_est,1738,A5_out_of_perimeter,non,False,,True,oui,False,oui,False,station problématique,False
+lyon,5007,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+lyon,3008,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-bordeaux,89834aee-3186-4ec4-b0d1-a259f3ab3814,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+Paris,653073004,A4_discordant_legacy,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+lyon,5041,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+voi_Marseille,0c4ba665-3f06-40b6-8d24-3feb42bf839d,A4_discordant_legacy,non,False,indéterminé,False,non,False,,True,station problématique,False
+bird-marseille,14961de0-be74-473a-8a60-32c4e912770c,A3_freefloating,non,False,,True,non,False,,True,station problématique,False
+pony_Evry,Evry_parking_114,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+dott-paris,376c7379-f7c8-4e87-8eb4-8785884412d8,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+toulouse,212,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+le_velo_star,5571,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_metropole_lyon,389,A1_carsharing,non,False,indéterminé,False,,True,oui,False,station problématique,False
+levelo_inurba_marseille,st_d2m6c4gdas8pm72e190g,A4_agree_flag,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+citiz_metropole_lyon,1150,A1_carsharing,non,False,indéterminé,False,oui,False,oui,False,station problématique,False
+zebullo,stn_VrvGS5wgqyeo6LzzwPFDnp,A4_discordant_composite,oui,False,,True,oui,False,oui,False,,True
+inurba-rouen,3566,clean_docked,,True,,True,oui,False,oui,False,,True
+Optymo_Belfort_ALS,e0736e44-a117-477b-ab31-b433e776dc56,A7_null_capacity,,True,NaN (champ vide),False,oui,False,oui,False,,True
+dott-paris,f3a7c35b-8890-4df0-a2d1-77925722572c,A4_discordant_legacy,,True,,True,oui,False,oui,False,station problématique,False
+lyon,2025,A5_out_of_perimeter,non,False,indéterminé,False,oui,False,oui,False,station problématique,False
+toulouse,230,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+choletbus,stn_dxQMkG4hdFdojnstdPXGpg,A4_discordant_composite,oui,False,,True,oui,False,oui,False,,True
+knot_strasbourg,103,A4_discordant_composite,non,False,,True,oui,False,oui,False,station problématique,False
+bird-montlucon,0f96fb17-8dbe-467e-9df0-c2dd823cc629,A4_discordant_composite,non,False,,True,non,False,,True,station problématique,False
+twisto_velolib_caen,ctbhn6o1snvdkble5qug,clean_docked,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+pony_paris,paris_parking_URSULINES_zidAU63GS28,A3_freefloating,non,False,indéterminé,False,oui,False,oui,False,station problématique,False
+toulouse,278,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+bird-vichy,3e436ac1-1b7c-471f-8e9e-3ebbd12d5844,A4_discordant_composite,non,False,,True,,True,oui,False,station problématique,False
+bird-montlucon,b014060c-8fd0-464b-b5c7-7476865cf076,A4_agree_flag,non,False,,True,non,False,,True,station problématique,False
+pony_Bourges,bourges_parking_Virtual_LEP_zid7K3JM1WL,A4_discordant_composite,non,False,,True,non,False,,True,station problématique,False
+citiz_grand_est,100,A5_out_of_perimeter,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+dott-paris,cbbe98a8-9828-4e06-a4cd-df18f7bd5e9c,A3_freefloating,,True,,True,oui,False,oui,False,station problématique,False
+citiz_alpes_loire,984,A1_carsharing,non,False,indéterminé,False,,True,oui,False,station problématique,False
+pony_paris,paris_parking_MORILLONS_zid5WNFXE46,A4_discordant_legacy,oui,False,,True,oui,False,oui,False,vraie station (légitime),False
+dott-paris,29e3f542-ad65-40c3-ae34-b197b6b1034c,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,deea3858-d8c3-4cc7-9ca6-237f455d9076,A7_null_capacity,non,False,,True,,True,oui,False,station problématique,False
+dott-paris,13539c7f-20f4-4c2b-9eab-982989084880,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,81dd11bd-217b-45ed-91b4-23b5b6f0be52,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+Paris,124183944,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_alpes_loire,1721,A1_carsharing,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+citiz_developpement,1681,A5_out_of_perimeter,non,False,,True,,True,oui,False,station problématique,False
+citiz_alpes_loire,1211,A1_carsharing,non,False,,True,non,False,oui,False,station problématique,False
+ogalo,stn_NE99V5KhRkTNXJdnTHPUS8,clean_docked,oui,False,oui,False,oui,False,oui,False,,True
+Paris,37848502,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+velo-tbm-bordeaux,93,A4_agree_flag,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Paris,15308712,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+lyon,7049,A5_out_of_perimeter,,True,indéterminé,False,non,False,non,False,station problématique,False
+velopop,cpbfgi40a5bcngo02tfg,A4_discordant_composite,oui,False,,True,oui,False,oui,False,vraie station (légitime),False
+dott-paris,61e065d2-a702-445a-8904-4bc4b1ca5a40,A4_discordant_legacy,non,False,,True,,True,oui,False,station problématique,False
+lyon,27001,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+besancon,1,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+bird-bordeaux,a0272634-21e4-4edc-86ba-bbef6bed4309,A4_discordant_legacy,,True,,True,oui,False,oui,False,,True
+bird-bordeaux,3e6f3fdc-7815-45a4-8b5e-9ad8731f9ed5,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+lyon,16001,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+cyclovis,stn_2jMbSN7c92GdqNDfRA2ssZ,A4_discordant_composite,oui,False,,True,oui,False,oui,False,vraie station (légitime),False
+Optymo_Belfort_ALS,5aff6fa5-dc7e-4c98-bc01-e61e9e043367,A7_null_capacity,non,False,,True,,True,oui,False,station problématique,False
+dott-bordeaux,af99a743-cd52-4867-8db8-81b46547b440,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+calais,stn_AxsPJEA5S6naCgBYzdXQ8m,A4_agree_flag,non,False,indéterminé,False,non,False,,True,station problématique,False
+Paris,42566291,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Paris,19186237098,A4_discordant_legacy,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-lyon,17040d9f-13fc-4c7a-9c88-7d2ef72031e0,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+le_velo_star,5516,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+pony_paris,paris_parking_CAPUCINES_zidQCYLTGSQ,A3_freefloating,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+citiz_lille_arras,316,A1_carsharing,non,False,indéterminé,False,,True,oui,False,station problématique,False
+cergy,56105,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+citiz_alpes_loire,1266,A1_carsharing,non,False,indéterminé,False,,True,oui,False,station problématique,False
+velozef,cirqbokg3q5td18hqob0,A2_placeholder,non,False,indéterminé,False,non,False,,True,station problématique,False
+dott-lyon,96001da5-7f29-4a1e-8874-fb9e971a9a5c,A4_discordant_legacy,non,False,,True,oui,False,,True,station problématique,False
+Optymo_FR_Belfort,st_d18jddmrumbh8rh03sfg,clean_docked,non,False,indéterminé,False,,True,,True,station problématique,False
+donkey_brest,20104,A4_discordant_composite,non,False,indéterminé,False,,True,,True,station problématique,False
+velozef,cirqbqsg3q5td18hqq00,A2_placeholder,non,False,indéterminé,False,non,False,,True,station problématique,False
+citiz_nantes,568,A1_carsharing,,True,,True,oui,False,oui,False,,True
+nextbike_ah,538520633,A4_discordant_composite,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+bird-laval,f8aa73d0-e310-433e-ac8f-ceee1db28540,A4_discordant_composite,non,False,,True,oui,False,oui,False,station problématique,False
+nancy,14,clean_docked,oui,False,,True,oui,False,oui,False,vraie station (légitime),False
+velozef,st_d52j5hso7dgs73ca64tg,A2_placeholder,non,False,indéterminé,False,non,False,,True,station problématique,False
+citiz_grand_est,186,A5_out_of_perimeter,non,False,,True,,True,oui,False,station problématique,False
+Paris,214109662,A4_agree_flag,,True,indéterminé,False,oui,False,,True,,True
+Optymo_Belfort_ALS,4f1163ef-93ed-44c2-ba61-e2e138ceef22,A7_null_capacity,non,False,,True,non,False,oui,False,station problématique,False
+pony_poitiers,poitiers_parking_Chasseneuil_Mairie_zid7CAZ8R3T,A3_freefloating,non,False,,True,,True,,True,station problématique,False
+Optymo_Belfort_ALS,24ee71ce-d7d6-4df6-bb1f-5f952569f824,A7_null_capacity,non,False,,True,,True,oui,False,station problématique,False
+beb,stn_4dax8kj2eMnmVJyoZW2aCo,A4_discordant_composite,non,False,indéterminé,False,non,False,,True,station problématique,False
+citiz_provence,1395,A1_carsharing,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+citiz_alpes_loire,1246,A1_carsharing,non,False,indéterminé,False,non,False,oui,False,station problématique,False
+dott-paris,0eead452-2d4d-40ed-9837-6895c5ea031c,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+bird-marseille,72419ea9-55a7-4801-b475-281eea50aa5e,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,bbff9998-ead1-4bf0-af77-638d95e78b64,A7_null_capacity,non,False,,True,,True,oui,False,station problématique,False
+dott-paris,1f65b191-231e-473c-8b6a-eda18ae74dec,A4_discordant_legacy,non,False,,True,oui,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,3348a72e-eba3-4627-a05b-a500b4547dfb,A1_carsharing,non,False,,True,,True,oui,False,station problématique,False
+citiz_alpes_loire,1050,A1_carsharing,non,False,indéterminé,False,,True,,True,station problématique,False
+bird-vichy,37ab3595-1e6b-4c18-a0fd-30ede8318c72,A4_discordant_composite,non,False,,True,,True,,True,station problématique,False
+citiz_rennes_metropole,1562,A4_discordant_composite,non,False,indéterminé,False,,True,oui,False,station problématique,False
+lemarcel,stn_BzVR4rGRkHpe4FuZCH4S7g,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+Paris,1558958733,A4_agree_flag,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+lyon,1016,A5_out_of_perimeter,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-paris,6911dfbb-15b8-401b-b92f-7cd3e8a478a4,A4_discordant_legacy,non,False,,True,non,False,oui,False,station problématique,False
+grand-est,st_d34n07umbtds7381rb90,A5_out_of_perimeter,,True,,True,oui,False,oui,False,,True
+velozef,st_d52j6h4o7dgs73ca6680,A4_discordant_composite,non,False,,True,non,False,,True,station problématique,False
+Optymo_Belfort_ALS,8c166007-0c2e-426b-9e28-a5b216ccc532,A7_null_capacity,non,False,,True,,True,oui,False,station problématique,False
+voi_Marseille,5c7f688f-9ed9-4ec9-bee2-a861521ecb94,A4_agree_flag,non,False,indéterminé,False,,True,,True,station problématique,False
+voi_Marseille,f2d1c672-15d4-48da-905d-1634a369ff7c,A3_freefloating,non,False,indéterminé,False,oui,False,oui,False,station problématique,False
+velocite,stn_QdiBmy7f2PPyBFBiv5mFoV,A4_agree_flag,,True,,True,,True,,True,station problématique,False
+dott-paris,9cde6804-bd32-4444-88e4-0dc3c2daee60,A3_freefloating,non,False,,True,,True,oui,False,station problématique,False
+velozef,cirqbp4g3q5td18hqol0,A2_placeholder,,True,,True,,True,,True,,True
+dott-paris,535a2006-b61b-4891-84b3-91454d18ee9c,A4_discordant_legacy,,True,,True,,True,oui,False,,True
+dott-paris,69c673d4-3099-4ac8-bb9c-e5ac3b22f80c,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+Optymo_Belfort_ALS,285fd809-8396-44d1-8988-8a7ad961fd0b,A7_null_capacity,,True,NaN (champ vide),False,oui,False,oui,False,,True
+velo-tbm-bordeaux,33,clean_docked,oui,False,oui,False,oui,False,oui,False,vraie station (légitime),False
+dott-lyon,1d1664d3-dda7-4547-9979-acc769b4f2dc,A4_discordant_legacy,non,False,,True,,True,oui,False,station problématique,False
+citiz_angers,279,A1_carsharing,non,False,indéterminé,False,,True,,True,station problématique,False
+dott-paris,863ce99f-a02d-4d46-b0d9-2454a984990c,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
+lyon,10101,A5_out_of_perimeter,oui,False,,True,oui,False,oui,False,vraie station (légitime),False
+bird-marseille,abcfbcf6-6a7d-4ab7-bdce-7988b3f8b2b0,A3_freefloating,non,False,,True,oui,False,oui,False,station problématique,False
