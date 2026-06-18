@@ -45,6 +45,14 @@
 \newcommand{\eg}{\emph{e.g.}}
 \newcommand{\etc}{etc.}
 
+% --- Anonymity toggle for double-blind submission ---
+% Submission build is anonymous; set \anonymousfalse for the named camera-ready.
+\newif\ifanonymous
+\anonymoustrue
+\newcommand{\zdoi}{\ifanonymous\texttt{[deposited on Zenodo; DOI withheld for review]}\else\texttt{10.5281/zenodo.20125460}\fi}
+\newcommand{\codeurl}{\ifanonymous\texttt{[anonymised repository; link provided on acceptance]}\else\url{https://github.com/rohanfosse/gbfs-audit-catalogue}\fi}
+\newcommand{\hfurl}{\ifanonymous\texttt{[anonymised dataset mirror]}\else\url{https://huggingface.co/datasets/rohanfosse/gbfs-audit-catalogue}\fi}
+
 \newenvironment{highlights}{%
   \par\noindent\textsf{\bfseries\large Highlights}\par\smallskip
   \begin{itemize}[leftmargin=1.4em,itemsep=0.15em,topsep=0.2em]}{%
@@ -54,10 +62,14 @@
 a reproducible anomaly taxonomy for open mobility data,\\
 validated in France and projected across 48 countries}
 
+\ifanonymous
+\author{Anonymous Author(s)}
+\else
 \author[1]{Rohan Foss\'e\thanks{Lead contact: \texttt{rfosse@cesi.fr}}}
 \author[2]{Ga\"el Pallares}
 \affil[1]{CESI Engineering School, Montpellier, France}
 \affil[2]{CESI LINEACT (EA 7527), Montpellier, France}
+\fi
 \date{}
 
 \begin{document}
@@ -83,8 +95,8 @@ Specification (GBFS) is now mandatory for French operators and is
 catalogued worldwide by MobilityData, but syntactic standardisation does
 not guarantee the semantic viability that research reuse requires. We
 audit the 123 French GBFS systems and project the rule set across the
-1{,}509-system MobilityData catalogue (48 countries), deriving a
-data-quality taxonomy of seven classes (A1--A7): five \emph{structural
+1{,}509-system MobilityData catalogue (48 countries). From this we derive
+a data-quality taxonomy of seven classes (A1--A7): five \emph{structural
 errors} that violate the implicit semantic contract of the field they
 populate, and two \emph{semantic warnings} for spec-compliant patterns
 that make the \texttt{capacity} column non-aggregable. Detection runs as a
@@ -188,23 +200,17 @@ The broader anomaly-detection literature~\cite{Chandola2009AnomalyDetection}
 provides a taxonomy of detection paradigms (statistical, proximity-based,
 clustering-based) that contextualises the spatial outlier methods we
 adopt in Section~\ref{secA4v2}.
-The underlying data-quality literature is mature: Wang and Strong
-\cite{Wang1996Quality} established the consumer-centred dimensions,
-Pipino et al.~\cite{Pipino2002Assessment} the assessment
-procedures, Khatri and Brown~\cite{Khatri2010DataGovernance} the
-governance framing, Sebastian-Coleman~\cite{SebastianColeman2013}
-the ongoing-improvement perspective, and Naumann
-\cite{Naumann2014DataProfiling} the modern profiling approach. ISO/IEC~25012~\cite{ISO25012} and its companion
-measurement standard ISO/IEC~25024~\cite{ISO25024} formalise the
-quality dimensions; for geographic information specifically,
-ISO~19157~\cite{ISO19157} provides the corresponding framework, and
-the European INSPIRE directive~\cite{INSPIRE2007} makes them
-regulatory. W3C's DCAT~\cite{DCAT2020} and Data Quality Vocabulary
-\cite{W3CDQV} translate these dimensions into machine-readable
-metadata. None of these references, however, addresses GBFS
-specifically, and none produces a versioned, audited reference
-dataset at the scale of a country. The present paper fills that gap
-for the French case and extends to the global GBFS catalogue.
+The underlying data-quality literature is mature, from the consumer-centred
+dimensions of Wang and Strong~\cite{Wang1996Quality} through the assessment,
+governance and profiling frameworks that
+followed~\cite{Pipino2002Assessment,Khatri2010DataGovernance,SebastianColeman2013,Naumann2014DataProfiling}
+to the ISO/IEC~25012 and 25024 quality standards~\cite{ISO25012,ISO25024},
+their geographic counterpart ISO~19157~\cite{ISO19157} (made regulatory by the
+INSPIRE directive~\cite{INSPIRE2007}), and the machine-readable DCAT and Data
+Quality Vocabulary of the W3C~\cite{DCAT2020,W3CDQV}. None of these, however,
+addresses GBFS specifically or produces a versioned, audited reference dataset
+at the scale of a country. The present paper fills that gap for the French case
+and extends to the global GBFS catalogue.
 
 This paper makes five contributions. First, a \textbf{taxonomy} of seven
 anomaly classes (A1--A7), derived from the audit of the 123 French GBFS
@@ -218,13 +224,12 @@ protocol} (Algorithm~\ref{alg:purge}) that operationalises the seven
 classes and logs every transformation reproducibly and reversibly. Third,
 the \textbf{Audit Catalogue GBFS France} (46{,}307 certified stations,
 97 cities), released as a versioned Parquet file with DOI
-\texttt{10.5281/zenodo.20125460} under ODbL, with its JSON Schema,
+\zdoi\ under ODbL, with its JSON Schema,
 Croissant manifest and audit report, and mirrored as a Hugging Face
 dataset. Fourth, an \textbf{open-source pipeline}
 (\texttt{audit\_pipeline} Python package, MIT, $\sim 560$ LOC,
-unit-tested) and a five-tab \textbf{interactive dashboard}
-(\url{https://gbfs-audit.streamlit.app}) that exposes every audit verdict
-at the row level. Fifth, a \textbf{roadmap} of nine falsifiable
+unit-tested) implementing the nine-step protocol. Fifth, a
+\textbf{roadmap} of nine falsifiable
 experiments, six already with completed results, so that the protocol can
 be challenged in public rather than defended in private.
 Section~\ref{secTaxProtocol} presents the taxonomy and the purging
@@ -308,19 +313,9 @@ A7 & Null capacity field           & $\geq 50\,\%$ of stations declare $c = $ \t
 \end{tabular}
 \end{table}
 
-The audit status of the 142 French GBFS feeds at the national portal
-is summarised in Figure~\ref{fig:audit-status}: 123 systems are
-certified into the Audit Catalogue, 2 fail technical ingestion,
-and the 17 car-sharing systems (A1) are filtered upstream.
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.7\linewidth]{fig01_audit_status.pdf}
-\caption{Verdict of the systematic audit applied to the 142 GBFS
-feeds inventoried on \emph{transport.data.gouv.fr} and
-\emph{MobilityData}.}
-\label{fig:audit-status}
-\end{figure}
+Of the 142 French GBFS feeds at the national portal, 123 are certified
+into the Audit Catalogue, 2 fail technical ingestion, and the 17
+car-sharing systems (A1) are filtered upstream.
 
 A3 is the class with the largest downstream impact on the French corpus. Free-floating fleets (\emph{Pony},
 \emph{Cykleo}, \etc) advertise virtual stations in GBFS, the term
@@ -481,47 +476,16 @@ applied. \emph{Explicit parameterisation:} all thresholds
 are documented as hyperparameters and can be varied for sensitivity
 analysis without modifying the source code.
 
-These four properties are not arbitrary engineering choices; they
-operationalise the data-quality dimensions formalised by
-ISO/IEC~25012~\cite{ISO25012} and ISO/IEC~25024~\cite{ISO25024}, and
-together they make the pipeline a direct domain-level implementation
-of the standard. Idempotence enforces the
-\emph{internal consistency} dimension (two computations on the same
-input must yield the same output). Reversibility, through the
-\texttt{rejected\_stations.parquet} sidecar and the systematic
-preservation of the exclusion motive, materialises the
-\emph{recoverability} property and contributes to
-\emph{traceability}. Logging at every step extends that traceability
-to the full pipeline run. Explicit hyperparameter declaration
-addresses the \emph{understandability} dimension at the protocol
-level. Finally, the FAIR release of the audit report alongside
-DCAT-AP, JSON Schema and Croissant manifests (Section~\ref{secRepro}) closes the \emph{compliance} requirement of
-25012. Table~\ref{tab:iso-mapping} summarises the mapping; we are
-not aware of a published reference implementation of ISO/IEC~25012
-on an open mobility standard prior to the present work.
-
-\begin{table}[!htbp]
-\centering
-\caption{Mapping of the nine-step purging-protocol design properties
-to the data-quality dimensions of ISO/IEC~25012:2008 and its
-companion measurement standard ISO/IEC~25024:2015. The Audit
-Catalogue is, to our knowledge, the first FAIR-released
-implementation of these dimensions on a GBFS corpus.}
-\label{tab:iso-mapping}
-\small
-\begin{tabular}{@{}lll@{}}
-\toprule
-\textbf{Protocol property}     & \textbf{ISO/IEC~25012 dimension}   & \textbf{Mechanism in the pipeline}\\
-\midrule
-Idempotence                    & Internal consistency               & Unit-tested re-application on certified output\\
-Reversibility                  & Recoverability + Traceability      & \texttt{rejected\_stations.parquet} with exclusion motive\\
-Step-level logging             & Traceability                       & Per-step in/out counts and transformation type\\
-Explicit parameterisation      & Understandability                  & Hyperparameters in code + documented in audit report\\
-FAIR release                   & Compliance + Accessibility         & JSON Schema, DCAT-AP, Croissant, ODbL on Zenodo\\
-Blind author cross-annotation  & Accuracy + Semantic consistency    & Author-led consistency check that flagged anomalies are real defects (Section~\ref{secHumanVal})\\
-\bottomrule
-\end{tabular}
-\end{table}
+These properties are not arbitrary engineering choices: they
+operationalise the ISO/IEC~25012 / 25024 data-quality
+dimensions~\cite{ISO25012,ISO25024} at the domain level -- idempotence for
+internal consistency, the \texttt{rejected\_stations.parquet} sidecar for
+recoverability and traceability, step-level logging for traceability,
+explicit hyperparameters for understandability, and the FAIR release
+(Section~\ref{secRepro}) for compliance (full mapping in
+Table~\ref{tab:iso-mapping}). We are not aware of a published reference
+implementation of ISO/IEC~25012 on an open mobility standard prior to this
+work.
 
 \subsection{Threshold justification}
 The topological threshold $\sigma_{\max} = 3$ is a compromise between
@@ -582,21 +546,12 @@ above $93\,\%$ for every contextual variable except the optional
 of $90\,\%$ documented in the audit report is therefore reached on
 every certified column of the released schema.
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.7\linewidth]{fig05_completeness.pdf}
-\caption{Empirical completeness of contextual enrichment per
-derived variable on the dock-based subset of the Audit Catalogue
-($n = 5{,}442$). All variables exceed the $90\,\%$ completeness
-threshold required by the audit report; missing values remain below
-$6\,\%$ across the corpus.}
-\label{fig:completeness}
-\end{figure}
+% (relocated to Supplementary Materials: fig:completeness)
 
 \subsection{Reproducibility infrastructure}\label{secRepro}
 The Audit Catalogue is released in alignment with the four FAIR
 principles~\cite{Wilkinson2016}. \emph{Findable:} primary deposit on
-Zenodo under concept DOI \texttt{10.5281/zenodo.20125460}, with one
+Zenodo under concept DOI \zdoi, with one
 DOI per SemVer-tagged release (current 1.0.0, dated 2026-05); mirrored
 on \emph{Recherche Data Gouv} (HAL/BSO indexing). \emph{Accessible:}
 Parquet format, direct HTTPS download and Git LFS mirror.
@@ -619,17 +574,10 @@ detector unit tests run in CI on every push; the audit report is
 regenerated automatically on every release tag.
 
 \subsection{Implementation}
-The released Parquet file is $7.8$\,MB on disk for the
-$46{,}307$ stations and loads in under one second into a
-standard \texttt{pandas} session on commodity hardware; typical
-analytical queries (city-level filtering, bounding-box selection,
-joins with external panels) complete in tens of milliseconds.
-The audit pipeline is implemented as a compact Python package
-(\texttt{audit\_pipeline}, $\sim 560$ lines of code across three
-modules: \texttt{core} for the Tier-1 / Tier-2 detectors,
-\texttt{regenerate} for one-command artefact refresh, and the
-package \texttt{\_\_init\_\_} for the public API) with stable
-function-level entry points documented in the source repository.
+The audit pipeline is a compact Python package
+(\texttt{audit\_pipeline}, $\sim 560$ LOC) with stable, documented
+entry points; the released $46{,}307$-station Parquet loads in under a
+second into a standard \texttt{pandas} session.
 
 \paragraph{Software validation.}
 The audit primitives are accompanied by a unit-test suite
@@ -731,24 +679,11 @@ free-floating fleets (\eg Bordeaux, Nice, Saint-\'Etienne) and those
 historically lumped together with car-sharing systems on the national
 portal (Strasbourg, Grenoble), whereas urban areas served by
 traditional dock-based operators (V\'elib' in Paris, V\'eloMagg in
-Montpellier) are left almost intact. The certified-station mass by
-administrative region after purging is shown in
-Figure~\ref{fig:region-stations}: \^Ile-de-France concentrates the
-historical V\'elib' deployment, while regions with many free-floating
-systems (Nouvelle-Aquitaine, Auvergne-Rh\^one-Alpes) hold a much
-smaller dock-based stock after the A3 correction is applied.
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.7\linewidth]{fig03_region_stations.pdf}
-\caption{Certified stations by administrative region, after the
-nine-step purging protocol. Annotations report the number of GBFS
-systems per region. \^Ile-de-France concentrates V\'elib';
-Nouvelle-Aquitaine aggregates many systems but holds a smaller
-mass of dock-based stations once free-floating fleets have been
-re-typed by the A3 correction.}
-\label{fig:region-stations}
-\end{figure}
+Montpellier) are left almost intact. After purging, the
+certified-station mass concentrates in \^Ile-de-France (the historical
+V\'elib' deployment), while regions with many free-floating systems
+(Nouvelle-Aquitaine, Auvergne-Rh\^one-Alpes) hold a much smaller
+dock-based stock once the A3 correction is applied.
 
 \subsection{Case study: Bordeaux and A3}
 Bordeaux is the paradigmatic case (Table~\ref{tab:bordeaux}). The raw
@@ -806,17 +741,7 @@ order-of-magnitude effect on any supply-side aggregate built on
 the raw feed. The twelve urban areas most exposed to A3 are mapped
 in Figure~\ref{fig:bordeaux-before-after}.
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.9\linewidth]{fig04_bordeaux_before_after.pdf}
-\caption{Top twelve French urban areas ranked by absolute reduction in
-dock-based station count between the raw GBFS feed and the certified
-Audit Catalogue. \textbf{Bordeaux} (highlighted) exhibits the largest
-absolute drop, driven by the reclassification of the \emph{Pony}
-free-floating fleet (A3). Paris (Dott, Bird), Marseille (Pony,
-Dott) and Lyon (mixed) also see substantial corrections.}
-\label{fig:bordeaux-before-after}
-\end{figure}
+% (relocated to Supplementary Materials: fig:bordeaux-before-after)
 
 Beyond the absolute station-count drop, the order-of-magnitude
 change in nominal infrastructure is the operational stake.
@@ -862,8 +787,7 @@ the same anomaly recurs across operators: the GBFS field
 \texttt{station\_information.capacity} is populated by French
 free-floating operators according to four mutually incompatible
 publication conventions, observed across six operator--city
-combinations (Table~\ref{tab:capacity-semantics},
-Figure~\ref{fig:capacity-semantics-diagram}), aggregating to
+combinations (Table~\ref{tab:capacity-semantics}), aggregating to
 84.7\,\% of the certified French rows. A downstream
 consumer who applies a single arithmetic to the field therefore
 aggregates four physically distinct quantities (NaN, constant
@@ -910,25 +834,6 @@ Voi          & 4  &  2{,}816 & 5--10 & Small fleet-profile estimator \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.95\linewidth]{fig08_capacity_semantics.pdf}
-\caption{Conceptual diagram of the four incompatible publication
-conventions of the GBFS \texttt{station\_information.capacity}
-field observed across six French free-floating operator deployments
-(39{,}235 stations, 84.7\,\% of the certified rows). Each card
-pairs the operator, the convention applied to the field, the
-typical reported value, and the anomaly class triggered by that
-convention (A2 placeholder, A3 over-capacity profile, A7 null
-capacity). The diagram makes explicit why a downstream consumer
-applying a single arithmetic to \texttt{capacity} aggregates four
-physically distinct quantities silently mixed across operators; it
-complements Table~\ref{tab:capacity-semantics} and motivates the
-dual-column \texttt{capacity\_raw}/\texttt{capacity\_audited} schema of
-the released catalogue.}
-\label{fig:capacity-semantics-diagram}
-\end{figure}
 
 \subsection{Global scalability projection}\label{secGlobalAudit}
 We applied the rule set, unchanged except for a country-perimeter
@@ -982,23 +887,7 @@ methodological recalibration.
 
 % (relocated to Supplementary Materials: tab:global-audit)
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.92\linewidth]{fig07_global_audit.pdf}
-\caption{Per-country incidence of the structural classes A1--A4 across
-the 1{,}509-system MobilityData catalogue (top 18 countries by total
-flagged). The chart shows the stacked composition of the
-\textbf{Flagged} column of Table~\ref{tab:global-audit} and makes the
-country-level signatures legible at a glance: A4 (geospatial) drives
-the Polish, Finnish, Swedish and Slovak hotspots (cross-border bounding
-boxes on aggregator feeds), A1 (car-sharing labelled as BSS) drives
-the DACH cluster (Germany, Switzerland), A2 (placeholder capacity) and
-A3 (over-capacity) drive France and the Czech Republic. Macro-region
-(A5), zero-capacity (A6) and null-capacity (A7) are reported separately
-because they are calibrated on station-count-conditioned sub-corpora
-(Tables~\ref{tab:a6-distribution} and~\ref{tab:a7-distribution}).}
-\label{fig:global-audit-overview}
-\end{figure}
+% (relocated to Supplementary Materials: fig:global-audit-overview)
 
 \paragraph{Two national hotspots: monopoly (Czech Republic) versus fragmentation (Switzerland).}
 The two most informative national hotspots are organisational
@@ -1161,10 +1050,7 @@ probability $o_i \in [0,1]$.
 ($k = 7$) is constructed; edge weights are Gaussian
 $w_{ij} = \exp(-d_{ij}^2 / 2\sigma_b^2)$ with bandwidth
 $\sigma_b = 2$\,km. The normalised graph Laplacian
-\begin{equation}\label{eq:laplacian}
-  \mathbf{L}_{\text{sym}} = \mathbf{I}
-    - \mathbf{D}^{-1/2}\,\mathbf{W}\,\mathbf{D}^{-1/2}
-\end{equation}
+$\mathbf{L}_{\text{sym}} = \mathbf{I} - \mathbf{D}^{-1/2}\,\mathbf{W}\,\mathbf{D}^{-1/2}$
 is eigendecomposed; the spectral isolation score $s_i$ is the
 $\ell^2$-norm of station $i$'s embedding in eigenvectors $2 \ldots K$
 ($K = 10$), normalised to $[0,1]$. A station that sits in a separate
@@ -1815,29 +1701,6 @@ issues and would require an analogous but disjoint audit
 protocol. The dynamic audit is the subject of the L2 limitation
 and the E4 future-work item.
 
-\subsection{Intellectual lineage in adjacent fields}
-The protocol's design intent is consistent with an adjacent
-tradition of data audit that the mobility-data community has so
-far engaged with only sparingly.
-
-\emph{Property-based testing in software engineering.} Each of the
-seven anomaly classes A1--A7 admits a translation into a
-\emph{property} that a compliant feed should satisfy: capacity is
-either a positive dock count, NaN or the same value across the
-system; coordinates lie within an a-priori perimeter; the
-$\bar c_{\text{profile}}/\bar c_{\text{actual}}$ ratio is bounded.
-This is the same intellectual move as in QuickCheck-style
-property-based testing for software, where invariants on the
-output are stated explicitly and checked across many inputs
-\cite{Hughes2007QuickCheck}. The Great Expectations and Pandera
-toolchains~\cite{GreatExpectations2024,Pandera2024} we benchmarked
-against are descendants of the same lineage. The contribution of
-the present audit, in that light, is to identify which properties
-GBFS implicitly assumes and to make their absence diagnosable;
-the SE community has spent two decades building infrastructure
-for that, but the mobility-data community has not yet imported
-it.
-
 \subsection{When a clean verdict hides a missing column}
 The Italian \emph{Dott} case documented in
 Section~\ref{secGlobalAudit} illustrates what is at stake: a country
@@ -1875,60 +1738,32 @@ ingestion time.
 \subsection{Limitations}\label{secLimitations}
 The protocol has five acknowledged limitations.
 
-\textbf{L1 -- National coverage.} The corpus is limited to metropolitan
-France; extension to overseas territories and other European
-jurisdictions requires revisiting thresholds, in particular the
-macro-regional surface threshold and the geofilter bounds.
+\textbf{L1 -- National coverage.} The corpus is metropolitan France;
+extension to overseas territories and other jurisdictions requires
+revisiting the macro-regional surface threshold and the geofilter bounds.
 
-\textbf{L2 -- Static versus dynamic.} The present audit is
-deliberately scoped to the static \texttt{station\_information}
-document. Auditing \texttt{station\_status} (real-time availability)
-is a distinct research question that requires longitudinal data
-collection and a different analytical framework. The most
-consequential limitation that follows is the \emph{zombie-station}
-risk: an operator that has physically dismantled a station but has
-not yet pruned the corresponding \texttt{station\_information} entry
-will leave a ghost record that our static audit certifies as
-compliant, because the seven A1--A7 detectors all operate on the
-published schema. Downstream consumers of the Audit Catalogue who
-depend on station-presence should cross-check against a recent
-\texttt{station\_status} snapshot, treating any entry whose status
-feed has been stale beyond a documented retention window as a zombie
-candidate. A 2-day pilot (experiment E4) already detected candidate
-dynamic anomalies on $12.9\,\%$ of monitored stations, and a
-fully operational collection and classification pipeline ships with
-the repository (\texttt{experiments/xp1\_dynamic\_audit/}); the
-formal dynamic extension is planned as a self-contained follow-up
-study.
+\textbf{L2 -- Static versus dynamic.} The audit is scoped to the static
+\texttt{station\_information} document; auditing \texttt{station\_status}
+(real-time availability) is a distinct problem. The salient risk is the
+\emph{zombie station}: a physically dismantled station whose
+\texttt{station\_information} entry has not been pruned leaves a ghost
+record that the A1--A7 detectors, operating on the published schema,
+certify as compliant. Consumers depending on station-presence should
+cross-check a recent \texttt{station\_status} snapshot. A 2-day pilot (E4)
+already flagged candidate dynamic anomalies on $12.9\,\%$ of monitored
+stations; the collection pipeline ships with the repository and the formal
+dynamic extension is a planned follow-up.
 
-\textbf{L3 -- Free-floating static versus dynamic scope.}
-The seven-class taxonomy is applied to free-floating entries as
-much as to dock-based ones: every free-floating station carries
-an explicit \texttt{station\_type = free\_floating} label, and the
-A3 and A7 flags identify the operator-level capacity-publication
-anomalies that affect them (A3 for over-capacity profiles, A7 for
-NaN-capacity fields). The published parquet exposes both
-\texttt{capacity\_raw} (the raw GBFS value, including placeholders
-and NaN) and \texttt{capacity\_audited} (NaN for free-floating
-entries, dock-based count otherwise), so that downstream consumers
-have an unambiguous, audit-aware capacity to work with. What this
-v1.0 release does \emph{not} audit is the \emph{dynamic} behaviour
-of free-floating fleets -- rebalancing patterns, real-time density
-of available vehicles, per-vehicle relocation -- which would
-require an analogous audit of the \texttt{station\_status} feed
-rather than \texttt{station\_information}. That dynamic audit is
-out of scope here (it is the topic of L2); the present catalogue
-is therefore best characterised as a \emph{static} audit of GBFS
-\texttt{station\_information} across both dock-based and
-free-floating fleets, with the operational caveat that a
-free-floating station's \texttt{capacity\_audited} value is
-intentionally null.
+\textbf{L3 -- Free-floating scope.} Free-floating entries are audited as
+much as docked ones (A3 and A7 carry their capacity-publication anomalies),
+and the parquet exposes both \texttt{capacity\_raw} and an audit-aware
+\texttt{capacity\_audited} (null for free-floating). What v1.0 does
+\emph{not} cover is their \emph{dynamic} behaviour (rebalancing, real-time
+density), which belongs to the \texttt{station\_status} audit of L2.
 
-\textbf{L4 -- Operator coverage.} Some operators publish partial GBFS
-feeds or are unavailable during the audit window; the inventory
-completeness is therefore not guaranteed and must be re-evaluated
-periodically, which is the purpose of the temporal-stability
-experiment E3.
+\textbf{L4 -- Operator coverage.} Some operators publish partial feeds or
+are unavailable during the audit window, so inventory completeness is not
+guaranteed and must be re-evaluated periodically (experiment E3).
 
 \textbf{L5 -- Scope and independence of the human check.} The
 construct-validity check (Section~\ref{secHumanVal}) covers the rules
@@ -1966,42 +1801,13 @@ implementations should consider an A5 variant computed after the
 A4 outlier removal step.
 
 \subsection{Future directions}
-Each of the four limitations above is paired with a falsifiable
-experiment (Table~\ref{tab:roadmap}); six of the nine include a
-completed pilot reported in this paper. The remaining priorities are
-the full four-dimensional threshold sweep of E2, the twelve-month
-temporal stability of E3, and the free-floating-native protocol of E6.
-Pilot scripts and the
-final experiment protocols will be packaged under
-\texttt{experiments/} of the source repository alongside the
-camera-ready release, so that the artefact can be challenged in
-public rather than defended in private.
+Each limitation is paired with a falsifiable experiment
+(Table~\ref{tab:roadmap}); six of the nine already include a completed
+pilot. The open priorities are the full threshold sweep (E2), the
+twelve-month temporal stability (E3) and the free-floating-native protocol
+(E6), with all protocols and scripts released under \texttt{experiments/}.
 
-\begin{table}[!htbp]
-\centering
-\caption{Nine falsifiable experiments mapped to the limitations of
-Section~\ref{secLimitations}. ``$\checkmark$'' = completed result
-reported in this paper; ``Pilot $\checkmark$'' = preliminary result
-already reported; full protocols and reproduction scripts ship under
-\texttt{experiments/} in the source repository.}
-\label{tab:roadmap}
-\small
-\begin{tabular}{@{}llll@{}}
-\toprule
-\textbf{ID} & \textbf{Title} & \textbf{Targets} & \textbf{Status}\\
-\midrule
-E1 & Pre-registered held-out audit (post-freeze MobilityData) & Construct validity / circularity & Retrospective version executed (2/3 H pass) $\checkmark$ \\
-E2 & Threshold and buffer sensitivity           & $\sigma_{\max}, N_{\min}$, radii & $\sigma_{\max}$ pilot $\checkmark$ \\
-E3 & Twelve-month temporal stability            & Snapshot dependence (L4)    & Running \\
-E4 & Dynamic extension to \texttt{station\_status} & L2                       & 2-day pilot $\checkmark$; Shannon protocol ready \\
-E5 & European generalisation (live audit, 6 tech stacks) & L1                  & 13-system panel $\checkmark$ \\
-E6 & Free-floating-native protocol              & L3                          & Planned 2027-Q2 \\
-\textbf{E7} & \textbf{A4\,v2 topology-aware ablation} & \textbf{Geospatial isotropy bias} & \textbf{$\checkmark$ (Sec.~\ref{secA4v2})} \\
-\textbf{E8} & \textbf{Leave-one-operator-out CV}       & \textbf{Overfitting (H3)}          & \textbf{$\checkmark$ (Sec.~\ref{secLOOO})} \\
-\textbf{E9} & \textbf{Dynamic station\_status audit} & \textbf{Static/dynamic gap (L2)}  & \textbf{Future work (pipeline shipped)} \\
-\bottomrule
-\end{tabular}
-\end{table}
+% (relocated to Supplementary Materials: tab:roadmap)
 
 \subsection{Downstream use}
 The Audit Catalogue unlocks four families of downstream studies:
@@ -2013,30 +1819,14 @@ station access with INSEE Filosofi; and multimodal integration with
 GTFS, for which the hybridisation schema is compatible with the
 canonical GTFS validator~\cite{MobilityData2024Validator}.
 
-\paragraph{Interactive dashboard.}
-To make the audit verdicts directly inspectable without code, a
-focused Streamlit dashboard is shipped at
-\url{https://gbfs-audit.streamlit.app}, mirrored by
-\texttt{app/streamlit\_app.py} in the source repository. The
-dashboard exposes five tabs: an overview with the corpus-level
-incidence of A1--A7; a row-level anomaly browser with live
-multi-flag filters and CSV export; an operator-level audit table
-with the per-class flag rates that drive the operator-driven
-hotspots reported in Section~\ref{secResults}; a visual data
-dictionary of the 46 columns with completeness bars; and a
-free-text data explorer with a KD-tree-backed geographic map
-coloured by audit confidence. The dashboard is the artefact that
-turns the audit from a one-off paper into a continuously
-inspectable reference, addressing the persistence concern raised
-in Section~\ref{secDiscussion}.
-
 % ===================================================================
 
 \section*{Data and code availability}
 
-\paragraph{Lead contact.} Requests for further information should be
-directed to and will be fulfilled by the lead contact, Rohan Foss\'e
-(\texttt{rfosse@cesi.fr}).
+\paragraph{Lead contact.} \ifanonymous Author contact details are
+withheld for double-blind review.\else Requests for further information
+should be directed to and will be fulfilled by the lead contact, Rohan
+Foss\'e (\texttt{rfosse@cesi.fr}).\fi
 
 \paragraph{Materials availability.} This study did not generate new
 physical materials. The released artefact is the
@@ -2044,64 +1834,21 @@ physical materials. The released artefact is the
 data.
 
 \paragraph{Data and code.}
-The artefacts cover two scopes with explicit licensing boundaries.
-\begin{itemize}[leftmargin=*]
-\item \textbf{French Audit Catalogue (Zenodo, ODbL v1.0).} The
-deposit contains four artefacts under the same concept DOI
-\texttt{10.5281/zenodo.20125460} (current release 1.0.0,
-2026-05), mirrored on \emph{Recherche Data Gouv}:
-(i) the $46{,}307$-station certified Parquet
-(\texttt{stations\_gold\_standard\_final.parquet}, $\sim 6.6$\,MB,
-46 typed columns including per-row anomaly flags and audited
-capacities);
-(ii) the lightweight system-level executive summary
-(\texttt{stations\_gold\_standard\_audit\_summary.csv}, $\sim$60\,kB,
-one row per audited system with anomaly counts and operator
-attribution) for users who want an overview before downloading the
-full parquet;
-(iii) the \texttt{rejected\_stations.parquet} log with exclusion
-motives; and
-(iv) the audit report and machine-readable descriptors
-(JSON Schema, DCAT-AP, Frictionless Data Package, Croissant JSON-LD).
-The 142 candidate French GBFS feeds inventoried from
-\emph{transport.data.gouv.fr} and MobilityData are archived with
-SHA-256 hashes in the same deposit; the certified subset of 123
-systems is derived deterministically from them.
-\item \textbf{Source code (MIT licence).} The audit pipeline
-(\texttt{audit\_pipeline} Python package, nine-step purging
-protocol, hybridisation joins, FAIR exporters) is released at
-\url{https://github.com/rohanfosse/gbfs-audit-catalogue},
-together with the manuscript source, the companion Jupyter
-notebook (\texttt{notebooks/catalogue\_recipes.ipynb}) and a
-focused interactive dashboard with five tabs (Overview, Anomaly
-browser, Operator audit, Schema, Data explorer) at
-\texttt{app/streamlit\_app.py}, deployed publicly at
-\url{https://gbfs-audit.streamlit.app}. A
-\texttt{CITATION.cff} file and a Docker image
-(\texttt{ghcr.io/rohanfosse/gbfs-audit:1.0.0}) are provided for
-bit-exact reproduction. Releases are mirrored to Zenodo via the
-GitHub--Zenodo integration.
-\item \textbf{Hugging Face mirror.} The released parquet is
-mirrored as a Hugging Face dataset at
-\url{https://huggingface.co/datasets/rohanfosse/gbfs-audit-catalogue}
-for one-line access via
-\texttt{datasets.load\_dataset()}.
-\item \textbf{Global audit snapshot.} The full per-system result of
-the 1{,}509-system MobilityData-catalogue sweep that underlies the
-global-projection section is frozen under
-\texttt{experiments/e2\_threshold\_sensitivity/global\_audit\_snapshot/}:
-the per-system \texttt{massive\_audit\_results.csv}, the aggregate
-\texttt{massive\_audit\_summary.json}, the \texttt{massive\_audit.py}
-generator, and \texttt{verify\_snapshot.py}, which re-derives and
-asserts the reported counts. Because the sweep crawls live operator
-feeds, a re-run drifts as the upstream catalogue evolves; the frozen
-snapshot is therefore the canonical, citeable artifact.
-\item \textbf{Additional resources.} The 500-station blinded sample
-used in the internal robustness checks, the orthogonal- and full-task
-classifier scripts, the $\sigma_{\max}$ sensitivity notebook, and the
-per-operator characterisation of the French free-floating subset
-are released as supplementary material alongside the dataset.
-\end{itemize}
+The certified \emph{GBFS France Audit Catalogue} (46{,}307 stations,
+46 typed columns with per-row anomaly flags and audited capacities) is
+deposited on Zenodo under ODbL~v1.0
+(DOI~\zdoi, release~1.0.0; mirrored on
+\emph{Recherche Data Gouv} and as a Hugging Face dataset at
+\hfurl),
+alongside the rejected-stations log and machine-readable descriptors
+(JSON Schema, DCAT-AP, Frictionless Data Package, Croissant). The audit
+pipeline and a Docker image for bit-exact reproduction are released under
+the MIT licence at \codeurl. The global-sweep
+snapshot underlying Section~\ref{secGlobalAudit} is frozen under
+\texttt{experiments/.../global\_audit\_snapshot/} with a
+\texttt{verify\_snapshot.py} that re-derives and asserts every reported
+global count; the blinded annotation sample, the robustness-check scripts
+and the sensitivity notebooks ship as supplementary material.
 
 % ===================================================================
 \section*{Acknowledgments}
@@ -2110,11 +1857,15 @@ research possible: GBFS operators, MobilityData, OpenStreetMap, Cerema,
 ONISR, INSEE, FUB and the French GTFS community.
 
 \section*{CRediT authorship contribution statement}
+\ifanonymous
+Author contributions are withheld for double-blind review.
+\else
 \textbf{Rohan Foss\'e:} Conceptualization, Methodology, Software, Data
 curation, Formal analysis, Validation, Visualization, Writing -- original
 draft, Writing -- review \& editing. \textbf{Ga\"el Pallares:}
 Conceptualization, Methodology, Supervision, Project administration,
 Writing -- review \& editing.
+\fi
 
 \section*{Declaration of competing interests}
 The authors declare that they have no known competing financial
