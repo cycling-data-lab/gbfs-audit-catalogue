@@ -116,7 +116,7 @@ tests/                   36 tests, Python 3.10–3.12
              A reproducible anomaly taxonomy for open mobility data},
   journal = {Computer Standards \& Interfaces},
   year    = {2026},
-  note    = {Manuscript under peer review}
+  note    = {Manuscript in preparation}
 }
 
 @dataset{Fosse2026gbfsdata,

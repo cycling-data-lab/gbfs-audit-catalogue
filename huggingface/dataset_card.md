@@ -102,7 +102,7 @@ If you use the catalogue in your research, please cite both the paper and the Ze
              A reproducible anomaly taxonomy for open mobility data},
   journal = {Computer Standards \& Interfaces},
   year    = {2026},
-  note    = {Manuscript under peer review; preprint forthcoming}
+  note    = {Manuscript in preparation; preprint forthcoming}
 }
 
 @dataset{Fosse2026gbfsdata,

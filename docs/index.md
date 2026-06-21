@@ -114,7 +114,7 @@ gs = pd.read_parquet(
 | **Source & audit pipeline** | [github.com/cycling-data-lab/gbfs-audit-catalogue](https://github.com/cycling-data-lab/gbfs-audit-catalogue) |
 | **Reproducible recipes** | [notebooks/catalogue_recipes.ipynb](https://github.com/cycling-data-lab/gbfs-audit-catalogue/blob/main/notebooks/catalogue_recipes.ipynb) |
 | **Human-validation protocol** | [experiments/annotation/PROTOCOL.md](https://github.com/cycling-data-lab/gbfs-audit-catalogue/blob/main/experiments/annotation/PROTOCOL.md) |
-| **Paper (CSI 2026)** | Manuscript under peer review; preprint forthcoming |
+| **Paper (CSI 2026)** | Manuscript in preparation; preprint forthcoming |
 
 ## Schema — 46 columns at a glance
 
@@ -149,7 +149,7 @@ plus a Docker image and a 36-test CI suite for byte-level reproducibility.
              A reproducible anomaly taxonomy for open mobility data},
   journal = {Computer Standards \& Interfaces},
   year    = {2026},
-  note    = {Manuscript under peer review; preprint forthcoming}
+  note    = {Manuscript in preparation; preprint forthcoming}
 }
 
 @dataset{Fosse2026gbfsdata,
