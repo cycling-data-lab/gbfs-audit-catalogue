@@ -1,0 +1,15 @@
+version: 2
+# Gentle: only updates GitHub Actions versions, monthly, batched into a single
+# grouped PR. Research code dependencies stay pinned (no pip/uv ecosystem here)
+# so reproducibility is never silently changed.
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      github-actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: "ci"
+    labels: ["dependencies"]
