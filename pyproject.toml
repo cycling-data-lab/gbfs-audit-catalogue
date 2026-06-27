@@ -26,6 +26,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Information Analysis",
 ]
 dependencies = [
+    "gbfs-toolkit>=1.2.0",
     "pandas>=2.0.0",
     "numpy>=1.26.0",
     "pyarrow>=14.0.0",

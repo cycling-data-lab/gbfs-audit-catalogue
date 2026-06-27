@@ -1,9 +1,18 @@
 """Standalone audit primitives for the GBFS Audit Catalogue.
 
-This module deliberately has zero dependency on the broader research
-project. It exposes the small public surface that an external user
-needs: load the published catalogue, load the per-system summary, and
-re-run the Tier-1 / Tier-2 enrichment over a compatible raw parquet.
+The A1-A7 semantic audit is delegated to the published ``gbfs-toolkit``
+library (``gbfs_toolkit.audit_static``), which carries the same logic and
+thresholds distilled from this pipeline. The catalogue keeps its own
+network-geometry (Tier-2) and operator-normalisation code, which are not
+part of the toolkit's scope. ``audit_static`` is called with
+``a7_scope="all"`` so the original catalogue A7 definition (a fully
+free-floating system with null capacities is flagged) is reproduced
+exactly, and with ``a4_sigma`` taken from :data:`A4_SIGMA` so the A4
+threshold sweep can vary it.
+
+This module exposes the small public surface that an external user needs:
+load the published catalogue, load the per-system summary, and re-run the
+Tier-1 / Tier-2 enrichment over a compatible raw parquet.
 
 The audit logic itself is documented in the companion paper
 (Foss\'e & Pallares, 2026, Computer Standards & Interfaces).
@@ -23,6 +32,7 @@ import re
 from pathlib import Path
 from typing import Optional
 
+import gbfs_toolkit as gb
 import numpy as np
 import pandas as pd
 
@@ -36,6 +46,8 @@ ZENODO_PARQUET_URL = (
 
 # Tunables (exposed as module-level constants so tests and downstream
 # consumers can reference the exact thresholds documented in the paper).
+# They are identical to gbfs_toolkit.models, which audit_static uses; A4_SIGMA
+# is forwarded to audit_static so a sensitivity sweep can override it here.
 A2_MIN_STATIONS = 20
 A4_MIN_STATIONS = 5
 A4_SIGMA = 3.0
@@ -151,57 +163,6 @@ def detect_operator(system_id: str, system_name: str) -> str:
     return str(system_name or "Unknown").strip()
 
 
-def _haversine_m(lat1: np.ndarray, lon1: np.ndarray,
-                 lat2: np.ndarray, lon2: np.ndarray) -> np.ndarray:
-    """Vectorised haversine distance in metres."""
-    R = 6_371_000.0
-    dlat = np.radians(lat2 - lat1)
-    dlon = np.radians(lon2 - lon1)
-    a = (np.sin(dlat / 2) ** 2
-         + np.cos(np.radians(lat1)) * np.cos(np.radians(lat2))
-         * np.sin(dlon / 2) ** 2)
-    return R * 2 * np.arctan2(np.sqrt(a), np.sqrt(1 - a))
-
-
-def _detect_a4_outliers(df: pd.DataFrame, sigma_max: float = 3.0) -> pd.Series:
-    """A4 — flag stations beyond sigma_max MAD-based deviations from system centroid."""
-    flags = pd.Series(False, index=df.index)
-    for sys_id, grp in df.groupby("system_id"):
-        lats = grp["lat"].to_numpy(dtype="float64")
-        lons = grp["lon"].to_numpy(dtype="float64")
-        valid = ~(np.isnan(lats) | np.isnan(lons))
-        if valid.sum() < 5:
-            continue
-        clat = np.nanmedian(lats[valid])
-        clon = np.nanmedian(lons[valid])
-        dists = _haversine_m(lats, lons,
-                             np.full_like(lats, clat),
-                             np.full_like(lons, clon))
-        med_d = np.nanmedian(dists[valid])
-        mad = np.nanmedian(np.abs(dists[valid] - med_d)) * 1.4826
-        mad = max(mad, 1.0)
-        flags.loc[grp.index] = dists > (med_d + sigma_max * mad)
-    return flags
-
-
-def _detect_a5_perimeter(df: pd.DataFrame, area_threshold_km2: float = 50_000) -> pd.Series:
-    """A5 — flag all stations in systems whose bounding-box area exceeds the threshold."""
-    flags = pd.Series(False, index=df.index)
-    for sys_id, grp in df.groupby("system_id"):
-        lats = grp["lat"].dropna().to_numpy()
-        lons = grp["lon"].dropna().to_numpy()
-        if len(lats) < 3:
-            continue
-        R = 6_371_000.0
-        mean_lat = np.radians(np.mean(lats))
-        x = R * np.radians(lons) * np.cos(mean_lat)
-        y = R * np.radians(lats)
-        bbox_km2 = ((x.max() - x.min()) / 1000) * ((y.max() - y.min()) / 1000)
-        if bbox_km2 > area_threshold_km2:
-            flags.loc[grp.index] = True
-    return flags
-
-
 # ---------------------------------------------------------------------------
 # Geodesy
 # ---------------------------------------------------------------------------
@@ -213,8 +174,8 @@ def _project_meters(lat: np.ndarray, lon: np.ndarray) -> np.ndarray:
     """Equirectangular projection to local metres around the dataset mean.
 
     Accurate enough for the sub-100 km neighbourhood queries used by the
-    audit. For continental-scale queries the caller should switch to a
-    proper haversine distance.
+    Tier-2 geometry. For continental-scale queries the caller should switch
+    to a proper haversine distance.
     """
     lat_r = np.deg2rad(np.asarray(lat, dtype="float64"))
     lon_r = np.deg2rad(np.asarray(lon, dtype="float64"))
@@ -227,144 +188,8 @@ def _project_meters(lat: np.ndarray, lon: np.ndarray) -> np.ndarray:
 
 
 # ---------------------------------------------------------------------------
-# Tier-1 : audit visibility flags (A1..A7)
+# Tier-1 : audit visibility flags (A1..A7), delegated to gbfs-toolkit
 # ---------------------------------------------------------------------------
-
-
-def _flag_a2(out: pd.DataFrame) -> pd.Series:
-    """A2 : placeholder capacity (constant non-zero across the system).
-
-    A2 is only evaluated on the docked-bike subset of each system. On a
-    free-floating system the capacity field is structurally meaningless
-    (already captured by A3), so duplicating the verdict via A2 would
-    inflate the audit counts the paper reports separately for A2 and A3.
-    """
-    docked = out[out["station_type"] == "docked_bike"]
-    sys_caps = (
-        docked.dropna(subset=["capacity"])
-              .groupby("system_id")["capacity"]
-              .agg(["nunique", "median", "size"])
-    )
-    flagged = set(sys_caps.index[
-        (sys_caps["nunique"] == 1)
-        & (sys_caps["median"] > 0)
-        & (sys_caps["size"] >= A2_MIN_STATIONS)
-    ])
-    return out["system_id"].isin(flagged)
-
-
-def _flag_a4(out: pd.DataFrame, projected: np.ndarray) -> np.ndarray:
-    """A4 : geospatial outliers detected from nearest-neighbour distance.
-
-    For each system, compute the distance from every station to its
-    nearest same-system neighbour, then apply a robust 3-$\\sigma$
-    rule (median + 3 $\\times$ MAD-rescaled scale) on that one-dimensional
-    distribution. A station is flagged A4 if its nearest neighbour is
-    farther than the system-specific threshold, with a 1 km floor.
-
-    This replaces the previous distance-to-centroid construction,
-    which over-flagged nationwide multi-modal deployments (e.g.
-    Deutsche Bahn's Call a Bike, where 37.8\\% of stations were
-    flagged as outliers relative to a single centroid that lies
-    nowhere on the actual network). The nearest-neighbour metric is
-    intrinsic to each station's local cluster rather than to the
-    geographically-arbitrary centroid, so it works on both unimodal
-    and multi-modal systems without recalibration.
-    """
-    from scipy.spatial import cKDTree
-
-    n = len(out)
-    flag = np.zeros(n, dtype=bool)
-    if n == 0:
-        return flag
-    sys_codes, _ = pd.factorize(out["system_id"].values)
-    for code in np.unique(sys_codes):
-        idx = np.where(sys_codes == code)[0]
-        if len(idx) < A4_MIN_STATIONS:
-            continue
-        pts = projected[idx]
-        if not np.all(np.isfinite(pts)):
-            finite = np.isfinite(pts).all(axis=1)
-            if finite.sum() < A4_MIN_STATIONS:
-                continue
-            idx_f = idx[finite]
-            pts = pts[finite]
-        else:
-            idx_f = idx
-        tree = cKDTree(pts)
-        dists, _ = tree.query(pts, k=2)  # self + nearest
-        nn_dist = dists[:, 1]
-        nn_median = float(np.median(nn_dist))
-        mad = float(np.median(np.abs(nn_dist - nn_median)))
-        sigma_robust = 1.4826 * mad
-        if sigma_robust > 0.0:
-            # Standard robust-3-sigma envelope on the nearest-neighbour
-            # distribution.
-            threshold = max(
-                nn_median + A4_SIGMA * sigma_robust, A4_MIN_THRESHOLD_M
-            )
-        else:
-            # Degenerate scale (all neighbours equidistant, e.g. a
-            # regular grid): fall back to a multiplicative criterion
-            # so genuine outliers still flag.
-            threshold = max(10.0 * nn_median, A4_MIN_THRESHOLD_M)
-        flag[idx_f[nn_dist > threshold]] = True
-    return flag
-
-
-def _flag_a5(out: pd.DataFrame, projected: np.ndarray) -> np.ndarray:
-    """A5 : out-of-perimeter coverage (system bounding box > threshold).
-
-    The "out-of-jurisdiction" half of the paper's A5 signature requires
-    an administrative polygon (IGN BD TOPO) that is not bundled with
-    this minimal package ; downstream pipelines that have access to a
-    jurisdiction layer can OR the resulting mask with this function's
-    output.
-    """
-    n = len(out)
-    flag = np.zeros(n, dtype=bool)
-    if n == 0:
-        return flag
-    sys_codes, _ = pd.factorize(out["system_id"].values)
-    for code in np.unique(sys_codes):
-        idx = np.where(sys_codes == code)[0]
-        if len(idx) < 2:
-            continue
-        pts = projected[idx]
-        if not np.isfinite(pts).all():
-            pts = pts[np.isfinite(pts).all(axis=1)]
-            if len(pts) < 2:
-                continue
-        width_m = pts[:, 0].max() - pts[:, 0].min()
-        height_m = pts[:, 1].max() - pts[:, 1].min()
-        area_km2 = (width_m * height_m) / 1e6
-        if area_km2 > A5_BBOX_MAX_KM2:
-            flag[idx] = True
-    return flag
-
-
-def _flag_a6(out: pd.DataFrame) -> pd.Series:
-    """A6 : ≥1% of docked-bike stations declare capacity = 0."""
-    is_zero_dock = (out["capacity"].fillna(-1) == 0) & (
-        out["station_type"] == "docked_bike"
-    )
-    sys_rate = is_zero_dock.groupby(out["system_id"]).mean()
-    sys_size = out.groupby("system_id").size()
-    flagged = set(sys_rate.index[
-        (sys_rate >= A6_RATE_THRESHOLD) & (sys_size >= A6_MIN_STATIONS)
-    ])
-    return out["system_id"].isin(flagged)
-
-
-def _flag_a7(out: pd.DataFrame) -> pd.Series:
-    """A7 : ≥50% of a system's stations declare capacity = NaN."""
-    is_nan = out["capacity"].isna()
-    sys_rate = is_nan.groupby(out["system_id"]).mean()
-    sys_size = out.groupby("system_id").size()
-    flagged = set(sys_rate.index[
-        (sys_rate >= A7_RATE_THRESHOLD) & (sys_size >= A7_MIN_STATIONS)
-    ])
-    return out["system_id"].isin(flagged)
 
 
 def _audit_confidence(row: pd.Series) -> str:
@@ -380,13 +205,15 @@ def _audit_confidence(row: pd.Series) -> str:
 def _compute_tier1(
     df: pd.DataFrame, projected: Optional[np.ndarray] = None
 ) -> pd.DataFrame:
-    """Tier-1 audit visibility columns (11 new fields)."""
+    """Tier-1 audit visibility columns (11 new fields).
+
+    The A1-A7 verdicts are produced by :func:`gbfs_toolkit.audit_static` with
+    ``a7_scope="all"`` (the catalogue's original A7) and ``a4_sigma=A4_SIGMA``
+    (so a sweep can override the module constant). ``projected`` is accepted
+    for signature compatibility with :func:`enrich`; the toolkit recomputes
+    the identical equirectangular projection internally.
+    """
     out = df.copy()
-    if projected is None:
-        projected = _project_meters(
-            out["lat"].to_numpy(dtype="float64"),
-            out["lon"].to_numpy(dtype="float64"),
-        )
 
     out["capacity_raw"] = out["capacity"].astype("Float64")
     out["capacity_audited"] = (
@@ -395,13 +222,13 @@ def _compute_tier1(
         .astype("Float64")
     )
 
-    out["flag_A1"] = out["station_type"] == "carsharing"
-    out["flag_A2"] = _flag_a2(out)
-    out["flag_A3"] = out["station_type"] == "free_floating"
-    out["flag_A4"] = _flag_a4(out, projected)
-    out["flag_A5"] = _flag_a5(out, projected)
-    out["flag_A6"] = _flag_a6(out)
-    out["flag_A7"] = _flag_a7(out)
+    audit = gb.audit_static(
+        out[["system_id", "station_id", "station_type", "capacity", "lat", "lon"]],
+        a7_scope="all",
+        a4_sigma=A4_SIGMA,
+    )
+    for k in range(1, 8):
+        out[f"flag_A{k}"] = audit[f"A{k}"].to_numpy()
 
     out["operator_name"] = [
         detect_operator(sid, sname)
