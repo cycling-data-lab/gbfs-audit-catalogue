@@ -1,89 +1,74 @@
-# gbfs-toolkit : manques relevés en construisant la pipeline unifiée
+# gbfs-toolkit : audit des fonctions manquantes (v2)
 
-Constats issus de l'écriture de `unified_audit.py` + `run_unified_audit.py`.
-Priorité : P1 = correction/correctness, P2 = ergonomie scientifique, P3 = confort.
+Révisé après avoir construit la pipeline unifiée, l'analyse de robustesse et le
+re-audit mondial. La librairie est riche (100+ fonctions exportées) et plusieurs
+manques de la v1 sont **corrigés** : bug du résolveur de catalogue, plus
+`audit_sensitivity` et `flag_rate_ci` ajoutés. Restent des manques structurants.
 
-## P1.1 — Bug du résolveur de catalogue (correctness)
+## Le constat de fond
 
-`io/catalog.py::resolve` choisit la colonne URL ainsi :
+**La librairie est un moteur de *verdict*, pas un moteur de *pipeline*.** Elle
+calcule les flags A1-A7 (`audit_static`) mais n'implémente **aucune
+reclassification** : `RULES` décrit la signature A3 (« conditional averaging »)
+sans fonction qui la détecte ou qui relabellise. Les étapes S1 (carsharing par
+opérateur) et S3 (free-floating par sur-capacité) du protocole de purge vivent
+encore dans `audit_pipeline` du catalogue, hors librairie. C'est pourquoi le
+re-audit mondial n'a pas pu rendre A1/A3 comparables sans que je recode
+`apply_operator_types` à la main, et pourquoi A3 mondial = « free-floating
+déclaré » et non « sur-capacité » (la vraie anomalie du papier).
 
+## Tier 1 — bloque la reproduction end-to-end du papier dans la librairie
+
+**T1.1 — Les transforms de reclassification (S1 / S3 / S9).**
+`audit_static` lit `station_type` tel quel ; le papier le *produit* en amont.
+Manque :
 ```python
-url_col = next((c for c in catalog.columns
-                if ("auto" in c and "discovery" in c) or c == "url"), None)
+classify_carsharing(info, names, *, keywords=...) -> info  # S1
+overcapacity_ratio(info, status) -> Series  # bar_c_profile / bar_c_actual par système
+reclassify(info, status=None, *, a3_ratio=5.0, n_min=20) -> info  # S1+S3+S9
+```
+Sans cela, FR (post-reclassification) et World (brut) ne sont pas auditables
+à l'identique. **Note honnête :** la sur-capacité A3 (ratio profil/réel) exige
+`station_status` (la capacité réalisée), pas seulement `station_information` ;
+toute version statique seule restera un proxy (« free-floating déclaré »).
+
+**T1.2 — `audit_catalogue` (fetch + audit par lot).**
+Il y a `audit_feed(url)` (un flux) et `fetch_multiple` (fetch seul), mais rien
+qui fetch N systèmes → verdict station-level + statut par système (+ archivage).
+Je l'ai recodé deux fois (`unified_audit.py`, `run_unified_audit.py`). API :
+```python
+audit_catalogue(system_ids=None, *, catalog=None, archive_dir=None,
+                a7_scope="docked", max_workers=8) -> (verdict, status)
 ```
 
-Comme l'OU accepte `c == "url"` et que la colonne `url` (site web de l'opérateur)
-précède souvent `auto-discovery_url` dans la liste MobilityData, **le résolveur
-fetch la page d'accueil au lieu du `gbfs.json`**. Symptôme observé :
-`fetch https://www.careem.com/...: 404` au lieu du flux GBFS.
+## Tier 2 — ergonomie de recherche que le papier exerce
 
-**Correctif :** prioriser l'auto-discovery, puis se rabattre sur `url`.
+**T2.1 — `system_flags(verdict)`** : réduction station→système (système flaggé
+ssi ≥1 station). Chaque compte par système du papier la refait à la main.
 
-```python
-disc = next((c for c in catalog.columns if "auto" in c and "discovery" in c), None)
-url_col = disc or next((c for c in catalog.columns if c == "url"), None)
-```
+**T2.2 — Archivage reproductible au fetch** : `feed.snapshot(to=dir)` écrivant
+les frames canoniques + `fetched_at` + SHA-256 (boucle BYOD « fetch une fois,
+geler, auditer »). `generate_manifest` hashe un lake existant mais ne le crée
+pas ; j'ai dû coder `fetch_and_archive`.
 
-## P1.2 — Fonction manquante : audit de catalogue par lot
+**T2.3 — Détecteur de sur-capacité A3** exposé (`overcapacity_ratio`) : le
+mécanisme Bordeaux/Pony est décrit dans `RULES` mais jamais calculé par l'API.
 
-La librairie offre `audit_feed(url)` (un flux) et `fetch_multiple(ids)` (fetch
-seul), mais **rien qui fetch N systèmes et renvoie un verdict station-level tidy
-+ un statut par système**. Tout `unified_audit.py` (fetch → `station_information()`
-→ concat → `audit_static` → agrégation système, avec gestion des flux morts) est
-la preuve de ce manque. C'est l'API de haut niveau dont a besoin tout audit
-multi-système (exactement le cœur du papier).
+## Tier 3 — helpers de validation (solidifient le papier)
 
-**API proposée :**
+**T3.1 — Accord inter-juges** : Krippendorff α, Cohen/Fleiss κ, IC de Wilson,
+pour les tables d'annotation humaine (`tab:irr`, `tab:perrule`) — calculés hors
+librairie aujourd'hui. Un module `agreement` les rendrait reproductibles et
+citables, comme `audit_sensitivity` l'a fait pour la robustesse.
 
-```python
-def audit_catalogue(system_ids=None, *, catalog=None, archive_dir=None,
-                    a7_scope="docked", a4_sigma=3.0, max_workers=8):
-    """Fetch and audit many systems. Returns (verdict_stations, status_per_system).
-    If archive_dir is given, freeze raw station_information + provenance there."""
-```
+**T3.2 — Comptage « exclusif » inter-classes** : « systèmes A7 et aucune autre
+classe » (le 245 du papier). `exclusive_flags(verdict)` éviterait de le recoder.
 
-## P2.1 — Archivage reproductible fetch -> disque avec provenance
+## Priorité
 
-`generate_manifest(lake_dir)` hashe un lake **existant**, mais il manque le
-one-shot « fetch un flux et écris ses frames canoniques avec `fetched_at`, URL
-source et hash par frame ». C'est la boucle BYOD reproductible (fetch une fois,
-geler, auditer de façon déterministe) que j'ai dû coder à la main dans
-`run_unified_audit.py::fetch_and_archive`.
-
-**API proposée :** `feed.snapshot(to=dir)` qui écrit `{system_id}/information.parquet`
-+ une ligne de provenance, ou `gb.archive_systems(ids, catalog, to=dir)`.
-
-## P2.2 — Agrégation des flags au niveau système
-
-Réduire les flags A1-A7 station-level en par-système (système flaggé ssi ≥1
-station flaggée) est l'opération que fait tout le papier, recodée ici en
-`unified_audit.system_flags`. Mérite un helper :
-
-```python
-def system_flags(verdict):  # -> DataFrame indexé par system_id, colonnes A1..A7 + n_stations
-```
-
-ou un paramètre `level="system"` sur `audit_static`/`audit_frames`.
-
-## P3.1 — Comptage « exclusif » inter-classes
-
-Le papier reporte « systèmes flaggés A7 **et par aucune autre classe** ». Un petit
-utilitaire `exclusive_flags(verdict)` (ou `only=("A7",)`) éviterait de le recoder.
-
-## P3.2 — Jointure pays/type automatique
-
-Quand un `catalog` est fourni, attacher `country_code` (et le type inféré) au
-verdict éviterait la jointure manuelle systématique.
-
-## P3.3 — Ergonomie : `station_information` est une méthode
-
-`feed.station_information()` se lit comme un attribut (`info = feed.station_information`
-renvoie la fonction, puis `.columns` lève une erreur opaque). Cohérent avec
-`summary()`/`snapshot()`/`audit()`, donc à garder, mais à signaler dans la doc
-quickstart (piège classique).
-
----
-
-**Recommandation :** P1.1 (bug résolveur) et P1.2 (`audit_catalogue`) sont les
-deux à intégrer en priorité ; ils transforment ce script de recherche en API
-première classe et corrigent un fetch silencieusement faux.
+1. **T1.1 (reclassification)** : c'est le manque qui empêche la pipeline unique
+   d'être *vraiment* unique sur A1/A3, et qui force le catalogue à garder du code
+   métier. Le plus structurant scientifiquement.
+2. **T1.2 (`audit_catalogue`)** : le plus utilisé opérationnellement.
+3. **T3.1 (accord inter-juges)** : prochaine fonction qui solidifierait le papier,
+   après `audit_sensitivity`, en rendant la validation humaine reproductible.

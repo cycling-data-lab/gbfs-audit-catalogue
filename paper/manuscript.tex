@@ -288,44 +288,47 @@ detection rules are formalised in Section~\ref{secProtocol}.
 semantic contract of the field they populate, plus two
 \emph{semantic warnings} (A6--A7) that flag spec-compliant
 publication choices whose downstream-consumer interpretation is
-nevertheless ambiguous. \textbf{The two columns are produced by two
-distinct pipelines and are not directly comparable:} \emph{FR} is the
-incidence on the released, post-audit French catalogue (123 certified
-systems), where A3 counts any system with at least one
-\texttt{free\_floating} entry after the S3 reclassification (broad,
-post-audit) and A4 counts stations flagged by the topology-aware outlier
-detector of Section~\ref{secA4v2}; \emph{Global} is the raw cross-corpus
-projection of the same rule set on the frozen 2026-04 MobilityData
-snapshot (1{,}509 systems, 48 countries, France included), evaluated at
-the \emph{system level} from the published \texttt{station\_information}
-without running S3, with fleet type inferred from operator name. Under
-this raw projection a Global value can fall \emph{below} its FR
-counterpart for the same class (\eg A3) because the projection uses the
-strict over-capacity detector rather than the post-audit
-reclassification; for a like-for-like view, the raw detectors fire on the
-French systems at A1--A5 $=(17, 14, 4, 3, 3)$ (Table~\ref{tab:global-audit}).
-The \emph{Global} column is reproducible to the unit by
-\texttt{verify\_snapshot.py}; the \emph{FR} column by re-running
-\texttt{python -m audit\_pipeline.regenerate} on the released
-parquet.}
+nevertheless ambiguous. \textbf{Both columns are produced by the same
+library function} (\texttt{gbfs\_toolkit.audit\_static}, identical
+thresholds): \emph{FR} is the incidence on the released, certified French
+catalogue (123 systems), and \emph{World} is a single-pipeline re-audit of
+the MobilityData catalogue (936 systems that publish a populated
+\texttt{station\_information}, 46 countries, France included), re-fetched
+live and audited by the same function (Section~\ref{secGlobalAudit}). The
+feed-intrinsic classes A2, A4, A5 and A7 are directly comparable; A1
+additionally uses the operator-name carsharing classification (a feed does
+not self-declare car-sharing, so A1 is $0$ without it). A3 ($^\dagger$)
+counts the free-floating share under the same broad definition as the FR
+column, with the over-capacity signature that isolates the Bordeaux
+mechanism reported separately in the footnote. Every count is reproducible: the World column from
+the frozen feed archive (deterministic, seeded; \texttt{run\_unified\_audit.py}),
+the FR column from the released parquet.}
 \label{tab:anomalies}
 \small
 \begin{tabular}{@{}lllrr@{}}
 \toprule
-\textbf{Class} & \textbf{Name} & \textbf{Signature} & \textbf{FR} & \textbf{Global}\\
+\textbf{Class} & \textbf{Name} & \textbf{Signature} & \textbf{FR} & \textbf{World}\\
 \midrule
 \multicolumn{5}{l}{\textit{Structural errors (semantic-contract violations)}}\\
-A1 & Out-of-domain inclusion       & Car-sharing advertised as BSS                          & 17         & 46        \\
-A2 & Placeholder capacity          & Constant non-zero $c_i$ across docked subset           &  1         & 48        \\
-A3 & Structural over-capacity      & Conditional averaging on free-floating                 & 41         & 33        \\
-A4 & Geospatial error              & $3\sigma$ outlier on per-system nearest-neighbour distance & 88 (1.1\,\% stns) & 81 \\
-A5 & Out of perimeter              & System bounding box $>50{,}000$\,km$^2$                &  4         & 17        \\
+A1 & Out-of-domain inclusion       & Car-sharing advertised as BSS                          & 17         & 36        \\
+A2 & Placeholder capacity          & Constant non-zero $c_i$ across docked subset           &  1         &  8        \\
+A3 & Structural over-capacity      & Conditional averaging on free-floating                 & 41         & 699$^\dagger$ \\
+A4 & Geospatial error              & $3\sigma$ outlier on per-system nearest-neighbour distance & 88 & 515 \\
+A5 & Out of perimeter              & System bounding box $>50{,}000$\,km$^2$                &  4         & 30        \\
 \midrule
 \multicolumn{5}{l}{\textit{Semantic warnings (spec-compliant but consumer-ambiguous)}}\\
-A6 & Zero-capacity dock            & $\geq 1\,\%$ of docked stations declare $c = 0$        &  0         & 22        \\
-A7 & Null capacity field           & $\geq 50\,\%$ of stations declare $c = $ \texttt{NaN}  & 32 (FF)    & 245       \\
+A6 & Zero-capacity dock            & $\geq 1\,\%$ of docked stations declare $c = 0$        &  0         &  0        \\
+A7 & Null capacity field           & $\geq 50\,\%$ of stations declare $c = $ \texttt{NaN}  & 32         & 288       \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.3em}
+{\footnotesize $^\dagger$ A3 counts the free-floating share (natively declared
+or reclassified by S3), the same broad definition as the FR column. The
+over-capacity reclassification ($\bar c_{\text{profile}}/\bar c_{\text{actual}}
+> 5$) is computed from \texttt{station\_information} alone by the library's
+\texttt{overcapacity\_ratio}; 34 of the 699 World free-floating systems carry
+that over-capacity signature, reproducing the 33 found in the frozen snapshot.}
 \end{table}
 
 Of the 142 French GBFS feeds at the national portal, 123 are certified
@@ -872,6 +875,28 @@ Voi          & 4  &  2{,}816 & 5--10 & Small fleet-profile estimator \\
 \end{table}
 
 \subsection{Global scalability projection}\label{secGlobalAudit}
+\paragraph{Single-pipeline re-audit.} To compare France and the world under
+\emph{one} rule set rather than two, we re-fetched the MobilityData
+catalogue live and audited every reachable feed with the same function used
+on the French catalogue (\texttt{gbfs\_toolkit.audit\_static}, identical
+thresholds), archiving each raw feed with a UTC timestamp and SHA-256 so the
+audit is deterministic and seeded. Of the 1{,}509 inventoried systems, 936
+publish a populated \texttt{station\_information} and are audited
+($228{,}294$ stations, 46 countries). The single-pipeline incidence with its
+cluster-bootstrap $95\,\%$ interval is A4 in $55.0\,\%\,[51.8, 58.2]$ of
+systems, A7 in $30.8\,\%\,[27.9, 33.7]$, A1 in $3.8\,\%\,[2.7, 5.1]$, A2 in
+$0.9\,\%\,[0.3, 1.5]$ and A5 in $3.2\,\%\,[2.1, 4.4]$
+(Table~\ref{tab:anomalies}, World column). Two results follow. First, A1 is
+\emph{not} feed-intrinsic: a GBFS feed never self-declares car-sharing, so
+A1 fires on $0$ raw feeds and rises to 36 systems only once the
+operator-name classification is applied, whereas A2, A4, A5 and A7 are
+intrinsic to the feed and need no external metadata. Second, the
+feed-intrinsic anomalies recur at double-digit rates across 46 countries
+under thresholds calibrated on France, so the patterns are not
+French-specific. The per-country breakdown below is drawn from a frozen
+2026-04 snapshot of the same catalogue, retained for its operator-level
+detail.
+
 We applied the rule set, unchanged except for a country-perimeter
 recalibration, to the entire MobilityData canonical catalogue
 (1{,}509 GBFS systems across 48 countries, the complete world inventory at
