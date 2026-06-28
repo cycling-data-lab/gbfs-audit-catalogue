@@ -1,0 +1,5627 @@
+{
+  "gbfs_toolkit_version": "1.4.0",
+  "generated_at": "2026-06-28T08:41:14.194571+00:00",
+  "n_files": 936,
+  "total_bytes": 13813660,
+  "files": [
+    {
+      "path": "5534922f6997f4d861ce1b33f2efce21a470c22.parquet",
+      "sha256": "966f3cc9c383a3c565ed9de5fdfa39808ff5abd3be986dd0a565afaa0ce4ad28",
+      "bytes": 4224
+    },
+    {
+      "path": "9.parquet",
+      "sha256": "46dca0860827b97a388fb1c92eb8e528c50dca027149eacb1e74fe0fc35b5f7c",
+      "bytes": 4211
+    },
+    {
+      "path": "Augsburg.parquet",
+      "sha256": "8dd400307bad6af1fa8fba3c1135eaf87a215676effb878a1036fde4cac2e1a0",
+      "bytes": 4691
+    },
+    {
+      "path": "BIKI_valladolid.parquet",
+      "sha256": "c963747be43edc666149735bbb46c22b7cd33b9891a550483b1a503fec4ccea6",
+      "bytes": 6962
+    },
+    {
+      "path": "Bixi_MTL.parquet",
+      "sha256": "47dca3d9c8a13370294f67c373ef7b5523317f4526cbb6c26b7945ad04ee8431",
+      "bytes": 30153
+    },
+    {
+      "path": "BoltEU_Brussels.parquet",
+      "sha256": "fb061acd80d356578a335fa401b723e0d75e93a968248c9312b15587b621d81d",
+      "bytes": 140400
+    },
+    {
+      "path": "BoltEU_Liverpool.parquet",
+      "sha256": "f5526c2227edb4e1dd34b7be85cb7505d9a53c0fe612d52918ff3c5d60e06875",
+      "bytes": 88470
+    },
+    {
+      "path": "BoltEU_Washington_DC.parquet",
+      "sha256": "e6bdabfcc8c4590cef77fcfa7bca721a3e1ebdefd264d29b6f65c4742c6ef107",
+      "bytes": 18330
+    },
+    {
+      "path": "CKL.parquet",
+      "sha256": "a8dbf4215186fd4b67a5e99624051a40f3377af65dcb45968a54dc80b97de2bf",
+      "bytes": 4521
+    },
+    {
+      "path": "CVelo_FR_Clermont-Ferrand.parquet",
+      "sha256": "3400da6fc78c9ceb14fd0ebbbb828c1e82f4a40276086253d75b3ae3249483cb",
+      "bytes": 6467
+    },
+    {
+      "path": "Donkey-Prignitz.parquet",
+      "sha256": "862bb8854304a15d1403e58aebba81df397a2ba5d34bbcf27237abc74a5a4515",
+      "bytes": 5064
+    },
+    {
+      "path": "Ergolding.parquet",
+      "sha256": "6720c40e93badbf7da5421a54a147b99141b6dc637a5306f0659e12060e8b16d",
+      "bytes": 4407
+    },
+    {
+      "path": "Kelheim.parquet",
+      "sha256": "61e406ee83cf3b84e977c139786c47fddd8e84e268bae32ea1d2997f185196bb",
+      "bytes": 4691
+    },
+    {
+      "path": "MEX.parquet",
+      "sha256": "a4813e3f7f6fbd5e3899e1ebbdb01fb75c516ff8d177ac0bcd077a1abb435fd7",
+      "bytes": 21087
+    },
+    {
+      "path": "Mobibikes_CA_Vancouver.parquet",
+      "sha256": "fc7444fa54b3a94bf7808963d11c91ab50d077ede313c6e13749db516139db72",
+      "bytes": 10939
+    },
+    {
+      "path": "Neutraubling.parquet",
+      "sha256": "8df6a2aa5c2823e5fcd8e540709ac4fef7888dccdc2ebf9cd87eb1588a4fb7d3",
+      "bytes": 4505
+    },
+    {
+      "path": "Obertraubling.parquet",
+      "sha256": "99c15a44d61ae6b947f6c26d5dfa8c780ce68069abd75da4c18349272bdf0019",
+      "bytes": 4535
+    },
+    {
+      "path": "Optymo_Belfort_ALS.parquet",
+      "sha256": "525bd43cbd3a9272866d07f961076a83820b1772c6672baa5d13452cf71a027a",
+      "bytes": 7453
+    },
+    {
+      "path": "Optymo_FR_Belfort.parquet",
+      "sha256": "e29ec7c81d5bb25f2c7a640344ba0db01f55933e27f897b930ca4eb7749ca478",
+      "bytes": 5364
+    },
+    {
+      "path": "Paris.parquet",
+      "sha256": "f08b5005eb4660b5d7675658b69174f519559dbcdd2bdc3f792202027f9d2fb4",
+      "bytes": 48610
+    },
+    {
+      "path": "acoruna.parquet",
+      "sha256": "82e2bf44e4caef68da0350498c2f41e35232f3ba437161bc546ef0d19fe72193",
+      "bytes": 6386
+    },
+    {
+      "path": "altervelo.parquet",
+      "sha256": "9627f8bc5bb55d02644c1184f606695e4902552124d7599592af92fa6a7e2903",
+      "bytes": 5821
+    },
+    {
+      "path": "amiens.parquet",
+      "sha256": "c74d5be68e553df1979e341e6cb871d73b5b05973102efae064ffe01d3e90e25",
+      "bytes": 5454
+    },
+    {
+      "path": "auchveloc.parquet",
+      "sha256": "18d6b5678e6133d77a0b7ec55624e008c01f3f6465bcd01ff4bd93dee732c3eb",
+      "bytes": 4888
+    },
+    {
+      "path": "aupa.parquet",
+      "sha256": "803516623b296c789c3a7fc70861705667d67b09bc5502bee3970fc8aefdbdd6",
+      "bytes": 4517
+    },
+    {
+      "path": "auray-quiberon.parquet",
+      "sha256": "7d61de452ec59531cb79533583c6b12120e383d57f4290ae8abec7dd61782adb",
+      "bytes": 4822
+    },
+    {
+      "path": "austin.parquet",
+      "sha256": "f6e87cf9ee166776a1e65083a04a2eaf4dc664e8d3b7e8142e538dee10a6151e",
+      "bytes": 6386
+    },
+    {
+      "path": "auto-en-velay.parquet",
+      "sha256": "b8975472f3144d3d1a343cf51e67d61c1a2d0a900b24d00268363527efd8f65d",
+      "bytes": 4582
+    },
+    {
+      "path": "auxrmlevelo.parquet",
+      "sha256": "6a70bd42e27ad2dc0ef40b18493427ed1c97f84d3ddef583ee7dfd5f4a03a4da",
+      "bytes": 6063
+    },
+    {
+      "path": "avelo_quebec.parquet",
+      "sha256": "6b598d2d9200d8a0c3beaff1955691bf995deb93f01ba5f197204d4b3c0924ba",
+      "bytes": 9718
+    },
+    {
+      "path": "bayern_komplett.parquet",
+      "sha256": "92d531c97a03f970cbdd0b05e145288f1dfe72885c81713f9ef366fefe4282de",
+      "bytes": 8767
+    },
+    {
+      "path": "bcycle_aventura.parquet",
+      "sha256": "7d340d141a488d793a4fafe84626cd5ea53926e82c923d003c668b7c899c84f8",
+      "bytes": 4397
+    },
+    {
+      "path": "bcycle_bentonville.parquet",
+      "sha256": "cb9a50102d5f6d0ed0f1bcda894aa03eba50cc2af1b3c5b71c9740f36b81cbf6",
+      "bytes": 5082
+    },
+    {
+      "path": "bcycle_bikelnk.parquet",
+      "sha256": "a141c081b530352b213226b5726c972212b375a1f0b83f0203f42f801ae2bfb2",
+      "bytes": 4846
+    },
+    {
+      "path": "bcycle_boulder.parquet",
+      "sha256": "66c2b5de8e46c3f5efed3b5922d5b53b9f3bac9f484984c6f4fd25469aedaf15",
+      "bytes": 5950
+    },
+    {
+      "path": "bcycle_bublr.parquet",
+      "sha256": "f0ff43edd8c03aa4e7e39690c7c42cc8f3a00c6fa338052f1e57cc26be3a626d",
+      "bytes": 8315
+    },
+    {
+      "path": "bcycle_cincyredbike.parquet",
+      "sha256": "93540932dfb499ce5235d0160bf626dd62e9794b30f57ce8ec09d57abb0ebafb",
+      "bytes": 6362
+    },
+    {
+      "path": "bcycle_clemson.parquet",
+      "sha256": "1abc2622f74fde71666117c8f523eeccedf870c3ab790211c26badc7d09e4790",
+      "bytes": 4640
+    },
+    {
+      "path": "bcycle_desmoines.parquet",
+      "sha256": "f0e1feb926a402232d5a4d168b4de983a6f6999baff2f92fcd8534670847cafe",
+      "bytes": 5114
+    },
+    {
+      "path": "bcycle_elpaso.parquet",
+      "sha256": "f949a7d543272b169316a09bf304f2480f8ce8c945adc97dbc8499b63951b587",
+      "bytes": 4780
+    },
+    {
+      "path": "bcycle_greenbikeslc.parquet",
+      "sha256": "f2d187561ad77f0f2d5eefcf6bf2b956d0575007ac439a3f2b6fedfc3bb8776a",
+      "bytes": 6153
+    },
+    {
+      "path": "bcycle_greenville.parquet",
+      "sha256": "85067a4852e90be56c8d1cd0f4896c178b08c4fdb7410640f44863c9e9c317e5",
+      "bytes": 4726
+    },
+    {
+      "path": "bcycle_heartland.parquet",
+      "sha256": "4cfad1adb44f24e0d6786230e17f9f56f5926db3718c96633344ae25e10b7cfa",
+      "bytes": 6482
+    },
+    {
+      "path": "bcycle_indego.parquet",
+      "sha256": "553716a170c661a71467a9a00ef9a1b7a79018a37e6c0999b2bdf75c43bd1932",
+      "bytes": 11825
+    },
+    {
+      "path": "bcycle_jacksoncounty.parquet",
+      "sha256": "cb7b485642ef14a8ba5b24c4d048ff88bb9c785baf55e0d68bbcd45b23cc9faf",
+      "bytes": 4424
+    },
+    {
+      "path": "bcycle_lametro.parquet",
+      "sha256": "9e0f1a85e2af012bb8706c82ad11215edf790b3a490a805e433a86c7b9bc7e9d",
+      "bytes": 9825
+    },
+    {
+      "path": "bcycle_madison.parquet",
+      "sha256": "a2f8aac222c31d243b05f24b485d1122d181d235b2ab774bd01b53d3ccad0992",
+      "bytes": 7048
+    },
+    {
+      "path": "bcycle_memphis.parquet",
+      "sha256": "299f71681d212140daaf785f4789fbe83a407addfa2deeb97cd567d6cd67bf51",
+      "bytes": 5196
+    },
+    {
+      "path": "bcycle_nashville.parquet",
+      "sha256": "b5ead77ee5fc2b451a1b26bb6bdff71f571f8783ffc11ff8697b438c75f74957",
+      "bytes": 5203
+    },
+    {
+      "path": "bcycle_pacersbikeshare.parquet",
+      "sha256": "66078f5619ccd1c5b57cfdfcdd0ebb344fe367ef1c24af76063461d7a4923e49",
+      "bytes": 5751
+    },
+    {
+      "path": "bcycle_redding.parquet",
+      "sha256": "7c65ad717b056f6e56ddf7ba2f4d0e2219d844001a895a7307fa76c8c0e3144d",
+      "bytes": 4864
+    },
+    {
+      "path": "bcycle_rtcbikeshare.parquet",
+      "sha256": "ffbb91e0eb057f377e01b477e3ee2ce6eae6de554c7094e9cc181809e3f87fba",
+      "bytes": 5323
+    },
+    {
+      "path": "bcycle_sanantonio.parquet",
+      "sha256": "101079256cbb0a6e88a790941d08cbeef170294e196314e563b1bd6a7d0172b3",
+      "bytes": 4830
+    },
+    {
+      "path": "bcycle_santabarbara.parquet",
+      "sha256": "349cda52e255cb1f474fe3077e2e912e2fa01afca3dfb2334bf7641e14866cda",
+      "bytes": 6892
+    },
+    {
+      "path": "bcycle_santacruz.parquet",
+      "sha256": "5c5268de0c2c57e6417d810a7255b8f8b5eb1c8d8a727a7fad17c2cc65de9e2a",
+      "bytes": 6111
+    },
+    {
+      "path": "bcycle_truckee.parquet",
+      "sha256": "33a1c9760da098247fda970e3991e33eb23d830d243992edf2ae8dde12924d69",
+      "bytes": 4835
+    },
+    {
+      "path": "bcycle_valentine.parquet",
+      "sha256": "8c36bfe66ae286af304d28d0f3501a21f106ef055cf71c139d6f290c503ce265",
+      "bytes": 4384
+    },
+    {
+      "path": "beb.parquet",
+      "sha256": "5ce2cacf023f1bfca4eeca5150aba95e43a1741c878cc246683f3e45d5f54ae7",
+      "bytes": 6464
+    },
+    {
+      "path": "bergen-city-bike.parquet",
+      "sha256": "2c295f7eca682544476dc791b07d28e66f3b419c24686f4dba7ef95c565d9bc1",
+      "bytes": 6883
+    },
+    {
+      "path": "beryl_bcp.parquet",
+      "sha256": "3d0d048cc7c8ea15033c3871fe8aa1ef53a3946dce19b31681bf41c7aa412dbf",
+      "bytes": 14122
+    },
+    {
+      "path": "beryl_belfast.parquet",
+      "sha256": "4180316ca1bf7144c714851f6192fe1c0b4c74eaedabb5aae4c6ec5fafbe0fc4",
+      "bytes": 5862
+    },
+    {
+      "path": "beryl_bradford.parquet",
+      "sha256": "285c891cdf5b663b532c77b8eb69c218bda70f781cd511e791443fcd09209491",
+      "bytes": 5199
+    },
+    {
+      "path": "beryl_brighton.parquet",
+      "sha256": "c9d5ab6344812841ac661b41ae2a17fd45cafec2ec0cb79299d2641ea74f48ef",
+      "bytes": 7112
+    },
+    {
+      "path": "beryl_canterbury.parquet",
+      "sha256": "2fd3468d96b93278d751030326e59ab6107fc0544646682b7869725156027adc",
+      "bytes": 4992
+    },
+    {
+      "path": "beryl_cornwall.parquet",
+      "sha256": "9a0722b50daba7bfb5c902a3c6ff6fc4a393f1a050cc72bff4c44a2f154e4b3e",
+      "bytes": 6864
+    },
+    {
+      "path": "beryl_eastleigh.parquet",
+      "sha256": "1af532627c8c1213053310cfdec10e7713de45be999ff40661f4a57d729f8551",
+      "bytes": 4697
+    },
+    {
+      "path": "beryl_greater_manchester.parquet",
+      "sha256": "8888d3a3e1d540fdb0ec702fd1b70f9b1fd4d4653305ee994c36ddf83e99a4c0",
+      "bytes": 11648
+    },
+    {
+      "path": "beryl_guildford.parquet",
+      "sha256": "c5cf6decc84a83b335522eac56f5a9cb41eb8615fe7f41dbbbc3f71d3809992b",
+      "bytes": 5440
+    },
+    {
+      "path": "beryl_hackney_cargo_bike.parquet",
+      "sha256": "e7b74a93be0e7c1de5813b4ec969793ab372f408c884a96eb27ef0582460005b",
+      "bytes": 4511
+    },
+    {
+      "path": "beryl_hereford.parquet",
+      "sha256": "f6ef1253f635dc105f55c74389ff420bdf43c0c8b195f6aaa629429c2a8fe6a7",
+      "bytes": 6183
+    },
+    {
+      "path": "beryl_hertsmere.parquet",
+      "sha256": "e6954567ac2c49949b2721758119bba99b900e7f488e55e5b8893958eab178eb",
+      "bytes": 5012
+    },
+    {
+      "path": "beryl_isle_of_wight.parquet",
+      "sha256": "217af5fc8e6e26b28154e61b963ba5421da1631d4ee919329523bf61feeb872c",
+      "bytes": 6516
+    },
+    {
+      "path": "beryl_leeds.parquet",
+      "sha256": "bf95cb9aad93b3585047c571c10d4959bde3079e0bb6986ad8238ca5581e174e",
+      "bytes": 6847
+    },
+    {
+      "path": "beryl_norwich.parquet",
+      "sha256": "9864ff02093eecff2ba35caa1c8b472723193f1aebb25962a418be9339f192f0",
+      "bytes": 9469
+    },
+    {
+      "path": "beryl_plymouth.parquet",
+      "sha256": "9c664c1a0c1c58fffd223e60d67158000c13a7707297d9ef71a5be4f68d0641c",
+      "bytes": 7641
+    },
+    {
+      "path": "beryl_portsmouth.parquet",
+      "sha256": "31a9d498f0fd6de99acbd0ea3f6351cb71dc43f6eb276ec700341769ddc77635",
+      "bytes": 6933
+    },
+    {
+      "path": "beryl_southampton.parquet",
+      "sha256": "8830c941f357f4fb1afb267272f542eaedb65ace08553f9b2c0ceae1877becac",
+      "bytes": 6976
+    },
+    {
+      "path": "beryl_stevenage.parquet",
+      "sha256": "4069c8a8ddec9d92bc73c80e482537cf596573a0f29949ab46f0df22a0f1fcef",
+      "bytes": 5499
+    },
+    {
+      "path": "beryl_watford.parquet",
+      "sha256": "bd97285a06f6e9a20b4fe02ee0c7e4bbaf5490f580fa4d47b31f4ab64135c972",
+      "bytes": 6799
+    },
+    {
+      "path": "beryl_west_midlands.parquet",
+      "sha256": "d0aaefeaaf9f21220ac61a4d8cda27f3769169e63d558ea8615ea4ed16a119aa",
+      "bytes": 10862
+    },
+    {
+      "path": "beryl_weymouth.parquet",
+      "sha256": "f410fa704b99dbd0390b3a88bea3198b97ee1ca859706030d551f2b1e03c0164",
+      "bytes": 5135
+    },
+    {
+      "path": "beryl_wool.parquet",
+      "sha256": "c033c7f97b86c60005d93f99562af67d920ed4e7e591aa34c88b8c9a435d10f4",
+      "bytes": 4519
+    },
+    {
+      "path": "beryl_worcester.parquet",
+      "sha256": "405a489fd12b406c11c18263e3bb37524259cf80a6ee4628b9707bf38fb4feb0",
+      "bytes": 5714
+    },
+    {
+      "path": "besancon.parquet",
+      "sha256": "9ed29c18bad8cf9c2a77ee7d04d5de0f942d13b4a7c030d5d030f2c85ef7427e",
+      "bytes": 5184
+    },
+    {
+      "path": "bicimad_madrid.parquet",
+      "sha256": "903bacf39499b89bccb5b0fbaf172bf097f71ece9f332e0d34d34d240748ca95",
+      "bytes": 20662
+    },
+    {
+      "path": "bike_barcelona.parquet",
+      "sha256": "2db3a5e80a3629abc7e72c70bdb7d3b318dd39386cdfdbfd36067e7614373ff9",
+      "bytes": 17898
+    },
+    {
+      "path": "bike_brasilia.parquet",
+      "sha256": "18e71dd0c029d9bbbee95a65b593925785ab7add09e5450e011973ee75bd64e3",
+      "bytes": 6109
+    },
+    {
+      "path": "bike_buenosaires.parquet",
+      "sha256": "d87d91114fde9b3956f8ffaa213029974aa6fc0afe79ddc60f77da5aa758374b",
+      "bytes": 13979
+    },
+    {
+      "path": "bike_chattanooga.parquet",
+      "sha256": "6d49b8b373848efb0fdb0136d28f45bae358965098f5b4b355ef170982a65ecb",
+      "bytes": 5415
+    },
+    {
+      "path": "bike_nordelta.parquet",
+      "sha256": "484678c2ef29c547fe001d0259d1d1496429f7a789ccc36ef5f80dc063aae41d",
+      "bytes": 4876
+    },
+    {
+      "path": "bike_pe.parquet",
+      "sha256": "27fa09d185e0406a66795f3cbbb0a50cdbedd05f8221858082b8feca74f255e8",
+      "bytes": 6537
+    },
+    {
+      "path": "bike_poa.parquet",
+      "sha256": "a834dc3e6ee9cff0341fd7e4051b1d9067f37e407e03acd3c7578c4a13da4c77",
+      "bytes": 6592
+    },
+    {
+      "path": "bike_rio.parquet",
+      "sha256": "c1b8b0665a01975ea23ea9aeadfeb4eec301994de1e6e20981feb48aee7bc02c",
+      "bytes": 14255
+    },
+    {
+      "path": "bike_salvador.parquet",
+      "sha256": "0f74342dc8321fc52919e9500aee9d47239505be09a6a0c30c0ff4f4185af269",
+      "bytes": 6182
+    },
+    {
+      "path": "bike_sampa.parquet",
+      "sha256": "bc993b7df6cb5f0e26bb80672f41af3b71249b7053d0d7d5e2f79c6cc99ada8d",
+      "bytes": 10174
+    },
+    {
+      "path": "bike_santiago.parquet",
+      "sha256": "c420f28b9cc3cbac27b4f46f8aae1c89b6f501ace9113fbfd49f3bbd0fa21074",
+      "bytes": 9174
+    },
+    {
+      "path": "bike_share_hawaii.parquet",
+      "sha256": "992df14e88d8ec7dfd2ae5bfa271c6e3c5716dca51d90b2aa5a52936dea6d504",
+      "bytes": 4924
+    },
+    {
+      "path": "bike_share_toronto.parquet",
+      "sha256": "d537060c4f4694a00d9cece3d6ed318cfb0889bd2d31fc3c1e3de2706a454bf1",
+      "bytes": 30887
+    },
+    {
+      "path": "biketobike.parquet",
+      "sha256": "1160ba34a1a97fa95e0b5e2be0ae52896e93c6e93a28933ab40148a37e77f245",
+      "bytes": 6637
+    },
+    {
+      "path": "biketown_nike.parquet",
+      "sha256": "af41da3bbd7aed909a55a47a6bf2d4b95c7e94e539012223d35ab60773d1ed9d",
+      "bytes": 5040
+    },
+    {
+      "path": "biketown_pdx.parquet",
+      "sha256": "1daac5c2caf5efc764005635d226ab18812c213c2a0a1e03097d6da957471406",
+      "bytes": 14505
+    },
+    {
+      "path": "bikr-lisbon.parquet",
+      "sha256": "67d60d5edd5f9bc4a7ba20847a9e24090d2eb7e53b5baa1f04a7cd4b7990e1a1",
+      "bytes": 104062
+    },
+    {
+      "path": "bilbao.parquet",
+      "sha256": "56ace52360e50f29e8e2f04e4bd10a3c5ff18ce94bb4d9eb20699d5f83dc859b",
+      "bytes": 6048
+    },
+    {
+      "path": "bird-adeje.parquet",
+      "sha256": "ee22f2c510b1d0d81e991bbc1c0aa8bbcb5d16b946adb613c472bc1e9719e311",
+      "bytes": 15591
+    },
+    {
+      "path": "bird-ajaccio.parquet",
+      "sha256": "a225c3e4f0a6f6f2b926c540c398d6663dd7ec20cc700dbcf0d59ba1bd2af694",
+      "bytes": 6505
+    },
+    {
+      "path": "bird-barcelona.parquet",
+      "sha256": "55c179f3df358dace4534414ca5fa395bb2ada5f5974a38e059ebfbd121c111f",
+      "bytes": 206498
+    },
+    {
+      "path": "bird-bordeaux.parquet",
+      "sha256": "78a286d8eec293d8688ee8d6b17762078ab7c81c6c33b5e5d9df344d06db7399",
+      "bytes": 180885
+    },
+    {
+      "path": "bird-cascais.parquet",
+      "sha256": "c8d7748bd9b112978626c318b4394f21a07a12d331a9a15023cdcc2ffa01f9f3",
+      "bytes": 13420
+    },
+    {
+      "path": "bird-draguignan.parquet",
+      "sha256": "c8f2890c86b9c6f9a87c4356b88e07ad302112fda66439575499fbdb2db5d967",
+      "bytes": 8006
+    },
+    {
+      "path": "bird-gap.parquet",
+      "sha256": "b7838bb639daca283412d3f0adf74a37ec45a9aeb0ac7d2f36e43dbbeac18aa2",
+      "bytes": 7219
+    },
+    {
+      "path": "bird-halifax.parquet",
+      "sha256": "f8a7b53600cd49070604c539d773113cd28c2f6ae161a6b7d9551bbbd2cb713c",
+      "bytes": 44639
+    },
+    {
+      "path": "bird-larochesuryon.parquet",
+      "sha256": "3415c63a44985e621037a67d786d20b71cdcb057824e4d274633a2263d809800",
+      "bytes": 8520
+    },
+    {
+      "path": "bird-laval.parquet",
+      "sha256": "e603fda70b7c4e63aa3ed593175c24cb9d5438504d2857e31b4269746d726e1d",
+      "bytes": 9238
+    },
+    {
+      "path": "bird-marseille.parquet",
+      "sha256": "52aada209d3ed80ca93f6dd2094176cc6a9b4cbed325c968fd5af73b901b946b",
+      "bytes": 49460
+    },
+    {
+      "path": "bird-matosinhos.parquet",
+      "sha256": "8557e32f37ee4a4d909ce8b7cfe0a1f35cb59da08785462cb2a4abe4b5e68152",
+      "bytes": 14629
+    },
+    {
+      "path": "bird-millau.parquet",
+      "sha256": "bf945ae34ed4e4dce6984a01042d2637e1e1ea7b612554d7e141bd7f72f27c5c",
+      "bytes": 8746
+    },
+    {
+      "path": "bird-montlucon.parquet",
+      "sha256": "3c328c2316f7bf3ad441230c3f4316e0852fffba9560d5340f2ea692c58ca44a",
+      "bytes": 7980
+    },
+    {
+      "path": "bird-ottawa.parquet",
+      "sha256": "0fa0d4594e8a88fe92145662ef782cd299c4d889cb4acde03640237f6de2700b",
+      "bytes": 36295
+    },
+    {
+      "path": "bird-porto.parquet",
+      "sha256": "63ee7aa5a4d80139740d977e81274790c4fadab81d30ad87247857c9fd0e8b3b",
+      "bytes": 15482
+    },
+    {
+      "path": "bird-sarreguemines.parquet",
+      "sha256": "6c281326075041121a996d9a9021af3924ae982dc12087afd6d4c8262055feaa",
+      "bytes": 8193
+    },
+    {
+      "path": "bird-schaffhausen.parquet",
+      "sha256": "9e0f89969b4575e28225a9166a6cb42582dfd0bd5df138385602e5c91b6df16a",
+      "bytes": 9453
+    },
+    {
+      "path": "bird-vaughan.parquet",
+      "sha256": "915b57262c1777c8321628d23e02f179de74fcf3c315680333baa05bac254113",
+      "bytes": 30487
+    },
+    {
+      "path": "bird-vichy.parquet",
+      "sha256": "540b34cb50a4740d3c9a5abc9b3a5bb99911fa074031b90f52158bc5f0cf1544",
+      "bytes": 7069
+    },
+    {
+      "path": "bluebike.parquet",
+      "sha256": "073dddc2559077915d1658209e031c1c5f5495dd695e31f81cc63ab0aeedc833",
+      "bytes": 11358
+    },
+    {
+      "path": "bluebikes.parquet",
+      "sha256": "cdc01cb33156d12eee97bc61b79e8b223fd10b0f286c9b9ddf8a73b9c03a3b83",
+      "bytes": 31463
+    },
+    {
+      "path": "bogota_bike.parquet",
+      "sha256": "ecb26fbdd27a452f5581a0eb42d3e00f96e19dc12ee033797535c243c3a7147e",
+      "bytes": 9421
+    },
+    {
+      "path": "bolt_basel.parquet",
+      "sha256": "734628b6d0f5d8ea32485756b84bbba26a32d33b1c3fb9945c808c00e5c491a2",
+      "bytes": 4821
+    },
+    {
+      "path": "bolt_karlsruhe.parquet",
+      "sha256": "942de85f1d203bce34e8b18ca90ea187d8f35eb20d3c2e6a65bd30d0fa01b6a3",
+      "bytes": 6149
+    },
+    {
+      "path": "bolt_stuttgart.parquet",
+      "sha256": "4f820b8e57869e3ae4cb5d7f225856cb236f2d9ecb8377c66c48fb739d7931f7",
+      "bytes": 7726
+    },
+    {
+      "path": "bolt_zurich.parquet",
+      "sha256": "345639e06ec3f77e8ba1ce62a5ffde52aed16b5b2aebdb1bc5e3e0955e78908a",
+      "bytes": 7617
+    },
+    {
+      "path": "bora_viseu.parquet",
+      "sha256": "6bc0a8c01c659a7997660cf8dca9bcf5cf9d4b36a8005a1e1555d2ec28062713",
+      "bytes": 5247
+    },
+    {
+      "path": "brennus_a_velo_sens.parquet",
+      "sha256": "f7ff83860b550aaa413f0fb211ea5d9cab579e123874e0f4545d85ee98cbeb83",
+      "bytes": 4944
+    },
+    {
+      "path": "bruxelles.parquet",
+      "sha256": "cd876733db008914252ce6b15b10f8221e09b10455ea059f33c865adaf84a8dd",
+      "bytes": 12902
+    },
+    {
+      "path": "cabi.parquet",
+      "sha256": "9be5b739ad061e0f6ebdd5414328aad9cfa0b70ef12c194898c8dd97cc1700be",
+      "bytes": 38753
+    },
+    {
+      "path": "calais-velos.parquet",
+      "sha256": "75de2bec4d908b64b54025d31f1b9d83dac89994df426ca30489ecec0aed72a0",
+      "bytes": 6316
+    },
+    {
+      "path": "calais.parquet",
+      "sha256": "49cb878bb63ef098ef6fcba3d0c8ec074e6243acc4389f10362d1a8aa11ac35f",
+      "bytes": 4847
+    },
+    {
+      "path": "calivelo.parquet",
+      "sha256": "30ae0bcb73a150447e73d729e128e80f9e8acbc971db380453e4eaa15a5f9520",
+      "bytes": 7428
+    },
+    {
+      "path": "callabike.parquet",
+      "sha256": "11c7e22aaeead657688b4d48141e9afe7c372e8762bad0fce5daec7aeafe960e",
+      "bytes": 86852
+    },
+    {
+      "path": "capcotentin.parquet",
+      "sha256": "638eabb3d4dd0fe387bb65515a7b79c1ab7d390cbc423434a9748458222d80f1",
+      "bytes": 6775
+    },
+    {
+      "path": "car_ship.parquet",
+      "sha256": "60337d0fd4e2c79d1e08f7ed3e4618a1f9fb9a88e73d3a836e45179325af55e5",
+      "bytes": 5047
+    },
+    {
+      "path": "careem_bike.parquet",
+      "sha256": "e6464422d61ca0a02bd960ec5b9142106bcdd17d91f737e2311fd24177938f54",
+      "bytes": 9842
+    },
+    {
+      "path": "carvelo2go_ch.parquet",
+      "sha256": "664c2f625b68bf32d2b6930a0df9cba42b8692aa9354fa8f43144abb7fcdc58a",
+      "bytes": 22582
+    },
+    {
+      "path": "cc_smartbike_antwerp.parquet",
+      "sha256": "fd471912fcdf8e3a3f9ed56f6a7581627dcedd6351a33fca43721a1e38b033e9",
+      "bytes": 12156
+    },
+    {
+      "path": "cergy.parquet",
+      "sha256": "b519cd3189bae5ca171109d69c300f48090fe1f14dd035e3704d92879a746aca",
+      "bytes": 5488
+    },
+    {
+      "path": "chantrerie.parquet",
+      "sha256": "ce8d45e3b566f4eac9ba31f9d83b5491b5488c17ebc1dc5249ba83e84b73bfdf",
+      "bytes": 5214
+    },
+    {
+      "path": "choletbus.parquet",
+      "sha256": "31aac2e02fc1c8a99dc279e48ece5edc518c4ccdaaa69b0b3683d606cccf2534",
+      "bytes": 5145
+    },
+    {
+      "path": "citedia_services.parquet",
+      "sha256": "a144e22be82dbc02cf065b6702e25c0f33d2ec9ee6595e6a869090f42542abb8",
+      "bytes": 4452
+    },
+    {
+      "path": "citiz_alpes_loire.parquet",
+      "sha256": "916b687c0c1d05ac1e166c65119afa15dbf4838ce66a8b2e426a98c6eb154952",
+      "bytes": 12693
+    },
+    {
+      "path": "citiz_angers.parquet",
+      "sha256": "6499cc1e2446fcccdce23e21ec0a526b0152ca07cb88bed710ae571d4790c8b6",
+      "bytes": 4951
+    },
+    {
+      "path": "citiz_bfc.parquet",
+      "sha256": "31ba2c73b3d8f906693675ae953fd706335d9faedfc057484232ce9c64f0bfd9",
+      "bytes": 5606
+    },
+    {
+      "path": "citiz_developpement.parquet",
+      "sha256": "1fa70208d08323fc80baccad1060ae8c1aba234b1bcd0ad8cb7772b013396c39",
+      "bytes": 5801
+    },
+    {
+      "path": "citiz_gironde.parquet",
+      "sha256": "e5b70311658f0302e9363e0cecef427d115cf379514b5bd5c2cee68c02b4a282",
+      "bytes": 6343
+    },
+    {
+      "path": "citiz_grand_est.parquet",
+      "sha256": "72461f98dfca373f3447b16c445896765bdb1335fd572bccd8843dcdfb0d7877",
+      "bytes": 10421
+    },
+    {
+      "path": "citiz_grand_poitiers.parquet",
+      "sha256": "5316141b7f7782be443bf0b2256b30f95ac0f271f1a9d617b82c4cb5fcbff373",
+      "bytes": 4907
+    },
+    {
+      "path": "citiz_la_rochelle.parquet",
+      "sha256": "86140d9ac9b07e5bf3de27d445d2e69c9bda5a166cd1d039de4d98efb9ad292d",
+      "bytes": 4916
+    },
+    {
+      "path": "citiz_lille_arras.parquet",
+      "sha256": "4e4a651bb8e3fcb859e8e2497ec120d85e23b603d8731ef4d6351071e051d97c",
+      "bytes": 6178
+    },
+    {
+      "path": "citiz_metropole_lyon.parquet",
+      "sha256": "e2d9711e4e35a3727d146bf00a379ef198abd7454e9431a3eabbd50d7deb9cda",
+      "bytes": 8456
+    },
+    {
+      "path": "citiz_nantes.parquet",
+      "sha256": "7ebe2f242182ca5db2214ff1c4a6a8a04e0d4d9df3b0efb195aa9a70686eaf73",
+      "bytes": 4868
+    },
+    {
+      "path": "citiz_occitanie.parquet",
+      "sha256": "1a05de6db3c2e31fa2236830352b80de3129e9688eca260ad1850964dea2014c",
+      "bytes": 7409
+    },
+    {
+      "path": "citiz_provence.parquet",
+      "sha256": "cdd88933b19aaba8eb411c76ea477b0c3c26f248d1b1e31c95de8a2616862b61",
+      "bytes": 6390
+    },
+    {
+      "path": "citiz_rennes_metropole.parquet",
+      "sha256": "d28f46790459973a7e1dfd35db585ac08c098db6ad0f4a9e586d880abc0b09b5",
+      "bytes": 5632
+    },
+    {
+      "path": "clem-france.parquet",
+      "sha256": "b358119b52a39db628f018efae23cc6f480426ade3b937fdd3ec1dafbeb52e19",
+      "bytes": 12100
+    },
+    {
+      "path": "conficars_ulm.parquet",
+      "sha256": "9ce3c4ad7bc11806af893691cd437e878b52a9add036a88f5a40d7cf8dfed6ca",
+      "bytes": 5142
+    },
+    {
+      "path": "curitiba.parquet",
+      "sha256": "b599be682782e4c03bb20683bbb614233e399a50abd5164310c16c35d83f02a0",
+      "bytes": 5556
+    },
+    {
+      "path": "cyclam.parquet",
+      "sha256": "6777db1d28eed8317f7ce59440fdca1b088d0bb5cf93b32d2aa57d91a756ebf5",
+      "bytes": 5955
+    },
+    {
+      "path": "cyclolibre.parquet",
+      "sha256": "a8b185e8254afe5bb29ce08c55e3a6689037d7c027ab61045e2bced3a461e1ae",
+      "bytes": 4953
+    },
+    {
+      "path": "cyclovis.parquet",
+      "sha256": "0deaf8d0d20230b803cca2e7b15dfe904f0357d440f2f1a6f8602204963fab8d",
+      "bytes": 5703
+    },
+    {
+      "path": "dej_bikecity.parquet",
+      "sha256": "8e3bee1a771a10858535abe95b112f7e1847893a5c0a0e638fb47ecb5bca1b9a",
+      "bytes": 4749
+    },
+    {
+      "path": "docomo-cycle-tokyo.parquet",
+      "sha256": "bad73aa57e1991641ad992088ecea746501fae87fd2b65e28170b88991b64436",
+      "bytes": 52362
+    },
+    {
+      "path": "docomo-cycle.parquet",
+      "sha256": "6ef22da02749cb3c10a2d4d51e0f063a9c97c4d0215366c38f146990abfdea8b",
+      "bytes": 162321
+    },
+    {
+      "path": "donkey_aalborg.parquet",
+      "sha256": "8b15cbe9fee8fa457d128f2256d5db0fd004860c31811485d5a42770066f5da5",
+      "bytes": 5764
+    },
+    {
+      "path": "donkey_aarhus.parquet",
+      "sha256": "a0f21d8c4b6ebe6c835274b55a58fdc8f8ad7d7347ca799d6d545baec2869b61",
+      "bytes": 16411
+    },
+    {
+      "path": "donkey_am.parquet",
+      "sha256": "662bc3a25d74510cfff4afd6cd52b28487f015d0311805f48cd85a05cd965f2a",
+      "bytes": 5243
+    },
+    {
+      "path": "donkey_antwerp.parquet",
+      "sha256": "3cc09736d998d13378536e1f9bd789c3cf75f0ec895e5ceb4312ca48a7fd5c83",
+      "bytes": 26366
+    },
+    {
+      "path": "donkey_ballerup.parquet",
+      "sha256": "10714ead71676ece57c333f6ade6ea8fb5c6858f0679e1922d2df36c27b11731",
+      "bytes": 5281
+    },
+    {
+      "path": "donkey_bamberg.parquet",
+      "sha256": "dc7ff661fcf6e3e7eea8bffba1857c8265f8fbfb2809cc7a45ef5e616325aa7a",
+      "bytes": 4493
+    },
+    {
+      "path": "donkey_barcelona.parquet",
+      "sha256": "4b119f2e0aecce185c4c8dfec8af3dafafd1d2ef87c0774f65d4c1d70381204c",
+      "bytes": 43023
+    },
+    {
+      "path": "donkey_budapest.parquet",
+      "sha256": "92a028ea1efe2313f8be41d1159d51899569851ef6ab907c47b2d5a2e1dcb922",
+      "bytes": 6835
+    },
+    {
+      "path": "donkey_cirencester.parquet",
+      "sha256": "3511ee740dc57fb0e783993f04eb2e6ef5011c9f4e6c9043bb1f0dc5e71bd32e",
+      "bytes": 4416
+    },
+    {
+      "path": "donkey_copenhagen.parquet",
+      "sha256": "145df49dbf835627e38c507a79e06e3adead58021251ad1aa319ae42c35f40c2",
+      "bytes": 75637
+    },
+    {
+      "path": "donkey_den_haag.parquet",
+      "sha256": "0f49a392c7ee0910238029b58bf87316b9f5fee438ea1c37863ef1ef25b8f4b3",
+      "bytes": 21587
+    },
+    {
+      "path": "donkey_dordrecht.parquet",
+      "sha256": "277378a2f1973d80c97c32dd0b6ade1ea5516811ad167150dfe4a5259b09bb52",
+      "bytes": 9174
+    },
+    {
+      "path": "donkey_frederikshavn.parquet",
+      "sha256": "9ff9886740bd3fdfe828353d1cc5b32ce421d05af2df70b2b4e3e62f5fa55835",
+      "bytes": 4533
+    },
+    {
+      "path": "donkey_ge.parquet",
+      "sha256": "99f6c16c22482f583579b54596449e0cfbeff55e565b5fc8a976bd605e855cad",
+      "bytes": 20180
+    },
+    {
+      "path": "donkey_gh.parquet",
+      "sha256": "501e4ddd27e550eb802ff2c8c55368077ba4a3d018ebc300da38b46eb6526b9c",
+      "bytes": 19973
+    },
+    {
+      "path": "donkey_glostrup.parquet",
+      "sha256": "126c2ab18091d5aca595ecbd855a5059b4471133de51550cddcb5e1ffc4556cd",
+      "bytes": 4643
+    },
+    {
+      "path": "donkey_gorinchem.parquet",
+      "sha256": "d0f9ac881956dd4968a8ed20e3bdb5eb0cb9dfff3dde2c82238b15ea61eb56ea",
+      "bytes": 11983
+    },
+    {
+      "path": "donkey_hannover.parquet",
+      "sha256": "9f4c9ed9a36ee371f60ea949a68d2c48d18df060b01d1fe0b7e2ea581c59496b",
+      "bytes": 14839
+    },
+    {
+      "path": "donkey_hillerod.parquet",
+      "sha256": "49ea823da46240bec0a66c8f82be4b33985e51872173e620233d3bdd2a273a6d",
+      "bytes": 4412
+    },
+    {
+      "path": "donkey_iisalmi.parquet",
+      "sha256": "36c21785880fc128bf6defadd24a106eeccf5b657548c794db69ec452e266060",
+      "bytes": 4801
+    },
+    {
+      "path": "donkey_imatra.parquet",
+      "sha256": "0dd5c6f461590c3a83c51cf17b8d60238c8bd37c37ef3a57f4d02540084a5875",
+      "bytes": 4773
+    },
+    {
+      "path": "donkey_katwijk.parquet",
+      "sha256": "89c9f0155254216153f48616d497d0ae5a768f9255d61fddf4bbfdbcb1efd0cc",
+      "bytes": 13803
+    },
+    {
+      "path": "donkey_kiel.parquet",
+      "sha256": "e3d210f151acd453387bc201097c9629ef069f4a909a2a17aa752c3a7c87d41f",
+      "bytes": 9754
+    },
+    {
+      "path": "donkey_kielsmile.parquet",
+      "sha256": "019555953fc85c0a7f6f05f0274c65651aba6bcf4076444bee41ea6319a26086",
+      "bytes": 9779
+    },
+    {
+      "path": "donkey_klampenborg.parquet",
+      "sha256": "a872c32c09727df5f50ff318c0b73d8f3801183b8b6879168c5d593c64e37257",
+      "bytes": 4490
+    },
+    {
+      "path": "donkey_kotka.parquet",
+      "sha256": "a21f36aa9f01d7a80c982d4370cb57d996c534c6403be9e188fcb944fd20a767",
+      "bytes": 5593
+    },
+    {
+      "path": "donkey_kouvola.parquet",
+      "sha256": "559ea9b7c9a9643ba500bc08bb97370b314eca2ec5a3462df8b49a62c7bacb6d",
+      "bytes": 4948
+    },
+    {
+      "path": "donkey_kreuzlingen.parquet",
+      "sha256": "ac007c64aa7695afbdcb08294ad1947cdd2a13e330ae364bbbda270faa60f7a1",
+      "bytes": 4936
+    },
+    {
+      "path": "donkey_lappeenranta.parquet",
+      "sha256": "e927494900dfe001f1ac6209e4691bdae53cc33f46c049f2311d8d3bdd2dbaf6",
+      "bytes": 5383
+    },
+    {
+      "path": "donkey_li.parquet",
+      "sha256": "17b034c19131add9262d06a793dd4e26385d8e53bd874272544f90c5e17a9505",
+      "bytes": 4552
+    },
+    {
+      "path": "donkey_maentsaelae.parquet",
+      "sha256": "75872e045d86b8d0a3601cec0fde932167f8a5bafb151a89c7e08b24f0f782ad",
+      "bytes": 4671
+    },
+    {
+      "path": "donkey_malmoe.parquet",
+      "sha256": "b9e3d7d65bcf6da13c31182bed94983c3e38794c6fe63348fe5ebdf1ced8c123",
+      "bytes": 9283
+    },
+    {
+      "path": "donkey_mikkeli.parquet",
+      "sha256": "42cb0c99f6157b5f8894116cd625492231c796a12b2efb3bff6bbab7b9ea7281",
+      "bytes": 4611
+    },
+    {
+      "path": "donkey_munich.parquet",
+      "sha256": "09dd9f49b14bfd15f01371d28c9845bf8082e576c75e5bc54b0a6ed052e4e46d",
+      "bytes": 4402
+    },
+    {
+      "path": "donkey_neuchatel.parquet",
+      "sha256": "2a89ac4e450d8ea64d8875e33b546cf16074e619c518f3933b4ea30053166ef7",
+      "bytes": 6258
+    },
+    {
+      "path": "donkey_odense.parquet",
+      "sha256": "9fc187d34d45dc5993498f342b969e16a7f76031f5d5621a25e59342bd595b13",
+      "bytes": 13450
+    },
+    {
+      "path": "donkey_oxford.parquet",
+      "sha256": "cd3580767bb97d8387fcfd17a6ca834e92ef3ff7e2d74d9645e56839645d5c0a",
+      "bytes": 5037
+    },
+    {
+      "path": "donkey_porvoo.parquet",
+      "sha256": "32700d7188ebb76107d8b9cad91448b535b20c41858f7a21e6cfb6f3a0184c10",
+      "bytes": 5417
+    },
+    {
+      "path": "donkey_qbuzz.parquet",
+      "sha256": "52b15ffeaf15600fea456d6bf4f479996b8b8ff0ee7b5edbb6c983e46b5b0ae3",
+      "bytes": 9154
+    },
+    {
+      "path": "donkey_raasepori.parquet",
+      "sha256": "6f78f3f3a9f15bd161a934ebdde5427b526f8a94b87b52f41161b1f3351041ad",
+      "bytes": 4578
+    },
+    {
+      "path": "donkey_regensburg.parquet",
+      "sha256": "18a4a56b757607a8700dfde2462173a2e6263c93f600b1d80f2039cd11c59ed9",
+      "bytes": 6845
+    },
+    {
+      "path": "donkey_regensburg_straubing.parquet",
+      "sha256": "c79381c9197362d9f4867d9e6b03ca60bdaf77408d4ac389b1d4fef267b49e3b",
+      "bytes": 7824
+    },
+    {
+      "path": "donkey_reykjavik.parquet",
+      "sha256": "004a287d3f3ea7fe3336faf16433511617670facc4a84b99bbbbe4f2093b738f",
+      "bytes": 4417
+    },
+    {
+      "path": "donkey_riihimaki.parquet",
+      "sha256": "22248af26be3d7bf8f6959eb0a18e78acb2420bcd8c84eef5946a31e0d2d8a5e",
+      "bytes": 5357
+    },
+    {
+      "path": "donkey_rivierenland.parquet",
+      "sha256": "fdefc83d64947a9d34dcf12b12c98a469f5da9cae77291b90ea4cb267238cda3",
+      "bytes": 4497
+    },
+    {
+      "path": "donkey_rotterdam_den_haag.parquet",
+      "sha256": "ce73991a452d1f69b6d3adcf42a405ef52e674e0a230ea5f309bf2c644f81de4",
+      "bytes": 4545
+    },
+    {
+      "path": "donkey_rt.parquet",
+      "sha256": "95eb36b65eaa5ddf503e5972ca779072b9c90cac28488acdae6eab466bae35d5",
+      "bytes": 4464
+    },
+    {
+      "path": "donkey_store_heddinge.parquet",
+      "sha256": "cd26df45af6ffa4364b6ff827a80032d6f70ec8e308e58f51ea7a0e90ef8433c",
+      "bytes": 4588
+    },
+    {
+      "path": "donkey_thun.parquet",
+      "sha256": "eb7e112b2acfc4c78e252f602535a6e4f23d34b2411e5e11b8ce20f7f895186c",
+      "bytes": 5437
+    },
+    {
+      "path": "donkey_turku.parquet",
+      "sha256": "7d09affa9d193268d1ca4162cc2ea936c7bbf2b01660fc615130548082c7f97b",
+      "bytes": 10710
+    },
+    {
+      "path": "donkey_ut.parquet",
+      "sha256": "095b061d9baf6073574e23392a94639230461090dcb9a6f28cb0134d633c371f",
+      "bytes": 5008
+    },
+    {
+      "path": "donkey_westhoek.parquet",
+      "sha256": "2ad1e4d07106dedcb3ecc3cfdd586933a917c982a59a9c0fe6c8a17de45bc9fa",
+      "bytes": 5785
+    },
+    {
+      "path": "donkey_worthing.parquet",
+      "sha256": "d8d976b487ab63f2116c2a1e3ddfceb31f2eb2405649311cf3f81d780e3d4cf7",
+      "bytes": 4635
+    },
+    {
+      "path": "donkey_yverdon-les-bains.parquet",
+      "sha256": "f42acaba7883abb67d78bdf0c10dea4c3943f1d1f6c8f8e0dd974b71b6ef0b6d",
+      "bytes": 6605
+    },
+    {
+      "path": "dott-aachen.parquet",
+      "sha256": "76cdad96ebf6d0bdc3d5a6b38f15f274a837ac6644096cc335c3d2c5487e7795",
+      "bytes": 5813
+    },
+    {
+      "path": "dott-aalst.parquet",
+      "sha256": "783b939deb554894496f4ad0f0d3d6c746234a889c7e39580412bdb7f1a51dca",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-abu-dhabi.parquet",
+      "sha256": "33838b4d18dcee6d3c02476e335cfd4a069c0250585a670007db036bdc4819ac",
+      "bytes": 83702
+    },
+    {
+      "path": "dott-arezzo.parquet",
+      "sha256": "a8896c9ab8681531ccd3097bb2c790bdf65fe4a28c73b820d067d4a458201313",
+      "bytes": 8209
+    },
+    {
+      "path": "dott-as.parquet",
+      "sha256": "743639888ee412e098fb26f409b4f7a9a49c5efdbd8c696014bbb9c21902b46f",
+      "bytes": 4590
+    },
+    {
+      "path": "dott-asker.parquet",
+      "sha256": "4d3017fe8037e65cd8a6655ff10eb8455e1ef5e4a46312cf69a440db66bd791d",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-athens.parquet",
+      "sha256": "9730774cd0dd86bd2c956ec4d60d661c3a1b52ecb81561abf09ce1a00911d9bb",
+      "bytes": 4967
+    },
+    {
+      "path": "dott-baden-bei-wien.parquet",
+      "sha256": "f3b410fb75fdd7e959b25401597c154d1df47e097fa9e6576ab5fd75bc6c233c",
+      "bytes": 7073
+    },
+    {
+      "path": "dott-banska-bystrica.parquet",
+      "sha256": "238c64e395f6ecaa31b107ec76cb8bd3df3c3e7d1cc06aa39db5e546945bae21",
+      "bytes": 4656
+    },
+    {
+      "path": "dott-bardejov.parquet",
+      "sha256": "ee4ee377c8ab5f4fd90e09ac928cfea3c89aea8b625e3fbff78942bd6d17499e",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-bari.parquet",
+      "sha256": "81ed68fe9fabe825dcee000bdff2dce886bd781479dadf27e31365590be21e02",
+      "bytes": 7780
+    },
+    {
+      "path": "dott-basel.parquet",
+      "sha256": "4803733500d876fb63a65e581e073dc453a078a8f50fbbf513cce3602a929125",
+      "bytes": 6826
+    },
+    {
+      "path": "dott-bath.parquet",
+      "sha256": "2ea9e41f701ba677c8f620bed2f36fe270e7a7b610cc752bde0c12ea63537e97",
+      "bytes": 17222
+    },
+    {
+      "path": "dott-baunatal.parquet",
+      "sha256": "a724f0c42d5f447926bd75f0f31a54296eb908398af669eed1c698e7b5b51bc4",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-bergamo.parquet",
+      "sha256": "92b9b9c1c6bf3b007a1aecc0f690504355bdd59b399b51949b630e913494ae2f",
+      "bytes": 45871
+    },
+    {
+      "path": "dott-berlin.parquet",
+      "sha256": "4ece4a13fd61dc8b446692314ef2916c04725ffa71a898c6e1de72ee670b3a90",
+      "bytes": 37118
+    },
+    {
+      "path": "dott-bialogard.parquet",
+      "sha256": "f8f9267ef861e4fe5f90b7454210da1edeea80cd922ee21a3e09ce9256326983",
+      "bytes": 7003
+    },
+    {
+      "path": "dott-bielawa.parquet",
+      "sha256": "c68a79310dd4541d099767022c51c933a56398b46a25abd4b61f9960a2bbfc44",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-bielefeld.parquet",
+      "sha256": "aa3e4a30ff07508e6977a1759f48ca88d696876291ef311cd001ac17ce093b2b",
+      "bytes": 5953
+    },
+    {
+      "path": "dott-boblingen.parquet",
+      "sha256": "35e72d034abcaf8d15b4e0bc2c195ee2bdb854fadccb665af9c0dd1cbc27aaf7",
+      "bytes": 4856
+    },
+    {
+      "path": "dott-bochum.parquet",
+      "sha256": "25ed7516b3c827a88469b88075eae70bb41c9187976aa8c9bdcfc1d15a22c60d",
+      "bytes": 4552
+    },
+    {
+      "path": "dott-bod\u00f8.parquet",
+      "sha256": "27eec66e5123f1ae6446a84464fd647f2224aeb16a1b6b1b43ecc0b8a1ae95d5",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-bonn.parquet",
+      "sha256": "158fa040bf973c59c62c7a6389b31fa3364116cc4c534c889f27fb8579047db1",
+      "bytes": 4598
+    },
+    {
+      "path": "dott-bordeaux.parquet",
+      "sha256": "4a1d7734511228ca2a48bb38d4676b832ed7b32c787b05c0d034455383859753",
+      "bytes": 196333
+    },
+    {
+      "path": "dott-bourgoin-jallieu.parquet",
+      "sha256": "9c0af2ec608ee84a28121a9d3b809854e840e0a2993c8d32131d7ba133965dc5",
+      "bytes": 8377
+    },
+    {
+      "path": "dott-braintree.parquet",
+      "sha256": "454aae6e5ad96d7b8ff4a8b49c8b0a22e392bf9f3aef301b0db8ffcd19eb21fb",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-braniewo.parquet",
+      "sha256": "5b3df6cce10d007c55737519ea9c45e7916fbe977ab15a229657f0325d8e788d",
+      "bytes": 5246
+    },
+    {
+      "path": "dott-bratislava.parquet",
+      "sha256": "57eb58d12415c14ffc15e3828b939eaa94d0168398cd02bc12feddc5e96b6a7b",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-bregenz.parquet",
+      "sha256": "edd551164435b45a61e471f5c4003af8b0b06486dcd60d0948cc0cab8c399840",
+      "bytes": 9913
+    },
+    {
+      "path": "dott-bremen.parquet",
+      "sha256": "b56389eb3536edbe88e3f7ab360003374e8c1d5eb05845f99cb92e9874c9ef44",
+      "bytes": 5592
+    },
+    {
+      "path": "dott-bristol.parquet",
+      "sha256": "67184c842028f4b4873f264cecad3b6b7e1cdbda4a243275f643112825f17e79",
+      "bytes": 74111
+    },
+    {
+      "path": "dott-brodnica.parquet",
+      "sha256": "aeed36911bce00c2178c82239a374ed2c17812496ee9067e2742780fe3cc7710",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-bruhl.parquet",
+      "sha256": "5cd10988dde58be2809ed05bbd02dfb58bf681202f7b1e73c4ee7c08cd0b17cc",
+      "bytes": 8780
+    },
+    {
+      "path": "dott-brunel-university.parquet",
+      "sha256": "a485fc2c81f540b5e6eb4cd4ce097ff434add4ad2488ace156699e84da6b81d5",
+      "bytes": 4898
+    },
+    {
+      "path": "dott-brunswick.parquet",
+      "sha256": "feed975d1a8cba10fc6de5d8cf3446dbf7aeaab1d85ac2a862ffe314248e253a",
+      "bytes": 6643
+    },
+    {
+      "path": "dott-brussels.parquet",
+      "sha256": "83fa7f8c04dbbadbfde55a3a514972056624a14f6f5d478e0fad5388a091e7c9",
+      "bytes": 141277
+    },
+    {
+      "path": "dott-brzeg-dolny.parquet",
+      "sha256": "4b18db392d7e5965f1324e495f4cf7a591722f0315cb7a2d47aac9c4b6f5e03e",
+      "bytes": 4861
+    },
+    {
+      "path": "dott-brzeg.parquet",
+      "sha256": "77ee3b0e8f02104d9f68f2f43c4d4e88eb27722b49ac5beef688f60271c12c8f",
+      "bytes": 4773
+    },
+    {
+      "path": "dott-budapest.parquet",
+      "sha256": "098f28e2e846c23b0d717ef571ddd865963376c63831fbd56f876d985b34c333",
+      "bytes": 58135
+    },
+    {
+      "path": "dott-bytom.parquet",
+      "sha256": "a6e01e539098c3cc8a73f5a7c3d5574eb095e82f24638374c1db689b5efc4c6b",
+      "bytes": 4489
+    },
+    {
+      "path": "dott-cagliari.parquet",
+      "sha256": "7a5389d18c7931df56e1b2cf8b72e038933fbf7c37e11fdc416de72d9659bcaf",
+      "bytes": 17245
+    },
+    {
+      "path": "dott-catania.parquet",
+      "sha256": "9a1752d1ba9e08b21134bf049271b9bcb6351c0f80208d97078501beb638978d",
+      "bytes": 4781
+    },
+    {
+      "path": "dott-celle.parquet",
+      "sha256": "6ba4de275165237dd81a06fbc5fc2bf6ab404b402b9363a11e0ac133ffaa3605",
+      "bytes": 4429
+    },
+    {
+      "path": "dott-charleroi.parquet",
+      "sha256": "25cb97714f57ee115bba54fcec047aa9db8ab9bb8941c15cded391f1154ef166",
+      "bytes": 64203
+    },
+    {
+      "path": "dott-chelmsford.parquet",
+      "sha256": "5bef2dba96c5621c7ff86948ccbddfd92abd44e8dd1d221a0f4057c87a96f414",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-chrzanow.parquet",
+      "sha256": "2017fc8a7d86c1638d8dc8725e243de3f75cd446c31f5356f2152e86a1c30d3d",
+      "bytes": 4560
+    },
+    {
+      "path": "dott-colchester.parquet",
+      "sha256": "a58de1658f51480182d35bf6055083042ea017b8ea1d41b77a72cf8f9e279724",
+      "bytes": 35304
+    },
+    {
+      "path": "dott-cologne.parquet",
+      "sha256": "7b26d867026b5e089f08567bd3adeb0522758872db105bc6a98b820b016a729f",
+      "bytes": 12028
+    },
+    {
+      "path": "dott-copenhagen.parquet",
+      "sha256": "33b2f8e691554c21deb8253261b791fcdba8871c52f42a7db043f82254244255",
+      "bytes": 433152
+    },
+    {
+      "path": "dott-cottbus.parquet",
+      "sha256": "5196784fd7c0ad8164dfa451f754044b35e981b3e1ce04d8282f79dc5d8f6319",
+      "bytes": 4558
+    },
+    {
+      "path": "dott-darmstadt.parquet",
+      "sha256": "fcb501ba6b1455338ed076390808d8fbb2ac5c164fc1b4dbde0a36ad43459b16",
+      "bytes": 7637
+    },
+    {
+      "path": "dott-doha.parquet",
+      "sha256": "50ae5ba49d628e1e43182a5d0908e3e478a862205f1e1c0ce2bc879857f52049",
+      "bytes": 4600
+    },
+    {
+      "path": "dott-dornbirn.parquet",
+      "sha256": "841498723b35cc00339369b2d9398f87afbc30b98915f3fcb10a929859247cb8",
+      "bytes": 4562
+    },
+    {
+      "path": "dott-dortmund.parquet",
+      "sha256": "26f2594df1f0270c66e3c9958fec3ad8b8618e0410f68b5b0b6bbbd028b22f99",
+      "bytes": 5933
+    },
+    {
+      "path": "dott-dubai-hills.parquet",
+      "sha256": "bf2af1b2e4198e213f8b1eed18132dc94ffe73a80f07ebabf614158d38fea1ee",
+      "bytes": 4799
+    },
+    {
+      "path": "dott-dubai.parquet",
+      "sha256": "34001456867e69a8d53c0708fa6c6210c3a07f6c7d49807a275004e0e3923e6a",
+      "bytes": 23949
+    },
+    {
+      "path": "dott-duisburg.parquet",
+      "sha256": "3023a8519f1b754da21726cebe82c5435e9af387fcd9fd4b80387880ee8c6142",
+      "bytes": 4444
+    },
+    {
+      "path": "dott-dunaujvaros.parquet",
+      "sha256": "62816a777f85d73a871fb5fea5dc6be66b96013f483454da7bbab54e4ec837d8",
+      "bytes": 5715
+    },
+    {
+      "path": "dott-dusseldorf.parquet",
+      "sha256": "8c8dae08cb3b7686acc8c2eb58d0b404042a22ecd07eff8805783ef198a32128",
+      "bytes": 21849
+    },
+    {
+      "path": "dott-dzierzoniow.parquet",
+      "sha256": "7bd8f9a749177527e7f375b7476a13e3ffe26e47a1dfbdd65418a6159b5a9b36",
+      "bytes": 4636
+    },
+    {
+      "path": "dott-eindhoven.parquet",
+      "sha256": "4f16cb6b7895ad1010eac0e45a05ad3b826e488645c25541a4140617f05d3208",
+      "bytes": 11013
+    },
+    {
+      "path": "dott-elblag.parquet",
+      "sha256": "58060be3995e8bef6f72d5b3385a09f7b4795fac65974acb349b8cff06503a62",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-elmshorn.parquet",
+      "sha256": "ff03d498506023908e6ea00a1c301659824d5a1aa7746de13a4340c63b4e1a99",
+      "bytes": 5486
+    },
+    {
+      "path": "dott-erlangen.parquet",
+      "sha256": "4af0cf2addd2db61e8de0fa633e8b275782bb80eac8f5a756445978de2d14592",
+      "bytes": 4918
+    },
+    {
+      "path": "dott-eskilstuna.parquet",
+      "sha256": "5797107606fcf9b8fecb49f9cfcfe2dd92a584a02994019c5dd9ed5e5076033e",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-espoo.parquet",
+      "sha256": "8dbf6f7bc46c817740f92a70a833790653a87118c841a3e843aa2acf69e108ac",
+      "bytes": 15872
+    },
+    {
+      "path": "dott-essen.parquet",
+      "sha256": "7a4b6ab0c3f870ca6022e33ab0e30c4c0e67af87d0c09af0a89b8e89434915f9",
+      "bytes": 7598
+    },
+    {
+      "path": "dott-estepona.parquet",
+      "sha256": "0dcfe607057d2367d4b9de568252e943bdfc0eb9665ba92d230de80704d8b8b9",
+      "bytes": 7050
+    },
+    {
+      "path": "dott-feldkirchen-bei-graz.parquet",
+      "sha256": "6b851f76783da616647cbfa9def63727fa324f2fd6c665757ff30459bd59671c",
+      "bytes": 5890
+    },
+    {
+      "path": "dott-ferrara.parquet",
+      "sha256": "fd2251320616e852add6b46d14075df35204cdd1bc33eacf14e1fe2938d4cdc6",
+      "bytes": 18859
+    },
+    {
+      "path": "dott-flensburg.parquet",
+      "sha256": "121625440b22b8034e4c3933671e2b2abe3d86dc6e83bef6b1ffdf58b7a5a0bb",
+      "bytes": 6095
+    },
+    {
+      "path": "dott-frankfurt.parquet",
+      "sha256": "f292d0ce654604d288218b79739666332db9148a47f98146fad61594f3497fba",
+      "bytes": 13276
+    },
+    {
+      "path": "dott-frederikssund.parquet",
+      "sha256": "fe5928c1a79e52ab148fa2855ad43334f9f3f7fc99984316c3c22a460a498074",
+      "bytes": 6521
+    },
+    {
+      "path": "dott-friedrichshafen.parquet",
+      "sha256": "4364434b01d7fe8c3e622743fc1588a47fc0cb2d7fce21589b141984b3ea2deb",
+      "bytes": 6420
+    },
+    {
+      "path": "dott-gdansk-osowa.parquet",
+      "sha256": "deaa0ad724c7e875f534aa26f55fa67526896cdd322ed5a5afb8fc594f7ab8a8",
+      "bytes": 4641
+    },
+    {
+      "path": "dott-gdansk.parquet",
+      "sha256": "1f73d71ec27f7f166407de2e9fbbf6683811cda025378aea185f7daf9f16e9fd",
+      "bytes": 30107
+    },
+    {
+      "path": "dott-gera.parquet",
+      "sha256": "59df78404038fb4d520ee46178190dccab859cf8823cce6bd9ee2dd1c1b95cce",
+      "bytes": 5741
+    },
+    {
+      "path": "dott-ghent.parquet",
+      "sha256": "aa3bf135612d8c04c3d3c6de66d9a841b162db571aae3714cc049b3a4a5dbd1a",
+      "bytes": 182884
+    },
+    {
+      "path": "dott-gladbeck.parquet",
+      "sha256": "f0e7d7d041b8fc50585993c380ec02bf898197167450c0990621023a14d6bc43",
+      "bytes": 4974
+    },
+    {
+      "path": "dott-godollo.parquet",
+      "sha256": "967f505c602986182abf93b7067a8efacf4a5c0a9a196de60fe455873e3c92a9",
+      "bytes": 8921
+    },
+    {
+      "path": "dott-goleniow.parquet",
+      "sha256": "0033703944c9bc327939dd9def88fe037a318ff47b8b744c80897d31b86f8231",
+      "bytes": 5489
+    },
+    {
+      "path": "dott-gothenburg.parquet",
+      "sha256": "3f007c981023ec3cf9cd2db4585768296b915846b0ecaa04f2232965d9be42f4",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-gpseo.parquet",
+      "sha256": "cd8cc9cdd119c2c9e2716c1bcfc7a714b7ac55bb683031a7e7877ae980a663c6",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-grado.parquet",
+      "sha256": "1ed931bd43aa0fb1f9f492b881a419078079b247205df902fa6ad96e02858677",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-grudziadz.parquet",
+      "sha256": "cbfb6f9870e0c497fd5f15b885f6e978df14e6c66066c83d6edb7d35b779c788",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-gyor.parquet",
+      "sha256": "38fc6040a9b9a0962f8668d1af42fa4a3f52644e0972e81cee1940cbde0c7a1a",
+      "bytes": 17180
+    },
+    {
+      "path": "dott-hamburg.parquet",
+      "sha256": "558ef0c60f90b65bb90db0359749002dc8279b1f0c2c26d39ff7f9b4ebd650ad",
+      "bytes": 6275
+    },
+    {
+      "path": "dott-hameenlinna.parquet",
+      "sha256": "cacd375fac6fc196a14c48ed3403a5ac77178eba8ae0c4d07c80b70c1beb3021",
+      "bytes": 4636
+    },
+    {
+      "path": "dott-hamina.parquet",
+      "sha256": "4267e6192203d9e513e5a57f704d1e51d1074e84a660bfc035352de59b4c3998",
+      "bytes": 5234
+    },
+    {
+      "path": "dott-hamm.parquet",
+      "sha256": "20cb790ab870078c129947d9dcc0e7a1fa6345d25f4fe9a1298713ac5fd003aa",
+      "bytes": 4424
+    },
+    {
+      "path": "dott-hannover.parquet",
+      "sha256": "8e48c3a8721ba3810a1509786e299ecbd54975ca4461534998c59290f8941c61",
+      "bytes": 6338
+    },
+    {
+      "path": "dott-hatvan.parquet",
+      "sha256": "103538660c9b96cb3ed465875ec6b341de9adaef86c25c62a468ab9b87ab2305",
+      "bytes": 6182
+    },
+    {
+      "path": "dott-heidelberg.parquet",
+      "sha256": "18c9df2d797d17d3a800cad56769edb7b84fb05c0efbbb9c9e357f77503928d4",
+      "bytes": 5565
+    },
+    {
+      "path": "dott-heilbronn.parquet",
+      "sha256": "e81a9c81a5320b84c50c0a49cd9b468a5d98f565c1ccdd13b6c3731de3c72dc2",
+      "bytes": 6416
+    },
+    {
+      "path": "dott-helsingborg.parquet",
+      "sha256": "c25315bd391d31239d8bd702e868a0aa658b8f0c6d471f14203dcea409d40a53",
+      "bytes": 4636
+    },
+    {
+      "path": "dott-helsinki.parquet",
+      "sha256": "2c4fbc381effdff046cb3ad283242cd4451927042f58098ed9615aecb111a043",
+      "bytes": 35775
+    },
+    {
+      "path": "dott-herford.parquet",
+      "sha256": "480ef8c2bee39278c526fcc20a0b3c66f47958d708b3de6bc315dc4b68841efd",
+      "bytes": 4557
+    },
+    {
+      "path": "dott-herne.parquet",
+      "sha256": "5987b30f0b9ac43f28c64bbb58f23fbbde44f8852e029f05f52c58f7c30f0cb7",
+      "bytes": 4429
+    },
+    {
+      "path": "dott-herten.parquet",
+      "sha256": "906e4af86c199a9cce3d39efd50d3c7e451d2c7192904b6aef1f7fe9c71cbcfb",
+      "bytes": 4434
+    },
+    {
+      "path": "dott-herzliya.parquet",
+      "sha256": "225c162ec49e943ada4fb19ce3f5d483d741a88a70e198f73d2d6fa2e44c6def",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-hilden.parquet",
+      "sha256": "991ae34c610df002afa4f912b6ae498dabd2b4a31e030c239836411d809000d0",
+      "bytes": 5703
+    },
+    {
+      "path": "dott-hildesheim.parquet",
+      "sha256": "d7ccbcd86d68a4d8dc9c2743bcc5d79b4597f5e4043248ab713114dda3373e42",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-hoganas.parquet",
+      "sha256": "ba418ea62dcc24ec7055748d7368c2668103396d40cbb52c41ede7a3137b4dea",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-humenne.parquet",
+      "sha256": "88dd2114615f2c9d42a2a3564fbf3a87a2881544712a890942a089a8e86d5f7e",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-hyvinkaa.parquet",
+      "sha256": "e631bfff87597337273a630931202f6594a61628da1a708fa4d45361be794a6d",
+      "bytes": 4737
+    },
+    {
+      "path": "dott-ingolstadt.parquet",
+      "sha256": "5f94ebb5b5dd758962494d99de2455016bb697bc98b7f79bd4036e747bf5b3bf",
+      "bytes": 5251
+    },
+    {
+      "path": "dott-innsbruck.parquet",
+      "sha256": "477542cec912114f7bfc9b8d795d7d5c6e54e234d96f8e3aad0f65596ea34699",
+      "bytes": 7552
+    },
+    {
+      "path": "dott-i\u0142awa.parquet",
+      "sha256": "edd373cbed1d4a40ac73c81b64538b779be7e9777c68508f7bbf508a7356b343",
+      "bytes": 5660
+    },
+    {
+      "path": "dott-jarvenpaa.parquet",
+      "sha256": "ba6e1c6619b314b22c3e463e7fb8099cddcfcd279577c5c64a64be8598f230c0",
+      "bytes": 6648
+    },
+    {
+      "path": "dott-jastrzebie-zdroj.parquet",
+      "sha256": "c3ca4b24f496c3b2a9fc782373fae92b581d33478dc1e7f3ca01709e15de531e",
+      "bytes": 4661
+    },
+    {
+      "path": "dott-jeddah.parquet",
+      "sha256": "eef2efad9ef7d7a93e185d4860d70a28dd4eef99f3f1f3c5a1607623b59400fc",
+      "bytes": 6989
+    },
+    {
+      "path": "dott-jelenia-gora.parquet",
+      "sha256": "c11ea780b53cacbf53280b4ed3a1f785a2c325e94d2621092139631f14332c7d",
+      "bytes": 5215
+    },
+    {
+      "path": "dott-jesolo.parquet",
+      "sha256": "1787728fcc89fd536b15f054f065e60f7f55762ad0d8683323ae76346034ebdc",
+      "bytes": 10038
+    },
+    {
+      "path": "dott-joensuu.parquet",
+      "sha256": "64b77dfabd9a5f7ea8c88b6b6ab40b622bfb9264477626f727bb041546f74c1d",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-jonkoping.parquet",
+      "sha256": "87327e7e1b67a47ad52cdc3eac579d2d9c07f57d3ad1668d70d10a5e19293a7b",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-jyvaskyla.parquet",
+      "sha256": "c59b4a1c0af0160ad38e22733df332bb92831661a12c407289f53a22e14132d5",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-kaarina.parquet",
+      "sha256": "8af2b62f2cfd38f32cf46eb8d1a89a0225be77693c53169c428fc62ab49b6463",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-kaiserslautern.parquet",
+      "sha256": "aba9ba732a441f206e2518b40a0972847120e9585f3f6ab78babf49e9484c164",
+      "bytes": 6028
+    },
+    {
+      "path": "dott-kajaani.parquet",
+      "sha256": "e71751b653a548d21a803492f2ad0b7e820bc7d3084a6b9c2b6c00fa337358e1",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-kalisz.parquet",
+      "sha256": "2eda39c655773d4676de47d05a523393d422651c65bce5661248d14e86732d56",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-kangasala.parquet",
+      "sha256": "9db5118e944db85434cc21664c7d6546d92897fd81839db43edf703a460b4d1c",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-karlsruhe.parquet",
+      "sha256": "a85c1e9612c298502030cc69aab5c6160100e935b16143d80d0407dfb32ed3bf",
+      "bytes": 6198
+    },
+    {
+      "path": "dott-kassel.parquet",
+      "sha256": "f6a6327434897bdd736f774f732a54f51d2ddc24865992002031275110f04c0b",
+      "bytes": 6648
+    },
+    {
+      "path": "dott-katowice.parquet",
+      "sha256": "da66ed98edc8b6087da1b145cafa242afc4d9a860ab5882ee4bf7604215ac7b9",
+      "bytes": 10031
+    },
+    {
+      "path": "dott-kerava.parquet",
+      "sha256": "855364acad4120b73f9fe85a9561869f1b4b234672491abcf6faa03ea43b575a",
+      "bytes": 6820
+    },
+    {
+      "path": "dott-kiel.parquet",
+      "sha256": "70785df60cbc7ff616f9ff29c580ff09b102bbfe23015246bb280cedb87424d0",
+      "bytes": 5361
+    },
+    {
+      "path": "dott-kirkkonummi.parquet",
+      "sha256": "1153ef529ba8868ed52545a9091ad2dddbb516352cc54a50e8e39250dbac95f9",
+      "bytes": 4459
+    },
+    {
+      "path": "dott-klagenfurt.parquet",
+      "sha256": "111906bbc3add5e5ee3c425b71f3153f78923de9a52e4544c896a6aa4aa13eda",
+      "bytes": 7195
+    },
+    {
+      "path": "dott-klaukkala.parquet",
+      "sha256": "efe0ce64f70046dc3c73fc74d48bf10e8d68bc73e7b99d526c3dc1d9ed1432b2",
+      "bytes": 4567
+    },
+    {
+      "path": "dott-kokkola.parquet",
+      "sha256": "2477a9f6e9058d8c1cfd0b6aa8d2caae92e071408f71ebe80b9670e40900673b",
+      "bytes": 5132
+    },
+    {
+      "path": "dott-konin.parquet",
+      "sha256": "fa8d1a49065761120e72fccf012786a1b60bf7451f030c7fa0de0c222f9bf3ca",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-korneuburg.parquet",
+      "sha256": "bea8533d3e9d24633d3895f6f84041650b7dd70fc3e1191c2dff0e6bc2e09724",
+      "bytes": 6849
+    },
+    {
+      "path": "dott-kortrijk.parquet",
+      "sha256": "5dd7ed0a5e98a9e2500eaf8cc7fb7c8e6a8995d50b3819041317447322a8efc3",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-kosice.parquet",
+      "sha256": "ab680933782236731a4c2a5101f5e766a33322281c8ead7e1e4c9e271de6fdfe",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-koszalin.parquet",
+      "sha256": "4f21d0c1c5e7d61d4c213eef95b54441062371f9cc9f92bbc7b77d83ae14e145",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-kotka.parquet",
+      "sha256": "ab0d943e25ed269d965af8512c447c14edc29627f1ebcefe8db3daea8b3e5bce",
+      "bytes": 4489
+    },
+    {
+      "path": "dott-ko\u0142obrzeg.parquet",
+      "sha256": "9ca16e21e15eec4a3f0a82c4d2e771c8a7d3206f92cbb2098402f0eb267fa7fb",
+      "bytes": 8924
+    },
+    {
+      "path": "dott-krakow.parquet",
+      "sha256": "33da20e024c59f310dd2a950a8a69014ec32c7dfb2e0a17eacf8fe8e5e22dc80",
+      "bytes": 26154
+    },
+    {
+      "path": "dott-krynica-morska.parquet",
+      "sha256": "0e9aeedced6c763e58bf1efcf47d0667a158a6e0dcb8bcb1af77148b67f67353",
+      "bytes": 5008
+    },
+    {
+      "path": "dott-kuopio.parquet",
+      "sha256": "fdb6223f9890ef7f7a2aa8a87a1eac854b953e089234921feafc90f23dd92be6",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-kwidzyn.parquet",
+      "sha256": "02f2e9875750660c13309d6db791a1c0b94df687b9228ea004c70be957b9f868",
+      "bytes": 4970
+    },
+    {
+      "path": "dott-lahti.parquet",
+      "sha256": "d476316547cabccedcbc6f5671b332204d5142d58d76481fa03efabb62e81cbb",
+      "bytes": 9974
+    },
+    {
+      "path": "dott-langenfeld.parquet",
+      "sha256": "7081a0392505ec3f2c20aa9a9f75bfe1b576db07124d017dfe3241b751c0eddf",
+      "bytes": 4859
+    },
+    {
+      "path": "dott-lappeenranta.parquet",
+      "sha256": "d83102b67c02fd2a16754bd8320d4d849503b7b6adc9306721a3ccfec6684243",
+      "bytes": 4582
+    },
+    {
+      "path": "dott-lecco.parquet",
+      "sha256": "57c422acf3ba6e899b668abda5c96b51e09e8e4893ea537a1aaf1791551cec2b",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-leipzig.parquet",
+      "sha256": "067fb0c1fce8ebc5da59a8baa5b62e281d3d46ab1a36bad940bf49c8b848f707",
+      "bytes": 12161
+    },
+    {
+      "path": "dott-lempaala.parquet",
+      "sha256": "b90a21581f9ad67a5a0aa65bf521bbec0949a94c3111ee8d5f267acd0c132c39",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-leoben.parquet",
+      "sha256": "cd112ca35a837965b8caecd3067566105dd6943df8201e73f73df78173424ca6",
+      "bytes": 7035
+    },
+    {
+      "path": "dott-lidkoping.parquet",
+      "sha256": "6859b1fcfdd0061c48003e1f94c3e86c05cbe5eb666f795bc45fd88e5016e87d",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-liege.parquet",
+      "sha256": "f1dd9bf963e76777691faa371a851ad7bee853d3f84f668d4bb83eebd4d0485b",
+      "bytes": 55487
+    },
+    {
+      "path": "dott-lillestr\u00f8m.parquet",
+      "sha256": "6efbc1ce7f49ca32a3f116ba1babe68fa32f3f0bdc0215f98f3c5de497d47fe8",
+      "bytes": 4636
+    },
+    {
+      "path": "dott-lindau.parquet",
+      "sha256": "4bfa9481702c06d2cc79add4375f964b487072b93602c23c720a6e18b8c4ddbc",
+      "bytes": 6372
+    },
+    {
+      "path": "dott-linz.parquet",
+      "sha256": "e97c292aef65d76a73daee46df934182f9d570b338424693dfc956d6bbafe640",
+      "bytes": 13006
+    },
+    {
+      "path": "dott-liptovsky-mikulas.parquet",
+      "sha256": "39318300e2ce7152a0e59a6a8150a5c2d256696b31e84d75ef27bc3c91df477d",
+      "bytes": 4666
+    },
+    {
+      "path": "dott-lorca.parquet",
+      "sha256": "eb285701e53d84993a8a3303ba4580598a456c358836e9c19b1ceef56133e3b4",
+      "bytes": 13811
+    },
+    {
+      "path": "dott-lubeck.parquet",
+      "sha256": "23395e4b7f4cf3067b5b3e1d6e1f09e42ed4ecf7e7caebb08e5ec78aeb21f130",
+      "bytes": 6266
+    },
+    {
+      "path": "dott-lubliniec.parquet",
+      "sha256": "f9e94d37fe2a25d69676eadae4013cb03673f109624e3461877781423d4957bb",
+      "bytes": 4509
+    },
+    {
+      "path": "dott-ludwigsburg.parquet",
+      "sha256": "9c285664e8a278d750dcb05181e6c1ef6c4ef36888235080a397b882223481f3",
+      "bytes": 5443
+    },
+    {
+      "path": "dott-lyon.parquet",
+      "sha256": "c9beb1b3d729e64d4e0b6658d20592d62588f278f76cf1563fa7af936e30b59f",
+      "bytes": 82584
+    },
+    {
+      "path": "dott-mainz.parquet",
+      "sha256": "35a11a71a3751e45bddabd03d0739cb3ddf5367bd5b0e12ce696859fa330f245",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-malbork.parquet",
+      "sha256": "62057d850392f1ff9748baced67504dd70469c117324d900ebbc4b18c7249340",
+      "bytes": 4968
+    },
+    {
+      "path": "dott-malvik.parquet",
+      "sha256": "eada15d3a96280bed645dc49ec8051040e890992b99e2219e2a9304c29a3ea6f",
+      "bytes": 4777
+    },
+    {
+      "path": "dott-mannheim.parquet",
+      "sha256": "effba17a007d070043ebaead9e613de9cf6948a583bbb3474690493f3b7fffc9",
+      "bytes": 15344
+    },
+    {
+      "path": "dott-martin.parquet",
+      "sha256": "83c120b24c4b856098146a4835b95cb577a6d42331257c2377f29514ee7bee77",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-melhus.parquet",
+      "sha256": "b348f6095f070395b029db58fc6fdcba1e30439782de2ec933e14a30d5db2df3",
+      "bytes": 4965
+    },
+    {
+      "path": "dott-michalovce.parquet",
+      "sha256": "9cf917b850758470935425a2329d7951613fb36c4b5736b6056e509279d686df",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-miedzyzdroje.parquet",
+      "sha256": "68d0946ef2b339ee90c0cb5b044de53d9b9b8617d2ae44b7cd67096695e43386",
+      "bytes": 5846
+    },
+    {
+      "path": "dott-mielno.parquet",
+      "sha256": "5bc6c4efa9cd0202aabe23b15a7a8b549a912e984a492244642e57a7b9ace44a",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-mikkeli.parquet",
+      "sha256": "853ce1a3a2ff6776c77a6f8ce78f85c75ef035f93879307b03d03d9ad3467759",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-miko\u0142ow.parquet",
+      "sha256": "ac4f90a40bddfdeba82103cf089c725275ca9f1bfa20ef069d11d3eb37a13b0c",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-milan.parquet",
+      "sha256": "d577ab304a3393b819082f368fd5da1eb396d8d81542ef1a6889f1eda686142f",
+      "bytes": 628479
+    },
+    {
+      "path": "dott-milton-keynes.parquet",
+      "sha256": "8a8941fd5b54190f446a3a799add615627a9a661ba0633a9dba951ef17dfa9d7",
+      "bytes": 106949
+    },
+    {
+      "path": "dott-modling.parquet",
+      "sha256": "dcb19b28c5d55b15634093a421da3bbdf83b52e197a6f5cdb4627216deee85a3",
+      "bytes": 8271
+    },
+    {
+      "path": "dott-monchengladbach.parquet",
+      "sha256": "28eb218a29232c24a5cc55356ca00985b2448c7164087136429799867b111197",
+      "bytes": 4597
+    },
+    {
+      "path": "dott-monheim-am-rhein.parquet",
+      "sha256": "79cdaf5ec83d5ff17ca0c43818dbef5c5b7f0ef268edf1ec93f3d213bab19b96",
+      "bytes": 4602
+    },
+    {
+      "path": "dott-monza.parquet",
+      "sha256": "eaf41cd74399a3d78d8b49cec22ff9db97d41ef2765b6e8169984134c559d8fe",
+      "bytes": 17478
+    },
+    {
+      "path": "dott-mulheim-an-der-ruhr.parquet",
+      "sha256": "09097e61fd4351584c0f786b261fcfd4145ed317d603cec69ab1667ce82263c1",
+      "bytes": 8423
+    },
+    {
+      "path": "dott-munich.parquet",
+      "sha256": "6f62a7bf513954f39dcb9b645d659a887b6b03b87c56ce5f6a0988d10fcdcd09",
+      "bytes": 26239
+    },
+    {
+      "path": "dott-munster.parquet",
+      "sha256": "d35f93f9eb9ad2271a312b60c121930b1ffd8e1a8f5f53b49705fcfef3b34fe6",
+      "bytes": 26040
+    },
+    {
+      "path": "dott-murcia.parquet",
+      "sha256": "2a0656d622806c5be60dc17834f8ab13a67066e768955413621184e496ffc3d1",
+      "bytes": 26780
+    },
+    {
+      "path": "dott-myyrmaki.parquet",
+      "sha256": "aeff7f213ea43e9b913efe36f5790f83498e7a0012c6eaac73dba275a4db1493",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-naantali.parquet",
+      "sha256": "8119f0b7d4c4dcfba12b2a49462c9dd6b0a3863f59a28a79425bf772bb358dc1",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-neuss.parquet",
+      "sha256": "c2f93446f93ee962c79a61db83b9f4c07985bd2230ebd53166577763fbabda73",
+      "bytes": 5295
+    },
+    {
+      "path": "dott-nitra.parquet",
+      "sha256": "4e1666f90e7bd83f3f1990e2a2b78a12b7d444eae20f29e88010a6d70b8d1415",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-nokia.parquet",
+      "sha256": "24daff285a181c0406a336dde0ce797c93dcb056bff5df39d8ed0027bf77d421",
+      "bytes": 4776
+    },
+    {
+      "path": "dott-nottingham.parquet",
+      "sha256": "bbcaf56a233b9ef37d1132d206f6300b517c009cf231a236e982a32dc04b6ab2",
+      "bytes": 26104
+    },
+    {
+      "path": "dott-nowogard.parquet",
+      "sha256": "b7b6c3235b721fae61b167aeb96586abe19a45cb989313f0b514c03c2eb701fb",
+      "bytes": 5941
+    },
+    {
+      "path": "dott-nowy-dwor-mazowiecki.parquet",
+      "sha256": "33f6d9c552c47c6b8714740198fa4b476cd2dac534b9b82cff1e3f73ae3d2240",
+      "bytes": 5039
+    },
+    {
+      "path": "dott-nowy-sacz.parquet",
+      "sha256": "e6b771e99ca3412f7af4f38a631483ee5491d2e153685a7049fd014600654edb",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-nowy-targ.parquet",
+      "sha256": "4b3bc1de647e26e0615321c74724755c9551d450352d024c85f4f98046eb722a",
+      "bytes": 5325
+    },
+    {
+      "path": "dott-nuremberg.parquet",
+      "sha256": "30bac1cc685abdbf22a63a681bb2bf1fef3d8d7863b2114531f4769c963676c6",
+      "bytes": 24156
+    },
+    {
+      "path": "dott-nysa.parquet",
+      "sha256": "8c737b5f1c8000d3f568278a737d7de67af6bca0bb87ecf88cbd57bde7f9639f",
+      "bytes": 4600
+    },
+    {
+      "path": "dott-ol-vallee.parquet",
+      "sha256": "fada557b1015766e51e2d7babe73149a6b4cc2ef87b2d202dbb44bb93318b418",
+      "bytes": 4860
+    },
+    {
+      "path": "dott-olesnica.parquet",
+      "sha256": "190300b41dfab41389207ed51f05c325fa99f440cb0cd7fc4fa4d0ee687f20d2",
+      "bytes": 8423
+    },
+    {
+      "path": "dott-osnabruck.parquet",
+      "sha256": "d16d353ef7d72696cc9d85ebfc3dd8728e6d4be517bb0399ecbc89a259bec50d",
+      "bytes": 4509
+    },
+    {
+      "path": "dott-ostroda.parquet",
+      "sha256": "0cf555fce0597312c794c4ae0b3b48ce1252ba48449d7d18a6599a409ee82890",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-oswiecim.parquet",
+      "sha256": "3e790221512150750d60271f23e644fa0e0d03f9b08c36cb078f70225bc423b4",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-o\u0142awa.parquet",
+      "sha256": "8c7f33a78e1f044e16e87ed885637111b212bf4002e24654a5c073e11a95f3a3",
+      "bytes": 4552
+    },
+    {
+      "path": "dott-paderborn.parquet",
+      "sha256": "f6da025ac876ec6e83619c852a14f36f4631d78b8104a92f4d82a24d71d5086a",
+      "bytes": 5878
+    },
+    {
+      "path": "dott-padua.parquet",
+      "sha256": "4c56907d77ff0bc8a644936333a99496139c43c6a850ce2782c4a5b29bb54c2e",
+      "bytes": 11511
+    },
+    {
+      "path": "dott-palermo.parquet",
+      "sha256": "845de4cae572e56d59a525abe8d96d065a94794c7d48faca8af1dd5a22bde117",
+      "bytes": 7426
+    },
+    {
+      "path": "dott-papa.parquet",
+      "sha256": "18d1e5bcbcb7995d6c4baac6e71e2beb6fc5afa95340aaeeb8d70cbc66bd5a4a",
+      "bytes": 7210
+    },
+    {
+      "path": "dott-paris.parquet",
+      "sha256": "adeceef3d171869b009471b5bdb33a53dc9546fc69a0ff331f2d002065baac1d",
+      "bytes": 745947
+    },
+    {
+      "path": "dott-partille.parquet",
+      "sha256": "73fd01df67adbc5c15a9c05559b2fdf9e242e5a050f753a012c6889232f21739",
+      "bytes": 4620
+    },
+    {
+      "path": "dott-pezinok.parquet",
+      "sha256": "8820537c7d2b89728eddfda0dbef07fa777e97d22eec7558325ac9ba2a3a6695",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-piekary-slaskie.parquet",
+      "sha256": "a3245df3e1e0e61d575e4924d4d4b0da85039673df90571dbb9929ecd48bb63b",
+      "bytes": 4656
+    },
+    {
+      "path": "dott-pinneberg.parquet",
+      "sha256": "8c77ebe780ab4e722531758363575290d2b4baeca2b9e4cf759797968572486b",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-police.parquet",
+      "sha256": "402f6b97eae465275ef36b02287e2c55714353cee29c07eb5de34313462e6891",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-poprad.parquet",
+      "sha256": "e343cd671d90cfd17634631783ee21d1108c3f0119c504865fbf86afb23814bd",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-porvoo.parquet",
+      "sha256": "6b30284edc2a15a37c5fbd9a0569d1f989996645dd322ff60f92cd44326fe969",
+      "bytes": 4669
+    },
+    {
+      "path": "dott-potsdam.parquet",
+      "sha256": "3d3b0c572d44f8f1256b11616205d23798ad0791342eb1a9d45339709b5b308b",
+      "bytes": 4730
+    },
+    {
+      "path": "dott-poznan.parquet",
+      "sha256": "668763d0f20cb22b92c5981e2a47d1942ba47c9c8c972cb022ea904d8da3362b",
+      "bytes": 19723
+    },
+    {
+      "path": "dott-prawobrzeze.parquet",
+      "sha256": "270860576dc2ef8122d0f1048dafd2179a744e3474c23aba23a43da36bc1f4e6",
+      "bytes": 6102
+    },
+    {
+      "path": "dott-presov.parquet",
+      "sha256": "a8c9042398e3ffe47ba0e1d29a2e02c23a1f8514873b13eed1ff00db8e3eee39",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-prievidza.parquet",
+      "sha256": "171f6e7bb74c96338223d8d1deabae4a4281422fb984fa86aaac0bd934ba7cb2",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-p\u0142ock.parquet",
+      "sha256": "7d32382fe8439ec2e23e94b6e8fb78203f1b7cbdc632f6e1efbda31667b3832a",
+      "bytes": 4434
+    },
+    {
+      "path": "dott-raisio.parquet",
+      "sha256": "9a1d6449663215842717a024bd69f22298fbe9ab37d19c8c7ec0a0194542dca8",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-ras-al-khaimah.parquet",
+      "sha256": "46ff246b5158e0f8bd5e0a7f8b8db6b78f9108bd2d4e3e0c4e86bed0485f394e",
+      "bytes": 6178
+    },
+    {
+      "path": "dott-recklinghausen.parquet",
+      "sha256": "548eae5dff7d7c24302b58158e14760ca8d4835af2ae2ec3938a13c60dd51a21",
+      "bytes": 5180
+    },
+    {
+      "path": "dott-regensburg.parquet",
+      "sha256": "1e80877dc4866f5d9064ac3dd9cfeffc3ab79bd1810fb97e12196f31a8992044",
+      "bytes": 6662
+    },
+    {
+      "path": "dott-reggio-emilia.parquet",
+      "sha256": "9c00fe98be4161efed80b81d6890012c2b2df3d3774df0e22705cac59983ef0c",
+      "bytes": 4529
+    },
+    {
+      "path": "dott-region-h.parquet",
+      "sha256": "33511076653aa1db1e7e9f99d818ed7c37426c1ca0b6194e22d01e894ac52c37",
+      "bytes": 69185
+    },
+    {
+      "path": "dott-reutlingen.parquet",
+      "sha256": "a1a950a8cdfd8e0117af479fb05938ed6b9a8b649d3759d1dea23793d254c9a7",
+      "bytes": 5099
+    },
+    {
+      "path": "dott-rewal.parquet",
+      "sha256": "4c40cdd3012e76adcab9aba31b884af17ff7a301a0353d37201b2db1ff8238a3",
+      "bytes": 5528
+    },
+    {
+      "path": "dott-riihimaki.parquet",
+      "sha256": "39676c864335bfeabab17df9d4767388a188736c622aef20f2f94443b4b2adf6",
+      "bytes": 4449
+    },
+    {
+      "path": "dott-riyadh.parquet",
+      "sha256": "de1f91a1801db833b14c8307acc6be0a810a2fb1751df6e0d7aeeb8251746458",
+      "bytes": 14076
+    },
+    {
+      "path": "dott-romanshorn.parquet",
+      "sha256": "5e1e29b7cc4b28444c03684409df8d9b60f91803194d36aad4a2471991ada6c5",
+      "bytes": 15902
+    },
+    {
+      "path": "dott-rome.parquet",
+      "sha256": "d0ae89e64b247e9ec634257c91d55e2a89c8a9aecbc14b40482a8a2ecaa618e0",
+      "bytes": 9223
+    },
+    {
+      "path": "dott-rorschach.parquet",
+      "sha256": "230516ae2bc3605605d42bab92cc4809d9d7d945f198103449c4bd3445b9ebca",
+      "bytes": 12180
+    },
+    {
+      "path": "dott-roskilde.parquet",
+      "sha256": "77e9ea49cdbb16a0c0805d06246ed0f2433a51fb9a77ef136581b2259742b766",
+      "bytes": 8988
+    },
+    {
+      "path": "dott-rostock.parquet",
+      "sha256": "044d1bdae0debf2bbc18f68b82139a1340c25e5a6694db782502752f660fb901",
+      "bytes": 4675
+    },
+    {
+      "path": "dott-russelsheim.parquet",
+      "sha256": "7be19ebe1ceeaabe4b8b9af94839813e3a40ec746643e49be3333228a1ef6519",
+      "bytes": 8175
+    },
+    {
+      "path": "dott-saarbrucken.parquet",
+      "sha256": "53e75c8a7cfc14921a064c17148b2aef874ef3b2f8c08b6689efa0236a6d5591",
+      "bytes": 6305
+    },
+    {
+      "path": "dott-sandefjord.parquet",
+      "sha256": "ab966e728b3c1123df9efa9eb9a4f63faa2b3223f3bb3929b057f1fd2fdf922d",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-sankt-anton-am-arlberg.parquet",
+      "sha256": "05259b724df91ea2c62d2cf6b55d0f675abdac7720fb5fecf2102b02298ec5de",
+      "bytes": 5263
+    },
+    {
+      "path": "dott-sankt-augustin.parquet",
+      "sha256": "a6e3d5dbb30bbf31736a51bd0ba31fe3a0101bd1a5d1cfcfcbabfc92ef687553",
+      "bytes": 6703
+    },
+    {
+      "path": "dott-sbf.parquet",
+      "sha256": "fbd7b3babf7cb71f05df931a4660d67e5a97c0794fe21693a5788131eec47ca1",
+      "bytes": 5626
+    },
+    {
+      "path": "dott-schwabisch-gmund.parquet",
+      "sha256": "4190492eed93f1651c11a227bf98a8d93982a5dbabae2a10e1db37113b7673cd",
+      "bytes": 4661
+    },
+    {
+      "path": "dott-seinajoki.parquet",
+      "sha256": "4f09e8fe8f3b9ca179b80787cb9de34e9113c2cdc9f78dafdcd8672ecce59a7f",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-sharjah.parquet",
+      "sha256": "33799baa83fc473e45ed0891314e1245f1393251fa76172952d0202212e639e8",
+      "bytes": 6564
+    },
+    {
+      "path": "dott-siedlce.parquet",
+      "sha256": "601b67c81960e41f8d594bf7a93a76dabc2fea9746978c3982a7ac41264d69d6",
+      "bytes": 10242
+    },
+    {
+      "path": "dott-siemu.parquet",
+      "sha256": "895a50004b1396cf31e6b82d6841d2946e30975d7a1c00de6f89851ff785824a",
+      "bytes": 10975
+    },
+    {
+      "path": "dott-siofok.parquet",
+      "sha256": "6a8fd3770c018343ff95fa8f94ccdf2b1df7f54f87a6e664d049a53d70234bd6",
+      "bytes": 7316
+    },
+    {
+      "path": "dott-skawina.parquet",
+      "sha256": "31a69130132d1f507ed5ac08e05927047d150b17bd3ad3ef0c14aefe029c443e",
+      "bytes": 6342
+    },
+    {
+      "path": "dott-skovde.parquet",
+      "sha256": "ce2d5ca419fb4ac474c7e763a878e11489d0eac212f784175c5dedb8d66b9ad7",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-sobieszewo-island.parquet",
+      "sha256": "23f5d2a8c674384225843fe4bdda2a155a62ebd51b8ee8d1907e4570a8451155",
+      "bytes": 4666
+    },
+    {
+      "path": "dott-solingen.parquet",
+      "sha256": "b365a64136309ba9e9723127d3451d856157c008a363360f946f31289c713e96",
+      "bytes": 4735
+    },
+    {
+      "path": "dott-st.-gallen.parquet",
+      "sha256": "221bdba7b35446a5e3f18018f8b63d8ee23b4363b8056f21773c90fcd4440cb9",
+      "bytes": 11684
+    },
+    {
+      "path": "dott-steyr.parquet",
+      "sha256": "0fa6a1ff0dd681fdc174092a4a37c3d4f5c78bf45af90f23c1b944b3e7bb275a",
+      "bytes": 5291
+    },
+    {
+      "path": "dott-stj\u00f8rdal.parquet",
+      "sha256": "63a7b423225fbbc854245786a109ed8fa97caea6640620b2f276ad6d17eec7f8",
+      "bytes": 6090
+    },
+    {
+      "path": "dott-stuttgart.parquet",
+      "sha256": "d34fffc84da0f8a5477e8faac2251426a4d19e74ccd2d244475419fe6d3aae86",
+      "bytes": 8215
+    },
+    {
+      "path": "dott-swidnica.parquet",
+      "sha256": "15ee17db8a4f0f04a9e9f988c27a046c28a5d198543656f895d3fa77aa9061b2",
+      "bytes": 5594
+    },
+    {
+      "path": "dott-swiecie.parquet",
+      "sha256": "38a6f1145b9a969de67a2dc615473d6e14a4fd579fcdeeb2148c6cfed7e711b0",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-swinoujscie.parquet",
+      "sha256": "eca2a7415772128d32a68e44e45ba9fa21d7352405f8cf31140d3aa13acf2561",
+      "bytes": 4459
+    },
+    {
+      "path": "dott-szczecin.parquet",
+      "sha256": "9a26be18d4b5a7daa80c26a2373c909abc16e6a606bca327b2ca7203505c6ef7",
+      "bytes": 10491
+    },
+    {
+      "path": "dott-s\u0142upsk.parquet",
+      "sha256": "a53897355fbd573d9067a2f486ee398c556e14297c3813c472374a02f317075f",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-tammisaari.parquet",
+      "sha256": "dde011c9b05f225f173f9a231366d94d786361dff7786239f02a4f9f31aa0ed6",
+      "bytes": 7228
+    },
+    {
+      "path": "dott-tampere.parquet",
+      "sha256": "0dd99a28bdb0017aa73f76bf12d3ee0eb956b11c3dd80c4bf36ebbb1cd18a22f",
+      "bytes": 19599
+    },
+    {
+      "path": "dott-tarnowskie-gory.parquet",
+      "sha256": "1731a6203d4f9474da3a57436276f5ce2efeb876d6490420dedf352380ca488f",
+      "bytes": 5287
+    },
+    {
+      "path": "dott-tarragona.parquet",
+      "sha256": "b447ba58916dae9799f5595f521718a202b440b681074752e814dc2b6b058d29",
+      "bytes": 10374
+    },
+    {
+      "path": "dott-tczew.parquet",
+      "sha256": "1ce8e14fd7a961ee199d1800be8ca5e371a8f1d1164213733318deca3a5df608",
+      "bytes": 5694
+    },
+    {
+      "path": "dott-tel-aviv.parquet",
+      "sha256": "7ec17c45599078c5436beffa025dd2cab5fb3a1f8200ac95afa0b08979e33f88",
+      "bytes": 92897
+    },
+    {
+      "path": "dott-tenerife-sur.parquet",
+      "sha256": "4208ac4556c5879a08f776a73d8e64ebb1012395a98f8f640b264fcd1b5d3f39",
+      "bytes": 14550
+    },
+    {
+      "path": "dott-tenerife.parquet",
+      "sha256": "cc91be40d58f9c5a18c3af8bb7b8afd29fd5a4932a19b62a16bbd3af4830b40e",
+      "bytes": 14117
+    },
+    {
+      "path": "dott-thessaloniki.parquet",
+      "sha256": "e02c2e76efa60a5936d1e34f73cba5adbfb68b119d8704375ad382642888f64e",
+      "bytes": 11175
+    },
+    {
+      "path": "dott-torun.parquet",
+      "sha256": "ee8c48b6ea8eff69fdc99f2af4d99b9f1204c15b109031790758c0438723b20b",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-trento.parquet",
+      "sha256": "f26e4913d102cc9d8a5c89e12ef28f1215769610883795d1d55b5af5025000a7",
+      "bytes": 69779
+    },
+    {
+      "path": "dott-trnava.parquet",
+      "sha256": "22f01bfa3a41abbb994005e32c53f9575cb13930759946fee4adfa1f782e6283",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-troisdorf.parquet",
+      "sha256": "9a8642a5099a3c11b5835409d98d50f986ee6807d0d1a0cb9eead63dd14b47ce",
+      "bytes": 4509
+    },
+    {
+      "path": "dott-trollhattan.parquet",
+      "sha256": "4d9268a754e6b2b55ba3f939f487d5d9b792028e43f9bf2c20da338485779218",
+      "bytes": 4636
+    },
+    {
+      "path": "dott-trondheim.parquet",
+      "sha256": "8e6be26c90e01a88bbaa83589c1db2728e9b62c5062c87e7c6560cbb33d8efc0",
+      "bytes": 12108
+    },
+    {
+      "path": "dott-trzebnica.parquet",
+      "sha256": "e079165c0475347ac897af5a9501c8caa66b3867e6935da96ea32ad02b5a416e",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-tubingen.parquet",
+      "sha256": "1a63a75e25f3c9e89eda81de094a0e9e05a2e24dd3da8286337d431b4aae5b88",
+      "bytes": 4972
+    },
+    {
+      "path": "dott-turin.parquet",
+      "sha256": "dd3f2db1767fa74aef4dc3dbdce417bda1b13ad681f3a749cbbdd829483696c4",
+      "bytes": 130861
+    },
+    {
+      "path": "dott-turku.parquet",
+      "sha256": "425f922d4c7163a3a20bf32e802ac9d92025fa6edb307dd950d641344d690ab8",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-uberlingen.parquet",
+      "sha256": "8a34f8066545aeb1c9564055d9b37d762a7de3e4c049075e80b1d9611e588550",
+      "bytes": 5100
+    },
+    {
+      "path": "dott-ullensaker.parquet",
+      "sha256": "a726ee854505eee625fd5bbb829ad130bef56d86b591bb5444bcdf3ec590693d",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-ulm.parquet",
+      "sha256": "94549fc99acbfdd43fc2b395060585abedd24ab90bfac46d0d86ae503e08b824",
+      "bytes": 5229
+    },
+    {
+      "path": "dott-ustka.parquet",
+      "sha256": "f468d9f17ecfc65bb5d3717af1515e89f717500d061a8e4be9a43a52a44ea5f0",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-utrecht.parquet",
+      "sha256": "aa5255aaad0d9baee0954e8972d36453014d29fced78904cce85b5d9c0397b54",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-vaasa.parquet",
+      "sha256": "c001eba4bae3d7fe4a95533fde4ca48815d88901798f32557e339cd9a0ea3619",
+      "bytes": 17846
+    },
+    {
+      "path": "dott-vantaa.parquet",
+      "sha256": "44813a6570f574c8493079d7d0644925274812a2bed2c10fc144817bbf9f04f3",
+      "bytes": 6028
+    },
+    {
+      "path": "dott-varberg.parquet",
+      "sha256": "72c507a3897376889f533210863765c2d451b806af4f4917f4fe03d10cf287da",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-varese.parquet",
+      "sha256": "33cd88d64fc464466859b77afd61682a073196d98dd5a426bea4bf994ec6df71",
+      "bytes": 13016
+    },
+    {
+      "path": "dott-varnamo.parquet",
+      "sha256": "87b87b6995dbbee786151c7f2cc87edf9125c3878285d5924002b93ec57a9df7",
+      "bytes": 4615
+    },
+    {
+      "path": "dott-vaxjo.parquet",
+      "sha256": "7159a03ce95469db24bfac6c1d086b344c8806ff5cf402ac9c6f1aba0a8d7b84",
+      "bytes": 4605
+    },
+    {
+      "path": "dott-veldhoven.parquet",
+      "sha256": "1048506d96c376d933b12fed181e4f18b3c69e80c36218562a8d08e717257076",
+      "bytes": 5837
+    },
+    {
+      "path": "dott-verona.parquet",
+      "sha256": "fa5b74aa477b698dc529c50b6c100499a6db5aa398d4f181699fb131a8b2fa1e",
+      "bytes": 105124
+    },
+    {
+      "path": "dott-versailles-grand-parc.parquet",
+      "sha256": "1c636bb2fea71a1ca8210f56062091a555d4b24902d82365e0221b1f7b64b9a5",
+      "bytes": 8917
+    },
+    {
+      "path": "dott-vranov-nad-toplou.parquet",
+      "sha256": "1e10863e9036e6814149eadc15bf425c5dbb4c2e4445b4670419cbf286950bf8",
+      "bytes": 4666
+    },
+    {
+      "path": "dott-warsaw.parquet",
+      "sha256": "d6ab3811aad369b544619d68470cd42a19c0aef699d4639aec12347eacb66e1c",
+      "bytes": 6500
+    },
+    {
+      "path": "dott-wels.parquet",
+      "sha256": "8d17cd3b63b30f32490de80264ee17f1b80675f3fa88668aae0a226d10e3e510",
+      "bytes": 7015
+    },
+    {
+      "path": "dott-wiesbaden.parquet",
+      "sha256": "ba230d00cb7a65198115317996b5a6486651ffb26a36b1a1138a708c1ee191c4",
+      "bytes": 7638
+    },
+    {
+      "path": "dott-winterthur.parquet",
+      "sha256": "e26978313641b6d229721a096d92226631533f13e3c6fd72d979cc2df87cd6fe",
+      "bytes": 4630
+    },
+    {
+      "path": "dott-wolfsburg.parquet",
+      "sha256": "61d99ee23cbe4dd37d3cf2ab3f133636070ede84daddb7347a9cec72e88e8be2",
+      "bytes": 5886
+    },
+    {
+      "path": "dott-wroc\u0142aw.parquet",
+      "sha256": "e4fb4a408ce3cf1cc045e576f51262c67821b999d213d702a140e24cd1e05964",
+      "bytes": 48223
+    },
+    {
+      "path": "dott-wuppertal.parquet",
+      "sha256": "60e07e9b92c4e51029ae2922fe8f0d4ff4100a8dabdf669dcdd1633c7c83f73c",
+      "bytes": 4625
+    },
+    {
+      "path": "dott-zory.parquet",
+      "sha256": "eff95314600e130a2bf31966657c7dc2048ba993e9f84639772498783e6a0c34",
+      "bytes": 4600
+    },
+    {
+      "path": "dott-zurich.parquet",
+      "sha256": "170437377870a29fb7ca42331007e21b87d25a5eb34c13acb85e1cbb15b20c6b",
+      "bytes": 9718
+    },
+    {
+      "path": "dott-zvolen.parquet",
+      "sha256": "8f466cf3cec37c595ebd5c26fbd061fffa8ec06cbaa8fd6a23ab2c47d0e5721e",
+      "bytes": 4610
+    },
+    {
+      "path": "dott-\u0142eba.parquet",
+      "sha256": "3ab9736ae8dbc495116cf90d4244da392fa0e4965481f356abb65d2107396433",
+      "bytes": 4429
+    },
+    {
+      "path": "dublin.parquet",
+      "sha256": "0aba632ae0dbd38d27572617b1751274fbe2096411c5874f794e31faf66bceec",
+      "bytes": 7221
+    },
+    {
+      "path": "edrivecarsharing_ch.parquet",
+      "sha256": "f9ac589ba2368ca4671fced163757f169babcf5e30db9cc352d618afa32249f2",
+      "bytes": 6328
+    },
+    {
+      "path": "einfach_unterwegs.parquet",
+      "sha256": "9d1cdb39522102e9619ec6f0de7bd24d5163b7200ee57a3afe4b467da1418bbd",
+      "bytes": 5308
+    },
+    {
+      "path": "epfl_lausanne.parquet",
+      "sha256": "47e787b67c943379e78782475d7b329a7b99ce410363513cf78452376f1bcd29",
+      "bytes": 4518
+    },
+    {
+      "path": "flamingo_auckland.parquet",
+      "sha256": "341966edede6b8a97c6d6c72e9ceae169f77baeda6eda4fbb9ce876c758af083",
+      "bytes": 7352
+    },
+    {
+      "path": "flamingo_christchurch.parquet",
+      "sha256": "7d5b67c825cf4d38b2c61be3948b8143b5820ff92ded98793a1ac8bb1ebf7539",
+      "bytes": 5279
+    },
+    {
+      "path": "flamingo_dunedin.parquet",
+      "sha256": "75fbc998791fe5f56b1870f1bf2c8615ad3e8babf7d90c0c2420cfd6d7ea6a7f",
+      "bytes": 5458
+    },
+    {
+      "path": "flamingo_palmerston_north.parquet",
+      "sha256": "9120cae532a9208d6fbc2a26187522e3f7a444849f2d5f5d675fba633ec06f35",
+      "bytes": 6046
+    },
+    {
+      "path": "flamingo_porirua.parquet",
+      "sha256": "a4d0a7c3a7da68b6e491d183feb6c9938bbba6ed53c7adb992c589e1b8eceb46",
+      "bytes": 5190
+    },
+    {
+      "path": "flamingo_tauranga.parquet",
+      "sha256": "b4b0760adf933bd32f5b93a60cf3c70dc96f0a84f4b55752e02b4b8314f4a063",
+      "bytes": 4826
+    },
+    {
+      "path": "flamingo_waimakariri.parquet",
+      "sha256": "d03c412b19c93fc01f215254b1076289f85547165013b83dbaada28ff7727d60",
+      "bytes": 4660
+    },
+    {
+      "path": "flamingo_wellington.parquet",
+      "sha256": "f80f0ba3a2337339257a3fff5f2d25f04a3be7bfed840788cac780f157572ba5",
+      "bytes": 6539
+    },
+    {
+      "path": "flinkster_carsharing.parquet",
+      "sha256": "ead7bf0d9be9a5e005136547e7c2533816d974fd13735faf2377673fbc9abac7",
+      "bytes": 7190
+    },
+    {
+      "path": "ford_carsharing_autohausbaur.parquet",
+      "sha256": "77378671ea27799fc4d1521dc7cc122fffa2d80d665a606bbe0c192a131cef65",
+      "bytes": 5575
+    },
+    {
+      "path": "ford_carsharing_autohauskauderer.parquet",
+      "sha256": "14a3f20500622908add535a966c6e5f1a449dfadbce645df7e6fb70aa30523fa",
+      "bytes": 4469
+    },
+    {
+      "path": "fortworth.parquet",
+      "sha256": "f7cfb1ae625194ca112ff48656ac307641e90a7fcfd1cff7a9d897aa7b17a377",
+      "bytes": 5723
+    },
+    {
+      "path": "ganxeta_reus.parquet",
+      "sha256": "b567fa530a84444d9ce85e88a71551293bd56616dc9f602292fc358af0044a47",
+      "bytes": 4942
+    },
+    {
+      "path": "go_biki.parquet",
+      "sha256": "df787ff6fbc3ca46ce3bd5064b1a613561329a9876891e1878249a1a0d059801",
+      "bytes": 7664
+    },
+    {
+      "path": "goabout.parquet",
+      "sha256": "b4d9cc8119cd58b4f46ef58c22ab73702105ae13b39eb1b833c8e03a15a5614e",
+      "bytes": 5256
+    },
+    {
+      "path": "grand-est.parquet",
+      "sha256": "fe0b93862cdd931a00988660deb8a6d5be480a05a6b4c96958b01330c57011b6",
+      "bytes": 5889
+    },
+    {
+      "path": "graoulib_metz.parquet",
+      "sha256": "102dbfa7df29d3fea1857d9a8c5899e486cd2602a44d725d1bd1aa717cafefb6",
+      "bytes": 6290
+    },
+    {
+      "path": "gruene-flotte_freiburg.parquet",
+      "sha256": "71a695886e8583220410ae689bff0ba5e91e57d192eaf3912862df2ed2d7916f",
+      "bytes": 11826
+    },
+    {
+      "path": "hellocycling.parquet",
+      "sha256": "27cf198aca9d91d1a25d13b9a62bb6851689b55ddadd2bf4a3b8c3ac2386eb25",
+      "bytes": 375862
+    },
+    {
+      "path": "herrenberg_alf.parquet",
+      "sha256": "db8166a0bfdf86a8b2092df4242d64e5db58ff5eccbc8b1261f2e0f0ce19176d",
+      "bytes": 4512
+    },
+    {
+      "path": "herrenberg_fare.parquet",
+      "sha256": "1c60ed6b20c9aa68311f478170a6a726e60f4250d437e4fefbd1b4b95540704e",
+      "bytes": 4522
+    },
+    {
+      "path": "herrenberg_guelf.parquet",
+      "sha256": "760a7c3bf5b62a4536bc2f0c6ed78437617d989ac78d1848f5fc703a205771f8",
+      "bytes": 4532
+    },
+    {
+      "path": "herrenberg_stadtrad.parquet",
+      "sha256": "b14e05a5e4c151dafe040dc04b7e71c918696cde4ec57af3b7c291aba98c04aa",
+      "bytes": 4562
+    },
+    {
+      "path": "hertlein_carsharing.parquet",
+      "sha256": "8cd499861a9b9bdcdc5f035f23b1782c86968029c882ea954da60297947ae4dc",
+      "bytes": 4572
+    },
+    {
+      "path": "hunedoara.parquet",
+      "sha256": "25372ec25b8c4fefb94d6da48b01d5854c61b4043791bf0752b97f5da7babc33",
+      "bytes": 4638
+    },
+    {
+      "path": "idecycle_pau.parquet",
+      "sha256": "4c4b85248188441f1954f5362b6ed0030bc2442399eeafa50393ce41412d5e70",
+      "bytes": 5544
+    },
+    {
+      "path": "impulsyon.parquet",
+      "sha256": "8eb03f787494759576b6a627f6e41b8ea9038b8ddde6f523aef2a4dcf83eeb83",
+      "bytes": 5808
+    },
+    {
+      "path": "inurba-gdansk.parquet",
+      "sha256": "729648daa1d03b773def860412b661d9685372c2937adaf215f4992d2bde45b4",
+      "bytes": 24729
+    },
+    {
+      "path": "inurba-rouen.parquet",
+      "sha256": "1ae252db044fc6448202c8d06758e91764e256c1e5c12a830a782623c6253114",
+      "bytes": 7301
+    },
+    {
+      "path": "jolt_hutt_valley.parquet",
+      "sha256": "0aa23d9e9dd9922771682ca3763bee8edfa07b10f3738a187300c4b29e192f01",
+      "bytes": 7073
+    },
+    {
+      "path": "jolt_new_plymouth.parquet",
+      "sha256": "69026566b2719585b74e8614d58c169c6f3adf2ccab887f536c8cb250786e04f",
+      "bytes": 6676
+    },
+    {
+      "path": "jolt_selwyn.parquet",
+      "sha256": "77f5bcff309dd80901f61d23ceb7f3c2ee1bd740be34a0697098a81ff048951f",
+      "bytes": 5001
+    },
+    {
+      "path": "karu.parquet",
+      "sha256": "eaa94991864faac9d8311fd25f13905502b87be738cf95c6ac4c328fad1c4842",
+      "bytes": 5206
+    },
+    {
+      "path": "labaule.parquet",
+      "sha256": "1c9fc0dc2047552ea37188a0e9460c47ac35ab701f72c5d057e31f83091cc1f0",
+      "bytes": 5070
+    },
+    {
+      "path": "lara_to_go.parquet",
+      "sha256": "93f697ee14984e958a8ec07f51ac08d246d4e3fa989a4e3278ba9db44d77948a",
+      "bytes": 5003
+    },
+    {
+      "path": "lastenvelo_fr.parquet",
+      "sha256": "f5bed5ca25ff3e666f46ae25b041bcc7359ba0382a7f6e3390d064b15890ed5c",
+      "bytes": 5926
+    },
+    {
+      "path": "le_velo_star.parquet",
+      "sha256": "cfdfb60299864d0d71c7bb51ee5c89bb35e2db11868c36449a08f4e6208f27db",
+      "bytes": 5776
+    },
+    {
+      "path": "lemarcel.parquet",
+      "sha256": "e253757ce037a160bff9ed05d91141dbea6d2afe32bb71e2e2a0b8f7dfd4762e",
+      "bytes": 5775
+    },
+    {
+      "path": "levelo_inurba_marseille.parquet",
+      "sha256": "888f437fcd38578fd69242843c6a4dc7f8c307fb1ef00c8f4409c0581aa61b20",
+      "bytes": 11093
+    },
+    {
+      "path": "libelo.parquet",
+      "sha256": "2d5b32e1313c6dd4cfee8732c711a791696bf89a93ad731d3be2d12394c144af",
+      "bytes": 6026
+    },
+    {
+      "path": "liemobil_liechtenstein.parquet",
+      "sha256": "9d3366f61774f1547f2c2431c74ad29c3249d888dff17cb265406e210ed79992",
+      "bytes": 5210
+    },
+    {
+      "path": "lillestrom.parquet",
+      "sha256": "d2fc7e3ffe2baaf9cdda8ed3637b4876347a706a6a4a18cc92d819f06438e52f",
+      "bytes": 4497
+    },
+    {
+      "path": "lime_antwerp.parquet",
+      "sha256": "68ef2baf561ce20c8865d94441aa094185d252c64dea3c023c95344599adcc50",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_arlington.parquet",
+      "sha256": "47ac3c737c69f25862edfda7d72d803dfbe157787ce27486adcdd35413f3e262",
+      "bytes": 4314
+    },
+    {
+      "path": "lime_atlanta.parquet",
+      "sha256": "46af8e2d2a1890bc690e9b6a7330f6a6c9f3ef927005b3417d36716018ad1a2d",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_baltimore.parquet",
+      "sha256": "892ab5834bfd25f602f2410b243caab45e419097568637637a81823ec0f75649",
+      "bytes": 4314
+    },
+    {
+      "path": "lime_bari.parquet",
+      "sha256": "e2690fef6d6a6d92b9bbce6b57d5da43789c2489fd52b07099692670cdf99fcb",
+      "bytes": 4264
+    },
+    {
+      "path": "lime_brussels.parquet",
+      "sha256": "65608f07d5296486831934edf8e86a381a878a90b18161a3259aa0dfa9337f65",
+      "bytes": 4304
+    },
+    {
+      "path": "lime_calgary.parquet",
+      "sha256": "0e21d3765173327d7c2d1b8d94f7f5e1cb6969cc17a8e52073080f78aac7cc81",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_chicago.parquet",
+      "sha256": "c07a5ac93f1e55f12a1ca0a82715f0ad36a89b9ea0b57fc18d4c82a56558dbfa",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_cleveland.parquet",
+      "sha256": "d901c9018d49861debe1da98b2a287dadf16604d023bce7817c11e2b673d86ec",
+      "bytes": 4314
+    },
+    {
+      "path": "lime_colorado_springs.parquet",
+      "sha256": "442294afee0dd30f0a3ba6d6c2226591b3b0c80400843b8d705627fd030a87b2",
+      "bytes": 4384
+    },
+    {
+      "path": "lime_denver.parquet",
+      "sha256": "0f071d0ee156750cd2166bf7f4024dccd6a63d5953365c4fc7d295a3071c27a0",
+      "bytes": 4284
+    },
+    {
+      "path": "lime_detroit.parquet",
+      "sha256": "b826fb30b5d63ba80b7616ce862411a4e3c2d82b2ce5605cfe8cd901c71f376b",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_edmonton.parquet",
+      "sha256": "bb98d3a3fb2f92329118295c78843869459c291fc7fe1d5f9e26d8094475c11e",
+      "bytes": 4304
+    },
+    {
+      "path": "lime_frankfurt.parquet",
+      "sha256": "031cbcc4a5c84dc472f1693eb82b5c791a5093927e182d83f59bd9888b99b459",
+      "bytes": 4314
+    },
+    {
+      "path": "lime_grand_rapids.parquet",
+      "sha256": "0d99e91045f94821d7ed43d29096d4fb99b124c206391a244eef1176e904e1a8",
+      "bytes": 4344
+    },
+    {
+      "path": "lime_hamburg.parquet",
+      "sha256": "222abef22708dd84a9697ff8ebbf2be8084dee52204e737a4969d0bd97346dff",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_kelowna.parquet",
+      "sha256": "d7ce9451637fcaf3e0db413fe4ddbf3aa2596b267c234f465517af5b29cdfee2",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_lille.parquet",
+      "sha256": "0e170c08e8daa4108b8d0947f7098eec8a40b4c05f1a10fcdd12647e3677ebff",
+      "bytes": 4274
+    },
+    {
+      "path": "lime_lincoln.parquet",
+      "sha256": "b5115b40dcff219a567d6654eb59db6ea70f5ba35ca198c558f479a9f0c75173",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_louisville.parquet",
+      "sha256": "a6726ff89037a1fc3d880d1596c90fcf9e755280b30589b3d26f3013e7c3a59a",
+      "bytes": 4324
+    },
+    {
+      "path": "lime_marseille.parquet",
+      "sha256": "9bbfd22b115720a3b50da890609cffe69be9d21654f92166f015290d64150ddc",
+      "bytes": 4314
+    },
+    {
+      "path": "lime_mississauga.parquet",
+      "sha256": "7d5def1b7726ff3031fd7283eb571e65d1a80ec917067a1d68dcedf4cb363f41",
+      "bytes": 4334
+    },
+    {
+      "path": "lime_naples.parquet",
+      "sha256": "0ea7d1a8c8a2895a6e9572ed2f0cb127f211dad14aba6e6e151b1ec7c31e874d",
+      "bytes": 4284
+    },
+    {
+      "path": "lime_new_york.parquet",
+      "sha256": "98bd995b3fe33766e3fe1084cb34142242bd81044a044429a8e83f91af70c17d",
+      "bytes": 4304
+    },
+    {
+      "path": "lime_nice.parquet",
+      "sha256": "f66db24d5aa6eff8f207a38ee36eb791c336e4684eb063062dfbb1cd8da05bcb",
+      "bytes": 4264
+    },
+    {
+      "path": "lime_oakland.parquet",
+      "sha256": "f0f7c3b0b73998781d96a45a9e5b8f09a7e77925a27f9c55170b80ea6312757a",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_oberhausen.parquet",
+      "sha256": "25149555d9db21e566aa82d7aa5383970a3baf418928c50fc16e4ae3d0c4503c",
+      "bytes": 4324
+    },
+    {
+      "path": "lime_opfikon.parquet",
+      "sha256": "39466a7a641dd899898e039956adbe7ca9b1f7b21cdd1f4c28a9fcf23c76ee22",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_ottawa.parquet",
+      "sha256": "cd7b1647aa7ab2fb6c90c9bcf9abc73892985c438ecd9c05ce24efe55917328c",
+      "bytes": 4284
+    },
+    {
+      "path": "lime_paris.parquet",
+      "sha256": "2e43748d6b3d5236fdee2aefabe1614de7e6f8143a93e82ae1c5c16a824540f7",
+      "bytes": 4274
+    },
+    {
+      "path": "lime_portland.parquet",
+      "sha256": "f7b131c941452974bbc94a05308ffa9fd21671de9a788775b89419f5018d9ea2",
+      "bytes": 4304
+    },
+    {
+      "path": "lime_san_francisco.parquet",
+      "sha256": "edaa0fe50c206ab81c2aa210d9a209f7bef1f27956d25cf973eed0fb62da6890",
+      "bytes": 4354
+    },
+    {
+      "path": "lime_san_jose.parquet",
+      "sha256": "6c1b6a92eb835c6c214de4f36d217da5717d4820b02e2403706647b8a20d86d8",
+      "bytes": 4304
+    },
+    {
+      "path": "lime_seattle.parquet",
+      "sha256": "062ab80e70c43cc44b51e8631d5e50d6b62c7566dac9a51b6b8feb5353601557",
+      "bytes": 4294
+    },
+    {
+      "path": "lime_tel_aviv.parquet",
+      "sha256": "cc93b715e780a31d19f2f794601b33a86e6409e393231cc8ede30716a27cfe1a",
+      "bytes": 4304
+    },
+    {
+      "path": "lime_vancouver_bc.parquet",
+      "sha256": "595ba6411711233c0f5cf315b667ae5e00b8e89ae733237a82188cf6a66d9491",
+      "bytes": 16466
+    },
+    {
+      "path": "lime_washington_dc.parquet",
+      "sha256": "0e267bcf3b83dee446f7fb3947cf2c93c10f0682dc3580a726260e3b326bb042",
+      "bytes": 4354
+    },
+    {
+      "path": "lime_wuppertal.parquet",
+      "sha256": "248743ba4222982ec93460e7cf3b1dc5e9b1672fddd755078b7c61073c9dda43",
+      "bytes": 4314
+    },
+    {
+      "path": "lime_zug.parquet",
+      "sha256": "40edb9d4d2242f3de8c1b3e39c61eb26361161bc9ecce304bc733074364f5c9e",
+      "bytes": 4253
+    },
+    {
+      "path": "linka_aar_bike.parquet",
+      "sha256": "5b7de147756c63af5ba69ad12510745299decdaca6783300c7ddd4857835188b",
+      "bytes": 7974
+    },
+    {
+      "path": "ljubljana.parquet",
+      "sha256": "57cd9c2cbf5d08c32d1e24ae670c239d61a2c2fc4ebec6849810576238f4fa3a",
+      "bytes": 6458
+    },
+    {
+      "path": "lund.parquet",
+      "sha256": "eea79558d1836435900a653a03f336fbe586c0128b5add4ae594ad80a8276e51",
+      "bytes": 4847
+    },
+    {
+      "path": "luxembourg.parquet",
+      "sha256": "9618536f45748c2e4714a11f209ed01b1d6acf1bd461c4fa7d621223b0772900",
+      "bytes": 7912
+    },
+    {
+      "path": "lyft_bay.parquet",
+      "sha256": "277f8e6e8ba6aa97fa9894b4c91779680fbc158078b6ebbd34d09dce3307a699",
+      "bytes": 38019
+    },
+    {
+      "path": "lyft_chi.parquet",
+      "sha256": "46e963621e5fc0aa2634caa0970008e550d2320038c94f651b42838fce6999ac",
+      "bytes": 71454
+    },
+    {
+      "path": "lyft_den.parquet",
+      "sha256": "6f985a2ba64721deb024bdcba852097c6d36037b7aa45a4915e9428ec9823820",
+      "bytes": 8692
+    },
+    {
+      "path": "lyft_nyc.parquet",
+      "sha256": "7c9f4fd04edc70f7d7c3317d768a2e570046bf2299b3e16ee7dba5bb834e7bd7",
+      "bytes": 118622
+    },
+    {
+      "path": "lyon.parquet",
+      "sha256": "677fb177afbd667a0d8c97f1479f5e4e16ec0aca8d8b4c76333a5f6cd7e51c7c",
+      "bytes": 15787
+    },
+    {
+      "path": "maribor.parquet",
+      "sha256": "7c669dd01391110e6fccaeda071b14c83edddf2e36d3f1cebafd9e33fcf24d78",
+      "bytes": 5318
+    },
+    {
+      "path": "miamiunderline.parquet",
+      "sha256": "c7dc50a01ae93e4ed584e01b41edb0efbd12a3c51b0eb31f5c690aa337ccc14d",
+      "bytes": 4475
+    },
+    {
+      "path": "mibici_guadalajara.parquet",
+      "sha256": "7d26c7eee3d636fd0675caa5218661a7b81a974abea52ba662f0e8bd8be0cd8b",
+      "bytes": 14769
+    },
+    {
+      "path": "mikar.parquet",
+      "sha256": "4721bc70d7b658b360387b56367d59383461aeef1b12eb05e1a1fb421f32e992",
+      "bytes": 12443
+    },
+    {
+      "path": "milan-bikemi.parquet",
+      "sha256": "f2949b1b62427a7661c2c4f6e32b051011cd04075ff811ed09d7dff9652da125",
+      "bytes": 11691
+    },
+    {
+      "path": "mobility_ch.parquet",
+      "sha256": "37aa036fab9ea7f11bbdfb52a1d6bb3fa2f74a929acee0def4ff1276ecf06fb5",
+      "bytes": 48311
+    },
+    {
+      "path": "mogo.parquet",
+      "sha256": "aee07ae78a41b241b75bd9ed7ffb0bcabdfd3affc67719dec5d5496bfb986203",
+      "bytes": 6359
+    },
+    {
+      "path": "moinesti.parquet",
+      "sha256": "db9a29b28c6d6be941f05cb2239227dc9537569256b503d7befb324d8e0cfc5c",
+      "bytes": 4522
+    },
+    {
+      "path": "mona_bike.parquet",
+      "sha256": "8fb66c32b118e0d0748501f708f071a2d88531b81aca70e6ddfe31760bbfea57",
+      "bytes": 5783
+    },
+    {
+      "path": "montenvelo_mont_blanc.parquet",
+      "sha256": "2a29429d796f2a02b2b008a15c6fd9b0d80dfd1974f5de255c517d3fff23ad59",
+      "bytes": 5102
+    },
+    {
+      "path": "mp_ARBRESLE.parquet",
+      "sha256": "10809d588847da09cc4ce2d21ad0837fe005c8d053998251733b957e24e01485",
+      "bytes": 4441
+    },
+    {
+      "path": "mp_CHATELLERAULT.parquet",
+      "sha256": "9e8112f27c8a152d0a02154c7723e13d600d8ac17d9698840e8000250388d398",
+      "bytes": 4692
+    },
+    {
+      "path": "mp_COQUELICOT.parquet",
+      "sha256": "55c6729da18547e595fcbe8f6276c1161d3ed0e26f5bcd1bc5173b946496b4bb",
+      "bytes": 4381
+    },
+    {
+      "path": "mp_ESTREES.parquet",
+      "sha256": "1491e39e6608c53b3c8ec59a37dc6d606420bf7017d9008c626e6244a7b8ee54",
+      "bytes": 4490
+    },
+    {
+      "path": "mp_GEVAUDAN.parquet",
+      "sha256": "22684e8af7c94023d6722767a260a651fc897734334a24c957020c1a0dcb9cf4",
+      "bytes": 4395
+    },
+    {
+      "path": "mp_LASCAUX.parquet",
+      "sha256": "c0980218a3c19dbb9c01d3c8fe70587081f736f9f549f4cea1c7c4f3d4ad5fee",
+      "bytes": 4470
+    },
+    {
+      "path": "mp_OLORON.parquet",
+      "sha256": "2b6f19e14f1b56b8d28d7c4213e045d1aeac2c3f88e4d4974dbb14ec876a1cd6",
+      "bytes": 4385
+    },
+    {
+      "path": "mp_OSSAU.parquet",
+      "sha256": "8d549bf8082c55ad9acb11400cbfe4b182dbb2e2468f528cb6481daf76f77e05",
+      "bytes": 4406
+    },
+    {
+      "path": "mp_Opale.parquet",
+      "sha256": "0c664d4123d035bbfc992f3db1a436db02bb0b25e92831e917acce38d920f602",
+      "bytes": 4428
+    },
+    {
+      "path": "mp_TARARE.parquet",
+      "sha256": "11e955a903c069d68d6fcd74daf77378c2320bd6cc6ee02826420d375ba626ed",
+      "bytes": 4393
+    },
+    {
+      "path": "mp_VASSIVIERE.parquet",
+      "sha256": "689f249133931a61fdd890f8b7948586b082227200873cc20f170b901ee08f90",
+      "bytes": 4381
+    },
+    {
+      "path": "mybuxi_ch.parquet",
+      "sha256": "00d97eb1402097def0e0fa6e3aec5dcfd2026eec40b2bd94f7e65d47b22fcb13",
+      "bytes": 88801
+    },
+    {
+      "path": "namur.parquet",
+      "sha256": "685d2fcf4ae971a24af07b0240f119f461764e2caf22ab79fd613192205f43ac",
+      "bytes": 4950
+    },
+    {
+      "path": "nancy.parquet",
+      "sha256": "082aa1be7febf04d0c465b5d414caae3cb53bbc669cfdda74a0cb3d1cb2a7e2e",
+      "bytes": 5348
+    },
+    {
+      "path": "nantes.parquet",
+      "sha256": "39bada17df6a05ab176bfc7ab809df8af76499c1e398bee26c78d2760b7b19de",
+      "bytes": 7386
+    },
+    {
+      "path": "naturenergie_sharing.parquet",
+      "sha256": "b96a2af60d3454f4ea53c1ae191fa0b3f0b2ba8a1dfea54ed9033f0abac11d05",
+      "bytes": 13017
+    },
+    {
+      "path": "nemovelo.parquet",
+      "sha256": "c94e44fd3d33ad7ec142cd2e2dd665673f8c8a19612a0cd56d9c4da5bb8c0b7b",
+      "bytes": 6758
+    },
+    {
+      "path": "nextbike_aa.parquet",
+      "sha256": "9fe9976199ab4d3598b5eb631d2aa26794ab8856037f0ceff500d0a892f29af8",
+      "bytes": 4607
+    },
+    {
+      "path": "nextbike_ac.parquet",
+      "sha256": "063ea9760dd479bad46395b29797fc781328186703571d314806e672b3b5a790",
+      "bytes": 5881
+    },
+    {
+      "path": "nextbike_ad.parquet",
+      "sha256": "900cebd469dc75f7bd3c0ff627c6c699aae28586341748e2695a545a9b6c125d",
+      "bytes": 4950
+    },
+    {
+      "path": "nextbike_ae.parquet",
+      "sha256": "d19a45071e508f5669eb44378b99cf8dc0fc8b3859a7f59ce6cfe1024a9db3dc",
+      "bytes": 5465
+    },
+    {
+      "path": "nextbike_af.parquet",
+      "sha256": "00789843ba3c9cebfab649ad470909b962fd2d7bd6aa0941fe449a0d2d94cc4d",
+      "bytes": 6071
+    },
+    {
+      "path": "nextbike_ah.parquet",
+      "sha256": "a91567c4f77089fc61fa6a17c9a2f5783c873e6834e8df6debca4119514488ea",
+      "bytes": 5754
+    },
+    {
+      "path": "nextbike_ai.parquet",
+      "sha256": "3f26320a813613df31488e3baf530c3755ce9051e257240756a8ed0821967fee",
+      "bytes": 4890
+    },
+    {
+      "path": "nextbike_ak.parquet",
+      "sha256": "aefd87395c9763739529d48019f62790447244e4047c55ac1cde29af1c9abe0e",
+      "bytes": 5422
+    },
+    {
+      "path": "nextbike_al.parquet",
+      "sha256": "2a5350c24040ac061fba2c2f76e5e63a8e4237651bb98180b38e6370b8c7069d",
+      "bytes": 5805
+    },
+    {
+      "path": "nextbike_am.parquet",
+      "sha256": "82f2a23408de406882915706e967315edf5db86abe5bfb1fe22e52e44d10f6f5",
+      "bytes": 5350
+    },
+    {
+      "path": "nextbike_an.parquet",
+      "sha256": "6e0993a597554495e2920ca911eaed3b3dcb2b0b8ff60d83b7a41082a532bf4e",
+      "bytes": 5773
+    },
+    {
+      "path": "nextbike_as.parquet",
+      "sha256": "c2a17476f93b230d6eb6258c368e0d11de7da62cc26616c019ab0ec4d3c1a2c2",
+      "bytes": 4889
+    },
+    {
+      "path": "nextbike_av.parquet",
+      "sha256": "36bcf7d341833ac41ac00f19fe6d29df6c34b2ef208e989bb62eb73802aeaff3",
+      "bytes": 5076
+    },
+    {
+      "path": "nextbike_ba.parquet",
+      "sha256": "0d47882bdbb13dd638b5b78ffe7aa316a17c13c769b5332e8856a21af06c377f",
+      "bytes": 5517
+    },
+    {
+      "path": "nextbike_bc.parquet",
+      "sha256": "7ebeb854bbb1d3ba8aadebc8b50257141ddf8bf20de1ffa8bdf7640d48b5f1ac",
+      "bytes": 4561
+    },
+    {
+      "path": "nextbike_bj.parquet",
+      "sha256": "898c29b6698fa24896f0c494c12211739945cf5234fb136d5317f5308b0a4a6a",
+      "bytes": 4504
+    },
+    {
+      "path": "nextbike_bn.parquet",
+      "sha256": "83483cf8f9573c7867fedfd7d1b229735ccc4a66802c95692104994c7d71f029",
+      "bytes": 33642
+    },
+    {
+      "path": "nextbike_bq.parquet",
+      "sha256": "4a498fbe16448c0ccc3c09cf9a22cd4c444ddecd5597fbb0a1da0ac2af8e3503",
+      "bytes": 7587
+    },
+    {
+      "path": "nextbike_br.parquet",
+      "sha256": "d61a479c1ad03766efb919efb795c6a58b69311b6d4fddfca5bdc47a43402ff6",
+      "bytes": 4316
+    },
+    {
+      "path": "nextbike_bs.parquet",
+      "sha256": "74aa637fad6b6f1a23fd715b9e30e2172c5bcbe9a607d1bb883c30f6c4148ba5",
+      "bytes": 10800
+    },
+    {
+      "path": "nextbike_bv.parquet",
+      "sha256": "949e3191a959cddb13ead10ebe62eeb528223766a34498e3a13c677fc5a4f202",
+      "bytes": 5655
+    },
+    {
+      "path": "nextbike_bw.parquet",
+      "sha256": "1dcb69510c5418f0cf7f3fc2b199a14e228183793eb5c10ec1875b3b534ef0d7",
+      "bytes": 7396
+    },
+    {
+      "path": "nextbike_bx.parquet",
+      "sha256": "ebb3e0471fd59630a38e2eb548274c2863ef71e34370a53e7f339ce3f1714ecc",
+      "bytes": 5327
+    },
+    {
+      "path": "nextbike_by.parquet",
+      "sha256": "1d5d9594fbc683daa57f91523db120c99e982ccbfe133ce8c397df337bcf8586",
+      "bytes": 5338
+    },
+    {
+      "path": "nextbike_bz.parquet",
+      "sha256": "7b14e6e3c82f46416b5a4d0944712ba81693097aada8f3c7bbfa0bfb84224121",
+      "bytes": 4786
+    },
+    {
+      "path": "nextbike_cb.parquet",
+      "sha256": "6f518cfec445d418c39dc8fb5337b295f8ed18526d7f750017f77450955dad34",
+      "bytes": 4848
+    },
+    {
+      "path": "nextbike_cc.parquet",
+      "sha256": "6599bae5a83f5a0a5e6cf03022d322091f3bd1c8a5af872c7e8de02b6aee01ab",
+      "bytes": 5829
+    },
+    {
+      "path": "nextbike_cd.parquet",
+      "sha256": "60f16eef3f5b551f5b3c83ac0f3e0d0f62021c135d35a49f9333e53cafb30f6d",
+      "bytes": 4451
+    },
+    {
+      "path": "nextbike_ce.parquet",
+      "sha256": "2dc4741fc6ed921b118b36c1a77c3eb824f98d2521421115f9678490cf9027ed",
+      "bytes": 5005
+    },
+    {
+      "path": "nextbike_cf.parquet",
+      "sha256": "9ceab724d8d02c8cc1a849e11eb8db82a196ec386bdc65bcf62c970ff8a00787",
+      "bytes": 4557
+    },
+    {
+      "path": "nextbike_cg.parquet",
+      "sha256": "6817cb9d9b748132a6ec8bb545a3f841ea0af710b3ca7f54c9f96dd0c9d6a82a",
+      "bytes": 4373
+    },
+    {
+      "path": "nextbike_ch.parquet",
+      "sha256": "fdc63ef82feb6af4d93d4be53ed5bc8add81346188677a612e183ca711cf1e86",
+      "bytes": 14800
+    },
+    {
+      "path": "nextbike_cj.parquet",
+      "sha256": "41afbc2c21d3bb596527f64de1741a8eb84ee34732c8415bc31a1daa6cf7ee1e",
+      "bytes": 4387
+    },
+    {
+      "path": "nextbike_cm.parquet",
+      "sha256": "098b8056177306ebd43fef779ce37c26675408825157a7836d91847e7c07de8e",
+      "bytes": 4408
+    },
+    {
+      "path": "nextbike_cn.parquet",
+      "sha256": "d3aa09c9514baf8d1000a397c0042d5e2354778138521fd6fe6b056de518d44e",
+      "bytes": 6780
+    },
+    {
+      "path": "nextbike_co.parquet",
+      "sha256": "9ba678552c5ecf7bedc1d02b42e030cc5e0962b16638c6442d9dddc41d1e0f72",
+      "bytes": 5067
+    },
+    {
+      "path": "nextbike_cq.parquet",
+      "sha256": "cca64a6d4c8655ab112a303dbd1430b50459ba6d1b2b8b5281b1d4b9ec312e52",
+      "bytes": 5073
+    },
+    {
+      "path": "nextbike_cs.parquet",
+      "sha256": "1832bdee135cc3088144a483f9c60737b2786bbd10a1c31e35d636bd0400079a",
+      "bytes": 4516
+    },
+    {
+      "path": "nextbike_cu.parquet",
+      "sha256": "d6b14ffeb62a8975cb7b6488f68f75cd45bb0b9755d82b995ec26f403c20f6d5",
+      "bytes": 4911
+    },
+    {
+      "path": "nextbike_cv.parquet",
+      "sha256": "0cab33262600384b59c4d10f457895d23bd63edc3c67cfe5351c35b149371618",
+      "bytes": 4418
+    },
+    {
+      "path": "nextbike_cw.parquet",
+      "sha256": "56d4cc699f295306572606556f1c39ca8d10a2c30d94cf86e6b556e9ffc9cb35",
+      "bytes": 4814
+    },
+    {
+      "path": "nextbike_cy.parquet",
+      "sha256": "cd0cec3943e4ca4711caabcffb1cfecaaeb2a9cc63478e55e166a0c39d52dff9",
+      "bytes": 13312
+    },
+    {
+      "path": "nextbike_da.parquet",
+      "sha256": "e24cb2bbbb9d7c8f835d45263a9a13e78cb3835ee802453411dbaf9ae8944cc1",
+      "bytes": 4322
+    },
+    {
+      "path": "nextbike_dc.parquet",
+      "sha256": "ef8c3413c98048b9384b132b22c42bea6dd415278f1b895f26b0ae29de3caeff",
+      "bytes": 8512
+    },
+    {
+      "path": "nextbike_dd.parquet",
+      "sha256": "0e3ef6700dc333bc9766adda838ad8dbd6bf59180ce0360d431c307d6691fe46",
+      "bytes": 12817
+    },
+    {
+      "path": "nextbike_df.parquet",
+      "sha256": "b2363e36132c6fcbda414c98f4ba234b2ad80e1591d3cc0a7fb3fb23121dbe4d",
+      "bytes": 8733
+    },
+    {
+      "path": "nextbike_dg.parquet",
+      "sha256": "d39376ab89b070b132a660a1e907e945954a9dc55a7146847d4149cb2a3734bf",
+      "bytes": 5890
+    },
+    {
+      "path": "nextbike_dh.parquet",
+      "sha256": "c80ec888cd5fef737a99cebaf0e11857fb7f8431b6903ec28f186d8c518cbfcd",
+      "bytes": 7677
+    },
+    {
+      "path": "nextbike_dj.parquet",
+      "sha256": "f8bfee0f4b5dcba8bceb75940e03af8695c54a8643237fce1bd733e03b8523a6",
+      "bytes": 4381
+    },
+    {
+      "path": "nextbike_dk.parquet",
+      "sha256": "406e363610eb5506b1ed57f9b7679703309cbac20c36c9e82e8fb8865b66dd89",
+      "bytes": 6145
+    },
+    {
+      "path": "nextbike_dn.parquet",
+      "sha256": "74cb6e7d7ae293971b5eff895f7233a4158197c2d8f0f6abe9b5f4de53395c90",
+      "bytes": 8381
+    },
+    {
+      "path": "nextbike_do.parquet",
+      "sha256": "d1ad5921c950544cc21359024238ea65cc0ee90d3fdf03a718a0c531557c1d85",
+      "bytes": 4859
+    },
+    {
+      "path": "nextbike_ds.parquet",
+      "sha256": "78baeb9c8358dae45d3452c1734783a7ad04787d35c10849dbe2f16a9a307317",
+      "bytes": 4686
+    },
+    {
+      "path": "nextbike_dv.parquet",
+      "sha256": "a4143dab331131ad59c60570352cc40ae9d92769bb71685ab0821b40d2d5dc19",
+      "bytes": 7914
+    },
+    {
+      "path": "nextbike_dw.parquet",
+      "sha256": "a15ef651154928dd35c3a6554a6d436e024b0aeb987d6f6fce42ce921acf31d4",
+      "bytes": 7533
+    },
+    {
+      "path": "nextbike_dx.parquet",
+      "sha256": "8d1830050751c5667dbdc746b9ed9a822333ea983a499ef06c5888f187571872",
+      "bytes": 19484
+    },
+    {
+      "path": "nextbike_ea.parquet",
+      "sha256": "2690a0842850aedb8ad170f8dd808d3d02ae161fdc3ad3e9d247dec0ab0784ab",
+      "bytes": 6949
+    },
+    {
+      "path": "nextbike_eb.parquet",
+      "sha256": "db1aca8da1354f67bde71418d21c0b4b15aed321c5c4387b7701145b86e7b5fc",
+      "bytes": 5856
+    },
+    {
+      "path": "nextbike_ed.parquet",
+      "sha256": "46df7327fd7ef35077925b29fa6f76f3f5a1ceabc70049021bb3f3fa2b1b9384",
+      "bytes": 5004
+    },
+    {
+      "path": "nextbike_eh.parquet",
+      "sha256": "fae8a9dc4824cc7ff311356c6faf63e9fc0c5fff81e1f16a1217d5827b30dbeb",
+      "bytes": 6925
+    },
+    {
+      "path": "nextbike_ej.parquet",
+      "sha256": "c5670239f1780098613dbedb2337c2ac917763d7a4dbb0c8e814056351505921",
+      "bytes": 5402
+    },
+    {
+      "path": "nextbike_ek.parquet",
+      "sha256": "c7875c429d6ce7f73cfa2d21e31215f7f86fdbcaffcee7e4c046a56267eeb490",
+      "bytes": 5542
+    },
+    {
+      "path": "nextbike_el.parquet",
+      "sha256": "05426f778160ae0b650020b2a49087f8b463e03ea1d3a5e46dd787aab826f5c3",
+      "bytes": 6133
+    },
+    {
+      "path": "nextbike_em.parquet",
+      "sha256": "423b75fd603e91f127bb54346981027e8cd0df770a5399ab89962929b04cfb5c",
+      "bytes": 5096
+    },
+    {
+      "path": "nextbike_en.parquet",
+      "sha256": "88f54751707ed8b936edf6541c9e1e8714d81777c27e713fb99312c5a07445b5",
+      "bytes": 4944
+    },
+    {
+      "path": "nextbike_eq.parquet",
+      "sha256": "d228eeb0783fe1c5ea9f1a9e9e30abffddfbe102779eb550448ce6d46747cf84",
+      "bytes": 4825
+    },
+    {
+      "path": "nextbike_ev.parquet",
+      "sha256": "d59cacbaee9be929537ddb045f7125b94227c6b2501fc0028906318175239d49",
+      "bytes": 4866
+    },
+    {
+      "path": "nextbike_fa.parquet",
+      "sha256": "e3f112f65e31df885e69d601166d0c01ed5e4384ca9b96cc9f5cf1cb4f7ab460",
+      "bytes": 5047
+    },
+    {
+      "path": "nextbike_fg.parquet",
+      "sha256": "15fde0440debbb2d959defc5b52ac850a95180042a4d36d41ef1065530249a1d",
+      "bytes": 7550
+    },
+    {
+      "path": "nextbike_fp.parquet",
+      "sha256": "5c84706c638b1cdfc9a34efaa96db86d4dc13e8836b8a99a137d2d86c856c35b",
+      "bytes": 4478
+    },
+    {
+      "path": "nextbike_gd.parquet",
+      "sha256": "4cfa453ff9068698a527d0e02cd82328d99b020bd86d40e9a9d4fa44fd111f42",
+      "bytes": 4542
+    },
+    {
+      "path": "nextbike_gh.parquet",
+      "sha256": "9adc6b120b8ec7f0aa851e98b0caa5ed29f9282e2129e8852907553a844e6595",
+      "bytes": 4909
+    },
+    {
+      "path": "nextbike_gk.parquet",
+      "sha256": "c724a58b2ebfb2ed6a7983406458bd30fd2a7043695c03c75eaa9fac1c3aa66a",
+      "bytes": 4663
+    },
+    {
+      "path": "nextbike_gp.parquet",
+      "sha256": "67923e0305231d3d05ee2a58bdd6a13fb2161287d90af5b13a17835c451a5884",
+      "bytes": 5017
+    },
+    {
+      "path": "nextbike_gs.parquet",
+      "sha256": "02656dd20790c434a2b5892fba8b909c9499605e7e12ab064266160c9b34e8e4",
+      "bytes": 4644
+    },
+    {
+      "path": "nextbike_gt.parquet",
+      "sha256": "9700f894535115278fc7d334b31a601ffa3cd85edef0dac70307710414c025b4",
+      "bytes": 7121
+    },
+    {
+      "path": "nextbike_gu.parquet",
+      "sha256": "0c81cf697fda7107c96043a57fc8bd71684d33dd99ff96711b4782540a6d3abb",
+      "bytes": 4617
+    },
+    {
+      "path": "nextbike_gv.parquet",
+      "sha256": "2603b8a9336b327cd6af908149ed22f11fee96866c29a0752331f3f477056975",
+      "bytes": 4556
+    },
+    {
+      "path": "nextbike_gx.parquet",
+      "sha256": "51c9549505d145f57d9d4a15d1668cd48b59a52cdacbd99178359dc58cfca6db",
+      "bytes": 4608
+    },
+    {
+      "path": "nextbike_gy.parquet",
+      "sha256": "491e0b1b978405a8242da262c0d7a85ff5bdb333a02654bb6217b8ad8f7f0e17",
+      "bytes": 4566
+    },
+    {
+      "path": "nextbike_hb.parquet",
+      "sha256": "235c674864e1adfea8d806c8793b47c67d5b6d8b3f65840838d3d33dc7fee96a",
+      "bytes": 6583
+    },
+    {
+      "path": "nextbike_hd.parquet",
+      "sha256": "86aca27c4d6993e723b317c031f226903a7395e3ceb1c28fe15c8609a27ff6e2",
+      "bytes": 9676
+    },
+    {
+      "path": "nextbike_hf.parquet",
+      "sha256": "8c762e7bfaaa7bc2aa4d21b075a0a023f7e2c10d969ad8b21bcebdfd9a8164e5",
+      "bytes": 6169
+    },
+    {
+      "path": "nextbike_hr.parquet",
+      "sha256": "574a2572a82812afcb5481bafac3d0b94209a81f85a416382198a143ca8028f0",
+      "bytes": 4976
+    },
+    {
+      "path": "nextbike_ib.parquet",
+      "sha256": "c5bb2d37fd7300d03dfd8cf861c3c71ede85c5d9b57ffa3a9ff8b4a3bf2275d0",
+      "bytes": 6393
+    },
+    {
+      "path": "nextbike_ig.parquet",
+      "sha256": "770818779f1e0d3c9e7d9ac7bb5879a282a4866c93e3b6e921080cce2d75bfde",
+      "bytes": 4402
+    },
+    {
+      "path": "nextbike_ka.parquet",
+      "sha256": "a16acb15d5398fca4f4e07160cb830979933836810e7752c56a606c7035efee9",
+      "bytes": 5727
+    },
+    {
+      "path": "nextbike_kc.parquet",
+      "sha256": "d4e80f7834deaab1926732fcd18d2c27d980d7e5d818d70309eb310a51fcf3c1",
+      "bytes": 4633
+    },
+    {
+      "path": "nextbike_kg.parquet",
+      "sha256": "7d5646e5ffb50460e4e8fe3c2c37753a0e2033624b9482760d5885932a6852b6",
+      "bytes": 11657
+    },
+    {
+      "path": "nextbike_kk.parquet",
+      "sha256": "3442bc1ecbf084899f64d409df8a53a52aef2246dd91d4b3db02be61fa4cb470",
+      "bytes": 5231
+    },
+    {
+      "path": "nextbike_ko.parquet",
+      "sha256": "5f8c17969609aab7904e8d62ec259e40ff8563fa11071c08962e6e44d75a3425",
+      "bytes": 4947
+    },
+    {
+      "path": "nextbike_ky.parquet",
+      "sha256": "6770f0344b921f1eb2e429e6915b1d80d1a6da1fabb515b86518e835b1f81e8e",
+      "bytes": 4641
+    },
+    {
+      "path": "nextbike_la.parquet",
+      "sha256": "bee360aa36e64d7d1ac7257fcfc9707ac4b7cb4b6e2cbf7edaf35c3fd358c8d9",
+      "bytes": 10805
+    },
+    {
+      "path": "nextbike_lb.parquet",
+      "sha256": "a731c4f9607d441c7915f5ff6e3322b1b508d6917da262c0707ce88dee632b94",
+      "bytes": 4554
+    },
+    {
+      "path": "nextbike_lc.parquet",
+      "sha256": "14220fcf4aac91a4e0f313eb0f0c248a9de9cf82806c172c972b4d8225570b6c",
+      "bytes": 4866
+    },
+    {
+      "path": "nextbike_le.parquet",
+      "sha256": "3e833daa54fbc2d1ab4a9dc30f6009fac483014fc92c5ee6d566fbe16253ca31",
+      "bytes": 8566
+    },
+    {
+      "path": "nextbike_lo.parquet",
+      "sha256": "7c7762e85c40a54c389a94f737f01a27408092f198621c7c144408dc03f21090",
+      "bytes": 4857
+    },
+    {
+      "path": "nextbike_ls.parquet",
+      "sha256": "d80845cd4edd7f617d715364c81e909ea31a8bc1046a7bdc6b1c262a212c1963",
+      "bytes": 4767
+    },
+    {
+      "path": "nextbike_lv.parquet",
+      "sha256": "106564454f43646ca1f9aaf594404753f35cb0ad71918d9e9c359a88d3e42c5b",
+      "bytes": 5545
+    },
+    {
+      "path": "nextbike_ml.parquet",
+      "sha256": "1b01edf955238087572dda2e7d83423fb7c4603d141e10ef235229a87a17a4eb",
+      "bytes": 22914
+    },
+    {
+      "path": "nextbike_mr.parquet",
+      "sha256": "657c9cd3f9ee81c078ffe0c54899174ebe2928e90db08d4ff572d6d4b33bf830",
+      "bytes": 4763
+    },
+    {
+      "path": "nextbike_ms.parquet",
+      "sha256": "68db8ce726018d78b2328ef1a69a5022bac27c26131d3e8dd1d1552f6bf5cc60",
+      "bytes": 5846
+    },
+    {
+      "path": "nextbike_mx.parquet",
+      "sha256": "d9454c9c02f9f30f4804d9054a81419c9343f4a6ec96216a41902552b6e9ff6f",
+      "bytes": 6842
+    },
+    {
+      "path": "nextbike_na.parquet",
+      "sha256": "3dc8393fddb294105b99b706ab4f1ea960198f35484d0ecc9e1b1fd17e369020",
+      "bytes": 4945
+    },
+    {
+      "path": "nextbike_nc.parquet",
+      "sha256": "1826bdc80382938a6070af5aa39424090de990d22e6c26f56eceae58987b97f8",
+      "bytes": 5100
+    },
+    {
+      "path": "nextbike_nd.parquet",
+      "sha256": "481535e243913afa856b28af85f2dfa37f23e5758f5e9d841eac3dcaca486fef",
+      "bytes": 4571
+    },
+    {
+      "path": "nextbike_ne.parquet",
+      "sha256": "703bc4e7ed79ebaef0e20288c05f18ff9abedd2454f3c1a87c661606bd642a5e",
+      "bytes": 4825
+    },
+    {
+      "path": "nextbike_ng.parquet",
+      "sha256": "a2adb252e609d31b1e6558290a0655f87b047b8c72770f2315ae42ce73192ce2",
+      "bytes": 6149
+    },
+    {
+      "path": "nextbike_nh.parquet",
+      "sha256": "444613e6c152e954efa85bb97d90b81b99ab0eb35d616a424f21f4ad2aaba2e1",
+      "bytes": 5580
+    },
+    {
+      "path": "nextbike_ni.parquet",
+      "sha256": "6bdcc14ed2854a17551bbfb84887037bde916981881d9574b63ca6e38404578c",
+      "bytes": 5467
+    },
+    {
+      "path": "nextbike_nm.parquet",
+      "sha256": "918ce8241ee58805f2c5e375ade8e0db702eaf44aa6a952455aec0a79f5137bc",
+      "bytes": 5795
+    },
+    {
+      "path": "nextbike_nn.parquet",
+      "sha256": "16f3a1c72f1e7b7580535b856af6841d2a82fbe3aa1167a1051fdeb8cea4840e",
+      "bytes": 4943
+    },
+    {
+      "path": "nextbike_nr.parquet",
+      "sha256": "adf8272ed3aaea271bfb446a6aa4bc3e050d6412d2d62e384cbf742747801703",
+      "bytes": 6272
+    },
+    {
+      "path": "nextbike_ns.parquet",
+      "sha256": "e82ffa4f0f17f6361568cd263a4690c7282ef0440338ac0efe2c1fc8161eaf66",
+      "bytes": 4876
+    },
+    {
+      "path": "nextbike_nt.parquet",
+      "sha256": "b5815b1455d10838d207514a005a8f4454ab802a087b8dbadeb965d8d865f910",
+      "bytes": 4956
+    },
+    {
+      "path": "nextbike_ol.parquet",
+      "sha256": "dc52cc8abe755563f2370cf2e6f474b640d77b9ddc20c80c7dcf00d10bf49d7f",
+      "bytes": 4425
+    },
+    {
+      "path": "nextbike_or.parquet",
+      "sha256": "9f037d6fcd5d950635745f3ee5dc036e1acd45b4e1a1e18148e52e9c569dd2ab",
+      "bytes": 4795
+    },
+    {
+      "path": "nextbike_ot.parquet",
+      "sha256": "817cc2f4918609b1b1dfaaed28b17e0b1b7f3ca0eeb12e1ec5e8f1609b4b4352",
+      "bytes": 4810
+    },
+    {
+      "path": "nextbike_pi.parquet",
+      "sha256": "36420205d535ec9db1c229ebf5f21752fdc196c02e7cacb36b8af88c9bf485a4",
+      "bytes": 4563
+    },
+    {
+      "path": "nextbike_pj.parquet",
+      "sha256": "0b64a293d5ab067eb08c9d5894b6a01cbe14acdf7605c504018e5f21785692a6",
+      "bytes": 5185
+    },
+    {
+      "path": "nextbike_pl.parquet",
+      "sha256": "f93549fcf86f2523a9cbd37224e71cb4826be8cb341ba45aff1425494958b60c",
+      "bytes": 11378
+    },
+    {
+      "path": "nextbike_pm.parquet",
+      "sha256": "49230b7785e08c16698f14d497f76e652c5fa1da342c49726074d047d3adee3b",
+      "bytes": 5426
+    },
+    {
+      "path": "nextbike_pn.parquet",
+      "sha256": "1d21cd11414907424613d4c62f2fa008ec0929973cb545a5a957680bda724768",
+      "bytes": 4715
+    },
+    {
+      "path": "nextbike_po.parquet",
+      "sha256": "465366db166e7e628aca6b23712dc812a3298d1d64eb795380ff010c29a6b70a",
+      "bytes": 4700
+    },
+    {
+      "path": "nextbike_ps.parquet",
+      "sha256": "e1ee770aacf7623b043eae30a7193642ea4519a6e56f2847061f548ad56ed5bd",
+      "bytes": 4919
+    },
+    {
+      "path": "nextbike_py.parquet",
+      "sha256": "a322c72b52a357a450dc5585376357b37b84811047a9e88aa2fdc3b5727fd1de",
+      "bytes": 4419
+    },
+    {
+      "path": "nextbike_rc.parquet",
+      "sha256": "a84752a4102c4879cc51341eaef8845e6c5c24d1d6b3bf11be7caab8ad4d3a02",
+      "bytes": 4402
+    },
+    {
+      "path": "nextbike_re.parquet",
+      "sha256": "225657530c0752c26856dc50c9d14db773d32443b534d63bd62d9ba36bc613c9",
+      "bytes": 8625
+    },
+    {
+      "path": "nextbike_rh.parquet",
+      "sha256": "f154e652342f560e4c932b1ad7e6a72fa262e88c627a8208fc1dcb56da9c106f",
+      "bytes": 4828
+    },
+    {
+      "path": "nextbike_rl.parquet",
+      "sha256": "d24a55aaff2920de79a4c102693967df18f260e0f0af6b103dc01263b72420a7",
+      "bytes": 4813
+    },
+    {
+      "path": "nextbike_rr.parquet",
+      "sha256": "bc26db3278c3a2f910966a45e0ab00f0f6917a2b2b0b4a0e6eb570efb07ef192",
+      "bytes": 4600
+    },
+    {
+      "path": "nextbike_rt.parquet",
+      "sha256": "c4d282737e9f548d12b78e5b9064146ad377b164ffc5624bac6bef1733f0a697",
+      "bytes": 4492
+    },
+    {
+      "path": "nextbike_rv.parquet",
+      "sha256": "214e7896751f75df81c41a8f669a543e59ac3bbc25c44674321d7d12aafba401",
+      "bytes": 4530
+    },
+    {
+      "path": "nextbike_rw.parquet",
+      "sha256": "fbfabc86426523819d78b18c04ec467eb7531684512b9e611fdbee4d2caa7ae9",
+      "bytes": 4907
+    },
+    {
+      "path": "nextbike_sb.parquet",
+      "sha256": "80d8ba8ab570edcd0f20000736cdcb265ececfd142c24ce55e694ac79d379a4c",
+      "bytes": 4537
+    },
+    {
+      "path": "nextbike_se.parquet",
+      "sha256": "18211e2f4755ab29f43ab58acefe571b9c2bc5a79134b4e9ab6b219d665ba04e",
+      "bytes": 4354
+    },
+    {
+      "path": "nextbike_sg.parquet",
+      "sha256": "dcf0dc2b44108cc1b652cb08fc860911637f6c561a38a4cb12d2dc0dac960474",
+      "bytes": 4447
+    },
+    {
+      "path": "nextbike_si.parquet",
+      "sha256": "ca562e07a3507f572cbbde7f56aae5775c4aedf580663e9935da41086e482253",
+      "bytes": 5864
+    },
+    {
+      "path": "nextbike_sl.parquet",
+      "sha256": "f89b271c6cff3dce1403d6d40b6bd16344aa5be0a275e5895805c52ec93c85b6",
+      "bytes": 5756
+    },
+    {
+      "path": "nextbike_sn.parquet",
+      "sha256": "a5b5d2a9bbaae20b42fdc2aad11918a7a26a241bc0547b01e061dcccd26ccdea",
+      "bytes": 5794
+    },
+    {
+      "path": "nextbike_sv.parquet",
+      "sha256": "7cabd1f1d9ec708263b166ca1c8d8a2531d244c1c2d5968ce0c09800ad738dc6",
+      "bytes": 4400
+    },
+    {
+      "path": "nextbike_tb.parquet",
+      "sha256": "516318fe5c9159d2187e309065e89b2fbad71bfbf83ba9ec4fcdeeb58178a987",
+      "bytes": 4436
+    },
+    {
+      "path": "nextbike_td.parquet",
+      "sha256": "405e47b17fcde9efb6d1926baecc381f4b090fe083d058548818ca08f9b299c2",
+      "bytes": 5192
+    },
+    {
+      "path": "nextbike_te.parquet",
+      "sha256": "6894b42176b61091fe3663090a56ebfe59163b1557e8d5f306bcee2d7e8c3bbd",
+      "bytes": 12785
+    },
+    {
+      "path": "nextbike_tf.parquet",
+      "sha256": "71e857d5bbb1c1ae15dfad96292a6b6abe94b53d6699163349759f1874f4752b",
+      "bytes": 5081
+    },
+    {
+      "path": "nextbike_tg.parquet",
+      "sha256": "b14afae0055ad702de11867137161987c05351b9a4027dc0dc2be867b5a7c7b3",
+      "bytes": 46542
+    },
+    {
+      "path": "nextbike_ti.parquet",
+      "sha256": "c7f695e198e26b3195066b1068cf2ff8eafca2a825df9562b92f2eec467b95d8",
+      "bytes": 6167
+    },
+    {
+      "path": "nextbike_tj.parquet",
+      "sha256": "72e5a217c8427779aa8a9d33bb3b19ff10973ec96e93b16956a11cbce8ccc7c9",
+      "bytes": 5998
+    },
+    {
+      "path": "nextbike_tk.parquet",
+      "sha256": "beb807bc0023f4c358ffc10c617c4d9b475c7201f21896bc1405b9d23d217c75",
+      "bytes": 6785
+    },
+    {
+      "path": "nextbike_tl.parquet",
+      "sha256": "40f58020a40b513707a3b82e1561788ea922aeb24c0b0e18281b5d0adb9d7236",
+      "bytes": 8310
+    },
+    {
+      "path": "nextbike_tn.parquet",
+      "sha256": "ac4362d8bf16a5aa92c03ce2b67e8a1b082d6312d8f017ba297e26bf81006a47",
+      "bytes": 4866
+    },
+    {
+      "path": "nextbike_to.parquet",
+      "sha256": "6731e7006ca4481c364ef6e0b0679d5240141272259fcd6275b91e218674268f",
+      "bytes": 15536
+    },
+    {
+      "path": "nextbike_tq.parquet",
+      "sha256": "306023f2a50903c53f278a234db82d771dbf54fa69cc3ab6aec333b765fccf20",
+      "bytes": 8391
+    },
+    {
+      "path": "nextbike_ts.parquet",
+      "sha256": "8ec766a2d288ff6cb445e3248640e95eeaca064b20b0a96afaabecfe40693465",
+      "bytes": 7527
+    },
+    {
+      "path": "nextbike_tt.parquet",
+      "sha256": "a26c5161f048d9cda9620e98a52447441c98a153aa7327904af7da85f73cf744",
+      "bytes": 5661
+    },
+    {
+      "path": "nextbike_tu.parquet",
+      "sha256": "c6432bafae76dad3f15c5540f2c12660acd412dd7477ba37ac021fa042f9a5b7",
+      "bytes": 5457
+    },
+    {
+      "path": "nextbike_tv.parquet",
+      "sha256": "1af1662533407b5fef9e0a59c0653c07d8e1baa883a6685a1557180ab0501d11",
+      "bytes": 7186
+    },
+    {
+      "path": "nextbike_tw.parquet",
+      "sha256": "05d434fbfafe51127736a47ea09e6553b10e680fcbc892a6dcb5d38bd584de71",
+      "bytes": 5815
+    },
+    {
+      "path": "nextbike_tx.parquet",
+      "sha256": "ef3d4ed412c934de470b5b0784b79ea690f13d2c5934ed4ff60c7d475e2445b3",
+      "bytes": 4874
+    },
+    {
+      "path": "nextbike_ty.parquet",
+      "sha256": "cb577b5ce269e266fc534b9f27c8ad66df6e741387d98beb615e422a35066cc3",
+      "bytes": 5935
+    },
+    {
+      "path": "nextbike_ud.parquet",
+      "sha256": "23e5b69060c49f7c3d21462f2bc44bc9e3d61f9436238872c891cb9996404826",
+      "bytes": 5392
+    },
+    {
+      "path": "nextbike_uf.parquet",
+      "sha256": "2f4e2bba9628756a4a9beda249670dc6b4a3a5a16707ff174cfb3115421d6fe3",
+      "bytes": 4528
+    },
+    {
+      "path": "nextbike_ug.parquet",
+      "sha256": "d1d432e741da889981e8f42b3b9e20f77acc893f20cb68203c3b004f04c7099d",
+      "bytes": 5101
+    },
+    {
+      "path": "nextbike_uk.parquet",
+      "sha256": "aea939c5d59a1ea39b28460280b22eb468b6e99a7528ce8d0fbaf6019d43fcca",
+      "bytes": 4672
+    },
+    {
+      "path": "nextbike_uo.parquet",
+      "sha256": "bc9e93495ed955b878bda1b03f497e75f3f7f8bffe1ea666f8f99cf5fc456cd6",
+      "bytes": 5495
+    },
+    {
+      "path": "nextbike_ur.parquet",
+      "sha256": "3ba1adfd073b94de7f9a6bbabcd915aca8213c1f98d3fc1f72011c74a6bd0e2c",
+      "bytes": 7160
+    },
+    {
+      "path": "nextbike_uu.parquet",
+      "sha256": "521ee38ab65287eaca8fbad1ae020c06af3155b2be9e811de613771d7ef2d3db",
+      "bytes": 4607
+    },
+    {
+      "path": "nextbike_vm.parquet",
+      "sha256": "9030ee64d114b0a31df7e276c43beca6eddb83992d3d1f04ea1f16771b8bcd53",
+      "bytes": 6753
+    },
+    {
+      "path": "nextbike_vn.parquet",
+      "sha256": "70864e676493bdd07b8721daf16cf9c577e3ea818ddfda1017fe81df6db71bf0",
+      "bytes": 14720
+    },
+    {
+      "path": "nextbike_vr.parquet",
+      "sha256": "2de0ae90fb21e16448a1e416bc8cc7e733b38aa618915d039abe417ae1d71a33",
+      "bytes": 5071
+    },
+    {
+      "path": "nextbike_vt.parquet",
+      "sha256": "7e31d4b1ba49117efb5076b64c00f1f825863b820e5264f24b4ff92adb8ccce4",
+      "bytes": 4940
+    },
+    {
+      "path": "nextbike_vu.parquet",
+      "sha256": "3618e5d5fdf98597655e258ade85d4c1c1379a99df4ca4fe0592e64d1ee4f156",
+      "bytes": 4427
+    },
+    {
+      "path": "nextbike_vw.parquet",
+      "sha256": "fc31ba143e7bfcd7db63da018e26c97a2fd687983c353c19ef6c8a87e7ed1e3b",
+      "bytes": 13140
+    },
+    {
+      "path": "nextbike_wa.parquet",
+      "sha256": "6b52e5ab3832a37974d5e65a530c86205cc4832552f6b993b805841052e39f6d",
+      "bytes": 12419
+    },
+    {
+      "path": "nextbike_wd.parquet",
+      "sha256": "29abeba882fd33d7c5efc319c151d37af04d9a397a69cc2ee0edfa347f9c7a5b",
+      "bytes": 4951
+    },
+    {
+      "path": "nextbike_we.parquet",
+      "sha256": "f8dd1b8e1c304d0a54eefb7a4edf94770f516c39b1b87da0c7adadc48a516402",
+      "bytes": 4385
+    },
+    {
+      "path": "nextbike_wf.parquet",
+      "sha256": "20d25f69dfe20965a74ca4fc82fdfd58d869ad1914d957e1d66f2c4a5a3c070b",
+      "bytes": 5603
+    },
+    {
+      "path": "nextbike_wh.parquet",
+      "sha256": "8650ba229c795a067500d9c41542e76d4d6fbc9c237455798be8a16ce863e04a",
+      "bytes": 4354
+    },
+    {
+      "path": "nextbike_wn.parquet",
+      "sha256": "83e8dcd335e912badf9053e84dba653679bdd113842c0d7bdd3cf9a8b58695d6",
+      "bytes": 5313
+    },
+    {
+      "path": "nextbike_wp.parquet",
+      "sha256": "dec59f5d77d14f631a0ceeb31ac7bc88653a8d94d9ddf6ac09dbce4d7acc8c3a",
+      "bytes": 4402
+    },
+    {
+      "path": "nextbike_wr.parquet",
+      "sha256": "20f4639b4662bc11f55294e1c9faafadd420aa381948e0f178d44d24bc5006ea",
+      "bytes": 11681
+    },
+    {
+      "path": "nextbike_xa.parquet",
+      "sha256": "da2e909666cfa765b2e55eb7992f928d7cc3d717df3581743584ff1772a1bbe6",
+      "bytes": 6021
+    },
+    {
+      "path": "nextbike_xb.parquet",
+      "sha256": "37c524515585b1ed147897bd9a0a7c0a34329b790e92abef2755a1761a3d2079",
+      "bytes": 5386
+    },
+    {
+      "path": "nextbike_xc.parquet",
+      "sha256": "9c895f07574d527ead23e48432edddfc733ce593733d82d1b29d259e098c9255",
+      "bytes": 4783
+    },
+    {
+      "path": "nextbike_zc.parquet",
+      "sha256": "c8c656e5728513b53b4e4a54b6332bdb3678817ba649326041271b79738bbc75",
+      "bytes": 4353
+    },
+    {
+      "path": "nextbike_zd.parquet",
+      "sha256": "a78bc3ab70ebf7b128d9f6ad424d72718238f381a915d7ef1042e122dc7804ea",
+      "bytes": 4595
+    },
+    {
+      "path": "nextbike_zg.parquet",
+      "sha256": "9acf8f58c43892001eccad5ca51f1084e9cf39b438a8ee6356b9b832907744a3",
+      "bytes": 8359
+    },
+    {
+      "path": "nextbike_zs.parquet",
+      "sha256": "94aee824f42daac7bb77a01c68802acc1e8d58bab292623487136894b4cc5102",
+      "bytes": 5350
+    },
+    {
+      "path": "nextbike_zy.parquet",
+      "sha256": "f05509545a204dffdc2500ab6a24572512540c7d151502d64aeb4b0e26e1768c",
+      "bytes": 4541
+    },
+    {
+      "path": "nextbike_zz.parquet",
+      "sha256": "85f63317f184767b0e51ac7a4567c01351e6f7bf3f34d6467fbb5c448b7092bb",
+      "bytes": 29765
+    },
+    {
+      "path": "ns_ov_fiets.parquet",
+      "sha256": "cd72c1654816410f593289705266d5124904e9c14d491d65439a89ad5bc65158",
+      "bytes": 11590
+    },
+    {
+      "path": "oberschwabenmobil.parquet",
+      "sha256": "07eabfe57d9b46ad89161793b528046e5337daa06b485e94aba0e3b55a63169a",
+      "bytes": 4825
+    },
+    {
+      "path": "oekostadt_renningen.parquet",
+      "sha256": "a72ad3ec8033162888c6c1bb4bbacf5b44377b073396fc6b4e04cfd9ecf53576",
+      "bytes": 5330
+    },
+    {
+      "path": "ogalo.parquet",
+      "sha256": "35a2329cc882934fdb5f51b22cecee4c191c845d678ae988dc374bb257e11775",
+      "bytes": 5488
+    },
+    {
+      "path": "pbsn.parquet",
+      "sha256": "2ca5df29ba3a7b3ff603b526413760dc2be1284a274ae00bcbb9cb8cab732d45",
+      "bytes": 4642
+    },
+    {
+      "path": "peacehealth_rides.parquet",
+      "sha256": "4f97b0d60ac6b2fd5fa8ed5f4e63ca79b04a6d6cb6f6ef2ddc29b410a4ca11e3",
+      "bytes": 7926
+    },
+    {
+      "path": "perivelo.parquet",
+      "sha256": "1aedea5ef409c1715f9e69631ea154cbd00e6511ca194da1988e7c07079412b6",
+      "bytes": 4560
+    },
+    {
+      "path": "petitesreines.parquet",
+      "sha256": "5db1fadb7c7cf7ec15c5e5f6f248b4ed26137351cc11e1107d73307d852a2ecd",
+      "bytes": 5169
+    },
+    {
+      "path": "pickebike_aubonne.parquet",
+      "sha256": "14cdb54953178df17516fa19f0b3ddf58129e961c540551751c02ca6365ddc7b",
+      "bytes": 4674
+    },
+    {
+      "path": "pickebike_basel.parquet",
+      "sha256": "ea85892348edb5f76128879211bbae0df47c56f19cc747e4218655e9cf6d8d5c",
+      "bytes": 6282
+    },
+    {
+      "path": "pickebike_fribourg.parquet",
+      "sha256": "2417d1b0153dc3b91d74c64bdebc04c0ae2bf3b52e944007f8e025695e016f0f",
+      "bytes": 5087
+    },
+    {
+      "path": "pittsburgh.parquet",
+      "sha256": "6c7731e68591a9af957c4f6164fa7b3549c2a5a20032a3e10017f72635d96bec",
+      "bytes": 5756
+    },
+    {
+      "path": "pony_Angers.parquet",
+      "sha256": "cb1651497149bcbe44f0e9be79dc329a3fbe70696c810ac6d0cafd2a7ec46c3b",
+      "bytes": 55977
+    },
+    {
+      "path": "pony_Basque_Country.parquet",
+      "sha256": "4219054c9869996d49922c17f28d1887fbd625efe0cdc2c49844cd25842d6f48",
+      "bytes": 27038
+    },
+    {
+      "path": "pony_Beauvais.parquet",
+      "sha256": "9da388601783b6bd649f0ce19f25fe191d8e06704b6208e394f207a9ecd4eef5",
+      "bytes": 12449
+    },
+    {
+      "path": "pony_Bourges.parquet",
+      "sha256": "a98108347dd2ab03d1a2c605aeb83c734160bcbe752432bd1c64a660915b0ba0",
+      "bytes": 15316
+    },
+    {
+      "path": "pony_Evry.parquet",
+      "sha256": "e2a889df4551b424d664416598a61481939446875c85f6a2b111411a3b01c0b0",
+      "bytes": 11106
+    },
+    {
+      "path": "pony_Herouville.parquet",
+      "sha256": "8159177f8b058acbd5fbcb1974c074e22b0f4fdfe1e75918720d8206b6ffef9c",
+      "bytes": 10221
+    },
+    {
+      "path": "pony_Limoges.parquet",
+      "sha256": "ffb1c9b2972d391f04ce91c1aeec3747c878b6049766f40920e53215a4b26131",
+      "bytes": 17531
+    },
+    {
+      "path": "pony_Lorient.parquet",
+      "sha256": "7c611e75e06e426138849160ebd91a6579960187dc7738e23b0ce6693de93ec6",
+      "bytes": 12168
+    },
+    {
+      "path": "pony_Nice.parquet",
+      "sha256": "2960da420d43a409e389c6fde14da60586893efa96d4e2139899af67594990ef",
+      "bytes": 22904
+    },
+    {
+      "path": "pony_Perpignan.parquet",
+      "sha256": "350d48c62cfb44b86875f0fe4498c75a9a011c0506f6cce7c2dd6fb534eae50b",
+      "bytes": 45524
+    },
+    {
+      "path": "pony_bordeaux.parquet",
+      "sha256": "cf98ccb210a6d4409f2e63f3bb5f43a235deeec5e6b731c104de9da13a361e2a",
+      "bytes": 108634
+    },
+    {
+      "path": "pony_poitiers.parquet",
+      "sha256": "472f93eb1f36fead21bd934bf5f7c5421fecf923f86ac2c1f2d5f7b48a70872e",
+      "bytes": 20415
+    },
+    {
+      "path": "quickrent.ch.parquet",
+      "sha256": "bacc632b7a04a5d55393dc001eec88864305dfd8b8d0d47f0c0ae4e8ee9c50a5",
+      "bytes": 7497
+    },
+    {
+      "path": "reddy_bikeshare.parquet",
+      "sha256": "5c21cd6bc68e4e829db521db6a54c10a1bf4eef9853b4d23c2e95e7b0da8795b",
+      "bytes": 7404
+    },
+    {
+      "path": "regiorad_stuttgart.parquet",
+      "sha256": "46b8318e316d8722cabbb3340fceb49638285b3bd5898b2c0b21236c495f4c8e",
+      "bytes": 16551
+    },
+    {
+      "path": "rhoule.parquet",
+      "sha256": "0f2fbe28801b326b9ec6dda2f9a7f1d787b0e7e64d8b6624289eaf3c7b476c4b",
+      "bytes": 4503
+    },
+    {
+      "path": "rivas.parquet",
+      "sha256": "2bcd4d3d6ae3a2b5d5efd147ff28081d743b09fd121c16278a84beb849b99978",
+      "bytes": 5362
+    },
+    {
+      "path": "rivi_bike.parquet",
+      "sha256": "5ba9ea436e808437dde1e32d7a68e5809577ecdf0fab4bf5a2b123d4549cff7c",
+      "bytes": 4496
+    },
+    {
+      "path": "rlvlib.parquet",
+      "sha256": "494f365c3dfb2797e5f46cb8740cea834b3af17d15e07b9ac6d4479fd5450185",
+      "bytes": 5093
+    },
+    {
+      "path": "saguenay_bike.parquet",
+      "sha256": "22d876245c5c8d734ad824f7179ff7f0788ee248988978dcc233dd540d138eed",
+      "bytes": 4792
+    },
+    {
+      "path": "saintbrieuc.parquet",
+      "sha256": "55595b24163748ef3bbef74b2ca4e91ab5c34eea5dd3bd11811d2215021b83ad",
+      "bytes": 4861
+    },
+    {
+      "path": "sansebastian.parquet",
+      "sha256": "aaeb3d873637a29a4b1803fbbdb5db768ffa4929589681e3742401192bea580d",
+      "bytes": 6105
+    },
+    {
+      "path": "santana_bikecity.parquet",
+      "sha256": "ff3e5c2b173576f2cf721fedfb34974bc989a6fbf8f6ea09573497a050179978",
+      "bytes": 4568
+    },
+    {
+      "path": "sbu.parquet",
+      "sha256": "d438010080fc701b92242c098536b4e5ca583124e5cb338195f9b3ac9fdad255",
+      "bytes": 4648
+    },
+    {
+      "path": "seefahrer_ecarsharing.parquet",
+      "sha256": "2e28117e790691bb15b6ce2e5c27f54f9e88c3b7797f46b7aa5806f5dc83f852",
+      "bytes": 4853
+    },
+    {
+      "path": "semo.parquet",
+      "sha256": "d4c7f7bc954d7c2cdc221aa337cda420e6bd7c5673a983835ea3b634551f4447",
+      "bytes": 6198
+    },
+    {
+      "path": "seville.parquet",
+      "sha256": "0556160a8eeaaff67c83a6ab22dfec5db8a4c74f67e38d488f4825de068020b7",
+      "bytes": 10350
+    },
+    {
+      "path": "share_birrer_ch.parquet",
+      "sha256": "7b3072993965c7a14b07282f2becdf123d90dfa34494e7f4c8028f2dcbc14703",
+      "bytes": 4915
+    },
+    {
+      "path": "sharedmobility.ch.parquet",
+      "sha256": "ca90bff0291663dcab5f277c871b6b1283a15a818c0c06da047f1ee1403574b5",
+      "bytes": 454620
+    },
+    {
+      "path": "sibiu_bikecity.parquet",
+      "sha256": "8dc072dd2bf89e9c35ed4469ff46c5c052fc114b8006a2fe11de99796fd7e328",
+      "bytes": 5762
+    },
+    {
+      "path": "sobi_hamilton.parquet",
+      "sha256": "b5bde3a0004474434b1b0baf6e3575f94306a743c8b1cc73d51e7085d4646ad9",
+      "bytes": 8700
+    },
+    {
+      "path": "stadtmobil_karlsruhe.parquet",
+      "sha256": "a72658d3223b62b71f44ea68cd61c7f7cfc23da7038c50ed07ce13d8c55b24ba",
+      "bytes": 19569
+    },
+    {
+      "path": "stadtmobil_rhein-neckar.parquet",
+      "sha256": "99ab0e18241e198eeab93a8f677582d4b7832c1418c5aff4ff5568e08efa93b9",
+      "bytes": 16529
+    },
+    {
+      "path": "stadtmobil_stuttgart.parquet",
+      "sha256": "dbd932ac461d4390f5adc3de6737ff86eb7edc090fdb7a1630042f1c1df83d2a",
+      "bytes": 13949
+    },
+    {
+      "path": "stadtwerk_tauberfranken.parquet",
+      "sha256": "8cd1fa08619fdca51740eb10a6e52b94eea269b2533a99a73dbe88fd2de07ac7",
+      "bytes": 4922
+    },
+    {
+      "path": "stadtwerke_wertheim.parquet",
+      "sha256": "10af40e87d87a36345bd8a3e5d14b01e52a4321be1b90d1817e41edcb8283498",
+      "bytes": 4535
+    },
+    {
+      "path": "swabi.parquet",
+      "sha256": "8eb55c9d70c425b419fcdbbc4219649c304382cc52bccf3fa2b6de89f0177938",
+      "bytes": 19366
+    },
+    {
+      "path": "tanlib.parquet",
+      "sha256": "e412513f0f7031a6fe0df5dcf75563896302e98e40e02b5e9b1e11ce92f1dff5",
+      "bytes": 7017
+    },
+    {
+      "path": "targumures.parquet",
+      "sha256": "ea76e30dc1316cf74f738664ee8bfee357d2a08cfa993b61eeb0a43ddccd484d",
+      "bytes": 4481
+    },
+    {
+      "path": "teilauto_biberach.parquet",
+      "sha256": "9a290cdac03edc5a42b057c6cd26d62368c7a11b9d53d5bcc4500c5fd97bab76",
+      "bytes": 4728
+    },
+    {
+      "path": "teilauto_neckar-alb.parquet",
+      "sha256": "5df0a0e96ba7e61d0b2c10b224ba2fc862deb1a8ac008d173f9229821367a939",
+      "bytes": 9399
+    },
+    {
+      "path": "teilauto_schwaebisch_hall.parquet",
+      "sha256": "35c730ef925b2490bb9ea4706a0e07a9f185a494a89621e60541a56bbdd051bf",
+      "bytes": 4782
+    },
+    {
+      "path": "tempovelo.parquet",
+      "sha256": "564c10efbcd8adef64574877aa3f658954276e59e03d54d296dd7f9142ea3f83",
+      "bytes": 5153
+    },
+    {
+      "path": "ti_velo.parquet",
+      "sha256": "cb517a47ee4b709bceb909529e2dd572a985c73fe98ae92e1e2d47b977214fb1",
+      "bytes": 4929
+    },
+    {
+      "path": "tlpmobilites.parquet",
+      "sha256": "8abb113b8fafc47d7bc8f179d61df8d5fa0c06a1f2807249b7f22e94d9747ffc",
+      "bytes": 5094
+    },
+    {
+      "path": "toulouse.parquet",
+      "sha256": "d1c7753163d304325c85642b57864f7fd047b5eb353f545fd6ea0236b0195ddf",
+      "bytes": 15283
+    },
+    {
+      "path": "toyama.parquet",
+      "sha256": "80ec81ae7d40b998af822ed90ade0c6570d3647b07d4262dac007c3c0ecd401f",
+      "bytes": 4980
+    },
+    {
+      "path": "tugo.parquet",
+      "sha256": "3b5b289e15a92b7598cd65be4d7c1599476380185a1b04a576260cbf2b9497e5",
+      "bytes": 5295
+    },
+    {
+      "path": "twisto_velolib_caen.parquet",
+      "sha256": "c4b76b30d0efd49a6efc282a64b57b42cb7198f8a355f18d0f7dcd9293357866",
+      "bytes": 6615
+    },
+    {
+      "path": "v_lille.parquet",
+      "sha256": "c7a912ba3eeef49502ce2806d496341a95034d9e24dcd0dff3276d4becf31a5f",
+      "bytes": 10927
+    },
+    {
+      "path": "valence.parquet",
+      "sha256": "072bdb1d50175da53a749f7bed57f30cd94a42f24b195fd7cb3356f11fb53f8a",
+      "bytes": 11213
+    },
+    {
+      "path": "valenciennes.parquet",
+      "sha256": "49bd47c1c6bb131fe1af399033635193438e8bfd40645e01b7e13d30b6dcfaee",
+      "bytes": 5368
+    },
+    {
+      "path": "velibeo.parquet",
+      "sha256": "34dbc5ba546061de9c9e57945e92d5f6519ef99dff19413c1f51f1047e5f9047",
+      "bytes": 5600
+    },
+    {
+      "path": "velivert_saint_etienne.parquet",
+      "sha256": "06b9e262d1410874098f75f05ae367d6c7c216083cf4220d83d30982e419ec79",
+      "bytes": 7197
+    },
+    {
+      "path": "velo-modalis.parquet",
+      "sha256": "3b39898a69aac301d70e0df61823e26d07325dda4dc29de116014db8ba430ca9",
+      "bytes": 4872
+    },
+    {
+      "path": "velo-tbm-bordeaux.parquet",
+      "sha256": "bccef2f34446ef2a91bf86696e049848db08dd0362f5edd502f5cc4480ba1d94",
+      "bytes": 10062
+    },
+    {
+      "path": "velo_modalis_angouleme.parquet",
+      "sha256": "7120d3ef6a26421527815d2ffb8c5d0500380c12a4fdea0aa6e1f10cc5ce7f24",
+      "bytes": 6106
+    },
+    {
+      "path": "velocite.parquet",
+      "sha256": "e965abc5645359b2ff3b76028f771327fddaf35010cfc101669ffd70a249eb6c",
+      "bytes": 5345
+    },
+    {
+      "path": "velodaqui.parquet",
+      "sha256": "771cef3d0f1bb145259e22c6839e72d0825d58759f9a1d834cdfc4bfb477fa41",
+      "bytes": 4701
+    },
+    {
+      "path": "velomagg_montpellier.parquet",
+      "sha256": "2af7c595fb5f43f1647d232b3ad7154c0a920b694e7ae8dba4412aa8e72ca494",
+      "bytes": 5632
+    },
+    {
+      "path": "velomoove_pompey.parquet",
+      "sha256": "6ce3fc0439117c1064359511a39da299aaf86f1884a67e7d3ce099db4717ee59",
+      "bytes": 5213
+    },
+    {
+      "path": "velonecy60minutes_annecy.parquet",
+      "sha256": "3dccfb3f904e53becf3923a57abaab3f00cd6907d0eecbc8aad66fadc04b434b",
+      "bytes": 6743
+    },
+    {
+      "path": "velopop.parquet",
+      "sha256": "87deea20f6a40dd3e6a90d53d2a182c8e3dab8945bbd624023d865c17346145b",
+      "bytes": 5210
+    },
+    {
+      "path": "velospot_ch.parquet",
+      "sha256": "fb7488eac6f9c9a98538f8a36fd6b7f543bb46bbb1039b21a8b9d58242a437fa",
+      "bytes": 46733
+    },
+    {
+      "path": "velozef.parquet",
+      "sha256": "a65ee4856a8d8f067bf38b4b861f59b8c5687d1e210cf29e7958f737c58e04b2",
+      "bytes": 5839
+    },
+    {
+      "path": "velyceo.parquet",
+      "sha256": "42f90ac938e128c7030d5049c56d72a59988f77a57bcc2fd57ee0d9afbebe89c",
+      "bytes": 4649
+    },
+    {
+      "path": "vernouvelo.parquet",
+      "sha256": "932f062f5c3cd74dd05b2678ea30d860dd26786ca8a0f6f72c30743a2ee275f4",
+      "bytes": 4482
+    },
+    {
+      "path": "verona-bike.parquet",
+      "sha256": "232f0cf10d5412a743b5f84598c65eb73b5069033b08cd06011afbe1a25ae149",
+      "bytes": 5314
+    },
+    {
+      "path": "vertuose.parquet",
+      "sha256": "7078653fd141f38ab9fa3fd7f4229c9f91e6b01da0825828177497ce48d816c5",
+      "bytes": 6168
+    },
+    {
+      "path": "viavelo.parquet",
+      "sha256": "7e6e1a582cbc796241b90411879eb140a9bec6ff134ebfcaa57657dcc223602f",
+      "bytes": 5462
+    },
+    {
+      "path": "vilnius.parquet",
+      "sha256": "2044dc6f8179b189e9929de803687992bc6d9a7de638a847a8fe38126821bb6f",
+      "bytes": 5197
+    },
+    {
+      "path": "vilvolt_epinal.parquet",
+      "sha256": "3493158934ec23b46cc8af55ff9fa4b9f10144b67da52ebff6f61961db5fad12",
+      "bytes": 8068
+    },
+    {
+      "path": "vivelo.parquet",
+      "sha256": "0f7bd49352598959aa3d00ae5e88157906459eda3b432d592bf1451363fbe6b5",
+      "bytes": 4644
+    },
+    {
+      "path": "voi_Antwerp.parquet",
+      "sha256": "ab318890dc064071a43029c53778d1a9985c1c2dc200e269cf1bd49066505f2b",
+      "bytes": 161077
+    },
+    {
+      "path": "voi_Grenoble.parquet",
+      "sha256": "85b94ba60929437f4fe92140724f1e796c9583391394946164cd8a2d66695f1a",
+      "bytes": 44567
+    },
+    {
+      "path": "voi_Le_Havre.parquet",
+      "sha256": "1dab30e0eec27e721431e754db881d123920a158c4da090214d142df74342df1",
+      "bytes": 30650
+    },
+    {
+      "path": "voi_Marseille.parquet",
+      "sha256": "c833fbb99f01903d85e941efc6d27a3e34761d53e01a1339d5608fb9660b1cd7",
+      "bytes": 128215
+    },
+    {
+      "path": "voi_Paris.parquet",
+      "sha256": "666f3ab01e3f373ce6b515e459b206471fe83ece7d77bde54710f62fd91709be",
+      "bytes": 735933
+    },
+    {
+      "path": "voi_SQY.parquet",
+      "sha256": "117e4d94050d10a867c07b9662eec8901b36546b87a447674af64201632f18ee",
+      "bytes": 26418
+    },
+    {
+      "path": "voi_V_L\u00f4nes.parquet",
+      "sha256": "e83d40f8bfe2f799c846926ce528d01e8889b2cb6d55ab57bf0f45a21aa392de",
+      "bytes": 8869
+    },
+    {
+      "path": "voi_ch.parquet",
+      "sha256": "693d604f1075d0a1de8cabf64656b4a58da03549f18156bfaf67342041f6b06d",
+      "bytes": 49218
+    },
+    {
+      "path": "voi_de.parquet",
+      "sha256": "40cb94ba0e8b64960ceba6251ff2dfa757c2ccb7c369c6e48a1aa797ec87e0f6",
+      "bytes": 25273
+    },
+    {
+      "path": "voiarendal.parquet",
+      "sha256": "3d356ae286aa6ad61203655a565ca5660ea726aeb6b007eb6694e6b4f3da060d",
+      "bytes": 9340
+    },
+    {
+      "path": "we_cycle.parquet",
+      "sha256": "e29330d4aa487bf6fbd3bc732ca71f76575769709f7035956cb658ad61298320",
+      "bytes": 6814
+    },
+    {
+      "path": "zaragoza.parquet",
+      "sha256": "e33713cdee0115881629a4a6d022eedad520f9640c370b56dab77be7f7c9673d",
+      "bytes": 11015
+    },
+    {
+      "path": "zebullo.parquet",
+      "sha256": "3f408ba687fd8000da4781ae91ca7f74e78b940b388151620436d5c04abb2d5b",
+      "bytes": 7441
+    },
+    {
+      "path": "zem_ch.parquet",
+      "sha256": "84f634eb6b61cd426cb4ad4c8b0dab6a0d850fec20915aca601421f9937b738b",
+      "bytes": 45151
+    },
+    {
+      "path": "zeo_bruchsal.parquet",
+      "sha256": "3e2dbb1c355c1a4dcfc64fe34e4452b0bce683a207973f6354877ecf596597e9",
+      "bytes": 7946
+    }
+  ],
+  "total_rows": 228294,
+  "system_ids": [
+    "5534922f6997f4d861ce1b33f2efce21a470c22",
+    "9",
+    "Augsburg",
+    "BIKI_valladolid",
+    "Bixi_MTL",
+    "BoltEU_Brussels",
+    "BoltEU_Liverpool",
+    "BoltEU_Washington DC",
+    "CKL",
+    "CVelo_FR_Clermont-Ferrand",
+    "Donkey-Prignitz",
+    "Ergolding",
+    "Kelheim",
+    "MEX",
+    "Mobibikes_CA_Vancouver",
+    "Neutraubling",
+    "Obertraubling",
+    "Optymo_Belfort_ALS",
+    "Optymo_FR_Belfort",
+    "Paris",
+    "acoruna",
+    "altervelo",
+    "amiens",
+    "auchveloc",
+    "aupa",
+    "auray-quiberon",
+    "austin",
+    "auto-en-velay",
+    "auxrmlevelo",
+    "avelo_quebec",
+    "bayern_komplett",
+    "bcycle_aventura",
+    "bcycle_bentonville",
+    "bcycle_bikelnk",
+    "bcycle_boulder",
+    "bcycle_bublr",
+    "bcycle_cincyredbike",
+    "bcycle_clemson",
+    "bcycle_desmoines",
+    "bcycle_elpaso",
+    "bcycle_greenbikeslc",
+    "bcycle_greenville",
+    "bcycle_heartland",
+    "bcycle_indego",
+    "bcycle_jacksoncounty",
+    "bcycle_lametro",
+    "bcycle_madison",
+    "bcycle_memphis",
+    "bcycle_nashville",
+    "bcycle_pacersbikeshare",
+    "bcycle_redding",
+    "bcycle_rtcbikeshare",
+    "bcycle_sanantonio",
+    "bcycle_santabarbara",
+    "bcycle_santacruz",
+    "bcycle_truckee",
+    "bcycle_valentine",
+    "beb",
+    "bergen-city-bike",
+    "beryl_bcp",
+    "beryl_belfast",
+    "beryl_bradford",
+    "beryl_brighton",
+    "beryl_canterbury",
+    "beryl_cornwall",
+    "beryl_eastleigh",
+    "beryl_greater_manchester",
+    "beryl_guildford",
+    "beryl_hackney_cargo_bike",
+    "beryl_hereford",
+    "beryl_hertsmere",
+    "beryl_isle_of_wight",
+    "beryl_leeds",
+    "beryl_norwich",
+    "beryl_plymouth",
+    "beryl_portsmouth",
+    "beryl_southampton",
+    "beryl_stevenage",
+    "beryl_watford",
+    "beryl_west_midlands",
+    "beryl_weymouth",
+    "beryl_wool",
+    "beryl_worcester",
+    "besancon",
+    "bicimad_madrid",
+    "bike_barcelona",
+    "bike_brasilia",
+    "bike_buenosaires",
+    "bike_chattanooga",
+    "bike_nordelta",
+    "bike_pe",
+    "bike_poa",
+    "bike_rio",
+    "bike_salvador",
+    "bike_sampa",
+    "bike_santiago",
+    "bike_share_hawaii",
+    "bike_share_toronto",
+    "biketobike",
+    "biketown_nike",
+    "biketown_pdx",
+    "bikr-lisbon",
+    "bilbao",
+    "bird-adeje",
+    "bird-ajaccio",
+    "bird-barcelona",
+    "bird-bordeaux",
+    "bird-cascais",
+    "bird-draguignan",
+    "bird-gap",
+    "bird-halifax",
+    "bird-larochesuryon",
+    "bird-laval",
+    "bird-marseille",
+    "bird-matosinhos",
+    "bird-millau",
+    "bird-montlucon",
+    "bird-ottawa",
+    "bird-porto",
+    "bird-sarreguemines",
+    "bird-schaffhausen",
+    "bird-vaughan",
+    "bird-vichy",
+    "bluebike",
+    "bluebikes",
+    "bogota_bike",
+    "bolt_basel",
+    "bolt_karlsruhe",
+    "bolt_stuttgart",
+    "bolt_zurich",
+    "bora_viseu",
+    "brennus_a_velo_sens",
+    "bruxelles",
+    "cabi",
+    "calais",
+    "calais-velos",
+    "calivelo",
+    "callabike",
+    "capcotentin",
+    "car_ship",
+    "careem_bike",
+    "carvelo2go_ch",
+    "cc_smartbike_antwerp",
+    "cergy",
+    "chantrerie",
+    "choletbus",
+    "citedia_services",
+    "citiz_alpes_loire",
+    "citiz_angers",
+    "citiz_bfc",
+    "citiz_developpement",
+    "citiz_gironde",
+    "citiz_grand_est",
+    "citiz_grand_poitiers",
+    "citiz_la_rochelle",
+    "citiz_lille_arras",
+    "citiz_metropole_lyon",
+    "citiz_nantes",
+    "citiz_occitanie",
+    "citiz_provence",
+    "citiz_rennes_metropole",
+    "clem-france",
+    "conficars_ulm",
+    "curitiba",
+    "cyclam",
+    "cyclolibre",
+    "cyclovis",
+    "dej_bikecity",
+    "docomo-cycle",
+    "docomo-cycle-tokyo",
+    "donkey_aalborg",
+    "donkey_aarhus",
+    "donkey_am",
+    "donkey_antwerp",
+    "donkey_ballerup",
+    "donkey_bamberg",
+    "donkey_barcelona",
+    "donkey_budapest",
+    "donkey_cirencester",
+    "donkey_copenhagen",
+    "donkey_den_haag",
+    "donkey_dordrecht",
+    "donkey_frederikshavn",
+    "donkey_ge",
+    "donkey_gh",
+    "donkey_glostrup",
+    "donkey_gorinchem",
+    "donkey_hannover",
+    "donkey_hillerod",
+    "donkey_iisalmi",
+    "donkey_imatra",
+    "donkey_katwijk",
+    "donkey_kiel",
+    "donkey_kielsmile",
+    "donkey_klampenborg",
+    "donkey_kotka",
+    "donkey_kouvola",
+    "donkey_kreuzlingen",
+    "donkey_lappeenranta",
+    "donkey_li",
+    "donkey_maentsaelae",
+    "donkey_malmoe",
+    "donkey_mikkeli",
+    "donkey_munich",
+    "donkey_neuchatel",
+    "donkey_odense",
+    "donkey_oxford",
+    "donkey_porvoo",
+    "donkey_qbuzz",
+    "donkey_raasepori",
+    "donkey_regensburg",
+    "donkey_regensburg_straubing",
+    "donkey_reykjavik",
+    "donkey_riihimaki",
+    "donkey_rivierenland",
+    "donkey_rotterdam_den_haag",
+    "donkey_rt",
+    "donkey_store_heddinge",
+    "donkey_thun",
+    "donkey_turku",
+    "donkey_ut",
+    "donkey_westhoek",
+    "donkey_worthing",
+    "donkey_yverdon-les-bains",
+    "dott-aachen",
+    "dott-aalst",
+    "dott-abu-dhabi",
+    "dott-arezzo",
+    "dott-as",
+    "dott-asker",
+    "dott-athens",
+    "dott-baden-bei-wien",
+    "dott-banska-bystrica",
+    "dott-bardejov",
+    "dott-bari",
+    "dott-basel",
+    "dott-bath",
+    "dott-baunatal",
+    "dott-bergamo",
+    "dott-berlin",
+    "dott-bialogard",
+    "dott-bielawa",
+    "dott-bielefeld",
+    "dott-boblingen",
+    "dott-bochum",
+    "dott-bod\u00f8",
+    "dott-bonn",
+    "dott-bordeaux",
+    "dott-bourgoin-jallieu",
+    "dott-braintree",
+    "dott-braniewo",
+    "dott-bratislava",
+    "dott-bregenz",
+    "dott-bremen",
+    "dott-bristol",
+    "dott-brodnica",
+    "dott-bruhl",
+    "dott-brunel-university",
+    "dott-brunswick",
+    "dott-brussels",
+    "dott-brzeg",
+    "dott-brzeg-dolny",
+    "dott-budapest",
+    "dott-bytom",
+    "dott-cagliari",
+    "dott-catania",
+    "dott-celle",
+    "dott-charleroi",
+    "dott-chelmsford",
+    "dott-chrzanow",
+    "dott-colchester",
+    "dott-cologne",
+    "dott-copenhagen",
+    "dott-cottbus",
+    "dott-darmstadt",
+    "dott-doha",
+    "dott-dornbirn",
+    "dott-dortmund",
+    "dott-dubai",
+    "dott-dubai-hills",
+    "dott-duisburg",
+    "dott-dunaujvaros",
+    "dott-dusseldorf",
+    "dott-dzierzoniow",
+    "dott-eindhoven",
+    "dott-elblag",
+    "dott-elmshorn",
+    "dott-erlangen",
+    "dott-eskilstuna",
+    "dott-espoo",
+    "dott-essen",
+    "dott-estepona",
+    "dott-feldkirchen-bei-graz",
+    "dott-ferrara",
+    "dott-flensburg",
+    "dott-frankfurt",
+    "dott-frederikssund",
+    "dott-friedrichshafen",
+    "dott-gdansk",
+    "dott-gdansk-osowa",
+    "dott-gera",
+    "dott-ghent",
+    "dott-gladbeck",
+    "dott-godollo",
+    "dott-goleniow",
+    "dott-gothenburg",
+    "dott-gpseo",
+    "dott-grado",
+    "dott-grudziadz",
+    "dott-gyor",
+    "dott-hamburg",
+    "dott-hameenlinna",
+    "dott-hamina",
+    "dott-hamm",
+    "dott-hannover",
+    "dott-hatvan",
+    "dott-heidelberg",
+    "dott-heilbronn",
+    "dott-helsingborg",
+    "dott-helsinki",
+    "dott-herford",
+    "dott-herne",
+    "dott-herten",
+    "dott-herzliya",
+    "dott-hilden",
+    "dott-hildesheim",
+    "dott-hoganas",
+    "dott-humenne",
+    "dott-hyvinkaa",
+    "dott-ingolstadt",
+    "dott-innsbruck",
+    "dott-i\u0142awa",
+    "dott-jarvenpaa",
+    "dott-jastrzebie-zdroj",
+    "dott-jeddah",
+    "dott-jelenia-gora",
+    "dott-jesolo",
+    "dott-joensuu",
+    "dott-jonkoping",
+    "dott-jyvaskyla",
+    "dott-kaarina",
+    "dott-kaiserslautern",
+    "dott-kajaani",
+    "dott-kalisz",
+    "dott-kangasala",
+    "dott-karlsruhe",
+    "dott-kassel",
+    "dott-katowice",
+    "dott-kerava",
+    "dott-kiel",
+    "dott-kirkkonummi",
+    "dott-klagenfurt",
+    "dott-klaukkala",
+    "dott-kokkola",
+    "dott-konin",
+    "dott-korneuburg",
+    "dott-kortrijk",
+    "dott-kosice",
+    "dott-koszalin",
+    "dott-kotka",
+    "dott-ko\u0142obrzeg",
+    "dott-krakow",
+    "dott-krynica-morska",
+    "dott-kuopio",
+    "dott-kwidzyn",
+    "dott-lahti",
+    "dott-langenfeld",
+    "dott-lappeenranta",
+    "dott-lecco",
+    "dott-leipzig",
+    "dott-lempaala",
+    "dott-leoben",
+    "dott-lidkoping",
+    "dott-liege",
+    "dott-lillestr\u00f8m",
+    "dott-lindau",
+    "dott-linz",
+    "dott-liptovsky-mikulas",
+    "dott-lorca",
+    "dott-lubeck",
+    "dott-lubliniec",
+    "dott-ludwigsburg",
+    "dott-lyon",
+    "dott-mainz",
+    "dott-malbork",
+    "dott-malvik",
+    "dott-mannheim",
+    "dott-martin",
+    "dott-melhus",
+    "dott-michalovce",
+    "dott-miedzyzdroje",
+    "dott-mielno",
+    "dott-mikkeli",
+    "dott-miko\u0142ow",
+    "dott-milan",
+    "dott-milton-keynes",
+    "dott-modling",
+    "dott-monchengladbach",
+    "dott-monheim-am-rhein",
+    "dott-monza",
+    "dott-mulheim-an-der-ruhr",
+    "dott-munich",
+    "dott-munster",
+    "dott-murcia",
+    "dott-myyrmaki",
+    "dott-naantali",
+    "dott-neuss",
+    "dott-nitra",
+    "dott-nokia",
+    "dott-nottingham",
+    "dott-nowogard",
+    "dott-nowy-dwor-mazowiecki",
+    "dott-nowy-sacz",
+    "dott-nowy-targ",
+    "dott-nuremberg",
+    "dott-nysa",
+    "dott-ol-vallee",
+    "dott-olesnica",
+    "dott-osnabruck",
+    "dott-ostroda",
+    "dott-oswiecim",
+    "dott-o\u0142awa",
+    "dott-paderborn",
+    "dott-padua",
+    "dott-palermo",
+    "dott-papa",
+    "dott-paris",
+    "dott-partille",
+    "dott-pezinok",
+    "dott-piekary-slaskie",
+    "dott-pinneberg",
+    "dott-police",
+    "dott-poprad",
+    "dott-porvoo",
+    "dott-potsdam",
+    "dott-poznan",
+    "dott-prawobrzeze",
+    "dott-presov",
+    "dott-prievidza",
+    "dott-p\u0142ock",
+    "dott-raisio",
+    "dott-ras-al-khaimah",
+    "dott-recklinghausen",
+    "dott-regensburg",
+    "dott-reggio-emilia",
+    "dott-region-h",
+    "dott-reutlingen",
+    "dott-rewal",
+    "dott-riihimaki",
+    "dott-riyadh",
+    "dott-romanshorn",
+    "dott-rome",
+    "dott-rorschach",
+    "dott-roskilde",
+    "dott-rostock",
+    "dott-russelsheim",
+    "dott-saarbrucken",
+    "dott-sandefjord",
+    "dott-sankt-anton-am-arlberg",
+    "dott-sankt-augustin",
+    "dott-sbf",
+    "dott-schwabisch-gmund",
+    "dott-seinajoki",
+    "dott-sharjah",
+    "dott-siedlce",
+    "dott-siemu",
+    "dott-siofok",
+    "dott-skawina",
+    "dott-skovde",
+    "dott-sobieszewo-island",
+    "dott-solingen",
+    "dott-st.-gallen",
+    "dott-steyr",
+    "dott-stj\u00f8rdal",
+    "dott-stuttgart",
+    "dott-swidnica",
+    "dott-swiecie",
+    "dott-swinoujscie",
+    "dott-szczecin",
+    "dott-s\u0142upsk",
+    "dott-tammisaari",
+    "dott-tampere",
+    "dott-tarnowskie-gory",
+    "dott-tarragona",
+    "dott-tczew",
+    "dott-tel-aviv",
+    "dott-tenerife",
+    "dott-tenerife-sur",
+    "dott-thessaloniki",
+    "dott-torun",
+    "dott-trento",
+    "dott-trnava",
+    "dott-troisdorf",
+    "dott-trollhattan",
+    "dott-trondheim",
+    "dott-trzebnica",
+    "dott-tubingen",
+    "dott-turin",
+    "dott-turku",
+    "dott-uberlingen",
+    "dott-ullensaker",
+    "dott-ulm",
+    "dott-ustka",
+    "dott-utrecht",
+    "dott-vaasa",
+    "dott-vantaa",
+    "dott-varberg",
+    "dott-varese",
+    "dott-varnamo",
+    "dott-vaxjo",
+    "dott-veldhoven",
+    "dott-verona",
+    "dott-versailles-grand-parc",
+    "dott-vranov-nad-toplou",
+    "dott-warsaw",
+    "dott-wels",
+    "dott-wiesbaden",
+    "dott-winterthur",
+    "dott-wolfsburg",
+    "dott-wroc\u0142aw",
+    "dott-wuppertal",
+    "dott-zory",
+    "dott-zurich",
+    "dott-zvolen",
+    "dott-\u0142eba",
+    "dublin",
+    "edrivecarsharing_ch",
+    "einfach_unterwegs",
+    "epfl_lausanne",
+    "flamingo_auckland",
+    "flamingo_christchurch",
+    "flamingo_dunedin",
+    "flamingo_palmerston_north",
+    "flamingo_porirua",
+    "flamingo_tauranga",
+    "flamingo_waimakariri",
+    "flamingo_wellington",
+    "flinkster_carsharing",
+    "ford_carsharing_autohausbaur",
+    "ford_carsharing_autohauskauderer",
+    "fortworth",
+    "ganxeta_reus",
+    "go_biki",
+    "goabout",
+    "grand-est",
+    "graoulib_metz",
+    "gruene-flotte_freiburg",
+    "hellocycling",
+    "herrenberg_alf",
+    "herrenberg_fare",
+    "herrenberg_guelf",
+    "herrenberg_stadtrad",
+    "hertlein_carsharing",
+    "hunedoara",
+    "idecycle_pau",
+    "impulsyon",
+    "inurba-gdansk",
+    "inurba-rouen",
+    "jolt_hutt_valley",
+    "jolt_new_plymouth",
+    "jolt_selwyn",
+    "karu",
+    "labaule",
+    "lara_to_go",
+    "lastenvelo_fr",
+    "le_velo_star",
+    "lemarcel",
+    "levelo_inurba_marseille",
+    "libelo",
+    "liemobil_liechtenstein",
+    "lillestrom",
+    "lime_antwerp",
+    "lime_arlington",
+    "lime_atlanta",
+    "lime_baltimore",
+    "lime_bari",
+    "lime_brussels",
+    "lime_calgary",
+    "lime_chicago",
+    "lime_cleveland",
+    "lime_colorado_springs",
+    "lime_denver",
+    "lime_detroit",
+    "lime_edmonton",
+    "lime_frankfurt",
+    "lime_grand_rapids",
+    "lime_hamburg",
+    "lime_kelowna",
+    "lime_lille",
+    "lime_lincoln",
+    "lime_louisville",
+    "lime_marseille",
+    "lime_mississauga",
+    "lime_naples",
+    "lime_new_york",
+    "lime_nice",
+    "lime_oakland",
+    "lime_oberhausen",
+    "lime_opfikon",
+    "lime_ottawa",
+    "lime_paris",
+    "lime_portland",
+    "lime_san_francisco",
+    "lime_san_jose",
+    "lime_seattle",
+    "lime_tel_aviv",
+    "lime_vancouver_bc",
+    "lime_washington_dc",
+    "lime_wuppertal",
+    "lime_zug",
+    "linka_aar_bike",
+    "ljubljana",
+    "lund",
+    "luxembourg",
+    "lyft_bay",
+    "lyft_chi",
+    "lyft_den",
+    "lyft_nyc",
+    "lyon",
+    "maribor",
+    "miamiunderline",
+    "mibici_guadalajara",
+    "mikar",
+    "milan-bikemi",
+    "mobility_ch",
+    "mogo",
+    "moinesti",
+    "mona_bike",
+    "montenvelo_mont_blanc",
+    "mp_ARBRESLE",
+    "mp_CHATELLERAULT",
+    "mp_COQUELICOT",
+    "mp_ESTREES",
+    "mp_GEVAUDAN",
+    "mp_LASCAUX",
+    "mp_OLORON",
+    "mp_OSSAU",
+    "mp_Opale",
+    "mp_TARARE",
+    "mp_VASSIVIERE",
+    "mybuxi_ch",
+    "namur",
+    "nancy",
+    "nantes",
+    "naturenergie_sharing",
+    "nemovelo",
+    "nextbike_aa",
+    "nextbike_ac",
+    "nextbike_ad",
+    "nextbike_ae",
+    "nextbike_af",
+    "nextbike_ah",
+    "nextbike_ai",
+    "nextbike_ak",
+    "nextbike_al",
+    "nextbike_am",
+    "nextbike_an",
+    "nextbike_as",
+    "nextbike_av",
+    "nextbike_ba",
+    "nextbike_bc",
+    "nextbike_bj",
+    "nextbike_bn",
+    "nextbike_bq",
+    "nextbike_br",
+    "nextbike_bs",
+    "nextbike_bv",
+    "nextbike_bw",
+    "nextbike_bx",
+    "nextbike_by",
+    "nextbike_bz",
+    "nextbike_cb",
+    "nextbike_cc",
+    "nextbike_cd",
+    "nextbike_ce",
+    "nextbike_cf",
+    "nextbike_cg",
+    "nextbike_ch",
+    "nextbike_cj",
+    "nextbike_cm",
+    "nextbike_cn",
+    "nextbike_co",
+    "nextbike_cq",
+    "nextbike_cs",
+    "nextbike_cu",
+    "nextbike_cv",
+    "nextbike_cw",
+    "nextbike_cy",
+    "nextbike_da",
+    "nextbike_dc",
+    "nextbike_dd",
+    "nextbike_df",
+    "nextbike_dg",
+    "nextbike_dh",
+    "nextbike_dj",
+    "nextbike_dk",
+    "nextbike_dn",
+    "nextbike_do",
+    "nextbike_ds",
+    "nextbike_dv",
+    "nextbike_dw",
+    "nextbike_dx",
+    "nextbike_ea",
+    "nextbike_eb",
+    "nextbike_ed",
+    "nextbike_eh",
+    "nextbike_ej",
+    "nextbike_ek",
+    "nextbike_el",
+    "nextbike_em",
+    "nextbike_en",
+    "nextbike_eq",
+    "nextbike_ev",
+    "nextbike_fa",
+    "nextbike_fg",
+    "nextbike_fp",
+    "nextbike_gd",
+    "nextbike_gh",
+    "nextbike_gk",
+    "nextbike_gp",
+    "nextbike_gs",
+    "nextbike_gt",
+    "nextbike_gu",
+    "nextbike_gv",
+    "nextbike_gx",
+    "nextbike_gy",
+    "nextbike_hb",
+    "nextbike_hd",
+    "nextbike_hf",
+    "nextbike_hr",
+    "nextbike_ib",
+    "nextbike_ig",
+    "nextbike_ka",
+    "nextbike_kc",
+    "nextbike_kg",
+    "nextbike_kk",
+    "nextbike_ko",
+    "nextbike_ky",
+    "nextbike_la",
+    "nextbike_lb",
+    "nextbike_lc",
+    "nextbike_le",
+    "nextbike_lo",
+    "nextbike_ls",
+    "nextbike_lv",
+    "nextbike_ml",
+    "nextbike_mr",
+    "nextbike_ms",
+    "nextbike_mx",
+    "nextbike_na",
+    "nextbike_nc",
+    "nextbike_nd",
+    "nextbike_ne",
+    "nextbike_ng",
+    "nextbike_nh",
+    "nextbike_ni",
+    "nextbike_nm",
+    "nextbike_nn",
+    "nextbike_nr",
+    "nextbike_ns",
+    "nextbike_nt",
+    "nextbike_ol",
+    "nextbike_or",
+    "nextbike_ot",
+    "nextbike_pi",
+    "nextbike_pj",
+    "nextbike_pl",
+    "nextbike_pm",
+    "nextbike_pn",
+    "nextbike_po",
+    "nextbike_ps",
+    "nextbike_py",
+    "nextbike_rc",
+    "nextbike_re",
+    "nextbike_rh",
+    "nextbike_rl",
+    "nextbike_rr",
+    "nextbike_rt",
+    "nextbike_rv",
+    "nextbike_rw",
+    "nextbike_sb",
+    "nextbike_se",
+    "nextbike_sg",
+    "nextbike_si",
+    "nextbike_sl",
+    "nextbike_sn",
+    "nextbike_sv",
+    "nextbike_tb",
+    "nextbike_td",
+    "nextbike_te",
+    "nextbike_tf",
+    "nextbike_tg",
+    "nextbike_ti",
+    "nextbike_tj",
+    "nextbike_tk",
+    "nextbike_tl",
+    "nextbike_tn",
+    "nextbike_to",
+    "nextbike_tq",
+    "nextbike_ts",
+    "nextbike_tt",
+    "nextbike_tu",
+    "nextbike_tv",
+    "nextbike_tw",
+    "nextbike_tx",
+    "nextbike_ty",
+    "nextbike_ud",
+    "nextbike_uf",
+    "nextbike_ug",
+    "nextbike_uk",
+    "nextbike_uo",
+    "nextbike_ur",
+    "nextbike_uu",
+    "nextbike_vm",
+    "nextbike_vn",
+    "nextbike_vr",
+    "nextbike_vt",
+    "nextbike_vu",
+    "nextbike_vw",
+    "nextbike_wa",
+    "nextbike_wd",
+    "nextbike_we",
+    "nextbike_wf",
+    "nextbike_wh",
+    "nextbike_wn",
+    "nextbike_wp",
+    "nextbike_wr",
+    "nextbike_xa",
+    "nextbike_xb",
+    "nextbike_xc",
+    "nextbike_zc",
+    "nextbike_zd",
+    "nextbike_zg",
+    "nextbike_zs",
+    "nextbike_zy",
+    "nextbike_zz",
+    "ns_ov_fiets",
+    "oberschwabenmobil",
+    "oekostadt_renningen",
+    "ogalo",
+    "pbsn",
+    "peacehealth_rides",
+    "perivelo",
+    "petitesreines",
+    "pickebike_aubonne",
+    "pickebike_basel",
+    "pickebike_fribourg",
+    "pittsburgh",
+    "pony_Angers",
+    "pony_Basque_Country",
+    "pony_Beauvais",
+    "pony_Bourges",
+    "pony_Evry",
+    "pony_Herouville",
+    "pony_Limoges",
+    "pony_Lorient",
+    "pony_Nice",
+    "pony_Perpignan",
+    "pony_bordeaux",
+    "pony_poitiers",
+    "quickrent.ch",
+    "reddy_bikeshare",
+    "regiorad_stuttgart",
+    "rhoule",
+    "rivas",
+    "rivi_bike",
+    "rlvlib",
+    "saguenay_bike",
+    "saintbrieuc",
+    "sansebastian",
+    "santana_bikecity",
+    "sbu",
+    "seefahrer_ecarsharing",
+    "semo",
+    "seville",
+    "share_birrer_ch",
+    "sharedmobility.ch",
+    "sibiu_bikecity",
+    "sobi_hamilton",
+    "stadtmobil_karlsruhe",
+    "stadtmobil_rhein-neckar",
+    "stadtmobil_stuttgart",
+    "stadtwerk_tauberfranken",
+    "stadtwerke_wertheim",
+    "swabi",
+    "tanlib",
+    "targumures",
+    "teilauto_biberach",
+    "teilauto_neckar-alb",
+    "teilauto_schwaebisch_hall",
+    "tempovelo",
+    "ti_velo",
+    "tlpmobilites",
+    "toulouse",
+    "toyama",
+    "tugo",
+    "twisto_velolib_caen",
+    "v_lille",
+    "valence",
+    "valenciennes",
+    "velibeo",
+    "velivert_saint_etienne",
+    "velo-modalis",
+    "velo-tbm-bordeaux",
+    "velo_modalis_angouleme",
+    "velocite",
+    "velodaqui",
+    "velomagg_montpellier",
+    "velomoove_pompey",
+    "velonecy60minutes_annecy",
+    "velopop",
+    "velospot_ch",
+    "velozef",
+    "velyceo",
+    "vernouvelo",
+    "verona-bike",
+    "vertuose",
+    "viavelo",
+    "vilnius",
+    "vilvolt_epinal",
+    "vivelo",
+    "voi_Antwerp",
+    "voi_Grenoble",
+    "voi_Le_Havre",
+    "voi_Marseille",
+    "voi_Paris",
+    "voi_SQY",
+    "voi_V'L\u00f4nes",
+    "voi_ch",
+    "voi_de",
+    "voiarendal",
+    "we_cycle",
+    "zaragoza",
+    "zebullo",
+    "zem_ch",
+    "zeo_bruchsal"
+  ]
+}

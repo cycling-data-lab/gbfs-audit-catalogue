@@ -1,0 +1,344 @@
+{
+  "generated_at": "2026-06-28T08:48:46.536921+00:00",
+  "seed": 42,
+  "params": {
+    "a4_sigma": 3.0,
+    "a7_scope": "all",
+    "n_min": 20,
+    "bootstrap_n": 10000
+  },
+  "toolkit_version": "1.4.0",
+  "inventory_systems": 1509,
+  "france_catalogue_counts": {
+    "A1": 17,
+    "A2": 1,
+    "A3": 41,
+    "A4": 88,
+    "A5": 4,
+    "A6": 0,
+    "A7": 32
+  },
+  "world_feed_only": {
+    "World": {
+      "A1": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A2": {
+        "systems_flagged": 8,
+        "ci95_rate_pct": [
+          0.32,
+          1.5
+        ]
+      },
+      "A3": {
+        "systems_flagged": 715,
+        "ci95_rate_pct": [
+          73.61,
+          79.06
+        ]
+      },
+      "A4": {
+        "systems_flagged": 515,
+        "ci95_rate_pct": [
+          51.82,
+          58.23
+        ]
+      },
+      "A5": {
+        "systems_flagged": 30,
+        "ci95_rate_pct": [
+          2.14,
+          4.38
+        ]
+      },
+      "A6": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A7": {
+        "systems_flagged": 288,
+        "ci95_rate_pct": [
+          27.88,
+          33.65
+        ]
+      },
+      "_n_systems": 936,
+      "_n_stations": 228294
+    },
+    "FR": {
+      "A1": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A2": {
+        "systems_flagged": 3,
+        "ci95_rate_pct": [
+          0.0,
+          4.83
+        ]
+      },
+      "A3": {
+        "systems_flagged": 73,
+        "ci95_rate_pct": [
+          42.07,
+          58.62
+        ]
+      },
+      "A4": {
+        "systems_flagged": 89,
+        "ci95_rate_pct": [
+          53.79,
+          69.66
+        ]
+      },
+      "A5": {
+        "systems_flagged": 6,
+        "ci95_rate_pct": [
+          1.38,
+          7.59
+        ]
+      },
+      "A6": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A7": {
+        "systems_flagged": 29,
+        "ci95_rate_pct": [
+          13.79,
+          26.9
+        ]
+      },
+      "_n_systems": 145,
+      "_n_stations": 56305
+    },
+    "non_FR": {
+      "A1": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A2": {
+        "systems_flagged": 5,
+        "ci95_rate_pct": [
+          0.13,
+          1.26
+        ]
+      },
+      "A3": {
+        "systems_flagged": 642,
+        "ci95_rate_pct": [
+          78.38,
+          83.82
+        ]
+      },
+      "A4": {
+        "systems_flagged": 426,
+        "ci95_rate_pct": [
+          50.44,
+          57.4
+        ]
+      },
+      "A5": {
+        "systems_flagged": 24,
+        "ci95_rate_pct": [
+          1.9,
+          4.3
+        ]
+      },
+      "A6": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A7": {
+        "systems_flagged": 259,
+        "ci95_rate_pct": [
+          29.46,
+          36.03
+        ]
+      },
+      "_n_systems": 791,
+      "_n_stations": 171989
+    }
+  },
+  "world_operator": {
+    "World": {
+      "A1": {
+        "systems_flagged": 36,
+        "ci95_rate_pct": [
+          2.67,
+          5.13
+        ]
+      },
+      "A2": {
+        "systems_flagged": 8,
+        "ci95_rate_pct": [
+          0.32,
+          1.5
+        ]
+      },
+      "A3": {
+        "systems_flagged": 699,
+        "ci95_rate_pct": [
+          71.9,
+          77.46
+        ]
+      },
+      "A4": {
+        "systems_flagged": 515,
+        "ci95_rate_pct": [
+          51.82,
+          58.23
+        ]
+      },
+      "A5": {
+        "systems_flagged": 30,
+        "ci95_rate_pct": [
+          2.14,
+          4.38
+        ]
+      },
+      "A6": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A7": {
+        "systems_flagged": 288,
+        "ci95_rate_pct": [
+          27.88,
+          33.65
+        ]
+      },
+      "_n_systems": 936,
+      "_n_stations": 228294
+    },
+    "FR": {
+      "A1": {
+        "systems_flagged": 15,
+        "ci95_rate_pct": [
+          5.52,
+          15.17
+        ]
+      },
+      "A2": {
+        "systems_flagged": 3,
+        "ci95_rate_pct": [
+          0.0,
+          4.83
+        ]
+      },
+      "A3": {
+        "systems_flagged": 65,
+        "ci95_rate_pct": [
+          36.55,
+          53.1
+        ]
+      },
+      "A4": {
+        "systems_flagged": 89,
+        "ci95_rate_pct": [
+          53.79,
+          69.66
+        ]
+      },
+      "A5": {
+        "systems_flagged": 6,
+        "ci95_rate_pct": [
+          1.38,
+          7.59
+        ]
+      },
+      "A6": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A7": {
+        "systems_flagged": 29,
+        "ci95_rate_pct": [
+          13.79,
+          26.9
+        ]
+      },
+      "_n_systems": 145,
+      "_n_stations": 56305
+    },
+    "non_FR": {
+      "A1": {
+        "systems_flagged": 21,
+        "ci95_rate_pct": [
+          1.64,
+          3.79
+        ]
+      },
+      "A2": {
+        "systems_flagged": 5,
+        "ci95_rate_pct": [
+          0.13,
+          1.26
+        ]
+      },
+      "A3": {
+        "systems_flagged": 634,
+        "ci95_rate_pct": [
+          77.37,
+          82.93
+        ]
+      },
+      "A4": {
+        "systems_flagged": 426,
+        "ci95_rate_pct": [
+          50.44,
+          57.4
+        ]
+      },
+      "A5": {
+        "systems_flagged": 24,
+        "ci95_rate_pct": [
+          1.9,
+          4.3
+        ]
+      },
+      "A6": {
+        "systems_flagged": 0,
+        "ci95_rate_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "A7": {
+        "systems_flagged": 259,
+        "ci95_rate_pct": [
+          29.46,
+          36.03
+        ]
+      },
+      "_n_systems": 791,
+      "_n_stations": 171989
+    }
+  },
+  "fetch_manifest": "experiments/unified_audit/world_fetch_manifest.csv"
+}

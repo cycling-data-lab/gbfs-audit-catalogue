@@ -1,0 +1,4 @@
+# Regenerable artifacts (kept out of git; archive on Zenodo if cited).
+raw_world/
+unified_verdict.parquet
+sweep.log

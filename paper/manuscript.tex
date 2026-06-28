@@ -52,6 +52,8 @@
 \newcommand{\zdoi}{\ifanonymous\texttt{[deposited on Zenodo; DOI withheld for review]}\else\texttt{10.5281/zenodo.20125460}\fi}
 \newcommand{\codeurl}{\ifanonymous\texttt{[anonymised repository; link provided on acceptance]}\else\url{https://github.com/rohanfosse/gbfs-audit-catalogue}\fi}
 \newcommand{\hfurl}{\ifanonymous\texttt{[anonymised dataset mirror]}\else\url{https://huggingface.co/datasets/rohanfosse/gbfs-audit-catalogue}\fi}
+\newcommand{\toolkitdoi}{\ifanonymous\texttt{[reference-implementation library archived on Zenodo; DOI withheld for review]}\else\texttt{10.5281/zenodo.20992153}\fi}
+\newcommand{\toolkiturl}{\ifanonymous\texttt{[anonymised library repository; link provided on acceptance]}\else\url{https://github.com/cycling-data-lab/gbfs-toolkit}\fi}
 
 \newenvironment{highlights}{%
   \par\noindent\textsf{\bfseries\large Highlights}\par\smallskip
@@ -107,16 +109,16 @@ the raw French stations and relabels a further $61\,\%$, so fewer than
 $9\,\%$ survive into the catalogue untouched. The downstream effect is
 large: correcting a single class (A3) drops Bordeaux from the top quartile
 to below the median of the national dock-count distribution, which measures
-the policy cost of skipping the audit. The anti-patterns are global, not French-specific:
-245 systems are flagged by A7 alone (97{,}314 stations), led by one
-operator that declares \texttt{capacity = NaN} across entire national
-deployments. Any quantitative use of GBFS data should therefore be
+the policy cost of skipping the audit. Projected at French-calibrated thresholds, the anti-patterns appear
+global rather than French-specific: 245 systems are flagged by A7 alone
+(97{,}314 stations), led by one operator that declares
+\texttt{capacity = NaN} across entire national deployments. Any quantitative use of GBFS data should therefore be
 preceded by an explicit and reproducible audit. The pipeline and a Docker
 image are released for reproducible rebuilds.
 
 \begin{highlights}
 \item Seven-class taxonomy (5 structural, 2 semantic); projected across 1{,}509 GBFS systems
-\item Topology-aware A4 detector eliminates 8{,}005 centroid false positives
+\item Topology-aware A4 detector reclassifies 8{,}005 legacy flags (46/46 audited false)
 \item Leave-one-operator-out CV on 7 operators supports rule generalisability
 \item 30.9\,\% of raw FR stations reclassified; hotspots are operator-driven
 \item Released as a versioned Parquet (46k stations) with Docker and a hold-out test
@@ -226,9 +228,13 @@ the \textbf{Audit Catalogue GBFS France} (46{,}307 certified stations,
 97 cities), released as a versioned Parquet file with DOI
 \zdoi\ under ODbL, with its JSON Schema,
 Croissant manifest and audit report, and mirrored as a Hugging Face
-dataset. Fourth, an \textbf{open-source pipeline}
-(\texttt{audit\_pipeline} Python package, MIT, $\sim 560$ LOC,
-unit-tested) implementing the nine-step protocol. Fifth, a
+dataset. Fourth, a reusable \textbf{reference implementation}: the A1--A7
+detectors are released as \texttt{gbfs-toolkit}, an independently
+versioned (SemVer), \texttt{pip}-installable Python library archived on
+Zenodo under its own DOI (\toolkitdoi) and numerically cross-validated
+against independent estimators, with the catalogue's nine-step protocol
+(\texttt{audit\_pipeline}, MIT) a thin domain-orchestration layer that
+calls it. Fifth, a
 \textbf{roadmap} of nine falsifiable
 experiments, six already with completed results, so that the protocol can
 be challenged in public rather than defended in private.
@@ -282,15 +288,24 @@ detection rules are formalised in Section~\ref{secProtocol}.
 semantic contract of the field they populate, plus two
 \emph{semantic warnings} (A6--A7) that flag spec-compliant
 publication choices whose downstream-consumer interpretation is
-nevertheless ambiguous. Observed incidence on the released French
-catalogue (FR, 123 audited systems) and on the global MobilityData
-catalogue (Global, 1{,}509 systems across 48 countries). Each
-class is formalised in Section~\ref{secProtocol};
-per-system counts use the operational definitions documented in
-Section~\ref{secProtocol} (\eg A3 flags any system with at least
-one \texttt{free\_floating} entry after the S3 reclassification,
-which captures both natively-declared and post-audit-reclassified
-free-floating fleets). Counts are reproducible by re-running
+nevertheless ambiguous. \textbf{The two columns are produced by two
+distinct pipelines and are not directly comparable:} \emph{FR} is the
+incidence on the released, post-audit French catalogue (123 certified
+systems), where A3 counts any system with at least one
+\texttt{free\_floating} entry after the S3 reclassification (broad,
+post-audit) and A4 counts stations flagged by the topology-aware outlier
+detector of Section~\ref{secA4v2}; \emph{Global} is the raw cross-corpus
+projection of the same rule set on the frozen 2026-04 MobilityData
+snapshot (1{,}509 systems, 48 countries, France included), evaluated at
+the \emph{system level} from the published \texttt{station\_information}
+without running S3, with fleet type inferred from operator name. Under
+this raw projection a Global value can fall \emph{below} its FR
+counterpart for the same class (\eg A3) because the projection uses the
+strict over-capacity detector rather than the post-audit
+reclassification; for a like-for-like view, the raw detectors fire on the
+French systems at A1--A5 $=(17, 14, 4, 3, 3)$ (Table~\ref{tab:global-audit}).
+The \emph{Global} column is reproducible to the unit by
+\texttt{verify\_snapshot.py}; the \emph{FR} column by re-running
 \texttt{python -m audit\_pipeline.regenerate} on the released
 parquet.}
 \label{tab:anomalies}
@@ -559,13 +574,18 @@ Parquet format, direct HTTPS download and Git LFS mirror.
 JSON Schema, a Frictionless Data Package descriptor
 \cite{FrictionlessData2023}, a DCAT-AP record~\cite{DCATAP2021} and a
 Croissant manifest~\cite{Croissant2024}. \emph{Reusable:} released
-under ODbL v1.0; code under MIT, with audit report and source code; the
+under ODbL v1.0; code under MIT, with audit report and source code. The
+A1--A7 detectors are additionally distributed as the \texttt{gbfs-toolkit}
+library (\texttt{pip install gbfs-toolkit}), versioned under SemVer and
+archived on Zenodo under its own DOI (\toolkitdoi), so a downstream study
+can pin the exact detector version it relied on; the
 human-validation gold standard (\texttt{gold\_labels.csv}), the
 inter-rater reliability report and the blind annotation tool ship with the
 repository (\texttt{experiments/annotation/}).
 Raw sources are archived with SHA-256 hashes; the Python
-environment is declared in \texttt{requirements.txt}; a Docker image
-is published for reproducible rebuilds. The audit pipeline itself
+environment is declared in \texttt{requirements.txt} (with
+\texttt{gbfs-toolkit} pinned to the exact release used to certify the
+published Parquet); a Docker image is published for reproducible rebuilds. The audit pipeline itself
 is fully deterministic (no random sampling); the only stochastic
 step is the bootstrap resampling used for the confidence intervals
 reported in the main text, for which the random seed is pinned at
@@ -574,34 +594,50 @@ detector unit tests run in CI on every push; the audit report is
 regenerated automatically on every release tag.
 
 \subsection{Implementation}
-The audit pipeline is a compact Python package
-(\texttt{audit\_pipeline}, $\sim 560$ LOC) with stable, documented
-entry points; the released $46{,}307$-station Parquet loads in under a
-second into a standard \texttt{pandas} session.
+The seven-class taxonomy is implemented as \texttt{gbfs-toolkit}, a
+research-grade, \texttt{pip}-installable Python library
+(\texttt{numpy}/\texttt{scipy}/\texttt{pandas} core) that exposes the
+A1--A7 detectors as pure, version-independent functions over a canonical
+station frame. The catalogue's nine-step protocol is a thin
+domain-orchestration package (\texttt{audit\_pipeline}, MIT) that calls
+\texttt{gbfs\_toolkit.audit\_static} and adds the catalogue-specific
+hybridisation; the A1--A7 verdicts themselves come from the library.
+Calling it with \texttt{a7\_scope="all"} and the catalogue's
+\texttt{a4\_sigma} reproduces the original A7 definition (a
+fully-NaN-capacity system) and the A4 sensitivity exactly, so the
+released $46{,}307$-station Parquet is regenerated bit-for-bit from the
+library and loads in under a second into a standard \texttt{pandas}
+session.
 
 \paragraph{Software validation.}
-The audit primitives are accompanied by a unit-test suite
-(\texttt{tests/test\_core.py}, $24$ tests, $85\,\%$ line coverage of
-the public \texttt{audit\_pipeline.core} surface) that exercises each
-of the seven anomaly classes in isolation as well as the combined
-end-to-end \texttt{enrich()} pipeline. Each detector is paired with
-a deterministic synthetic fixture engineered to trip exactly that
-class (e.g., a 25-station grid with one transposed-coordinate row
-for A4, a 32-station fleet spanning more than $300{,}000$\,km$^2$
-for A5, a $60\,\%$-NaN-capacity dock-based system for A7) and with
-specificity controls verifying that healthy fixtures stay
-unflagged. The suite further checks that the Tier-2 geometry
-columns (intra- and inter-system $k$-nearest-neighbour distances,
-local densities) are consistent with the equirectangular projection
-used for the meter-scale arithmetic, and that the pipeline is
-idempotent under repeated application. Tests are executed by
-\texttt{pytest} as a GitHub Actions workflow on every push and pull
-request, and locally inside the published Docker image. This suite
-validates the correspondence between the implemented logic and the
-published anomaly taxonomy; it is not a
-substitute for the hand-curated cross-operator audit and the
-author-led consistency check (Section~\ref{secHumanVal}) against
-which the pipeline's verdicts were calibrated.
+Releasing the detectors as a standalone library lets them be validated to
+a standard a notebook pipeline rarely reaches. \texttt{gbfs-toolkit}
+carries $213$ tests run on a continuous-integration matrix
+(Linux/Windows/macOS $\times$ Python 3.10--3.13, with static type
+checking and example-notebook execution), and validates its spatial and
+survival estimators \emph{numerically against independent reference
+implementations}: global Moran's~$I$ and the LISA local indicators are
+cross-checked against \texttt{esda}/\texttt{PySAL} and the
+outage-survival curves against \texttt{lifelines}' Kaplan--Meier, to
+within numerical tolerance. The A1--A7 detectors themselves are pinned by
+deterministic per-class synthetic fixtures engineered to trip exactly one
+class (e.g.\ a 25-station grid with one transposed-coordinate row for A4,
+a 32-station fleet spanning more than $300{,}000$\,km$^2$ for A5, a
+$60\,\%$-NaN-capacity dock-based system for A7), by specificity controls
+verifying that healthy fixtures stay unflagged, by property-based tests
+(\texttt{hypothesis}) asserting the mathematical invariants of each
+estimator on randomly generated feeds, and by a golden-master regression
+that freezes the end-to-end verdicts so any change of behaviour is
+caught. The suite further checks that the Tier-2 geometry columns (intra-
+and inter-system $k$-nearest-neighbour distances, local densities) are
+consistent with the equirectangular projection used for the meter-scale
+arithmetic, and that the audit is idempotent under repeated application.
+Tests run as a GitHub Actions workflow on every push and pull request,
+and locally inside the published Docker image. This validation
+establishes the correspondence between the implemented logic and the
+published anomaly taxonomy; it does not substitute for the hand-curated
+cross-operator audit and the author-led consistency check
+(Section~\ref{secHumanVal}) against which the verdicts were calibrated.
 
 % ===================================================================
 
@@ -628,13 +664,13 @@ naive independent-Bernoulli assumption would place on the figure
 and is a \emph{lower bound} on the real uncertainty. A
 \emph{size-stratified cluster bootstrap} (123 systems partitioned
 into size quartiles, resampled with replacement within each
-stratum, $n = 10{,}000$, seed 42) gives a 95\,\% interval of
-$[-18.6\,\%, 63.6\,\%]$; this is an \emph{upper bound} because
+stratum, $n = 10{,}000$, seed 42) does not yield an informative
+interval, because
 the largest size quartile contains a single dominant deployment
 (\emph{V\'elib' M\'etropole}, $\sim 14{,}700$ stations) whose
 inclusion or exclusion across resamples mechanically shifts the
-denominator by an order of magnitude. The asymmetry of these two
-intervals, one tight and one degenerate, is itself the
+denominator by an order of magnitude. The contrast between these two
+estimates, one tight and one degenerate, is itself the
 substantive observation: on a 123-system corpus with size
 spanning four orders of magnitude, the within-snapshot
 uncertainty on a stations-level total is dominated by which
@@ -1221,6 +1257,28 @@ invariant across the grid. The $\sigma = 3$ choice therefore sits on a
 plateau of stable downstream classification. The full sweep and a
 methodological caveat on the MAD scale estimator are reported in the
 Supplementary Materials (Table~\ref{tab:a4-sigma-sweep}).
+
+\emph{Multi-threshold robustness.} The single-dimension pilot above
+generalises to a reproducible sweep of every policy threshold, exposed as
+parameters of the released audit library and driven by its
+\texttt{audit\_sensitivity} routine. Sweeping the A4 robust-sigma
+($\sigma \in [2, 4]$), the A5 bounding-box area
+($[30{,}000, 70{,}000]$\,km$^2$), the A6 and A7 rate thresholds
+($\tau_{A6} \in [0.005, 0.05]$, $\tau_{A7} \in [0.3, 0.7]$) and the
+minimum system size ($N_{\min} \in [10, 30]$), and measuring the Jaccard
+overlap of each flagged-system set against the published baseline, the
+flagged set is \emph{invariant} (Jaccard $= 1.00$) for A1, A2, A3 and A6
+across every grid, and stays on a stability plateau for the geospatial and
+capacity rules (A4 Jaccard $\ge 0.91$ over the $\sigma$ grid, A7
+$\ge 0.97$ over the $\tau_{A7}$ grid). The published verdicts therefore do
+not hinge on the exact threshold values. Each per-class incidence we
+report additionally carries a cluster-bootstrap $95\,\%$ confidence
+interval (systems resampled with replacement, seed pinned) produced by the
+same library; the French A3, A4 and A7 incidences are
+$0.33\,[0.25, 0.41]$, $0.72\,[0.63, 0.80]$ and $0.26\,[0.19, 0.34]$ of the
+certified systems. The sweep and the intervals are regenerated by a single
+call, so the robustness claim is itself reproducible rather than a
+one-off pilot.
 
 These algorithmic checks complement, but do not replace, the human
 construct-validity check of Section~\ref{secHumanVal}; they are reported
@@ -1843,7 +1901,10 @@ deposited on Zenodo under ODbL~v1.0
 alongside the rejected-stations log and machine-readable descriptors
 (JSON Schema, DCAT-AP, Frictionless Data Package, Croissant). The audit
 pipeline and a Docker image for bit-exact reproduction are released under
-the MIT licence at \codeurl. The global-sweep
+the MIT licence at \codeurl; the A1--A7 detectors it calls are the
+\texttt{gbfs-toolkit} library (\texttt{pip install gbfs-toolkit}; MIT;
+source at \toolkiturl), independently archived on Zenodo under
+DOI~\toolkitdoi. The global-sweep
 snapshot underlying Section~\ref{secGlobalAudit} is frozen under
 \texttt{experiments/.../global\_audit\_snapshot/} with a
 \texttt{verify\_snapshot.py} that re-derives and asserts every reported
