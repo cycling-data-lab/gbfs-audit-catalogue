@@ -296,8 +296,8 @@ the MobilityData catalogue (936 systems that publish a populated
 \texttt{station\_information}, 46 countries, France included), re-fetched
 live and audited by the same function (Section~\ref{secGlobalAudit}). The
 feed-intrinsic classes A2, A4, A5 and A7 are directly comparable; A1
-($^\ddagger$) is not feed-detectable and is reported at its certain
-feed-only value, with the operator-name heuristic archived. A3 ($^\dagger$)
+($^\ddagger$) is read from the GBFS v3 \texttt{vehicle\_types}
+\texttt{form\_factor}, not from an operator name. A3 ($^\dagger$)
 counts the free-floating share under the same broad definition as the FR
 column, with the over-capacity signature that isolates the Bordeaux
 mechanism reported separately in the footnote. Every count is reproducible: the World column from
@@ -310,7 +310,7 @@ the FR column from the released parquet.}
 \textbf{Class} & \textbf{Name} & \textbf{Signature} & \textbf{FR} & \textbf{World}\\
 \midrule
 \multicolumn{5}{l}{\textit{Structural errors (semantic-contract violations)}}\\
-A1 & Out-of-domain inclusion       & Car-sharing advertised as BSS                          & 17         & 0$^\ddagger$ \\
+A1 & Out-of-domain inclusion       & Car-sharing advertised as BSS                          & 17         & 43$^\ddagger$ \\
 A2 & Placeholder capacity          & Constant non-zero $c_i$ across docked subset           &  1         &  8        \\
 A3 & Structural over-capacity      & Conditional averaging on free-floating                 & 41         & 699$^\dagger$ \\
 A4 & Geospatial error              & $3\sigma$ outlier on per-system nearest-neighbour distance & 88 & 515 \\
@@ -329,12 +329,15 @@ over-capacity reclassification ($\bar c_{\text{profile}}/\bar c_{\text{actual}}
 > 5$) is computed from \texttt{station\_information} alone by the library's
 \texttt{overcapacity\_ratio}; 34 of the 699 World free-floating systems carry
 that over-capacity signature, reproducing the 33 found in the frozen snapshot.\\
-$^\ddagger$ A1 is not feed-intrinsic: a GBFS feed never self-declares
-car-sharing, so the World column reports the certain feed-only value, $0$.
-Identifying car-sharing operators by name is a heuristic, which flags 36
-systems worldwide; we archive that figure pending a dedicated validation and
-do not rely on it. The certified FR count rests on the catalogue's
-hand-checked operator labels.}
+$^\ddagger$ A1 is detected feed-intrinsically from the GBFS v3
+\texttt{vehicle\_types} \texttt{form\_factor}: a system declaring a
+\texttt{car} form factor (and no plain \texttt{bicycle}) is car-sharing,
+read straight from the feed rather than from any operator name. Of the 936
+audited systems, 876 publish \texttt{vehicle\_types}, and 43 declare a car
+fleet; 16 of these are French, matching the catalogue's 17 hand-checked
+car-share systems. The exact-enum match avoids the \texttt{cargo\_bicycle}
+false positive. An operator-name heuristic is needed only for the
+$\sim 6\,\%$ of feeds without \texttt{vehicle\_types}.}
 \end{table}
 
 Of the 142 French GBFS feeds at the national portal, 123 are certified
@@ -892,11 +895,14 @@ publish a populated \texttt{station\_information} and are audited
 cluster-bootstrap $95\,\%$ interval is A4 in $55.0\,\%\,[51.8, 58.2]$ of
 systems, A7 in $30.8\,\%\,[27.9, 33.7]$, A1 in $3.8\,\%\,[2.7, 5.1]$, A2 in
 $0.9\,\%\,[0.3, 1.5]$ and A5 in $3.2\,\%\,[2.1, 4.4]$
-(Table~\ref{tab:anomalies}, World column). Two results follow. First, A1 is
-\emph{not} feed-intrinsic: a GBFS feed never self-declares car-sharing, so
-A1 fires on $0$ raw feeds (an operator-name heuristic would flag 36, which
-we archive rather than rely on), whereas A2, A4, A5 and A7 are intrinsic to
-the feed and need no external metadata. Second, the
+(Table~\ref{tab:anomalies}, World column). Two results follow. First, A1 is feed-intrinsic,
+but in a different document: \texttt{station\_information} carries no type,
+yet the GBFS v3 \texttt{vehicle\_types} feed declares a \texttt{form\_factor},
+which 876 of the 936 systems publish. Reading car-sharing from
+\texttt{form\_factor = car} flags 43 systems worldwide (16 French, matching
+the catalogue), and an operator-name heuristic is needed only for the
+$\sim 6\,\%$ of feeds lacking \texttt{vehicle\_types}; A2, A4, A5 and A7 are
+intrinsic to \texttt{station\_information} itself. Second, the
 feed-intrinsic anomalies recur at double-digit rates across 46 countries
 under thresholds calibrated on France, so the patterns are not
 French-specific. The per-country breakdown below is drawn from a frozen
