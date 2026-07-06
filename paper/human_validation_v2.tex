@@ -1,154 +1,19 @@
 % ======================================================================
-% Human-validation campaign v2 -- drop-in snippet for manuscript.tex
+% Human-validation campaign v2 -- staging snippet [SUPERSEDED]
 % ----------------------------------------------------------------------
-% Integration:
-%   * The Methods block below supersedes \subsection{Human annotation
-%     protocol}\label{secAnnotation}.
-%   * The Results block (with the three tables) supersedes
-%     \subsection{Construct-validity check via blind author annotation}%
-%     \label{secHumanVal}.
-% Replace the v1 section ONLY once the v2 labels are collected; until then
-% the table cells marked "--" / [\,,\,] are placeholders to fill at
-% camera-ready. Requires \usepackage{booktabs} (already loaded) and the
-% Gwet2008AC1 entry added to references.bib.
+% 2026-07-06: the v2 labels were collected (844 annotations, 2 raters x
+% 422 stations) and the final numbers were integrated directly into
+% manuscript.tex:
+%   * \subsection{Construct-validity check via blind, pre-registered
+%     author annotation}\label{secHumanVal}   (results, 3 tables)
+%   * \subsection{Human annotation protocol (pre-registered)}%
+%     \label{secAnnotation}                    (methods)
+% The original labels secHumanVal / secAnnotation were kept so all
+% cross-references remain valid. Gwet2008AC1 was added to references.bib.
+% Numbers come from the pre-registered script
+% experiments/human_validation/compute_reliability.py run unmodified on
+% the two per-annotator label files (report: reliability_report.json);
+% the A2 predicate output is discarded (post-freeze corrected analysis,
+% disclosed in the manuscript).
+% This file is kept only as a record of the staging plan; do not \input.
 % ======================================================================
-
-% ===================== METHODS ========================================
-\subsection{Human-validation protocol (pre-registered)}\label{secAnnotationV2}
-To probe construct validity we re-examined a stratified sample of the
-certified catalogue against external imagery, blind to the pipeline output and
-blind to each other. The earlier four-parallel-question instrument collapsed on
-two interpretive items (Cohen's $\kappa = 0.17$ and $0.13$); we therefore
-replaced it with a \emph{one-question-at-a-time decision tree}, pre-registered
-(frozen sample with its SHA-256, locked codebook, unmodified analysis script
-timestamped before any label is recorded).
-
-\paragraph{Instrument.} The first node classifies the \emph{physical
-infrastructure} (not the transient presence of vehicles) into five types:
-docks with fixed anchor hardware, a ground free-floating zone, scooters only,
-a car-sharing bay, or nothing visible (plus an explicit \emph{indeterminate}
-escape). A docked station then receives a raw dock count (Q2); any located
-object receives two placement questions, geographic perimeter (Q3a) and network
-proximity ($\leq 1$\,km from a sibling or inside the network hull, Q3b). Per-rule
-ground truth is derived \emph{a posteriori} from the adjudicated answers, never
-from a pipeline-referencing verdict: A1 iff car-sharing; A3 iff no physical
-dock; A4 iff Q3b\,=\,no; A5 iff Q3a\,=\,no; A6 iff docked with feed
-capacity\,$=0$; A2 iff the counted docks are inconsistent with the declared
-capacity ($\pm 50\,\%$); A7 is evaluated at the system level only.
-
-\paragraph{Sampling ($n=422$, seed 42).} The design separates two goals,
-because the publication variance lives at the operator level, not the station
-level. (i) A \emph{simple random sample} of $300$ stations drawn from the
-$46{,}307$-station catalogue estimates catalogue-level prevalence
-($\pm 5.7\,\%$ at $95\,\%$ on any proportion) and validates the abundant common
-classes. (ii) \emph{Operator-balanced booster strata} (round-robin across
-distinct systems) cover the rare or decisive classes a random sample cannot:
-the two A4 discordant sets ($40+40$ stations, the decisive ablation), A1
-($30$ stations spanning all $17$ French car-sharing systems), A5 and A2.
-Car-sharing is excluded from the geospatial strata (it terminates at the type
-node). A2/A5/A7 are mono-operator or near-exhaustive in the French corpus and
-confirm parser fidelity for that operator, not the rule's universality.
-
-\paragraph{Adjudication and analysis.} Disagreements are resolved by
-deterministically re-applying the locked codebook; genuinely ambiguous cases
-are marked \emph{indeterminate} and excluded from the coefficients (never
-defaulted for or against the pipeline), and the full raw inter-rater confusion
-matrix is released so any reviewer can recompute alternative bounds. Because the
-strata have extreme class prevalence, $\kappa$ and Krippendorff's $\alpha$ are
-deflated by the prevalence paradox; the pre-registered primary coefficient is
-therefore \textbf{Gwet's AC1}~\cite{Gwet2008AC1}, reported with the raw
-agreement $P_o$ and the modal-class share so the paradox is visible. Per-rule
-precision/recall are reported with a cluster-robust $95\,\%$ interval
-bootstrapped over systems (alongside the naive Wilson
-interval~\cite{Wilson1927Interval}), since stations within an operator are not
-independent. Robustness analyses (Street-View-staleness sensitivity, an
-attention-drift test on per-station timing, and an intra-rater test--retest
-round) are pre-specified. The frozen sample, codebook and analysis script are
-released (\texttt{experiments/human\_validation/}).
-
-% ===================== RESULTS ========================================
-\subsection{Construct-validity check via blind author annotation}\label{secHumanValV2}
-% NOTE: numbers below are placeholders to fill once the v2 labels are collected.
-The two authors independently labelled the $422$-station sample. Inter-rater
-reliability is reported in Table~\ref{tab:reliability-v2}, per-rule performance
-in Table~\ref{tab:perrule-v2}, and catalogue-level prevalence in
-Table~\ref{tab:prevalence-v2}. On the decisive \texttt{A4\_discordant\_legacy}
-stratum, the legacy-centroid false-positive rate (share judged in-network) is
-\textbf{[\,\,/\,\,]} (\,$=$\,\textbf{--}\,\%, Wilson $95\,\%$ CI [--, --]).
-
-\begin{table}[!htbp]
-\centering
-\caption{Inter-rater reliability per decision-tree node and on the composite
-verdict. Primary coefficient: Gwet's AC1~\cite{Gwet2008AC1} (robust to the
-prevalence paradox); $P_o$ (raw agreement), modal-class share, Krippendorff's
-$\alpha$~\cite{Krippendorff2018Content} and Cohen's
-$\kappa$~\cite{Cohen1960Kappa} reported alongside. Indeterminate pairs are
-excluded from the coefficients and reported as a rate. Success target:
-$\mathrm{AC1}\geq0.70$.}
-\label{tab:reliability-v2}
-\small
-\begin{tabular}{@{}lcccccc@{}}
-\toprule
-\textbf{Node} & \textbf{AC1} & \textbf{$P_o$} & \textbf{Modal} &
-\textbf{$\alpha$} & \textbf{Indet.} & \textbf{$n$}\\
-\midrule
-Q0 -- infrastructure type      & -- & -- & -- & -- & -- & -- \\
-Q2 -- dock count               & -- & -- & -- & -- & -- & -- \\
-Q3a -- perimeter               & -- & -- & -- & -- & -- & -- \\
-Q3b -- network proximity       & -- & -- & -- & -- & -- & -- \\
-\midrule
-Composite verdict (secondary)  & -- & -- & -- & -- & -- & -- \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[!htbp]
-\centering
-\caption{Per-rule performance against the author-adjudicated reference, derived
-\emph{a posteriori}. Precision/recall reported with a cluster-robust $95\,\%$
-interval bootstrapped over systems (the manuscript value) and the naive Wilson
-interval. A2/A7 are system-level / mono-operator and report parser fidelity
-only, with no generalisation interval.}
-\label{tab:perrule-v2}
-\small
-\begin{tabular}{@{}llrrrll r@{}}
-\toprule
-\textbf{Rule} & \textbf{Real iff} & \textbf{TP} & \textbf{FP} & \textbf{FN} &
-\textbf{Precision [cluster CI]} & \textbf{Recall [cluster CI]} & \textbf{\#sys}\\
-\midrule
-A1 & car-sharing (Q0)        & -- & -- & -- & -- [--, --] & -- [--, --] & 17 \\
-A2 & count $\neq$ declared   & \multicolumn{6}{l}{system-level / parser fidelity (mono-operator)} \\
-A3 & no physical dock (Q0)   & -- & -- & -- & -- [--, --] & -- [--, --] & -- \\
-A4 & Q3b $=$ no              & -- & -- & -- & -- [--, --] & -- [--, --] & -- \\
-A5 & Q3a $=$ no              & -- & -- & -- & -- [--, --] & -- [--, --] & -- \\
-A6 & docked, capacity $0$    & \multicolumn{6}{l}{no eligible station in this corpus} \\
-A7 & null capacity           & \multicolumn{6}{l}{system-level only (not imagery-validatable)} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[!htbp]
-\centering
-\caption{Catalogue-level prevalence of each class, estimated on the random
-prevalence sub-sample ($n=300$ SRS) only, with Wilson $95\,\%$ intervals; the
-booster strata are excluded as they over-represent rare classes by design. The
-\emph{flag} column is the pipeline's flag rate on the SRS (a deterministic
-property of the audit-dated snapshot); the \emph{confirmed} column is the
-human-adjudicated rate.}
-\label{tab:prevalence-v2}
-\small
-\begin{tabular}{@{}lccc@{}}
-\toprule
-\textbf{Class} & \textbf{Flag rate (SRS)} & \textbf{Wilson 95\,\% CI} &
-\textbf{Human-confirmed}\\
-\midrule
-A1 (car-sharing)        & 2.0\,\%  & [0.9, 4.3]   & -- \\
-A2 (placeholder)        & 0.0\,\%  & [0.0, 1.3]   & -- \\
-A3 (free-floating)      & 89.3\,\% & [85.3, 92.3] & -- \\
-A4 (geospatial)         & 1.0\,\%  & [0.3, 2.9]   & -- \\
-A5 (out-of-perimeter)   & 1.7\,\%  & [0.7, 3.8]   & -- \\
-A6 (zero-capacity dock) & 0.0\,\%  & [0.0, 1.3]   & -- \\
-A7 (null capacity)      & 73.0\,\% & [67.7, 77.7] & -- \\
-\bottomrule
-\end{tabular}
-\end{table}

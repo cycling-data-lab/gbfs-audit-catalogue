@@ -112,15 +112,19 @@ to below the median of the national dock-count distribution, which measures
 the policy cost of skipping the audit. Projected at French-calibrated thresholds, the anti-patterns appear
 global rather than French-specific: 245 systems are flagged by A7 alone
 (97{,}314 stations), led by one operator that declares
-\texttt{capacity = NaN} across entire national deployments. Any quantitative use of GBFS data should therefore be
+\texttt{capacity = NaN} across entire national deployments. A pre-registered, blind re-annotation of 422 stations confirms construct
+validity: $96.8\,\%$ of adjudicated A3 flags mark genuinely defective
+records, every adjudicated legacy-only geospatial flag is a confirmed
+false positive (14/14), and one adjudicated station in five is a ghost
+with no infrastructure on the ground. Any quantitative use of GBFS data should therefore be
 preceded by an explicit and reproducible audit. The pipeline and a Docker
 image are released for reproducible rebuilds.
 
 \begin{highlights}
 \item Seven-class taxonomy (5 structural, 2 semantic); projected across 1{,}509 GBFS systems
-\item Topology-aware A4 detector reclassifies 8{,}005 legacy flags (46/46 audited false)
+\item Topology-aware A4 detector reclassifies 8{,}005 legacy flags (pre-registered blind audit: 14/14 adjudicated flags false)
 \item Leave-one-operator-out CV on 7 operators supports rule generalisability
-\item 30.9\,\% of raw FR stations reclassified; hotspots are operator-driven
+\item 30.9\,\% of raw FR stations reclassified; blind audit: 1 in 5 stations is a ghost
 \item Released as a versioned Parquet (46k stations) with Docker and a hold-out test
 \end{highlights}
 
@@ -593,7 +597,7 @@ archived on Zenodo under its own DOI (\toolkitdoi), so a downstream study
 can pin the exact detector version it relied on; the
 human-validation gold standard (\texttt{gold\_labels.csv}), the
 inter-rater reliability report and the blind annotation tool ship with the
-repository (\texttt{experiments/annotation/}).
+repository (\texttt{experiments/human\_validation/}).
 Raw sources are archived with SHA-256 hashes; the Python
 environment is declared in \texttt{requirements.txt} (with
 \texttt{gbfs-toolkit} pinned to the exact release used to certify the
@@ -1162,7 +1166,11 @@ illustrate the gain: \emph{Paris} (1{,}507 stations) drops from 260
 legacy flags to 43 composite flags (saving 217 false positives);
 \emph{Dott-Paris} (14{,}747 stations) drops from 2{,}750 to 0; and
 \emph{Clermont-Ferrand} (82 stations, linear network with $r = 6.07$)
-drops from 18 to~0.
+drops from 18 to~0. The pre-registered human audit of
+Section~\ref{secHumanVal} adjudicates both sides of this disagreement:
+it confirms the removed legacy flags as false positives ($14/14$) but
+does not confirm the bulk of the composite-only candidates, which the
+production fusion threshold of $0.8$ already discards.
 
 \begin{table}[!htbp]
 \centering
@@ -1321,179 +1329,272 @@ These algorithmic checks complement, but do not replace, the human
 construct-validity check of Section~\ref{secHumanVal}; they are reported
 as robustness measures, not as substitutes.
 
-\subsection{Construct-validity check via blind author annotation}\label{secHumanVal}
+\subsection{Construct-validity check via blind, pre-registered author annotation}\label{secHumanVal}
 The ablation of Section~\ref{secA4v2} and the cross-validation above
 compare \emph{algorithms}; neither can establish which verdict matches the
-physical world. We therefore add an \emph{author-led consistency check}: the
-two authors independently re-examined a stratified station sample against
-external imagery, blind to the pipeline's output and to each other's labels,
-to test whether the flagged anomalies track physical reality rather than
-algorithmic artefacts. This is \emph{not} an external gold standard: both
-annotators are this paper's authors, so we report it as an internal sanity
-check on construct validity, not as independent ground truth. The blinding
-(to the pipeline and to the co-annotator) controls for anchoring within
-that scope, and an external multi-institution annotation is left to future
-work (Section~\ref{secLimitations}). Within this scope the check serves
-two purposes: (i) confirm that the flagged anomalies correspond to real
-data defects, and (ii) adjudicate
-the 8{,}005 stations on which the legacy centroid and the topology-aware A4
-detector disagree.
+physical world. We therefore re-examined a stratified sample of $n = 422$
+catalogue stations against external imagery in a \emph{pre-registered}
+campaign: frozen sample (with its SHA-256), locked codebook and analysis
+script, all fixed before any label was recorded
+(Section~\ref{secAnnotation}). The two authors labelled every station
+independently, blind to the pipeline output and to each other, and every
+number below uses concordant judgements only, so the estimates are
+conservative by construction. This is an internal construct-validity check
+whose credibility rests on pre-registration rather than on annotator
+independence (Section~\ref{secLimitations}).
 
-On the discordant-legacy stratum, all of the legacy-only A4 flags that
-reached a consensus geospatial judgement were judged true false positives
-(46 of 46 consensus cases, i.e.\ a point estimate of $100\,\%$ with
-Wilson 95\,\% CI [92.3, 100]\,\%; the remaining 4 of the 50 sampled stations
-were non-consensus and excluded, so the conservative reading is ``no
-confirmed true positive among the 50''). This supports the conclusion that
-the topology-aware detector's removal of these flags is a correction rather
-than a loss of recall.
+The campaign delivers three results. \textbf{(i)}~On the decisive
+discordant-legacy stratum, \emph{every} station with a concordant
+proximity judgement was judged connected to its network: the legacy-only
+A4 flags are confirmed false positives at $100\,\%$ (14/14, Wilson 95\,\%
+CI $[78.5, 100]\,\%$), with no confirmed true positive anywhere in the
+stratum. \textbf{(ii)}~The redesigned instrument measures the judgements
+that carry this conclusion with near-ceiling reliability: the
+network-position question that collapsed at $\kappa = 0.13$ in campaign
+v1 reaches $\mathrm{AC1} = 0.946$, and the perimeter question $0.983$.
+\textbf{(iii)}~At catalogue level, the audit's dominant flag is
+overwhelmingly justified ($96.8\,\%$ of adjudicated A3 flags mark
+genuinely defective records), and the campaign quantifies a defect class
+previously invisible to feed-only audits: one adjudicated random station
+in five is a \emph{ghost}, with no service infrastructure on the ground.
 
-The two authors, an urban-mobility researcher and a data engineer, each
-labelled the stratified sample of 325 stations independently, blind
-to the pipeline output and to each other's labels (Section~\ref{secAnnotation}).
-Inter-rater reliability is reported in Table~\ref{tab:irr} and per-rule performance,
-derived \emph{a posteriori} from the factual judgements, in
-Table~\ref{tab:perrule}. Of the $n=325$ co-rated stations, the holistic
-verdict reached consensus on 286 (88\,\%) with 39
-disagreements sent to adjudication and 0 stations adjudicated as
-indeterminate; the residual ambiguity surfaces instead at the level of
-individual factual questions (notably the A1/A3 boundary), which are
-excluded from precision and recall on a per-question basis but reported
-here as a result in their own right.
+\paragraph{Inter-rater reliability.}
+Table~\ref{tab:irr} reports agreement per decision-tree node. The two
+geospatial nodes exceed the pre-registered target
+($\mathrm{AC1} \ge 0.70$) by a wide margin, $0.983$ for the perimeter
+question and $0.946$ for network proximity against $\kappa = 0.13$ for
+the equivalent v1 question: the one-question-at-a-time redesign repaired
+exactly the judgements that carry the audit's geospatial verdicts. The
+table also shows why AC1 was pre-registered as the primary coefficient:
+on Q3a both annotators judge $\sim$$99\,\%$ of stations in-perimeter, so
+Krippendorff's $\alpha$ collapses to $-0.006$ \emph{despite} $98\,\%$ raw
+agreement, the textbook prevalence paradox~\cite{Gwet2008AC1}.
 
 \begin{table}[!htbp]
 \centering
-\caption{Inter-rater reliability between the two annotators
-($n=325$ co-rated stations). Krippendorff's $\alpha$
-\cite{Krippendorff2018Content} is the primary measure (it handles
-indeterminate labels and generalises beyond two raters); Cohen's $\kappa$
-\cite{Cohen1960Kappa} is reported for comparability against the
-``substantial agreement'' benchmark $\kappa \geq 0.70$ of
-\cite{Landis1977Agreement}.}
+\caption{Inter-rater reliability per decision-tree node, on co-routed
+stations, indeterminate pairs excluded from the coefficients and reported
+as a rate. The pre-registered primary coefficient is Gwet's
+AC1~\cite{Gwet2008AC1}, robust to the prevalence paradox that deflates
+Krippendorff's $\alpha$~\cite{Krippendorff2018Content} and Cohen's
+$\kappa$~\cite{Cohen1960Kappa} on skewed marginals (both are shown, with
+the modal-class share, so the paradox stays visible). Pre-registered
+success target: $\mathrm{AC1} \ge 0.70$; a node below $0.60$ is flagged as
+an instrument weakness. Q2 elicits a raw count, for which nominal
+coefficients are not meaningful; its agreement is reported in the text.}
 \label{tab:irr}
 \small
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular}{@{}lccccccc@{}}
 \toprule
-\textbf{Judgement} & \textbf{$\kappa$} & \textbf{$\alpha$}
-                   & \textbf{Agreement} & \textbf{$n$}\\
+\textbf{Node} & \textbf{AC1} & \textbf{$P_o$} & \textbf{Modal} &
+\textbf{$\alpha$} & \textbf{$\kappa$} & \textbf{Indet.} & \textbf{$n$}\\
 \midrule
-Q1 -- is a bike-share system?       & 0.70 & 0.70 & 86\,\% & 325\\
-Q2 -- capacity physical?            & 0.17 & 0.08 & 38\,\% & 325\\
-Q3 -- infrastructure on the ground? & 0.62 & 0.61 & 81\,\% & 325\\
-Q4 -- coherent network position?    & 0.13 & 0.11 & 88\,\% & 325\\
-Holistic verdict                    & 0.71 & 0.71 & 88\,\% & 325\\
+Q0 -- infrastructure type & 0.559 & 63\,\% & 49\,\% & 0.449 & 0.456 & 7.9\,\% & 386/419\\
+Q2 -- dock count          & \multicolumn{5}{c}{numeric node; see text} & 6.3\,\% & 30/32\\
+Q3a -- perimeter          & \textbf{0.983} & 98\,\% & 99\,\% & $-0.006$ & $-0.006$ & 0.8\,\% & 237/239\\
+Q3b -- network proximity  & \textbf{0.946} & 95\,\% & 96\,\% & 0.309 & 0.319 & 0.0\,\% & 239/239\\
+\midrule
+Composite verdict (secondary) & 0.532 & 56\,\% & 46\,\% & 0.375 & 0.382 & -- & 422\\
 \bottomrule
 \end{tabular}
 \end{table}
+
+The two remaining nodes localise the residual difficulty without touching
+those verdicts, and their disagreement patterns are findings in their own
+right. The infrastructure-type node Q0 sits below the pre-registered
+target ($\mathrm{AC1} = 0.559$, reported as an instrument weakness per
+protocol), and its divergences are systematic rather than random:
+scooters-only versus free-floating bikes on mixed-fleet operators (26
+cases in one direction, none in the other), an empty car-sharing bay
+versus nothing visible (24 cases), a virtual free-floating zone versus
+nothing visible (49 cases). All three are boundary objects that offer no
+observable hardware, precisely the cases where the GBFS specification is
+silent on what a ``station'' physically is: the node fails where the
+standard itself underspecifies, which is the gap the taxonomy formalises
+and the operator recommendations of Section~\ref{secLimitations} address.
+The dock-count node Q2 makes the same point for capacity: even two domain
+experts on shared imagery cannot reliably elicit a dock count (exact
+agreement $33\,\%$, $n = 30$), independent corroboration that declared
+capacity is not auditable without ground truth. Rule A2 accordingly keeps
+its system-level parser-fidelity validation (Table~\ref{tab:perrule}).
+
+\paragraph{Per-rule performance.}
+Table~\ref{tab:perrule} confirms the flags that dominate the catalogue.
+A3, which carries the audit's headline reclassification, reaches recall
+$0.99$ $[0.93, 1.00]$ and marks a genuinely defective record in
+$96.8\,\%$ $[93.2, 98.5]$ of adjudicated cases (183/189): only 6 of 189
+flags landed on healthy infrastructure. Its class-exact precision
+($0.73$ $[0.49, 0.82]$) is lower for an instructive reason: 45 of the 51
+nominal false positives are stations where the annotators found
+\emph{nothing at all}, defects more severe than the flag asserts rather
+than healthy stations wrongly flagged. A1 reaches recall $0.91$ with
+precision $0.71$, and three of its four false positives are empty
+car-sharing bays judged ``nothing visible'' on the imagery, the boundary
+object above, so they indict the imagery at least as much as the rule.
+A4's per-station sample is small but clean (2~TP, 0~FP); its decisive
+test is the ablation below. A5 fires on declared-perimeter
+inconsistencies that are invisible in imagery (none of its 12 assessable
+flags was visibly misplaced), so its construct, like A2's and A7's, is
+validated at the system level instead (Section~\ref{secLOOO}). The triage
+framing of these rules is unchanged: A3--A5 are high-recall screening
+filters whose false positives cost one human glance each, and the
+decisive question, whether the flags the topology-aware detector
+\emph{removes} are genuine false positives, is answered next.
 
 \begin{table}[!htbp]
 \centering
-\caption{Per-rule performance against the author-adjudicated reference,
-derived \emph{a posteriori} from the factual judgements (the reference never
-encodes a verdict about the pipeline). Confidence intervals are Wilson
-95\,\%~\cite{Wilson1927Interval}. A2 and A7 are system-level structural
-rules not amenable to per-station imagery validation (a single operator
-each in this snapshot); A6 and the A3-boundary stratum had no eligible
-stations, so their per-station recall is not estimated here.}
+\caption{Per-rule performance against the adjudicated reference, derived
+\emph{a posteriori} from concordant node answers (never from a
+pipeline-referencing verdict), pooling the SRS and the booster strata.
+Intervals: cluster-robust 95\,\% bootstrap over systems (2{,}000
+resamples, seed 42); A4, with too few positives for a stable bootstrap,
+reports the Wilson interval~\cite{Wilson1927Interval}. A5 recall is not
+estimable (no adjudicated out-of-perimeter station).}
 \label{tab:perrule}
 \small
-\begin{tabular}{@{}llcccll@{}}
+\begin{tabular}{@{}llrrrll@{}}
 \toprule
-\textbf{Rule} & \textbf{Ground-truth criterion} & \textbf{TP} & \textbf{FP}
-              & \textbf{FN} & \textbf{Precision\,[95\,\% CI]} & \textbf{Recall\,[95\,\% CI]}\\
+\textbf{Rule} & \textbf{Real iff} & \textbf{TP} & \textbf{FP} & \textbf{FN}
+& \textbf{Precision [95\,\% CI]} & \textbf{Recall [95\,\% CI]}\\
 \midrule
-A1 & not a bike-share system (Q1)     & 68 &  2 & 127 & 0.97\,[0.90, 0.99] & 0.35\,[0.29, 0.42]\\
-A3 & no physical dock (Q3)            & 44 & 48 &  69 & 0.48\,[0.38, 0.58] & 0.39\,[0.31, 0.48]\\
-A4 & incoherent network position (Q4) &  2 &  5 &   2 & 0.29\,[0.08, 0.64] & 0.50\,[0.15, 0.85]\\
-A5 & out-of-perimeter (Q4)            &  3 & 33 &   1 & 0.08\,[0.03, 0.22] & 0.75\,[0.30, 0.95]\\
+A1 & car-sharing (Q0)          & 10 & 4 & 1 & 0.71\,[0.42, 0.93] & 0.91\,[0.67, 1.00]\\
+A3 & no physical dock (Q0)     & 138 & 51 & 2 & 0.73\,[0.49, 0.82] & 0.99\,[0.93, 1.00]\\
+A4 & disconnected (Q3b $=$ no) & 2 & 0 & 1 & 1.00\,[0.34, 1.00] & 0.67\,[0.21, 0.94]\\
+A5 & out of perimeter (Q3a $=$ no) & 0 & 12 & 0 & 0.00\,[0.00, 0.24] & \multicolumn{1}{c}{--}\\
+\midrule
+A2 & \multicolumn{6}{l}{not per-station assessable (no concordant dock count); system-level parser fidelity only}\\
+A6 & \multicolumn{6}{l}{no eligible station in the sample (no docked station with declared capacity $0$)}\\
+A7 & \multicolumn{6}{l}{system-level semantic warning, not imagery-validatable (252 flagged stations, 30 systems)}\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\paragraph{Reading Table~\ref{tab:perrule}: screening filters, not oracles.}
-The per-rule \emph{recall} is mechanically deflated, because the
-factual predicates are shared across strata
-(Q1 underlies A1, Q3 underlies A3, Q4 underlies A4 and A5): every off-stratum
-station that satisfies a predicate without carrying the corresponding flag is
-booked as a false negative, so the recall column understates within-stratum
-sensitivity. A1, for instance, attains precision $0.97$ while its recall is
-dragged to $0.35$ by non-A1 strata. The modest precision of the geospatial
-rules (A4~$=0.29$ and A5~$=0.08$ on small per-station samples; A3~$=0.48$)
-reflects the role these rules are \emph{designed} to play. A4 and A5 are
-\emph{high-recall triage filters}, not autonomous oracles. Their function in
-the protocol is to compress a $46{,}307$-station catalogue into a small
-candidate set that a human moderator can inspect, so an over-inclusive flag
-(high recall, moderate precision) is the intended operating point: the cost of
-a false positive is a single human glance, whereas a false negative silently
-corrupts a downstream aggregate. The decisive question for such a filter
-is therefore not its standalone precision but whether the flags it
-\emph{removes} are genuine false positives, precisely what the
-discordant-legacy check establishes ($46/46$ consensus cases). The catalogue
-ships per-row flags so that this final human-moderation step remains possible
-and auditable, rather than presenting the detector output as a finished verdict.
+\paragraph{The A4 ablation, adjudicated.}
+The campaign's decisive result adjudicates the disagreement of
+Table~\ref{tab:ablation} between the legacy centroid detector and the
+topology-aware composite. On the \emph{discordant-legacy} stratum
+(sampled from the 8{,}005 stations the legacy method alone flags), all 14
+stations with a concordant proximity judgement were judged connected to
+their network: a legacy false-positive rate of $100\,\%$ (Wilson 95\,\%
+CI $[78.5, 100]\,\%$), with no confirmed true positive anywhere in the
+40. This replicates, under a stricter pre-registered instrument, campaign
+v1's $46/46$ on the same population; the two campaigns together leave the
+conclusion in little doubt. The \emph{discordant-composite} stratum
+completes the picture: 9 of its 21 adjudicated stations are ghosts
+(nothing on the ground, a defensible flag) and one of the 12 with a
+concordant proximity judgement is confirmed out-of-network. The
+production rule anticipates exactly this asymmetry: at the shipped fusion
+threshold of $0.8$ (step~S5, Section~\ref{secProtocol}) none of the 40
+sampled composite-only stations is flagged, so the certified catalogue
+removes the 8{,}005 legacy false positives \emph{without} inheriting
+speculative new flags. The human check thus validates both halves of the
+design choice: what the composite detector removes is wrong, and what it
+declines to add is not missed.
 
-The reliability pattern is itself informative. Agreement reaches the
-``substantial'' benchmark on the two judgements that carry the audit's
-verdicts, the holistic verdict ($\kappa = 0.71$) and the bike-share /
-out-of-domain distinction Q1 ($\kappa = 0.70$), and is close on the
-physical-infrastructure judgement Q3 ($\kappa = 0.62$). The two low-$\kappa$
-questions are not measurement failures; each is interpretable, and one is
-itself a finding. Q4 (network-position coherence) shows $\kappa = 0.13$
-\emph{despite} 88\,\% raw agreement, the textbook $\kappa$ paradox, in which
-an extreme marginal asymmetry (both annotators judge $\sim$95\,\% of stations
-in-perimeter, because a genuine perimeter anomaly is rare) collapses the
-chance-corrected coefficient even when observed concordance is high. With the
-positive class this scarce, raw agreement is the more informative summary here,
-and on the decisive discordant-legacy stratum the two coders independently
-agreed ``in-perimeter'' on 46 of 50 stations, so the A4 conclusion above does
-not rest on the degenerate global $\kappa$. Q2 (capacity coherence) shows
-$\kappa = 0.17$, and this low value is itself evidence for the paper's
-central thesis: the disagreement traces to one annotator reading the literal
-GBFS \texttt{capacity} \emph{field state} while the other judged the
-\emph{physical plausibility} of the value, exactly the
-literal-versus-semantic tension that makes the field non-aggregable in the
-first place (Section~\ref{secTaxonomy}). That two domain experts diverge on
-what \texttt{capacity} \emph{means} is a direct human-side manifestation of
-the specification ambiguity the taxonomy formalises; harmonising onto a single
-rubric raises raw agreement to 76\,\%. Q2 enters no precision/recall
-computation, and the capacity rules A2/A7 are evaluated at the system level
-(Section~\ref{secA4v2}, Table~\ref{tab:looo}) rather than from
-single-station imagery. The residual divergence concentrates on the
-A1/A3 boundary (a car-sharing bay versus a free-floating drop zone), i.e.\
-\emph{boundary objects} the GBFS specification permits to be encoded
-ambiguously, evidence that the standard underspecifies what a ``station''
-physically is, which motivates the operator recommendations of
-Section~\ref{secLimitations}.
+\paragraph{Catalogue-level prevalence.}
+Table~\ref{tab:prevalence} estimates how common each class is, on the
+random SRS only ($n = 300$; the booster strata over-represent rare
+classes by design). The flag rates are deterministic properties of the
+audit-dated snapshot; the confirmation column is conditional on
+concordant labels (190 of 300 stations are decidable at Q0). Two findings
+stand out. First, the dominant A3 flag ($89.3\,\%$ of the SRS) is
+overwhelmingly justified: $76.3\,\%$ of flagged, decidable stations are
+confirmed free-floating points presented as stations, rising to
+$96.5\,\%$ $[92.6, 98.4]$ once ghost stations are counted as the defects
+they are. Second, the campaign delivers what is, to our knowledge, the
+first quantified ghost-station rate for a national GBFS corpus: 37 of the
+300 sampled stations ($12.3\,\%$, Wilson $[9.1, 16.5]\,\%$, a lower bound
+that counts every non-adjudicated station as healthy; $19.5\,\%$
+$[14.5, 25.7]$ among decidable stations) show no service infrastructure
+at the declared coordinate. The audit already surfaces almost all of
+them, 35 of the 37 carrying an A3 flag, so the certified catalogue
+quarantines these records today; promoting them to a dedicated
+ghost-station class requires the dynamic \texttt{station\_status}
+evidence deferred to the L2 audit layer and is the clearest item on the
+roadmap (Section~\ref{secLimitations}).
 
-\subsection{Human annotation protocol}\label{secAnnotation}
-To probe construct validity independently of the pipeline's output we drew a
-stratified sample of 325 stations across nine strata, deduplicated
-across strata and shuffled to remove order effects (seed 42), over-sampling
-the two A4 discordant strata ($n=50$ each) where the adjudicated answer is
-decisive. The two authors evaluated each station independently and blind to
-each other and to the pipeline: the audit flags, audited type and confidence were
-hidden behind an opt-in panel, and a single universal rubric (with no
-stratum label) was shown for every station.
+\begin{table}[!htbp]
+\centering
+\caption{Catalogue-level prevalence of each class on the random
+prevalence sub-sample only ($n = 300$ SRS), with Wilson 95\,\% intervals;
+booster strata excluded by design. \emph{Flag rate}: pipeline flag on the
+audit-dated snapshot. \emph{Human-confirmed}: adjudicated confirmation
+among flagged SRS stations with concordant labels.}
+\label{tab:prevalence}
+\small
+\begin{tabular}{@{}lccl@{}}
+\toprule
+\textbf{Class} & \textbf{Flag rate (SRS)} & \textbf{Wilson 95\,\% CI} &
+\textbf{Human-confirmed}\\
+\midrule
+A1 (car-sharing)        & 2.0\,\%  & [0.9, 4.3]   & 3/3 flagged confirmed \\
+A2 (placeholder)        & 0.0\,\%  & [0.0, 1.3]   & no flag on the SRS \\
+A3 (free-floating)      & 89.3\,\% & [85.3, 92.3] & 132/173 class-exact; 167/173 defective \\
+A4 (geospatial)         & 1.0\,\%  & [0.3, 2.9]   & 2/3 ghost at the point; 0 assessable for Q3b \\
+A5 (out-of-perimeter)   & 1.7\,\%  & [0.7, 3.8]   & 0/3 (see construct mismatch above) \\
+A6 (zero-capacity dock) & 0.0\,\%  & [0.0, 1.3]   & no flag on the SRS \\
+A7 (null capacity)      & 73.0\,\% & [67.7, 77.7] & system-level, not imagery-validatable \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-The annotation is \emph{pipeline-agnostic}: annotators judge the
-physical reality of each station (installation type, visible
-infrastructure, capacity coherence and network position) from a
-CyclOSM/satellite map, Street View and OpenStreetMap; they never label
-``the pipeline is right'' or ``wrong''. Per-rule true/false positives and
-negatives are derived \emph{a posteriori} by joining the adjudicated
-factual answers with the flags: A1 is a true positive iff the station is
-judged not a bike-share system; A3 and A6 iff no physical dock is present;
-A4 and A5 iff the position is judged incoherent with the network. A2 and A7
-are structural data-property rules validated at the system level. This
-design removes the circularity of asking a blind annotator to label a
-``pipeline false positive''. Disagreements were resolved by consensus,
-with a third adjudicator on residual conflicts. Reliability uses
-Krippendorff's $\alpha$~\cite{Krippendorff2018Content} alongside Cohen's
-$\kappa$~\cite{Cohen1960Kappa, ArtsteinPoesio2008}; proportions use Wilson
-95\,\% intervals~\cite{Wilson1927Interval}; stratum sizes follow a
-power analysis recorded in the released protocol. The stratified sample,
-the blind annotation interface and the reliability computation are released
-with the repository (\texttt{experiments/annotation/}).
+\subsection{Human annotation protocol (pre-registered)}\label{secAnnotation}
+Campaign v1 asked four parallel factual questions of every station and
+two of them collapsed (capacity coherence at $\kappa = 0.17$, network
+position at $\kappa = 0.13$): interpretive phrasing, asked off-context.
+Campaign v2 replaces the instrument with a \emph{one-question-at-a-time
+decision tree} and pre-registers the entire chain: frozen 422-station
+sample with its SHA-256, locked codebook with worked examples, and the
+analysis script fixed before any label was recorded; post-freeze changes
+are barred and, where unavoidable, disclosed as such.
+
+\emph{Instrument.} The first node Q0 classifies the \emph{physical
+infrastructure} (not the transient presence of vehicles) into five types:
+docks with fixed anchor hardware, a ground free-floating zone, scooters
+only, a car-sharing bay, or nothing visible, plus an explicit
+\emph{indeterminate} escape at every node. A docked station receives a
+raw dock count (Q2); any located object receives two placement questions,
+geographic perimeter (Q3a) and network proximity ($\le 1$\,km from a
+sibling or inside the network hull, Q3b). Per-rule ground truth is
+derived \emph{a posteriori} from the adjudicated answers, never from a
+pipeline-referencing verdict: A1 iff car-sharing; A3 iff no physical
+dock; A4 iff Q3b\,$=$\,no; A5 iff Q3a\,$=$\,no; A6 iff docked with
+declared capacity $0$; A2 iff the counted docks are inconsistent with the
+declared capacity ($\pm 50\,\%$); A7 is evaluated at the system level
+only. The annotators (an urban-mobility researcher and a data engineer)
+judge from Street View, satellite imagery and OpenStreetMap with a
+sibling-station overlay; no stratum label or pipeline output is ever
+displayed.
+
+\emph{Sampling ($n = 422$, seed 42).} The design separates two goals,
+because the publication variance lives at the operator level. (i)~A
+simple random sample of 300 stations from the $46{,}307$-station
+catalogue estimates catalogue-level prevalence ($\pm 5.7\,\%$ at
+$95\,\%$) and validates the abundant classes. (ii)~Operator-balanced
+booster strata (round-robin across distinct systems) cover the rare or
+decisive classes: the two A4 discordant sets ($40 + 40$, the ablation of
+Section~\ref{secA4v2}), A1 (30 stations spanning all 17 French
+car-sharing systems), A5 (8) and A2 (4). Car-sharing is excluded from the
+geospatial strata (it terminates at Q0). A2 and A5 are mono- or
+pauci-operator in the French corpus and validate parser fidelity, not
+rule universality.
+
+\emph{Adjudication and analysis.} Disagreements are resolved by
+deterministically re-applying the locked codebook to re-fetched imagery;
+genuinely ambiguous cases are marked indeterminate and excluded, never
+defaulted for or against the pipeline, and the raw inter-rater confusion
+matrices are released so a reviewer can recompute alternative bounds.
+Because several strata have extreme class prevalence, the pre-registered
+primary reliability coefficient is Gwet's AC1~\cite{Gwet2008AC1},
+reported with raw agreement, the modal-class share, Krippendorff's
+$\alpha$ and Cohen's $\kappa$ so the prevalence paradox stays visible.
+Per-rule precision and recall carry a cluster-robust $95\,\%$ interval
+bootstrapped over systems ($2{,}000$ resamples, seed 42) alongside the
+Wilson interval, since stations within an operator are not independent.
+Street-View-staleness sensitivity, an attention-drift test on per-station
+timing and an intra-rater test-retest round are pre-specified. The frozen
+sample, codebook, annotation tool and analysis script are released
+(\texttt{experiments/human\_validation/}).
 
 \subsection{Cross-country transferability pilot}
 To verify out-of-sample transferability of A1--A7 beyond French
@@ -1862,7 +1963,8 @@ guaranteed and must be re-evaluated periodically (experiment E3).
 
 \textbf{L5 -- Scope and independence of the human check.} The
 construct-validity check (Section~\ref{secHumanVal}) covers the rules
-verifiable from spatial imagery (A1, A3, A4, A5). A2 and A7 are structural
+verifiable from spatial imagery (A1, A3, A4; the v2 campaign shows that
+A5's declared-perimeter construct is only partially imagery-verifiable). A2 and A7 are structural
 data-property rules confirmed at the system level only (each is represented
 by a single operator in this catalogue snapshot), and A6 and the A3-boundary
 stratum had no eligible stations, so their per-station recall is not
