@@ -242,3 +242,74 @@ annotator and per round.
 - `reliability_report.json` - per-question AC1/alpha/kappa/Po/modal/indeterminate,
   raw inter-rater confusion, per-rule P/R with Wilson and cluster-robust CIs,
   A4 FP rate, Street-View-staleness sensitivity, fatigue test
+
+---
+
+## 9. Post-freeze amendment log (added 2026-07-06, after label collection)
+
+Sections 1-8 above are the frozen pre-registration and are unchanged. Per the
+freeze rule of this document, every deviation observed during or after the
+campaign is logged here, dated, and clearly separated from the frozen text.
+The paired analysis notes live in `RESULTS.md`.
+
+**A9.1 - A2 predicate defect (analysis correction, disclosed).** The frozen
+`compute_reliability.py` mishandles missing adjudicated dock counts in
+`_pred_A2` (a rater disagreement yields a NaN gold value; `not nan` is falsy
+and NaN comparisons return False, so the predicate returns True). All 47
+nominally "assessable" A2 stations in the frozen script's output arise from
+this path; the true count of stations with a concordant dock count is 0. The
+frozen script's A2 precision/recall output is therefore discarded, and the
+manuscript reports A2 as **not per-station assessable**, keeping only the
+pre-registered system-level parser-fidelity reading. The frozen script itself
+is left unmodified, as required by the freeze.
+
+**A9.2 - Q2 agreement metric (exploratory recomputation).** The frozen script
+compares Q2 answers as strings, which is degenerate for a raw count ("24" vs
+"24.0"). The manuscript reports the exploratory numeric recomputation instead:
+exact agreement 33%, within +/-20% 40%, Spearman 0.03 (n = 30 co-routed
+pairs). Both computations are reproducible from the released labels.
+
+**A9.3 - Street-View staleness sensitivity: not computable.** The Street View
+Metadata API key was unavailable during the campaign (`sv_status = NO_KEY` on
+all 844 rows), so capture dates were never recorded and the pre-specified
+staleness sensitivity (Section 6) returns an empty subset. The imagery-currency
+mitigation of Section 7 therefore rests on the codebook's indeterminate
+routing alone, and the ghost-station estimates carry this caveat.
+
+**A9.4 - Intra-rater test-retest round: not conducted.** The second annotation
+round pre-specified in Section 5 (`revisit_round`) was not run before
+manuscript integration. It remains possible on the frozen sample and would be
+reported as a dated addendum here.
+
+**A9.5 - Success-gate outcome (recorded, no threshold change).** Against the
+pre-registered gates of Section 6 (AC1 >= 0.70 per node; < 0.60 = instrument
+weakness): Q3a = 0.983 and Q3b = 0.946 pass; Q0 = 0.559 is recorded as an
+instrument weakness, as pre-specified; Q2 is covered by A9.2. The gates
+themselves are unchanged.
+
+**A9.6 - Phase 2 adjudication: pending.** All published numbers use
+concordant judgements only (gold = agreement); the 212 stations with at least
+one contested node are excluded from the affected quantities. The deterministic
+codebook re-application of Section 5 (Phase 2) has not yet been held; it can
+only add assessable stations to the per-rule counts and does not alter the
+inter-rater coefficients, which are final by construction.
+
+**A9.7 - Reporting split.** The manuscript reports the pre-registered
+endpoints (per-node AC1, per-rule P/R with cluster CIs, the A4 ablation
+endpoint, SRS prevalence). The robustness items affected by A9.3-A9.4 and the
+corrections A9.1-A9.2 are documented in this log and in `RESULTS.md`, released
+with the raw per-annotator labels and the frozen script's full output
+(`reliability_report.json`), so every alternative bound remains recomputable.
+
+**A9.8 - Exploratory OSM cross-validation (added 2026-07-06, not
+pre-registered).** Because the Street View capture dates are unrecoverable
+without credentials (A9.3), an independent-source corroboration replaces the
+staleness sensitivity: the adjudicated physical-existence judgements are
+cross-checked against OpenStreetMap via two credential-free Overpass sweeps
+(`amenity=bicycle_rental` and `amenity=car_sharing`, nodes and ways, nearest
+distance per station of the frozen sample), with concordance reported at three
+radii (50 / 100 / 150 m) so the radius choice is visibly not doing the work.
+This is a different construct from imagery staleness (community mapping
+coverage instead of imagery currency) and is reported as exploratory,
+clearly separated from the pre-registered endpoints. Script:
+`osm_crosscheck.py`; output: `osm_crosscheck.csv`.

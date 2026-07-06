@@ -44,7 +44,10 @@ import streamlit.components.v1 as components
 from storage import get_store
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SAMPLE_PATH = Path(__file__).resolve().parent / "sample.csv"
+# HV_SAMPLE_PATH lets a session point at an alternative frozen list (e.g.
+# retest_sample.csv for the intra-rater round) without touching sample.csv.
+SAMPLE_PATH = Path(os.environ.get("HV_SAMPLE_PATH",
+                                  Path(__file__).resolve().parent / "sample.csv"))
 LABELS_DIR = Path(__file__).resolve().parent
 CATALOGUE_PATH = REPO_ROOT / "catalogue" / "stations_gold_standard_final.parquet"
 

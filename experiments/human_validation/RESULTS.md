@@ -53,3 +53,25 @@ tab:irr / tab:perrule / tab:prevalence):
   contested node (can only add assessable stations; reliability
   coefficients are final).
 - Intra-rater test-retest round (`revisit_round` is 0 everywhere).
+
+## OSM cross-validation (exploratory, amendment A9.8, run 2026-07-06)
+
+Two credential-free Overpass sweeps (`osm_crosscheck.py`, output
+`osm_crosscheck.csv`): nearest `amenity=bicycle_rental` and
+`amenity=car_sharing` OSM object (nodes + ways) per station of the frozen
+sample. Presence rate by adjudicated Q0, Wilson 95% CIs:
+
+| Adjudicated class | 50 m | 100 m | 150 m |
+|---|---|---|---|
+| vls_borne (docked)   | 87.5% (28/32) | **90.6% (29/32)** | 90.6% |
+| vls_sans_borne       | 15.0% (21/140) | 32.9% (46/140) | 62.9% |
+| rien (ghost)         | 13.6% (8/59) | **15.3% (9/59)** | 16.9% |
+| autopartage (vs car_sharing) | 18.2% (2/11) | 18.2% | 18.2% |
+
+Reading: the docked-vs-ghost contrast (90.6% vs 15.3% at 100 m, stable at
+all radii) corroborates the physical-existence judgements through an
+independent channel. Free-floating sits in between, consistent with virtual
+coordinates having no hardware to map (supports the A3 construct). OSM
+car-sharing coverage is too sparse to be informative (50 objects total near
+the 422 stations); the A1 row is reported as non-informative, not as
+discordant.

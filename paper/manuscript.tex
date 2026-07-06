@@ -1506,8 +1506,20 @@ first quantified ghost-station rate for a national GBFS corpus: 37 of the
 300 sampled stations ($12.3\,\%$, Wilson $[9.1, 16.5]\,\%$, a lower bound
 that counts every non-adjudicated station as healthy; $19.5\,\%$
 $[14.5, 25.7]$ among decidable stations) show no service infrastructure
-at the declared coordinate. The audit already surfaces almost all of
-them, 35 of the 37 carrying an A3 flag, so the certified catalogue
+at the declared coordinate. An exploratory OpenStreetMap cross-check
+(logged as a post-freeze amendment in the released protocol; two
+credential-free Overpass sweeps, nearest
+\texttt{amenity=bicycle\_rental} object per sampled station) corroborates
+these judgements through a second, independent observation channel:
+$90.6\,\%$ of stations adjudicated as docked have a community-mapped
+rental object within $100$\,m, against $15.3\,\%$ of adjudicated ghosts,
+a contrast stable across matching radii ($87.5$ vs $13.6\,\%$ at
+$50$\,m, $90.6$ vs $16.9\,\%$ at $150$\,m). Where the annotators saw
+infrastructure, the mapping community records it; where they saw nothing,
+it is absent. Free-floating points sit in between ($32.9\,\%$ at
+$100$\,m), as expected for virtual coordinates with no hardware to map.
+The audit already surfaces almost all of
+the ghosts, 35 of the 37 carrying an A3 flag, so the certified catalogue
 quarantines these records today; promoting them to a dedicated
 ghost-station class requires the dynamic \texttt{station\_status}
 evidence deferred to the L2 audit layer and is the clearest item on the
