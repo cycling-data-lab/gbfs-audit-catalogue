@@ -148,8 +148,9 @@ publishing these feeds on the national portal
 many research and policy pipelines assume that GBFS feeds can be ingested
 directly.
 
-That assumption is misleading. Our audit of 123 French GBFS systems shows
-that standardised syntax hides substantial semantic heterogeneity. The
+That assumption does not hold in practice. Our audit of 123 French GBFS
+systems shows that standardised syntax coexists with substantial semantic
+heterogeneity. The
 seven classes of Section~\ref{secTaxonomy} (Table~\ref{tab:anomalies})
 separate five \emph{structural errors}, which violate the implicit
 semantic contract of the field they populate, from two \emph{semantic
@@ -275,6 +276,42 @@ bimodal $0\,\%/100\,\%$ distribution of NaN-capacity stations
 duplicate'', no instance found) ship with the audit report
 for transparency.
 
+\subsection{Unified formalism of the taxonomy}\label{secUnifiedFormalism}
+We model a GBFS system $s$ as a finite set of station entities
+$\mathcal{S}_s = \{1,\dots,N_s\}$, each entity $i$ carrying the attributes
+published in \texttt{station\_information}: a capacity
+$c_i \in \mathbb{N}_0 \cup \{\mathtt{NaN}\}$, coordinates
+$\mathbf{x}_i = (\varphi_i,\lambda_i)$ and the optional flag
+$\mathtt{is\_virtual\_station}(i)$; the system additionally declares a
+vehicle-type set and a bounding box. The seven classes are then a single
+object under two aggregation regimes. Each class $A_k$ is an entity
+indicator $f_{A_k}:\mathcal{S}_s\to\{0,1\}$ (the per-row flags returned by
+Algorithm~\ref{alg:purge}), lifted to a system verdict through the
+entity-averaged score $\bar f_{A_k}(s)=\tfrac{1}{N_s}\sum_{i\in\mathcal{S}_s}f_{A_k}(i)$ and a class threshold $\tau_k$:
+\begin{equation}
+F_{A_k}(s)\;=\;\mathbf{1}\!\left[\,\bar f_{A_k}(s)\;\geq\;\tau_k\,\right],
+\qquad k=1,\dots,7.
+\label{eq:unified}
+\end{equation}
+The threshold places each class on one axis. \emph{Existential} rules,
+where a single defective entity is diagnostic, take $\tau_k\to 0^{+}$: this
+is the geospatial class A4, whose indicator
+$f_{A4}(i)=\mathbf{1}[a_i>0.8]$ fires on the composite outlier score of
+Section~\ref{secA4v2}. \emph{Rate} rules take a calibrated $\tau_k>0$: the
+zero-capacity warning A6 ($f_{A6}(i)=\mathbf{1}[c_i=0\land\mathtt{is\_virtual\_station}(i)\neq\mathtt{true}]$, $\tau_{A6}=0.01$) and the null-capacity
+warning A7 ($f_{A7}(i)=\mathbf{1}[c_i=\mathtt{NaN}]$, $\tau_{A7}=0.5$),
+recovering $r_s^{A6}$ and $\rho_s^{A7}$ of
+Sections~\ref{secA6Formalisation}--\ref{secA7Formalisation}. The remaining
+classes are \emph{system-level predicates} whose indicator is constant over
+$i$, so $\bar f_{A_k}(s)\in\{0,1\}$ and $\tau_k=1$: A1 (a \texttt{car}
+\texttt{form\_factor} with no plain \texttt{bicycle}), A2 (a zero-variance
+non-zero capacity on a docked subset of at least $20$ stations), A3
+(a profile-to-actual capacity ratio $\bar c_{\text{profile}}/\bar c_{\text{actual}}>5$), and A5 (a system bounding box above
+$50{,}000$\,km$^2$); this is exactly why Algorithm~\ref{alg:purge} sets
+these flags on every $i\in\mathcal{S}_s$. Equation~\eqref{eq:unified} thus
+subsumes the whole taxonomy, and the nine-step protocol is its in-order
+software application.
+
 \subsection{The seven-class taxonomy}
 \label{secTaxonomy}
 The audit of the 123 French GBFS systems, complemented by the
@@ -287,26 +324,15 @@ detection rules are formalised in Section~\ref{secProtocol}.
 
 \begin{table}[!htbp]
 \centering
-\caption{The unified GBFS data-quality taxonomy: five
-\emph{structural errors} (A1--A5) that violate the implicit
-semantic contract of the field they populate, plus two
-\emph{semantic warnings} (A6--A7) that flag spec-compliant
-publication choices whose downstream-consumer interpretation is
-nevertheless ambiguous. \textbf{Both columns are produced by the same
-library function} (\texttt{gbfs\_toolkit.audit\_static}, identical
-thresholds): \emph{FR} is the incidence on the released, certified French
-catalogue (123 systems), and \emph{World} is a single-pipeline re-audit of
-the MobilityData catalogue (936 systems that publish a populated
-\texttt{station\_information}, 46 countries, France included), re-fetched
-live and audited by the same function (Section~\ref{secGlobalAudit}). The
-feed-intrinsic classes A2, A4, A5 and A7 are directly comparable; A1
-($^\ddagger$) is read from the GBFS v3 \texttt{vehicle\_types}
-\texttt{form\_factor}, not from an operator name. A3 ($^\dagger$)
-counts the free-floating share under the same broad definition as the FR
-column, with the over-capacity signature that isolates the Bordeaux
-mechanism reported separately in the footnote. Every count is reproducible: the World column from
-the frozen feed archive (deterministic, seeded; \texttt{run\_unified\_audit.py}),
-the FR column from the released parquet.}
+\caption{The unified GBFS data-quality taxonomy: five \emph{structural
+errors} (A1--A5) that violate the implicit semantic contract of the field
+they populate, and two \emph{semantic warnings} (A6--A7) that flag
+spec-compliant but consumer-ambiguous publication choices. \emph{FR} is the
+incidence on the certified French catalogue (123 systems); \emph{World} is a
+single-pipeline re-audit of the MobilityData catalogue (936 systems, 46
+countries, France included). The comparison protocol is given in the text
+below and in Section~\ref{secGlobalAudit}; $^\dagger$ and $^\ddagger$ are
+detailed in the footnotes.}
 \label{tab:anomalies}
 \small
 \begin{tabular}{@{}lllrr@{}}
@@ -343,6 +369,19 @@ car-share systems. The exact-enum match avoids the \texttt{cargo\_bicycle}
 false positive. An operator-name heuristic is needed only for the
 $\sim 6\,\%$ of feeds without \texttt{vehicle\_types}.}
 \end{table}
+
+Both columns of Table~\ref{tab:anomalies} are produced by the same library
+function (\texttt{gbfs\_toolkit.audit\_static}) under identical thresholds:
+the FR column is read from the released parquet, and the World column from a
+live re-fetch of the MobilityData catalogue (systems that publish a
+populated \texttt{station\_information}) audited by the same function
+(Section~\ref{secGlobalAudit}). The feed-intrinsic classes A2, A4, A5 and A7
+are directly comparable across the two; A1 is read from the GBFS v3
+\texttt{vehicle\_types} \texttt{form\_factor} rather than from an operator
+name, and A3 counts the free-floating share under the same broad definition
+in both columns. Every count is reproducible: the World column from the
+frozen, seeded feed archive (\texttt{run\_unified\_audit.py}), the FR column
+from the released parquet.
 
 Of the 142 French GBFS feeds at the national portal, 123 are certified
 into the Audit Catalogue, 2 fail technical ingestion, and the 17
